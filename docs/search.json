@@ -242,7 +242,7 @@
     "href": "posts/L1-Intro/index.html#the-inevitable-truth",
     "title": "LECTURE 1 - INTRO",
     "section": "THE INEVITABLE TRUTH",
-    "text": "THE INEVITABLE TRUTH\nTechnical set up"
+    "text": "THE INEVITABLE TRUTH\nVariation in hardware, software, and experience."
   },
   {
     "objectID": "posts/L1-Intro/index.html#hardware",
@@ -277,14 +277,14 @@
     "href": "posts/L1-Intro/index.html#data-science-skill-tree-3",
     "title": "LECTURE 1 - INTRO",
     "section": "DATA SCIENCE SKILL TREE 3",
-    "text": "DATA SCIENCE SKILL TREE 3\n\n\n\n\n\n\n\n\n\n\n(Literate) Programming\nYour Computer\nVersion Control\nCommunication\nData Management\n\n\n\n\n\n\n\n\nStoring\n\n\n\n\n\n\nMerge\n\n\nPlotly\n\n\n\nSummarize\n\n\nGGPlot\n\n\n\nPivot/Filter/Select\n\n\nTidyverse / Pandas\n\nCollaborations\n\nTidyverse\n\n\nPublishing Formats\n\nRStudio Integration\nPublish / Host\nCleaning\n\n\nMarkdown\nCloud vs Local\nRepositories\nYour Portfolio\nAnnotation\n\n\nBasic R / Python\nFile Extensions\nGitHub Desktop\nQuarto Blog\nFind your Data\n\n\nQuarto\nTerminal\nGitHub Site\nQuarto Projects\nData Collection\n\n\nRStudio / Jupyter\nDirectories and Paths\nGitHub Account\nRStudio Projects\nData Generation"
+    "text": "DATA SCIENCE SKILL TREE 3\n\n\n\n\n\n\n\n\n\n\n(Literate) Programming\nYour Computer\nVersion Control\nCommunication\nData Management\n\n\n\n\nPlotly\n\n\n\nSummarize/ Merge\n\n\nGGPlot\n\n\n\nPivot/Filter/Select\n\n\nTidyverse / Pandas\n\nCollaborations\n\nTidyverse\n\n\nPublishing Formats\n\nRStudio Integration\nPublish / Host\nCleaning\n\n\nMarkdown\nCloud vs Local\nRepositories\nYour Portfolio\nAnnotation\n\n\nBasic R / Python\nFile Extensions\nGitHub Desktop\nQuarto Blog\nFind your Data\n\n\nQuarto\nTerminal\nGitHub Site\nQuarto Projects\nData Collection\n\n\nRStudio / Jupyter\nDirectories\nGitHub Account\nRStudio Projects\nData Generation"
   },
   {
     "objectID": "posts/L1-Intro/index.html#viz-skill-tree-data-abstraction",
     "href": "posts/L1-Intro/index.html#viz-skill-tree-data-abstraction",
     "title": "LECTURE 1 - INTRO",
     "section": "VIZ SKILL TREE Data Abstraction",
-    "text": "VIZ SKILL TREE Data Abstraction\n ## VIZ SKILL TREE Task Abstraction\n ## VIZ SKILL TREE Design Choices\n\n\n\nCANVAS…HOME"
+    "text": "VIZ SKILL TREE Data Abstraction"
   },
   {
     "objectID": "posts/Certificate/index.html",
@@ -348,5 +348,26 @@
     "title": "BCB 520:: Foundations of Data Visualization",
     "section": "",
     "text": "GGSIDE! A companion to ggplot for making side plots! COOL!\nAwesome Quarto: A potentially interesting repository of Quarto documents, talks, tools, examples, etc.\nThe MockUp Blog - TABLES! This blog post explores the R packages gt and gtextras which will help us up our table game!\nRiffomonas Project: Pat Schloss is a Professor at the University of Michigan. The Riffomonas Project is his Youtube channel, which has HUNDREDS of easy to follow and amazingly useful instructional videos on R, ggplot, version control, and literate programming.\nDr. Tamara Munzner’s Website: It isn’t fancy, but Dr. Munzner’s website has tons of resources from her textbook and the many data visualization courses she has offered. This includes recorded lectures that align directly with the chapters of the text, much like what we are using.\nCheat Sheets: So many visual guides for many R packages, including the tidyverse, ggplot, dplyr, etc.\nLearning Vis Tools: Teaching Data Visualization Tutorials An interesting paper for discussion as we forge the structure for this class."
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#viz-skill-tree-task-abstraction",
+    "href": "posts/L1-Intro/index.html#viz-skill-tree-task-abstraction",
+    "title": "LECTURE 1 - INTRO",
+    "section": "VIZ SKILL TREE Task Abstraction",
+    "text": "VIZ SKILL TREE Task Abstraction"
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#viz-skill-tree-design-choices",
+    "href": "posts/L1-Intro/index.html#viz-skill-tree-design-choices",
+    "title": "LECTURE 1 - INTRO",
+    "section": "VIZ SKILL TREE Design Choices",
+    "text": "VIZ SKILL TREE Design Choices"
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#ai-and-you",
+    "href": "posts/L1-Intro/index.html#ai-and-you",
+    "title": "LECTURE 1 - INTRO",
+    "section": "AI AND YOU",
+    "text": "AI AND YOU"
   }
 ]

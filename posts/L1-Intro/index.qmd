@@ -7,7 +7,6 @@ format:
       buttons: false
     preview-links: auto
     css: styles.css
-    footer: <a href="https://canvas.uidaho.edu/courses/17806" target="_blank">CANVAS</a>...<a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/BCB520.html" target="_blank">HOME</a>
     theme: [default, custom.scss]
 author: "Barrie Robison"
 date: "2024-01-11"
@@ -72,11 +71,9 @@ Computers provide [visual]{.red} representations of datasets designed to help pe
 
 ## THE INEVITABLE TRUTH
 
-Technical set up
+Variation in hardware, software, and experience.
 
-## HARDWARE
-
-## SOFTWARE
+![](laptops.png)
 
 ## DATA SCIENCE SKILL TREE 1
 
@@ -86,28 +83,32 @@ Technical set up
 
 ![](dataliteracy/Slide4.jpeg)
 
-## DATA SCIENCE SKILL TREE 3
+## DATA SCIENCE SKILL TREE 3 {.smaller}
 
-| (Literate) Programming | Your Computer         | Version Control     | Communication    | Data Management     |
-|------------------------|-----------------------|---------------------|------------------|---------------------|
-|                        |                       |                     |                  | Storing             |
-|                        |                       |                     |                  | Merge               |
-| Plotly                 |                       |                     |                  | Summarize           |
-| GGPlot                 |                       |                     |                  | Pivot/Filter/Select |
-| Tidyverse / Pandas     |                       | Collaborations      |                  | Tidyverse           |
-| Publishing Formats     |                       | RStudio Integration | Publish / Host   | Cleaning            |
-| Markdown               | Cloud vs Local        | Repositories        | Your Portfolio   | Annotation          |
-| Basic R / Python       | File Extensions       | GitHub Desktop      | Quarto Blog      | Find your Data      |
-| Quarto                 | Terminal              | GitHub Site         | Quarto Projects  | Data Collection     |
-| RStudio / Jupyter      | Directories and Paths | GitHub Account      | RStudio Projects | Data Generation     |
+| (Literate) Programming | Your Computer   | Version Control     | Communication    | Data Management     |
+|---------------|---------------|---------------|---------------|---------------|
+| Plotly                 |                 |                     |                  | Summarize/ Merge    |
+| GGPlot                 |                 |                     |                  | Pivot/Filter/Select |
+| Tidyverse / Pandas     |                 | Collaborations      |                  | Tidyverse           |
+| Publishing Formats     |                 | RStudio Integration | Publish / Host   | Cleaning            |
+| Markdown               | Cloud vs Local  | Repositories        | Your Portfolio   | Annotation          |
+| Basic R / Python       | File Extensions | GitHub Desktop      | Quarto Blog      | Find your Data      |
+| Quarto                 | Terminal        | GitHub Site         | Quarto Projects  | Data Collection     |
+| RStudio / Jupyter      | Directories     | GitHub Account      | RStudio Projects | Data Generation     |
 
 ## VIZ SKILL TREE Data Abstraction
 
 ![](whatexpanded.png)
+
 ## VIZ SKILL TREE Task Abstraction
 
 ![](Whybig.png)
+
 ## VIZ SKILL TREE Design Choices
 
 ![](Howbig.png)
+
+## AI AND YOU
+
+![](AIlearn.png)
 
