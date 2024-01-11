@@ -1,0 +1,113 @@
+---
+title: "LECTURE 1 - INTRO"
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    css: styles.css
+    footer: <a href="https://canvas.uidaho.edu/courses/17806" target="_blank">CANVAS</a>...<a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/BCB520.html" target="_blank">HOME</a>
+    theme: [default, custom.scss]
+author: "Barrie Robison"
+date: "2024-01-11"
+categories: [Lecture, DataViz, Intro]
+image: "braindata.png"
+---
+
+## WHO AM I?
+
+### [Barrie Robison]{.absolute bottom="210" left="10"}
+
+[[Department of Biological Sciences](https://www.uidaho.edu/sci/biology)]{.absolute bottom="170" left="10"}
+
+[[Institute for Interdisicplinary Data Sciences](https://www.iids.uidaho.edu)]{.absolute bottom="130" left="10"}
+
+[[Polymorphic Games](http://www.polymorphicgames.com)]{.absolute bottom="90" left="10"}
+
+[University of Idaho]{.absolute bottom="50" left="10"}
+
+![](Barrie.jpeg){.absolute bottom="270" left="10" width="300"}
+
+![](IIDS.png){.absolute bottom="270" right="10" height="150"} ![](Polymorphic.png){.absolute bottom="440" right="10" height="170"}
+
+## WHO ARE YOU?
+
+"...The course is designed to be"discipline agnostic" - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests..."
+
+### Briefly:
+
+-   Your name
+-   Your discipline
+-   Your degree progress
+
+## COURSE SUMMARY
+
+Students completing this course will be able to:
+
+::: r-fit-text
+1.  Describe and manipulate tabular, network, and spatial data; transform these data into a form suitable for visualization.
+2.  Make effective data visualization design choices related to marks and channels, spatial arrangement, and components of color.
+3.  Design effective data visualizations for tabular, network, and spatial data with quantitative and categorical attributes.
+4.  Implement their data visualization designs using existing tools in R (or other toolkits preferred by the student).
+5.  Explain whether a visual encoding is perceptually appropriate for a specific combination of task and data.
+6.  Demonstrate their skills with at least two novel visualizations suitable suitable for inclusion in an online Data Science Portfolio.
+
+The course materials are located on [Canvas](https://canvas.uidaho.edu/courses/17806) and the [course website](https://github.com/ProfessorPolymorphic).
+:::
+
+## VISUALIZATION
+
+Computers provide [visual]{.red} representations of datasets designed to help people carry out tasks more effectively.
+
+### [Tamara Munzner]{.absolute bottom="160" left="10"}
+
+[Department of Computer Science]{.absolute bottom="120" left="10"}
+
+[[InfoVis Group](https://www.cs.ubc.ca/group/infovis/)]{.absolute bottom="80" left="10"}
+
+[University of British Columbia]{.absolute bottom="40" left="10"}
+
+![](VADcover.jpg){.absolute bottom="70" right="10" width="300"} ![](TamaraMunzner.jpg){.absolute top="240" left="10" width="330"}
+
+## THE INEVITABLE TRUTH
+
+Technical set up
+
+## HARDWARE
+
+## SOFTWARE
+
+## DATA SCIENCE SKILL TREE 1
+
+![](RoadToDataScientist1.png)
+
+## DATA SCIENCE SKILL TREE 2
+
+![](dataliteracy/Slide4.jpeg)
+
+## DATA SCIENCE SKILL TREE 3
+
+| (Literate) Programming | Your Computer         | Version Control     | Communication    | Data Management     |
+|------------------------|-----------------------|---------------------|------------------|---------------------|
+|                        |                       |                     |                  | Storing             |
+|                        |                       |                     |                  | Merge               |
+| Plotly                 |                       |                     |                  | Summarize           |
+| GGPlot                 |                       |                     |                  | Pivot/Filter/Select |
+| Tidyverse / Pandas     |                       | Collaborations      |                  | Tidyverse           |
+| Publishing Formats     |                       | RStudio Integration | Publish / Host   | Cleaning            |
+| Markdown               | Cloud vs Local        | Repositories        | Your Portfolio   | Annotation          |
+| Basic R / Python       | File Extensions       | GitHub Desktop      | Quarto Blog      | Find your Data      |
+| Quarto                 | Terminal              | GitHub Site         | Quarto Projects  | Data Collection     |
+| RStudio / Jupyter      | Directories and Paths | GitHub Account      | RStudio Projects | Data Generation     |
+
+## VIZ SKILL TREE Data Abstraction
+
+![](whatexpanded.png)
+## VIZ SKILL TREE Task Abstraction
+
+![](Whybig.png)
+## VIZ SKILL TREE Design Choices
+
+![](Howbig.png)
+
