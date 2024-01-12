@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Barrie Robison">
+<meta name="dcterms.date" content="2023-01-31">
+<meta name="description" content="Action - Target pairs … of eldritch horror?">
+
+<title>BCB520 - LECTURE 3 - TASK ABSTRACTION</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">BCB520</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../syllabus.html" rel="" target="">
+ <span class="menu-text">SYLLABUS 2024</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">LECTURE 3 - TASK ABSTRACTION</h1>
+                  <div>
+        <div class="description">
+          Action - Target pairs … of <strong>eldritch horror</strong>?
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Lecture</div>
+                <div class="quarto-category">DataViz</div>
+                <div class="quarto-category">Task</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Barrie Robison </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 31, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#last-lecture" id="toc-last-lecture" class="nav-link active" data-scroll-target="#last-lecture">LAST LECTURE</a></li>
+  <li><a href="#task-abstraction" id="toc-task-abstraction" class="nav-link" data-scroll-target="#task-abstraction">TASK ABSTRACTION</a></li>
+  <li><a href="#from-domain-to-abstraction" id="toc-from-domain-to-abstraction" class="nav-link" data-scroll-target="#from-domain-to-abstraction">FROM DOMAIN TO ABSTRACTION</a></li>
+  <li><a href="#key-components-of-task-abstraction" id="toc-key-components-of-task-abstraction" class="nav-link" data-scroll-target="#key-components-of-task-abstraction">KEY COMPONENTS OF TASK ABSTRACTION</a></li>
+  <li><a href="#actions-and-targets" id="toc-actions-and-targets" class="nav-link" data-scroll-target="#actions-and-targets">ACTIONS AND TARGETS</a></li>
+  <li><a href="#actions---analyze" id="toc-actions---analyze" class="nav-link" data-scroll-target="#actions---analyze">ACTIONS - Analyze</a></li>
+  <li><a href="#actions---search" id="toc-actions---search" class="nav-link" data-scroll-target="#actions---search">ACTIONS - Search</a></li>
+  <li><a href="#actions---query" id="toc-actions---query" class="nav-link" data-scroll-target="#actions---query">ACTIONS - Query</a></li>
+  <li><a href="#targets---all-data" id="toc-targets---all-data" class="nav-link" data-scroll-target="#targets---all-data">TARGETS - All Data</a></li>
+  <li><a href="#targets---attributes" id="toc-targets---attributes" class="nav-link" data-scroll-target="#targets---attributes">TARGETS - Attributes</a></li>
+  <li><a href="#targets---other-data" id="toc-targets---other-data" class="nav-link" data-scroll-target="#targets---other-data">TARGETS - Other Data</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">SUMMARY</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">EXAMPLES!</a></li>
+  <li><a href="#mandatory-fun" id="toc-mandatory-fun" class="nav-link" data-scroll-target="#mandatory-fun">MANDATORY FUN</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="last-lecture" class="level2">
+<h2 class="anchored" data-anchor-id="last-lecture">LAST LECTURE</h2>
+<p>Computer-based visualization systems provide visual representations of <span class="red">datasets</span> designed to help people carry out tasks more effectively.</p>
+<p><img src="whatexpanded.png" class="absolute img-fluid" data-bottom="0" data-right="0" width="450"></p>
+<p><img src="what.png" class="absolute" data-bottom="0" height="400"></p>
+</section>
+<section id="task-abstraction" class="level2">
+<h2 class="anchored" data-anchor-id="task-abstraction">TASK ABSTRACTION</h2>
+<p>Computer-based visualization systems provide visual representations of datasets designed to <span class="red">help people carry out tasks</span> more effectively.</p>
+<p><img src="Whybig.png" class="absolute img-fluid" data-bottom="0" data-right="0" width="550"></p>
+<p><img src="Why.png" class="absolute" data-bottom="70" height="300"></p>
+</section>
+<section id="from-domain-to-abstraction" class="level2">
+<h2 class="anchored" data-anchor-id="from-domain-to-abstraction">FROM DOMAIN TO ABSTRACTION</h2>
+<p><img src="domaintoabstract.png" class="img-fluid"></p>
+</section>
+<section id="key-components-of-task-abstraction" class="level2">
+<h2 class="anchored" data-anchor-id="key-components-of-task-abstraction">KEY COMPONENTS OF TASK ABSTRACTION</h2>
+<p><strong>{<span class="red">action</span>, <span class="blue">target</span>} pairs</strong></p>
+<p>Computer-based visualization systems provide visual representations of <span class="blue">datasets</span> designed to help <span class="red">people</span> carry out tasks more effectively.</p>
+</section>
+<section id="actions-and-targets" class="level2">
+<h2 class="anchored" data-anchor-id="actions-and-targets">ACTIONS AND TARGETS</h2>
+<p><img src="Whybig.png" class="img-fluid"></p>
+</section>
+<section id="actions---analyze" class="level2">
+<h2 class="anchored" data-anchor-id="actions---analyze">ACTIONS - Analyze</h2>
+<div class="columns">
+<div class="r-fit-text column" style="width:60%;">
+<ul>
+<li><p><span class="red">Consume:</span> Information has already been generated and stored as data.</p>
+<ul>
+<li><span class="blue">Discover:</span> new knowledge, test hypothesis, generate new hypothesis, verify</li>
+<li><span class="blue">Present:</span> communicate something specific and already understood</li>
+<li><span class="blue">Enjoy:</span> casual encounters with visualization</li>
+</ul></li>
+<li><p><span class="red">Produce:</span> generate new material or information</p>
+<ul>
+<li><span class="blue">Annotate:</span> addition of graphical or text to existing visualization elements</li>
+<li><span class="blue">Record:</span> saves or captures visualization elements as persistent artifacts (screenshots, lists, parameter sets, annotations)</li>
+<li><span class="blue">Derive:</span> produce new data based on existing data (aka transform)</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img src="Analyze.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="actions---search" class="level2">
+<h2 class="anchored" data-anchor-id="actions---search">ACTIONS - Search</h2>
+<div class="columns">
+<div class="r-fit-text column" style="width:60%;">
+<ul>
+<li><p><span class="red">Lookup:</span> Location and target both known</p>
+<ul>
+<li>Example: Look up humans in the Tree of Life, knowing they are mammals.</li>
+</ul></li>
+<li><p><span class="red">Locate:</span> Location unknown and target known</p>
+<ul>
+<li>Example: Look up rabbits in the Tree of Life, not knowing they are lagomorphs.</li>
+</ul></li>
+<li><p><span class="red">Browse:</span> Location known and target unknown</p>
+<ul>
+<li>Example: Find any clades within Mammalia that have only one species.</li>
+</ul></li>
+<li><p><span class="red">Explore:</span> Location unknown and target unknown</p>
+<ul>
+<li>Example: Searching for anomalies in time series data.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img src="search.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="actions---query" class="level2">
+<h2 class="anchored" data-anchor-id="actions---query">ACTIONS - Query</h2>
+<div class="columns">
+<div class="r-fit-text column" style="width:60%;">
+<ul>
+<li><p><span class="red">Query:</span> How much of the data matters to the task?</p>
+<ul>
+<li>Identify: One (specific Item, individual, cell, etc)</li>
+<li>Compare: Some (multiple targets)</li>
+<li>Summarize: All (very common, aka Overview)</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img src="query.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="targets---all-data" class="level2">
+<h2 class="anchored" data-anchor-id="targets---all-data">TARGETS - All Data</h2>
+<p><img src="Alldata.png" class="img-fluid"></p>
+</section>
+<section id="targets---attributes" class="level2">
+<h2 class="anchored" data-anchor-id="targets---attributes">TARGETS - Attributes</h2>
+<p><img src="Attributestarget.png" class="img-fluid"></p>
+</section>
+<section id="targets---other-data" class="level2">
+<h2 class="anchored" data-anchor-id="targets---other-data">TARGETS - Other Data</h2>
+<p><img src="networkspatial.png" class="img-fluid"></p>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">SUMMARY</h2>
+<p>Computer-based visualization systems provide visual representations of datasets designed to <span class="red">help people carry out tasks</span> more effectively.</p>
+<p><img src="Whybig.png" class="absolute img-fluid" data-bottom="0" data-right="0" width="550"></p>
+</section>
+<section id="examples" class="level2 scrollable smaller">
+<h2 class="scrollable smaller anchored" data-anchor-id="examples">EXAMPLES!</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vroom)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Person <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"Tasks.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"Person"</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Action <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"Tasks.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"Action"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Target <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"Tasks.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"Target"</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_names =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="columns">
+<div class="column" style="width:30%;">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Person</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Barrie</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Jiyin</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ronald</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cody</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Eric</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:30%;">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Discover</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Present</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Enjoy</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Annotate</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Record</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Derive</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lookup</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Browse</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Locate</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Explore</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Identify</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Compare</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Summarize</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:30%;">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Target</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Trends</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Outliers</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Features</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Distribution</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Extremes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dependency</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Correlation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Similarity</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Topology</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Paths</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="mandatory-fun" class="level2 scrollable smaller">
+<h2 class="scrollable smaller anchored" data-anchor-id="mandatory-fun">MANDATORY FUN</h2>
+<p><strong>We will do these until everyone has done at least one example.</strong></p>
+<p><span class="fragment">Ronald Discover Correlation</span></p>
+<p><span class="fragment">Ronald Present Similarity</span></p>
+<p><span class="fragment">Barrie Summarize Correlation</span></p>
+<p><span class="fragment">Ronald Identify Distribution</span></p>
+<p><span class="fragment">Ronald Browse Similarity</span></p>
+<p><span class="fragment">Ronald Enjoy Topology</span></p>
+<p><span class="fragment">Eric Derive Dependency</span></p>
+<p><span class="fragment">Barrie Compare Trends</span></p>
+<p><span class="fragment">Ronald Annotate Dependency</span></p>
+<p><span class="fragment">Barrie Annotate Correlation</span></p>
+<p><span class="fragment">Jiyin Explore Distribution</span></p>
+<p><span class="fragment">Cody Lookup Distribution</span></p>
+<p><span class="fragment">Eric Identify Extremes</span></p>
+
+
+</section>
+
+</main> <!-- /main -->
+
+<script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
+
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
+
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

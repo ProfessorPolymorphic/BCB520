@@ -1,0 +1,45 @@
+---
+title: "Example 1: Grant Expenditures"
+date: "2024-01-12"
+format:
+  html:
+    code-fold: true
+categories: [Tutorial, Quarto, Literate Programming, Plotly, Interactive]
+
+
+---
+
+## Aggregating financial data for a grant
+
+This is for my NIH grant and it uses the transaction detail report.
+
+
+```{r}
+
+library(tidyverse)
+library(lubridate)
+library(plotly)
+
+SEPA <- read.csv("SEPA.csv")
+
+SEPAsmall <- SEPA %>%
+  select(Transaction.Date, Transaction.Type, PE, PE.Title,
+         Original.Budget, YTD, Encumbrance, Adjusted.Budget)%>%
+  filter(PE != "RV")%>%
+  mutate(Category = if_else(PE == 60, "F&A", "Direct"))%>%
+  mutate(date = mdy(Transaction.Date),
+         month = month(date))%>%
+  group_by(Category, month)%>%
+  summarise(Total = sum(YTD))
+
+
+p <- plot_ly(SEPAsmall, x = ~month, y = ~Total, color = ~Category, type = 'bar') %>%
+  layout(barmode = 'stack')
+
+p
+
+
+```
+
+
+

@@ -1,1 +1,1 @@
-{"headings":["implementing-pyhton-in-quarto","quarto-example-code"],"entries":[{"caption":"A line plot on a polar axis","order":{"section":[0,2,0,0,0,0,0],"number":1},"key":"fig-polar"}]}
+{"headings":["implementing-pyhton-in-quarto","quarto-example-code"],"entries":[{"key":"fig-polar","order":{"number":1,"section":[0,2,0,0,0,0,0]},"caption":"A line plot on a polar axis"}]}
