@@ -143,21 +143,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#aggregating-financial-data-for-a-grant" id="toc-aggregating-financial-data-for-a-grant" class="nav-link active" data-scroll-target="#aggregating-financial-data-for-a-grant">Aggregating financial data for a grant</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<section id="aggregating-financial-data-for-a-grant" class="level2">
-<h2 class="anchored" data-anchor-id="aggregating-financial-data-for-a-grant">Aggregating financial data for a grant</h2>
+<p><img src="grantvis.png" class="img-fluid"> ## Aggregating financial data for a grant</p>
 <p>This is for my NIH grant and it uses the transaction detail report.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -216,13 +209,12 @@ The following object is masked from 'package:graphics':
 Warning in RColorBrewer::brewer.pal(N, "Set2"): minimal value for n is 3, returning requested palette with 3 different levels</code></pre>
 </div>
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-9609557ee4bfa93d99bc" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-9609557ee4bfa93d99bc">{"x":{"visdat":{"19b228af7d3f":["function () ","plotlyVisDat"]},"cur_data":"19b228af7d3f","attrs":{"19b228af7d3f":{"x":{},"y":{},"color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"barmode":"stack","xaxis":{"domain":[0,1],"automargin":true,"title":"month"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Total"},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[1,8,9,10,11,12],"y":[2243.21,6980.3999999999996,3914.2599999999998,6380.5500000000002,4237.6199999999999,12301.52],"type":"bar","name":"Direct","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"textfont":{"color":"rgba(102,194,165,1)"},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1,8,9,10,11,12],"y":[179.46000000000001,558.42999999999995,-195.19,510.43000000000001,339.01999999999998,984.13],"type":"bar","name":"F&A","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"textfont":{"color":"rgba(141,160,203,1)"},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-161a18982572ba591b1b" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-161a18982572ba591b1b">{"x":{"visdat":{"9ca346d296c":["function () ","plotlyVisDat"]},"cur_data":"9ca346d296c","attrs":{"9ca346d296c":{"x":{},"y":{},"color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"barmode":"stack","xaxis":{"domain":[0,1],"automargin":true,"title":"month"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Total"},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[1,8,9,10,11,12],"y":[2243.21,6980.3999999999996,3914.2599999999998,6380.5500000000002,4237.6199999999999,12301.52],"type":"bar","name":"Direct","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"textfont":{"color":"rgba(102,194,165,1)"},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1,8,9,10,11,12],"y":[179.46000000000001,558.42999999999995,-195.19,510.43000000000001,339.01999999999998,984.13],"type":"bar","name":"F&A","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"textfont":{"color":"rgba(141,160,203,1)"},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

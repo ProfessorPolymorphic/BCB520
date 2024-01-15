@@ -9,7 +9,7 @@ image: grantvis.png
 
 
 ---
-
+![](grantvis.png)
 ## Aggregating financial data for a grant
 
 This is for my NIH grant and it uses the transaction detail report.
