@@ -19,7 +19,7 @@ This class will help students establish a core understanding of data visualizati
 
 I am maintaining the course here and on its [CANVAS PAGE](https://canvas.uidaho.edu/courses/25613){target="_blank"} (for enrolled students).
 
-[SYLLABUS](posts/Syllabus/index.qmd)
+[SYLLABUS](syllabus.qmd)
 
 [Barrie's GitHub](https://github.com/ProfessorPolymorphic){target="_blank"}
 

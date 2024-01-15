@@ -3,13 +3,14 @@
     "listing": "/index.html",
     "items": [
       "/posts/E1-GrantExpenditures/Banner.html",
-      "/posts/Syllabus/index.html",
+      "/posts/T2-Anscombe/index.html",
       "/posts/L1-Intro/index.html",
       "/posts/T1-Lit-Prog/index.html",
       "/posts/A1-Lit-Prog/index.html",
-      "/posts/A3-PrototypeVizPortfolio/index.html",
-      "/posts/T2-Anscombe/index.html",
-      "/posts/Certificate/index.html"
+      "/posts/T5-MarksChannels/index.html",
+      "/posts/Certificate/index.html",
+      "/posts/Certificate/index.html",
+      "/posts/L1-Intro/index.html"
     ]
   }
 ]

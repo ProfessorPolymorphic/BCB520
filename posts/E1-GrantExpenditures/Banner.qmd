@@ -5,6 +5,7 @@ format:
   html:
     code-fold: true
 categories: [Tutorial, Quarto, Literate Programming, Plotly, Interactive]
+image: grantvis.png
 
 
 ---

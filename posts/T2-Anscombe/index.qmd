@@ -1,7 +1,7 @@
 ---
 title: "TUTORIAL 2 - Literate Programming and Anscombe's Quartet"
 author: "Barrie Robison"
-date: "2023-01-18"
+date: "2024-01-13"
 categories: [Tutorial, DataViz, Quarto, Literate Programming]
 image: "Cthulhunetwork.png"
 code-fold: true
