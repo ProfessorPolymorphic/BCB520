@@ -136,8 +136,8 @@
     "objectID": "posts/L2-Data-Abstraction/index.html#last-lecture",
     "href": "posts/L2-Data-Abstraction/index.html#last-lecture",
     "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "",
-    "text": "Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+    "section": "LAST LECTURE",
+    "text": "LAST LECTURE\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#what",
@@ -235,7 +235,7 @@
     "href": "posts/L2-Data-Abstraction/index.html#dataset-types-tables",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATASET TYPES: TABLES",
-    "text": "DATASET TYPES: TABLES\n\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA UNIQUE key can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
+    "text": "DATASET TYPES: TABLES\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA UNIQUE key can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#flat-table-example",
@@ -382,7 +382,7 @@
     "href": "posts/L2-Data-Abstraction/index.html#summary",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "SUMMARY",
-    "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+    "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\n\n\n\nCANVAS…HOME"
   },
   {
     "objectID": "posts/A2-YourData/index.html",
