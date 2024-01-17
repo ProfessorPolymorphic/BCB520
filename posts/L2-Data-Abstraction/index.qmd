@@ -10,11 +10,11 @@ format:
     footer: <a href="https://canvas.uidaho.edu/courses/17806" target="_blank">CANVAS</a>...<a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/BCB520.html" target="_blank">HOME</a>
     theme: [default, custom.scss]
 author: "Barrie Robison"
-date: "2023-01-17"
+date: "2024-01-17"
 categories: [Lecture, DataViz, Data]
 image: "CthulhuAbstracts.png"
 code-fold: true
-draft: true
+
 ---
 
 ## LAST LECTURE

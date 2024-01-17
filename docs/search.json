@@ -131,5 +131,292 @@
     "title": "LECTURE 1 - INTRO",
     "section": "HUMAN LIMITS",
     "text": "HUMAN LIMITS\n\nTime\nMemory\nAttention\n\n\n\n\nCANVAS…HOME"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#last-lecture",
+    "href": "posts/L2-Data-Abstraction/index.html#last-lecture",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "",
+    "text": "Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#what",
+    "href": "posts/L2-Data-Abstraction/index.html#what",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "WHAT?",
+    "text": "WHAT?\n Before you design a visualization, you need to understand the data. Here, we consider the semantics to describe the DATA TYPES and DATA ATTRIBUTES."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#the-three-major-data-types",
+    "href": "posts/L2-Data-Abstraction/index.html#the-three-major-data-types",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "THE THREE MAJOR DATA TYPES",
+    "text": "THE THREE MAJOR DATA TYPES"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-attributes",
+    "href": "posts/L2-Data-Abstraction/index.html#data-attributes",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA ATTRIBUTES",
+    "text": "DATA ATTRIBUTES"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#what-1",
+    "href": "posts/L2-Data-Abstraction/index.html#what-1",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "WHAT?",
+    "text": "WHAT?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics",
+    "href": "posts/L2-Data-Abstraction/index.html#data-semantics",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points far from each other in 3D space?\n\n\nVIZ"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-1",
+    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-1",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?\n\n\nVIZ"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-2",
+    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nFood shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month\n\n\nVIZ"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-3",
+    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-3",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nBasil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service\n\n\nVIZ"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-4",
+    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-4",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nLab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food\n\n\nVIZ"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#semantics",
+    "href": "posts/L2-Data-Abstraction/index.html#semantics",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SEMANTICS",
+    "text": "SEMANTICS\nThe meaning of a word, phrase, sentence, or text.\nBasil, 7, S, Pear"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#semantics-for-data",
+    "href": "posts/L2-Data-Abstraction/index.html#semantics-for-data",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SEMANTICS FOR DATA",
+    "text": "SEMANTICS FOR DATA\n\n\n\nSemantics\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”\n\n\n\n\nData Table\n\n\n\n\nITEM: Person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#other-data-types",
+    "href": "posts/L2-Data-Abstraction/index.html#other-data-types",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "OTHER DATA TYPES",
+    "text": "OTHER DATA TYPES\n\nLinks\n\nexpress relationship between two items\ne.g/ friendship on facebook, interaction between proteins\n\nPositions\n\nspatial data: location in 2D or 3D\ne.g. pixels in photo, voxels in MRI scan, latitude/longitude\n\nGrids\n\nsampling strategy for continuous data"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#what-2",
+    "href": "posts/L2-Data-Abstraction/index.html#what-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "WHAT?",
+    "text": "WHAT?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#dataset-types-tables",
+    "href": "posts/L2-Data-Abstraction/index.html#dataset-types-tables",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATASET TYPES: TABLES",
+    "text": "DATASET TYPES: TABLES\n\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA UNIQUE key can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#flat-table-example",
+    "href": "posts/L2-Data-Abstraction/index.html#flat-table-example",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "FLAT TABLE EXAMPLE",
+    "text": "FLAT TABLE EXAMPLE"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#multidimensional-tables",
+    "href": "posts/L2-Data-Abstraction/index.html#multidimensional-tables",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "MULTIDIMENSIONAL TABLES",
+    "text": "MULTIDIMENSIONAL TABLES\nindexing based on multiple keys (eg genes, patients)"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#networks",
+    "href": "posts/L2-Data-Abstraction/index.html#networks",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "NETWORKS",
+    "text": "NETWORKS\nNetwork/graph nodes (vertices) connected by links (edges). A tree is special case: no cycles, often have roots, and are directed."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#fields",
+    "href": "posts/L2-Data-Abstraction/index.html#fields",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "FIELDS",
+    "text": "FIELDS"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#spatial-fields-1",
+    "href": "posts/L2-Data-Abstraction/index.html#spatial-fields-1",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SPATIAL FIELDS 1",
+    "text": "SPATIAL FIELDS 1\nAttribute values associated w/ cells cell contains value from continuous domain (eg temperature, pressure, wind velocity measured or simulated)."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#spatial-fields-2",
+    "href": "posts/L2-Data-Abstraction/index.html#spatial-fields-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SPATIAL FIELDS 2",
+    "text": "SPATIAL FIELDS 2\n\n\n\n\nAttribute values associated w/ cells.\nCell contains value from continuous domain\n\n(eg temperature, pressure, wind velocity)\n\nMeasured or simulated.\nMajor concerns\n\nsampling:\n\nwhere attributes are measured\n\ninterpolation:\n\nhow to model attributes elsewhere\n\ngrid types"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#spatial-fields-3",
+    "href": "posts/L2-Data-Abstraction/index.html#spatial-fields-3",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SPATIAL FIELDS 3",
+    "text": "SPATIAL FIELDS 3\n\n\n\nAttribute values associated w/ cells.\nCell contains value from continuous domain\n\n(eg temperature, pressure, wind velocity)\n\nMeasured or simulated.\nMajor concerns\n\nsampling:\n\nwhere attributes are measured\n\ninterpolation:\n\nhow to model attributes elsewhere\n\ngrid types\n\nMajor divisions - attributes per cell:\n\nscalar (1)\nvector (2)\ntensor (many)"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#geometry",
+    "href": "posts/L2-Data-Abstraction/index.html#geometry",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "GEOMETRY",
+    "text": "GEOMETRY"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#geometry-2",
+    "href": "posts/L2-Data-Abstraction/index.html#geometry-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "GEOMETRY 2",
+    "text": "GEOMETRY 2\n\n\n\nShape of items\nExplicit spatial positions / regions\n\npoints, lines, curves, surfaces, volumes\n\nBoundary between computer graphics and visualization\n\ngraphics: geometry taken as given\nvis: geometry is result of a design decision"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#collections",
+    "href": "posts/L2-Data-Abstraction/index.html#collections",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "COLLECTIONS",
+    "text": "COLLECTIONS"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#collections-2",
+    "href": "posts/L2-Data-Abstraction/index.html#collections-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "COLLECTIONS 2",
+    "text": "COLLECTIONS 2\n\n\nGrouping Items:\n\nsets\n\nunique items\nunordered\n\nlists\n\nordered\nduplicates possible\n\nclusters\n\ngroups of similar items"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-types",
+    "href": "posts/L2-Data-Abstraction/index.html#data-types",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA TYPES",
+    "text": "DATA TYPES"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#attribute-types",
+    "href": "posts/L2-Data-Abstraction/index.html#attribute-types",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "ATTRIBUTE TYPES",
+    "text": "ATTRIBUTE TYPES\n\n\n\nCategorical (nominal):\n\ncompare equality\nno implicit ordering\n\nOrdered:\n\nordinal\nless/greater than defined\n\nQuantitative:\n\nmeaningful magnitude\narithmetic possible"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#example",
+    "href": "posts/L2-Data-Abstraction/index.html#example",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "EXAMPLE",
+    "text": "EXAMPLE\nCategorical\nOrdinal\nQuantitative"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#example-1",
+    "href": "posts/L2-Data-Abstraction/index.html#example-1",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "EXAMPLE",
+    "text": "EXAMPLE\nCategorical\nOrdinal\nQuantitative"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#additional-semantic-components",
+    "href": "posts/L2-Data-Abstraction/index.html#additional-semantic-components",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "ADDITIONAL SEMANTIC COMPONENTS",
+    "text": "ADDITIONAL SEMANTIC COMPONENTS"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-abstraction",
+    "href": "posts/L2-Data-Abstraction/index.html#data-abstraction",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA ABSTRACTION",
+    "text": "DATA ABSTRACTION\n\nGOAL: Translate from domain-specific language to generic (and consistent) visualization language.\n\nIdentify dataset type(s) and attribute types.\nIdentify cardinality.\n\nhow many items in the dataset?\nwhat is cardinality of each attribute?\n\nnumber of levels for categorical data?\nrange for quantitative data\n\n\nConsider whether to transform the data.\n\nguided by your understanding of the task."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#models-data-vs-conceptual",
+    "href": "posts/L2-Data-Abstraction/index.html#models-data-vs-conceptual",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "MODELS: DATA VS CONCEPTUAL",
+    "text": "MODELS: DATA VS CONCEPTUAL\n\n\nData Model\n\nmathematical abstraction\nsets with operations, eg floats with * / - + variable data types in programming languages\n\nConceptual Model\n\nmental construction (semantics)\nsupports reasoning\ntypically based on understanding of tasks\n\nThe Data Abstraction process relies on conceptual model for transforming data if needed"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#models-example",
+    "href": "posts/L2-Data-Abstraction/index.html#models-example",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "MODELS: EXAMPLE",
+    "text": "MODELS: EXAMPLE\n\nData Model: floats\n\n32.52, 54.06, -14.35,\n\nConceptual Model:\n\ntemperature\n\nPossible data abstractions:\n\nQUANTITATIVE: continuous to 2 significant figures:\n\nTASK: Forecasting the weather\n\nORDINAL: Hot, Warm, Cold:\n\nTASK: Deciding if my bath water is ready\n\nCATEGORICAL: Above Freezing, Below Freezing:\n\nTASK: Deciding if I should leave the house today"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#derived-attributes",
+    "href": "posts/L2-Data-Abstraction/index.html#derived-attributes",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DERIVED ATTRIBUTES",
+    "text": "DERIVED ATTRIBUTES\nDerived attribute: Data computed from original (collected, observed) attributes."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#summary",
+    "href": "posts/L2-Data-Abstraction/index.html#summary",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SUMMARY",
+    "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/A2-YourData/index.html",
+    "href": "posts/A2-YourData/index.html",
+    "title": "ASSIGNMENT 2 - Your Data.",
+    "section": "",
+    "text": "A key feature of this course is that students should be using their own data whenever possible. This is critical to forging a learning experience that is customized to each student’s aspirations and the eccentricities of their chosen research domain. This assignment begins the process of helping you identify the data sets with which you want to work, and aligns with the notion of understanding the concepts of Data Semantics and Data Abstraction."
+  },
+  {
+    "objectID": "posts/A2-YourData/index.html#summary",
+    "href": "posts/A2-YourData/index.html#summary",
+    "title": "ASSIGNMENT 2 - Your Data.",
+    "section": "",
+    "text": "A key feature of this course is that students should be using their own data whenever possible. This is critical to forging a learning experience that is customized to each student’s aspirations and the eccentricities of their chosen research domain. This assignment begins the process of helping you identify the data sets with which you want to work, and aligns with the notion of understanding the concepts of Data Semantics and Data Abstraction."
+  },
+  {
+    "objectID": "posts/A2-YourData/index.html#assignment",
+    "href": "posts/A2-YourData/index.html#assignment",
+    "title": "ASSIGNMENT 2 - Your Data.",
+    "section": "ASSIGNMENT",
+    "text": "ASSIGNMENT\nThe basic structure of this assignment is for you to identify, import, describe, and host a data set. I’ll break down the specifics for each of these actions below.\n\nIdentify a Data Set\nThe main criteria is that the data set has to matter to you in some way. Often, this will mean that it is your data set. It was collected by you and has a central role in your current or past graduate research. Awesome! Another scenario is that the data you want to use comes from your current job. Maybe it isn’t part of a research project, but you are motivated to learn how to better visualize the data or you are very interested in learning more about it. Also Awesome!\nSome of you might not have your own data. Perhaps you have just started your graduate training. Maybe your job doesn’t yet have data that you need to work with. No Problem!\nIt is perfectly fine to find publicly available data sets online. As long as the data set is interesting to you! You just need to make sure that the data:\n\nAre publicly available.\nAre not restricted by some kind of license or copyright.\nDo not contain private information.\nAre not covered by HIPPA, FERPA, CMMC, or other federal regulations related to data.\n\nIf you need help finding a data set, just let me know.\nSome fun potential categories for data sources include:\n\nSports Analytics from your favorite sport or team.\nPublicly available genomics data bases.\nKeggle.\nThe movie data base.\nClassic data sets from your field.\n\n\n\nImport the Data Set\nThis one is probably straightforward if your data set comes from your own research and lives on your local hard drive already.\n\n\nDescribe the Data Set\nThis is the bulk of the assignment. I want you to use the framework described in Dr. Munzner’s textbook to understand your data set and describe it to someone who is unfamiliar with your work. The basis of this approach is descibed in this lecture. In addition, this figure from the textbook summarizes the kinds of data types, data set types, and attribute types you might have in your data:\n\n\n\nBONUS OBJECTIVE: Host your Data Set\nUltimately, we are moving toward each of you hosting your assignments within an online repository that can serve as your data science portfolio. For this course, we are going to assume this is GitHub. At the very least, I want everyone to create (or dust off and log in to) your own GitHub account. We’ll try to use this assignment to set up a project repository, and perhaps even a simple web site using GitHub pages."
+  },
+  {
+    "objectID": "posts/A2-YourData/index.html#resources",
+    "href": "posts/A2-YourData/index.html#resources",
+    "title": "ASSIGNMENT 2 - Your Data.",
+    "section": "RESOURCES",
+    "text": "RESOURCES\nA YouTube Video from Posit on Building your Data Science Portfolio\nTidyTuesday\nA fun Spotify example from TidyTuesday by Kaylin Pavlik.\nBarrie attempts this assignment in Tutorial 4."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html",
+    "href": "posts/L2-Data-Abstraction/index.html",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "",
+    "text": "Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
   }
 ]

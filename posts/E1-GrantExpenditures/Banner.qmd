@@ -43,4 +43,28 @@ p
 ```
 
 
+## IIDS Grants
+
+```{r}
+
+IIDS <- read.csv("IIDS.csv")
+
+
+IIDSsmall <- IIDS %>%
+  select(Grant.Code, PI.Name, Transaction.Date, Transaction.Type, PE, PE.Title,
+         Original.Budget, YTD, Encumbrance, Adjusted.Budget)%>%
+  filter(PE != "RV")%>%
+  mutate(Category = if_else(PE == 60, "F&A", "Direct"))%>%
+  mutate(date = mdy(Transaction.Date),
+         month = month(date),
+         year = year(date))%>%
+  group_by(Category, month, year, PI.Name, Grant.Code)%>%
+  summarise(Total = sum(YTD))
+
+plot_ly(IIDSsmall, x = ~PI.Name, y = ~Total, color = ~Category, type = 'bar') %>%
+  layout(barmode = 'stack')
+
+```
+
+
 
