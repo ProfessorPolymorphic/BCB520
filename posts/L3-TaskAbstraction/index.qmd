@@ -7,15 +7,21 @@ format:
       buttons: false
     preview-links: auto
     css: styles.css
-    footer: <a href="https://canvas.uidaho.edu/courses/17806" target="_blank">CANVAS</a>...<a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/index.html" target="_blank">HOME</a>
+    footer: <a href="https://canvas.uidaho.edu/courses/25613" target="_blank">CANVAS</a>...<a href="https://professorpolymorphic.github.io/BCB520/" target="_blank">HOME</a>
     theme: [default, custom.scss]
 author: "Barrie Robison"
-date: "2023-01-31"
+date: "2024-01-23"
 categories: [Lecture, DataViz, Task]
 image: "Nyarlathotep.png"
 code-fold: true
 description: "Action - Target pairs ... of **eldritch horror**?"
-draft: true
+webr:
+  packages: ['ggplot2', 'tidyverse'] # Install R packages on document open
+# autoload-packages: false       # Disable automatic loading of packages
+# show-startup-message: false    # Disable displaying status of webR initialization
+
+filters:
+  - webr
 ---
 
 ## LAST LECTURE
@@ -25,6 +31,7 @@ Computer-based visualization systems provide visual representations of [datasets
 ![](whatexpanded.png){.absolute bottom="0" right="0" width="450"}
 
 ![](what.png){.absolute bottom="0" height="400"}
+
 
 ## TASK ABSTRACTION
 
@@ -130,65 +137,27 @@ Computer-based visualization systems provide visual representations of datasets 
 
 ![](Whybig.png){.absolute bottom="0" right="0" width="550"}
 
-## EXAMPLES! {.scrollable .smaller}
 
-```{r}
-#| code-fold: true
-#| echo: true
-#| 
-
-library(readxl)
-library(vroom)
-library(tidyverse)
-Person <- read_excel("Tasks.xlsx", sheet = "Person",
-    col_names = TRUE)
-Action <- read_excel("Tasks.xlsx", sheet = "Action",
-    col_names = TRUE)
-Target <- read_excel("Tasks.xlsx", sheet = "Target",
-    col_names = TRUE)
-
-```
-
-::: columns
-::: {.column width="30%"}
-`r knitr::kable(Person)`
-:::
-
-::: {.column width="30%"}
-`r knitr::kable(Action)`
-:::
-
-::: {.column width="30%"}
-`r knitr::kable(Target)`
-:::
-:::
 
 ## MANDATORY FUN {.scrollable .smaller}
 
 **We will do these until everyone has done at least one example.**
 
-[`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
+```{webr-r}
 
-[`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
+Person <- c("Barrie", "Konrad","Yaotian","Lucas","Heidi","Robyn", "Geraline")
+Action <- c("Discover","Present", "Enjoy", "Annotate", "Record", "Derive", "Lookup", "Browse", "Locate", "Explore", "Identify", "Compare", "Summarize")
+Target <- c("Trends", "Outliers", "Features", "Distribution", "Extremes", "Dependency", "Correlation", "Similarity", "Topology", "Paths")
 
-[`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
 
-[`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
+sample_person <- sample(Person, 1)
+sample_action <- sample(Action, 1)
+sample_target <- sample(Target, 1)
 
-[`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
+# Printing the results
+print(paste("Person:", sample_person))
+print(paste("Action:", sample_action))
+print(paste("Target:", sample_target))
+```
 
-[`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
 
-[`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
-
-[`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
-
-[`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
-
-[`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
-
-[`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
-
-[`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}
-
-[`r sample_n(Person,1)` `r sample_n(Action,1)` `r sample_n(Target,1)`]{.fragment}

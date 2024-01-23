@@ -1,23 +1,23 @@
 ---
 title: "TUTORIAL 4"
 subtitle: "Barrie describes his data..."
-date: "2023-01-25"
+date: "2024-01-22"
 author: "Barrie D. Robison"
 format: html
 code-fold: true
 categories: [Tutorial, Resources, Quarto, Data Sets]
 description: "Barrie attempts ASSIGMENT 2!  Will his glimpse of the Data Science Mythos drive him **MAD**?"
 image: Hasturcodes.png
-draft: true
+
 ---
 
 # ASSIGNMENT 2: Your Data
 
-In this assignment (detalied [here](../A2-YourData/index.qmd)), I will identify, import, describe, and host a data set that will be used throughout the remainder of the BCB 504 course for Data Visualizations.
+In this assignment (detalied [here](../A2-YourData/index.qmd)), I will identify, import, describe, and host a data set that will be used throughout the remainder of the BCB 520 course for Data Visualizations.
 
 ## MY DATASET
 
-I've chosen a subset of a large dataset produced by our evolutionary video game, [Project Hastur](https://store.steampowered.com/app/800700/Project_Hastur/). We built Project Hatur to be an evolutionary video game, and we are bold in our assertions of that fact. But we haven't really published any evidence that the evolutionary model works. This data set is the beginning of that exercise.
+I've chosen a subset of a large dataset produced by our evolutionary video game, [Project Hastur](https://store.steampowered.com/app/800700/Project_Hastur/). We built Project Hastur to be an evolutionary video game, and we are bold in our assertions of that fact. But we haven't really published any evidence that the evolutionary model works. This data set is the beginning of that exercise.
 
 ::: callout-note
 PROJECT HASTUR creates a unique challenge by combining elements of 3D tower defense and real-time strategy with biological evolution. Fight against alien Proteans that evolve - using biologically accurate models of evolution - to overcome the player's defenses.
