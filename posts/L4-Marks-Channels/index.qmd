@@ -325,19 +325,42 @@ Let's analyze the idiom structures below in terms of marks and channels.
 
 ![](simpleencode.png)
 
-## DOUGLAS FIR GROWTH
+## ANALYZE THE MARKS AND CHANNELS
 
-![](Konrad.png)
+Marks are defined by the **ITEMS** or **OBSERVATIONS** they represent.
+
+Channels are defined by the [visually detectable properties]{.red} that are mapped on to **ATTRIBUTES** or **VARIABLES**.
+
+::: {#markschannels layout-ncol=3}
+
+![Konrad's Trees](Konrad.png)
+
+![Robyn's Books](Robyn.png)
+
+![Yaotian's Wheat](Yaotiandensity.png)
+
+:::
 
 ## REDUNDANT ENCODING
 
+:::: {.columns}
+
+::: {.column}
 Uses multiple channels for the same attribute.
 
 -   Sends a stronger message
 -   Uses up channels
+-   Bonus points if you can identify **BOTH** channels in this figure!
+:::
 
+::: {.column}
 ![](lengthluminance.png){.absolute right="0" bottom="50" height="400"}
+:::
+::::
+
 ## WHEAT GROWTH BY AREA*
+
+Both of Yaotian's plots contain **Redundant Encoding**.  Is this approach equally valuable for both plots?
 
 
 ::: {#wheatgrowth layout-ncol=2}
@@ -363,9 +386,12 @@ Uses multiple channels for the same attribute.
 
 ## EXPRESSIVENESS
 
-![](Heidisingle.png)
+The advantages and disadvantages of jitter plots.  How might this relate to the idea of expressiveness?
 
-The advantages and disadvantages of jitter plots.
+
+![Heidi's Cytoswine Data](Heidisingle.png)
+
+[EXPRESSIVENESS]{.red}:  The visual encoding should express all of, and only, the information in the dataset attributes.
 
 ## CHANNEL EFFECTIVENESS RANKINGS {.smaller}
 
@@ -462,7 +488,7 @@ ggplot(df,aes(I))+
 
 Depends on the task.  Which genre has the most game titles?  Which genres are the top 4 in terms of game titles?  Are there more Puzzle games than Strategy games?
 
-![](Geraline.png)
+![Geraline's Video Games](Geraline.png)
 
 
 
@@ -474,7 +500,7 @@ How many usable steps are in the channel? Are the differences between items perc
 
 ## DISCRIMINABILITY and COLORS
 
-![](geralineplatform.png)
+![Geraline's Gaming Platforms](geralineplatform.png)
 
 ## SEPARABILITY VS INTEGRALITY {.smaller}
 
@@ -539,8 +565,10 @@ But not all!
 
 ::: {#deadweevils layout-ncol=2}
 
-![](Lucaspretreat.png)
-![](lucas35dpa.png)
+![Lucas Weevils before chemicals](Lucaspretreat.png)
+
+![Lucas Weevils after chemicals](lucas35dpa.png)
+
 :::
 
 ## RELATIVE VS ABSOLUTE JUDGEMENTS {.smaller}
@@ -556,7 +584,7 @@ The filled rectangles differ in length by 1:9, and it is therefore difficult to 
 
 ## RELATIVE JUDGEMENTS
 
-![](Heidistack.png)
+![Heidi's Microbiomes](Heidistack.png)
 
 ## RELATIVE LUMINANCE JUDGEMENTS
 

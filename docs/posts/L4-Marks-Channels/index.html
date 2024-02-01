@@ -746,18 +746,57 @@ Barrie Robison
 <p>Let’s analyze the idiom structures below in terms of marks and channels.</p>
 
 <img data-src="simpleencode.png" class="r-stretch"></section>
-<section id="douglas-fir-growth" class="slide level2">
-<h2>DOUGLAS FIR GROWTH</h2>
-
-<img data-src="Konrad.png" class="r-stretch"></section>
+<section id="analyze-the-marks-and-channels" class="slide level2">
+<h2>ANALYZE THE MARKS AND CHANNELS</h2>
+<p>Marks are defined by the <strong>ITEMS</strong> or <strong>OBSERVATIONS</strong> they represent.</p>
+<p>Channels are defined by the <span class="red">visually detectable properties</span> that are mapped on to <strong>ATTRIBUTES</strong> or <strong>VARIABLES</strong>.</p>
+<div id="markschannels" class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Konrad.png"></p>
+<figcaption>Konrad’s Trees</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Robyn.png"></p>
+<figcaption>Robyn’s Books</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Yaotiandensity.png"></p>
+<figcaption>Yaotian’s Wheat</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
 <section id="redundant-encoding" class="slide level2">
 <h2>REDUNDANT ENCODING</h2>
+<div class="columns">
+<div class="column">
 <p>Uses multiple channels for the same attribute.</p>
 <ul>
 <li>Sends a stronger message</li>
 <li>Uses up channels</li>
+<li>Bonus points if you can identify <strong>BOTH</strong> channels in this figure!</li>
 </ul>
-<p><img data-src="lengthluminance.png" class="absolute" style="bottom: 50px; right: 0px; height: 400px; "> ## WHEAT GROWTH BY AREA*</p>
+</div><div class="column">
+<p><img data-src="lengthluminance.png" class="absolute" style="bottom: 50px; right: 0px; height: 400px; "></p>
+</div>
+</div>
+</section>
+<section id="wheat-growth-by-area" class="slide level2">
+<h2>WHEAT GROWTH BY AREA*</h2>
+<p>Both of Yaotian’s plots contain <strong>Redundant Encoding</strong>. Is this approach equally valuable for both plots?</p>
 <div id="wheatgrowth" class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -785,8 +824,9 @@ Barrie Robison
 </section>
 <section id="expressiveness" class="slide level2">
 <h2>EXPRESSIVENESS</h2>
+<p>The advantages and disadvantages of jitter plots. How might this relate to the idea of expressiveness?</p>
 
-<img data-src="Heidisingle.png" class="r-stretch"><p>The advantages and disadvantages of jitter plots.</p>
+<img data-src="Heidisingle.png" class="r-stretch quarto-figure-center"><p class="caption">Heidi’s Cytoswine Data</p><p><span class="red">EXPRESSIVENESS</span>: The visual encoding should express all of, and only, the information in the dataset attributes.</p>
 </section>
 <section id="channel-effectiveness-rankings" class="slide level2 smaller">
 <h2>CHANNEL EFFECTIVENESS RANKINGS</h2>
@@ -867,7 +907,7 @@ Barrie Robison
 <h2>ACCURACY?</h2>
 <p>Depends on the task. Which genre has the most game titles? Which genres are the top 4 in terms of game titles? Are there more Puzzle games than Strategy games?</p>
 
-<img data-src="Geraline.png" class="r-stretch"></section>
+<img data-src="Geraline.png" class="r-stretch quarto-figure-center"><p class="caption">Geraline’s Video Games</p></section>
 <section id="discriminability" class="slide level2">
 <h2>DISCRIMINABILITY</h2>
 <p>How many usable steps are in the channel? Are the differences between items perceptible to the human as intended?</p>
@@ -876,7 +916,7 @@ Barrie Robison
 <section id="discriminability-and-colors" class="slide level2">
 <h2>DISCRIMINABILITY and COLORS</h2>
 
-<img data-src="geralineplatform.png" class="r-stretch"></section>
+<img data-src="geralineplatform.png" class="r-stretch quarto-figure-center"><p class="caption">Geraline’s Gaming Platforms</p></section>
 <section id="separability-vs-integrality" class="slide level2 smaller">
 <h2>SEPARABILITY VS INTEGRALITY</h2>
 <p>Separable channels are orthogonal and independent. Integral channels are inextricably combined. Attempts to encode different information with integral channels creates <span class="red">Interference</span>.</p>
@@ -931,7 +971,20 @@ Barrie Robison
 <div id="deadweevils" class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><img data-src="Lucaspretreat.png"> <img data-src="lucas35dpa.png"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Lucaspretreat.png"></p>
+<figcaption>Lucas Weevils before chemicals</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lucas35dpa.png"></p>
+<figcaption>Lucas Weevils after chemicals</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -946,7 +999,7 @@ Barrie Robison
 <section id="relative-judgements" class="slide level2">
 <h2>RELATIVE JUDGEMENTS</h2>
 
-<img data-src="Heidistack.png" class="r-stretch"></section>
+<img data-src="Heidistack.png" class="r-stretch quarto-figure-center"><p class="caption">Heidi’s Microbiomes</p></section>
 <section id="relative-luminance-judgements" class="slide level2">
 <h2>RELATIVE LUMINANCE JUDGEMENTS</h2>
 <p>Human perception of luminance is completely contextual, and is based on contrast with surrounding colors.</p>
