@@ -8,32 +8,18 @@ format:
       buttons: false
     preview-links: auto
     css: styles.css
-    footer: <a href="https://canvas.uidaho.edu/courses/17806" target="_blank">CANVAS</a>...<a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/BCB520.html" target="_blank">HOME</a>
+    footer: <a href="https://canvas.uidaho.edu/courses/25613" target="_blank">CANVAS</a>...<a href="https://professorpolymorphic.github.io/BCB520/" target="_blank">HOME</a>
     theme: [default, custom.scss]
 author: "Barrie Robison"
-date: "2023-01-31"
+date: "2024-02-01"
 categories: [Lecture, DataViz, Idiom, Observable, Tidyverse]
 image: "idiom.png"
 code-fold: true
 description: "Just what is an **IDIOM**, anyway?"
-draft: true
+
 ---
 
-## PLAN
 
-1.  Assignment 3 Review.
-2.  Aligning the VAD model with other frameworks.
-3.  Encoding with Marks and Channels.
-
-## ASSIGNMENT 3 REVIEW
-
-[Rondald's Portfolio](https://ronbentil.github.io/BCB504Portfolio/)
-
-[Jiyin's Portfolio](https://chubl.github.io/bcb504-blog/)
-
-[Cody's Portfolio](https://cody-appa.github.io/Data_Science_Portfolio/)
-
-[Erik's Portfolio](https://erickrios5.github.io/BCB-504-My-Data-Blog/)
 
 ## VAD MODEL
 
@@ -132,9 +118,9 @@ We are defining the structure of the visualization (the idiom).
 
 To do this, we use [MARKS]{.red} and [CHANNELS]{.red}:
 
--   [MARKS]{.red} represent **ITEMS** or **LINKS**
+-   [MARKS]{.red} represent **ITEMS** or **LINKS** (aka **OBSERVATIONS**)
 
--   [CHANNELS]{.red} change the appearance of **MARKS** based on **ATTRIBUTES**
+-   [CHANNELS]{.red} change the appearance of **MARKS** based on **ATTRIBUTES** (aka **VARIABLES**)
 
 ## MARKS FOR ITEMS
 
@@ -144,7 +130,7 @@ To do this, we use [MARKS]{.red} and [CHANNELS]{.red}:
 
 ![](marksforlinks.png){.absolute top="100" height="175"}
 
-![](bubblesets.png){.absolute top="300" left="0" height="250"} [[Bubblesets](vialab.science.uoit.ca/portfolio/bubblesets)]{.absolute left="0" bottom="70"}
+![](bubblesets.png){.absolute top="300" left="0" height="250"} [[Bubblesets](www.vialab.science.uoit.ca/portfolio/bubblesets)]{.absolute left="0" bottom="70"}
 
 ![](forcedirected.png){.absolute top="300" left="330" height="250"} [[Force Directed Graph](https://observablehq.com/@d3/force-directed-graph)]{.absolute left="330" bottom="70"}
 
@@ -319,8 +305,8 @@ import {Swatches} from "@d3/color-legend"
 
 ::: columns
 ::: {.column width="40%"}
--   **CHANNELS** control the appearance of **MARKS**.\
--   They are proportional to or based on **ATTRIBUTES**.
+-   **CHANNELS** control the appearance of **MARKS**.
+-   They are proportional to or based on **ATTRIBUTES** (aka **VARIABLES**).
 -   Their properties differ in the type and amount of information that can be conveyed to the human perceptual system.
 :::
 
@@ -329,11 +315,19 @@ import {Swatches} from "@d3/color-legend"
 :::
 :::
 
+## THIS IS IMPORTANT
+
+**Channel properties differ in the type and amount of information that can be conveyed to the human perceptual system.**
+
 ## VISUAL ENCODING EXAMPLE
 
 Let's analyze the idiom structures below in terms of marks and channels.
 
 ![](simpleencode.png)
+
+## DOUGLAS FIR GROWTH
+
+![](Konrad.png)
 
 ## REDUNDANT ENCODING
 
@@ -343,6 +337,20 @@ Uses multiple channels for the same attribute.
 -   Uses up channels
 
 ![](lengthluminance.png){.absolute right="0" bottom="50" height="400"}
+## WHEAT GROWTH BY AREA*
+
+
+::: {#wheatgrowth layout-ncol=2}
+
+![](Yaotianboxplot.png)
+
+![](Yaotiandensity.png)
+
+
+:::
+
+
+
 
 ## CHOOSING CHANNELS
 
@@ -352,7 +360,14 @@ Uses multiple channels for the same attribute.
     -   Channels differ in accuracy of perception.
     -   The importance of the attribute should match the salience of the channel (its noticability).
 
-## CHANNEL RANKINGS {.smaller}
+
+## EXPRESSIVENESS
+
+![](Heidisingle.png)
+
+The advantages and disadvantages of jitter plots.
+
+## CHANNEL EFFECTIVENESS RANKINGS {.smaller}
 
 ![](ChannelRank.png)
 
@@ -443,11 +458,23 @@ ggplot(df,aes(I))+
 :::
 :::
 
+## ACCURACY?
+
+Depends on the task.  Which genre has the most game titles?  Which genres are the top 4 in terms of game titles?  Are there more Puzzle games than Strategy games?
+
+![](Geraline.png)
+
+
+
 ## DISCRIMINABILITY
 
 How many usable steps are in the channel? Are the differences between items perceptible to the human as intended?
 
 ![](linewidths.png)
+
+## DISCRIMINABILITY and COLORS
+
+![](geralineplatform.png)
 
 ## SEPARABILITY VS INTEGRALITY {.smaller}
 
@@ -458,6 +485,13 @@ Separable channels are orthogonal and independent. Integral channels are inextri
 ::: caption
 **Figure 5.10.** Pairs of visual channels fall along a continuum from fully separable to intrinsically integral. Color and location are separable channels well suited to encode different data attributes for two different groupings that can be selectively attended to. However, size interacts with hue, which is harder to perceive for small objects. The horizontal size and and vertical size channels are automatically fused into an integrated perception of area, yielding three groups. Attempts to code separate information along the red and green axes of the RGB color space fail, because we simply perceive four different hues.
 :::
+
+
+## SEPARABILITY 
+
+![](Yaotianboxplot.png)
+
+Redundancy may be desirable, but **area** interferes with **hue**, with larger shapes having more visual salience.
 
 ## POPOUT {.smaller}
 
@@ -501,6 +535,14 @@ But not all!
 :::
 :::
 
+## POPOUT GOES THE WEEVIL?
+
+::: {#deadweevils layout-ncol=2}
+
+![](Lucaspretreat.png)
+![](lucas35dpa.png)
+:::
+
 ## RELATIVE VS ABSOLUTE JUDGEMENTS {.smaller}
 
 The human perceptual system is fundamentally based on relative judgements, not absolute ones. This is why accuracy increases with common frame/scale and alignment.
@@ -510,6 +552,11 @@ The human perceptual system is fundamentally based on relative judgements, not a
 ![](reljudge.png)
 
 The filled rectangles differ in length by 1:9, and it is therefore difficult to detect the difference without aligment. The white rectangles differ in length by 1:2, it is easier to see this difference even when the objects are unaligned.
+
+
+## RELATIVE JUDGEMENTS
+
+![](Heidistack.png)
 
 ## RELATIVE LUMINANCE JUDGEMENTS
 
