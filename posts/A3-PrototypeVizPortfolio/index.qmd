@@ -2,13 +2,13 @@
 title: "ASSIGNMENT 3"
 subtitle: "Prototype Viz Portfolio"
 author: "Barrie Robison"
-date: "2023-02-01"
+date: "2024-02-05"
 categories: [Assignment, DataViz, Quarto, Portfolio, GitHub, Version Control]
 image: "MythosPortfolio.png"
 code-fold: true
 code-tools: true
 description: "Lets make a data visualization, and create a place to put it!"
-draft: true
+
 ---
 
 ## SUMMARY
