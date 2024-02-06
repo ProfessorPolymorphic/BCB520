@@ -2,6 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/A4-MarksChannels/index.html",
+      "/posts/A3-PrototypeVizPortfolio/index.html",
       "/posts/L4-Marks-Channels/index.html",
       "/posts/L3-TaskAbstraction/index.html",
       "/posts/T4-BarriesData/index.html",

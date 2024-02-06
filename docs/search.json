@@ -84,6 +84,83 @@
     "text": "Visualization reveals hidden patterns!\n\n\nCode\nggplot(tidy_anscombe,\n       aes(x = x,\n           y = y)) +\n  geom_point() +\n  geom_point(data = tidy_anscombe_summary, aes(x=x_mean, y = y_mean, color = \"red\", size = 5),\n             show.legend = FALSE)+\n  facet_wrap(~set) +\n  geom_smooth(method = \"lm\", se = FALSE)\n\n\n`geom_smooth()` using formula = 'y ~ x'"
   },
   {
+    "objectID": "posts/A4-MarksChannels/index.html",
+    "href": "posts/A4-MarksChannels/index.html",
+    "title": "ASSIGNMENT 4",
+    "section": "",
+    "text": "It’s one thing to “learn” about the theory of marks and channels for data visualization. It’s an entirely different thing to LEARN these concepts by IMPLEMENTING them in your own visualizations. In this assignment, you will do exactly that. Create some simple visualizations that highlight some of the key concepts from this section of the class."
+  },
+  {
+    "objectID": "posts/A4-MarksChannels/index.html#summary",
+    "href": "posts/A4-MarksChannels/index.html#summary",
+    "title": "ASSIGNMENT 4",
+    "section": "",
+    "text": "It’s one thing to “learn” about the theory of marks and channels for data visualization. It’s an entirely different thing to LEARN these concepts by IMPLEMENTING them in your own visualizations. In this assignment, you will do exactly that. Create some simple visualizations that highlight some of the key concepts from this section of the class."
+  },
+  {
+    "objectID": "posts/A4-MarksChannels/index.html#a-new-portfolio-post",
+    "href": "posts/A4-MarksChannels/index.html#a-new-portfolio-post",
+    "title": "ASSIGNMENT 4",
+    "section": "A NEW PORTFOLIO POST",
+    "text": "A NEW PORTFOLIO POST\nThis assignment will appear as a new post in your nascent data science portfolio. To create a new post, you need to navigate to your posts directory in your RStudio Project. I do this using the Files tab in the lower right quadrant of RStudio.\n\n\nMake a new directory within posts called MarksChannels .\nClick on that new directory to enter it and then use that create a new blank file button and choose Quarto Document.\nName the new file index.qmd .\nAdd YAML text to the top of the file. In particular, add the following:\n\ntitle: “ASSIGNMENT 4”\nsubtitle: “Marks and Channels”\nauthor: “YOUR NAME”\ndate: “2024-02-08”\ncategories: [Assignment, DataViz]\nimage: “some fun image you put in that new directory.png”\ncode-fold: true\ncode-tools: true\ndescription: “A clever description that describes the stuff”"
+  },
+  {
+    "objectID": "posts/A4-MarksChannels/index.html#make-your-portfolio-less-terrible",
+    "href": "posts/A4-MarksChannels/index.html#make-your-portfolio-less-terrible",
+    "title": "ASSIGNMENT 4",
+    "section": "MAKE YOUR PORTFOLIO LESS TERRIBLE",
+    "text": "MAKE YOUR PORTFOLIO LESS TERRIBLE\nWhile we are at it, let’s improve the overall look and structure of your portfolio. Navigate to the about.qmd file in your portfolio root directory and open it in RStudio. Use the information found here to customize your About page.\nAT MINIMUM , I want an About page that contains your name, a brief description about you, a picture of yourself, a link to your github, and a section on your Education."
+  },
+  {
+    "objectID": "posts/A4-MarksChannels/index.html#marks-and-channels",
+    "href": "posts/A4-MarksChannels/index.html#marks-and-channels",
+    "title": "ASSIGNMENT 4",
+    "section": "MARKS AND CHANNELS",
+    "text": "MARKS AND CHANNELS\nBack to your new post!\nUse that shiny new index.qmd file to perform the tasks below. Every time you create a figure, it needs a caption. The text in that section of your assignment should also briefly describe the data set you are using, especially the attributes used for the visualization. In addition, make sure the visualization task actually requires the particular concept. For example, don’t just make a scatterplot with one red dot for the Popout exercise. You need to describe a task that requires we IDENTIFY that point.\n\nExpressiveness and Effectiveness\nFrom Munzner, 5.4.1:\nThe expressiveness principle: Visual encoding should express all of, and only, the information in the dataset attributes. Ordered data should be shown in a way that our perceptual system intrinsically senses as ordered. Conversely, unordered data should not be shown in a way that perceptually implies an ordering that does not exist.\nThe effectiveness principle: The importance of the attribute should match the salience of the channel (its noticeablity). The most important attributes should be encoded with the most effective channels.\nUsing whatever data set you choose, create a visualization called Figure 1 that adheres to these two principles. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 2 that violates these principles in the most extreme ways you can imagine while still having the visualization be recognizibly the same as the first. Write a caption that explains your choices of marks and channels and why they are bad compared to Figure 1.\n\n\nDiscriminability\nUsing whatever data set you choose (it need not be the same data used for Figures 1 and 2), create a visualization called Figure 3 that uses a magnitude channel and a number of bins that facilitate discriminiability of an attribute. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 4 that uses this same channel for WAY TOO MANY BINS, violating the guidelines for discriminability. Write a caption that explains why this number of bins is bad compared to Figure 3.\n\n\nSeparability\nUsing whatever data set you choose (it need not be the same data used for Figures 1-4), create a visualization called Figure 5 that uses a two or more channels to encode two or more attributes while maintainig separability. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 6 that uses channels that are integral, or at least much less separable. Write a caption that explains why choosing these channels is bad compared to Figure 5.\n\n\nPopout\nUsing whatever data set you choose (it need not be the same data used for Figures 1-6… you get the idea), create a visualization called Figure 7 that effectively uses the concept of popout. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 8 that makes the identification task in Figure 7 much more difficult. Write a caption that explains why Figure 8 sucks compared to Figure 7."
+  },
+  {
+    "objectID": "posts/A3-PrototypeVizPortfolio/index.html",
+    "href": "posts/A3-PrototypeVizPortfolio/index.html",
+    "title": "ASSIGNMENT 3",
+    "section": "",
+    "text": "Enough with the theory and conceptual mumbo jumbo! Let’s get down to making a visualization and posting it somewhere for all the world to see! The basic idea of this assignment is to set up a repository that will serve as an experimental portfolio, and then create your first novel visualization element inside the portfolio. Its gonna be fun! Or at least educational…"
+  },
+  {
+    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#summary",
+    "href": "posts/A3-PrototypeVizPortfolio/index.html#summary",
+    "title": "ASSIGNMENT 3",
+    "section": "",
+    "text": "Enough with the theory and conceptual mumbo jumbo! Let’s get down to making a visualization and posting it somewhere for all the world to see! The basic idea of this assignment is to set up a repository that will serve as an experimental portfolio, and then create your first novel visualization element inside the portfolio. Its gonna be fun! Or at least educational…"
+  },
+  {
+    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#assignment",
+    "href": "posts/A3-PrototypeVizPortfolio/index.html#assignment",
+    "title": "ASSIGNMENT 3",
+    "section": "ASSIGNMENT",
+    "text": "ASSIGNMENT\nThis assignment has two parts. The first part is technical. We’ll set up a Quarto Blog project as a new repository in your GitHub account. Then you’ll be a Blogger! Prestigious! The second part should be more fun. We are going to create your first Blog post as a visualization that explores an ACTION - TARGET pair relevant to your data set from Assignment 2."
+  },
+  {
+    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#part-1-technical-sorcery",
+    "href": "posts/A3-PrototypeVizPortfolio/index.html#part-1-technical-sorcery",
+    "title": "ASSIGNMENT 3",
+    "section": "PART 1 TECHNICAL SORCERY",
+    "text": "PART 1 TECHNICAL SORCERY\n\n1A - Create your BLOG project.\nHopefully by now you have created / dusted off / logged in to your GitHub account. Go ahead and log in to your account on the web and leave it open in a tab in your browser. There is a really great video about the next few steps (also linked below in RESORUCES) from Posit, but I’m giving you the condensed version here.\n\nFire up RStudio.\nGo to File-&gt;New Project and then select NEW DIRECTORY.\nNow select QUARTO BLOG.\nYou are going to create a the project in a new working directory. It is best practice to put this in a senstible directory structure on your local hard drive where your other GitHub repositories also live. Here is what mine looks like:\n\n 4. I suggest making the directory name something informative, like BCB504Portfolio, but hey… If you want to call your repository HasturBoxerShorts I won’t stop you. 5. Most of you will select Knitr as your Engine, but Cody “Mr. Hacker McPythonPants” might select Jupyter. 6. Check Create a git repository. The other boxes are optional and we can talk more about them later. 7. Click CREATE PROJECT.\nNow you’ve got a BLOG template all set up! Ha Ha! Onward to Internet Fame!\n\n\n1B - Make the BLOG about you.\nWe won’t spend a ton of time here, because this will be an ongoing process. You’ll go and watch all those cool videos and tutorials this weekend to figure this out. But lets do a couple things.\n\nMaybe you should modify the about.qmd file so that your name is in there somewhere.\nMaybe you should modify the index.qmd file with a better title in the YAML header.\nMaybe you should navigate to the posts folder, open the Welcome to my blog folder, open index.qmd from that directory, and add a sentence or two.\n\n\n\n1C - Customize your first post.\n\nNavigate to the posts folder, open the post with code folder, and open index.qmd.\nReplace ALL of the content of index.qmd with the most recent version of your .qmd file from ASSIGNMENT 2. Keep the file name index.qmd. Save that file!\nMove your data files to the post with code folder.\nRender the index.qmd file from this folder. Hopefully it worked!\n\n\n\n1D - Render the BLOG as a website.\n\nIMPORTANT Open your _quarto.yml file and add output-dir: docs under project:\n\n\nThe indentations matter here.\n\nSave all the files you’ve modified.\nGo to the BUILD tab in the (probably) top right section of RStudio.\nClick RENDER WEBSITE.\nClick through your new Blog and see how it works!\n\n\n\n1E - Push to GitHub.\nThere are quite a few ways to do this part. I’m going to use GitHub Desktop, but those video will show you other ways.\n\nGo to GitHub Desktop.\nType some text in the summary box.\nClick COMMIT TO MASTER.\nClick PUSH ORIGIN.\nGo to your GitHub in your browser. You should see your new repository! Yay!\n\n\n\n1F - Make it a website with GitHub pages.\n\nIn your browser, click on your repository.\nGo to SETTINGS.\nSelect PAGES.\nSet the SOURCE option to Deploy from a branch.\nSet the BRANCH to master and the directory to docs\nDeploy that stuff and wait. Then visit your site!"
+  },
+  {
+    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#part-2-eldritch-visualization-ritual",
+    "href": "posts/A3-PrototypeVizPortfolio/index.html#part-2-eldritch-visualization-ritual",
+    "title": "ASSIGNMENT 3",
+    "section": "PART 2 ELDRITCH VISUALIZATION RITUAL",
+    "text": "PART 2 ELDRITCH VISUALIZATION RITUAL\n\n2A Define your ACTION - TARGET pair(s)\nIn [LECTURE 3] we discussed the concept of Task Abstraction in which you define the viz task that you want to help the user accomplish. This was represented as sets of ACTIONS that the user would perform (e.g. Discover, Present, Browse, Identify) on TARGETS related to the data set (e.g. Trends, Attributes, etc.).\nThink about one or two visualizations you wish to construct with your data, and try to define them in terms of ACTION - TARGET pairs. While you are at it, why don’t you update the index.qmd file of your BLOG POST with a new seciton at the bottom titled TASK ABSTRACTION, and put a sentence describing your visualizations and the ACTION - TARGET pairs they represent?\n\n\n2B Construct your Visualization\nLet’s get to work! Using whatever tools you can, code up your visualization in that new section of your BLOG post. You can check out how I approached this part in TUTORIAL 4."
+  },
+  {
+    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#resources",
+    "href": "posts/A3-PrototypeVizPortfolio/index.html#resources",
+    "title": "ASSIGNMENT 3",
+    "section": "RESOURCES",
+    "text": "RESOURCES\nA YouTube Video from Posit on Building your Data Science Portfolio\nTidyTuesday\nA fun Spotify example from TidyTuesday by Kaylin Pavlik.\nQuarto’s BLOG Documentation\nA YouTube Video from Posit on Building a BLOG with Quarto"
+  },
+  {
     "objectID": "posts/T1-Lit-Prog/index.html",
     "href": "posts/T1-Lit-Prog/index.html",
     "title": "TUTORIAL 1 - Literate Programming",
@@ -985,82 +1062,5 @@
     "title": "BCB 520:: Foundations of Data Visualization",
     "section": "",
     "text": "GGSIDE! A companion to ggplot for making side plots! COOL!\nAwesome Quarto: A potentially interesting repository of Quarto documents, talks, tools, examples, etc.\nThe MockUp Blog - TABLES! This blog post explores the R packages gt and gtextras which will help us up our table game!\nRiffomonas Project: Pat Schloss is a Professor at the University of Michigan. The Riffomonas Project is his Youtube channel, which has HUNDREDS of easy to follow and amazingly useful instructional videos on R, ggplot, version control, and literate programming.\nDr. Tamara Munzner’s Website: It isn’t fancy, but Dr. Munzner’s website has tons of resources from her textbook and the many data visualization courses she has offered. This includes recorded lectures that align directly with the chapters of the text, much like what we are using.\nCheat Sheets: So many visual guides for many R packages, including the tidyverse, ggplot, dplyr, etc.\nLearning Vis Tools: Teaching Data Visualization Tutorials An interesting paper for discussion as we forge the structure for this class."
-  },
-  {
-    "objectID": "posts/A3-PrototypeVizPortfolio/index.html",
-    "href": "posts/A3-PrototypeVizPortfolio/index.html",
-    "title": "ASSIGNMENT 3",
-    "section": "",
-    "text": "Enough with the theory and conceptual mumbo jumbo! Let’s get down to making a visualization and posting it somewhere for all the world to see! The basic idea of this assignment is to set up a repository that will serve as an experimental portfolio, and then create your first novel visualization element inside the portfolio. Its gonna be fun! Or at least educational…"
-  },
-  {
-    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#summary",
-    "href": "posts/A3-PrototypeVizPortfolio/index.html#summary",
-    "title": "ASSIGNMENT 3",
-    "section": "",
-    "text": "Enough with the theory and conceptual mumbo jumbo! Let’s get down to making a visualization and posting it somewhere for all the world to see! The basic idea of this assignment is to set up a repository that will serve as an experimental portfolio, and then create your first novel visualization element inside the portfolio. Its gonna be fun! Or at least educational…"
-  },
-  {
-    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#assignment",
-    "href": "posts/A3-PrototypeVizPortfolio/index.html#assignment",
-    "title": "ASSIGNMENT 3",
-    "section": "ASSIGNMENT",
-    "text": "ASSIGNMENT\nThis assignment has two parts. The first part is technical. We’ll set up a Quarto Blog project as a new repository in your GitHub account. Then you’ll be a Blogger! Prestigious! The second part should be more fun. We are going to create your first Blog post as a visualization that explores an ACTION - TARGET pair relevant to your data set from Assignment 2."
-  },
-  {
-    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#part-1-technical-sorcery",
-    "href": "posts/A3-PrototypeVizPortfolio/index.html#part-1-technical-sorcery",
-    "title": "ASSIGNMENT 3",
-    "section": "PART 1 TECHNICAL SORCERY",
-    "text": "PART 1 TECHNICAL SORCERY\n\n1A - Create your BLOG project.\nHopefully by now you have created / dusted off / logged in to your GitHub account. Go ahead and log in to your account on the web and leave it open in a tab in your browser. There is a really great video about the next few steps (also linked below in RESORUCES) from Posit, but I’m giving you the condensed version here.\n\nFire up RStudio.\nGo to File-&gt;New Project and then select NEW DIRECTORY.\nNow select QUARTO BLOG.\nYou are going to create a the project in a new working directory. It is best practice to put this in a senstible directory structure on your local hard drive where your other GitHub repositories also live. Here is what mine looks like:\n\n 4. I suggest making the directory name something informative, like BCB504Portfolio, but hey… If you want to call your repository HasturBoxerShorts I won’t stop you. 5. Most of you will select Knitr as your Engine, but Cody “Mr. Hacker McPythonPants” might select Jupyter. 6. Check Create a git repository. The other boxes are optional and we can talk more about them later. 7. Click CREATE PROJECT.\nNow you’ve got a BLOG template all set up! Ha Ha! Onward to Internet Fame!\n\n\n1B - Make the BLOG about you.\nWe won’t spend a ton of time here, because this will be an ongoing process. You’ll go and watch all those cool videos and tutorials this weekend to figure this out. But lets do a couple things.\n\nMaybe you should modify the about.qmd file so that your name is in there somewhere.\nMaybe you should modify the index.qmd file with a better title in the YAML header.\nMaybe you should navigate to the posts folder, open the Welcome to my blog folder, open index.qmd from that directory, and add a sentence or two.\n\n\n\n1C - Customize your first post.\n\nNavigate to the posts folder, open the post with code folder, and open index.qmd.\nReplace ALL of the content of index.qmd with the most recent version of your .qmd file from ASSIGNMENT 2. Keep the file name index.qmd. Save that file!\nMove your data files to the post with code folder.\nRender the index.qmd file from this folder. Hopefully it worked!\n\n\n\n1D - Render the BLOG as a website.\n\nIMPORTANT Open your _quarto.yml file and add output-dir: docs under project:\n\n\nThe indentations matter here.\n\nSave all the files you’ve modified.\nGo to the BUILD tab in the (probably) top right section of RStudio.\nClick RENDER WEBSITE.\nClick through your new Blog and see how it works!\n\n\n\n1E - Push to GitHub.\nThere are quite a few ways to do this part. I’m going to use GitHub Desktop, but those video will show you other ways.\n\nGo to GitHub Desktop.\nType some text in the summary box.\nClick COMMIT TO MASTER.\nClick PUSH ORIGIN.\nGo to your GitHub in your browser. You should see your new repository! Yay!\n\n\n\n1F - Make it a website with GitHub pages.\n\nIn your browser, click on your repository.\nGo to SETTINGS.\nSelect PAGES.\nSet the SOURCE option to Deploy from a branch.\nSet the BRANCH to master and the directory to docs\nDeploy that stuff and wait. Then visit your site!"
-  },
-  {
-    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#part-2-eldritch-visualization-ritual",
-    "href": "posts/A3-PrototypeVizPortfolio/index.html#part-2-eldritch-visualization-ritual",
-    "title": "ASSIGNMENT 3",
-    "section": "PART 2 ELDRITCH VISUALIZATION RITUAL",
-    "text": "PART 2 ELDRITCH VISUALIZATION RITUAL\n\n2A Define your ACTION - TARGET pair(s)\nIn [LECTURE 3] we discussed the concept of Task Abstraction in which you define the viz task that you want to help the user accomplish. This was represented as sets of ACTIONS that the user would perform (e.g. Discover, Present, Browse, Identify) on TARGETS related to the data set (e.g. Trends, Attributes, etc.).\nThink about one or two visualizations you wish to construct with your data, and try to define them in terms of ACTION - TARGET pairs. While you are at it, why don’t you update the index.qmd file of your BLOG POST with a new seciton at the bottom titled TASK ABSTRACTION, and put a sentence describing your visualizations and the ACTION - TARGET pairs they represent?\n\n\n2B Construct your Visualization\nLet’s get to work! Using whatever tools you can, code up your visualization in that new section of your BLOG post. You can check out how I approached this part in TUTORIAL 4."
-  },
-  {
-    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#resources",
-    "href": "posts/A3-PrototypeVizPortfolio/index.html#resources",
-    "title": "ASSIGNMENT 3",
-    "section": "RESOURCES",
-    "text": "RESOURCES\nA YouTube Video from Posit on Building your Data Science Portfolio\nTidyTuesday\nA fun Spotify example from TidyTuesday by Kaylin Pavlik.\nQuarto’s BLOG Documentation\nA YouTube Video from Posit on Building a BLOG with Quarto"
-  },
-  {
-    "objectID": "posts/A4-MarksChannels/index.html",
-    "href": "posts/A4-MarksChannels/index.html",
-    "title": "ASSIGNMENT 4",
-    "section": "",
-    "text": "It’s one thing to “learn” about the theory of marks and channels for data visualization. It’s an entirely different thing to LEARN these concepts by IMPLEMENTING them in your own visualizations. In this assignment, you will do exactly that. Create some simple visualizations that highlight some of the key concepts from this section of the class."
-  },
-  {
-    "objectID": "posts/A4-MarksChannels/index.html#summary",
-    "href": "posts/A4-MarksChannels/index.html#summary",
-    "title": "ASSIGNMENT 4",
-    "section": "",
-    "text": "It’s one thing to “learn” about the theory of marks and channels for data visualization. It’s an entirely different thing to LEARN these concepts by IMPLEMENTING them in your own visualizations. In this assignment, you will do exactly that. Create some simple visualizations that highlight some of the key concepts from this section of the class."
-  },
-  {
-    "objectID": "posts/A4-MarksChannels/index.html#a-new-portfolio-post",
-    "href": "posts/A4-MarksChannels/index.html#a-new-portfolio-post",
-    "title": "ASSIGNMENT 4",
-    "section": "A NEW PORTFOLIO POST",
-    "text": "A NEW PORTFOLIO POST\nThis assignment will appear as a new post in your nascent data science portfolio. To create a new post, you need to navigate to your posts directory in your RStudio Project. I do this using the Files tab in the lower right quadrant of RStudio.\n\n\nMake a new directory within posts called MarksChannels .\nClick on that new directory to enter it and then use that create a new blank file button and choose Quarto Document.\nName the new file index.qmd .\nAdd YAML text to the top of the file. In particular, add the following:\n\ntitle: “ASSIGNMENT 4”\nsubtitle: “Marks and Channels”\nauthor: “YOUR NAME”\ndate: “2024-02-08”\ncategories: [Assignment, DataViz]\nimage: “some fun image you put in that new directory.png”\ncode-fold: true\ncode-tools: true\ndescription: “A clever description that describes the stuff”"
-  },
-  {
-    "objectID": "posts/A4-MarksChannels/index.html#make-your-portfolio-less-terrible",
-    "href": "posts/A4-MarksChannels/index.html#make-your-portfolio-less-terrible",
-    "title": "ASSIGNMENT 4",
-    "section": "MAKE YOUR PORTFOLIO LESS TERRIBLE",
-    "text": "MAKE YOUR PORTFOLIO LESS TERRIBLE\nWhile we are at it, let’s improve the overall look and structure of your portfolio. Navigate to the about.qmd file in your portfolio root directory and open it in RStudio. Use the information found here to customize your About page.\nAT MINIMUM , I want an About page that contains your name, a brief description about you, a picture of yourself, a link to your github, and a section on your Education."
-  },
-  {
-    "objectID": "posts/A4-MarksChannels/index.html#marks-and-channels",
-    "href": "posts/A4-MarksChannels/index.html#marks-and-channels",
-    "title": "ASSIGNMENT 4",
-    "section": "MARKS AND CHANNELS",
-    "text": "MARKS AND CHANNELS\nBack to your new post!\nUse that shiny new index.qmd file to perform the tasks below. Every time you create a figure, it needs a caption. The text in that section of your assignment should also briefly describe the data set you are using, especially the attributes used for the visualization. In addition, make sure the visualization task actually requires the particular concept. For example, don’t just make a scatterplot with one red dot for the Popout exercise. You need to describe a task that requires we IDENTIFY that point.\n\nExpressiveness and Effectiveness\nFrom Munzner, 5.4.1:\nThe expressiveness principle: Visual encoding should express all of, and only, the information in the dataset attributes. Ordered data should be shown in a way that our perceptual system intrinsically senses as ordered. Conversely, unordered data should not be shown in a way that perceptually implies an ordering that does not exist.\nThe effectiveness principle: The importance of the attribute should match the salience of the channel (its noticeablity). The most important attributes should be encoded with the most effective channels.\nUsing whatever data set you choose, create a visualization called Figure 1 that adheres to these two principles. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 2 that violates these principles in the most extreme ways you can imagine while still having the visualization be recognizibly the same as the first. Write a caption that explains your choices of marks and channels and why they are bad compared to Figure 1.\n\n\nDiscriminability\nUsing whatever data set you choose (it need not be the same data used for Figures 1 and 2), create a visualization called Figure 3 that uses a magnitude channel a number of bins that facilitate discriminiability of an attribute. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 4 that uses this same channel for WAY TOO MANY BINS, violating the guidelines for discriminability. Write a caption that explains why this number of bins is bad compared to Figure 3.\n\n\nSeparability\nUsing whatever data set you choose (it need not be the same data used for Figures 1-4), create a visualization called Figure 5 that uses a two or more channels to encode two or more attributes while maintainig separability. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 6 that uses channels that are integral, or at least much less separable. Write a caption that explains why choosing these channels is bad compared to Figure 5.\n\n\nPopout\nUsing whatever data set you choose (it need not be the same data used for Figures 1-6… you get the idea), create a visualization called Figure 7 that effectively uses the concept of popout. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 8 that makes the identification task in Figure 7 much more difficult. Write a caption that explains why Figure 8 sucks compared to Figure 7."
   }
 ]

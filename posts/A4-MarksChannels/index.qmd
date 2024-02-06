@@ -2,8 +2,8 @@
 title: "ASSIGNMENT 4"
 subtitle: "Marks and Channels"
 author: "Barrie Robison"
-date: "2023-02-05"
-categories: [Assignment, DataViz]
+date: "2024-02-06"
+categories: [Assignment, DataViz, Marks, Channels]
 image: "Cthulhuscattergreen.png"
 code-fold: true
 code-tools: true
@@ -68,7 +68,7 @@ Using whatever data set you choose, create a visualization called Figure 1 that 
 
 ### [Discriminability](../L4-Marks-Channels/index.qmd#DISCRIMINABILITY)
 
-Using whatever data set you choose (it need not be the same data used for Figures 1 and 2), create a visualization called Figure 3 that uses a magnitude channel a number of bins that facilitate discriminiability of an attribute. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 4 that uses this same channel for WAY TOO MANY BINS, violating the guidelines for discriminability. Write a caption that explains why this number of bins is bad compared to Figure 3.
+Using whatever data set you choose (it need not be the same data used for Figures 1 and 2), create a visualization called Figure 3 that uses a magnitude channel and a number of bins that facilitate discriminiability of an attribute. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 4 that uses this same channel for WAY TOO MANY BINS, violating the guidelines for discriminability. Write a caption that explains why this number of bins is bad compared to Figure 3.
 
 ### [Separability](../L4-Marks-Channels/index.qmd#SEPARABILITY%20VS%20INTEGRALITY)
 
