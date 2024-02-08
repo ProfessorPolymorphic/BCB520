@@ -1,0 +1,6 @@
+---
+title: "Examples are fun"
+author: "Barrie"
+---
+
+I LIKE HOCKEY AND CANDY.
