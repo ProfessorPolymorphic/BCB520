@@ -1,0 +1,17 @@
+{
+  "hash": "3c87841e35b5b8c6fd20cde3ede36285",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Examples are fun\"\nauthor: \"Barrie\"\n---\n\n\nI LIKE HOCKEY AND CANDY.\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndata <- tribble(\n  ~from, ~to, ~value,\n  \"Martonick\", \"NCURA Workshops\", 100,\n  \"Martoncik\", \"Project Reporting\", 300,\n  \"Sheneman\", \"Open Source Data Sets\", 200,\n  \"Sheneman\", \"AI Tools\", 100,\n  \"Pal\", \"Open Source Data Sets\", 100,\n  \"Pal\", \"Common Data Model\", 100,\n  \"Martoncik\", \"Community of Practice\", 300,\n  \"Robison\", \"Project Reporting\", 200,\n  \"Brunsfeld\", \"AI Tools\", 100,\n  \"Trainer\", \"Open Source Data Sets\", 100,\n  \"Trainer\", \"NCURA Workshops\", 100,\n  \"Trainer\", \"Online Training Modules\", 150,\n  \"Robison\", \"Online Training Modules\", 50\n)\n\n\n# Using ggplot2 and ggalluvial\nggplot(data = data,\n       aes(axis1 = from, axis2 = to, y = value)) +\n  geom_alluvium(aes(fill = to)) + \n  geom_stratum() + \n  geom_text(stat = \"stratum\", aes(label = after_stat(stratum))) +\n  theme_minimal() +\n  ggtitle(\"Sankey Diagram with tidyverse and ggalluvial\")\n```\n\n::: {.cell-output-display}\n![](Example_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n\n```{.r .cell-code}\ndf <- mtcars %>%\n  make_long(cyl, vs, am, gear, carb)\n\nggplot(df, aes(x = x, \n               next_x = next_x, \n               node = node, \n               next_node = next_node,\n               fill = factor(node))) +\n  geom_sankey()\n```\n\n::: {.cell-output-display}\n![](Example_files/figure-html/unnamed-chunk-2-2.png){width=672}\n:::\n:::",
+    "supporting": [
+      "Example_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

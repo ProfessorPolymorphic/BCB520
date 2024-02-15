@@ -4,3 +4,54 @@ author: "Barrie"
 ---
 
 I LIKE HOCKEY AND CANDY.
+
+```{r}
+#| include: false
+
+
+#install.packages(c("tidyverse", "ggalluvial"))
+library(tidyverse)
+library(ggalluvial)
+library(ggsankey)
+
+```
+
+```{r}
+data <- tribble(
+  ~from, ~to, ~value,
+  "Martonick", "NCURA Workshops", 100,
+  "Martoncik", "Project Reporting", 300,
+  "Sheneman", "Open Source Data Sets", 200,
+  "Sheneman", "AI Tools", 100,
+  "Pal", "Open Source Data Sets", 100,
+  "Pal", "Common Data Model", 100,
+  "Martoncik", "Community of Practice", 300,
+  "Robison", "Project Reporting", 200,
+  "Brunsfeld", "AI Tools", 100,
+  "Trainer", "Open Source Data Sets", 100,
+  "Trainer", "NCURA Workshops", 100,
+  "Trainer", "Online Training Modules", 150,
+  "Robison", "Online Training Modules", 50
+)
+
+
+# Using ggplot2 and ggalluvial
+ggplot(data = data,
+       aes(axis1 = from, axis2 = to, y = value)) +
+  geom_alluvium(aes(fill = to)) + 
+  geom_stratum() + 
+  geom_text(stat = "stratum", aes(label = after_stat(stratum))) +
+  theme_minimal() +
+  ggtitle("Sankey Diagram with tidyverse and ggalluvial")
+
+df <- mtcars %>%
+  make_long(cyl, vs, am, gear, carb)
+
+ggplot(df, aes(x = x, 
+               next_x = next_x, 
+               node = node, 
+               next_node = next_node,
+               fill = factor(node))) +
+  geom_sankey()
+
+```

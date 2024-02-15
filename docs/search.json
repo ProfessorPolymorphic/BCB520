@@ -119,6 +119,160 @@
     "text": "MARKS AND CHANNELS\nBack to your new post!\nUse that shiny new index.qmd file to perform the tasks below. Every time you create a figure, it needs a caption. The text in that section of your assignment should also briefly describe the data set you are using, especially the attributes used for the visualization. In addition, make sure the visualization task actually requires the particular concept. For example, don’t just make a scatterplot with one red dot for the Popout exercise. You need to describe a task that requires we IDENTIFY that point.\n\nExpressiveness and Effectiveness\nFrom Munzner, 5.4.1:\nThe expressiveness principle: Visual encoding should express all of, and only, the information in the dataset attributes. Ordered data should be shown in a way that our perceptual system intrinsically senses as ordered. Conversely, unordered data should not be shown in a way that perceptually implies an ordering that does not exist.\nThe effectiveness principle: The importance of the attribute should match the salience of the channel (its noticeablity). The most important attributes should be encoded with the most effective channels.\nUsing whatever data set you choose, create a visualization called Figure 1 that adheres to these two principles. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 2 that violates these principles in the most extreme ways you can imagine while still having the visualization be recognizibly the same as the first. Write a caption that explains your choices of marks and channels and why they are bad compared to Figure 1.\n\n\nDiscriminability\nUsing whatever data set you choose (it need not be the same data used for Figures 1 and 2), create a visualization called Figure 3 that uses a magnitude channel and a number of bins that facilitate discriminiability of an attribute. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 4 that uses this same channel for WAY TOO MANY BINS, violating the guidelines for discriminability. Write a caption that explains why this number of bins is bad compared to Figure 3.\n\n\nSeparability\nUsing whatever data set you choose (it need not be the same data used for Figures 1-4), create a visualization called Figure 5 that uses a two or more channels to encode two or more attributes while maintainig separability. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 6 that uses channels that are integral, or at least much less separable. Write a caption that explains why choosing these channels is bad compared to Figure 5.\n\n\nPopout\nUsing whatever data set you choose (it need not be the same data used for Figures 1-6… you get the idea), create a visualization called Figure 7 that effectively uses the concept of popout. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 8 that makes the identification task in Figure 7 much more difficult. Write a caption that explains why Figure 8 sucks compared to Figure 7."
   },
   {
+    "objectID": "posts/L5-ThumbRules/index.html#tldr-version",
+    "href": "posts/L5-ThumbRules/index.html#tldr-version",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "TLDR VERSION",
+    "text": "TLDR VERSION\nThese are guidelines and considerations, not really absolute rules:\n\nWhen to use 3D? when to use 2D?\nWhen to use eyes instead of memory?\nWhen does immersion help?\nWhen to use overviews?\nHow long is too long?\nWhich comes first, form or function?"
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#unjustified-use-of-3d",
+    "href": "posts/L5-ThumbRules/index.html#unjustified-use-of-3d",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "UNJUSTIFIED USE OF 3D",
+    "text": "UNJUSTIFIED USE OF 3D\nCommon in news and some infographics.\n\n\n\nCheck this out on WTFViz\n\n\nCheck this out on WTFViz"
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#depth-vs-planar-position",
+    "href": "posts/L5-ThumbRules/index.html#depth-vs-planar-position",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "DEPTH VS PLANAR POSITION",
+    "text": "DEPTH VS PLANAR POSITION\nPosition channels are very powerful… when they are PLANAR SPATIAL POSITION, not depth!"
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#the-dangers-of-depth",
+    "href": "posts/L5-ThumbRules/index.html#the-dangers-of-depth",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "THE DANGERS OF DEPTH",
+    "text": "THE DANGERS OF DEPTH"
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#the-actual-dangers-of-depth",
+    "href": "posts/L5-ThumbRules/index.html#the-actual-dangers-of-depth",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "THE ACTUAL DANGERS OF DEPTH",
+    "text": "THE ACTUAL DANGERS OF DEPTH\nWe don’t really live in 3D: we see in 2.05D.\n\nWe acquire more info on an image plane quickly using eye movements\nWe acquire more info for depth much more slowly using head/body motion"
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#occlusion",
+    "href": "posts/L5-ThumbRules/index.html#occlusion",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "OCCLUSION",
+    "text": "OCCLUSION\n“Occlusion occurs when one 3D graphic partially blocks another. It is the result of mimicking space in the natural world–where objects have differing X, Y, and Z coordinates. In data visualization, occlusion obscures important data and creates false hierarchies wherein unobstructed graphics appear most important.” … From This BLOG post by M. Bowers.\n\nInteraction can resolve occlusion, but at cost of time and cognitive load."
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#perspective-distortion",
+    "href": "posts/L5-ThumbRules/index.html#perspective-distortion",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "PERSPECTIVE DISTORTION",
+    "text": "PERSPECTIVE DISTORTION\nPerspective in 3D visualizations interferes with all size channel encodings. The power of 2D planar positioning is lost!\n“Distortion occurs when 3D graphics recede into or project out from the picture plane through foreshortening. In drawing, foreshortening makes objects seem as though they inhabit three-dimensional space, but in data visualization, it creates more false hierarchies. Foreground graphics appear larger, background graphics smaller, and the relationship between data series is needlessly skewed.”…… From This BLOG post by M. Bowers."
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#d-bar-charts---probably-not",
+    "href": "posts/L5-ThumbRules/index.html#d-bar-charts---probably-not",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "3D BAR CHARTS - Probably not…",
+    "text": "3D BAR CHARTS - Probably not…\n3D bars are very difficult to justify!\nPerspective distortion and occlusion make faceting into 2D the better choice in most situations."
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#tilted-text",
+    "href": "posts/L5-ThumbRules/index.html#tilted-text",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "TILTED TEXT",
+    "text": "TILTED TEXT\nSkewed perspective in 3D visualizations does not interact well with fonts.\n\nExploring and Reducing the Effects of Orientation on Text Readability in Volumetric Displays.Grossman et al. CHI 2007"
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#example-3d-extruded-time-series",
+    "href": "posts/L5-ThumbRules/index.html#example-3d-extruded-time-series",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "EXAMPLE: 3D EXTRUDED TIME SERIES",
+    "text": "EXAMPLE: 3D EXTRUDED TIME SERIES\nWhat information can we decode from this visualization?\n\nCluster and Calendar based Visualization of Time Series Data. van Wijk and van Selow, Proc. InfoVis 99."
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#planar-alternative",
+    "href": "posts/L5-ThumbRules/index.html#planar-alternative",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "PLANAR ALTERNATIVE",
+    "text": "PLANAR ALTERNATIVE\nThis version of the extruded time series visualization uses derived data by computing a cluster hierarchy of power usage patterns. It then juxtaposes multiple views: a calendar and superimposed 2D curves differentiated with a color channel."
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#d-shape-perception",
+    "href": "posts/L5-ThumbRules/index.html#d-shape-perception",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "3D: SHAPE PERCEPTION",
+    "text": "3D: SHAPE PERCEPTION\nThe benefits of 3D visualization outweigh its costs when the task is shape perception for 3D spatial data. Interactive navigation often supports synthesis across many viewpoints.\n\nImage-Based Streamline Generation and Rendering. Li and Shen. IEEE Trans. Visualization and Computer Graphics (TVCG) 13:3 (2007), 630–640."
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#d-constrained-navigation",
+    "href": "posts/L5-ThumbRules/index.html#d-constrained-navigation",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "3D: CONSTRAINED NAVIGATION",
+    "text": "3D: CONSTRAINED NAVIGATION\n\nNYTimes Subscribers can access here"
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#d-summary",
+    "href": "posts/L5-ThumbRules/index.html#d-summary",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "3D SUMMARY",
+    "text": "3D SUMMARY\n\n3D legitimate for true 3D spatial data.\n3D needs very careful justification for abstract data\nThe benefits outweigh costs when topological structure/context important for the task."
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#eyes-beat-memory",
+    "href": "posts/L5-ThumbRules/index.html#eyes-beat-memory",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "EYES BEAT MEMORY",
+    "text": "EYES BEAT MEMORY\nExternal Cognition vs. Internal Memory\nIt is easy to compare by moving eyes between side-by-side views.\nIt is much more difficult to compare a visible item to your memory of what you saw.\n\nImplications for animation:\ngreat for choreographed storytelling\ngreat for transitions between two states\npoor for many states with changes everywhere\nconsider small multiples instead"
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#resolution-beats-immersion",
+    "href": "posts/L5-ThumbRules/index.html#resolution-beats-immersion",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "RESOLUTION BEATS IMMERSION",
+    "text": "RESOLUTION BEATS IMMERSION\nImmersion is typically not helpful for abstract data because we do not need a sense of presence or stereoscopic 3D. A desktop view is also usually better for workflow integration.\nResolution in VR is a critical constraint, as pixels are the scarcest resource.\nFirst wave: virtual reality for abstract data! This is difficult to justify.\nSecond wave: AR/MR (augmented/mixed reality) has more promise."
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#overview",
+    "href": "posts/L5-ThumbRules/index.html#overview",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "OVERVIEW",
+    "text": "OVERVIEW\n“Overview first, zoom and filter, details on demand”\nThe Eyes Have It: A Task by Data Type Taxonomy for Information Visualizations. Shneiderman. Proc. IEEE Visual Languages, pp. 336–343, 1996.\n\nThis seems simple enough, until you realize that “Overview” is really a microcosm of the full vis design problem space."
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#responsiveness",
+    "href": "posts/L5-ThumbRules/index.html#responsiveness",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "RESPONSIVENESS",
+    "text": "RESPONSIVENESS\nResponsiveness (visual feedback to the user) has 3 rough categories:\n\n0.1 seconds: perceptual processing\n\nsubsecond response for mouseover highlighting\n\n1 second: immediate response\n\nfast response after mouseclick, button press\nFitts’ Law limits on motor control\n\n10 seconds: brief tasks\n\nbounded response after dialog box\nmental model of heavyweight operation (file load)\n\nShow hourglass for multi-second operations (check for cancel/undo)\nShow progress bar for long operations (process in background thread)\nConsider rendering speed when item count is large (guaranteed frame rate)"
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#function-then-form",
+    "href": "posts/L5-ThumbRules/index.html#function-then-form",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "FUNCTION, THEN FORM",
+    "text": "FUNCTION, THEN FORM\nIt is dangerous to start with aesthetics because it is usually impossible to add function retroactively.\nStart with focus on functionality because you can improve and refine aesthetics later.\nAesthetics do matter! They are another level of function. Consider working with a graphic designer on important visualizations."
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#form-basic-graphic-design",
+    "href": "posts/L5-ThumbRules/index.html#form-basic-graphic-design",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "FORM: BASIC GRAPHIC DESIGN",
+    "text": "FORM: BASIC GRAPHIC DESIGN\n\n\nProximity:\nDO group related items together\nAVOID equal whitespace between unrelated items\nAlignment:\nDO find/make a strong line and stick to it\nAVOID automatic centering\nRepetition:\nDO unify by pushing existing consistencies\nContrast:\nIf not identical, then very different\nAVOID not quite the same\n\n\n\n\nThe Non-Designer’s Design Book, 4th ed. Robin Williams, Peachpit Press, 2015. fast read, very practical to work through whole thing"
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#labelling",
+    "href": "posts/L5-ThumbRules/index.html#labelling",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "LABELLING",
+    "text": "LABELLING\nMake visualizations as self-documenting as possible!\nMeaningful & useful title, labels, legends.\nAxes and panes/subwindows should have labels and axes should have good mix/max boundary tick marks.\nEverything that’s plotted should have a legend and its own header/labels if not redundant with main title.\nUse reasonable numerical format and avoid scientific notation in most cases.\n\nhttps://xkcd.com/833/"
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html#summary---rules-of-thumb",
+    "href": "posts/L5-ThumbRules/index.html#summary---rules-of-thumb",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "SUMMARY - RULES OF THUMB",
+    "text": "SUMMARY - RULES OF THUMB\n\nNo unjustified 3D\n\nPower of the plane\nDisparity of depth\nOcclusion hides information\nPerspective distortion dangers\nTilted text isn’t legible\n\nEyes beat memory\nResolution over immersion\nOverview first, zoom and filter, details on demand\nResponsiveness is required\nFunction first, form next\n\n\n\n\n\nCANVAS…HOME"
+  },
+  {
     "objectID": "posts/A3-PrototypeVizPortfolio/index.html",
     "href": "posts/A3-PrototypeVizPortfolio/index.html",
     "title": "ASSIGNMENT 3",
@@ -165,7 +319,7 @@
     "href": "posts/Examplepost/Example.html",
     "title": "Examples are fun",
     "section": "",
-    "text": "I LIKE HOCKEY AND CANDY."
+    "text": "I LIKE HOCKEY AND CANDY.\n\ndata &lt;- tribble(\n  ~from, ~to, ~value,\n  \"Martonick\", \"NCURA Workshops\", 100,\n  \"Martoncik\", \"Project Reporting\", 300,\n  \"Sheneman\", \"Open Source Data Sets\", 200,\n  \"Sheneman\", \"AI Tools\", 100,\n  \"Pal\", \"Open Source Data Sets\", 100,\n  \"Pal\", \"Common Data Model\", 100,\n  \"Martoncik\", \"Community of Practice\", 300,\n  \"Robison\", \"Project Reporting\", 200,\n  \"Brunsfeld\", \"AI Tools\", 100,\n  \"Trainer\", \"Open Source Data Sets\", 100,\n  \"Trainer\", \"NCURA Workshops\", 100,\n  \"Trainer\", \"Online Training Modules\", 150,\n  \"Robison\", \"Online Training Modules\", 50\n)\n\n\n# Using ggplot2 and ggalluvial\nggplot(data = data,\n       aes(axis1 = from, axis2 = to, y = value)) +\n  geom_alluvium(aes(fill = to)) + \n  geom_stratum() + \n  geom_text(stat = \"stratum\", aes(label = after_stat(stratum))) +\n  theme_minimal() +\n  ggtitle(\"Sankey Diagram with tidyverse and ggalluvial\")\n\n\n\n\n\n\n\ndf &lt;- mtcars %&gt;%\n  make_long(cyl, vs, am, gear, carb)\n\nggplot(df, aes(x = x, \n               next_x = next_x, \n               node = node, \n               next_node = next_node,\n               fill = factor(node))) +\n  geom_sankey()"
   },
   {
     "objectID": "posts/A1-Lit-Prog/index.html",

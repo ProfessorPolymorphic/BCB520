@@ -1,6 +1,6 @@
 ---
 title: "LECTURE 5 - Rules of Thumb"
-subtitle: "BCB 504"
+subtitle: "BCB 520"
 format:
   revealjs: 
     slide-number: true
@@ -11,12 +11,11 @@ format:
     footer: <a href="https://canvas.uidaho.edu/courses/17806" target="_blank">CANVAS</a>...<a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/BCB520.html" target="_blank">HOME</a>
     theme: [default, custom.scss]
 author: "Barrie Robison"
-date: "2023-02-23"
+date: "2024-02-15"
 categories: [Lecture, DataViz]
 image: "Cthulhuthumb.png"
 code-fold: true
 description: "...Because GUIDLINES OF THUMB is too clumsy to say..."
-draft: true
 ---
 
 ## TLDR VERSION
