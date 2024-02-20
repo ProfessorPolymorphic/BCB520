@@ -2,13 +2,13 @@
 title: "ASSIGNMENT 5"
 subtitle: "Visualizations for Tabular Data"
 author: "Barrie Robison"
-date: "2023-03-06"
+date: "2024-02-20"
 categories: [Assignment, DataViz, Tables, Scatterplot, Barplot, Piechart]
 image: "Cthulhuhockeycard.png"
 code-fold: true
 code-tools: true
 description: "Should I trade these draft picks for this bag of magic beans...?"
-draft: true
+
 ---
 
 ## OVERVIEW

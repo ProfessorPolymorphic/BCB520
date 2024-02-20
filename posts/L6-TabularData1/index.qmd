@@ -10,11 +10,11 @@ format:
     footer: <a href="https://canvas.uidaho.edu/courses/17806" target="_blank">CANVAS</a>...<a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/BCB520.html" target="_blank">HOME</a>
     theme: [default, custom.scss]
 author: "Barrie Robison"
-date: "2023-02-28"
+date: "2024-02-20"
 categories: [Lecture, DataViz, Data, Tables]
 image: "Cthulhutabular.png"
 code-fold: true
-draft: true
+
 ---
 
 ## THE THREE MAJOR DATA TYPES

@@ -273,6 +273,370 @@
     "text": "SUMMARY - RULES OF THUMB\n\nNo unjustified 3D\n\nPower of the plane\nDisparity of depth\nOcclusion hides information\nPerspective distortion dangers\nTilted text isn’t legible\n\nEyes beat memory\nResolution over immersion\nOverview first, zoom and filter, details on demand\nResponsiveness is required\nFunction first, form next\n\n\n\n\n\nCANVAS…HOME"
   },
   {
+    "objectID": "posts/L6-TabularData1/index.html#the-three-major-data-types",
+    "href": "posts/L6-TabularData1/index.html#the-three-major-data-types",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "THE THREE MAJOR DATA TYPES",
+    "text": "THE THREE MAJOR DATA TYPES"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#what",
+    "href": "posts/L6-TabularData1/index.html#what",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "WHAT?",
+    "text": "WHAT?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#semantics-for-data",
+    "href": "posts/L6-TabularData1/index.html#semantics-for-data",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "SEMANTICS FOR DATA",
+    "text": "SEMANTICS FOR DATA\n\n\n\nSemantics\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”\n\n\n\n\nData Table\n\n\n\n\nITEM: Person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#dataset-types-tables",
+    "href": "posts/L6-TabularData1/index.html#dataset-types-tables",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "DATASET TYPES: TABLES",
+    "text": "DATASET TYPES: TABLES\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA unique KEY can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#flat-table-example",
+    "href": "posts/L6-TabularData1/index.html#flat-table-example",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "FLAT TABLE EXAMPLE",
+    "text": "FLAT TABLE EXAMPLE\n\n\n\n\n\n\n\n\nA dumb spreadsheet\n\n\n\n\n\n\n\nA cool spreadsheet\n\n\n\n\n\n\nFigure 1: Flat Tables"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#multidimensional-tables",
+    "href": "posts/L6-TabularData1/index.html#multidimensional-tables",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "MULTIDIMENSIONAL TABLES",
+    "text": "MULTIDIMENSIONAL TABLES\nIndexing based on multiple keys (eg genes, patients)"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#keys-and-values",
+    "href": "posts/L6-TabularData1/index.html#keys-and-values",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "KEYS AND VALUES",
+    "text": "KEYS AND VALUES\n\n\nKEY: an independent attribute used as unique index to look up items.\n\nSimple tables: 1 key\nMultidimensional tables: multiple keys\n\nValue: a dependent attribute, value of cell\nWe will classify visualization idioms by the number of keys used.\n0, 1, 2, …"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#framework",
+    "href": "posts/L6-TabularData1/index.html#framework",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "FRAMEWORK",
+    "text": "FRAMEWORK"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#idiom-scatterplot",
+    "href": "posts/L6-TabularData1/index.html#idiom-scatterplot",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "IDIOM: Scatterplot",
+    "text": "IDIOM: Scatterplot\n0 KEYS: Only values are available or salient to the task.\n\n\nExpress values (magnitudes) of quantitative attributes.\nData: 2 quantitative attributes\nMark: points\nChannels: horizontal and verical position\nTasks: find trends, outliers, distribution, correlation, clusters\nScalability: hundreds of items\n\n\n\n\n\n\nHeight and Weight of drafted NHL players."
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#idiom-scatterplot-1",
+    "href": "posts/L6-TabularData1/index.html#idiom-scatterplot-1",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "IDIOM: Scatterplot",
+    "text": "IDIOM: Scatterplot\n0 KEYS: Only values are available or salient to the task.\n\n\nExpress values (magnitudes) of quantitative attributes.\nData: 2 quantitative attributes\nMark: points\nChannels: horizontal and verical position\nTasks: find trends, outliers, distribution, correlation, clusters\nScalability: hundreds of items\n\n\n\n\n\n\nHeight and Weight of drafted NHL players."
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#scatterplots-more-channels",
+    "href": "posts/L6-TabularData1/index.html#scatterplots-more-channels",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "SCATTERPLOTS: More channels",
+    "text": "SCATTERPLOTS: More channels\nAdditional channels are viable with scatterplots since we are using point marks.\n\n\nExamples:\nColor: But pay attention to Discriminability!\nSize: But pay attention to using a quantitative attribute used to control 2D area. Directly encoding radius would mislead. Take the square root since area grows quadratically.\nShape:\n\n\n\n\n\n\nHeight and Weight of drafted NHL goaltenders."
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#scatterplot-tasks",
+    "href": "posts/L6-TabularData1/index.html#scatterplot-tasks",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "SCATTERPLOT TASKS",
+    "text": "SCATTERPLOT TASKS\nCorrelation\n\nClusters/groups, and clusters vs classes"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#keys-categorical-regions",
+    "href": "posts/L6-TabularData1/index.html#keys-categorical-regions",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "KEYS: Categorical Regions",
+    "text": "KEYS: Categorical Regions\n\n\n\nRegions: contiguous bounded areas distinct from each other\n\nNO OVERPLOTTING: separate into spatial regions: one mark per region (for now)\n\nuse categorical or ordered attribute to separate into regions\n\nno conflict with expressiveness principle for categorical attributes\n\nuse ordered attribute to order and align regions"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#separated-and-aligned-and-ordered",
+    "href": "posts/L6-TabularData1/index.html#separated-and-aligned-and-ordered",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "Separated and aligned and ordered",
+    "text": "Separated and aligned and ordered\nBest case!"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#separatedaligned---not-ordered",
+    "href": "posts/L6-TabularData1/index.html#separatedaligned---not-ordered",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "Separated/aligned - not ordered",
+    "text": "Separated/aligned - not ordered\nLimitation: hard to know rank. what’s 4th? what’s 7th?"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#separated-but-not-aligned-or-ordered",
+    "href": "posts/L6-TabularData1/index.html#separated-but-not-aligned-or-ordered",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "Separated but not aligned or ordered",
+    "text": "Separated but not aligned or ordered\nLimitation: hard to make comparisons with size (vs aligned position)"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#idiom-bar-chart",
+    "href": "posts/L6-TabularData1/index.html#idiom-bar-chart",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "IDIOM: Bar Chart",
+    "text": "IDIOM: Bar Chart\nOne key, One value\n\n\nData: 1 categorical attribute, 1 quantitative attribute\nMark: Lines\nChannels: Length to express quantitative value\nSpatial regions: one per mark - separated horizontally, aligned vertically. Ordered by quantitative attribute: by label (alphabetical), by length attribute (data-driven)\nTasks: compare, lookup values\nScalability: dozens to hundreds of levels for key attribute (bars), hundreds for values."
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#idiom-stacked-bar-chart",
+    "href": "posts/L6-TabularData1/index.html#idiom-stacked-bar-chart",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "IDIOM: Stacked Bar Chart",
+    "text": "IDIOM: Stacked Bar Chart\nTwo keys, One value\n\n\nData: 2 categorical attribute, 1 quantitative attribute\nMark: vertical stack of line marks\nGlyph: composite object, internal structure from multiple marks\nChannels: length and color hue\nSpatial regions: one per glyph\nAligned: full glyph, lowest bar component\nUnaligned: other bar components\nTask: part-to-whole relationship\nScalability: asymmetric for stacked key attrib, 10-12 levels segments for main key attrib, dozens to hundreds of levels bars"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#idiom-streamgraph",
+    "href": "posts/L6-TabularData1/index.html#idiom-streamgraph",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "IDIOM: Streamgraph",
+    "text": "IDIOM: Streamgraph\nGeneralized stacked graph emphasizing horizontal continuity vs vertical items (example)\n\n\nData: 1 categ key attrib (movies) 1 ordered key attrib (time) 1 quant value attrib (counts) derived data geometry: layers, where height encodes counts 1 quant attrib (layer ordering)\nMark: vertical stack of line marks\nChannels: length and color hue\nTask: part-to-whole relationship\nScalability: hundreds of time keys dozens to hundreds of movies keys more than stacked bars: most layers don’t extend across whole chart"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#idiom-dotline-chart",
+    "href": "posts/L6-TabularData1/index.html#idiom-dotline-chart",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "IDIOM: Dot/Line Chart",
+    "text": "IDIOM: Dot/Line Chart\nOne key, One value\n\n\nData:2 quant attribs\nMark: points AND line connection marks between them\nChannels: aligned lengths to express quant value separated and ordered by key attrib into horizontal regions\nTask: find trend connection marks emphasize ordering of items along key axis by explicitly showing relationship between one item and the next\nScalability: hhundreds of key levels, hundreds of value levels"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#bar-vs-line-charts",
+    "href": "posts/L6-TabularData1/index.html#bar-vs-line-charts",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "BAR vs LINE CHARTS",
+    "text": "BAR vs LINE CHARTS\nChoice depends on the type of key attributes.\nBar charts if categorical, Line charts if ordered. Do not use line charts for categorical key attributes as it violates the expressiveness principle. The implication of trend is so strong that it overrides semantics. “The more male a person is, the taller he/she is”"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#chart-axes",
+    "href": "posts/L6-TabularData1/index.html#chart-axes",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "CHART AXES",
+    "text": "CHART AXES\n\n\nBest practice to label axes, with few exceptions. Individual small multiple views could share axis label.\nInclude 0 at bottom left or the slope misleads. There are some exceptions (arbitrary 0, small change matters).\nTruncating the Y-Axis: Threat or Menace? Correll, Bertini, & Franconeri, CHI 2020."
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#idiom-indexed-line-charts",
+    "href": "posts/L6-TabularData1/index.html#idiom-indexed-line-charts",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "IDIOM: Indexed Line Charts",
+    "text": "IDIOM: Indexed Line Charts\n\n\nData: 2 quant attribs 1 key + 1 value\nDerived data: new quant value attrib index plot instead of original value\nTask: show change over time\nPrinciple: normalized, not absolute\nScalability: same as standard line chart\n\n\nCool Example"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#idiom-gantt-charts",
+    "href": "posts/L6-TabularData1/index.html#idiom-gantt-charts",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "IDIOM: Gantt Charts",
+    "text": "IDIOM: Gantt Charts\none key, two (related) values\n\n\nData: 1 categ attrib, 2 quant attribs\nMark: line length: duration\nChannels: horiz position: start time (+end from duration)\nTask: mphasize temporal overlaps & start/end dependencies between items\nScalability: dozens of key levels bars hundreds of value levels durations"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#idiom-slopegraphs",
+    "href": "posts/L6-TabularData1/index.html#idiom-slopegraphs",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "IDIOM: Slopegraphs",
+    "text": "IDIOM: Slopegraphs\ntwo values\n\n\nData: 2 quant value attribs (1 derived attrib: change magnitude)\nMark: point + line line connecting mark between pts\nChannels: 2 vertical pos: express attrib value (linewidth/size, color)\nTask: emphasize changes in rank/value\nScalability: hundreds of value levels dozens of item"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#keys",
+    "href": "posts/L6-TabularData1/index.html#keys",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "2 KEYS",
+    "text": "2 KEYS"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#idiom-heatmap",
+    "href": "posts/L6-TabularData1/index.html#idiom-heatmap",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "IDIOM: Heatmap",
+    "text": "IDIOM: Heatmap\ntwo keys, one value\n\n\nData: 2 categ attribs (gene, experimental condition) 1 quant attrib (expression levels)\nMark: point separate and align in 2D matrix indexed by 2 categorical attributes\nChannels: color by quant attrib (ordered diverging colormap)\nTask: find clusters, outliers\nScalability: 1M items, 100s of categ levels, ~10 quant attrib levels"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#heatmap-reordering",
+    "href": "posts/L6-TabularData1/index.html#heatmap-reordering",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "HEATMAP REORDERING",
+    "text": "HEATMAP REORDERING"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#clustered-heatmap",
+    "href": "posts/L6-TabularData1/index.html#clustered-heatmap",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "CLUSTERED HEATMAP",
+    "text": "CLUSTERED HEATMAP\nUse derived data: compute 2 cluster hierarchies and represent as a dendrogram. Parent-child relationships represented in tree with connection line marks, leaves aligned so interior branch heights are easy to compare. Heatmap marks are (re-)ordered by cluster hierarchy traversal. Task: assess quality of clusters found by automatic methods"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#axis-orientation",
+    "href": "posts/L6-TabularData1/index.html#axis-orientation",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "AXIS ORIENTATION",
+    "text": "AXIS ORIENTATION"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#discuss",
+    "href": "posts/L6-TabularData1/index.html#discuss",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "DISCUSS",
+    "text": "DISCUSS"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#radial-bar-chart",
+    "href": "posts/L6-TabularData1/index.html#radial-bar-chart",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "RADIAL BAR CHART",
+    "text": "RADIAL BAR CHART\n\n\n\n\nStar plot: line mark, radial axes meet at central point\nRadial bar chart: line mark, radial axes meet at central ring\nChannels: length, angle/orientation\nBar chart: rectilinear axes, aligned vertically\nAccuracy: length not aligned with radial layouts, making them less accurately perceived than rectilinear aligned layouts.\nVismon: Facilitating Risk Assessment and Decision Making In Fisheries Management. Booshehrian, Möller, Peterman, and Munzner. Technical Report TR 2011-04, Simon Fraser University, School of Computing Science, 2011."
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#radar-plot",
+    "href": "posts/L6-TabularData1/index.html#radar-plot",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "RADAR PLOT",
+    "text": "RADAR PLOT\nRadial line chart with point marks, radial layout, and connecting line marks. Avoid unless data are cyclic."
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#radar-plot-example",
+    "href": "posts/L6-TabularData1/index.html#radar-plot-example",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "RADAR PLOT EXAMPLE",
+    "text": "RADAR PLOT EXAMPLE\n\nTheFunctionalArt"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#pie-and-coxcomb-charts",
+    "href": "posts/L6-TabularData1/index.html#pie-and-coxcomb-charts",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "PIE AND COXCOMB CHARTS",
+    "text": "PIE AND COXCOMB CHARTS\n1 categorical key attribute, 1 quantitative value attribute\n\n\nPie chart: interlocking area marks with angle channel causes variation in 2D area. Keys are separated & ordered radially with uniform height. accuracy: area less accurate than rectilinear aligned line length.\nTask: part-to-whole judgements.\nCoxcomb chart: line marks with length channel, creating variation in only 1D length. Keys are separated & ordered radially with uniform width. These charts are a direct analog to radial bar charts."
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#nightengale-rose",
+    "href": "posts/L6-TabularData1/index.html#nightengale-rose",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "NIGHTENGALE ROSE",
+    "text": "NIGHTENGALE ROSE\nCoxcomb / Nightengale Rose/ Polar Area Chart Invented by Florence Nightingale."
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#coxcomb-perception",
+    "href": "posts/L6-TabularData1/index.html#coxcomb-perception",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "COXCOMB: Perception",
+    "text": "COXCOMB: Perception\n\n\nEncode: 1D length\nDecode/perceive: 2D area\nThe nonuniform relationship between line/sector width and mark length causes area variation to scale nonlinearly with line mark length!\nA standard bar chart is safer: bars are uniform width, so area is linear with line mark length in both radial & rectilinear cases."
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#pie-charts-perception",
+    "href": "posts/L6-TabularData1/index.html#pie-charts-perception",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "PIE CHARTS: Perception",
+    "text": "PIE CHARTS: Perception\n\n\nSome empirical evidence that people respond to arc length.\nDecode/perceive: arc length, maybe also areas, but not angles.\nDonut charts are no worse than pie charts.\n\n\n\n\nArcs, Angles, or Areas: Individual Data Encodings in Pie and Donut Charts. Skau and Kosara. Proc. EuroVis 2016\nExplore this concept"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#pie-charts-best-practices",
+    "href": "posts/L6-TabularData1/index.html#pie-charts-best-practices",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "PIE CHARTS: Best Practices",
+    "text": "PIE CHARTS: Best Practices\nNot so bad for two (or few) levels and part-to-whole tasks. Dubious for several levels if details matter. Terrible for many levels."
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#normalized-stacked-bar",
+    "href": "posts/L6-TabularData1/index.html#normalized-stacked-bar",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "NORMALIZED STACKED BAR",
+    "text": "NORMALIZED STACKED BAR\n\n\nTask: part-to-whole judgements\nNormalized stacked bar chart: stacked bar chart, normalized to full vertical height. A single stacked bar is equivalent to a full pie chart.\nHigh information density can be achieved with narrow rectangles. Pie chart information density is much more limited and requires a large circle."
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#glyphmaps",
+    "href": "posts/L6-TabularData1/index.html#glyphmaps",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "GLYPHMAPS",
+    "text": "GLYPHMAPS\nRectilinear glyphs are good for linear vs nonlinear trends. Radial glyphs are good for cyclic patterns and evaluating periodicity.\n\nGlyph-maps for Visually Exploring Temporal Patterns in Climate Data and Models. Wickham, Hofmann, Wickham, and Cook. Environmetrics 23:5 (2012), 382–393."
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#parallel-axes",
+    "href": "posts/L6-TabularData1/index.html#parallel-axes",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "PARALLEL AXES",
+    "text": "PARALLEL AXES"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#splom",
+    "href": "posts/L6-TabularData1/index.html#splom",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "SPLOM",
+    "text": "SPLOM\n\n\nScatterplot matrix (SPLOM): Rectilinear axes with point mark. All possible pairs of axes are visualized.\nScalability: about a dozen attributes and dozens to hundreds of items."
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#parallel-coordinates",
+    "href": "posts/L6-TabularData1/index.html#parallel-coordinates",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "PARALLEL COORDINATES",
+    "text": "PARALLEL COORDINATES\nScatterplot limitation: visual representation with orthogonal axes can show only two attributes with spatial position channel."
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#parallel-coordinates-1",
+    "href": "posts/L6-TabularData1/index.html#parallel-coordinates-1",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "PARALLEL COORDINATES",
+    "text": "PARALLEL COORDINATES\n\n\nAlternative: Line up axes in parallel to show many attributes with position. Items are encoded with a line with n segments (n is the number of attributes shown). Ordering is a major challenge.\nScalability: dozens of attributes and hundreds of items."
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#parallel-coordinates-limitations",
+    "href": "posts/L6-TabularData1/index.html#parallel-coordinates-limitations",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "PARALLEL COORDINATES: Limitations",
+    "text": "PARALLEL COORDINATES: Limitations\nPatterns only visible between neighboring axis pairs. How to pick axis order? The usual solution is reorderable axes and interactive exploration. The downside of interaction is human-powered search.\n\nAs usual, OBSERVABLE really shines for these types of interactive plots!"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#orientation-limitations",
+    "href": "posts/L6-TabularData1/index.html#orientation-limitations",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "ORIENTATION LIMITATIONS",
+    "text": "ORIENTATION LIMITATIONS\n\n\nRectilinear: Scalability is limited with regard to the number of axes. (2 axes best, 3 problematic, 4+ impossible.)\nParallel: Unfamiliarity and training time.\nRadial: Perceptual limits include polar coordinate asymmetry, lower precision with angle channles compated to length channels, nonuniform sector width/size depending on radial distance. While thes limits are frequently problematic, they can sometimes be deliberately exploited. (Example: for 2 attribs of very unequal importance)\n\n\n\n\nUncovering Strengths and Weaknesses of Radial Visualizations - an Empirical Approach. Diehl, Beck and Burch. IEEE TVCG (Proc. InfoVis) 16(6):935–942, 2010."
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#chart-axes-1",
+    "href": "posts/L6-TabularData1/index.html#chart-axes-1",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "CHART AXES",
+    "text": "CHART AXES\n\n\nLabelled axes are critical! Avoid cropping the y-axis (include 0 at bottom left) or the slope misleads the viewer.\n\n\n\n\nhttp://www.thefunctionalart.com/2015/10/if-you-see-bullshit-say-bullshit.html"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#dual-axis-line-charts",
+    "href": "posts/L6-TabularData1/index.html#dual-axis-line-charts",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "DUAL AXIS LINE CHARTS",
+    "text": "DUAL AXIS LINE CHARTS\nThis approach is controversial. Dual axes are acceptable if they are commensurate, but beware, as they make it very easy to mislead!"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#connected-scatterplots",
+    "href": "posts/L6-TabularData1/index.html#connected-scatterplots",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "CONNECTED SCATTERPLOTS",
+    "text": "CONNECTED SCATTERPLOTS\nScatterplot with line connection marks. These are popular in journalism.\n\n\nHoriz + vert axes: value attributes\nLine connection marks: temporal order\nAlternative to dual-axis charts (horiz: time vert: two value attributes).\nempirical study suggests these are engaging, but correlations are unclear.\n\n\n\n\nhttp://steveharoz.com/research/connected_scatterplot/"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#breaking-conventions",
+    "href": "posts/L6-TabularData1/index.html#breaking-conventions",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "BREAKING CONVENTIONS",
+    "text": "BREAKING CONVENTIONS\nThe inverted y axis is evocative of blood dripping down on Poe.\n\nhttps://public.tableau.com/profile/ben.jones#!/vizhome/EdgarAllanPoeViz/EdgarAllanPoeViz"
+  },
+  {
+    "objectID": "posts/L6-TabularData1/index.html#arranging-tabular-data",
+    "href": "posts/L6-TabularData1/index.html#arranging-tabular-data",
+    "title": "LECTURE 6 - Tabular Data",
+    "section": "ARRANGING TABULAR DATA",
+    "text": "ARRANGING TABULAR DATA\nWhat did we miss?\nhttps://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf\n\n\n\nCANVAS…HOME"
+  },
+  {
     "objectID": "posts/A3-PrototypeVizPortfolio/index.html",
     "href": "posts/A3-PrototypeVizPortfolio/index.html",
     "title": "ASSIGNMENT 3",
@@ -1174,6 +1538,111 @@
     "title": "TUTORIAL 1 - Literate Programming",
     "section": "",
     "text": "Learning new tools is hard. Plowing though the tomes of the Data Science Mythos is hard. Perhaps this tutorial will guide you through the mind shattering truths of… LITERATE PROGRAMMING."
+  },
+  {
+    "objectID": "posts/A5-TabularData/index.html",
+    "href": "posts/A5-TabularData/index.html",
+    "title": "ASSIGNMENT 5",
+    "section": "",
+    "text": "In this assignment, we are going to practice creating visualizations for tabular data. Unlike previous assignments, however, this time we will all be using the same data sets. I’m doing this because I want everyone to engage in the same logic process and have the same design objectives in mind."
+  },
+  {
+    "objectID": "posts/A5-TabularData/index.html#overview",
+    "href": "posts/A5-TabularData/index.html#overview",
+    "title": "ASSIGNMENT 5",
+    "section": "",
+    "text": "In this assignment, we are going to practice creating visualizations for tabular data. Unlike previous assignments, however, this time we will all be using the same data sets. I’m doing this because I want everyone to engage in the same logic process and have the same design objectives in mind."
+  },
+  {
+    "objectID": "posts/A5-TabularData/index.html#scenario",
+    "href": "posts/A5-TabularData/index.html#scenario",
+    "title": "ASSIGNMENT 5",
+    "section": "SCENARIO",
+    "text": "SCENARIO\nImagine you are a high priced data science consultant. One of your good friends, Cassandra Canuck, is an Assistant General Manager for the Vancouver Canucks, a team in the National Hockey League with a long, long…. long history of futility.\nCassandra tells you her boss, General Manager Hans Doofenschmirtz, is considering trading this year’s first round draft pick for two second round picks and one third round pick from another team. For the purposes of this exercise, let’s set the 2023 NHL draft order using the Tankathon Simulator. The NHL uses a lottery system in which the teams lowest in the standings have the highest odds of getting the first overall pick. I’ll simulate the lottery now…\nHOLY CRAP! The Vancouver Canucks jump up 6 spots, and will pick FIRST overall. Here is a screenshot:\n\nOur official scenario is this:\nVancouver receives: The 7th pick in the second round (39th overall), the 10th pick in the second round (42nd overall), and the 10th pick in the third round (74th overall).\nDetroit receives: The 1st pick in the first round (1st overall).\nDoofenschmirtz reasons that more draft picks are better, and is inclined to make the trade. Cassandra isn’t so sure…\nShe asks you to create some data visualizations she can show to her boss that might help him make the best decision."
+  },
+  {
+    "objectID": "posts/A5-TabularData/index.html#directions",
+    "href": "posts/A5-TabularData/index.html#directions",
+    "title": "ASSIGNMENT 5",
+    "section": "DIRECTIONS",
+    "text": "DIRECTIONS\nCreate a new post in your portfolio for this assignment. Call it something cool, like NHL draft analysis, or Hockey Analytics, or John Wick….\nCopy the data files from the repository, and maybe also the .qmd file.\nUse the .qmd file as the backbone of your assignment, changing the code and the markdown text as you go."
+  },
+  {
+    "objectID": "posts/A5-TabularData/index.html#the-data",
+    "href": "posts/A5-TabularData/index.html#the-data",
+    "title": "ASSIGNMENT 5",
+    "section": "THE DATA",
+    "text": "THE DATA\nHow can we evaluate whether trading a first round pick for two second round picks and a third round pick is a good idea? One approach is to look at the historical performance of players from these draft rounds.\nI’ve created a data set that will allow us to explore player performance as a function of draft position. If you are curious as to how I obtained and re-arranged these data, you can check out that tutorial here. For this assignment, though, I want to focus on the visualizations.\n\n\nCode\nlibrary(tidyverse)\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nCode\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(readxl)\n\nNHLDraft&lt;-read.csv(\"NHLDraft.csv\")\nNHLDictionary&lt;-read_excel(\"NHLDictionary.xlsx\")\n\nknitr::kable(NHLDictionary)\n\n\n\n\n\n\n\n\n\n\nAttribute\nType\nDescription\n\n\n\n\ndraftyear\nOrdinal\nCalendar year in which the player was drafted into the NHL.\n\n\nname\nItem\nFull name of the player.\n\n\nround\nOrdinal\nRound in which the player was drafted (1 to 7).\n\n\noverall\nOrdinal\nOverall draft position of the player (1 to 224)\n\n\npickinRound\nOrdinal\nPosition in which the player was drafted in their round (1 to 32).\n\n\nheight\nQuantitative\nPlayer height in inches.\n\n\nweight\nQuantitative\nPlayer weight in pounds.\n\n\nposition\nCategorical\nPlayer position (Forward, Defense, Goaltender)\n\n\nplayerId\nItem\nUnique ID (key) assigned to each player.\n\n\npostdraft\nOrdinal\nNumber of seasons since being drafted (0 to 20).\n\n\nNHLgames\nQuantitative\nNumber of games played in the NHL in that particular season (regular season is 82 games, playoffs are up to 28 more).\n\n\n\n\n\nIn this case, we have a dataframe with all the drafted players since 2000, their position, their draft year and position, and then rows for each season since being drafted (postdraft). The key variable here is NHLgames, which tells us how many games they played in the NHL each season since being drafted."
+  },
+  {
+    "objectID": "posts/A5-TabularData/index.html#simple-scatterplot",
+    "href": "posts/A5-TabularData/index.html#simple-scatterplot",
+    "title": "ASSIGNMENT 5",
+    "section": "SIMPLE SCATTERPLOT",
+    "text": "SIMPLE SCATTERPLOT\nOne thing to realize about professional hockey is that it is pretty rare for a player to play in the NHL right after being drafted. Players get drafted when they are 18 years old, and they usually play in the juniors, minor leagues, or the NCAA for a bit to further develop. Let’s use a scatterplot to visualize this phenomenon with the most recent draft classes.\n\n\nCode\ndraft2022&lt;-NHLDraft%&gt;%\n  filter(draftyear==2022 & postdraft==0)\n\nggplot(draft2022, aes(x=round, y=NHLgames))+\n  geom_point()\n\n\n\n\n\n\n\n\n\nAs you can see, the players drafted in June of 2022 haven’t played much this season. There are few things wrong with this visualization, however:\n\nOverplotting. All those points on the y=0 line represent about 32 players each. Can you think of a way that adding extra channels might help?\nLabelling. Can we create a solid figure caption and better axis labels for this figure? In your caption, please specify the task(s) the visualizaiton is intended to facilitate, as well as the marks, channels, and key-value pairs used.\nKey-Value pairs: Looks like we are using “round” as a continuous variable. Can we change this to an ordered factor?"
+  },
+  {
+    "objectID": "posts/A5-TabularData/index.html#expanded-scatterplot",
+    "href": "posts/A5-TabularData/index.html#expanded-scatterplot",
+    "title": "ASSIGNMENT 5",
+    "section": "EXPANDED SCATTERPLOT",
+    "text": "EXPANDED SCATTERPLOT\nThe data from the most recent draft isn’t really helpful for our question. Let’s go back in time and use a draft year that has had some time to develop and reach their potential. How about 2018?\n\n\nCode\ndraft2018&lt;-NHLDraft%&gt;%\n  filter(draftyear==2018 & postdraft&lt;6)\n\nggplot(draft2018, aes(x=round, y=NHLgames))+\n  geom_point()\n\n\n\n\n\n\n\n\n\nHmmm… in addition to the problem of overplotting, we’ve got an additional issue here. We actually have two keys and one attribute. The attribute is NHLgames, and the keys are round and postdraft, but we are only using round.\nPostdraft indicates the number of seasons after being drafted. We have several choices here. We can make a visualization that uses both keys, or we can somehow summarize the data for one of the keys.\nFor example, let’s say we just wanted to know the TOTAL number of NHL games played since being drafted.\n\n\nCode\ndrafttot2018&lt;- draft2018%&gt;%\n  group_by(playerId, round, overall, position, name)%&gt;%\n  summarise(totgames=sum(NHLgames))\n\n\n`summarise()` has grouped output by 'playerId', 'round', 'overall', 'position'.\nYou can override using the `.groups` argument.\n\n\nCode\nggplot(drafttot2018, aes(x=round, y=totgames))+\n  geom_point()\n\n\n\n\n\n\n\n\n\nCode\ndrafttot&lt;- NHLDraft%&gt;%\n  group_by(playerId, round, overall, position, name)%&gt;%\n  summarise(totgames=sum(NHLgames))\n\n\n`summarise()` has grouped output by 'playerId', 'round', 'overall', 'position'.\nYou can override using the `.groups` argument.\n\n\nCode\nggplot(NHLDraft, aes(x=postdraft, y=NHLgames))+\n  geom_smooth(aes(color=as.factor(round)))\n\n\n`geom_smooth()` using method = 'gam' and formula = 'y ~ s(x, bs = \"cs\")'\n\n\n\n\n\n\n\n\n\nCode\nggplot(NHLDraft%&gt;%filter(postdraft&lt;6), aes(x=NHLgames))+\n  geom_histogram()+\n  facet_grid(postdraft~round)\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\nFine, I guess, but we still have to deal with overplotting, and think about whether a scatterplot really helps us accomplish our task. For this figure do the following:\n\nOverplotting. All those points on the y=0 line represent about 32 players each. Can you you think of a way that adding extra channels might help?\nLabelling. Can we create a solid figure caption and better axis labels for this figure? In your caption, please specify the task(s) the visualizaiton is intended to facilitate, as well as the marks, channels, and key-value pairs used.\nKey-Value pairs: Looks like we are using “round” as a continuous variable. Can we change this to an ordered factor?"
+  },
+  {
+    "objectID": "posts/A5-TabularData/index.html#scatterplot-with-overall-draft-position",
+    "href": "posts/A5-TabularData/index.html#scatterplot-with-overall-draft-position",
+    "title": "ASSIGNMENT 5",
+    "section": "SCATTERPLOT WITH OVERALL DRAFT POSITION",
+    "text": "SCATTERPLOT WITH OVERALL DRAFT POSITION\nThis approach might yield a better match with the scatterplot idiom. What if we ignore draft round, and use the player’s overall draft position instead?\n\n\nCode\nggplot(drafttot2018, aes(x=overall, y=totgames))+\n  geom_point()\n\n\n\n\n\n\n\n\n\nFor this figure, address the following:\n\nWe are trying to address the notion of trading a pick from round 1 for picks from round 2 and 3. Add visual channels to this plot that will help us make that decision.\nCreate a caption and better axis labels for this figure.\nWhat if we wanted to use more than just the 2018 draft class?"
+  },
+  {
+    "objectID": "posts/A5-TabularData/index.html#scatterplot-summary",
+    "href": "posts/A5-TabularData/index.html#scatterplot-summary",
+    "title": "ASSIGNMENT 5",
+    "section": "SCATTERPLOT SUMMARY",
+    "text": "SCATTERPLOT SUMMARY\nWe seem to be running into an issue in terms of overplotting. Scatterplots are great, but they work best for two quantitative attributes, and we have a situation with one or two keys and one quantitative attribute. The thing is, scatterplots can be very useful when part of our workflow involves modeling the data in some way. We’ll cover this kind of thing in future assignments, but just a bit of foreshadowing here:\n\n\nCode\nggplot(drafttot2018, aes(x=round, y=totgames))+\n  geom_point()+\n  geom_smooth()\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\nAdding the smoothed line doesn’t eliminate the overplotting problem, but it does indicate that it exists. We’ll cover other potential solutions (including Cody’s violin plots!) to this issue later in the course, when we get to the notions of faceting and data reduction."
+  },
+  {
+    "objectID": "posts/A5-TabularData/index.html#simple-bar-chart",
+    "href": "posts/A5-TabularData/index.html#simple-bar-chart",
+    "title": "ASSIGNMENT 5",
+    "section": "SIMPLE BAR CHART",
+    "text": "SIMPLE BAR CHART\nOne of the best ways to deal with overplotting is to use our keys to SEPARATE and ORDER our data. Let’s do that now. I’ll stick with the summarized data for the 2018 draft year for now.\n\n\nCode\nggplot(drafttot2018, aes(x = name, y=totgames))+\n  geom_col()\n\n\n\n\n\n\n\n\n\nEpic. We now have a bar (column, really) chart with the key being player name, and the attribute being the total number of games played. We’ve SEPARATED the data using the spatial x-axis position channel, and aligned to that axis as well. But this visualization clearly sucks. You need to make it better by:\n\nAdding a visual channel indicating draft round.\nFixing the order of the x axis.\nMaking a caption and better axis labels.\nFixing the values of the x axis labels so they aren’t such a mess."
+  },
+  {
+    "objectID": "posts/A5-TabularData/index.html#stacked-bar",
+    "href": "posts/A5-TabularData/index.html#stacked-bar",
+    "title": "ASSIGNMENT 5",
+    "section": "STACKED BAR?",
+    "text": "STACKED BAR?\nStacked bar charts use two keys and one value. Can we leverage this idiom? Perhaps if we used both round and postdraft as our keys and NHLgames as our value…\nThe idea here is that we might be able to get a sense of the temporal pattern of NHL games after a player is drafted. Do first round picks join the NHL earlier? Do they stay in the NHL longer? That kind of thing.\n\n\nCode\nggplot(draft2018, aes(x = postdraft, y=NHLgames, fill=as.factor(-round)))+\n  geom_col(position = \"stack\")\n\n\n\n\n\n\n\n\n\nCode\nNHLDraft &lt;-NHLDraft %&gt;%\n  mutate(descround = desc(as.factor(round)))\n\nrounds&lt;-c(\"darkred\",\"red\",\"pink\", \"violet\", \"lightblue\",\"blue\", \"darkblue\")\n\nggplot(NHLDraft, aes(x = postdraft, y=NHLgames, fill=as.factor(-round), \n                     alpha = as.factor(-round)))+\n  geom_col(position = \"stack\")+\n  theme(legend.position = \"none\")\n\n\nWarning: Using alpha for a discrete variable is not advised.\n\n\n\n\n\n\n\n\n\nThis seems like it has some potential, but it definitely needs some work (by you):\n\nYou know the drill by now. Caption! Labels!\nImprove the color palette.\nDo we really only want data from the 2018 draft class?\nConsider the order of rounds within the stack (glyph). Which round is most important? Change the order within the glyphs to reflect this."
+  },
+  {
+    "objectID": "posts/A5-TabularData/index.html#pie-charts-normalized-bar-charts",
+    "href": "posts/A5-TabularData/index.html#pie-charts-normalized-bar-charts",
+    "title": "ASSIGNMENT 5",
+    "section": "PIE CHARTS / NORMALIZED BAR CHARTS",
+    "text": "PIE CHARTS / NORMALIZED BAR CHARTS\nWe all know that Pie Charts are rarely a good choice, but let’s look at how to make one here. I’ll eliminate all the players drafted in 2018 who never played an NHL game, leaving us 80 players drafted in that year who made “THE SHOW”. Let’s look at how those 80 players were drafted:\n\n\nCode\nplayedNHL2018 &lt;- drafttot2018%&gt;%\n  filter(totgames&gt;0)\n\nggplot(playedNHL2018, aes(x = \"\", fill = factor(round))) +\n  geom_bar(width = 1) +\n  coord_polar(theta = \"y\")\n\n\n\n\n\n\n\n\n\nObviously this isn’t great, but can you state why? Write a little critique of this visualizaiton that:\n\nConsiders a player who played hundreds of games over their first five years vs a player who played one game in five years.\nEvaluates the relative value of a second round pick and a third round pick.\n\nNow let’s change this to account for the various years post draft:\n\n\nCode\nseasonplayedNHL2018 &lt;- draft2018%&gt;%\n  filter(NHLgames&gt;0)\n\n\nggplot(seasonplayedNHL2018, aes(x = \"\", fill = factor(round))) +\n  geom_bar(width = 1) +\n  coord_polar(theta = \"y\")+\n  facet_wrap(~postdraft)\n\n\n\n\n\n\n\n\n\nSeems like there is something to work with here, but let’s compare this to a normalized bar chart:\n\n\nCode\nggplot(draft2018, aes(x = postdraft, y=NHLgames, fill=as.factor(round)))+\n  geom_col(position = \"fill\")\n\n\nWarning: Removed 218 rows containing missing values (`geom_col()`).\n\n\n\n\n\n\n\n\n\nCode\nggplot(draft2018, aes(x = postdraft, y=NHLgames, fill=overall))+\n  geom_col(position = \"fill\")\n\n\nWarning: Removed 218 rows containing missing values (`geom_col()`).\n\n\n\n\n\n\n\n\n\nCan you work with this to make it a useful visualization for your friend, Cassandra Canuck?"
+  },
+  {
+    "objectID": "posts/A5-TabularData/index.html#heatmap",
+    "href": "posts/A5-TabularData/index.html#heatmap",
+    "title": "ASSIGNMENT 5",
+    "section": "HEATMAP?",
+    "text": "HEATMAP?\nCould this be useful?\n\n\nCode\nround1&lt;-NHLDraft%&gt;%\n  filter(round==1)\n\nggplot(NHLDraft, aes(y = reorder(name, overall), x = postdraft, fill = NHLgames)) +\n  geom_tile(width = .5, height = 5) +\n  theme(plot.margin = unit(c(0,0,0,0), \"cm\"),\n        axis.line = element_blank(),\n        axis.text = element_blank(),\n        axis.ticks = element_blank(),\n        panel.grid.major = element_blank(),\n        panel.grid.minor = element_blank())+\n  scale_fill_gradient(low = \"blue\", high = \"red\")\n\n\n\n\n\n\n\n\n\nCode\nggplot(NHLDraft, aes(y = overall, x = postdraft, z=NHLgames)) + \n  geom_tile(aes(fill=NHLgames))"
+  },
+  {
+    "objectID": "posts/A5-TabularData/index.html#other-stuff-to-consider",
+    "href": "posts/A5-TabularData/index.html#other-stuff-to-consider",
+    "title": "ASSIGNMENT 5",
+    "section": "OTHER STUFF TO CONSIDER",
+    "text": "OTHER STUFF TO CONSIDER\n\nDo these visualizations change as a function of player position?\nIs the number of NHL games played really the best metric to use?"
+  },
+  {
+    "objectID": "posts/A5-TabularData/index.html#conclusion",
+    "href": "posts/A5-TabularData/index.html#conclusion",
+    "title": "ASSIGNMENT 5",
+    "section": "CONCLUSION",
+    "text": "CONCLUSION\nBased on your visualizations, what would you advise regarding this trade proposal? Why?"
   },
   {
     "objectID": "posts/A2-YourData/index.html",
