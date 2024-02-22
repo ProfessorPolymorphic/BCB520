@@ -23,7 +23,23 @@ I am maintaining the course here and on its [CANVAS PAGE](https://canvas.uidaho.
 
 [Barrie's GitHub](https://github.com/ProfessorPolymorphic){target="_blank"}
 
+### Student Repositories
+
+[KB GitHub](https://github.com/konradbailey) and [KB Portfolio](https://konradbailey.github.io/BCB520.Portfolio.V2/){target="_blank"}
+
+[HS GitHub](https://github.com/heidihosellmann) and [HS Porfolio](https://heidihosellmann.github.io/BCB520Portfolio/)
+
+[YG GitHub](https://github.com/yaotian-gao) and [YG Porfolio](https://yaotian-gao.github.io/BCB-Quarto-Blog-/)
+
+[RS GitHub](https://github.com/robynsteveley) and [RS Porfolio](https://robynsteveley.github.io/BCB520PortfolioGithub/)
+
+[GT GitHub](https://github.com/gt0107) and [GT Porfolio](https://gt0107.github.io/BCB-520-Portfolio/)
+
+[LR GitHub](https://github.com/lripa) and [LR Porfolio](https://lripa.github.io/BCB520GitHub/)
+
 ## Learning Resources
+
+[The Functional Art](http://www.thefunctionalart.com)
 
 [GGSIDE!](https://www.business-science.io/code-tools/2021/05/18/marginal_distributions.html) A companion to `ggplot` for making side plots! COOL!
 

@@ -7,7 +7,7 @@ format:
       buttons: false
     preview-links: auto
     css: styles.css
-    footer: <a href="https://canvas.uidaho.edu/courses/17806" target="_blank">CANVAS</a>...<a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/BCB520.html" target="_blank">HOME</a>
+    footer: <a href="https://professorpolymorphic.github.io/BCB520/" target="_blank">HOME</a>
     theme: [default, custom.scss]
 author: "Barrie Robison"
 date: "2024-02-20"
@@ -768,7 +768,7 @@ Labelled axes are critical! Avoid cropping the y-axis (include 0 at bottom left)
 :::
 ::::
 
-http://www.thefunctionalart.com/2015/10/if-you-see-bullshit-say-bullshit.html
+[If you see bullshit...](http://www.thefunctionalart.com/2015/10/if-you-see-bullshit-say-bullshit.html)
 
 ## DUAL AXIS LINE CHARTS {.smaller}
 
@@ -814,4 +814,4 @@ The inverted y axis is evocative of blood dripping down on Poe.
 
 What did we miss?
 
-https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf
+[ggplot cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf)
