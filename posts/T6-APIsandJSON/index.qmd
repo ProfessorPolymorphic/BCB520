@@ -2,8 +2,14 @@
 title: "TUTORIAL 6 - APIs and JSON data"
 image: "Cthulhuhockeymask.png"
 execute: 
-  eval: false
-draft: true
+  eval: true
+subtitle: "Visualizations for Tabular Data"
+author: "Barrie Robison"
+date: "2024-02-23"
+categories: [Tutorial, JSON, Tables, API]
+code-fold: true
+code-tools: true
+description: "Tabular data...is maybe a bit more nuanced?"
 ---
 
 ```{r}
