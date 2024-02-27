@@ -176,6 +176,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
 <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">OVERVIEW</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">LEARNING OBJECTIVES</a></li>
   <li>
 <a href="#scenario" id="toc-scenario" class="nav-link" data-scroll-target="#scenario">SCENARIO</a>
   <ul class="collapse">
@@ -186,19 +187,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data">THE DATA</a></li>
   <li><a href="#simple-scatterplot" id="toc-simple-scatterplot" class="nav-link" data-scroll-target="#simple-scatterplot">SIMPLE SCATTERPLOT</a></li>
   <li><a href="#expanded-scatterplot" id="toc-expanded-scatterplot" class="nav-link" data-scroll-target="#expanded-scatterplot">EXPANDED SCATTERPLOT</a></li>
+  <li><a href="#stop-and-reflect" id="toc-stop-and-reflect" class="nav-link" data-scroll-target="#stop-and-reflect">STOP AND REFLECT</a></li>
   <li><a href="#scatterplot-with-overall-draft-position" id="toc-scatterplot-with-overall-draft-position" class="nav-link" data-scroll-target="#scatterplot-with-overall-draft-position">SCATTERPLOT WITH OVERALL DRAFT POSITION</a></li>
   <li><a href="#scatterplot-summary" id="toc-scatterplot-summary" class="nav-link" data-scroll-target="#scatterplot-summary">SCATTERPLOT SUMMARY</a></li>
-  <li><a href="#simple-bar-chart" id="toc-simple-bar-chart" class="nav-link" data-scroll-target="#simple-bar-chart">SIMPLE BAR CHART</a></li>
+  <li><a href="#divergence" id="toc-divergence" class="nav-link" data-scroll-target="#divergence">DIVERGENCE</a></li>
+  <li>
+<a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">APPENDIX</a>
+  <ul class="collapse">
+<li><a href="#simple-bar-chart" id="toc-simple-bar-chart" class="nav-link" data-scroll-target="#simple-bar-chart">SIMPLE BAR CHART</a></li>
   <li><a href="#stacked-bar" id="toc-stacked-bar" class="nav-link" data-scroll-target="#stacked-bar">STACKED BAR?</a></li>
   <li><a href="#pie-charts-normalized-bar-charts" id="toc-pie-charts-normalized-bar-charts" class="nav-link" data-scroll-target="#pie-charts-normalized-bar-charts">PIE CHARTS / NORMALIZED BAR CHARTS</a></li>
   <li><a href="#heatmap" id="toc-heatmap" class="nav-link" data-scroll-target="#heatmap">HEATMAP?</a></li>
   <li><a href="#other-stuff-to-consider" id="toc-other-stuff-to-consider" class="nav-link" data-scroll-target="#other-stuff-to-consider">OTHER STUFF TO CONSIDER</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">CONCLUSION</a></li>
+  </ul>
+</li>
   </ul></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content"><section id="overview" class="level2"><h2 class="anchored" data-anchor-id="overview">OVERVIEW</h2>
 <p>In this assignment, we are going to practice creating visualizations for tabular data. Unlike previous assignments, however, this time we will all be using the same data sets. I’m doing this because I want everyone to engage in the same logic process and have the same design objectives in mind.</p>
+</section><section id="learning-objectives" class="level2"><h2 class="anchored" data-anchor-id="learning-objectives">LEARNING OBJECTIVES</h2>
+<ol type="1">
+<li>Demonstrate that you can manipulate tabular data to facilitate different visualization tasks. The minimum skills are FILTERING, SELECTING, and SUMMARIZING, all while GROUPING these operations as dictated by your data.</li>
+<li>Demonstrate that you can use tabular data to explore, analyze, and choose the most appropriate visualization idioms given a specific motivating question.</li>
+<li>Demonstrate that you can Find, Access, and Integrate additional data in order to fully address the motivating question.</li>
+</ol>
+<p>The scenario below will allow you to complete the assignment. It deals with data that are of the appropriate complexity and extent (number of observations and variables) to challenge you. If you want to use different data (yours or from another source) I am happy to work with you to make that happen!</p>
 </section><section id="scenario" class="level2"><h2 class="anchored" data-anchor-id="scenario">SCENARIO</h2>
 <p>Imagine you are a high priced data science consultant. One of your good friends, Cassandra Canuck, is an Assistant General Manager for the Vancouver Canucks, a team in the National Hockey League with a long, long…. long history of futility.</p>
 <p>This season feels different.</p>
@@ -358,7 +373,8 @@ You can override using the `.groups` argument.</code></pre>
 </div>
 </div>
 </div>
-<p>Look closely at the two graphs above. How are they different? ## STOP AND REFLECT</p>
+<p>Look closely at the two graphs above. How are they different?</p>
+</section><section id="stop-and-reflect" class="level2"><h2 class="anchored" data-anchor-id="stop-and-reflect">STOP AND REFLECT</h2>
 <p>I’ve been a bit sneaky up to this point. You’ve probably been focusing primarily on my (crappy) visualizations. That’s fine, but let’s think about the manipulations to the <span class="red">TABULAR DATA</span> I’ve had to perform.</p>
 <p>I’m using the <a href="https://www.tidyverse.org">Tidyverse</a> to do these manipulations. I set up the original data frame to conform to the tidy data principles (every column is a variable, every row is an observation), which is pretty much the base form of how we’ve discussed <a href="../L6-TabularData1">Tabular Data</a> in class.</p>
 <p>I’ve snuck in some functions that have allowed me to FILTER, GROUP, and SUMMARIZE the data, often creating new dataframes as I do so. Hey, look! <a href="https://github.com/rstudio/cheatsheets/blob/main/data-transformation.pdf">A handy cheatsheet for data transformation using the tidyverse!</a></p>
@@ -381,7 +397,7 @@ You can override using the `.groups` argument.</code></pre>
 <li>
 <strong>Key-Value pairs:</strong> Looks like we are using “round” as a continuous variable. Can we change this to an ordered factor?</li>
 </ol></section><section id="scatterplot-with-overall-draft-position" class="level2"><h2 class="anchored" data-anchor-id="scatterplot-with-overall-draft-position">SCATTERPLOT WITH OVERALL DRAFT POSITION</h2>
-<p>This approach might yield a better match with the scatterplot idiom. What if we ignore draft round, and use the player’s overall draft position instead?</p>
+<p>This approach might yield a better match with the scatterplot idiom. What if we ignore draft round, and use the player’s overall draft position instead? It also might help us focus on our motivating question! What is the potential value of pick 31, and how does Elias Lindholm compare to that value?</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">drafttot2018</span>, <span class="fu">aes</span><span class="op">(</span>x<span class="op">=</span><span class="va">overall</span>, y<span class="op">=</span><span class="va">totgames</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -394,7 +410,7 @@ You can override using the `.groups` argument.</code></pre>
 </div>
 <p>For this figure, address the following:</p>
 <ol type="1">
-<li>We are trying to address the notion of trading a pick from round 1 for picks from round 2 and 3. Add visual channels to this plot that will help us make that decision.</li>
+<li>We are trying to address the notion of trading pick 31. How might you facilitate the task of evaluating picks in that range?</li>
 <li>Create a caption and better axis labels for this figure.</li>
 <li>What if we wanted to use more than just the 2018 draft class?</li>
 </ol></section><section id="scatterplot-summary" class="level2"><h2 class="anchored" data-anchor-id="scatterplot-summary">SCATTERPLOT SUMMARY</h2>
@@ -413,7 +429,7 @@ You can override using the `.groups` argument.</code></pre>
 </div>
 </div>
 </div>
-<p>Adding the smoothed line doesn’t eliminate the overplotting problem, but it does indicate that it exists. We’ll cover other potential solutions (including Cody’s violin plots!) to this issue later in the course, when we get to the notions of faceting and data reduction.</p>
+<p>Adding the smoothed line doesn’t eliminate the overplotting problem, but it does indicate that it exists. We’ll cover other potential solutions (such as box plots and violin plots) to this issue later in the course, when we get to the notions of faceting and data reduction.</p>
 <p>Why not include all the data? A scatter plot with that many players (4775) isn’t going to be great. But we could plot some sort of polynomial model to get a sense of the relationship between draft position and NHL games. We’ll filter to the first 8 years of their career.</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">drafttot</span><span class="op">&lt;-</span> <span class="va">NHLDraft</span><span class="op">%&gt;%</span></span>
@@ -436,6 +452,7 @@ You can override using the `.groups` argument.</code></pre>
 </div>
 </div>
 </div>
+<p>Or we could visualize the average number of games played as a function of time since being drafted.</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">NHLDraft</span>, <span class="fu">aes</span><span class="op">(</span>x<span class="op">=</span><span class="va">postdraft</span>, y<span class="op">=</span><span class="va">NHLgames</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
 <span>  <span class="fu">geom_smooth</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>color<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">round</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -449,7 +466,14 @@ You can override using the `.groups` argument.</code></pre>
 </div>
 </div>
 </div>
-</section><section id="simple-bar-chart" class="level2"><h2 class="anchored" data-anchor-id="simple-bar-chart">SIMPLE BAR CHART</h2>
+</section><section id="divergence" class="level2"><h2 class="anchored" data-anchor-id="divergence">DIVERGENCE</h2>
+<p>Enough esoteric wandering. The original version of this assignment focused on the relative value of draft picks in the NHL. This version has a more specific question. What might picks in the range of pick 31 conceivably yield? How often do picks in that range yield players of Elias Lindholm’s value?</p>
+<p>I guess we’d better figure out what Elias Lindholm brings to the table.</p>
+<p>Can you find him in our existing data? Can you think of a way to highlight him in the context of number of games played? What other kinds of data might we need to fairly evaluate Lindholm and pick 31?</p>
+<p>You will be surprised how these seemingly simple questions force you to explore the nuances of working with and visualizing tabular data.</p>
+</section><section id="appendix" class="level1"><h1>APPENDIX</h1>
+<p>The following examples and code were used in last year’s assignment. They might be useful for the current version or for future assigments.</p>
+<section id="simple-bar-chart" class="level2"><h2 class="anchored" data-anchor-id="simple-bar-chart">SIMPLE BAR CHART</h2>
 <p>One of the best ways to deal with overplotting is to use our keys to SEPARATE and ORDER our data. Let’s do that now. I’ll stick with the summarized data for the 2018 draft year for now.</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">drafttot2018</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">name</span>, y<span class="op">=</span><span class="va">totgames</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
@@ -608,7 +632,7 @@ You can override using the `.groups` argument.</code></pre>
 
 <!-- -->
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
