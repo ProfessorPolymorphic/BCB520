@@ -7,7 +7,6 @@ categories: [Assignment, DataViz, Tables, Scatterplot, Barplot, Piechart]
 image: "Cthulhuhockeycard.png"
 code-fold: true
 code-tools: true
-code-link: true
 description: "Should I trade these draft picks for this bag of magic beans...?"
 
 ---

@@ -291,14 +291,14 @@
     "href": "posts/L6-TabularData1/index.html#semantics-for-data",
     "title": "LECTURE 6 - Tabular Data",
     "section": "SEMANTICS FOR DATA",
-    "text": "SEMANTICS FOR DATA\n\n\n\nSemantics\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”\n\n\n\n\nData Table\n\n\n\n\nITEM: Person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
+    "text": "SEMANTICS FOR DATA\n\n\n\n\n\n\nSemantics\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”\n\n\n\n\nData Table\n\n\n\n\nITEM: Person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
   },
   {
     "objectID": "posts/L6-TabularData1/index.html#dataset-types-tables",
     "href": "posts/L6-TabularData1/index.html#dataset-types-tables",
     "title": "LECTURE 6 - Tabular Data",
     "section": "DATASET TYPES: TABLES",
-    "text": "DATASET TYPES: TABLES\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA unique KEY can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
+    "text": "DATASET TYPES: TABLES\n\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA unique KEY can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
   },
   {
     "objectID": "posts/L6-TabularData1/index.html#flat-table-example",
@@ -634,7 +634,7 @@
     "href": "posts/L6-TabularData1/index.html#arranging-tabular-data",
     "title": "LECTURE 6 - Tabular Data",
     "section": "ARRANGING TABULAR DATA",
-    "text": "ARRANGING TABULAR DATA\nWhat did we miss?\nggplot cheatsheet\n\n\n\nHOME"
+    "text": "ARRANGING TABULAR DATA\nWhat did we miss?\nggplot cheatsheet"
   },
   {
     "objectID": "posts/A3-PrototypeVizPortfolio/index.html",
@@ -731,15 +731,15 @@
     "objectID": "posts/L1-Intro/index.html#who-am-i",
     "href": "posts/L1-Intro/index.html#who-am-i",
     "title": "LECTURE 1 - INTRO",
-    "section": "WHO AM I?",
-    "text": "WHO AM I?\nBarrie Robison\nDepartment of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
+    "section": "",
+    "text": "Department of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
   },
   {
     "objectID": "posts/L1-Intro/index.html#who-are-you",
     "href": "posts/L1-Intro/index.html#who-are-you",
     "title": "LECTURE 1 - INTRO",
     "section": "WHO ARE YOU?",
-    "text": "WHO ARE YOU?\n“…The course is designed to be”discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests…”\nBriefly:\n\nYour name\nYour discipline\nYour degree progress\nYour technical proficiency with data visualization"
+    "text": "WHO ARE YOU?\n“…The course is designed to be”discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests…”\n\nBriefly:\n\nYour name\nYour discipline\nYour degree progress\nYour technical proficiency with data visualization"
   },
   {
     "objectID": "posts/L1-Intro/index.html#course-summary",
@@ -753,7 +753,7 @@
     "href": "posts/L1-Intro/index.html#visualization",
     "title": "LECTURE 1 - INTRO",
     "section": "VISUALIZATION",
-    "text": "VISUALIZATION\nComputers provide visual representations of datasets designed to help people carry out tasks more effectively.\nTamara Munzner\nDepartment of Computer Science\nInfoVis Group\nUniversity of British Columbia"
+    "text": "VISUALIZATION\nComputers provide visual representations of datasets designed to help people carry out tasks more effectively.\n\nTamara Munzner\nDepartment of Computer Science\nInfoVis Group\nUniversity of British Columbia"
   },
   {
     "objectID": "posts/L1-Intro/index.html#the-human",
@@ -795,14 +795,14 @@
     "href": "posts/L1-Intro/index.html#anscombes-quartet",
     "title": "LECTURE 1 - INTRO",
     "section": "ANSCOMBE’S QUARTET",
-    "text": "ANSCOMBE’S QUARTET\n\n\n\n\nCode\nlibrary(ggplot2)\nlibrary(grid)\nlibrary(gridExtra)\nlibrary(datasets)\nlibrary(tidyverse)\nlibrary(dplyr)\ndatasets::anscombe\n\n\n   x1 x2 x3 x4    y1   y2    y3    y4\n1  10 10 10  8  8.04 9.14  7.46  6.58\n2   8  8  8  8  6.95 8.14  6.77  5.76\n3  13 13 13  8  7.58 8.74 12.74  7.71\n4   9  9  9  8  8.81 8.77  7.11  8.84\n5  11 11 11  8  8.33 9.26  7.81  8.47\n6  14 14 14  8  9.96 8.10  8.84  7.04\n7   6  6  6  8  7.24 6.13  6.08  5.25\n8   4  4  4 19  4.26 3.10  5.39 12.50\n9  12 12 12  8 10.84 9.13  8.15  5.56\n10  7  7  7  8  4.82 7.26  6.42  7.91\n11  5  5  5  8  5.68 4.74  5.73  6.89\n\n\n\nAnscombe’s Quartet\nThe four x-y pairs have identical summary statistics.\n\n\nCode\ntidy_anscombe &lt;- anscombe %&gt;%\n pivot_longer(cols = everything(),\n              names_to = c(\".value\", \"set\"),\n              names_pattern = \"(.)(.)\")\ntidy_anscombe_summary &lt;- tidy_anscombe %&gt;%\n  group_by(set) %&gt;%\n  summarise(across(.cols = everything(),\n                   .fns = lst(min,max,median,mean,sd,var),\n                   .names = \"{col}_{fn}\"))\n#&gt; `summarise()` ungrouping output (override with `.groups` argument)\n\nvars&lt;-c(\"set\", \"x_mean\", \"x_var\",  \"y_mean\", \"y_var\")\nthing&lt;- as.data.frame(tidy_anscombe_summary[vars])\nknitr::kable(thing)\n\n\n\n\n\nset\nx_mean\nx_var\ny_mean\ny_var\n\n\n\n\n1\n9\n11\n7.500909\n4.127269\n\n\n2\n9\n11\n7.500909\n4.127629\n\n\n3\n9\n11\n7.500000\n4.122620\n\n\n4\n9\n11\n7.500909\n4.123249"
+    "text": "ANSCOMBE’S QUARTET\n\n\n\n\nCode\nlibrary(ggplot2)\nlibrary(grid)\nlibrary(gridExtra)\nlibrary(datasets)\nlibrary(tidyverse)\nlibrary(dplyr)\ndatasets::anscombe\n\n\n   x1 x2 x3 x4    y1   y2    y3    y4\n1  10 10 10  8  8.04 9.14  7.46  6.58\n2   8  8  8  8  6.95 8.14  6.77  5.76\n3  13 13 13  8  7.58 8.74 12.74  7.71\n4   9  9  9  8  8.81 8.77  7.11  8.84\n5  11 11 11  8  8.33 9.26  7.81  8.47\n6  14 14 14  8  9.96 8.10  8.84  7.04\n7   6  6  6  8  7.24 6.13  6.08  5.25\n8   4  4  4 19  4.26 3.10  5.39 12.50\n9  12 12 12  8 10.84 9.13  8.15  5.56\n10  7  7  7  8  4.82 7.26  6.42  7.91\n11  5  5  5  8  5.68 4.74  5.73  6.89\n\n\n\n\nAnscombe’s Quartet\nThe four x-y pairs have identical summary statistics.\n\n\nCode\ntidy_anscombe &lt;- anscombe %&gt;%\n pivot_longer(cols = everything(),\n              names_to = c(\".value\", \"set\"),\n              names_pattern = \"(.)(.)\")\ntidy_anscombe_summary &lt;- tidy_anscombe %&gt;%\n  group_by(set) %&gt;%\n  summarise(across(.cols = everything(),\n                   .fns = lst(min,max,median,mean,sd,var),\n                   .names = \"{col}_{fn}\"))\n#&gt; `summarise()` ungrouping output (override with `.groups` argument)\n\nvars&lt;-c(\"set\", \"x_mean\", \"x_var\",  \"y_mean\", \"y_var\")\nthing&lt;- as.data.frame(tidy_anscombe_summary[vars])\nknitr::kable(thing)\n\n\n\n\n\nset\nx_mean\nx_var\ny_mean\ny_var\n\n\n\n\n1\n9\n11\n7.500909\n4.127269\n\n\n2\n9\n11\n7.500909\n4.127629\n\n\n3\n9\n11\n7.500000\n4.122620\n\n\n4\n9\n11\n7.500909\n4.123249"
   },
   {
     "objectID": "posts/L1-Intro/index.html#viz-matters",
     "href": "posts/L1-Intro/index.html#viz-matters",
     "title": "LECTURE 1 - INTRO",
     "section": "VIZ MATTERS",
-    "text": "VIZ MATTERS\n\n\nCode\nggplot(tidy_anscombe,\n       aes(x = x,\n           y = y)) +\n  geom_point() +\n  geom_point(data = tidy_anscombe_summary, aes(x=x_mean, y = y_mean, color = \"red\", size = 5),\n             show.legend = FALSE)+\n  facet_wrap(~set) +\n  geom_smooth(method = \"lm\", se = FALSE)\n\n\n\n\nLearn more: TIDY ANSCOMBE"
+    "text": "VIZ MATTERS\n\n\nCode\nggplot(tidy_anscombe,\n       aes(x = x,\n           y = y)) +\n  geom_point() +\n  geom_point(data = tidy_anscombe_summary, aes(x=x_mean, y = y_mean, color = \"red\", size = 5),\n             show.legend = FALSE)+\n  facet_wrap(~set) +\n  geom_smooth(method = \"lm\", se = FALSE)\n\n\n\n\n\n\n\n\n\n\nLearn more: TIDY ANSCOMBE"
   },
   {
     "objectID": "posts/L1-Intro/index.html#resource-limitations",
@@ -830,7 +830,7 @@
     "href": "posts/L1-Intro/index.html#human-limits",
     "title": "LECTURE 1 - INTRO",
     "section": "HUMAN LIMITS",
-    "text": "HUMAN LIMITS\n\nTime\nMemory\nAttention\n\n\n\n\n\nCANVAS…HOME"
+    "text": "HUMAN LIMITS\n\nTime\nMemory\nAttention"
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#vad-model",
@@ -949,7 +949,7 @@
     "href": "posts/L4-Marks-Channels/index.html#analyze-the-marks-and-channels",
     "title": "LECTURE 4",
     "section": "ANALYZE THE MARKS AND CHANNELS",
-    "text": "ANALYZE THE MARKS AND CHANNELS\nMarks are defined by the ITEMS or OBSERVATIONS they represent.\nChannels are defined by the visually detectable properties that are mapped on to ATTRIBUTES or VARIABLES.\n\n\n\n\n\n\nKonrad’s Trees\n\n\n\n\n\n\n\nRobyn’s Books\n\n\n\n\n\n\n\nYaotian’s Wheat"
+    "text": "ANALYZE THE MARKS AND CHANNELS\nMarks are defined by the ITEMS or OBSERVATIONS they represent.\nChannels are defined by the visually detectable properties that are mapped on to ATTRIBUTES or VARIABLES.\n\n\n\n\n\n\n\n\n\nKonrad’s Trees\n\n\n\n\n\n\n\nRobyn’s Books\n\n\n\n\n\n\n\nYaotian’s Wheat"
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#redundant-encoding",
@@ -977,7 +977,7 @@
     "href": "posts/L4-Marks-Channels/index.html#expressiveness",
     "title": "LECTURE 4",
     "section": "EXPRESSIVENESS",
-    "text": "EXPRESSIVENESS\nThe advantages and disadvantages of jitter plots. How might this relate to the idea of expressiveness?\n\nHeidi’s Cytoswine DataEXPRESSIVENESS: The visual encoding should express all of, and only, the information in the dataset attributes."
+    "text": "EXPRESSIVENESS\nThe advantages and disadvantages of jitter plots. How might this relate to the idea of expressiveness?\n\n\n\nHeidi’s Cytoswine Data\n\n\nEXPRESSIVENESS: The visual encoding should express all of, and only, the information in the dataset attributes."
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#channel-effectiveness-rankings",
@@ -1026,7 +1026,7 @@
     "href": "posts/L4-Marks-Channels/index.html#accuracy",
     "title": "LECTURE 4",
     "section": "ACCURACY?",
-    "text": "ACCURACY?\nDepends on the task. Which genre has the most game titles? Which genres are the top 4 in terms of game titles? Are there more Puzzle games than Strategy games?\n\nGeraline’s Video Games"
+    "text": "ACCURACY?\nDepends on the task. Which genre has the most game titles? Which genres are the top 4 in terms of game titles? Are there more Puzzle games than Strategy games?\n\n\n\nGeraline’s Video Games"
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#discriminability",
@@ -1040,7 +1040,7 @@
     "href": "posts/L4-Marks-Channels/index.html#discriminability-and-colors",
     "title": "LECTURE 4",
     "section": "DISCRIMINABILITY and COLORS",
-    "text": "DISCRIMINABILITY and COLORS\n\nGeraline’s Gaming Platforms"
+    "text": "DISCRIMINABILITY and COLORS\n\n\n\nGeraline’s Gaming Platforms"
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#separability-vs-integrality",
@@ -1075,7 +1075,7 @@
     "href": "posts/L4-Marks-Channels/index.html#popout-goes-the-weevil",
     "title": "LECTURE 4",
     "section": "POPOUT GOES THE WEEVIL?",
-    "text": "POPOUT GOES THE WEEVIL?\n\n\n\n\n\n\nLucas Weevils before chemicals\n\n\n\n\n\n\n\nLucas Weevils after chemicals"
+    "text": "POPOUT GOES THE WEEVIL?\n\n\n\n\n\n\n\n\n\nLucas Weevils before chemicals\n\n\n\n\n\n\n\nLucas Weevils after chemicals"
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#relative-vs-absolute-judgements",
@@ -1089,7 +1089,7 @@
     "href": "posts/L4-Marks-Channels/index.html#relative-judgements",
     "title": "LECTURE 4",
     "section": "RELATIVE JUDGEMENTS",
-    "text": "RELATIVE JUDGEMENTS\n\nHeidi’s Microbiomes"
+    "text": "RELATIVE JUDGEMENTS\n\n\n\nHeidi’s Microbiomes"
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#relative-luminance-judgements",
@@ -1103,7 +1103,7 @@
     "href": "posts/L4-Marks-Channels/index.html#relative-color-judgements",
     "title": "LECTURE 4",
     "section": "RELATIVE COLOR JUDGEMENTS",
-    "text": "RELATIVE COLOR JUDGEMENTS\nOur visual system evolved to provide color constancy so that the same surface is identifiable across a broad set of illumination conditions, even though a physical light meter would yield very different readings. While the visual system works very well in natural environments, many of its mechanisms work against simple approaches to visually encoding information with color.\n\n\n\n\n\n\n\n\n\n\n\nFigure 5.15 shows two colorful cubes. In Figure 5.15(a) corresponding squares both appear to be red. In Figure 5.15(b), masks show that the tile color in the image apparently illuminated by a yellowish light source is actually orange, and for the bluish light the tiles are actually purple.\n\n\n\n\nCANVAS…HOME"
+    "text": "RELATIVE COLOR JUDGEMENTS\nOur visual system evolved to provide color constancy so that the same surface is identifiable across a broad set of illumination conditions, even though a physical light meter would yield very different readings. While the visual system works very well in natural environments, many of its mechanisms work against simple approaches to visually encoding information with color.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5.15 shows two colorful cubes. In Figure 5.15(a) corresponding squares both appear to be red. In Figure 5.15(b), masks show that the tile color in the image apparently illuminated by a yellowish light source is actually orange, and for the bluish light the tiles are actually purple."
   },
   {
     "objectID": "posts/T4-BarriesData/index.html",
@@ -1158,8 +1158,8 @@
     "objectID": "posts/L2-Data-Abstraction/index.html#last-lecture",
     "href": "posts/L2-Data-Abstraction/index.html#last-lecture",
     "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "LAST LECTURE",
-    "text": "LAST LECTURE\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+    "section": "",
+    "text": "Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#what",
@@ -1194,35 +1194,35 @@
     "href": "posts/L2-Data-Abstraction/index.html#data-semantics",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points far from each other in 3D space?\n\n\nVIZ"
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points far from each other in 3D space?\n\n\nVIZ"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-1",
     "href": "posts/L2-Data-Abstraction/index.html#data-semantics-1",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?\n\n\nVIZ"
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?\n\n\nVIZ"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-2",
     "href": "posts/L2-Data-Abstraction/index.html#data-semantics-2",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nFood shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month\n\n\nVIZ"
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nFood shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month\n\n\nVIZ"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-3",
     "href": "posts/L2-Data-Abstraction/index.html#data-semantics-3",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nBasil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service\n\n\nVIZ"
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nBasil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service\n\n\nVIZ"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-4",
     "href": "posts/L2-Data-Abstraction/index.html#data-semantics-4",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nLab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food\n\n\nVIZ"
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nLab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food\n\n\nVIZ"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#semantics",
@@ -1236,7 +1236,7 @@
     "href": "posts/L2-Data-Abstraction/index.html#semantics-for-data",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "SEMANTICS FOR DATA",
-    "text": "SEMANTICS FOR DATA\n\n\n\nSemantics\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”\n\n\n\n\nData Table\n\n\n\n\nITEM: Person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
+    "text": "SEMANTICS FOR DATA\n\n\n\n\n\n\nSemantics\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”\n\n\n\n\nData Table\n\n\n\n\nITEM: Person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#other-data-types",
@@ -1257,7 +1257,7 @@
     "href": "posts/L2-Data-Abstraction/index.html#dataset-types-tables",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATASET TYPES: TABLES",
-    "text": "DATASET TYPES: TABLES\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA UNIQUE key can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
+    "text": "DATASET TYPES: TABLES\n\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA UNIQUE key can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#flat-table-example",
@@ -1299,7 +1299,7 @@
     "href": "posts/L2-Data-Abstraction/index.html#spatial-fields-2",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "SPATIAL FIELDS 2",
-    "text": "SPATIAL FIELDS 2\n\n\n\n\nAttribute values associated w/ cells.\nCell contains value from continuous domain\n\n(eg temperature, pressure, wind velocity)\n\nMeasured or simulated.\nMajor concerns\n\nsampling:\n\nwhere attributes are measured\n\ninterpolation:\n\nhow to model attributes elsewhere\n\ngrid types"
+    "text": "SPATIAL FIELDS 2\n\n\n\n\n\n\n\nAttribute values associated w/ cells.\nCell contains value from continuous domain\n\n(eg temperature, pressure, wind velocity)\n\nMeasured or simulated.\nMajor concerns\n\nsampling:\n\nwhere attributes are measured\n\ninterpolation:\n\nhow to model attributes elsewhere\n\ngrid types"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#spatial-fields-3",
@@ -1404,7 +1404,7 @@
     "href": "posts/L2-Data-Abstraction/index.html#summary",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "SUMMARY",
-    "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\n\n\n\n\nCANVAS…HOME"
+    "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
   },
   {
     "objectID": "posts/E1-GrantExpenditures/Banner.html",
@@ -1445,8 +1445,8 @@
     "objectID": "posts/L3-TaskAbstraction/index.html#last-lecture",
     "href": "posts/L3-TaskAbstraction/index.html#last-lecture",
     "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "LAST LECTURE",
-    "text": "LAST LECTURE\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+    "section": "",
+    "text": "Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
   },
   {
     "objectID": "posts/L3-TaskAbstraction/index.html#task-abstraction",
@@ -1530,7 +1530,7 @@
     "href": "posts/L3-TaskAbstraction/index.html#mandatory-fun",
     "title": "LECTURE 3 - TASK ABSTRACTION",
     "section": "MANDATORY FUN",
-    "text": "MANDATORY FUN\nWe will do these until everyone has done at least one example.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nCANVAS…HOME"
+    "text": "MANDATORY FUN\nWe will do these until everyone has done at least one example.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "posts/T1-Lit-Prog/index.html",
@@ -1572,7 +1572,7 @@
     "href": "posts/A5-TabularData/index.html#scenario",
     "title": "ASSIGNMENT 5",
     "section": "SCENARIO",
-    "text": "SCENARIO\nImagine you are a high priced data science consultant. One of your good friends, Cassandra Canuck, is an Assistant General Manager for the Vancouver Canucks, a team in the National Hockey League with a long, long…. long history of futility.\nThis season feels different.\nThe Canucks are currently among the league leaders and appear to be on their way to their first playoff appearance in many years. A few weeks ago, the Vancouver Canucks decided to trade an underperforming player with a high upside and their first round draft pick to the Calgary Flames for Elias Lindholm, a very solid forward that might prove to be the missing piece of their Stanley Cup puzzle. Exciting!\nExcept that now the Canucks are struggling. They’ve lost 4 straight games and have seemingly lost their identity as a team. The fans are questioning whether the trade was worth it. Woe is me!\nFor the purposes of this exercise, let’s set the 2024 NHL draft order using the Tankathon Simulator. The NHL uses a lottery system in which the teams lowest in the standings have the highest odds of getting the first overall pick. This year the Canucks are at the top of the league, and positioned to have the 31st overall pick. According to the simulator, Calgary will pick at number 2 (which is very valuable!), and the Canuck’s pick at 31.\nHere is a screenshot:\n\nHere is the question:\nWas the trade worth it? This trade has a high likelihood of becoming what we call a rental. Elias Lindholm is on an expiring contract, meaning Vancouver is guaranteed to hold his contract only through the end of the season. They might be able to extend him, but that depends on the salary cap.\nMeanwhile, Calgary can draft a player at position 31, who may or may not turn out to be of equal or greater value than Lindholm.\nWas the trade worth it? Did Vancouver or Calgary “win” the trade?\nCan we make some visualizations that help us answer this question?"
+    "text": "SCENARIO\nImagine you are a high priced data science consultant. One of your good friends, Cassandra Canuck, is an Assistant General Manager for the Vancouver Canucks, a team in the National Hockey League with a long, long…. long history of futility.\nThis season feels different.\nThe Canucks are currently among the league leaders and appear to be on their way to their first playoff appearance in many years. A few weeks ago, the Vancouver Canucks decided to trade an underperforming player with a high upside and their first round draft pick to the Calgary Flames for Elias Lindholm, a very solid forward that might prove to be the missing piece of their Stanley Cup puzzle. Exciting!\nExcept that now the Canucks are struggling. They’ve lost 4 straight games and have seemingly lost their identity as a team. The fans are questioning whether the trade was worth it. Woe is me!\nFor the purposes of this exercise, let’s set the 2024 NHL draft order using the Tankathon Simulator. The NHL uses a lottery system in which the teams lowest in the standings have the highest odds of getting the first overall pick. This year the Canucks are at the top of the league, and positioned to have the 31st overall pick. According to the simulator, Calgary will pick at number 2 (which is very valuable!), and the Canuck’s pick at 31.\nHere is a screenshot:\n\n\nHere is the question:\nWas the trade worth it? This trade has a high likelihood of becoming what we call a rental. Elias Lindholm is on an expiring contract, meaning Vancouver is guaranteed to hold his contract only through the end of the season. They might be able to extend him, but that depends on the salary cap.\nMeanwhile, Calgary can draft a player at position 31, who may or may not turn out to be of equal or greater value than Lindholm.\nWas the trade worth it? Did Vancouver or Calgary “win” the trade?\nCan we make some visualizations that help us answer this question?"
   },
   {
     "objectID": "posts/A5-TabularData/index.html#directions",
@@ -1586,42 +1586,42 @@
     "href": "posts/A5-TabularData/index.html#the-data",
     "title": "ASSIGNMENT 5",
     "section": "THE DATA",
-    "text": "THE DATA\nHow can we evaluate whether trading a first round pick for a rental player is a good idea? One approach is to look at the historical performance of players from various draft positions.\nI’ve created a data set that will allow us to explore player performance as a function of draft position. If you are curious as to how I obtained and re-arranged these data, you can check out that tutorial here. For this assignment, though, I want to focus on the visualizations.\n\nCodeNHLDraft&lt;-read.csv(\"NHLDraft.csv\")\nNHLDictionary&lt;-read_excel(\"NHLDictionary.xlsx\")\n\nknitr::kable(NHLDictionary)\n\n\n\n\n\n\n\n\nAttribute\nType\nDescription\n\n\n\ndraftyear\nOrdinal\nCalendar year in which the player was drafted into the NHL.\n\n\nname\nItem\nFull name of the player.\n\n\nround\nOrdinal\nRound in which the player was drafted (1 to 7).\n\n\noverall\nOrdinal\nOverall draft position of the player (1 to 224)\n\n\npickinRound\nOrdinal\nPosition in which the player was drafted in their round (1 to 32).\n\n\nheight\nQuantitative\nPlayer height in inches.\n\n\nweight\nQuantitative\nPlayer weight in pounds.\n\n\nposition\nCategorical\nPlayer position (Forward, Defense, Goaltender)\n\n\nplayerId\nItem\nUnique ID (key) assigned to each player.\n\n\npostdraft\nOrdinal\nNumber of seasons since being drafted (0 to 20).\n\n\nNHLgames\nQuantitative\nNumber of games played in the NHL in that particular season (regular season is 82 games, playoffs are up to 28 more).\n\n\n\n\n\nIn this case, we have a dataframe with all the drafted players from 2000-2018, their position, their draft year and position, and then rows for each season since being drafted (postdraft). The key variable here is NHLgames, which tells us how many games they played in the NHL each season since being drafted. Whether drafted players even make the NHL, and how many games they play, might be a good proxy to understand the value of a draft pick we just traded away."
+    "text": "THE DATA\nHow can we evaluate whether trading a first round pick for a rental player is a good idea? One approach is to look at the historical performance of players from various draft positions.\nI’ve created a data set that will allow us to explore player performance as a function of draft position. If you are curious as to how I obtained and re-arranged these data, you can check out that tutorial here. For this assignment, though, I want to focus on the visualizations.\n\n\nCode\nNHLDraft&lt;-read.csv(\"NHLDraft.csv\")\nNHLDictionary&lt;-read_excel(\"NHLDictionary.xlsx\")\n\nknitr::kable(NHLDictionary)\n\n\n\n\n\n\n\n\n\n\nAttribute\nType\nDescription\n\n\n\n\ndraftyear\nOrdinal\nCalendar year in which the player was drafted into the NHL.\n\n\nname\nItem\nFull name of the player.\n\n\nround\nOrdinal\nRound in which the player was drafted (1 to 7).\n\n\noverall\nOrdinal\nOverall draft position of the player (1 to 224)\n\n\npickinRound\nOrdinal\nPosition in which the player was drafted in their round (1 to 32).\n\n\nheight\nQuantitative\nPlayer height in inches.\n\n\nweight\nQuantitative\nPlayer weight in pounds.\n\n\nposition\nCategorical\nPlayer position (Forward, Defense, Goaltender)\n\n\nplayerId\nItem\nUnique ID (key) assigned to each player.\n\n\npostdraft\nOrdinal\nNumber of seasons since being drafted (0 to 20).\n\n\nNHLgames\nQuantitative\nNumber of games played in the NHL in that particular season (regular season is 82 games, playoffs are up to 28 more).\n\n\n\n\n\nIn this case, we have a dataframe with all the drafted players from 2000-2018, their position, their draft year and position, and then rows for each season since being drafted (postdraft). The key variable here is NHLgames, which tells us how many games they played in the NHL each season since being drafted. Whether drafted players even make the NHL, and how many games they play, might be a good proxy to understand the value of a draft pick we just traded away."
   },
   {
     "objectID": "posts/A5-TabularData/index.html#simple-scatterplot",
     "href": "posts/A5-TabularData/index.html#simple-scatterplot",
     "title": "ASSIGNMENT 5",
     "section": "SIMPLE SCATTERPLOT",
-    "text": "SIMPLE SCATTERPLOT\nOne thing to realize about professional hockey is that it is pretty rare for a player to play in the NHL right after being drafted. Players get drafted when they are 18 years old, and they usually play in the juniors, minor leagues, or the NCAA for a bit to further develop.\nLet’s use a scatterplot to visualize this phenomenon with the most recent draft classes.\n\nCodedraft2022&lt;-NHLDraft%&gt;%\n  filter(draftyear==2022 & postdraft==0)\n\nggplot(draft2022, aes(x=round, y=NHLgames))+\n  geom_point()\n\n\n\n\n\n\n\nAs you can see, the players drafted in June of 2022 didn’t play much last season. There are few things wrong with this visualization, however:\n\n\nOverplotting. All those points on the y=0 line represent about 32 players each. Can you think of a way that adding extra channels might help?\n\nLabelling. Can we create a solid figure caption and better axis labels for this figure? In your caption, please specify the task(s) the visualizaiton is intended to facilitate, as well as the marks, channels, and key-value pairs used.\n\nKey-Value pairs: Looks like we are using “round” as a continuous variable. Can we change this to an ordered factor?"
+    "text": "SIMPLE SCATTERPLOT\nOne thing to realize about professional hockey is that it is pretty rare for a player to play in the NHL right after being drafted. Players get drafted when they are 18 years old, and they usually play in the juniors, minor leagues, or the NCAA for a bit to further develop.\nLet’s use a scatterplot to visualize this phenomenon with the most recent draft classes.\n\n\nCode\ndraft2022&lt;-NHLDraft%&gt;%\n  filter(draftyear==2022 & postdraft==0)\n\nggplot(draft2022, aes(x=round, y=NHLgames))+\n  geom_point()\n\n\n\n\n\n\n\n\n\nAs you can see, the players drafted in June of 2022 didn’t play much last season. There are few things wrong with this visualization, however:\n\nOverplotting. All those points on the y=0 line represent about 32 players each. Can you think of a way that adding extra channels might help?\nLabelling. Can we create a solid figure caption and better axis labels for this figure? In your caption, please specify the task(s) the visualizaiton is intended to facilitate, as well as the marks, channels, and key-value pairs used.\nKey-Value pairs: Looks like we are using “round” as a continuous variable. Can we change this to an ordered factor?"
   },
   {
     "objectID": "posts/A5-TabularData/index.html#expanded-scatterplot",
     "href": "posts/A5-TabularData/index.html#expanded-scatterplot",
     "title": "ASSIGNMENT 5",
     "section": "EXPANDED SCATTERPLOT",
-    "text": "EXPANDED SCATTERPLOT\nThe data from the most recent drafts aren’t really helpful for our question. Let’s go back in time and use a draft year that has had some time to develop and reach their potential. How about 2018?\n\nCodedraft2018&lt;-NHLDraft%&gt;%\n  filter(draftyear==2018 & postdraft&lt;6) \n\n# wondering why I've filtered postdraft to be less than 6?  Try removing that filter to see what happens.\n\nggplot(draft2018, aes(x=round, y=NHLgames))+\n  geom_point()\n\n\n\n\n\n\n\nHmmm… in addition to the problem of overplotting, we’ve got an additional issue here. We actually have two keys and one attribute. The attribute is NHLgames, and the keys are round and postdraft, but we are only using round.\nPostdraft indicates the number of seasons after being drafted. We have several choices here. We can make a visualization that uses both keys, or we can somehow summarize the data for one of the keys.\nFor example, let’s say we just wanted to know the TOTAL number of NHL games played since being drafted.\n\nCodedrafttot2018&lt;- draft2018%&gt;%\n  group_by(playerId, round, overall, position, name)%&gt;%\n  summarise(totgames=sum(NHLgames))\n\n`summarise()` has grouped output by 'playerId', 'round', 'overall', 'position'.\nYou can override using the `.groups` argument.\n\nCodeggplot(drafttot2018, aes(x=round, y=totgames))+\n  geom_point()\n\n\n\n\n\n\n\nLook closely at the two graphs above. How are they different?"
+    "text": "EXPANDED SCATTERPLOT\nThe data from the most recent drafts aren’t really helpful for our question. Let’s go back in time and use a draft year that has had some time to develop and reach their potential. How about 2018?\n\n\nCode\ndraft2018&lt;-NHLDraft%&gt;%\n  filter(draftyear==2018 & postdraft&lt;6) \n\n# wondering why I've filtered postdraft to be less than 6?  Try removing that filter to see what happens.\n\nggplot(draft2018, aes(x=round, y=NHLgames))+\n  geom_point()\n\n\n\n\n\n\n\n\n\nHmmm… in addition to the problem of overplotting, we’ve got an additional issue here. We actually have two keys and one attribute. The attribute is NHLgames, and the keys are round and postdraft, but we are only using round.\nPostdraft indicates the number of seasons after being drafted. We have several choices here. We can make a visualization that uses both keys, or we can somehow summarize the data for one of the keys.\nFor example, let’s say we just wanted to know the TOTAL number of NHL games played since being drafted.\n\n\nCode\ndrafttot2018&lt;- draft2018%&gt;%\n  group_by(playerId, round, overall, position, name)%&gt;%\n  summarise(totgames=sum(NHLgames))\n\n\n`summarise()` has grouped output by 'playerId', 'round', 'overall', 'position'.\nYou can override using the `.groups` argument.\n\n\nCode\nggplot(drafttot2018, aes(x=round, y=totgames))+\n  geom_point()\n\n\n\n\n\n\n\n\n\nLook closely at the two graphs above. How are they different?"
   },
   {
     "objectID": "posts/A5-TabularData/index.html#stop-and-reflect",
     "href": "posts/A5-TabularData/index.html#stop-and-reflect",
     "title": "ASSIGNMENT 5",
     "section": "STOP AND REFLECT",
-    "text": "STOP AND REFLECT\nI’ve been a bit sneaky up to this point. You’ve probably been focusing primarily on my (crappy) visualizations. That’s fine, but let’s think about the manipulations to the TABULAR DATA I’ve had to perform.\nI’m using the Tidyverse to do these manipulations. I set up the original data frame to conform to the tidy data principles (every column is a variable, every row is an observation), which is pretty much the base form of how we’ve discussed Tabular Data in class.\nI’ve snuck in some functions that have allowed me to FILTER, GROUP, and SUMMARIZE the data, often creating new dataframes as I do so. Hey, look! A handy cheatsheet for data transformation using the tidyverse!\nThese functions come from the dplyr package that gets installed as part of the tidyverse. The basic categories of actions are:\n\nmutate() adds new variables that are functions of existing variables\nselect() picks variables based on their names.\nfilter() picks cases based on their values.\nsummarise() reduces multiple values down to a single summary.\narrange() changes the ordering of the rows.\n\nAll of these work with group_by() so you can perform whichever operation on the groups that might be present in your data set.\nLet’s get back to improving our understanding of the relative value of NHL draft picks. The figure above considers a single draft class (2018), and shows the total number of NHL games all the players have accumulated, separating each draft round on an ordinal x axis.\nFine, I guess, but we still have to deal with overplotting, and think about whether a scatterplot really helps us accomplish our task. For this figure do the following:\n\n\nOverplotting. All those points on the y=0 line represent about 32 players each. Can you you think of a way that adding extra channels might help?\n\nLabelling. Can we create a solid figure caption and better axis labels for this figure? In your caption, please specify the task(s) the visualizaiton is intended to facilitate, as well as the marks, channels, and key-value pairs used.\n\nKey-Value pairs: Looks like we are using “round” as a continuous variable. Can we change this to an ordered factor?"
+    "text": "STOP AND REFLECT\nI’ve been a bit sneaky up to this point. You’ve probably been focusing primarily on my (crappy) visualizations. That’s fine, but let’s think about the manipulations to the TABULAR DATA I’ve had to perform.\nI’m using the Tidyverse to do these manipulations. I set up the original data frame to conform to the tidy data principles (every column is a variable, every row is an observation), which is pretty much the base form of how we’ve discussed Tabular Data in class.\nI’ve snuck in some functions that have allowed me to FILTER, GROUP, and SUMMARIZE the data, often creating new dataframes as I do so. Hey, look! A handy cheatsheet for data transformation using the tidyverse!\nThese functions come from the dplyr package that gets installed as part of the tidyverse. The basic categories of actions are:\n\nmutate() adds new variables that are functions of existing variables\nselect() picks variables based on their names.\nfilter() picks cases based on their values.\nsummarise() reduces multiple values down to a single summary.\narrange() changes the ordering of the rows.\n\nAll of these work with group_by() so you can perform whichever operation on the groups that might be present in your data set.\nLet’s get back to improving our understanding of the relative value of NHL draft picks. The figure above considers a single draft class (2018), and shows the total number of NHL games all the players have accumulated, separating each draft round on an ordinal x axis.\nFine, I guess, but we still have to deal with overplotting, and think about whether a scatterplot really helps us accomplish our task. For this figure do the following:\n\nOverplotting. All those points on the y=0 line represent about 32 players each. Can you you think of a way that adding extra channels might help?\nLabelling. Can we create a solid figure caption and better axis labels for this figure? In your caption, please specify the task(s) the visualizaiton is intended to facilitate, as well as the marks, channels, and key-value pairs used.\nKey-Value pairs: Looks like we are using “round” as a continuous variable. Can we change this to an ordered factor?"
   },
   {
     "objectID": "posts/A5-TabularData/index.html#scatterplot-with-overall-draft-position",
     "href": "posts/A5-TabularData/index.html#scatterplot-with-overall-draft-position",
     "title": "ASSIGNMENT 5",
     "section": "SCATTERPLOT WITH OVERALL DRAFT POSITION",
-    "text": "SCATTERPLOT WITH OVERALL DRAFT POSITION\nThis approach might yield a better match with the scatterplot idiom. What if we ignore draft round, and use the player’s overall draft position instead? It also might help us focus on our motivating question! What is the potential value of pick 31, and how does Elias Lindholm compare to that value?\n\nCodeggplot(drafttot2018, aes(x=overall, y=totgames))+\n  geom_point()\n\n\n\n\n\n\n\nFor this figure, address the following:\n\nWe are trying to address the notion of trading pick 31. How might you facilitate the task of evaluating picks in that range?\nCreate a caption and better axis labels for this figure.\nWhat if we wanted to use more than just the 2018 draft class?"
+    "text": "SCATTERPLOT WITH OVERALL DRAFT POSITION\nThis approach might yield a better match with the scatterplot idiom. What if we ignore draft round, and use the player’s overall draft position instead? It also might help us focus on our motivating question! What is the potential value of pick 31, and how does Elias Lindholm compare to that value?\n\n\nCode\nggplot(drafttot2018, aes(x=overall, y=totgames))+\n  geom_point()\n\n\n\n\n\n\n\n\n\nFor this figure, address the following:\n\nWe are trying to address the notion of trading pick 31. How might you facilitate the task of evaluating picks in that range?\nCreate a caption and better axis labels for this figure.\nWhat if we wanted to use more than just the 2018 draft class?"
   },
   {
     "objectID": "posts/A5-TabularData/index.html#scatterplot-summary",
     "href": "posts/A5-TabularData/index.html#scatterplot-summary",
     "title": "ASSIGNMENT 5",
     "section": "SCATTERPLOT SUMMARY",
-    "text": "SCATTERPLOT SUMMARY\nWe seem to be running into an issue in terms of overplotting. Scatterplots are great, but they work best for two quantitative attributes, and we have a situation with one or two keys and one quantitative attribute. The thing is, scatterplots can be very useful when part of our workflow involves modeling the data in some way. We’ll cover this kind of thing in future assignments, but just a bit of foreshadowing here:\n\nCodeggplot(drafttot2018, aes(x=round, y=totgames))+\n  geom_point()+\n  geom_smooth()\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\n\n\n\nAdding the smoothed line doesn’t eliminate the overplotting problem, but it does indicate that it exists. We’ll cover other potential solutions (such as box plots and violin plots) to this issue later in the course, when we get to the notions of faceting and data reduction.\nWhy not include all the data? A scatter plot with that many players (4775) isn’t going to be great. But we could plot some sort of polynomial model to get a sense of the relationship between draft position and NHL games. We’ll filter to the first 8 years of their career.\n\nCodedrafttot&lt;- NHLDraft%&gt;%\n  filter(postdraft&lt;8)%&gt;%\n  group_by(playerId, round, overall, position, name)%&gt;%\n  summarise(totgames=sum(NHLgames))\n\n`summarise()` has grouped output by 'playerId', 'round', 'overall', 'position'.\nYou can override using the `.groups` argument.\n\nCodeggplot(drafttot, aes(x=overall, y=totgames))+\n  geom_smooth()\n\n`geom_smooth()` using method = 'gam' and formula = 'y ~ s(x, bs = \"cs\")'\n\n\n\n\n\n\n\n\nOr we could visualize the average number of games played as a function of time since being drafted.\n\nCodeggplot(NHLDraft, aes(x=postdraft, y=NHLgames))+\n  geom_smooth(aes(color=as.factor(round)))\n\n`geom_smooth()` using method = 'gam' and formula = 'y ~ s(x, bs = \"cs\")'"
+    "text": "SCATTERPLOT SUMMARY\nWe seem to be running into an issue in terms of overplotting. Scatterplots are great, but they work best for two quantitative attributes, and we have a situation with one or two keys and one quantitative attribute. The thing is, scatterplots can be very useful when part of our workflow involves modeling the data in some way. We’ll cover this kind of thing in future assignments, but just a bit of foreshadowing here:\n\n\nCode\nggplot(drafttot2018, aes(x=round, y=totgames))+\n  geom_point()+\n  geom_smooth()\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\nAdding the smoothed line doesn’t eliminate the overplotting problem, but it does indicate that it exists. We’ll cover other potential solutions (such as box plots and violin plots) to this issue later in the course, when we get to the notions of faceting and data reduction.\nWhy not include all the data? A scatter plot with that many players (4775) isn’t going to be great. But we could plot some sort of polynomial model to get a sense of the relationship between draft position and NHL games. We’ll filter to the first 8 years of their career.\n\n\nCode\ndrafttot&lt;- NHLDraft%&gt;%\n  filter(postdraft&lt;8)%&gt;%\n  group_by(playerId, round, overall, position, name)%&gt;%\n  summarise(totgames=sum(NHLgames))\n\n\n`summarise()` has grouped output by 'playerId', 'round', 'overall', 'position'.\nYou can override using the `.groups` argument.\n\n\nCode\nggplot(drafttot, aes(x=overall, y=totgames))+\n  geom_smooth()\n\n\n`geom_smooth()` using method = 'gam' and formula = 'y ~ s(x, bs = \"cs\")'\n\n\n\n\n\n\n\n\n\nOr we could visualize the average number of games played as a function of time since being drafted.\n\n\nCode\nggplot(NHLDraft, aes(x=postdraft, y=NHLgames))+\n  geom_smooth(aes(color=as.factor(round)))\n\n\n`geom_smooth()` using method = 'gam' and formula = 'y ~ s(x, bs = \"cs\")'"
   },
   {
     "objectID": "posts/A5-TabularData/index.html#divergence",
@@ -1635,28 +1635,28 @@
     "href": "posts/A5-TabularData/index.html#simple-bar-chart",
     "title": "ASSIGNMENT 5",
     "section": "SIMPLE BAR CHART",
-    "text": "SIMPLE BAR CHART\nOne of the best ways to deal with overplotting is to use our keys to SEPARATE and ORDER our data. Let’s do that now. I’ll stick with the summarized data for the 2018 draft year for now.\n\nCodeggplot(drafttot2018, aes(x = name, y=totgames))+\n  geom_col()\n\n\n\n\n\n\n\nEpic. We now have a bar (column, really) chart with the key being player name, and the attribute being the total number of games played. We’ve SEPARATED the data using the spatial x-axis position channel, and aligned to that axis as well. But this visualization clearly sucks. You need to make it better by:\n\nAdding a visual channel indicating draft round.\nFixing the order of the x axis.\nMaking a caption and better axis labels.\nFixing the values of the x axis labels so they aren’t such a mess."
+    "text": "SIMPLE BAR CHART\nOne of the best ways to deal with overplotting is to use our keys to SEPARATE and ORDER our data. Let’s do that now. I’ll stick with the summarized data for the 2018 draft year for now.\n\n\nCode\nggplot(drafttot2018, aes(x = name, y=totgames))+\n  geom_col()\n\n\n\n\n\n\n\n\n\nEpic. We now have a bar (column, really) chart with the key being player name, and the attribute being the total number of games played. We’ve SEPARATED the data using the spatial x-axis position channel, and aligned to that axis as well. But this visualization clearly sucks. You need to make it better by:\n\nAdding a visual channel indicating draft round.\nFixing the order of the x axis.\nMaking a caption and better axis labels.\nFixing the values of the x axis labels so they aren’t such a mess."
   },
   {
     "objectID": "posts/A5-TabularData/index.html#stacked-bar",
     "href": "posts/A5-TabularData/index.html#stacked-bar",
     "title": "ASSIGNMENT 5",
     "section": "STACKED BAR?",
-    "text": "STACKED BAR?\nStacked bar charts use two keys and one value. Can we leverage this idiom? Perhaps if we used both round and postdraft as our keys and NHLgames as our value…\nThe idea here is that we might be able to get a sense of the temporal pattern of NHL games after a player is drafted. Do first round picks join the NHL earlier? Do they stay in the NHL longer? That kind of thing.\n\nCodeggplot(draft2018, aes(x = postdraft, y=NHLgames, fill=as.factor(-round)))+\n  geom_col(position = \"stack\")\n\n\n\n\n\n\nCodeNHLDraft &lt;-NHLDraft %&gt;%\n  mutate(descround = desc(as.factor(round)))\n\nrounds&lt;-c(\"darkred\",\"red\",\"pink\", \"violet\", \"lightblue\",\"blue\", \"darkblue\")\n\nggplot(NHLDraft, aes(x = postdraft, y=NHLgames, fill=as.factor(-round), \n                     alpha = as.factor(-round)))+\n  geom_col(position = \"stack\")+\n  theme(legend.position = \"none\")\n\nWarning: Using alpha for a discrete variable is not advised.\n\n\n\n\n\n\n\n\nThis seems like it has some potential, but it definitely needs some work (by you):\n\nYou know the drill by now. Caption! Labels!\nImprove the color palette.\nDo we really only want data from the 2018 draft class?\nConsider the order of rounds within the stack (glyph). Which round is most important? Change the order within the glyphs to reflect this."
+    "text": "STACKED BAR?\nStacked bar charts use two keys and one value. Can we leverage this idiom? Perhaps if we used both round and postdraft as our keys and NHLgames as our value…\nThe idea here is that we might be able to get a sense of the temporal pattern of NHL games after a player is drafted. Do first round picks join the NHL earlier? Do they stay in the NHL longer? That kind of thing.\n\n\nCode\nggplot(draft2018, aes(x = postdraft, y=NHLgames, fill=as.factor(-round)))+\n  geom_col(position = \"stack\")\n\n\n\n\n\n\n\n\n\nCode\nNHLDraft &lt;-NHLDraft %&gt;%\n  mutate(descround = desc(as.factor(round)))\n\nrounds&lt;-c(\"darkred\",\"red\",\"pink\", \"violet\", \"lightblue\",\"blue\", \"darkblue\")\n\nggplot(NHLDraft, aes(x = postdraft, y=NHLgames, fill=as.factor(-round), \n                     alpha = as.factor(-round)))+\n  geom_col(position = \"stack\")+\n  theme(legend.position = \"none\")\n\n\nWarning: Using alpha for a discrete variable is not advised.\n\n\n\n\n\n\n\n\n\nThis seems like it has some potential, but it definitely needs some work (by you):\n\nYou know the drill by now. Caption! Labels!\nImprove the color palette.\nDo we really only want data from the 2018 draft class?\nConsider the order of rounds within the stack (glyph). Which round is most important? Change the order within the glyphs to reflect this."
   },
   {
     "objectID": "posts/A5-TabularData/index.html#pie-charts-normalized-bar-charts",
     "href": "posts/A5-TabularData/index.html#pie-charts-normalized-bar-charts",
     "title": "ASSIGNMENT 5",
     "section": "PIE CHARTS / NORMALIZED BAR CHARTS",
-    "text": "PIE CHARTS / NORMALIZED BAR CHARTS\nWe all know that Pie Charts are rarely a good choice, but let’s look at how to make one here. I’ll eliminate all the players drafted in 2018 who never played an NHL game, leaving us 80 players drafted in that year who made “THE SHOW”. Let’s look at how those 80 players were drafted:\n\nCodeplayedNHL2018 &lt;- drafttot2018%&gt;%\n  filter(totgames&gt;0)\n\nggplot(playedNHL2018, aes(x = \"\", fill = factor(round))) +\n  geom_bar(width = 1) +\n  coord_polar(theta = \"y\")\n\n\n\n\n\n\n\nObviously this isn’t great, but can you state why? Write a little critique of this visualizaiton that:\n\nConsiders a player who played hundreds of games over their first five years vs a player who played one game in five years.\nEvaluates the relative value of a second round pick and a third round pick.\n\nNow let’s change this to account for the various years post draft:\n\nCodeseasonplayedNHL2018 &lt;- draft2018%&gt;%\n  filter(NHLgames&gt;0)\n\n\nggplot(seasonplayedNHL2018, aes(x = \"\", fill = factor(round))) +\n  geom_bar(width = 1) +\n  coord_polar(theta = \"y\")+\n  facet_wrap(~postdraft)\n\n\n\n\n\n\n\nSeems like there is something to work with here, but let’s compare this to a normalized bar chart:\n\nCodeggplot(draft2018, aes(x = postdraft, y=NHLgames, fill=as.factor(round)))+\n  geom_col(position = \"fill\")\n\nWarning: Removed 218 rows containing missing values (`geom_col()`).\n\n\n\n\n\n\n\nCodeggplot(draft2018, aes(x = postdraft, y=NHLgames, fill=overall))+\n  geom_col(position = \"fill\")\n\nWarning: Removed 218 rows containing missing values (`geom_col()`).\n\n\n\n\n\n\n\n\nCan you work with this to make it a useful visualization for your friend, Cassandra Canuck?"
+    "text": "PIE CHARTS / NORMALIZED BAR CHARTS\nWe all know that Pie Charts are rarely a good choice, but let’s look at how to make one here. I’ll eliminate all the players drafted in 2018 who never played an NHL game, leaving us 80 players drafted in that year who made “THE SHOW”. Let’s look at how those 80 players were drafted:\n\n\nCode\nplayedNHL2018 &lt;- drafttot2018%&gt;%\n  filter(totgames&gt;0)\n\nggplot(playedNHL2018, aes(x = \"\", fill = factor(round))) +\n  geom_bar(width = 1) +\n  coord_polar(theta = \"y\")\n\n\n\n\n\n\n\n\n\nObviously this isn’t great, but can you state why? Write a little critique of this visualizaiton that:\n\nConsiders a player who played hundreds of games over their first five years vs a player who played one game in five years.\nEvaluates the relative value of a second round pick and a third round pick.\n\nNow let’s change this to account for the various years post draft:\n\n\nCode\nseasonplayedNHL2018 &lt;- draft2018%&gt;%\n  filter(NHLgames&gt;0)\n\n\nggplot(seasonplayedNHL2018, aes(x = \"\", fill = factor(round))) +\n  geom_bar(width = 1) +\n  coord_polar(theta = \"y\")+\n  facet_wrap(~postdraft)\n\n\n\n\n\n\n\n\n\nSeems like there is something to work with here, but let’s compare this to a normalized bar chart:\n\n\nCode\nggplot(draft2018, aes(x = postdraft, y=NHLgames, fill=as.factor(round)))+\n  geom_col(position = \"fill\")\n\n\nWarning: Removed 218 rows containing missing values (`geom_col()`).\n\n\n\n\n\n\n\n\n\nCode\nggplot(draft2018, aes(x = postdraft, y=NHLgames, fill=overall))+\n  geom_col(position = \"fill\")\n\n\nWarning: Removed 218 rows containing missing values (`geom_col()`).\n\n\n\n\n\n\n\n\n\nCan you work with this to make it a useful visualization for your friend, Cassandra Canuck?"
   },
   {
     "objectID": "posts/A5-TabularData/index.html#heatmap",
     "href": "posts/A5-TabularData/index.html#heatmap",
     "title": "ASSIGNMENT 5",
     "section": "HEATMAP?",
-    "text": "HEATMAP?\nCould this be useful?\n\nCoderound1&lt;-NHLDraft%&gt;%\n  filter(round==1)\n\nggplot(NHLDraft, aes(y = reorder(name, overall), x = postdraft, fill = NHLgames)) +\n  geom_tile(width = .5, height = 5) +\n  theme(plot.margin = unit(c(0,0,0,0), \"cm\"),\n        axis.line = element_blank(),\n        axis.text = element_blank(),\n        axis.ticks = element_blank(),\n        panel.grid.major = element_blank(),\n        panel.grid.minor = element_blank())+\n  scale_fill_gradient(low = \"blue\", high = \"red\")\n\n\n\n\n\n\nCodeggplot(NHLDraft, aes(y = overall, x = postdraft, z=NHLgames)) + \n  geom_tile(aes(fill=NHLgames))"
+    "text": "HEATMAP?\nCould this be useful?\n\n\nCode\nround1&lt;-NHLDraft%&gt;%\n  filter(round==1)\n\nggplot(NHLDraft, aes(y = reorder(name, overall), x = postdraft, fill = NHLgames)) +\n  geom_tile(width = .5, height = 5) +\n  theme(plot.margin = unit(c(0,0,0,0), \"cm\"),\n        axis.line = element_blank(),\n        axis.text = element_blank(),\n        axis.ticks = element_blank(),\n        panel.grid.major = element_blank(),\n        panel.grid.minor = element_blank())+\n  scale_fill_gradient(low = \"blue\", high = \"red\")\n\n\n\n\n\n\n\n\n\nCode\nggplot(NHLDraft, aes(y = overall, x = postdraft, z=NHLgames)) + \n  geom_tile(aes(fill=NHLgames))"
   },
   {
     "objectID": "posts/A5-TabularData/index.html#other-stuff-to-consider",
@@ -1720,5 +1720,26 @@
     "title": "BCB 520:: Foundations of Data Visualization",
     "section": "",
     "text": "The Functional Art\nGGSIDE! A companion to ggplot for making side plots! COOL!\nAwesome Quarto: A potentially interesting repository of Quarto documents, talks, tools, examples, etc.\nThe MockUp Blog - TABLES! This blog post explores the R packages gt and gtextras which will help us up our table game!\nRiffomonas Project: Pat Schloss is a Professor at the University of Michigan. The Riffomonas Project is his Youtube channel, which has HUNDREDS of easy to follow and amazingly useful instructional videos on R, ggplot, version control, and literate programming.\nDr. Tamara Munzner’s Website: It isn’t fancy, but Dr. Munzner’s website has tons of resources from her textbook and the many data visualization courses she has offered. This includes recorded lectures that align directly with the chapters of the text, much like what we are using.\nCheat Sheets: So many visual guides for many R packages, including the tidyverse, ggplot, dplyr, etc.\nLearning Vis Tools: Teaching Data Visualization Tutorials An interesting paper for discussion as we forge the structure for this class."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html",
+    "href": "posts/L2-Data-Abstraction/index.html",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "",
+    "text": "Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html",
+    "href": "posts/L1-Intro/index.html",
+    "title": "LECTURE 1 - INTRO",
+    "section": "",
+    "text": "Department of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html",
+    "href": "posts/L3-TaskAbstraction/index.html",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "",
+    "text": "Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
   }
 ]
