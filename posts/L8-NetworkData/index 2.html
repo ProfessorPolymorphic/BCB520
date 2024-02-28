@@ -8,11 +8,11 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.550">
+  <meta name="generator" content="quarto-1.4.546">
 
   <meta name="author" content="Barrie Robison">
-  <meta name="dcterms.date" content="2024-02-15">
-  <title>BCB520 - LECTURE 5 - Rules of Thumb</title>
+  <meta name="dcterms.date" content="2023-04-17">
+  <title>BCB520 - LECTURE 8 - Network Data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -330,8 +330,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">LECTURE 5 - Rules of Thumb</h1>
-  <p class="subtitle">BCB 520</p>
+  <h1 class="title">LECTURE 8 - Network Data</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -341,215 +340,449 @@ Barrie Robison
 </div>
 </div>
 
-  <p class="date">2024-02-15</p>
+  <p class="date">2023-04-17</p>
 </section>
-<section id="tldr-version" class="slide level2">
-<h2>TLDR VERSION</h2>
-<p><strong>These are guidelines and considerations, not really absolute rules:</strong></p>
-<ol type="1">
-<li>When to use 3D? when to use 2D?</li>
-<li>When to use eyes instead of memory?</li>
-<li>When does immersion help?</li>
-<li>When to use overviews?</li>
-<li>How long is too long?</li>
-<li>Which comes first, form or function?</li>
-</ol>
-</section>
-<section id="unjustified-use-of-3d" class="slide level2">
-<h2>UNJUSTIFIED USE OF 3D</h2>
-<p>Common in news and some infographics.</p>
+<section id="dataset-types-networks" class="slide level2">
+<h2>DATASET TYPES: NETWORKS</h2>
 <div class="columns">
-<div class="column">
-<p><img data-src="WTFTri.png" height="300"></p>
-<p><a href="http://viz.wtf/post/137826497077/eye-popping-3d-triangles">Check this out on WTFViz</a></p>
-</div><div class="column">
-<p><img data-src="WTFPie.png" height="300"></p>
-<p><a href="http://viz.wtf/post/139002022202/designer-drugs-ht-ducqn">Check this out on WTFViz</a></p>
+<div class="r-fit-text column" style="width:40%;">
+<ul>
+<li>networks (also called graphs)
+<ul>
+<li>model relationships between things</li>
+<li>two kinds of items, both can have attributes
+<ul>
+<li>nodes</li>
+<li>links</li>
+</ul></li>
+</ul></li>
+<li>trees are a special case
+<ul>
+<li>no cycles</li>
+<li>one parent per node</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="Networks.png"></p>
 </div>
 </div>
 </section>
-<section id="depth-vs-planar-position" class="slide level2">
-<h2>DEPTH VS PLANAR POSITION</h2>
-<p>Position channels are very powerful… when they are <span class="red">PLANAR SPATIAL POSITION</span>, not depth!</p>
+<section id="arrange-networkstrees" class="slide level2">
+<h2>ARRANGE NETWORKS/TREES</h2>
 
-<img data-src="depthplanar.png" class="r-stretch"></section>
-<section id="the-dangers-of-depth" class="slide level2">
-<h2>THE DANGERS OF DEPTH</h2>
-
-<img data-src="depthscthulhu.png" class="r-stretch"></section>
-<section id="the-actual-dangers-of-depth" class="slide level2 smaller">
-<h2>THE ACTUAL DANGERS OF DEPTH</h2>
-<p><strong>We don’t really live in 3D: we see in 2.05D.</strong></p>
+<img data-src="Arrangenet.png" class="r-stretch"></section>
+<section id="network-tasks" class="slide level2">
+<h2>NETWORK TASKS</h2>
+<div class="columns">
+<div class="r-fit-text column" style="width:60%;">
 <ul>
-<li>We acquire more info on an image <span class="red">plane</span> quickly using eye movements</li>
-<li>We acquire more info for depth much more slowly using head/body motion</li>
-</ul>
-
-<img data-src="outsideshell.png" class="r-stretch"></section>
-<section id="occlusion" class="slide level2 smaller">
-<h2>OCCLUSION</h2>
-<p><em>“<span class="red">Occlusion</span> occurs when one 3D graphic partially blocks another. It is the result of mimicking space in the natural world–where objects have differing X, Y, and Z coordinates. In data visualization, occlusion obscures important data and creates false hierarchies wherein unobstructed graphics appear most important.”</em> … From <a href="https://www.toptal.com/designers/ux/data-visualization-mistakes">This BLOG post</a> by M. Bowers.</p>
-
-<img data-src="occlusiondistortion.webp" class="r-stretch"><p>Interaction can resolve occlusion, but at cost of time and cognitive load.</p>
-</section>
-<section id="perspective-distortion" class="slide level2 smaller">
-<h2>PERSPECTIVE DISTORTION</h2>
-<p>Perspective in 3D visualizations interferes with all size channel encodings. The power of 2D planar positioning is lost!</p>
-<p><em>“<span class="red">Distortion</span> occurs when 3D graphics recede into or project out from the picture plane through foreshortening. In drawing, foreshortening makes objects seem as though they inhabit three-dimensional space, but in data visualization, it creates more false hierarchies. Foreground graphics appear larger, background graphics smaller, and the relationship between data series is needlessly skewed.”…… From <a href="https://www.toptal.com/designers/ux/data-visualization-mistakes">This BLOG post</a> by M. Bowers.</em></p>
-
-<img data-src="perspective.png" class="r-stretch"></section>
-<section id="d-bar-charts---probably-not" class="slide level2 smaller">
-<h2>3D BAR CHARTS - Probably not…</h2>
-<p><strong>3D bars are very difficult to justify!</strong></p>
-<p>Perspective distortion and occlusion make <span class="red">faceting</span> into 2D the better choice in most situations.</p>
-
-<img data-src="3DBar.png" class="r-stretch"></section>
-<section id="tilted-text" class="slide level2">
-<h2>TILTED TEXT</h2>
-<p>Skewed perspective in 3D visualizations does not interact well with fonts.</p>
-
-<img data-src="tilttext.png" class="r-stretch"><p><span class="caption">Exploring and Reducing the Effects of Orientation on Text Readability in Volumetric Displays.Grossman et al.&nbsp;CHI 2007</span></p>
-</section>
-<section id="example-3d-extruded-time-series" class="slide level2">
-<h2>EXAMPLE: 3D EXTRUDED TIME SERIES</h2>
-<p>What information can we decode from this visualization?</p>
-
-<img data-src="extrudetime.png" class="r-stretch"><p><span class="caption">Cluster and Calendar based Visualization of Time Series Data. van Wijk and van Selow, Proc. InfoVis 99.</span></p>
-</section>
-<section id="planar-alternative" class="slide level2 smaller">
-<h2>PLANAR ALTERNATIVE</h2>
-<p>This version of the extruded time series visualization uses <strong>derived data</strong> by computing a cluster hierarchy of power usage patterns. It then juxtaposes <strong>multiple views:</strong> a calendar and superimposed 2D curves differentiated with a color channel.</p>
-
-<img data-src="calendar.png" class="r-stretch"></section>
-<section id="d-shape-perception" class="slide level2 smaller">
-<h2>3D: SHAPE PERCEPTION</h2>
-<p>The benefits of 3D visualization outweigh its costs when the task is <span class="red">shape perception for 3D spatial data</span>. Interactive navigation often supports synthesis across many viewpoints.</p>
-
-<img data-src="3Dshape.png" class="r-stretch"><p><span class="caption">Image-Based Streamline Generation and Rendering. Li and Shen. IEEE Trans. Visualization and Computer Graphics (TVCG) 13:3 (2007), 630–640.</span></p>
-</section>
-<section id="d-constrained-navigation" class="slide level2">
-<h2>3D: CONSTRAINED NAVIGATION</h2>
-
-<img data-src="NYTinteractive.png" class="r-stretch"><p><a href="http://www.nytimes.com/interactive/2015/03/19/upshot/3d-yield-curve-economic-growth.html">NYTimes Subscribers can access here</a></p>
-</section>
-<section id="d-summary" class="slide level2">
-<h2>3D SUMMARY</h2>
-<ol type="1">
-<li>3D legitimate for true 3D spatial data.</li>
-<li>3D needs very careful justification for abstract data</li>
-<li>The benefits outweigh costs when topological structure/context important for the task.</li>
-</ol>
-</section>
-<section id="eyes-beat-memory" class="slide level2 smaller">
-<h2>EYES BEAT MEMORY</h2>
-<p><strong>External Cognition vs.&nbsp;Internal Memory</strong></p>
-<p>It is easy to compare by moving eyes between side-by-side views.</p>
-<p>It is much more difficult to compare a visible item to your memory of what you saw.</p>
+<li>topology based tasks
 <ul>
-<li>Implications for animation:</li>
-<li>great for choreographed storytelling</li>
-<li>great for transitions between two states</li>
-<li>poor for many states with changes everywhere</li>
-<li>consider small multiples instead</li>
-</ul>
-</section>
-<section id="resolution-beats-immersion" class="slide level2 smaller">
-<h2>RESOLUTION BEATS IMMERSION</h2>
-<p>Immersion is typically not helpful for abstract data because we do not need a sense of presence or stereoscopic 3D. A desktop view is also usually better for workflow integration.</p>
-<p>Resolution in VR is a critical constraint, as pixels are the scarcest resource.</p>
-<p><strong>First wave:</strong> virtual reality for abstract data! This is difficult to justify.</p>
-<p><strong>Second wave:</strong> AR/MR (augmented/mixed reality) has more promise.</p>
-
-<img data-src="LandonVR.png" class="r-stretch"></section>
-<section id="overview" class="slide level2">
-<h2>OVERVIEW</h2>
-<p><strong>“Overview first, zoom and filter, details on demand”</strong></p>
-<p><span class="caption">The Eyes Have It: A Task by Data Type Taxonomy for Information Visualizations. Shneiderman. Proc. IEEE Visual Languages, pp.&nbsp;336–343, 1996.</span></p>
-
-<img data-src="query.png" class="r-stretch"><p>This seems simple enough, until you realize that <span class="red">“Overview”</span> is really a microcosm of the full vis design problem space.</p>
-</section>
-<section id="responsiveness" class="slide level2 smaller">
-<h2>RESPONSIVENESS</h2>
-<p><span class="red">Responsiveness</span> (visual feedback to the user) has 3 rough categories:</p>
-<ul>
-<li><strong>0.1 seconds:</strong> perceptual processing
-<ul>
-<li>subsecond response for mouseover highlighting</li>
+<li>find paths</li>
+<li>find (topological) neighbors</li>
+<li>compare centrality/importance measures</li>
+<li>identify clusters / communities</li>
 </ul></li>
-<li><strong>1 second:</strong> immediate response
+<li>attribute based tasks (similar to tabular data)
 <ul>
-<li>fast response after mouseclick, button press</li>
-<li>Fitts’ Law limits on motor control</li>
+<li>find distributions, etc…</li>
 </ul></li>
-<li><strong>10 seconds:</strong> brief tasks
+<li>combination tasks, incorporating both
 <ul>
-<li>bounded response after dialog box</li>
-<li>mental model of heavyweight operation (file load)</li>
+<li>example: find friends-of-friends who like cats
+<ul>
+<li>topology: find all adjacent nodes of given node</li>
+<li>attributes: check if has-pet (node attribute) == cat</li>
 </ul></li>
-<li>Show hourglass for multi-second operations (check for cancel/undo)</li>
-<li>Show progress bar for long operations (process in background thread)</li>
-<li>Consider rendering speed when item count is large (guaranteed frame rate)</li>
+</ul></li>
 </ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="Nettasks.png"></p>
+</div>
+</div>
 </section>
-<section id="function-then-form" class="slide level2">
-<h2>FUNCTION, THEN FORM</h2>
-<p>It is dangerous to start with aesthetics because it is usually impossible to add function retroactively.</p>
-<p>Start with focus on functionality because you can improve and refine aesthetics later.</p>
-<p><span class="red">Aesthetics do matter!</span> They are another level of function. Consider working with a graphic designer on important visualizations.</p>
+<section id="node-link-diagrams" class="slide level2">
+<h2>NODE-LINK DIAGRAMS</h2>
+<div class="columns">
+<div class="r-fit-text column" style="width:40%;">
+<ul>
+<li>nodes: point marks</li>
+<li>links: line marks
+<ul>
+<li>straight lines or arcs</li>
+<li>connections between nodes</li>
+</ul></li>
+<li>intuitive &amp; familiar
+<ul>
+<li>most common</li>
+<li>many, many variants</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="nodelink.png"></p>
+</div>
+</div>
 </section>
-<section id="form-basic-graphic-design" class="slide level2 smaller">
-<h2>FORM: BASIC GRAPHIC DESIGN</h2>
+<section id="node-link-layout" class="slide level2 smaller">
+<h2>NODE-LINK LAYOUT</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
-<p><strong>Proximity:</strong></p>
-<p>DO group related items together</p>
-<p>AVOID equal whitespace between unrelated items</p>
-<p><strong>Alignment:</strong></p>
-<p>DO find/make a strong line and stick to it</p>
-<p>AVOID automatic centering</p>
-<p><strong>Repetition:</strong></p>
-<p>DO unify by pushing existing consistencies</p>
-<p><strong>Contrast:</strong></p>
-<p>If not identical, then very different</p>
-<p>AVOID not quite the same</p>
-</div><div class="column" style="width:40%;">
-<p><img data-src="graphicdesign.png"></p>
-</div>
-</div>
-<p><span class="caption">The Non-Designer’s Design Book, 4th ed.&nbsp;Robin Williams, Peachpit Press, 2015. fast read, very practical to work through whole thing</span></p>
-</section>
-<section id="labelling" class="slide level2 smaller">
-<h2>LABELLING</h2>
-<p><strong>Make visualizations as self-documenting as possible!</strong></p>
-<p>Meaningful &amp; useful title, labels, legends.</p>
-<p>Axes and panes/subwindows should have labels and axes should have good mix/max boundary tick marks.</p>
-<p>Everything that’s plotted should have a legend and its own header/labels if not redundant with main title.</p>
-<p>Use reasonable numerical format and avoid scientific notation in most cases.</p>
-
-<img data-src="xkcdlabel.png" class="r-stretch"><p>https://xkcd.com/833/</p>
-</section>
-<section id="summary---rules-of-thumb" class="slide level2 smaller">
-<h2>SUMMARY - RULES OF THUMB</h2>
-<ol type="1">
-<li>No unjustified 3D
 <ul>
-<li>Power of the plane</li>
-<li>Disparity of depth</li>
-<li>Occlusion hides information</li>
-<li>Perspective distortion dangers</li>
-<li>Tilted text isn’t legible</li>
+<li>minimize
+<ul>
+<li>edge crossings, node overlaps</li>
+<li>distances between topological neighbor nodes</li>
+<li>total drawing area</li>
+<li>edge bends</li>
 </ul></li>
-<li>Eyes beat memory</li>
-<li>Resolution over immersion</li>
-<li>Overview first, zoom and filter, details on demand</li>
-<li>Responsiveness is required</li>
-<li>Function first, form next</li>
-</ol>
-<p><img data-src="Cthulhuthumb.png" class="absolute" style="top: 100px; right: 0px; width: 400px; "></p>
+<li>maximize
+<ul>
+<li>angular distance between different edges</li>
+<li>aspect ratio disparities</li>
+</ul></li>
+<li>emphasize symmetry
+<ul>
+<li>similar graph structures should look similar in layout</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="nodelinklayout.png"></p>
+</div>
+</div>
+</section>
+<section id="node-link-challenges" class="slide level2">
+<h2>NODE-LINK CHALLENGES</h2>
+<p><strong>Many criteria directly conflict with each other.</strong></p>
 
-<div class="quarto-auto-generated-content">
+<img data-src="nodeconflict.png" class="r-stretch"></section>
+<section id="optimization-based-layouts" class="slide level2 smaller">
+<h2>OPTIMIZATION BASED LAYOUTS</h2>
+<ul>
+<li>formulate layout problem as optimization problem</li>
+<li>convert criteria into weighted cost function
+<ul>
+<li>F(layout) = a<em>[crossing counts] + b</em>[drawing space used]+…</li>
+</ul></li>
+<li>use known optimization techniques to find layout at minimal cost
+<ul>
+<li>energy-based physics models</li>
+<li>force-directed placement</li>
+<li>spring embedders</li>
+</ul></li>
+</ul>
+</section>
+<section id="force-directed-placement" class="slide level2 smaller">
+<h2>FORCE DIRECTED PLACEMENT</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>physics model
+<ul>
+<li>links = springs pull together</li>
+<li>nodes = magnets repulse apart</li>
+</ul></li>
+<li>algorithm
+<ul>
+<li>place vertices in random locations</li>
+<li>while not equilibrium</li>
+<li>calculate force on vertex as sum of
+<ul>
+<li>pairwise repulsion of all nodes</li>
+<li>attraction between connected nodes</li>
+</ul></li>
+<li>move vertex by c * vertex_force</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="force.png"></p>
+</div>
+</div>
+</section>
+<section id="force-directed-proscons" class="slide level2 smaller">
+<h2>FORCE DIRECTED PROS/CONS</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>strengths
+<ul>
+<li>reasonable layout for small, sparse graphs</li>
+<li>clusters typically visible</li>
+<li>edge length uniformity</li>
+</ul></li>
+<li>weaknesses
+<ul>
+<li>nondeterministic</li>
+<li>computationally expensive: O(n^3) for n nodes
+<ul>
+<li>each step is n^2, takes ~n cycles to reach equilibrium</li>
+</ul></li>
+<li>naive FD doesn’t scale well beyond 1K nodes</li>
+<li>iterative progress: engaging but distracting</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="fdimage.png"></p>
+</div>
+</div>
+</section>
+<section id="force-directed-idiom" class="slide level2 smaller">
+<h2>FORCE DIRECTED IDIOM</h2>
+<div class="columns">
+<div class="column" style="width:75%;">
+<ul>
+<li>visual encoding
+<ul>
+<li>link connection marks, node point marks</li>
+</ul></li>
+<li>considerations
+<ul>
+<li>spatial position: no meaning directly encoded, eft free to minimize crossings</li>
+<li>proximity semantics?
+<ul>
+<li>sometimes meaningful, sometimes an artifact of layout algorithm</li>
+<li>tension with length (long edges more visually salient than short)</li>
+</ul></li>
+</ul></li>
+<li>tasks
+<ul>
+<li>explore topology; locate paths, clusters</li>
+</ul></li>
+<li>scalability
+<ul>
+<li>node/edge density E &lt; 4N</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:25%;">
+<p><img data-src="fdimage.png"></p>
+</div>
+</div>
+</section>
+<section id="force-directed-examples" class="slide level2">
+<h2>FORCE DIRECTED EXAMPLES</h2>
+<p><a href="https://observablehq.com/@d3/force-directed-graph">Force Directed Graph</a></p>
+<p><a href="https://observablehq.com/@d3/disjoint-force-directed-graph">Disjoint Force Directed</a></p>
+<p><a href="https://observablehq.com/@d3/gallery?collection=@observablehq/observable-libraries-for-visualization">OBSERVABLE D3 LIBRARY</a></p>
+</section>
+<section id="circular-layouts-arc-diagrams" class="slide level2 smaller">
+<h2>CIRCULAR LAYOUTS / ARC DIAGRAMS</h2>
+<ul>
+<li>restricted node-link layouts: lay out nodes around circle or along line</li>
+<li>data
+<ul>
+<li>original: network</li>
+<li>derived: node ordering attribute (global computation)</li>
+</ul></li>
+<li>considerations: node ordering crucial to avoid excessive clutter from edge crossings
+<ul>
+<li>examples: before &amp; after barycentric ordering</li>
+</ul></li>
+</ul>
+<p><a href="https://observablehq.com/@d3/arc-diagram">Arc Diagram</a></p>
+</section>
+<section id="adjacency-matrix" class="slide level2">
+<h2>ADJACENCY MATRIX</h2>
+<p>Matrix derived from network</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="adjacency.png"></p>
+<p><img data-src="adjex1.png"></p>
+</div><div class="column" style="width:60%;">
+<p><img data-src="adjex2.png"></p>
+</div>
+</div>
+</section>
+<section id="node-order" class="slide level2">
+<h2>NODE ORDER</h2>
+<p><a href="https://bost.ocks.org/mike/miserables/">ANIMATED VERSION</a> built with D3 by Mike Bostock.</p>
+
+<img data-src="miserables.png" class="r-stretch"></section>
+<section id="matrix-proscons" class="slide level2">
+<h2>MATRIX PROS/CONS</h2>
+<p>Good for topology tasks related to neighborhoods. Bad for topology tasks related to paths.</p>
+
+<img data-src="adjgoodbad.png" class="r-stretch"></section>
+<section id="node-link-vs-matrix" class="slide level2 smaller">
+<h2>NODE-LINK vs MATRIX</h2>
+<ul>
+<li>node-link diagram strengths
+<ul>
+<li>topology understanding, path tracing</li>
+<li>intuitive, flexible, no training needed</li>
+</ul></li>
+<li>adjacency matrix strengths
+<ul>
+<li>focus on edges rather than nodes</li>
+<li>layout straightforward (reordering needed)</li>
+<li>predictability, scalability</li>
+<li>some topology tasks trainable</li>
+</ul></li>
+<li>empirical studies:
+<ul>
+<li>node-link best for small networks</li>
+<li>matrix best for large networks if tasks don’t involve path tracing</li>
+</ul></li>
+</ul>
+</section>
+<section id="trees" class="slide level2">
+<h2>TREES</h2>
+</section>
+<section id="node-link-trees" class="slide level2 smaller">
+<h2>NODE-LINK TREES</h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li>Reingold-Tilford
+<ul>
+<li>tidy drawings of trees</li>
+<li>exploit parent/child structure</li>
+<li>allocate space: compact but without overlap</li>
+<li>rectilinear and radial variants</li>
+</ul></li>
+</ul>
+<p><a href="https://observablehq.com/@d3/gallery?collection=@observablehq/observable-libraries-for-visualization">These are COOOOOL!</a></p>
+</div><div class="column">
+<p><img data-src="trees1.png"></p>
+</div>
+</div>
+</section>
+<section id="radial-node-link-tree" class="slide level2 smaller">
+<h2>RADIAL NODE-LINK TREE</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>data
+<ul>
+<li>tree</li>
+</ul></li>
+<li>encoding
+<ul>
+<li>link connection marks</li>
+<li>point node marks</li>
+<li>radial axis orientation
+<ul>
+<li>angular proximity: siblings</li>
+<li>distance from center: depth in tree</li>
+</ul></li>
+</ul></li>
+<li>tasks
+<ul>
+<li>understanding topology, following paths</li>
+</ul></li>
+<li>scalability
+<ul>
+<li>1K - 10K nodes (with/without labels)</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="radial.png"> <a href="https://observablehq.com/@esperanc/d3-radial-tidy-tree">EXAMPLE</a></p>
+</div>
+</div>
+</section>
+<section id="connection-and-containment" class="slide level2 smaller">
+<h2>CONNECTION AND CONTAINMENT</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>marks as links (vs.&nbsp;nodes)
+<ul>
+<li>common case in network drawing</li>
+<li>1D case: connection
+<ul>
+<li>ex: all node-link diagrams</li>
+<li>emphasizes topology, path tracing</li>
+<li>networks and trees</li>
+</ul></li>
+<li>2D case: containment
+<ul>
+<li>ex: all treemap variants</li>
+<li>emphasizes attribute values at leaves (size coding)</li>
+<li>only trees</li>
+</ul></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="connect.png"></p>
+</div>
+</div>
+</section>
+<section id="treemap" class="slide level2 smaller">
+<h2>TREEMAP</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>data
+<ul>
+<li>tree</li>
+<li>1 quant attrib at leaf nodes</li>
+</ul></li>
+<li>encoding
+<ul>
+<li>area containment marks for hierarchical structure</li>
+<li>rectilinear orientation</li>
+<li>size encodes quant attrib</li>
+</ul></li>
+<li>tasks
+<ul>
+<li>query attribute at leaf nodes</li>
+<li>ex: disk space usage within filesystem</li>
+</ul></li>
+<li>scalability
+<ul>
+<li>1M leaf nodes</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="enclose.png"></p>
+<p><a href="https://observablehq.com/@d3/treemap">TREEMAP</a></p>
+<p><a href="https://observablehq.com/@will-r-chase/voronoi-treemap">VORONOI TREEMAP</a></p>
+</div>
+</div>
+</section>
+<section id="implicit-tree-layouts" class="slide level2 smaller">
+<h2>IMPLICIT TREE LAYOUTS</h2>
+<p>An alternative to connection and containment is position. These show parent-child relationships only through relative positions.</p>
+<p><img data-src="implicit.png"></p>
+<p><img data-src="implicit2.png" height="100"></p>
+</section>
+<section id="tree-idioms" class="slide level2 smaller">
+<h2>TREE IDIOMS</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>data shown
+<ul>
+<li>link relationships</li>
+<li>tree depth</li>
+<li>sibling order</li>
+</ul></li>
+<li>design choices
+<ul>
+<li>connection vs containment link marks</li>
+<li>rectilinear vs radial layout</li>
+<li>spatial position channels</li>
+</ul></li>
+<li>considerations
+<ul>
+<li>redundant? arbitrary?</li>
+<li>information density?
+<ul>
+<li>avoid wasting space</li>
+<li>consider where to fit labels!</li>
+</ul></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="trees.png"></p>
+</div>
+</div>
+</section>
+<section id="arrange-networkstrees-1" class="slide level2">
+<h2>ARRANGE NETWORKS/TREES</h2>
+
+
+<img data-src="Arrangenet.png" class="r-stretch"><div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-<p><a href="https://canvas.uidaho.edu/courses/25613" target="_blank">CANVAS</a>…<a href="https://professorpolymorphic.github.io/BCB520/" target="_blank">HOME</a></p>
+<p><a href="https://canvas.uidaho.edu/courses/17806" target="_blank">CANVAS</a>…<a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/BCB520.html" target="_blank">HOME</a></p>
 </div>
 </div>
 </section>
