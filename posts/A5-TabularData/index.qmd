@@ -217,8 +217,15 @@ Or we could visualize the average number of games played as a function of time s
 
 ```{r}
 
-ggplot(NHLDraft, aes(x=postdraft, y=NHLgames))+
-  geom_smooth(aes(color=as.factor(round)))
+EL<-NHLDraftstats %>%
+  filter(name=="Elias Lindholm")
+
+ggplot(NHLDraftstats%>%
+         filter(position=="Forward"),
+       aes(x=postdraft, y=points))+
+  geom_smooth(aes(color=as.factor(round)))+
+  geom_point(data = EL, aes(x = postdraft, y = points), color = "red")
+
 ```
 
 

@@ -1547,6 +1547,62 @@
     "text": "Learning new tools is hard. Plowing though the tomes of the Data Science Mythos is hard. Perhaps this tutorial will guide you through the mind shattering truths of… LITERATE PROGRAMMING."
   },
   {
+    "objectID": "posts/A6-Midterm/index.html",
+    "href": "posts/A6-Midterm/index.html",
+    "title": "Midterm Assignment",
+    "section": "",
+    "text": "This assignment provides you the opportunity to synthesize all of the concepts we’ve covered in the course to date. The basic framework is that you will create a COMPLETE data visualization BLOG post that is suitable as a showcase component of your Data Science Portfolio. The point is to SHOW people your skills."
+  },
+  {
+    "objectID": "posts/A6-Midterm/index.html#overview",
+    "href": "posts/A6-Midterm/index.html#overview",
+    "title": "Midterm Assignment",
+    "section": "",
+    "text": "This assignment provides you the opportunity to synthesize all of the concepts we’ve covered in the course to date. The basic framework is that you will create a COMPLETE data visualization BLOG post that is suitable as a showcase component of your Data Science Portfolio. The point is to SHOW people your skills."
+  },
+  {
+    "objectID": "posts/A6-Midterm/index.html#structure",
+    "href": "posts/A6-Midterm/index.html#structure",
+    "title": "Midterm Assignment",
+    "section": "STRUCTURE",
+    "text": "STRUCTURE\nThe basic formatting guidelines for this assignment are:\n\nInclude code fold or code tools options (or both) that allow users to view and copy your code while maintaining overall readability of your post.\nSuppress all output and warnings that might distract from your visualizations and writing.\nProperly title your assignment. The main title should be “BCB 520 - Midterm Portfolio Post”, and the subtitle should be a descriptive title related to the topic.\nInclude author, date, categories, and a description in your YAML header.\nWrite clear, complete sentences for a target audience with some scientific background but little training in formal data science. Imagine your report is intended for high level University leadership (presidents and vice presidents) and the State Board of Education.\nUse the header hierarchy and create a sensible document outline with white space. Format for readability! Use bold and italic fonts to emphasize things! Use color by customizing your .css file!\n\nIn addition to the above formatting guidelines, your portfolio post must contain the following sections:\n\nPreamble\nWrite a brief paragraph describing the primary questions or purpose of the post. Use clear, concise language to justify the post to a naive reader. Why is the question or purpose important?\n\n\nData\nWrite a summary of the data sources you have used. Include a Data Dictionary table that fully describes each individual data source used. You may supplement the data supplied to you with additional sources if you like, but this is not required.\n\n\nVisualizations\nCreate your visualizations in response to the questions and prompts. Answer the questions and prompts directly. Draw a conclusion or inference related to each. Identify limitations and the types of data you would need to mitigate those limitations. Also include text that explains any steps or design choices you considered while exploring the vizualization options [this normally wouldn’t appear in the report to the vice president, but I’d like a window into your process]. Be sure to include clearly labeled axes and a concise but complete figure caption for each visualization. Make deliberate choices for color palettes, point marks, line types, etc. Demonstrate that you understand the concepts we have covered!\n\n\nConclusions or Summary\nSummarize your results. What new questions have emerged as a result of your visualizations? What interesting next steps have emerged?"
+  },
+  {
+    "objectID": "posts/A6-Midterm/index.html#rubric",
+    "href": "posts/A6-Midterm/index.html#rubric",
+    "title": "Midterm Assignment",
+    "section": "RUBRIC",
+    "text": "RUBRIC\nI will evaluate the following for your portfolio post:\n1. Clarity of writing (15%): Complete, clear sentences. Good Grammar. Understandable to target audience. Logical flow of ideas.\n2. Adherence to format (15%): Did you follow directions?\n3. Viz Execution (40%): Are the visualizations effective? Do they adhere to the principles of effectiveness? Are choices for idiom, marks, channels, etc made deliberately and well justified?\n5. Creativity (30%): Did you push your boundaries and learn new techniques? Is the overall post compelling and interesting? Are the visualizations inspiring, creative, unique, and generally impressive? If I were recruiting a new data scientist (and I often am), would this portfolio post impress me, or would it damage your candidacy during review?"
+  },
+  {
+    "objectID": "posts/A6-Midterm/index.html#the-data",
+    "href": "posts/A6-Midterm/index.html#the-data",
+    "title": "Midterm Assignment",
+    "section": "THE DATA",
+    "text": "THE DATA\n\nDepartment of Agriculture (NIFA)\nTheir award database is here, and I’ve downloaded the awards to the University of Idaho and put the file (USDAtoUI) in the post directory.\n\n\nDepartment of Energy\nI’ve downloaded their whole award data set from here and put the file (DOEawards.xlsx) in the github directory for this post.\n\n\nNational Institutes of Health\nWe can grab data from the NIH API, which is well described here.\n\n\nNational Science Foundation\nThe NSF also has an API, and the following code will pull down awards to the University of Idaho into a data frame called NSFtoUI.\n\n\nCode\nlibrary(httr)\nlibrary(jsonlite)\nlibrary(tidyverse)\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter()  masks stats::filter()\n✖ purrr::flatten() masks jsonlite::flatten()\n✖ dplyr::lag()     masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nCode\nlibrary(readxl)\n\n\n# Base URL for the API\nbase_url &lt;- \"https://www.research.gov/awardapi-service/v1/awards.json?awardeeName=%22regents+of+the+university+of+idaho%22\"\n\nprintFields &lt;- \"rpp,offset,id,agency,awardeeCity,awardeeCountryCode,awardeeDistrictCode,awardeeName,awardeeStateCode,awardeeZipCode,cfdaNumber,coPDPI,date,startDate,expDate,estimatedTotalAmt,fundsObligatedAmt,ueiNumber,fundProgramName,parentUeiNumber,pdPIName,perfCity,perfCountryCode,perfDistrictCode,perfLocation,perfStateCode,perfZipCode,poName,primaryProgram,transType,title,awardee,poPhone,poEmail,awardeeAddress,perfAddress,publicationResearch,publicationConference,fundAgencyCode,awardAgencyCode,projectOutComesReport,abstractText,piFirstName,piMiddeInitial,piLastName,piEmail\"\n\n# Initialize an empty data frame to store results\nNSFtoUI &lt;- tibble()\n\n# Number of results per page (as per API settings)\nresults_per_page &lt;- 25\n\n# Variable to keep track of the current page number\ncurrent_page &lt;- 1\n\n# Variable to control the loop\nkeep_going &lt;- TRUE\n\nwhile(keep_going) {\n    # Calculate the offset for the current page\n    offset &lt;- (current_page - 1) * results_per_page + 1\n\n    # Construct the full URL with offset\n    url &lt;- paste0(base_url, \"&offset=\", offset, \"&printFields=\", printFields)\n\n    # Make the API call\n    response &lt;- GET(url)\n\n    # Check if the call was successful\n    if (status_code(response) == 200) {\n        # Extract and parse the JSON data\n        json_data &lt;- content(response, type = \"text\", encoding = \"UTF-8\")\n        parsed_data &lt;- fromJSON(json_data, flatten = TRUE)\n\n        # Extract the 'award' data and add to the all_awards data frame\n        awards_data &lt;- parsed_data$response$award\n        NSFtoUI &lt;- bind_rows(NSFtoUI, as_tibble(awards_data))\n\n        # Debug: Print the current page number and number of awards fetched\n        print(paste(\"Page:\", current_page, \"- Awards fetched:\", length(awards_data$id)))\n\n        # Check if the current page has less than results_per_page awards, then it's the last page\n        if (length(awards_data$id) &lt; results_per_page) {\n            keep_going &lt;- FALSE\n        } else {\n            current_page &lt;- current_page + 1\n        }\n    } else {\n        print(paste(\"Failed to fetch data: Status code\", status_code(response)))\n        keep_going &lt;- FALSE\n    }\n}\n\n\n[1] \"Page: 1 - Awards fetched: 25\"\n[1] \"Page: 2 - Awards fetched: 25\"\n[1] \"Page: 3 - Awards fetched: 25\"\n[1] \"Page: 4 - Awards fetched: 25\"\n[1] \"Page: 5 - Awards fetched: 25\"\n[1] \"Page: 6 - Awards fetched: 25\"\n[1] \"Page: 7 - Awards fetched: 25\"\n[1] \"Page: 8 - Awards fetched: 25\"\n[1] \"Page: 9 - Awards fetched: 25\"\n[1] \"Page: 10 - Awards fetched: 25\"\n[1] \"Page: 11 - Awards fetched: 25\"\n[1] \"Page: 12 - Awards fetched: 25\"\n[1] \"Page: 13 - Awards fetched: 25\"\n[1] \"Page: 14 - Awards fetched: 25\"\n[1] \"Page: 15 - Awards fetched: 25\"\n[1] \"Page: 16 - Awards fetched: 25\"\n[1] \"Page: 17 - Awards fetched: 25\"\n[1] \"Page: 18 - Awards fetched: 25\"\n[1] \"Page: 19 - Awards fetched: 25\"\n[1] \"Page: 20 - Awards fetched: 25\"\n[1] \"Page: 21 - Awards fetched: 25\"\n[1] \"Page: 22 - Awards fetched: 25\"\n[1] \"Page: 23 - Awards fetched: 25\"\n[1] \"Page: 24 - Awards fetched: 8\""
+  },
+  {
+    "objectID": "posts/A6-Midterm/index.html#question-1",
+    "href": "posts/A6-Midterm/index.html#question-1",
+    "title": "Midterm Assignment",
+    "section": "QUESTION 1:",
+    "text": "QUESTION 1:\nProvide a visualization that shows our active awards from each sponsor. I need to see their start date and end date, the amount of the award, and the name of the Principal Investigator. I’m really interested in seeing how far into the future our current portfolio will exist. Are there a bunch of awards about to expire? Are there a bunch that just got funded and will be active for a while? Does this vary across sponsors?"
+  },
+  {
+    "objectID": "posts/A6-Midterm/index.html#question-2",
+    "href": "posts/A6-Midterm/index.html#question-2",
+    "title": "Midterm Assignment",
+    "section": "QUESTION 2:",
+    "text": "QUESTION 2:\nWhat is the proportional representation of new awards to the UI from these various sources over the past 5 to 10 years? Are there any trends that are encouraging or discouraging?"
+  },
+  {
+    "objectID": "posts/A6-Midterm/index.html#question-3",
+    "href": "posts/A6-Midterm/index.html#question-3",
+    "title": "Midterm Assignment",
+    "section": "QUESTION 3:",
+    "text": "QUESTION 3:\nHow is UI performing with these sponsors when compared to the following peer institutions?\n\nBoise State University\nIdaho State University\nMontana State University\nUniversity of Montana\nWashington State University\n\nNote that “performing” can mean a variety of different things. You must choose your metrics of performance and justify them."
+  },
+  {
     "objectID": "posts/A5-TabularData/index.html",
     "href": "posts/A5-TabularData/index.html",
     "title": "ASSIGNMENT 5",
