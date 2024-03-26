@@ -7,14 +7,14 @@ format:
       buttons: false
     preview-links: auto
     css: styles.css
-    footer: <a href="https://canvas.uidaho.edu/courses/17806" target="_blank">CANVAS</a>...<a href="https://professorpolymorphic.github.io/RobisonWebSite/BCB520/BCB520.html" target="_blank">HOME</a>
+    footer: <a href="https://professorpolymorphic.github.io/BCB520/" target="_blank">HOME</a>
     theme: [default, custom.scss]
 author: "Barrie Robison"
-date: "2023-04-17"
+date: "2024-03-26"
 categories: [Lecture, DataViz, Data, Network, Observable]
 image: "Azathothnetwork.png"
 code-fold: true
-draft: true
+
 ---
 
 
@@ -22,7 +22,7 @@ draft: true
 
 ::: columns
 ::: {.r-fit-text .column width="40%"}
--   networks (also called graphs)
+-   Networks (also called graphs)
     -   model relationships between things
     -   two kinds of items, both can have attributes
         -   nodes
@@ -46,14 +46,14 @@ draft: true
 
 ::: columns
 ::: {.r-fit-text .column width="60%"}
--   topology based tasks
+-   [Topology]{.red} based tasks
     -   find paths
     -   find (topological) neighbors
-    -   compare centrality/importance measures
+    -   compare centrality / importance measures
     -   identify clusters / communities
--   attribute based tasks (similar to tabular data)
+-   [Attribute]{.red} based tasks (similar to tabular data)
     -   find distributions, etc...
--   combination tasks, incorporating both
+-   Combination tasks, incorporating both
     -   example: find friends-of-friends who like cats 
         -   topology: find all adjacent nodes of given node
         -   attributes: check if has-pet (node attribute) == cat
@@ -70,11 +70,11 @@ draft: true
 
 ::: columns
 ::: {.r-fit-text .column width="40%"}
--   nodes: point marks
--   links: line marks
+-   Nodes: point marks
+-   Links: line marks
     -   straight lines or arcs
     -   connections between nodes
--   intuitive & familiar
+-   Intuitive & familiar
     -   most common
     -   many, many variants
 
@@ -90,15 +90,15 @@ draft: true
 
 ::: columns
 ::: {.column width="60%"}
--   minimize 
+-   **Minimize:** 
     -   edge crossings, node overlaps
     -   distances between topological neighbor nodes
     -   total drawing area
     -   edge bends
--   maximize 
+-   **Maximize:** 
     -   angular distance between different edges
     -   aspect ratio disparities
--   emphasize symmetry
+-   Emphasize symmetry
     -   similar graph structures should look similar in layout
 
 :::
@@ -117,10 +117,10 @@ draft: true
 
 ## OPTIMIZATION BASED LAYOUTS {.smaller}
 
--   formulate layout problem as optimization problem
--   convert criteria into weighted cost function 
-    -   F(layout) = a*[crossing counts] + b*[drawing space used]+...
--   use known optimization techniques to find layout at minimal cost
+-   Formulate layout problem as an optimization problem
+-   Convert criteria into a weighted cost function 
+    -   F(layout) = a(crossing counts) + b(drawing space used)+...
+-   Use known optimization techniques to find layout at minimal cost
     -   energy-based physics models
     -   force-directed placement
     -   spring embedders
@@ -128,17 +128,16 @@ draft: true
 ## FORCE DIRECTED PLACEMENT {.smaller}
 ::: columns 
 ::: {.column width="60%"}
--   physics model
-    -   links = springs pull together
-    -   nodes = magnets repulse apart
+-   Physics model
+    -   Links = springs pull together
+    -   Nodes = magnets repulse apart
 
--   algorithm
-    -   place vertices in random locations
-    -   while not equilibrium
-    -   calculate force on vertex as sum of
+-   Algorithm
+    -   Place vertices in random locations
+    -   While not equilibrium, calculate force on vertex as sum of:
         -   pairwise repulsion of all nodes
         -   attraction between connected nodes
-    -   move vertex by c * vertex_force
+    -   Move vertex by c(vertex_force)
 
 
 :::
@@ -152,15 +151,15 @@ draft: true
 ## FORCE DIRECTED PROS/CONS {.smaller}
 ::: columns
 ::: {.column width="60%"}
--   strengths
+-   Strengths
     -   reasonable layout for small, sparse graphs
     -   clusters typically visible
     -   edge length uniformity
--   weaknesses
+-   Weaknesses
     -   nondeterministic
     -   computationally expensive: O(n^3) for n nodes
         -   each step is n^2, takes ~n cycles to reach equilibrium
-    -   naive FD doesn't scale well beyond 1K nodes 
+        -   naive FD doesn't scale well beyond 1K nodes 
     -   iterative progress: engaging but distracting
 
 
@@ -177,16 +176,15 @@ draft: true
 ## FORCE DIRECTED IDIOM {.smaller}
 ::: columns
 ::: {.column width="75%"}
--   visual encoding
-    -   link connection marks, node point marks
--   considerations
-    -   spatial position: no meaning directly encoded, eft free to minimize crossings
-    -   proximity semantics?
+-   **Visual Encoding:**. link connection marks, node point marks
+-   **Considerations:**
+    -   Spatial position: no meaning directly encoded, left free to minimize crossings
+    -   Proximity semantics:
         -   sometimes meaningful, sometimes an artifact of layout algorithm
         -   tension with length (long edges more visually salient than short)
--   tasks
-    -   explore topology; locate paths, clusters
--   scalability
+-   **Tasks:**
+    -   explore topology; locate paths and/or clusters
+-   **Scalability**
     -   node/edge density E < 4N
 :::
 
@@ -199,20 +197,20 @@ draft: true
 
 ## FORCE DIRECTED EXAMPLES
 
-[Force Directed Graph](https://observablehq.com/@d3/force-directed-graph)
+[Force Directed Graph](https://observablehq.com/@d3/force-directed-graph){target="blank"}
 
-[Disjoint Force Directed](https://observablehq.com/@d3/disjoint-force-directed-graph)
+[Disjoint Force Directed](https://observablehq.com/@d3/disjoint-force-directed-graph/2?intent=fork){target="blank"}
 
-[OBSERVABLE D3 LIBRARY](https://observablehq.com/@d3/gallery?collection=@observablehq/observable-libraries-for-visualization)
+[OBSERVABLE D3 LIBRARY](https://observablehq.com/@d3/gallery?collection=@observablehq/observable-libraries-for-visualization){target="blank"}
 
 ## CIRCULAR LAYOUTS / ARC DIAGRAMS {.smaller}
 
--   restricted node-link layouts: lay out nodes around circle or along line
--   data
+-   Restricted node-link layouts: lay out nodes around circle or along line
+-   Data
     -   original: network
     -   derived: node ordering attribute (global computation)
--   considerations: node ordering crucial to avoid excessive clutter from edge crossings
-    -   examples: before & after barycentric ordering
+-   Considerations: node ordering crucial to avoid excessive clutter from edge crossings
+    -   examples: before & after barycentric ordering.  The goal of barycentric ordering is to optimize this layout by considering the positions of the nodes based on their connections, thus reducing the overlap and crossings of the arcs that represent the links between nodes.
 
 [Arc Diagram](https://observablehq.com/@d3/arc-diagram)
 
@@ -252,15 +250,15 @@ Good for topology tasks related to neighborhoods.  Bad for topology tasks relate
 
 ## NODE-LINK vs MATRIX {.smaller}
 
--   node-link diagram strengths
+-   Node-link diagram strengths
     -   topology understanding, path tracing
     -   intuitive, flexible, no training needed
--   adjacency matrix strengths
+-   Adjacency matrix strengths
     -   focus on edges rather than nodes
     -   layout straightforward (reordering needed)
     -   predictability, scalability
     -   some topology tasks trainable
--   empirical studies:
+-   Empirical studies:
     -   node-link best for small networks
     -   matrix best for large networks if tasks don’t involve path tracing
 
@@ -292,17 +290,16 @@ Good for topology tasks related to neighborhoods.  Bad for topology tasks relate
 
 ::: columns
 ::: {.column width="60%"}
--   data
-    -   tree
--   encoding
+-   **Data:** tree
+-   **Encoding**
     -   link connection marks
     -   point node marks
     -   radial axis orientation
         -   angular proximity: siblings
         -   distance from center: depth in tree 
--   tasks
+-   **Tasks:**
     -   understanding topology,  following paths
--   scalability
+-   **Scalability:**
     -   1K - 10K nodes (with/without labels)
 
 
@@ -320,7 +317,7 @@ Good for topology tasks related to neighborhoods.  Bad for topology tasks relate
 
 ::: columns
 ::: {.column width="60%"}
--   marks as links (vs. nodes)
+-   Marks as links (vs. nodes)
     -   common case in network drawing
     -   1D case: connection
         -   ex: all node-link diagrams
@@ -345,17 +342,15 @@ Good for topology tasks related to neighborhoods.  Bad for topology tasks relate
 
 ::: columns
 ::: {.column width="60%"}
--   data
-    -   tree
-    -   1 quant attrib at leaf nodes
--   encoding
+-   **Data:** tree with 1 quantitative attribute at leaf nodes
+-   **Encoding:**
     -   area containment marks for hierarchical structure
     -   rectilinear orientation
     -   size encodes quant attrib
--   tasks
+-   **Tasks:**
     -   query attribute at leaf nodes
     -   ex: disk space usage within filesystem
--   scalability
+-   **Scalability:**
     -   1M leaf nodes
 
 
@@ -389,15 +384,15 @@ An alternative to connection and containment is position.  These show parent-chi
 
 ::: columns
 ::: {.column width="60%"}
--   data shown
+-   Data shown
     -   link relationships 
     -   tree depth
     -   sibling order
--   design choices
+-   Design choices
     -   connection vs containment link marks
     -   rectilinear vs radial layout
     -   spatial position channels
--   considerations
+-   Considerations
     -   redundant? arbitrary?
     -   information density?
         -   avoid wasting space

@@ -1445,8 +1445,8 @@
     "objectID": "posts/L3-TaskAbstraction/index.html#last-lecture",
     "href": "posts/L3-TaskAbstraction/index.html#last-lecture",
     "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "",
-    "text": "Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+    "section": "LAST LECTURE",
+    "text": "LAST LECTURE\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
   },
   {
     "objectID": "posts/L3-TaskAbstraction/index.html#task-abstraction",
@@ -1530,7 +1530,7 @@
     "href": "posts/L3-TaskAbstraction/index.html#mandatory-fun",
     "title": "LECTURE 3 - TASK ABSTRACTION",
     "section": "MANDATORY FUN",
-    "text": "MANDATORY FUN\nWe will do these until everyone has done at least one example.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "MANDATORY FUN\nWe will do these until everyone has done at least one example.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nCANVAS…HOME"
   },
   {
     "objectID": "posts/T1-Lit-Prog/index.html",
@@ -1811,5 +1811,173 @@
     "title": "LECTURE 5 - Rules of Thumb",
     "section": "",
     "text": "These are guidelines and considerations, not really absolute rules:\n\nWhen to use 3D? when to use 2D?\nWhen to use eyes instead of memory?\nWhen does immersion help?\nWhen to use overviews?\nHow long is too long?\nWhich comes first, form or function?"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#dataset-types-networks",
+    "href": "posts/L8-NetworkData/index.html#dataset-types-networks",
+    "title": "LECTURE 8 - Network Data",
+    "section": "DATASET TYPES: NETWORKS",
+    "text": "DATASET TYPES: NETWORKS\n\n\n\nNetworks (also called graphs)\n\nmodel relationships between things\ntwo kinds of items, both can have attributes\n\nnodes\nlinks\n\n\ntrees are a special case\n\nno cycles\none parent per node"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#arrange-networkstrees",
+    "href": "posts/L8-NetworkData/index.html#arrange-networkstrees",
+    "title": "LECTURE 8 - Network Data",
+    "section": "ARRANGE NETWORKS/TREES",
+    "text": "ARRANGE NETWORKS/TREES"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#network-tasks",
+    "href": "posts/L8-NetworkData/index.html#network-tasks",
+    "title": "LECTURE 8 - Network Data",
+    "section": "NETWORK TASKS",
+    "text": "NETWORK TASKS\n\n\n\nTopology based tasks\n\nfind paths\nfind (topological) neighbors\ncompare centrality / importance measures\nidentify clusters / communities\n\nAttribute based tasks (similar to tabular data)\n\nfind distributions, etc…\n\nCombination tasks, incorporating both\n\nexample: find friends-of-friends who like cats\n\ntopology: find all adjacent nodes of given node\nattributes: check if has-pet (node attribute) == cat"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#node-link-diagrams",
+    "href": "posts/L8-NetworkData/index.html#node-link-diagrams",
+    "title": "LECTURE 8 - Network Data",
+    "section": "NODE-LINK DIAGRAMS",
+    "text": "NODE-LINK DIAGRAMS\n\n\n\nNodes: point marks\nLinks: line marks\n\nstraight lines or arcs\nconnections between nodes\n\nIntuitive & familiar\n\nmost common\nmany, many variants"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#node-link-layout",
+    "href": "posts/L8-NetworkData/index.html#node-link-layout",
+    "title": "LECTURE 8 - Network Data",
+    "section": "NODE-LINK LAYOUT",
+    "text": "NODE-LINK LAYOUT\n\n\n\nMinimize:\n\nedge crossings, node overlaps\ndistances between topological neighbor nodes\ntotal drawing area\nedge bends\n\nMaximize:\n\nangular distance between different edges\naspect ratio disparities\n\nEmphasize symmetry\n\nsimilar graph structures should look similar in layout"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#node-link-challenges",
+    "href": "posts/L8-NetworkData/index.html#node-link-challenges",
+    "title": "LECTURE 8 - Network Data",
+    "section": "NODE-LINK CHALLENGES",
+    "text": "NODE-LINK CHALLENGES\nMany criteria directly conflict with each other."
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#optimization-based-layouts",
+    "href": "posts/L8-NetworkData/index.html#optimization-based-layouts",
+    "title": "LECTURE 8 - Network Data",
+    "section": "OPTIMIZATION BASED LAYOUTS",
+    "text": "OPTIMIZATION BASED LAYOUTS\n\nFormulate layout problem as an optimization problem\nConvert criteria into a weighted cost function\n\nF(layout) = a(crossing counts) + b(drawing space used)+…\n\nUse known optimization techniques to find layout at minimal cost\n\nenergy-based physics models\nforce-directed placement\nspring embedders"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#force-directed-placement",
+    "href": "posts/L8-NetworkData/index.html#force-directed-placement",
+    "title": "LECTURE 8 - Network Data",
+    "section": "FORCE DIRECTED PLACEMENT",
+    "text": "FORCE DIRECTED PLACEMENT\n\n\n\nPhysics model\n\nLinks = springs pull together\nNodes = magnets repulse apart\n\nAlgorithm\n\nPlace vertices in random locations\nWhile not equilibrium, calculate force on vertex as sum of:\n\npairwise repulsion of all nodes\nattraction between connected nodes\n\nMove vertex by c(vertex_force)"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#force-directed-proscons",
+    "href": "posts/L8-NetworkData/index.html#force-directed-proscons",
+    "title": "LECTURE 8 - Network Data",
+    "section": "FORCE DIRECTED PROS/CONS",
+    "text": "FORCE DIRECTED PROS/CONS\n\n\n\nStrengths\n\nreasonable layout for small, sparse graphs\nclusters typically visible\nedge length uniformity\n\nWeaknesses\n\nnondeterministic\ncomputationally expensive: O(n^3) for n nodes\n\neach step is n^2, takes ~n cycles to reach equilibrium\nnaive FD doesn’t scale well beyond 1K nodes\n\niterative progress: engaging but distracting"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#force-directed-idiom",
+    "href": "posts/L8-NetworkData/index.html#force-directed-idiom",
+    "title": "LECTURE 8 - Network Data",
+    "section": "FORCE DIRECTED IDIOM",
+    "text": "FORCE DIRECTED IDIOM\n\n\n\nVisual Encoding:. link connection marks, node point marks\nConsiderations:\n\nSpatial position: no meaning directly encoded, left free to minimize crossings\nProximity semantics:\n\nsometimes meaningful, sometimes an artifact of layout algorithm\ntension with length (long edges more visually salient than short)\n\n\nTasks:\n\nexplore topology; locate paths and/or clusters\n\nScalability\n\nnode/edge density E &lt; 4N"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#force-directed-examples",
+    "href": "posts/L8-NetworkData/index.html#force-directed-examples",
+    "title": "LECTURE 8 - Network Data",
+    "section": "FORCE DIRECTED EXAMPLES",
+    "text": "FORCE DIRECTED EXAMPLES\nForce Directed Graph\nDisjoint Force Directed\nOBSERVABLE D3 LIBRARY"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#circular-layouts-arc-diagrams",
+    "href": "posts/L8-NetworkData/index.html#circular-layouts-arc-diagrams",
+    "title": "LECTURE 8 - Network Data",
+    "section": "CIRCULAR LAYOUTS / ARC DIAGRAMS",
+    "text": "CIRCULAR LAYOUTS / ARC DIAGRAMS\n\nRestricted node-link layouts: lay out nodes around circle or along line\nData\n\noriginal: network\nderived: node ordering attribute (global computation)\n\nConsiderations: node ordering crucial to avoid excessive clutter from edge crossings\n\nexamples: before & after barycentric ordering. The goal of barycentric ordering is to optimize this layout by considering the positions of the nodes based on their connections, thus reducing the overlap and crossings of the arcs that represent the links between nodes.\n\n\nArc Diagram"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#adjacency-matrix",
+    "href": "posts/L8-NetworkData/index.html#adjacency-matrix",
+    "title": "LECTURE 8 - Network Data",
+    "section": "ADJACENCY MATRIX",
+    "text": "ADJACENCY MATRIX\nMatrix derived from network"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#node-order",
+    "href": "posts/L8-NetworkData/index.html#node-order",
+    "title": "LECTURE 8 - Network Data",
+    "section": "NODE ORDER",
+    "text": "NODE ORDER\nANIMATED VERSION built with D3 by Mike Bostock."
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#matrix-proscons",
+    "href": "posts/L8-NetworkData/index.html#matrix-proscons",
+    "title": "LECTURE 8 - Network Data",
+    "section": "MATRIX PROS/CONS",
+    "text": "MATRIX PROS/CONS\nGood for topology tasks related to neighborhoods. Bad for topology tasks related to paths."
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#node-link-vs-matrix",
+    "href": "posts/L8-NetworkData/index.html#node-link-vs-matrix",
+    "title": "LECTURE 8 - Network Data",
+    "section": "NODE-LINK vs MATRIX",
+    "text": "NODE-LINK vs MATRIX\n\nNode-link diagram strengths\n\ntopology understanding, path tracing\nintuitive, flexible, no training needed\n\nAdjacency matrix strengths\n\nfocus on edges rather than nodes\nlayout straightforward (reordering needed)\npredictability, scalability\nsome topology tasks trainable\n\nEmpirical studies:\n\nnode-link best for small networks\nmatrix best for large networks if tasks don’t involve path tracing"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#trees",
+    "href": "posts/L8-NetworkData/index.html#trees",
+    "title": "LECTURE 8 - Network Data",
+    "section": "TREES",
+    "text": "TREES"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#node-link-trees",
+    "href": "posts/L8-NetworkData/index.html#node-link-trees",
+    "title": "LECTURE 8 - Network Data",
+    "section": "NODE-LINK TREES",
+    "text": "NODE-LINK TREES\n\n\n\nReingold-Tilford\n\ntidy drawings of trees\nexploit parent/child structure\nallocate space: compact but without overlap\nrectilinear and radial variants\n\n\nThese are COOOOOL!"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#radial-node-link-tree",
+    "href": "posts/L8-NetworkData/index.html#radial-node-link-tree",
+    "title": "LECTURE 8 - Network Data",
+    "section": "RADIAL NODE-LINK TREE",
+    "text": "RADIAL NODE-LINK TREE\n\n\n\nData: tree\nEncoding\n\nlink connection marks\npoint node marks\nradial axis orientation\n\nangular proximity: siblings\ndistance from center: depth in tree\n\n\nTasks:\n\nunderstanding topology, following paths\n\nScalability:\n\n1K - 10K nodes (with/without labels)\n\n\n\n EXAMPLE"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#connection-and-containment",
+    "href": "posts/L8-NetworkData/index.html#connection-and-containment",
+    "title": "LECTURE 8 - Network Data",
+    "section": "CONNECTION AND CONTAINMENT",
+    "text": "CONNECTION AND CONTAINMENT\n\n\n\nMarks as links (vs. nodes)\n\ncommon case in network drawing\n1D case: connection\n\nex: all node-link diagrams\nemphasizes topology, path tracing\nnetworks and trees\n\n2D case: containment\n\nex: all treemap variants\nemphasizes attribute values at leaves (size coding)\nonly trees"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#treemap",
+    "href": "posts/L8-NetworkData/index.html#treemap",
+    "title": "LECTURE 8 - Network Data",
+    "section": "TREEMAP",
+    "text": "TREEMAP\n\n\n\nData: tree with 1 quantitative attribute at leaf nodes\nEncoding:\n\narea containment marks for hierarchical structure\nrectilinear orientation\nsize encodes quant attrib\n\nTasks:\n\nquery attribute at leaf nodes\nex: disk space usage within filesystem\n\nScalability:\n\n1M leaf nodes\n\n\n\n\nTREEMAP\nVORONOI TREEMAP"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#implicit-tree-layouts",
+    "href": "posts/L8-NetworkData/index.html#implicit-tree-layouts",
+    "title": "LECTURE 8 - Network Data",
+    "section": "IMPLICIT TREE LAYOUTS",
+    "text": "IMPLICIT TREE LAYOUTS\nAn alternative to connection and containment is position. These show parent-child relationships only through relative positions."
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#tree-idioms",
+    "href": "posts/L8-NetworkData/index.html#tree-idioms",
+    "title": "LECTURE 8 - Network Data",
+    "section": "TREE IDIOMS",
+    "text": "TREE IDIOMS\n\n\n\nData shown\n\nlink relationships\ntree depth\nsibling order\n\nDesign choices\n\nconnection vs containment link marks\nrectilinear vs radial layout\nspatial position channels\n\nConsiderations\n\nredundant? arbitrary?\ninformation density?\n\navoid wasting space\nconsider where to fit labels!"
+  },
+  {
+    "objectID": "posts/L8-NetworkData/index.html#arrange-networkstrees-1",
+    "href": "posts/L8-NetworkData/index.html#arrange-networkstrees-1",
+    "title": "LECTURE 8 - Network Data",
+    "section": "ARRANGE NETWORKS/TREES",
+    "text": "ARRANGE NETWORKS/TREES\n\n\n\n\nHOME"
   }
 ]
