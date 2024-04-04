@@ -600,7 +600,7 @@ relations3<-rbind(relations, edgelist_df)
 g <- graph_from_data_frame(relations3, directed=FALSE, vertices=people)
 
 
-plot(g)
+plot(g,  layout = layout_with_fr)
 
 
 ```
@@ -612,3 +612,4 @@ Improve the network above by:
 1.  Coloring the edges according to Advisor / BCB520 attribute.
 2.  Coloring the nodes according to Department.
 3.  Adujsting the labels to improve readability.
+4. Find the best layout you can for this garbage.  What a nightmare.
