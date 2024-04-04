@@ -122,8 +122,8 @@
     "objectID": "posts/L5-ThumbRules/index.html#tldr-version",
     "href": "posts/L5-ThumbRules/index.html#tldr-version",
     "title": "LECTURE 5 - Rules of Thumb",
-    "section": "",
-    "text": "These are guidelines and considerations, not really absolute rules:\n\nWhen to use 3D? when to use 2D?\nWhen to use eyes instead of memory?\nWhen does immersion help?\nWhen to use overviews?\nHow long is too long?\nWhich comes first, form or function?"
+    "section": "TLDR VERSION",
+    "text": "TLDR VERSION\nThese are guidelines and considerations, not really absolute rules:\n\nWhen to use 3D? when to use 2D?\nWhen to use eyes instead of memory?\nWhen does immersion help?\nWhen to use overviews?\nHow long is too long?\nWhich comes first, form or function?"
   },
   {
     "objectID": "posts/L5-ThumbRules/index.html#unjustified-use-of-3d",
@@ -270,7 +270,7 @@
     "href": "posts/L5-ThumbRules/index.html#summary---rules-of-thumb",
     "title": "LECTURE 5 - Rules of Thumb",
     "section": "SUMMARY - RULES OF THUMB",
-    "text": "SUMMARY - RULES OF THUMB\n\nNo unjustified 3D\n\nPower of the plane\nDisparity of depth\nOcclusion hides information\nPerspective distortion dangers\nTilted text isn’t legible\n\nEyes beat memory\nResolution over immersion\nOverview first, zoom and filter, details on demand\nResponsiveness is required\nFunction first, form next"
+    "text": "SUMMARY - RULES OF THUMB\n\nNo unjustified 3D\n\nPower of the plane\nDisparity of depth\nOcclusion hides information\nPerspective distortion dangers\nTilted text isn’t legible\n\nEyes beat memory\nResolution over immersion\nOverview first, zoom and filter, details on demand\nResponsiveness is required\nFunction first, form next\n\n\n\n\n\nCANVAS…HOME"
   },
   {
     "objectID": "posts/L6-TabularData1/index.html#the-three-major-data-types",
@@ -291,14 +291,14 @@
     "href": "posts/L6-TabularData1/index.html#semantics-for-data",
     "title": "LECTURE 6 - Tabular Data",
     "section": "SEMANTICS FOR DATA",
-    "text": "SEMANTICS FOR DATA\n\n\n\n\n\n\nSemantics\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”\n\n\n\n\nData Table\n\n\n\n\nITEM: Person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
+    "text": "SEMANTICS FOR DATA\n\n\n\nSemantics\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”\n\n\n\n\nData Table\n\n\n\n\nITEM: Person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
   },
   {
     "objectID": "posts/L6-TabularData1/index.html#dataset-types-tables",
     "href": "posts/L6-TabularData1/index.html#dataset-types-tables",
     "title": "LECTURE 6 - Tabular Data",
     "section": "DATASET TYPES: TABLES",
-    "text": "DATASET TYPES: TABLES\n\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA unique KEY can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
+    "text": "DATASET TYPES: TABLES\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA unique KEY can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
   },
   {
     "objectID": "posts/L6-TabularData1/index.html#flat-table-example",
@@ -634,7 +634,7 @@
     "href": "posts/L6-TabularData1/index.html#arranging-tabular-data",
     "title": "LECTURE 6 - Tabular Data",
     "section": "ARRANGING TABULAR DATA",
-    "text": "ARRANGING TABULAR DATA\nWhat did we miss?\nggplot cheatsheet"
+    "text": "ARRANGING TABULAR DATA\nWhat did we miss?\nggplot cheatsheet\n\n\n\nHOME"
   },
   {
     "objectID": "posts/A3-PrototypeVizPortfolio/index.html",
@@ -679,67 +679,123 @@
     "text": "RESOURCES\nA YouTube Video from Posit on Building your Data Science Portfolio\nTidyTuesday\nA fun Spotify example from TidyTuesday by Kaylin Pavlik.\nQuarto’s BLOG Documentation\nA YouTube Video from Posit on Building a BLOG with Quarto"
   },
   {
-    "objectID": "posts/Examplepost/Example.html",
-    "href": "posts/Examplepost/Example.html",
-    "title": "Examples are fun",
+    "objectID": "posts/T1-Lit-Prog/index.html",
+    "href": "posts/T1-Lit-Prog/index.html",
+    "title": "TUTORIAL 1 - Literate Programming",
     "section": "",
-    "text": "I LIKE HOCKEY AND CANDY.\n\ndata &lt;- tribble(\n  ~from, ~to, ~value,\n  \"Martonick\", \"NCURA Workshops\", 100,\n  \"Martoncik\", \"Project Reporting\", 300,\n  \"Sheneman\", \"Open Source Data Sets\", 200,\n  \"Sheneman\", \"AI Tools\", 100,\n  \"Pal\", \"Open Source Data Sets\", 100,\n  \"Pal\", \"Common Data Model\", 100,\n  \"Martoncik\", \"Community of Practice\", 300,\n  \"Robison\", \"Project Reporting\", 200,\n  \"Brunsfeld\", \"AI Tools\", 100,\n  \"Trainer\", \"Open Source Data Sets\", 100,\n  \"Trainer\", \"NCURA Workshops\", 100,\n  \"Trainer\", \"Online Training Modules\", 150,\n  \"Robison\", \"Online Training Modules\", 50\n)\n\n\n# Using ggplot2 and ggalluvial\nggplot(data = data,\n       aes(axis1 = from, axis2 = to, y = value)) +\n  geom_alluvium(aes(fill = to)) + \n  geom_stratum() + \n  geom_text(stat = \"stratum\", aes(label = after_stat(stratum))) +\n  theme_minimal() +\n  ggtitle(\"Sankey Diagram with tidyverse and ggalluvial\")\n\n\n\n\n\n\n\ndf &lt;- mtcars %&gt;%\n  make_long(cyl, vs, am, gear, carb)\n\nggplot(df, aes(x = x, \n               next_x = next_x, \n               node = node, \n               next_node = next_node,\n               fill = factor(node))) +\n  geom_sankey()"
+    "text": "Learning new tools is hard. Plowing though the tomes of the Data Science Mythos is hard. Perhaps this tutorial will guide you through the mind shattering truths of… LITERATE PROGRAMMING."
   },
   {
-    "objectID": "posts/A1-Lit-Prog/index.html",
-    "href": "posts/A1-Lit-Prog/index.html",
-    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "objectID": "posts/T1-Lit-Prog/index.html#intro-to-quarto",
+    "href": "posts/T1-Lit-Prog/index.html#intro-to-quarto",
+    "title": "TUTORIAL 1 - Literate Programming",
     "section": "",
-    "text": "The idea of Literate Programming is that source code that is executed as part of the program’s purpose is interspersed with documentation that describes the program’s logic. The concept of literate programming was first articulated by David Knuth in 1984. You know… back when music was good? Modern Data Science leans pretty heavily on literate programming, and to be honest, there aren’t very many good arguments as to why you WOULDN’T want to implement this approach in your own work. Bearing this in mind, we will adopt this framework for most of the activities, exercises, and assignments in this course. All of us will benefit by practicing these skills."
+    "text": "Learning new tools is hard. Plowing though the tomes of the Data Science Mythos is hard. Perhaps this tutorial will guide you through the mind shattering truths of… LITERATE PROGRAMMING."
   },
   {
-    "objectID": "posts/A1-Lit-Prog/index.html#summary",
-    "href": "posts/A1-Lit-Prog/index.html#summary",
-    "title": "ASSIGNMENT 1 - Fun with literate programming.",
-    "section": "",
-    "text": "The idea of Literate Programming is that source code that is executed as part of the program’s purpose is interspersed with documentation that describes the program’s logic. The concept of literate programming was first articulated by David Knuth in 1984. You know… back when music was good? Modern Data Science leans pretty heavily on literate programming, and to be honest, there aren’t very many good arguments as to why you WOULDN’T want to implement this approach in your own work. Bearing this in mind, we will adopt this framework for most of the activities, exercises, and assignments in this course. All of us will benefit by practicing these skills."
+    "objectID": "posts/L3-TaskAbstraction/index.html#last-lecture",
+    "href": "posts/L3-TaskAbstraction/index.html#last-lecture",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "LAST LECTURE",
+    "text": "LAST LECTURE\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
   },
   {
-    "objectID": "posts/A1-Lit-Prog/index.html#literate-programming-publishing-systems",
-    "href": "posts/A1-Lit-Prog/index.html#literate-programming-publishing-systems",
-    "title": "ASSIGNMENT 1 - Fun with literate programming.",
-    "section": "LITERATE PROGRAMMING PUBLISHING SYSTEMS",
-    "text": "LITERATE PROGRAMMING PUBLISHING SYSTEMS\nI’m trying to keep this course as technology agnostic as I can. The idea is that you should be practicing and building competencies in the languages and algorithms that are most useful to you. Who am I to tell you to use R instead of Python? If you have skills in a particular language I encourage you to keep using that during this course. That being said, I am going to work the examples using R and R Studio, and I will (mostly) use Quarto as the literate programming framework.\nIf all of this is new to you, no problem. Just follow along in R and Quarto and start your skill building journey with those languages.\nIf you are a Python person, great! Quarto can accommodate that language as well. If you have another preference for literate programming, such as sticking with R Markdown until the Quarto bugs are fixed, that is great. Find the framework and tools that work for you, and practice, practice, practice!\n\nQuarto\nAn open source publishing system that allows you to create websites, documents, blogs, books, publications, presentations, and more while using R, Python, Julia, or Observable. Quarto is intended to be the more functional successor of R Markdown. I intend to use Quarto for most of my work in this course.\n\n\nR Markdown\nAnother publishing system for creating all the things … websites, slides, manuscripts, dashboards, etc. While most people (including me!) instinctively think of R and Python within R Markdown, the list of supported language engines is pretty extensive.\n\nnames(knitr::knit_engines$get())\n\n [1] \"awk\"       \"bash\"      \"coffee\"    \"gawk\"      \"groovy\"    \"haskell\"  \n [7] \"lein\"      \"mysql\"     \"node\"      \"octave\"    \"perl\"      \"php\"      \n[13] \"psql\"      \"Rscript\"   \"ruby\"      \"sas\"       \"scala\"     \"sed\"      \n[19] \"sh\"        \"stata\"     \"zsh\"       \"asis\"      \"asy\"       \"block\"    \n[25] \"block2\"    \"bslib\"     \"c\"         \"cat\"       \"cc\"        \"comment\"  \n[31] \"css\"       \"ditaa\"     \"dot\"       \"embed\"     \"eviews\"    \"exec\"     \n[37] \"fortran\"   \"fortran95\" \"go\"        \"highlight\" \"js\"        \"julia\"    \n[43] \"python\"    \"R\"         \"Rcpp\"      \"sass\"      \"scss\"      \"sql\"      \n[49] \"stan\"      \"targets\"   \"tikz\"      \"verbatim\"  \"ojs\"       \"mermaid\""
+    "objectID": "posts/L3-TaskAbstraction/index.html#task-abstraction",
+    "href": "posts/L3-TaskAbstraction/index.html#task-abstraction",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "TASK ABSTRACTION",
+    "text": "TASK ABSTRACTION\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
   },
   {
-    "objectID": "posts/A1-Lit-Prog/index.html#languages-and-toolsets",
-    "href": "posts/A1-Lit-Prog/index.html#languages-and-toolsets",
-    "title": "ASSIGNMENT 1 - Fun with literate programming.",
-    "section": "LANGUAGES AND TOOLSETS",
-    "text": "LANGUAGES AND TOOLSETS\nThere are quite a few, but the five that seemed to keep coming up as I prepped this course are:\n\nR\nA very powerful open source framework for statistical computing and graphics. R has a lot of base functionality, and its capabilities are increased by 100 fold with packages created by R users. Packages are the core units of R code. I’m going to use R for the vast majority of demonstrations in this course.\n\n\nPython\nPython is an open source general purpose programming language. It wasn’t developed just for statistical computing or data science, and people use this language for tons of different applications. There is no denying it has become a very powerful language for data science and data visualization.\n\n\nTableau\nTableau is proprietary software that is very powerful for creating beautiful and functional data visualizations. It can integrate with all sorts of data sources and is used a lot for analytics, especially in the business world. The downsides (that occur to me at least) are that it costs money, it is not open source, and is more of a one-trick-pony than the programming languages on this list.\n\n\nJavascript\nJavascript has been around for about 25 years, and is (I think) the world’s most popular programming language. Along with HTML and CSS, Javascript drives pretty much the entire internet. I mention Javascript here because it has the D3 library, which can create super cool interactive data visualizaitons. In my experience, the learning curve with Javascript and D3 was pretty steep. I bought a book about it once, but just haven’t been able to allocate the amount of time necessary to really start using it. Check out the gallery of examples. Amazing!\n\n\nObservable / D3\nObservable is a set of extensions to Javascript that features something called reactive runtime. This means that the code blocks are executed and compiled as they are written, and changes are implemented instantaneously. Observable is pretty great for data exploration, and is well supported by Quarto. In addition, you can use the Observable JS libraries in Quarto to access D3. We’ll use some of these tools in this course, especially when we start considering interactivity."
+    "objectID": "posts/L3-TaskAbstraction/index.html#from-domain-to-abstraction",
+    "href": "posts/L3-TaskAbstraction/index.html#from-domain-to-abstraction",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "FROM DOMAIN TO ABSTRACTION",
+    "text": "FROM DOMAIN TO ABSTRACTION"
   },
   {
-    "objectID": "posts/A1-Lit-Prog/index.html#assignment",
-    "href": "posts/A1-Lit-Prog/index.html#assignment",
-    "title": "ASSIGNMENT 1 - Fun with literate programming.",
-    "section": "ASSIGNMENT",
-    "text": "ASSIGNMENT\nAfter that long introduction, I suppose you are wondering what I want you to actually DO today.\nWell, I want you to set up your publishing system and preferred language on your computer. Then I want you to recreate the classic figure from Anscombe’s Quartet.\nNow, you might be asking…\n“How am I supposed to do that? You haven’t taught me how to do anything yet!”\nHere is the dirty little secret of modern education.\nThe Internet Exists.\nWhile I could use up an entire 90 minute lecture telling you how to:\n\nDownload and install R, R-Studio, and Quarto (included by default with R-Studio).\nCreate a Quarto document that will publish in the .html format\nInstall the R packages you will need\nTidy up the Anscombe’s Quartet data\nCalculate the summary statistics for each x y pair\nMake a nice little plot…\n\nI’m not going to do that.\nInstead, I want you to use the resources I point towards, or other resources that make more sense to you, to figure out how to do those things."
+    "objectID": "posts/L3-TaskAbstraction/index.html#key-components-of-task-abstraction",
+    "href": "posts/L3-TaskAbstraction/index.html#key-components-of-task-abstraction",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "KEY COMPONENTS OF TASK ABSTRACTION",
+    "text": "KEY COMPONENTS OF TASK ABSTRACTION\n{action, target} pairs\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
   },
   {
-    "objectID": "posts/A1-Lit-Prog/index.html#resources",
-    "href": "posts/A1-Lit-Prog/index.html#resources",
-    "title": "ASSIGNMENT 1 - Fun with literate programming.",
-    "section": "RESOURCES",
-    "text": "RESOURCES\nTidyverse and Anscombe’s Quartet\nHandy cheat-sheets for many different R packages\nTutorial 1 - Literate Programming\nTutorial 2 - Literate Programming and Anscombe’s Quartet\nTutorial 3 - Python"
+    "objectID": "posts/L3-TaskAbstraction/index.html#actions-and-targets",
+    "href": "posts/L3-TaskAbstraction/index.html#actions-and-targets",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "ACTIONS AND TARGETS",
+    "text": "ACTIONS AND TARGETS"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#actions---analyze",
+    "href": "posts/L3-TaskAbstraction/index.html#actions---analyze",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "ACTIONS - Analyze",
+    "text": "ACTIONS - Analyze\n\n\n\nConsume: Information has already been generated and stored as data.\n\nDiscover: new knowledge, test hypothesis, generate new hypothesis, verify\nPresent: communicate something specific and already understood\nEnjoy: casual encounters with visualization\n\nProduce: generate new material or information\n\nAnnotate: addition of graphical or text to existing visualization elements\nRecord: saves or captures visualization elements as persistent artifacts (screenshots, lists, parameter sets, annotations)\nDerive: produce new data based on existing data (aka transform)"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#actions---search",
+    "href": "posts/L3-TaskAbstraction/index.html#actions---search",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "ACTIONS - Search",
+    "text": "ACTIONS - Search\n\n\n\nLookup: Location and target both known\n\nExample: Look up humans in the Tree of Life, knowing they are mammals.\n\nLocate: Location unknown and target known\n\nExample: Look up rabbits in the Tree of Life, not knowing they are lagomorphs.\n\nBrowse: Location known and target unknown\n\nExample: Find any clades within Mammalia that have only one species.\n\nExplore: Location unknown and target unknown\n\nExample: Searching for anomalies in time series data."
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#actions---query",
+    "href": "posts/L3-TaskAbstraction/index.html#actions---query",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "ACTIONS - Query",
+    "text": "ACTIONS - Query\n\n\n\nQuery: How much of the data matters to the task?\n\nIdentify: One (specific Item, individual, cell, etc)\nCompare: Some (multiple targets)\nSummarize: All (very common, aka Overview)"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#targets---all-data",
+    "href": "posts/L3-TaskAbstraction/index.html#targets---all-data",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "TARGETS - All Data",
+    "text": "TARGETS - All Data"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#targets---attributes",
+    "href": "posts/L3-TaskAbstraction/index.html#targets---attributes",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "TARGETS - Attributes",
+    "text": "TARGETS - Attributes"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#targets---other-data",
+    "href": "posts/L3-TaskAbstraction/index.html#targets---other-data",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "TARGETS - Other Data",
+    "text": "TARGETS - Other Data"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#summary",
+    "href": "posts/L3-TaskAbstraction/index.html#summary",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "SUMMARY",
+    "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#mandatory-fun",
+    "href": "posts/L3-TaskAbstraction/index.html#mandatory-fun",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "MANDATORY FUN",
+    "text": "MANDATORY FUN\nWe will do these until everyone has done at least one example.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nCANVAS…HOME"
   },
   {
     "objectID": "posts/L1-Intro/index.html#who-am-i",
     "href": "posts/L1-Intro/index.html#who-am-i",
     "title": "LECTURE 1 - INTRO",
-    "section": "",
-    "text": "Department of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
+    "section": "WHO AM I?",
+    "text": "WHO AM I?\nBarrie Robison\nDepartment of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
   },
   {
     "objectID": "posts/L1-Intro/index.html#who-are-you",
     "href": "posts/L1-Intro/index.html#who-are-you",
     "title": "LECTURE 1 - INTRO",
     "section": "WHO ARE YOU?",
-    "text": "WHO ARE YOU?\n“…The course is designed to be”discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests…”\n\nBriefly:\n\nYour name\nYour discipline\nYour degree progress\nYour technical proficiency with data visualization"
+    "text": "WHO ARE YOU?\n“…The course is designed to be”discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests…”\nBriefly:\n\nYour name\nYour discipline\nYour degree progress\nYour technical proficiency with data visualization"
   },
   {
     "objectID": "posts/L1-Intro/index.html#course-summary",
@@ -753,7 +809,7 @@
     "href": "posts/L1-Intro/index.html#visualization",
     "title": "LECTURE 1 - INTRO",
     "section": "VISUALIZATION",
-    "text": "VISUALIZATION\nComputers provide visual representations of datasets designed to help people carry out tasks more effectively.\n\nTamara Munzner\nDepartment of Computer Science\nInfoVis Group\nUniversity of British Columbia"
+    "text": "VISUALIZATION\nComputers provide visual representations of datasets designed to help people carry out tasks more effectively.\nTamara Munzner\nDepartment of Computer Science\nInfoVis Group\nUniversity of British Columbia"
   },
   {
     "objectID": "posts/L1-Intro/index.html#the-human",
@@ -795,14 +851,14 @@
     "href": "posts/L1-Intro/index.html#anscombes-quartet",
     "title": "LECTURE 1 - INTRO",
     "section": "ANSCOMBE’S QUARTET",
-    "text": "ANSCOMBE’S QUARTET\n\n\n\n\nCode\nlibrary(ggplot2)\nlibrary(grid)\nlibrary(gridExtra)\nlibrary(datasets)\nlibrary(tidyverse)\nlibrary(dplyr)\ndatasets::anscombe\n\n\n   x1 x2 x3 x4    y1   y2    y3    y4\n1  10 10 10  8  8.04 9.14  7.46  6.58\n2   8  8  8  8  6.95 8.14  6.77  5.76\n3  13 13 13  8  7.58 8.74 12.74  7.71\n4   9  9  9  8  8.81 8.77  7.11  8.84\n5  11 11 11  8  8.33 9.26  7.81  8.47\n6  14 14 14  8  9.96 8.10  8.84  7.04\n7   6  6  6  8  7.24 6.13  6.08  5.25\n8   4  4  4 19  4.26 3.10  5.39 12.50\n9  12 12 12  8 10.84 9.13  8.15  5.56\n10  7  7  7  8  4.82 7.26  6.42  7.91\n11  5  5  5  8  5.68 4.74  5.73  6.89\n\n\n\n\nAnscombe’s Quartet\nThe four x-y pairs have identical summary statistics.\n\n\nCode\ntidy_anscombe &lt;- anscombe %&gt;%\n pivot_longer(cols = everything(),\n              names_to = c(\".value\", \"set\"),\n              names_pattern = \"(.)(.)\")\ntidy_anscombe_summary &lt;- tidy_anscombe %&gt;%\n  group_by(set) %&gt;%\n  summarise(across(.cols = everything(),\n                   .fns = lst(min,max,median,mean,sd,var),\n                   .names = \"{col}_{fn}\"))\n#&gt; `summarise()` ungrouping output (override with `.groups` argument)\n\nvars&lt;-c(\"set\", \"x_mean\", \"x_var\",  \"y_mean\", \"y_var\")\nthing&lt;- as.data.frame(tidy_anscombe_summary[vars])\nknitr::kable(thing)\n\n\n\n\n\nset\nx_mean\nx_var\ny_mean\ny_var\n\n\n\n\n1\n9\n11\n7.500909\n4.127269\n\n\n2\n9\n11\n7.500909\n4.127629\n\n\n3\n9\n11\n7.500000\n4.122620\n\n\n4\n9\n11\n7.500909\n4.123249"
+    "text": "ANSCOMBE’S QUARTET\n\n\n\n\nCode\nlibrary(ggplot2)\nlibrary(grid)\nlibrary(gridExtra)\nlibrary(datasets)\nlibrary(tidyverse)\nlibrary(dplyr)\ndatasets::anscombe\n\n\n   x1 x2 x3 x4    y1   y2    y3    y4\n1  10 10 10  8  8.04 9.14  7.46  6.58\n2   8  8  8  8  6.95 8.14  6.77  5.76\n3  13 13 13  8  7.58 8.74 12.74  7.71\n4   9  9  9  8  8.81 8.77  7.11  8.84\n5  11 11 11  8  8.33 9.26  7.81  8.47\n6  14 14 14  8  9.96 8.10  8.84  7.04\n7   6  6  6  8  7.24 6.13  6.08  5.25\n8   4  4  4 19  4.26 3.10  5.39 12.50\n9  12 12 12  8 10.84 9.13  8.15  5.56\n10  7  7  7  8  4.82 7.26  6.42  7.91\n11  5  5  5  8  5.68 4.74  5.73  6.89\n\n\n\nAnscombe’s Quartet\nThe four x-y pairs have identical summary statistics.\n\n\nCode\ntidy_anscombe &lt;- anscombe %&gt;%\n pivot_longer(cols = everything(),\n              names_to = c(\".value\", \"set\"),\n              names_pattern = \"(.)(.)\")\ntidy_anscombe_summary &lt;- tidy_anscombe %&gt;%\n  group_by(set) %&gt;%\n  summarise(across(.cols = everything(),\n                   .fns = lst(min,max,median,mean,sd,var),\n                   .names = \"{col}_{fn}\"))\n#&gt; `summarise()` ungrouping output (override with `.groups` argument)\n\nvars&lt;-c(\"set\", \"x_mean\", \"x_var\",  \"y_mean\", \"y_var\")\nthing&lt;- as.data.frame(tidy_anscombe_summary[vars])\nknitr::kable(thing)\n\n\n\n\n\nset\nx_mean\nx_var\ny_mean\ny_var\n\n\n\n\n1\n9\n11\n7.500909\n4.127269\n\n\n2\n9\n11\n7.500909\n4.127629\n\n\n3\n9\n11\n7.500000\n4.122620\n\n\n4\n9\n11\n7.500909\n4.123249"
   },
   {
     "objectID": "posts/L1-Intro/index.html#viz-matters",
     "href": "posts/L1-Intro/index.html#viz-matters",
     "title": "LECTURE 1 - INTRO",
     "section": "VIZ MATTERS",
-    "text": "VIZ MATTERS\n\n\nCode\nggplot(tidy_anscombe,\n       aes(x = x,\n           y = y)) +\n  geom_point() +\n  geom_point(data = tidy_anscombe_summary, aes(x=x_mean, y = y_mean, color = \"red\", size = 5),\n             show.legend = FALSE)+\n  facet_wrap(~set) +\n  geom_smooth(method = \"lm\", se = FALSE)\n\n\n\n\n\n\n\n\n\n\nLearn more: TIDY ANSCOMBE"
+    "text": "VIZ MATTERS\n\n\nCode\nggplot(tidy_anscombe,\n       aes(x = x,\n           y = y)) +\n  geom_point() +\n  geom_point(data = tidy_anscombe_summary, aes(x=x_mean, y = y_mean, color = \"red\", size = 5),\n             show.legend = FALSE)+\n  facet_wrap(~set) +\n  geom_smooth(method = \"lm\", se = FALSE)\n\n\n\n\nLearn more: TIDY ANSCOMBE"
   },
   {
     "objectID": "posts/L1-Intro/index.html#resource-limitations",
@@ -830,7 +886,7 @@
     "href": "posts/L1-Intro/index.html#human-limits",
     "title": "LECTURE 1 - INTRO",
     "section": "HUMAN LIMITS",
-    "text": "HUMAN LIMITS\n\nTime\nMemory\nAttention"
+    "text": "HUMAN LIMITS\n\nTime\nMemory\nAttention\n\n\n\n\n\nCANVAS…HOME"
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#vad-model",
@@ -949,7 +1005,7 @@
     "href": "posts/L4-Marks-Channels/index.html#analyze-the-marks-and-channels",
     "title": "LECTURE 4",
     "section": "ANALYZE THE MARKS AND CHANNELS",
-    "text": "ANALYZE THE MARKS AND CHANNELS\nMarks are defined by the ITEMS or OBSERVATIONS they represent.\nChannels are defined by the visually detectable properties that are mapped on to ATTRIBUTES or VARIABLES.\n\n\n\n\n\n\n\n\n\nKonrad’s Trees\n\n\n\n\n\n\n\nRobyn’s Books\n\n\n\n\n\n\n\nYaotian’s Wheat"
+    "text": "ANALYZE THE MARKS AND CHANNELS\nMarks are defined by the ITEMS or OBSERVATIONS they represent.\nChannels are defined by the visually detectable properties that are mapped on to ATTRIBUTES or VARIABLES.\n\n\n\n\n\n\nKonrad’s Trees\n\n\n\n\n\n\n\nRobyn’s Books\n\n\n\n\n\n\n\nYaotian’s Wheat"
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#redundant-encoding",
@@ -977,7 +1033,7 @@
     "href": "posts/L4-Marks-Channels/index.html#expressiveness",
     "title": "LECTURE 4",
     "section": "EXPRESSIVENESS",
-    "text": "EXPRESSIVENESS\nThe advantages and disadvantages of jitter plots. How might this relate to the idea of expressiveness?\n\n\n\nHeidi’s Cytoswine Data\n\n\nEXPRESSIVENESS: The visual encoding should express all of, and only, the information in the dataset attributes."
+    "text": "EXPRESSIVENESS\nThe advantages and disadvantages of jitter plots. How might this relate to the idea of expressiveness?\n\nHeidi’s Cytoswine DataEXPRESSIVENESS: The visual encoding should express all of, and only, the information in the dataset attributes."
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#channel-effectiveness-rankings",
@@ -1026,7 +1082,7 @@
     "href": "posts/L4-Marks-Channels/index.html#accuracy",
     "title": "LECTURE 4",
     "section": "ACCURACY?",
-    "text": "ACCURACY?\nDepends on the task. Which genre has the most game titles? Which genres are the top 4 in terms of game titles? Are there more Puzzle games than Strategy games?\n\n\n\nGeraline’s Video Games"
+    "text": "ACCURACY?\nDepends on the task. Which genre has the most game titles? Which genres are the top 4 in terms of game titles? Are there more Puzzle games than Strategy games?\n\nGeraline’s Video Games"
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#discriminability",
@@ -1040,7 +1096,7 @@
     "href": "posts/L4-Marks-Channels/index.html#discriminability-and-colors",
     "title": "LECTURE 4",
     "section": "DISCRIMINABILITY and COLORS",
-    "text": "DISCRIMINABILITY and COLORS\n\n\n\nGeraline’s Gaming Platforms"
+    "text": "DISCRIMINABILITY and COLORS\n\nGeraline’s Gaming Platforms"
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#separability-vs-integrality",
@@ -1075,7 +1131,7 @@
     "href": "posts/L4-Marks-Channels/index.html#popout-goes-the-weevil",
     "title": "LECTURE 4",
     "section": "POPOUT GOES THE WEEVIL?",
-    "text": "POPOUT GOES THE WEEVIL?\n\n\n\n\n\n\n\n\n\nLucas Weevils before chemicals\n\n\n\n\n\n\n\nLucas Weevils after chemicals"
+    "text": "POPOUT GOES THE WEEVIL?\n\n\n\n\n\n\nLucas Weevils before chemicals\n\n\n\n\n\n\n\nLucas Weevils after chemicals"
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#relative-vs-absolute-judgements",
@@ -1089,7 +1145,7 @@
     "href": "posts/L4-Marks-Channels/index.html#relative-judgements",
     "title": "LECTURE 4",
     "section": "RELATIVE JUDGEMENTS",
-    "text": "RELATIVE JUDGEMENTS\n\n\n\nHeidi’s Microbiomes"
+    "text": "RELATIVE JUDGEMENTS\n\nHeidi’s Microbiomes"
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#relative-luminance-judgements",
@@ -1103,7 +1159,7 @@
     "href": "posts/L4-Marks-Channels/index.html#relative-color-judgements",
     "title": "LECTURE 4",
     "section": "RELATIVE COLOR JUDGEMENTS",
-    "text": "RELATIVE COLOR JUDGEMENTS\nOur visual system evolved to provide color constancy so that the same surface is identifiable across a broad set of illumination conditions, even though a physical light meter would yield very different readings. While the visual system works very well in natural environments, many of its mechanisms work against simple approaches to visually encoding information with color.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5.15 shows two colorful cubes. In Figure 5.15(a) corresponding squares both appear to be red. In Figure 5.15(b), masks show that the tile color in the image apparently illuminated by a yellowish light source is actually orange, and for the bluish light the tiles are actually purple."
+    "text": "RELATIVE COLOR JUDGEMENTS\nOur visual system evolved to provide color constancy so that the same surface is identifiable across a broad set of illumination conditions, even though a physical light meter would yield very different readings. While the visual system works very well in natural environments, many of its mechanisms work against simple approaches to visually encoding information with color.\n\n\n\n\n\n\n\n\n\n\n\nFigure 5.15 shows two colorful cubes. In Figure 5.15(a) corresponding squares both appear to be red. In Figure 5.15(b), masks show that the tile color in the image apparently illuminated by a yellowish light source is actually orange, and for the bluish light the tiles are actually purple.\n\n\n\n\nCANVAS…HOME"
   },
   {
     "objectID": "posts/T4-BarriesData/index.html",
@@ -1158,8 +1214,8 @@
     "objectID": "posts/L2-Data-Abstraction/index.html#last-lecture",
     "href": "posts/L2-Data-Abstraction/index.html#last-lecture",
     "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "",
-    "text": "Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+    "section": "LAST LECTURE",
+    "text": "LAST LECTURE\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#what",
@@ -1194,35 +1250,35 @@
     "href": "posts/L2-Data-Abstraction/index.html#data-semantics",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points far from each other in 3D space?\n\n\nVIZ"
+    "text": "DATA SEMANTICS\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points far from each other in 3D space?\n\n\nVIZ"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-1",
     "href": "posts/L2-Data-Abstraction/index.html#data-semantics-1",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?\n\n\nVIZ"
+    "text": "DATA SEMANTICS\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?\n\n\nVIZ"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-2",
     "href": "posts/L2-Data-Abstraction/index.html#data-semantics-2",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nFood shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month\n\n\nVIZ"
+    "text": "DATA SEMANTICS\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nFood shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month\n\n\nVIZ"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-3",
     "href": "posts/L2-Data-Abstraction/index.html#data-semantics-3",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nBasil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service\n\n\nVIZ"
+    "text": "DATA SEMANTICS\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nBasil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service\n\n\nVIZ"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-4",
     "href": "posts/L2-Data-Abstraction/index.html#data-semantics-4",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nLab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food\n\n\nVIZ"
+    "text": "DATA SEMANTICS\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nLab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food\n\n\nVIZ"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#semantics",
@@ -1236,7 +1292,7 @@
     "href": "posts/L2-Data-Abstraction/index.html#semantics-for-data",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "SEMANTICS FOR DATA",
-    "text": "SEMANTICS FOR DATA\n\n\n\n\n\n\nSemantics\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”\n\n\n\n\nData Table\n\n\n\n\nITEM: Person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
+    "text": "SEMANTICS FOR DATA\n\n\n\nSemantics\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”\n\n\n\n\nData Table\n\n\n\n\nITEM: Person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#other-data-types",
@@ -1257,7 +1313,7 @@
     "href": "posts/L2-Data-Abstraction/index.html#dataset-types-tables",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATASET TYPES: TABLES",
-    "text": "DATASET TYPES: TABLES\n\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA UNIQUE key can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
+    "text": "DATASET TYPES: TABLES\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA UNIQUE key can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#flat-table-example",
@@ -1299,7 +1355,7 @@
     "href": "posts/L2-Data-Abstraction/index.html#spatial-fields-2",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "SPATIAL FIELDS 2",
-    "text": "SPATIAL FIELDS 2\n\n\n\n\n\n\n\nAttribute values associated w/ cells.\nCell contains value from continuous domain\n\n(eg temperature, pressure, wind velocity)\n\nMeasured or simulated.\nMajor concerns\n\nsampling:\n\nwhere attributes are measured\n\ninterpolation:\n\nhow to model attributes elsewhere\n\ngrid types"
+    "text": "SPATIAL FIELDS 2\n\n\n\n\nAttribute values associated w/ cells.\nCell contains value from continuous domain\n\n(eg temperature, pressure, wind velocity)\n\nMeasured or simulated.\nMajor concerns\n\nsampling:\n\nwhere attributes are measured\n\ninterpolation:\n\nhow to model attributes elsewhere\n\ngrid types"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#spatial-fields-3",
@@ -1404,7 +1460,7 @@
     "href": "posts/L2-Data-Abstraction/index.html#summary",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "SUMMARY",
-    "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+    "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\n\n\n\n\nCANVAS…HOME"
   },
   {
     "objectID": "posts/E1-GrantExpenditures/Banner.html",
@@ -1442,109 +1498,144 @@
     "text": "GENERAL UNIVERSITY REQUIREMENTS\nIn addition to the requirements specified in this document, the certificate would be subject to all UI Policies regarding Graduate Certificates."
   },
   {
-    "objectID": "posts/L3-TaskAbstraction/index.html#last-lecture",
-    "href": "posts/L3-TaskAbstraction/index.html#last-lecture",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "LAST LECTURE",
-    "text": "LAST LECTURE\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#task-abstraction",
-    "href": "posts/L3-TaskAbstraction/index.html#task-abstraction",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "TASK ABSTRACTION",
-    "text": "TASK ABSTRACTION\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#from-domain-to-abstraction",
-    "href": "posts/L3-TaskAbstraction/index.html#from-domain-to-abstraction",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "FROM DOMAIN TO ABSTRACTION",
-    "text": "FROM DOMAIN TO ABSTRACTION"
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#key-components-of-task-abstraction",
-    "href": "posts/L3-TaskAbstraction/index.html#key-components-of-task-abstraction",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "KEY COMPONENTS OF TASK ABSTRACTION",
-    "text": "KEY COMPONENTS OF TASK ABSTRACTION\n{action, target} pairs\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#actions-and-targets",
-    "href": "posts/L3-TaskAbstraction/index.html#actions-and-targets",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "ACTIONS AND TARGETS",
-    "text": "ACTIONS AND TARGETS"
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#actions---analyze",
-    "href": "posts/L3-TaskAbstraction/index.html#actions---analyze",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "ACTIONS - Analyze",
-    "text": "ACTIONS - Analyze\n\n\n\nConsume: Information has already been generated and stored as data.\n\nDiscover: new knowledge, test hypothesis, generate new hypothesis, verify\nPresent: communicate something specific and already understood\nEnjoy: casual encounters with visualization\n\nProduce: generate new material or information\n\nAnnotate: addition of graphical or text to existing visualization elements\nRecord: saves or captures visualization elements as persistent artifacts (screenshots, lists, parameter sets, annotations)\nDerive: produce new data based on existing data (aka transform)"
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#actions---search",
-    "href": "posts/L3-TaskAbstraction/index.html#actions---search",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "ACTIONS - Search",
-    "text": "ACTIONS - Search\n\n\n\nLookup: Location and target both known\n\nExample: Look up humans in the Tree of Life, knowing they are mammals.\n\nLocate: Location unknown and target known\n\nExample: Look up rabbits in the Tree of Life, not knowing they are lagomorphs.\n\nBrowse: Location known and target unknown\n\nExample: Find any clades within Mammalia that have only one species.\n\nExplore: Location unknown and target unknown\n\nExample: Searching for anomalies in time series data."
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#actions---query",
-    "href": "posts/L3-TaskAbstraction/index.html#actions---query",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "ACTIONS - Query",
-    "text": "ACTIONS - Query\n\n\n\nQuery: How much of the data matters to the task?\n\nIdentify: One (specific Item, individual, cell, etc)\nCompare: Some (multiple targets)\nSummarize: All (very common, aka Overview)"
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#targets---all-data",
-    "href": "posts/L3-TaskAbstraction/index.html#targets---all-data",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "TARGETS - All Data",
-    "text": "TARGETS - All Data"
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#targets---attributes",
-    "href": "posts/L3-TaskAbstraction/index.html#targets---attributes",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "TARGETS - Attributes",
-    "text": "TARGETS - Attributes"
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#targets---other-data",
-    "href": "posts/L3-TaskAbstraction/index.html#targets---other-data",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "TARGETS - Other Data",
-    "text": "TARGETS - Other Data"
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#summary",
-    "href": "posts/L3-TaskAbstraction/index.html#summary",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "SUMMARY",
-    "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#mandatory-fun",
-    "href": "posts/L3-TaskAbstraction/index.html#mandatory-fun",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "MANDATORY FUN",
-    "text": "MANDATORY FUN\nWe will do these until everyone has done at least one example.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nCANVAS…HOME"
-  },
-  {
-    "objectID": "posts/T1-Lit-Prog/index.html",
-    "href": "posts/T1-Lit-Prog/index.html",
-    "title": "TUTORIAL 1 - Literate Programming",
+    "objectID": "posts/E2-ExtractAI/AIExtract.html",
+    "href": "posts/E2-ExtractAI/AIExtract.html",
+    "title": "AI Extract",
     "section": "",
-    "text": "Learning new tools is hard. Plowing though the tomes of the Data Science Mythos is hard. Perhaps this tutorial will guide you through the mind shattering truths of… LITERATE PROGRAMMING."
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nTruth &lt;- read.csv(\"NSF_Truth.csv\")\nExperiment &lt;- read.csv(\"vision_repead_run.csv\")\n\n\nsmallexp &lt;- Experiment %&gt;%\n  filter(VERAS_proposal_number == \"V200449\")\n  \nsmallgrade &lt;- smallexp"
   },
   {
-    "objectID": "posts/T1-Lit-Prog/index.html#intro-to-quarto",
-    "href": "posts/T1-Lit-Prog/index.html#intro-to-quarto",
-    "title": "TUTORIAL 1 - Literate Programming",
+    "objectID": "posts/A1-Lit-Prog/index.html",
+    "href": "posts/A1-Lit-Prog/index.html",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
     "section": "",
-    "text": "Learning new tools is hard. Plowing though the tomes of the Data Science Mythos is hard. Perhaps this tutorial will guide you through the mind shattering truths of… LITERATE PROGRAMMING."
+    "text": "The idea of Literate Programming is that source code that is executed as part of the program’s purpose is interspersed with documentation that describes the program’s logic. The concept of literate programming was first articulated by David Knuth in 1984. You know… back when music was good? Modern Data Science leans pretty heavily on literate programming, and to be honest, there aren’t very many good arguments as to why you WOULDN’T want to implement this approach in your own work. Bearing this in mind, we will adopt this framework for most of the activities, exercises, and assignments in this course. All of us will benefit by practicing these skills."
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#summary",
+    "href": "posts/A1-Lit-Prog/index.html#summary",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "",
+    "text": "The idea of Literate Programming is that source code that is executed as part of the program’s purpose is interspersed with documentation that describes the program’s logic. The concept of literate programming was first articulated by David Knuth in 1984. You know… back when music was good? Modern Data Science leans pretty heavily on literate programming, and to be honest, there aren’t very many good arguments as to why you WOULDN’T want to implement this approach in your own work. Bearing this in mind, we will adopt this framework for most of the activities, exercises, and assignments in this course. All of us will benefit by practicing these skills."
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#literate-programming-publishing-systems",
+    "href": "posts/A1-Lit-Prog/index.html#literate-programming-publishing-systems",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "LITERATE PROGRAMMING PUBLISHING SYSTEMS",
+    "text": "LITERATE PROGRAMMING PUBLISHING SYSTEMS\nI’m trying to keep this course as technology agnostic as I can. The idea is that you should be practicing and building competencies in the languages and algorithms that are most useful to you. Who am I to tell you to use R instead of Python? If you have skills in a particular language I encourage you to keep using that during this course. That being said, I am going to work the examples using R and R Studio, and I will (mostly) use Quarto as the literate programming framework.\nIf all of this is new to you, no problem. Just follow along in R and Quarto and start your skill building journey with those languages.\nIf you are a Python person, great! Quarto can accommodate that language as well. If you have another preference for literate programming, such as sticking with R Markdown until the Quarto bugs are fixed, that is great. Find the framework and tools that work for you, and practice, practice, practice!\n\nQuarto\nAn open source publishing system that allows you to create websites, documents, blogs, books, publications, presentations, and more while using R, Python, Julia, or Observable. Quarto is intended to be the more functional successor of R Markdown. I intend to use Quarto for most of my work in this course.\n\n\nR Markdown\nAnother publishing system for creating all the things … websites, slides, manuscripts, dashboards, etc. While most people (including me!) instinctively think of R and Python within R Markdown, the list of supported language engines is pretty extensive.\n\nnames(knitr::knit_engines$get())\n\n [1] \"awk\"       \"bash\"      \"coffee\"    \"gawk\"      \"groovy\"    \"haskell\"  \n [7] \"lein\"      \"mysql\"     \"node\"      \"octave\"    \"perl\"      \"php\"      \n[13] \"psql\"      \"Rscript\"   \"ruby\"      \"sas\"       \"scala\"     \"sed\"      \n[19] \"sh\"        \"stata\"     \"zsh\"       \"asis\"      \"asy\"       \"block\"    \n[25] \"block2\"    \"bslib\"     \"c\"         \"cat\"       \"cc\"        \"comment\"  \n[31] \"css\"       \"ditaa\"     \"dot\"       \"embed\"     \"eviews\"    \"exec\"     \n[37] \"fortran\"   \"fortran95\" \"go\"        \"highlight\" \"js\"        \"julia\"    \n[43] \"python\"    \"R\"         \"Rcpp\"      \"sass\"      \"scss\"      \"sql\"      \n[49] \"stan\"      \"targets\"   \"tikz\"      \"verbatim\"  \"ojs\"       \"mermaid\""
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#languages-and-toolsets",
+    "href": "posts/A1-Lit-Prog/index.html#languages-and-toolsets",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "LANGUAGES AND TOOLSETS",
+    "text": "LANGUAGES AND TOOLSETS\nThere are quite a few, but the five that seemed to keep coming up as I prepped this course are:\n\nR\nA very powerful open source framework for statistical computing and graphics. R has a lot of base functionality, and its capabilities are increased by 100 fold with packages created by R users. Packages are the core units of R code. I’m going to use R for the vast majority of demonstrations in this course.\n\n\nPython\nPython is an open source general purpose programming language. It wasn’t developed just for statistical computing or data science, and people use this language for tons of different applications. There is no denying it has become a very powerful language for data science and data visualization.\n\n\nTableau\nTableau is proprietary software that is very powerful for creating beautiful and functional data visualizations. It can integrate with all sorts of data sources and is used a lot for analytics, especially in the business world. The downsides (that occur to me at least) are that it costs money, it is not open source, and is more of a one-trick-pony than the programming languages on this list.\n\n\nJavascript\nJavascript has been around for about 25 years, and is (I think) the world’s most popular programming language. Along with HTML and CSS, Javascript drives pretty much the entire internet. I mention Javascript here because it has the D3 library, which can create super cool interactive data visualizaitons. In my experience, the learning curve with Javascript and D3 was pretty steep. I bought a book about it once, but just haven’t been able to allocate the amount of time necessary to really start using it. Check out the gallery of examples. Amazing!\n\n\nObservable / D3\nObservable is a set of extensions to Javascript that features something called reactive runtime. This means that the code blocks are executed and compiled as they are written, and changes are implemented instantaneously. Observable is pretty great for data exploration, and is well supported by Quarto. In addition, you can use the Observable JS libraries in Quarto to access D3. We’ll use some of these tools in this course, especially when we start considering interactivity."
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#assignment",
+    "href": "posts/A1-Lit-Prog/index.html#assignment",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "ASSIGNMENT",
+    "text": "ASSIGNMENT\nAfter that long introduction, I suppose you are wondering what I want you to actually DO today.\nWell, I want you to set up your publishing system and preferred language on your computer. Then I want you to recreate the classic figure from Anscombe’s Quartet.\nNow, you might be asking…\n“How am I supposed to do that? You haven’t taught me how to do anything yet!”\nHere is the dirty little secret of modern education.\nThe Internet Exists.\nWhile I could use up an entire 90 minute lecture telling you how to:\n\nDownload and install R, R-Studio, and Quarto (included by default with R-Studio).\nCreate a Quarto document that will publish in the .html format\nInstall the R packages you will need\nTidy up the Anscombe’s Quartet data\nCalculate the summary statistics for each x y pair\nMake a nice little plot…\n\nI’m not going to do that.\nInstead, I want you to use the resources I point towards, or other resources that make more sense to you, to figure out how to do those things."
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#resources",
+    "href": "posts/A1-Lit-Prog/index.html#resources",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "RESOURCES",
+    "text": "RESOURCES\nTidyverse and Anscombe’s Quartet\nHandy cheat-sheets for many different R packages\nTutorial 1 - Literate Programming\nTutorial 2 - Literate Programming and Anscombe’s Quartet\nTutorial 3 - Python"
+  },
+  {
+    "objectID": "posts/Examplepost/Example.html",
+    "href": "posts/Examplepost/Example.html",
+    "title": "Examples are fun",
+    "section": "",
+    "text": "I LIKE HOCKEY AND CANDY.\n\ndata &lt;- tribble(\n  ~from, ~to, ~value,\n  \"Martonick\", \"NCURA Workshops\", 100,\n  \"Martoncik\", \"Project Reporting\", 300,\n  \"Sheneman\", \"Open Source Data Sets\", 200,\n  \"Sheneman\", \"AI Tools\", 100,\n  \"Pal\", \"Open Source Data Sets\", 100,\n  \"Pal\", \"Common Data Model\", 100,\n  \"Martoncik\", \"Community of Practice\", 300,\n  \"Robison\", \"Project Reporting\", 200,\n  \"Brunsfeld\", \"AI Tools\", 100,\n  \"Trainer\", \"Open Source Data Sets\", 100,\n  \"Trainer\", \"NCURA Workshops\", 100,\n  \"Trainer\", \"Online Training Modules\", 150,\n  \"Robison\", \"Online Training Modules\", 50\n)\n\n\n# Using ggplot2 and ggalluvial\nggplot(data = data,\n       aes(axis1 = from, axis2 = to, y = value)) +\n  geom_alluvium(aes(fill = to)) + \n  geom_stratum() + \n  geom_text(stat = \"stratum\", aes(label = after_stat(stratum))) +\n  theme_minimal() +\n  ggtitle(\"Sankey Diagram with tidyverse and ggalluvial\")\n\n\n\n\n\n\n\ndf &lt;- mtcars %&gt;%\n  make_long(cyl, vs, am, gear, carb)\n\nggplot(df, aes(x = x, \n               next_x = next_x, \n               node = node, \n               next_node = next_node,\n               fill = factor(node))) +\n  geom_sankey()"
+  },
+  {
+    "objectID": "posts/A8-NetworkData/index.html",
+    "href": "posts/A8-NetworkData/index.html",
+    "title": "Practice with Network Data",
+    "section": "",
+    "text": "In this assignment, we’ll consider some of the tools and techniques for visualizing network data. Network data is characterized by two unique items that are not found in tabular or spatial data - Nodes and Links. In addition, there is a sub-type of network data that we will consider - Hierarchical or Tree data. Let’s practice a few visualizations to get a feel for how these things work!"
+  },
+  {
+    "objectID": "posts/A8-NetworkData/index.html#igraph",
+    "href": "posts/A8-NetworkData/index.html#igraph",
+    "title": "Practice with Network Data",
+    "section": "IGRAPH",
+    "text": "IGRAPH\nLet’s start with igraph, which is an open source toolset for network analysis. The great thing about igraph is that you can use these tools in R, Python, Mathematica, and C++. It is very flexible and very powerful.\n\nigraph in R\nFirst up, we’ll install R/igraph and load the library (note that I’ve commented out the package installation because I’ve already installed igraph on my machine):\n\n\nCode\n# install.packages(\"igraph\")\nlibrary(igraph)\n\n\n\nAttaching package: 'igraph'\n\n\nThe following objects are masked from 'package:stats':\n\n    decompose, spectrum\n\n\nThe following object is masked from 'package:base':\n\n    union\n\n\nNow I’m going to walk you through a modified version of the igraph tutorial, which you can find here"
+  },
+  {
+    "objectID": "posts/A8-NetworkData/index.html#creating-a-graph",
+    "href": "posts/A8-NetworkData/index.html#creating-a-graph",
+    "title": "Practice with Network Data",
+    "section": "Creating a graph",
+    "text": "Creating a graph\nigraph offers many ways to create a graph. The simplest one is the function make_empty_graph:\n\n\nCode\ng &lt;- make_empty_graph()\n\n\nThe most common way to create a graph is make_graph, which constructs a network based on specified edges. For example, to make a graph with 10 nodes (numbered 1 to 10) and two edges connecting nodes 1-2 and 1-5:\n\n\nCode\ng &lt;- make_graph(edges = c(1,2, 1,5), n=10, directed = FALSE)\n\n\nWe can print the graph to get a summary of its nodes and edges:\n\n\nCode\ng\n\n\nIGRAPH b2f0e0a U--- 10 2 -- \n+ edges from b2f0e0a:\n[1] 1--2 1--5\n\n\nThis means: Undirected Named graph with 10 vertices and 2 edges, with the exact edges listed out. If the graph has a [name] attribute, it is printed as well.\n\n\n\n\n\n\nNote\n\n\n\nsummary does not list the edges, which is convenient for large graphs with millions of edges:\n\n\n\n\nCode\nsummary(g)\n\n\nIGRAPH b2f0e0a U--- 10 2 -- \n\n\nThe same function make_graph can create some notable graphs by just specifying their name. For example you can create the graph that represents the social network of Zachary’s karate club, that shows the friendship between 34 members of a karate club at a US university in the 1970s:\n\n\nCode\ng &lt;- make_graph('Zachary')\n\n\nTo visualize a graph you can use plot:\n\n\nCode\nplot(g)"
+  },
+  {
+    "objectID": "posts/A8-NetworkData/index.html#vertex-and-edge-ids",
+    "href": "posts/A8-NetworkData/index.html#vertex-and-edge-ids",
+    "title": "Practice with Network Data",
+    "section": "Vertex and edge IDs",
+    "text": "Vertex and edge IDs\nVertices and edges have numerical vertex IDs in igraph. Vertex IDs are always consecutive and they start with 1. For a graph with n vertices the vertex IDs are always between 1 and n. If some operation changes the number of vertices in the graphs, e.g. a subgraph is created via induced_subgraph, then the vertices are renumbered to satisfy this criterion.\nThe same is true for the edges as well: edge IDs are always between 1 and m, the total number of edges in the graph.\nIn addition to IDs, vertices and edges can be assigned a name and other attributes. That makes it easier to track them whenever the graph is altered."
+  },
+  {
+    "objectID": "posts/A8-NetworkData/index.html#addingdeleting-vertices-and-edges",
+    "href": "posts/A8-NetworkData/index.html#addingdeleting-vertices-and-edges",
+    "title": "Practice with Network Data",
+    "section": "Adding/deleting vertices and edges",
+    "text": "Adding/deleting vertices and edges\nLet’s continue working with the Karate club graph. To add one or more vertices to an existing graph, use add_vertices:\n\n\nCode\ng &lt;- add_vertices(g, 3)\n\n\nSimilarly, to add edges you can use add_edges:\n\n\nCode\ng &lt;- add_edges(g, edges = c(1,35, 1,36, 34,37))\n\n\nEdges are added by specifying the source and target vertex IDs for each edge. This call added three edges, one connecting vertices 1 and 35, one connecting vertices 1 and 36, and one connecting vertices 34 and 37.\nIn addition to the add_vertices and add_edges functions, the plus operator can be used to add vertices or edges to graph. The actual operation that is performed depends on the type of the right hand side argument:\n\n\nCode\ng &lt;- g + edges(c(1,35, 1,36, 34,37))\n\n\nYou can add a single vertex/edge at a time using add_vertex and add_edge.\nLet us add some more vertices and edges to our graph. In igraph we can use the magrittr package, which provides a mechanism for chaining commands with the operator %\\&gt;%:\n\n\nCode\ng &lt;- g %&gt;% add_edges(edges=c(1,34)) %&gt;% add_vertices(3) %&gt;%\n     add_edges(edges=c(38,39, 39,40, 40,38, 40,37))\ng\n\n\nIGRAPH 5055317 U--- 40 86 -- Zachary\n+ attr: name (g/c)\n+ edges from 5055317:\n [1]  1-- 2  1-- 3  1-- 4  1-- 5  1-- 6  1-- 7  1-- 8  1-- 9  1--11  1--12\n[11]  1--13  1--14  1--18  1--20  1--22  1--32  2-- 3  2-- 4  2-- 8  2--14\n[21]  2--18  2--20  2--22  2--31  3-- 4  3-- 8  3--28  3--29  3--33  3--10\n[31]  3-- 9  3--14  4-- 8  4--13  4--14  5-- 7  5--11  6-- 7  6--11  6--17\n[41]  7--17  9--31  9--33  9--34 10--34 14--34 15--33 15--34 16--33 16--34\n[51] 19--33 19--34 20--34 21--33 21--34 23--33 23--34 24--26 24--28 24--33\n[61] 24--34 24--30 25--26 25--28 25--32 26--32 27--30 27--34 28--34 29--32\n[71] 29--34 30--33 30--34 31--33 31--34 32--33 32--34 33--34  1--35  1--36\n+ ... omitted several edges\n\n\nCode\nplot(g)\n\n\n\n\n\n\n\n\n\nWe now have an undirected graph with 40 vertices and 86 edges. Vertex and edge IDs are always contiguous, so if you delete a vertex all subsequent vertices will be renumbered. When a vertex is renumbered, edges are not renumbered, but their source and target vertices will be. Use delete_vertices and delete_edges to perform these operations. For instance, to delete the edge connecting vertices 1-34, get its ID and then delete it:\n\n\nCode\nget.edge.ids(g, c(1,34))\n\n\n[1] 82\n\n\n\n\nCode\ng &lt;- delete_edges(g, 82)\n\n\nAs an example, to create a broken ring:\n\n\nCode\ng &lt;- make_ring(10) %&gt;% delete_edges(\"10|1\")\nplot(g)\n\n\n\n\n\n\n\n\n\nThe example above shows that you can also refer to edges with strings containing the IDs of the source and target vertices, connected by a pipe symbol |. \"10|1\" in the above example means the edge that connects vertex 10 to vertex 1. Of course you can also use the edge IDs directly, or retrieve them with the get.edge.ids function:\n\n\nCode\ng &lt;- make_ring(5)\ng &lt;- delete_edges(g, get.edge.ids(g, c(1,5, 4,5)))\nplot(g)"
+  },
+  {
+    "objectID": "posts/A8-NetworkData/index.html#constructing-graphs",
+    "href": "posts/A8-NetworkData/index.html#constructing-graphs",
+    "title": "Practice with Network Data",
+    "section": "Constructing graphs",
+    "text": "Constructing graphs\nIn addition to make_empty_graph, make_graph, and make_graph_from_literal, igraph includes many other function to construct a graph. Some are deterministic, i.e. they produce the same graph each single time, e.g. make_tree:\n\n\nCode\ngraph1 &lt;- make_tree(127, 2, mode = \"undirected\")\nsummary(graph1)\n\n\nIGRAPH d598639 U--- 127 126 -- Tree\n+ attr: name (g/c), children (g/n), mode (g/c)\n\n\nCode\nplot(graph1)\n\n\n\n\n\n\n\n\n\nThis generates a regular tree graph with 127 vertices, each vertex having two children. No matter how many times you call make_tree, the generated graph will always be the same if you use the same parameters:\n\n\nCode\ngraph2 &lt;- make_tree(127, 2, mode = \"undirected\")\n\n\n\n\nCode\nidentical_graphs(graph1,graph2)\n\n\n[1] TRUE\n\n\nOther functions generate graphs stochastically, i.e. they produce a different graph each time. For instance sample_grg:\n\n\nCode\ngraph1 &lt;- sample_grg(100, 0.2)\nsummary(graph1)\n\n\nIGRAPH 819a17c U--- 100 486 -- Geometric random graph\n+ attr: name (g/c), radius (g/n), torus (g/l)\n\n\nCode\nplot(graph1)\n\n\n\n\n\n\n\n\n\nThis generates a geometric random graph: n points are chosen randomly and uniformly inside the unit square and pairs of points closer to each other than a predefined distance d are connected by an edge. If you generate GRGs with the same parameters, they will be different:\n\n\nCode\ngraph2 &lt;- sample_grg(100, 0.2)\nidentical_graphs(graph1, graph2)\n\n\n[1] FALSE\n\n\nCode\nplot(graph2)\n\n\n\n\n\n\n\n\n\nA slightly looser way to check if the graphs are equivalent is via isomorphic. Two graphs are said to be isomorphic if they have the same number of components (vertices and edges) and maintain a one-to-one correspondence between vertices and edges, i.e., they are connected in the same way.\n\n\nCode\nisomorphic(graph1, graph2)\n\n\n[1] FALSE\n\n\nChecking for isomorphism can take a while for large graphs (in this case, the answer can quickly be given by checking the degree sequence of the two graphs). identical_graph is a stricter criterion than isomorphic: the two graphs must have the same list of vertices and edges, in exactly the same order, with same directedness, and the two graphs must also have identical graph, vertex and edge attributes."
+  },
+  {
+    "objectID": "posts/A8-NetworkData/index.html#setting-and-retrieving-attributes",
+    "href": "posts/A8-NetworkData/index.html#setting-and-retrieving-attributes",
+    "title": "Practice with Network Data",
+    "section": "Setting and retrieving attributes",
+    "text": "Setting and retrieving attributes\nIn addition to IDs, vertex and edges can have attributes such as a name, coordinates for plotting, metadata, and weights. The graph itself can have such attributes too (e.g. a name, which will show in summary). In a sense, every graph, vertex and edge can be used as an R namespace to store and retrieve these attributes.\nTo demonstrate the use of attributes, let us create a simple social network:\n\n\nCode\ng &lt;- make_graph(~ Alice-Bob:Claire:Frank, Claire-Alice:Dennis:Frank:Esther,\n                George-Dennis:Frank, Dennis-Esther)\n\n\nEach vertex represents a person, so we want to store ages, genders and types of connection between two people (is_formal refers to whether a connection between one person or another is formal or informal, i.e. colleagues or friends). The \\$ operator is a shortcut to get and set graph attributes. It is shorter and just as readable as graph_attr and set_graph_attr.\n\n\nCode\nV(g)$age &lt;- c(25, 31, 18, 23, 47, 22, 50) \nV(g)$gender &lt;- c(\"f\", \"m\", \"f\", \"m\", \"m\", \"f\", \"m\")\nE(g)$is_formal &lt;- c(FALSE, FALSE, TRUE, TRUE, TRUE, FALSE, TRUE, FALSE, FALSE)\nsummary(g)\n\n\nIGRAPH 2a77cb1 UN-- 7 9 -- \n+ attr: name (v/c), age (v/n), gender (v/c), is_formal (e/l)\n\n\nV and E are the standard way to obtain a sequence of all vertices and edges, respectively. This assigns an attribute to all vertices/edges at once. Another way to generate our social network is with the use of set_vertex_attr and set_edge_attr and the operator %\\&gt;%:\n\n\nCode\ng &lt;- make_graph(~ Alice-Bob:Claire:Frank, Claire-Alice:Dennis:Frank:Esther,\n                George-Dennis:Frank, Dennis-Esther) %&gt;%\n  set_vertex_attr(\"age\", value = c(25, 31, 18, 23, 47, 22, 50)) %&gt;%\n  set_vertex_attr(\"gender\", value = c(\"f\", \"m\", \"f\", \"m\", \"m\", \"f\", \"m\")) %&gt;%\n  set_edge_attr(\"is_formal\", value = c(FALSE, FALSE, TRUE, TRUE, TRUE, FALSE, TRUE, FALSE, FALSE))\nsummary(g)\n\n\nTo assign or modify an attribute for a single vertex/edge:\n\n\nCode\nE(g)$is_formal\n\n\n[1] FALSE FALSE  TRUE  TRUE  TRUE FALSE  TRUE FALSE FALSE\n\n\nCode\nE(g)$is_formal[1] &lt;- TRUE\nE(g)$is_formal\n\n\n[1]  TRUE FALSE  TRUE  TRUE  TRUE FALSE  TRUE FALSE FALSE\n\n\nAttribute values can be set to any R object, but note that storing the graph in some file formats might result in the loss of complex attribute values. Vertices, edges and the graph itself can all be used to set attributes, e.g. to add a date to the graph:\n\n\nCode\ng$date &lt;- c(\"2022-02-11\")\ngraph_attr(g, \"date\")\n\n\n[1] \"2022-02-11\"\n\n\nTo retrieve attributes, you can also use graph_attr, vertex_attr, and edge_attr. To find the ID of a vertex you can use the function match:\n\n\nCode\nmatch(c(\"George\"), V(g)$name)\n\n\n[1] 7\n\n\nTo assign attributes to a subset of vertices or edges, you can use:\n\n\nCode\nV(g)$name[1:3] &lt;- c(\"Alejandra\", \"Bruno\", \"Carmina\")\nV(g)\n\n\n+ 7/7 vertices, named, from 2a77cb1:\n[1] Alejandra Bruno     Carmina   Frank     Dennis    Esther    George   \n\n\nTo delete attributes:\n\n\nCode\ng &lt;- delete_vertex_attr(g, \"gender\")\nV(g)$gender\n\n\nNULL\n\n\nIf you want to save a graph in R with all the attributes use the R’s standard function dput function and retrieve it later with dget. You can also just save the R workspace and restore it later."
+  },
+  {
+    "objectID": "posts/A8-NetworkData/index.html#structural-properties-of-graphs",
+    "href": "posts/A8-NetworkData/index.html#structural-properties-of-graphs",
+    "title": "Practice with Network Data",
+    "section": "Structural properties of graphs",
+    "text": "Structural properties of graphs\nigraph provides a large set of functions to calculate various structural properties of graphs. It is beyond the scope of this tutorial to document all of them, hence this section will only introduce a few of them for illustrative purposes. We will work on the small social network constructed in the previous section.\nPerhaps the simplest property one can think of is the degree. The degree of a vertex equals the number of edges adjacent to it. In case of directed networks, we can also define in-degree (the number of edges pointing towards the vertex) and out-degree (the number of edges originating from the vertex). igraph is able to calculate all of them using a simple syntax:\n\n\nCode\ndegree(g)\n\n\nAlejandra     Bruno   Carmina     Frank    Dennis    Esther    George \n        3         1         4         3         3         2         2 \n\n\nIf the graph was directed, we would have been able to calculate the in- and out-degrees separately using degree(mode=\"in\") and degree(mode=\"out\"). You can also pass a single vertex ID or a list of vertex IDs to degree if you want to calculate the degrees for only a subset of vertices:\n\n\nCode\ndegree(g, 7)\n\n\nGeorge \n     2 \n\n\n\n\nCode\ndegree(g, v=c(3,4,5))\n\n\nCarmina   Frank  Dennis \n      4       3       3 \n\n\nMost functions that accept vertex IDs also accept vertex names (i.e. the values of the name vertex attribute) as long as the names are unique:\n\n\nCode\ndegree(g, v=c(\"Carmina\", \"Frank\", \"Dennis\"))\n\n\nCarmina   Frank  Dennis \n      4       3       3 \n\n\nIt also works for single vertices:\n\n\nCode\ndegree(g, \"Bruno\")\n\n\nBruno \n    1 \n\n\nA similar syntax is used for most of the structural properties igraph can calculate. For vertex properties, the functions accept a vertex ID, a vertex name, or a list of vertex IDs or names (and if they are omitted, the default is the set of all vertices). For edge properties, the functions accept a single edge ID or a list of edge IDs.\n\nNOTE: For some measures, it does not make sense to calculate them only for a few vertices or edges instead of the whole graph, as it would take the same time anyway. In this case, the functions won’t accept vertex or edge IDs, but you can still restrict the resulting list later using standard operations. One such example is eigenvector centrality (evcent()).\n\nBesides degree, igraph includes built-in routines to calculate many other centrality properties, including vertex and edge betweenness (edge_betweenness) or Google’s PageRank (page_rank) just to name a few. Here we just illustrate edge betweenness:\n\n\nCode\nedge_betweenness(g)\n\n\n[1] 6 6 4 3 4 4 4 2 3\n\n\nNow we can also figure out which connections have the highest betweenness centrality:\n\n\nCode\nebs &lt;- edge_betweenness(g)\nas_edgelist(g)[ebs == max(ebs), ]\n\n\n     [,1]        [,2]     \n[1,] \"Alejandra\" \"Bruno\"  \n[2,] \"Alejandra\" \"Carmina\""
+  },
+  {
+    "objectID": "posts/A8-NetworkData/index.html#querying-vertices-and-edges-based-on-attributes",
+    "href": "posts/A8-NetworkData/index.html#querying-vertices-and-edges-based-on-attributes",
+    "title": "Practice with Network Data",
+    "section": "Querying vertices and edges based on attributes",
+    "text": "Querying vertices and edges based on attributes\n\nSelecting vertices\nImagine that in a given social network, you want to find out who has the largest degree. You can do that with the tools presented so far and the which.max function:\n\n\nCode\nwhich.max(degree(g))\n\n\nCarmina \n      3 \n\n\nAnother example would be to select only vertices that have only odd IDs but not even ones, using the V function:\n\n\nCode\ngraph &lt;- graph.full(n=10)\nonly_odd_vertices &lt;- which(V(graph)%%2==1)\nlength(only_odd_vertices)\n\n\n[1] 5\n\n\nOf course, it is possible to select vertices or edges by positional indices:\n\n\nCode\nseq &lt;- V(graph)[2, 3, 7]\nseq\n\n\n+ 3/10 vertices, from 58a7f69:\n[1] 2 3 7\n\n\n\n\nCode\nseq &lt;- seq[1, 3]    # filtering an existing vertex set\nseq\n\n\n+ 2/10 vertices, from 58a7f69:\n[1] 2 7\n\n\nSelecting a vertex that does not exist results in an error:\n\n\nCode\nseq &lt;- V(graph)[2, 3, 7, \"foo\", 3.5]\n## Error in simple_vs_index(x, ii, na_ok) : Unknown vertex selected\n\n\nAttribute names can also be used as-is within the indexing brackets of V() and E(). This can be combined with R’s ability to use boolean vectors for indexing to obtain very concise and readable expressions to retrieve a subset of the vertex or edge set of a graph. For instance, the following command gives you the names of the individuals younger than 30 years in our social network:\n\n\nCode\nV(g)[age &lt; 30]$name\n\n\n[1] \"Alejandra\" \"Carmina\"   \"Frank\"     \"Esther\"   \n\n\nOf course, &lt; is not the only boolean operator that can be used for this. Other possibilities include the following:\n\n\n\n\n\n\n\nOperator\nMeaning\n\n\n\n\n==\nThe attribute/property value must be equal to\n\n\n!=\nThe attribute/property value must not be equal to\n\n\n&lt;\nThe attribute/property value must be less than\n\n\n&lt;=\nThe attribute/property value must be less than or equal to\n\n\n&gt;\nThe attribute/property value must be greater than\n\n\n&gt;=\nThe attribute/property value must be greater than or equal to\n\n\n%in%\nThe attribute/property value must be included in\n\n\n\nYou can also create a “not in” operator from %in% using the Negate function:\n\n\nCode\n`%notin%` &lt;- Negate(`%in%`)\n\n\nIf an attribute has the same name as an igraph function, you should be careful as the syntax can become a little confusing. For instance, if there is an attribute named degree that represents the grades of an exam for each person, that should not be confused with the igraph function that computes the degrees of vertices in a network sense:\n\n\nCode\nV(g)$degree &lt;- c(\"A\", \"B\", \"B+\", \"A+\", \"C\", \"A\", \"B\")\nV(g)$degree[degree(g) == 3]\n\n\n[1] \"A\"  \"A+\" \"C\" \n\n\n\n\nCode\nV(g)$name[degree(g) == 3]\n\n\n[1] \"Alejandra\" \"Frank\"     \"Dennis\"   \n\n\n\n\nSelecting edges\nEdges can be selected based on attributes just like vertices. As mentioned above, the standard way to get edges is E. Moreover, there are a few special structural properties for selecting edges.\nUsing .from allows you to filter the edge sequence based on the source vertices of the edges. E.g., to select all the edges originating from Carmina (who has vertex index 3):\n\n\nCode\nE(g)[.from(3)]\n\n\n+ 4/9 edges from 2a77cb1 (vertex names):\n[1] Alejandra--Carmina Carmina  --Frank   Carmina  --Dennis  Carmina  --Esther \n\n\nOf course it also works with vertex names:\n\n\nCode\nE(g)[.from(\"Carmina\")]\n\n\n+ 4/9 edges from 2a77cb1 (vertex names):\n[1] Alejandra--Carmina Carmina  --Frank   Carmina  --Dennis  Carmina  --Esther \n\n\nUsing .to filters edge sequences based on the target vertices. This is different from .from if the graph is directed, while it gives the same answer for undirected graphs. Using .inc selects only those edges that are incident on a single vertex or at least one of the vertices, irrespectively of the edge directions.\nThe %--% operator can be used to select edges between specific groups of vertices, ignoring edge directions in directed graphs. For instance, the following expression selects all the edges between Carmina (vertex index 3), Dennis (vertex index 5) and Esther (vertex index 6):\n\n\nCode\nE(g) [ 3:5 %--% 5:6 ]\n\n\n+ 3/9 edges from 2a77cb1 (vertex names):\n[1] Carmina--Dennis Carmina--Esther Dennis --Esther\n\n\nTo make the %--% operator work with names, you can build string vectors containing the names and then use these vectors as operands. For instance, to select all the edges that connect men to women, we can do the following after re-adding the gender attribute that we deleted earlier:\n\n\nCode\nV(g)$gender &lt;- c(\"f\", \"m\", \"f\", \"m\", \"m\", \"f\", \"m\")\n\n\n\n\nCode\nmen &lt;- V(g)[gender == \"m\"]$name\nmen\n\n\n[1] \"Bruno\"  \"Frank\"  \"Dennis\" \"George\"\n\n\n\n\nCode\nwomen &lt;- V(g)[gender == \"f\"]$name\nwomen\n\n\n[1] \"Alejandra\" \"Carmina\"   \"Esther\"   \n\n\n\n\nCode\nE(g)[men %--% women]\n\n\n+ 5/9 edges from 2a77cb1 (vertex names):\n[1] Alejandra--Bruno  Alejandra--Frank  Carmina  --Frank  Carmina  --Dennis\n[5] Dennis   --Esther"
+  },
+  {
+    "objectID": "posts/A8-NetworkData/index.html#treating-a-graph-as-an-adjacency-matrix",
+    "href": "posts/A8-NetworkData/index.html#treating-a-graph-as-an-adjacency-matrix",
+    "title": "Practice with Network Data",
+    "section": "Treating a graph as an adjacency matrix",
+    "text": "Treating a graph as an adjacency matrix\nThe adjacency matrix is another way to represent a graph. In an adjacency matrix, rows and columns are labeled by graph vertices, and the elements of the matrix indicate the number of edges between vertices i and j. The adjacency matrix for the example graph is:\n\n\nCode\nget.adjacency(g)\n\n\n7 x 7 sparse Matrix of class \"dgCMatrix\"\n          Alejandra Bruno Carmina Frank Dennis Esther George\nAlejandra         .     1       1     1      .      .      .\nBruno             1     .       .     .      .      .      .\nCarmina           1     .       .     1      1      1      .\nFrank             1     .       1     .      .      .      1\nDennis            .     .       1     .      .      1      1\nEsther            .     .       1     .      1      .      .\nGeorge            .     .       .     1      1      .      .\n\n\nFor example, Carmina (1, 0, 0, 1, 1, 1, 0) is directly connected to Alejandra (who has vertex index 1), Frank (index 4), Dennis (index 5) and Esther (index 6), but not to Bruno (index 2) or to George (index 7)."
+  },
+  {
+    "objectID": "posts/A8-NetworkData/index.html#layouts-and-plotting",
+    "href": "posts/A8-NetworkData/index.html#layouts-and-plotting",
+    "title": "Practice with Network Data",
+    "section": "Layouts and plotting",
+    "text": "Layouts and plotting\nA graph is an abstract mathematical object without a specific representation in 2D, 3D or any other geometric space. This means that whenever we want to visualise a graph, we have to find a mapping from vertices to coordinates in two- or three-dimensional space first, preferably in a way that is useful and/or pleasing for the eye. A separate branch of graph theory, namely graph drawing, tries to solve this problem via several graph layout algorithms. igraph implements quite a few layout algorithms and is also able to draw them onto the screen or to any output format that R itself supports.\n\nLayout algorithms\nThe layout functions in igraph always start with layout. The following table summarises them:\n\n\n\n\n\n\n\nMethod name\nAlgorithm description\n\n\n\n\nlayout_randomly\nPlaces the vertices completely randomly\n\n\nlayout_in_circle\nDeterministic layout that places the vertices on a circle\n\n\nlayout_on_sphere\nDeterministic layout that places the vertices evenly on the surface of a sphere\n\n\nlayout_with_drl\nThe Drl (Distributed Recursive Layout) algorithm for large graphs\n\n\nlayout_with_fr\nFruchterman-Reingold force-directed algorithm\n\n\nlayout_with_kk\nKamada-Kawai force-directed algorithm\n\n\nlayout_with_lgl\nThe LGL (Large Graph Layout) algorithm for large graphs\n\n\nlayout_as_tree\nReingold-Tilford tree layout, useful for (almost) tree-like graphs\n\n\nlayout_nicely\nLayout algorithm that automatically picks one of the other algorithms based on certain properties of the graph\n\n\n\nLayout algorithms can be called directly with a graph as its first argument. They will return a matrix with two columns and as many rows as the number of vertices in the graph; each row will correspond to the position of a single vertex, ordered by vertex IDs. Some algorithms have a 3D variant; in this case they return three columns instead of 2.\n\n\nCode\nlayout &lt;- layout_with_kk(g)\n\n\nSome layout algorithms take additional arguments; e.g., when laying out a graph as a tree, it might make sense to specify which vertex is to be placed at the root of the layout:\n\n\nCode\nlayout &lt;- layout_as_tree(g, root = 2)\n\n\n\n\nDrawing a graph using a layout\nWe can plot our imaginary social network with the Kamada-Kawai layout algorithm as follows:\n\n\nCode\nlayout &lt;- layout_with_kk(g)\n\n\n\n\nCode\nplot(g, layout = layout, main = \"Social network with the Kamada-Kawai layout algorithm\")\n\n\n\n\n\n\n\n\n\nThis should open a new window showing a visual representation of the network. Remember that the exact placement of nodes may be different on your machine since the layout is not deterministic.\nThe layout argument also accepts functions; in this case, the function will be called with the graph as its first argument. This makes it possible to just pass the name of a layout function directly, without creating a layout variable:\n\n\nCode\nplot(g, layout = layout_with_fr,\n     main = \"Social network with the Fruchterman-Reingold layout algorithm\")\n\n\n\n\n\n\n\n\n\nTo improve the visuals, a trivial addition would be to color the vertices according to the gender. We should also try to place the labels slightly outside the vertices to improve readability:\n\n\nCode\nV(g)$color &lt;- ifelse(V(g)$gender == \"m\", \"yellow\", \"red\")\nplot(g, layout = layout, vertex.label.dist = 3.5,\n     main = \"Social network - with genders as colors\")\n\n\n\n\n\n\n\n\n\nYou can also treat the gender attribute as a factor and provide the colors with an argument to plot(), which takes precedence over the color vertex attribute. Colors will be assigned automatically to levels of a factor:\n\n\nCode\nplot(g, layout=layout, vertex.label.dist=3.5, vertex.color=as.factor(V(g)$gender))\n\n\n\n\n\n\n\n\n\nAs seen above with the vertex.color argument, you can specify visual properties as arguments to plot instead of using vertex or edge attributes. The following plot shows the formal ties with thick lines while informal ones with thin lines:\n\n\nCode\nplot(g, layout=layout, vertex.label.dist=3.5, vertex.size=20,\n     vertex.color=ifelse(V(g)$gender == \"m\", \"yellow\", \"red\"),\n     edge.width=ifelse(E(g)$is_formal, 5, 1))\n\n\n\n\n\n\n\n\n\nThis latter approach is preferred if you want to keep the properties of the visual representation of your graph separate from the graph itself.\nIn summary, there are special vertex and edge properties that correspond to the visual representation of the graph. These attributes override the default settings of igraph (i.e color, weight, name, shape,layout,etc.). The following two tables summarise the most frequently used visual attributes for vertices and edges, respectively:\n\n\nVertex attributes controlling graph plots\n\n\n\n\n\n\n\n\nAttribute name\nKeyword argument\nPurpose\n\n\n\n\ncolor\nvertex.color\nColor of the vertex\n\n\nlabel\nvertex.label\nLabel of the vertex. They will be converted to character. Specify NA to omit vertex labels. The default vertex labels are the vertex ids.\n\n\nlabel.cex\nvertex.label.cex\nFont size of the vertex label, interpreted as a multiplicative factor, similarly to R’s text function\n\n\nlabel.color\nvertex.label.color\nColor of the vertex label\n\n\nlabel.degree\nvertex.label.degree\nIt defines the position of the vertex labels, relative to the center of the vertices. It is interpreted as an angle in radian, zero means ‘to the right’, and ‘pi’ means to the left, up is -pi/2 and down is pi/2. The default value is -pi/4\n\n\nlabel.dist\nvertex.label.dist\nDistance of the vertex label from the vertex itself, relative to the vertex size\n\n\nlabel.family\nvertex.label.family\nFont family of the vertex, similarly to R’s text function\n\n\nlabel.font\nvertex.label.font\nFont within the font family of the vertex, similarly to R’s text function\n\n\nshape\nvertex.shape\nThe shape of the vertex, currently “circle”, “square”, “csquare”, “rectangle”, “crectangle”, “vrectangle”, “pie” (see vertex.shape.pie), ‘sphere’, and “none” are supported, and only by the plot.igraph command.\n\n\nsize\nvertex.size\nThe size of the vertex, a numeric scalar or vector, in the latter case each vertex sizes may differ\n\n\n\n\n\nEdge attributes controlling graph plots\n\n\n\n\n\n\n\n\nAttribute name\nKeyword argument\nPurpose\n\n\n\n\ncolor\nedge.color\nColor of the edge\n\n\ncurved\nedge.curved\nA numeric value specifies the curvature of the edge; zero curvature means straight edges, negative values means the edge bends clockwise, positive values the opposite. TRUE means curvature 0.5, FALSE means curvature zero\n\n\narrow.size\nedge.arrow.size\nCurrently this is a constant, so it is the same for every edge. If a vector is submitted then only the first element is used, ie. if this is taken from an edge attribute then only the attribute of the first edge is used for all arrows.\n\n\narrow.width\nedge.arrow.width\nThe width of the arrows. Currently this is a constant, so it is the same for every edge\n\n\nwidth\nedge.width\nWidth of the edge in pixels\n\n\nlabel\nedge.label\nIf specified, it adds a label to the edge.\n\n\nlabel.cex\nedge.label.cex\nFont size of the edge label, interpreted as a multiplicative factor, similarly to R’s text function\n\n\nlabel.color\nedge.label.color\nColor of the edge label\n\n\nlabel.family\nedge.label.family\nFont family of the edge, similarly to R’s text function\n\n\nlabel.font\nedge.label.font\nFont within the font family of the edge, similarly to R’s text function\n\n\n\n\n\nGeneric arguments of plot()\nThese settings can be specified as arguments to the plot function to control the overall appearance of the plot.\n\n\n\n\n\n\n\nKeyword argument\nPurpose\n\n\n\n\nlayout\nThe layout to be used. It can be an instance of Layout, a list of tuples containing X-Y coordinates, or the name of a layout algorithm. The default is auto, which selects a layout algorithm automatically based on the size and connectedness of the graph.\n\n\nmargin\nThe amount of empty space below, over, at the left and right of the plot, it is a numeric vector of length four."
+  },
+  {
+    "objectID": "posts/A8-NetworkData/index.html#assignment",
+    "href": "posts/A8-NetworkData/index.html#assignment",
+    "title": "Practice with Network Data",
+    "section": "ASSIGNMENT",
+    "text": "ASSIGNMENT\nImprove the network above by:\n\nColoring the edges according to Advisor / BCB520 attribute.\nColoring the nodes according to Department.\nAdujsting the labels to improve readability."
   },
   {
     "objectID": "posts/A6-Midterm/index.html",
@@ -1757,62 +1848,6 @@
     "text": "RESOURCES\nA YouTube Video from Posit on Building your Data Science Portfolio\nTidyTuesday\nA fun Spotify example from TidyTuesday by Kaylin Pavlik.\nBarrie attempts this assignment in Tutorial 4."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "BCB 520:: Foundations of Data Visualization",
-    "section": "",
-    "text": "This class will help students establish a core understanding of data visualization. We will consider how data type (including tabular, network, and spatial data) interacts with visualization task to guide design choices. Diverse types of visual encodings and how they relate to human perception will be presented, along with practical exercises using the R and Python programming languages. Upon completion of the course, students will understand WHY particular visualization approaches are effective for a given data set and HOW to implement those visualizations using the language of their choice. The course is designed to be “discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests.\n\n\nI am maintaining the course here and on its CANVAS PAGE (for enrolled students).\nSYLLABUS\nBarrie’s GitHub\n\n\nKB GitHub and KB Portfolio\nHS GitHub and HS Porfolio\nYG GitHub and YG Porfolio\nRS GitHub and RS Porfolio\nGT GitHub and GT Porfolio\nLR GitHub and LR Porfolio\n\n\n\n\nThe Functional Art\nGGSIDE! A companion to ggplot for making side plots! COOL!\nAwesome Quarto: A potentially interesting repository of Quarto documents, talks, tools, examples, etc.\nThe MockUp Blog - TABLES! This blog post explores the R packages gt and gtextras which will help us up our table game!\nRiffomonas Project: Pat Schloss is a Professor at the University of Michigan. The Riffomonas Project is his Youtube channel, which has HUNDREDS of easy to follow and amazingly useful instructional videos on R, ggplot, version control, and literate programming.\nDr. Tamara Munzner’s Website: It isn’t fancy, but Dr. Munzner’s website has tons of resources from her textbook and the many data visualization courses she has offered. This includes recorded lectures that align directly with the chapters of the text, much like what we are using.\nCheat Sheets: So many visual guides for many R packages, including the tidyverse, ggplot, dplyr, etc.\nLearning Vis Tools: Teaching Data Visualization Tutorials An interesting paper for discussion as we forge the structure for this class."
-  },
-  {
-    "objectID": "index.html#quick-links",
-    "href": "index.html#quick-links",
-    "title": "BCB 520:: Foundations of Data Visualization",
-    "section": "",
-    "text": "I am maintaining the course here and on its CANVAS PAGE (for enrolled students).\nSYLLABUS\nBarrie’s GitHub\n\n\nKB GitHub and KB Portfolio\nHS GitHub and HS Porfolio\nYG GitHub and YG Porfolio\nRS GitHub and RS Porfolio\nGT GitHub and GT Porfolio\nLR GitHub and LR Porfolio"
-  },
-  {
-    "objectID": "index.html#learning-resources",
-    "href": "index.html#learning-resources",
-    "title": "BCB 520:: Foundations of Data Visualization",
-    "section": "",
-    "text": "The Functional Art\nGGSIDE! A companion to ggplot for making side plots! COOL!\nAwesome Quarto: A potentially interesting repository of Quarto documents, talks, tools, examples, etc.\nThe MockUp Blog - TABLES! This blog post explores the R packages gt and gtextras which will help us up our table game!\nRiffomonas Project: Pat Schloss is a Professor at the University of Michigan. The Riffomonas Project is his Youtube channel, which has HUNDREDS of easy to follow and amazingly useful instructional videos on R, ggplot, version control, and literate programming.\nDr. Tamara Munzner’s Website: It isn’t fancy, but Dr. Munzner’s website has tons of resources from her textbook and the many data visualization courses she has offered. This includes recorded lectures that align directly with the chapters of the text, much like what we are using.\nCheat Sheets: So many visual guides for many R packages, including the tidyverse, ggplot, dplyr, etc.\nLearning Vis Tools: Teaching Data Visualization Tutorials An interesting paper for discussion as we forge the structure for this class."
-  },
-  {
-    "objectID": "posts/E2-ExtractAI/AIExtract.html",
-    "href": "posts/E2-ExtractAI/AIExtract.html",
-    "title": "AI Extract",
-    "section": "",
-    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nTruth &lt;- read.csv(\"NSF_Truth.csv\")\nExperiment &lt;- read.csv(\"vision_repead_run.csv\")\n\n\nsmallexp &lt;- Experiment %&gt;%\n  filter(VERAS_proposal_number == \"V200449\")\n  \nsmallgrade &lt;- smallexp"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html",
-    "href": "posts/L2-Data-Abstraction/index.html",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "",
-    "text": "Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
-  },
-  {
-    "objectID": "posts/L1-Intro/index.html",
-    "href": "posts/L1-Intro/index.html",
-    "title": "LECTURE 1 - INTRO",
-    "section": "",
-    "text": "Department of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html",
-    "href": "posts/L3-TaskAbstraction/index.html",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "",
-    "text": "Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
-  },
-  {
-    "objectID": "posts/L5-ThumbRules/index.html",
-    "href": "posts/L5-ThumbRules/index.html",
-    "title": "LECTURE 5 - Rules of Thumb",
-    "section": "",
-    "text": "These are guidelines and considerations, not really absolute rules:\n\nWhen to use 3D? when to use 2D?\nWhen to use eyes instead of memory?\nWhen does immersion help?\nWhen to use overviews?\nHow long is too long?\nWhich comes first, form or function?"
-  },
-  {
     "objectID": "posts/L8-NetworkData/index.html#dataset-types-networks",
     "href": "posts/L8-NetworkData/index.html#dataset-types-networks",
     "title": "LECTURE 8 - Network Data",
@@ -1979,5 +2014,26 @@
     "title": "LECTURE 8 - Network Data",
     "section": "ARRANGE NETWORKS/TREES",
     "text": "ARRANGE NETWORKS/TREES\n\n\n\n\nHOME"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BCB 520:: Foundations of Data Visualization",
+    "section": "",
+    "text": "This class will help students establish a core understanding of data visualization. We will consider how data type (including tabular, network, and spatial data) interacts with visualization task to guide design choices. Diverse types of visual encodings and how they relate to human perception will be presented, along with practical exercises using the R and Python programming languages. Upon completion of the course, students will understand WHY particular visualization approaches are effective for a given data set and HOW to implement those visualizations using the language of their choice. The course is designed to be “discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests.\n\n\nI am maintaining the course here and on its CANVAS PAGE (for enrolled students).\nSYLLABUS\nBarrie’s GitHub\n\n\nKB GitHub and KB Portfolio\nHS GitHub and HS Porfolio\nYG GitHub and YG Porfolio\nRS GitHub and RS Porfolio\nGT GitHub and GT Porfolio\nLR GitHub and LR Porfolio\n\n\n\n\nThe Functional Art\nGGSIDE! A companion to ggplot for making side plots! COOL!\nAwesome Quarto: A potentially interesting repository of Quarto documents, talks, tools, examples, etc.\nThe MockUp Blog - TABLES! This blog post explores the R packages gt and gtextras which will help us up our table game!\nRiffomonas Project: Pat Schloss is a Professor at the University of Michigan. The Riffomonas Project is his Youtube channel, which has HUNDREDS of easy to follow and amazingly useful instructional videos on R, ggplot, version control, and literate programming.\nDr. Tamara Munzner’s Website: It isn’t fancy, but Dr. Munzner’s website has tons of resources from her textbook and the many data visualization courses she has offered. This includes recorded lectures that align directly with the chapters of the text, much like what we are using.\nCheat Sheets: So many visual guides for many R packages, including the tidyverse, ggplot, dplyr, etc.\nLearning Vis Tools: Teaching Data Visualization Tutorials An interesting paper for discussion as we forge the structure for this class."
+  },
+  {
+    "objectID": "index.html#quick-links",
+    "href": "index.html#quick-links",
+    "title": "BCB 520:: Foundations of Data Visualization",
+    "section": "",
+    "text": "I am maintaining the course here and on its CANVAS PAGE (for enrolled students).\nSYLLABUS\nBarrie’s GitHub\n\n\nKB GitHub and KB Portfolio\nHS GitHub and HS Porfolio\nYG GitHub and YG Porfolio\nRS GitHub and RS Porfolio\nGT GitHub and GT Porfolio\nLR GitHub and LR Porfolio"
+  },
+  {
+    "objectID": "index.html#learning-resources",
+    "href": "index.html#learning-resources",
+    "title": "BCB 520:: Foundations of Data Visualization",
+    "section": "",
+    "text": "The Functional Art\nGGSIDE! A companion to ggplot for making side plots! COOL!\nAwesome Quarto: A potentially interesting repository of Quarto documents, talks, tools, examples, etc.\nThe MockUp Blog - TABLES! This blog post explores the R packages gt and gtextras which will help us up our table game!\nRiffomonas Project: Pat Schloss is a Professor at the University of Michigan. The Riffomonas Project is his Youtube channel, which has HUNDREDS of easy to follow and amazingly useful instructional videos on R, ggplot, version control, and literate programming.\nDr. Tamara Munzner’s Website: It isn’t fancy, but Dr. Munzner’s website has tons of resources from her textbook and the many data visualization courses she has offered. This includes recorded lectures that align directly with the chapters of the text, much like what we are using.\nCheat Sheets: So many visual guides for many R packages, including the tidyverse, ggplot, dplyr, etc.\nLearning Vis Tools: Teaching Data Visualization Tutorials An interesting paper for discussion as we forge the structure for this class."
   }
 ]

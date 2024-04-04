@@ -13,6 +13,7 @@ Truth <- read.csv("NSF_Truth.csv")%>%
 Experiment <- read.csv("vision_repead_run.csv")%>%
   mutate(across(everything(), as.character))
 
+gpt3.5<-read.csv("arpan_new_all_extractions2.csv")
 
 
 # Identifying unique proposal numbers
@@ -215,29 +216,48 @@ summary(grade_aov)
 ```{r}
 grade_summary <- grades_long_with_both_legends%>%
   mutate(score = ifelse(Grade == "match", 1, 0))%>%
-  group_by(VERAS_Proposal_Number, temp, Field)%>%
+  group_by(VERAS_Proposal_Number, Field)%>%
   summarize(score=mean(score))%>%
-  mutate(name = paste(VERAS_Proposal_Number, temp))
+  mutate(name = paste(VERAS_Proposal_Number))
 
 # Base plot with the main heatmap
- ggplot(grade_summary, aes(x = Field, y = name, fill = score)) + 
+bad5<- ggplot(grade_summary, aes(x = name, y = Field, fill = score)) + 
   geom_tile(color = "white") +
+  geom_text(aes(label = ifelse(score < 1, round(score, 2), "")), color = "white", size = 3) +
   scale_fill_gradient2(low = "red", mid = "white", high = "blue", midpoint = 0.5)+
   theme_minimal()+
-     theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+     theme(axis.text.x = element_blank(),
         axis.ticks.y = element_blank(),
         #axis.text.y = element_blank(),
         axis.title.y = element_blank())
+ 
+ 
+ ggsave("bad5.png", plot = bad5, width = 5, height = 10)
 
-what <- Truth%>%
-  filter(VERAS_Proposal_Number == "V201060")%>%
-  select(I._Indirect_Costs)
-what2 <- Experiment%>%
-  filter(VERAS_Proposal_Number == "V201060")%>%
-  select(I._Indirect_Costs)
+fullscore <- read.csv("extraction_scores.csv")
 
+fullscorelong <- fullscore %>%
+  pivot_longer(cols = -c(VERAS_Proposal_Number, X, model), names_to = "Field", values_to = "Grade")%>%
+  mutate(score = (52-Grade)/52)
+
+full52<- ggplot(fullscorelong, aes(x = model, y = Field, fill = score)) + 
+  geom_tile(color = "white") +
+  geom_text(aes(label = ifelse(score < 1, round(score, 2), "")), color = "white", size = 3) +
+  scale_fill_gradient2(low = "red", mid = "white", high = "blue", midpoint = 0.5)+
+  theme_minimal()+
+     theme(axis.text.x = element_blank(),
+        axis.ticks.y = element_blank(),
+        #axis.text.y = element_blank(),
+        axis.title.y = element_blank())
+ 
+ 
+ ggsave("full52.png", plot = full52, width = 4.4, height = 10)
 
 ```
+
+![](full52.png)
+
+
 
 Had to correct the Truth data set because of the typo:
 

@@ -1,5 +1,7 @@
 ---
 title: "Alt NHL Draft"
+draft: true
+eval: false
 ---
 
 Testing that idea.

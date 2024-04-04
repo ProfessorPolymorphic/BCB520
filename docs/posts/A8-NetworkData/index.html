@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Barrie Robison">
-<meta name="dcterms.date" content="2023-04-19">
+<meta name="dcterms.date" content="2024-04-04">
 <meta name="description" content="iGRAPH!">
 
 <title>BCB520 - Practice with Network Data</title>
@@ -174,7 +174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 19, 2023</p>
+        <p class="date">April 4, 2024</p>
       </div>
     </div>
     
@@ -253,8 +253,8 @@ Attaching package: 'igraph'</code></pre>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>g</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>IGRAPH d55cfea U--- 10 2 -- 
-+ edges from d55cfea:
+<pre><code>IGRAPH b2f0e0a U--- 10 2 -- 
++ edges from b2f0e0a:
 [1] 1--2 1--5</code></pre>
 </div>
 </div>
@@ -278,7 +278,7 @@ Note
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(g)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>IGRAPH d55cfea U--- 10 2 -- </code></pre>
+<pre><code>IGRAPH b2f0e0a U--- 10 2 -- </code></pre>
 </div>
 </div>
 <p>The same function <code>make_graph</code> can create some notable graphs by just specifying their name. For example you can create the graph that represents the social network of Zachary’s karate club, that shows the friendship between 34 members of a karate club at a US university in the 1970s:</p>
@@ -343,9 +343,9 @@ Note
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>g</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>IGRAPH de80e12 U--- 40 86 -- Zachary
+<pre><code>IGRAPH 5055317 U--- 40 86 -- Zachary
 + attr: name (g/c)
-+ edges from de80e12:
++ edges from 5055317:
  [1]  1-- 2  1-- 3  1-- 4  1-- 5  1-- 6  1-- 7  1-- 8  1-- 9  1--11  1--12
 [11]  1--13  1--14  1--18  1--20  1--22  1--32  2-- 3  2-- 4  2-- 8  2--14
 [21]  2--18  2--20  2--22  2--31  3-- 4  3-- 8  3--28  3--29  3--33  3--10
@@ -426,7 +426,7 @@ Note
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(graph1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>IGRAPH 7c2c7ca U--- 127 126 -- Tree
+<pre><code>IGRAPH d598639 U--- 127 126 -- Tree
 + attr: name (g/c), children (g/n), mode (g/c)</code></pre>
 </div>
 <details class="code-fold">
@@ -465,7 +465,7 @@ Note
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(graph1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>IGRAPH 6ce1cfd U--- 100 486 -- Geometric random graph
+<pre><code>IGRAPH 819a17c U--- 100 486 -- Geometric random graph
 + attr: name (g/c), radius (g/n), torus (g/l)</code></pre>
 </div>
 <details class="code-fold">
@@ -535,7 +535,7 @@ Note
 <span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(g)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>IGRAPH b007e08 UN-- 7 9 -- 
+<pre><code>IGRAPH 2a77cb1 UN-- 7 9 -- 
 + attr: name (v/c), age (v/n), gender (v/c), is_formal (e/l)</code></pre>
 </div>
 </div>
@@ -598,7 +598,7 @@ Note
 <span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="fu">V</span>(g)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>+ 7/7 vertices, named, from b007e08:
+<pre><code>+ 7/7 vertices, named, from 2a77cb1:
 [1] Alejandra Bruno     Carmina   Frank     Dennis    Esther    George   </code></pre>
 </div>
 </div>
@@ -735,7 +735,7 @@ Note
 <span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>seq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>+ 3/10 vertices, from fcbca3c:
+<pre><code>+ 3/10 vertices, from 58a7f69:
 [1] 2 3 7</code></pre>
 </div>
 </div>
@@ -746,7 +746,7 @@ Note
 <span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>seq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>+ 2/10 vertices, from fcbca3c:
+<pre><code>+ 2/10 vertices, from 58a7f69:
 [1] 2 7</code></pre>
 </div>
 </div>
@@ -849,7 +849,7 @@ Note
 <div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">E</span>(g)[<span class="fu">.from</span>(<span class="dv">3</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>+ 4/9 edges from b007e08 (vertex names):
+<pre><code>+ 4/9 edges from 2a77cb1 (vertex names):
 [1] Alejandra--Carmina Carmina  --Frank   Carmina  --Dennis  Carmina  --Esther </code></pre>
 </div>
 </div>
@@ -860,7 +860,7 @@ Note
 <div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">E</span>(g)[<span class="fu">.from</span>(<span class="st">"Carmina"</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>+ 4/9 edges from b007e08 (vertex names):
+<pre><code>+ 4/9 edges from 2a77cb1 (vertex names):
 [1] Alejandra--Carmina Carmina  --Frank   Carmina  --Dennis  Carmina  --Esther </code></pre>
 </div>
 </div>
@@ -872,7 +872,7 @@ Note
 <div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">E</span>(g) [ <span class="dv">3</span><span class="sc">:</span><span class="dv">5</span> <span class="sc">%--%</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">6</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>+ 3/9 edges from b007e08 (vertex names):
+<pre><code>+ 3/9 edges from 2a77cb1 (vertex names):
 [1] Carmina--Dennis Carmina--Esther Dennis --Esther</code></pre>
 </div>
 </div>
@@ -909,7 +909,7 @@ Note
 <div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">E</span>(g)[men <span class="sc">%--%</span> women]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>+ 5/9 edges from b007e08 (vertex names):
+<pre><code>+ 5/9 edges from 2a77cb1 (vertex names):
 [1] Alejandra--Bruno  Alejandra--Frank  Carmina  --Frank  Carmina  --Dennis
 [5] Dennis   --Esther</code></pre>
 </div>
@@ -1804,13 +1804,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb114-6"><a href="#cb114-6" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: false</span></span>
 <span id="cb114-7"><a href="#cb114-7" aria-hidden="true" tabindex="-1"></a><span class="co">    echo: true</span></span>
 <span id="cb114-8"><a href="#cb114-8" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Barrie Robison"</span></span>
-<span id="cb114-9"><a href="#cb114-9" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2023-04-19"</span></span>
+<span id="cb114-9"><a href="#cb114-9" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2024-04-04"</span></span>
 <span id="cb114-10"><a href="#cb114-10" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [Portfolio, DataViz, Network, iGraph, Assignment]</span></span>
 <span id="cb114-11"><a href="#cb114-11" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "wendigonetwork.png"</span></span>
 <span id="cb114-12"><a href="#cb114-12" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "iGRAPH!"</span></span>
 <span id="cb114-13"><a href="#cb114-13" aria-hidden="true" tabindex="-1"></a><span class="an">code-fold:</span><span class="co"> true</span></span>
 <span id="cb114-14"><a href="#cb114-14" aria-hidden="true" tabindex="-1"></a><span class="an">code-tools:</span><span class="co"> true</span></span>
-<span id="cb114-15"><a href="#cb114-15" aria-hidden="true" tabindex="-1"></a><span class="an">draft:</span><span class="co"> true</span></span>
+<span id="cb114-15"><a href="#cb114-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb114-16"><a href="#cb114-16" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb114-17"><a href="#cb114-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb114-18"><a href="#cb114-18" aria-hidden="true" tabindex="-1"></a><span class="fu"># OVERVIEW</span></span>
