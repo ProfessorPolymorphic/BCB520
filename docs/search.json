@@ -122,8 +122,8 @@
     "objectID": "posts/L5-ThumbRules/index.html#tldr-version",
     "href": "posts/L5-ThumbRules/index.html#tldr-version",
     "title": "LECTURE 5 - Rules of Thumb",
-    "section": "TLDR VERSION",
-    "text": "TLDR VERSION\nThese are guidelines and considerations, not really absolute rules:\n\nWhen to use 3D? when to use 2D?\nWhen to use eyes instead of memory?\nWhen does immersion help?\nWhen to use overviews?\nHow long is too long?\nWhich comes first, form or function?"
+    "section": "",
+    "text": "These are guidelines and considerations, not really absolute rules:\n\nWhen to use 3D? when to use 2D?\nWhen to use eyes instead of memory?\nWhen does immersion help?\nWhen to use overviews?\nHow long is too long?\nWhich comes first, form or function?"
   },
   {
     "objectID": "posts/L5-ThumbRules/index.html#unjustified-use-of-3d",
@@ -270,7 +270,7 @@
     "href": "posts/L5-ThumbRules/index.html#summary---rules-of-thumb",
     "title": "LECTURE 5 - Rules of Thumb",
     "section": "SUMMARY - RULES OF THUMB",
-    "text": "SUMMARY - RULES OF THUMB\n\nNo unjustified 3D\n\nPower of the plane\nDisparity of depth\nOcclusion hides information\nPerspective distortion dangers\nTilted text isn’t legible\n\nEyes beat memory\nResolution over immersion\nOverview first, zoom and filter, details on demand\nResponsiveness is required\nFunction first, form next\n\n\n\n\n\nCANVAS…HOME"
+    "text": "SUMMARY - RULES OF THUMB\n\nNo unjustified 3D\n\nPower of the plane\nDisparity of depth\nOcclusion hides information\nPerspective distortion dangers\nTilted text isn’t legible\n\nEyes beat memory\nResolution over immersion\nOverview first, zoom and filter, details on demand\nResponsiveness is required\nFunction first, form next"
   },
   {
     "objectID": "posts/L6-TabularData1/index.html#the-three-major-data-types",
@@ -291,14 +291,14 @@
     "href": "posts/L6-TabularData1/index.html#semantics-for-data",
     "title": "LECTURE 6 - Tabular Data",
     "section": "SEMANTICS FOR DATA",
-    "text": "SEMANTICS FOR DATA\n\n\n\nSemantics\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”\n\n\n\n\nData Table\n\n\n\n\nITEM: Person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
+    "text": "SEMANTICS FOR DATA\n\n\n\n\n\n\nSemantics\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”\n\n\n\n\nData Table\n\n\n\n\nITEM: Person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
   },
   {
     "objectID": "posts/L6-TabularData1/index.html#dataset-types-tables",
     "href": "posts/L6-TabularData1/index.html#dataset-types-tables",
     "title": "LECTURE 6 - Tabular Data",
     "section": "DATASET TYPES: TABLES",
-    "text": "DATASET TYPES: TABLES\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA unique KEY can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
+    "text": "DATASET TYPES: TABLES\n\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA unique KEY can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
   },
   {
     "objectID": "posts/L6-TabularData1/index.html#flat-table-example",
@@ -634,7 +634,7 @@
     "href": "posts/L6-TabularData1/index.html#arranging-tabular-data",
     "title": "LECTURE 6 - Tabular Data",
     "section": "ARRANGING TABULAR DATA",
-    "text": "ARRANGING TABULAR DATA\nWhat did we miss?\nggplot cheatsheet\n\n\n\nHOME"
+    "text": "ARRANGING TABULAR DATA\nWhat did we miss?\nggplot cheatsheet"
   },
   {
     "objectID": "posts/A3-PrototypeVizPortfolio/index.html",
@@ -696,8 +696,8 @@
     "objectID": "posts/L3-TaskAbstraction/index.html#last-lecture",
     "href": "posts/L3-TaskAbstraction/index.html#last-lecture",
     "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "LAST LECTURE",
-    "text": "LAST LECTURE\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+    "section": "",
+    "text": "Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
   },
   {
     "objectID": "posts/L3-TaskAbstraction/index.html#task-abstraction",
@@ -781,21 +781,21 @@
     "href": "posts/L3-TaskAbstraction/index.html#mandatory-fun",
     "title": "LECTURE 3 - TASK ABSTRACTION",
     "section": "MANDATORY FUN",
-    "text": "MANDATORY FUN\nWe will do these until everyone has done at least one example.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nCANVAS…HOME"
+    "text": "MANDATORY FUN\nWe will do these until everyone has done at least one example.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "posts/L1-Intro/index.html#who-am-i",
     "href": "posts/L1-Intro/index.html#who-am-i",
     "title": "LECTURE 1 - INTRO",
-    "section": "WHO AM I?",
-    "text": "WHO AM I?\nBarrie Robison\nDepartment of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
+    "section": "",
+    "text": "Department of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
   },
   {
     "objectID": "posts/L1-Intro/index.html#who-are-you",
     "href": "posts/L1-Intro/index.html#who-are-you",
     "title": "LECTURE 1 - INTRO",
     "section": "WHO ARE YOU?",
-    "text": "WHO ARE YOU?\n“…The course is designed to be”discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests…”\nBriefly:\n\nYour name\nYour discipline\nYour degree progress\nYour technical proficiency with data visualization"
+    "text": "WHO ARE YOU?\n“…The course is designed to be”discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests…”\n\nBriefly:\n\nYour name\nYour discipline\nYour degree progress\nYour technical proficiency with data visualization"
   },
   {
     "objectID": "posts/L1-Intro/index.html#course-summary",
@@ -809,7 +809,7 @@
     "href": "posts/L1-Intro/index.html#visualization",
     "title": "LECTURE 1 - INTRO",
     "section": "VISUALIZATION",
-    "text": "VISUALIZATION\nComputers provide visual representations of datasets designed to help people carry out tasks more effectively.\nTamara Munzner\nDepartment of Computer Science\nInfoVis Group\nUniversity of British Columbia"
+    "text": "VISUALIZATION\nComputers provide visual representations of datasets designed to help people carry out tasks more effectively.\n\nTamara Munzner\nDepartment of Computer Science\nInfoVis Group\nUniversity of British Columbia"
   },
   {
     "objectID": "posts/L1-Intro/index.html#the-human",
@@ -851,14 +851,14 @@
     "href": "posts/L1-Intro/index.html#anscombes-quartet",
     "title": "LECTURE 1 - INTRO",
     "section": "ANSCOMBE’S QUARTET",
-    "text": "ANSCOMBE’S QUARTET\n\n\n\n\nCode\nlibrary(ggplot2)\nlibrary(grid)\nlibrary(gridExtra)\nlibrary(datasets)\nlibrary(tidyverse)\nlibrary(dplyr)\ndatasets::anscombe\n\n\n   x1 x2 x3 x4    y1   y2    y3    y4\n1  10 10 10  8  8.04 9.14  7.46  6.58\n2   8  8  8  8  6.95 8.14  6.77  5.76\n3  13 13 13  8  7.58 8.74 12.74  7.71\n4   9  9  9  8  8.81 8.77  7.11  8.84\n5  11 11 11  8  8.33 9.26  7.81  8.47\n6  14 14 14  8  9.96 8.10  8.84  7.04\n7   6  6  6  8  7.24 6.13  6.08  5.25\n8   4  4  4 19  4.26 3.10  5.39 12.50\n9  12 12 12  8 10.84 9.13  8.15  5.56\n10  7  7  7  8  4.82 7.26  6.42  7.91\n11  5  5  5  8  5.68 4.74  5.73  6.89\n\n\n\nAnscombe’s Quartet\nThe four x-y pairs have identical summary statistics.\n\n\nCode\ntidy_anscombe &lt;- anscombe %&gt;%\n pivot_longer(cols = everything(),\n              names_to = c(\".value\", \"set\"),\n              names_pattern = \"(.)(.)\")\ntidy_anscombe_summary &lt;- tidy_anscombe %&gt;%\n  group_by(set) %&gt;%\n  summarise(across(.cols = everything(),\n                   .fns = lst(min,max,median,mean,sd,var),\n                   .names = \"{col}_{fn}\"))\n#&gt; `summarise()` ungrouping output (override with `.groups` argument)\n\nvars&lt;-c(\"set\", \"x_mean\", \"x_var\",  \"y_mean\", \"y_var\")\nthing&lt;- as.data.frame(tidy_anscombe_summary[vars])\nknitr::kable(thing)\n\n\n\n\n\nset\nx_mean\nx_var\ny_mean\ny_var\n\n\n\n\n1\n9\n11\n7.500909\n4.127269\n\n\n2\n9\n11\n7.500909\n4.127629\n\n\n3\n9\n11\n7.500000\n4.122620\n\n\n4\n9\n11\n7.500909\n4.123249"
+    "text": "ANSCOMBE’S QUARTET\n\n\n\n\nCode\nlibrary(ggplot2)\nlibrary(grid)\nlibrary(gridExtra)\nlibrary(datasets)\nlibrary(tidyverse)\nlibrary(dplyr)\ndatasets::anscombe\n\n\n   x1 x2 x3 x4    y1   y2    y3    y4\n1  10 10 10  8  8.04 9.14  7.46  6.58\n2   8  8  8  8  6.95 8.14  6.77  5.76\n3  13 13 13  8  7.58 8.74 12.74  7.71\n4   9  9  9  8  8.81 8.77  7.11  8.84\n5  11 11 11  8  8.33 9.26  7.81  8.47\n6  14 14 14  8  9.96 8.10  8.84  7.04\n7   6  6  6  8  7.24 6.13  6.08  5.25\n8   4  4  4 19  4.26 3.10  5.39 12.50\n9  12 12 12  8 10.84 9.13  8.15  5.56\n10  7  7  7  8  4.82 7.26  6.42  7.91\n11  5  5  5  8  5.68 4.74  5.73  6.89\n\n\n\n\nAnscombe’s Quartet\nThe four x-y pairs have identical summary statistics.\n\n\nCode\ntidy_anscombe &lt;- anscombe %&gt;%\n pivot_longer(cols = everything(),\n              names_to = c(\".value\", \"set\"),\n              names_pattern = \"(.)(.)\")\ntidy_anscombe_summary &lt;- tidy_anscombe %&gt;%\n  group_by(set) %&gt;%\n  summarise(across(.cols = everything(),\n                   .fns = lst(min,max,median,mean,sd,var),\n                   .names = \"{col}_{fn}\"))\n#&gt; `summarise()` ungrouping output (override with `.groups` argument)\n\nvars&lt;-c(\"set\", \"x_mean\", \"x_var\",  \"y_mean\", \"y_var\")\nthing&lt;- as.data.frame(tidy_anscombe_summary[vars])\nknitr::kable(thing)\n\n\n\n\n\nset\nx_mean\nx_var\ny_mean\ny_var\n\n\n\n\n1\n9\n11\n7.500909\n4.127269\n\n\n2\n9\n11\n7.500909\n4.127629\n\n\n3\n9\n11\n7.500000\n4.122620\n\n\n4\n9\n11\n7.500909\n4.123249"
   },
   {
     "objectID": "posts/L1-Intro/index.html#viz-matters",
     "href": "posts/L1-Intro/index.html#viz-matters",
     "title": "LECTURE 1 - INTRO",
     "section": "VIZ MATTERS",
-    "text": "VIZ MATTERS\n\n\nCode\nggplot(tidy_anscombe,\n       aes(x = x,\n           y = y)) +\n  geom_point() +\n  geom_point(data = tidy_anscombe_summary, aes(x=x_mean, y = y_mean, color = \"red\", size = 5),\n             show.legend = FALSE)+\n  facet_wrap(~set) +\n  geom_smooth(method = \"lm\", se = FALSE)\n\n\n\n\nLearn more: TIDY ANSCOMBE"
+    "text": "VIZ MATTERS\n\n\nCode\nggplot(tidy_anscombe,\n       aes(x = x,\n           y = y)) +\n  geom_point() +\n  geom_point(data = tidy_anscombe_summary, aes(x=x_mean, y = y_mean, color = \"red\", size = 5),\n             show.legend = FALSE)+\n  facet_wrap(~set) +\n  geom_smooth(method = \"lm\", se = FALSE)\n\n\n\n\n\n\n\n\n\n\nLearn more: TIDY ANSCOMBE"
   },
   {
     "objectID": "posts/L1-Intro/index.html#resource-limitations",
@@ -886,7 +886,7 @@
     "href": "posts/L1-Intro/index.html#human-limits",
     "title": "LECTURE 1 - INTRO",
     "section": "HUMAN LIMITS",
-    "text": "HUMAN LIMITS\n\nTime\nMemory\nAttention\n\n\n\n\n\nCANVAS…HOME"
+    "text": "HUMAN LIMITS\n\nTime\nMemory\nAttention"
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#vad-model",
@@ -1005,7 +1005,7 @@
     "href": "posts/L4-Marks-Channels/index.html#analyze-the-marks-and-channels",
     "title": "LECTURE 4",
     "section": "ANALYZE THE MARKS AND CHANNELS",
-    "text": "ANALYZE THE MARKS AND CHANNELS\nMarks are defined by the ITEMS or OBSERVATIONS they represent.\nChannels are defined by the visually detectable properties that are mapped on to ATTRIBUTES or VARIABLES.\n\n\n\n\n\n\nKonrad’s Trees\n\n\n\n\n\n\n\nRobyn’s Books\n\n\n\n\n\n\n\nYaotian’s Wheat"
+    "text": "ANALYZE THE MARKS AND CHANNELS\nMarks are defined by the ITEMS or OBSERVATIONS they represent.\nChannels are defined by the visually detectable properties that are mapped on to ATTRIBUTES or VARIABLES.\n\n\n\n\n\n\n\n\n\nKonrad’s Trees\n\n\n\n\n\n\n\nRobyn’s Books\n\n\n\n\n\n\n\nYaotian’s Wheat"
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#redundant-encoding",
@@ -1033,7 +1033,7 @@
     "href": "posts/L4-Marks-Channels/index.html#expressiveness",
     "title": "LECTURE 4",
     "section": "EXPRESSIVENESS",
-    "text": "EXPRESSIVENESS\nThe advantages and disadvantages of jitter plots. How might this relate to the idea of expressiveness?\n\nHeidi’s Cytoswine DataEXPRESSIVENESS: The visual encoding should express all of, and only, the information in the dataset attributes."
+    "text": "EXPRESSIVENESS\nThe advantages and disadvantages of jitter plots. How might this relate to the idea of expressiveness?\n\n\n\nHeidi’s Cytoswine Data\n\n\nEXPRESSIVENESS: The visual encoding should express all of, and only, the information in the dataset attributes."
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#channel-effectiveness-rankings",
@@ -1082,7 +1082,7 @@
     "href": "posts/L4-Marks-Channels/index.html#accuracy",
     "title": "LECTURE 4",
     "section": "ACCURACY?",
-    "text": "ACCURACY?\nDepends on the task. Which genre has the most game titles? Which genres are the top 4 in terms of game titles? Are there more Puzzle games than Strategy games?\n\nGeraline’s Video Games"
+    "text": "ACCURACY?\nDepends on the task. Which genre has the most game titles? Which genres are the top 4 in terms of game titles? Are there more Puzzle games than Strategy games?\n\n\n\nGeraline’s Video Games"
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#discriminability",
@@ -1096,7 +1096,7 @@
     "href": "posts/L4-Marks-Channels/index.html#discriminability-and-colors",
     "title": "LECTURE 4",
     "section": "DISCRIMINABILITY and COLORS",
-    "text": "DISCRIMINABILITY and COLORS\n\nGeraline’s Gaming Platforms"
+    "text": "DISCRIMINABILITY and COLORS\n\n\n\nGeraline’s Gaming Platforms"
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#separability-vs-integrality",
@@ -1131,7 +1131,7 @@
     "href": "posts/L4-Marks-Channels/index.html#popout-goes-the-weevil",
     "title": "LECTURE 4",
     "section": "POPOUT GOES THE WEEVIL?",
-    "text": "POPOUT GOES THE WEEVIL?\n\n\n\n\n\n\nLucas Weevils before chemicals\n\n\n\n\n\n\n\nLucas Weevils after chemicals"
+    "text": "POPOUT GOES THE WEEVIL?\n\n\n\n\n\n\n\n\n\nLucas Weevils before chemicals\n\n\n\n\n\n\n\nLucas Weevils after chemicals"
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#relative-vs-absolute-judgements",
@@ -1145,7 +1145,7 @@
     "href": "posts/L4-Marks-Channels/index.html#relative-judgements",
     "title": "LECTURE 4",
     "section": "RELATIVE JUDGEMENTS",
-    "text": "RELATIVE JUDGEMENTS\n\nHeidi’s Microbiomes"
+    "text": "RELATIVE JUDGEMENTS\n\n\n\nHeidi’s Microbiomes"
   },
   {
     "objectID": "posts/L4-Marks-Channels/index.html#relative-luminance-judgements",
@@ -1159,7 +1159,7 @@
     "href": "posts/L4-Marks-Channels/index.html#relative-color-judgements",
     "title": "LECTURE 4",
     "section": "RELATIVE COLOR JUDGEMENTS",
-    "text": "RELATIVE COLOR JUDGEMENTS\nOur visual system evolved to provide color constancy so that the same surface is identifiable across a broad set of illumination conditions, even though a physical light meter would yield very different readings. While the visual system works very well in natural environments, many of its mechanisms work against simple approaches to visually encoding information with color.\n\n\n\n\n\n\n\n\n\n\n\nFigure 5.15 shows two colorful cubes. In Figure 5.15(a) corresponding squares both appear to be red. In Figure 5.15(b), masks show that the tile color in the image apparently illuminated by a yellowish light source is actually orange, and for the bluish light the tiles are actually purple.\n\n\n\n\nCANVAS…HOME"
+    "text": "RELATIVE COLOR JUDGEMENTS\nOur visual system evolved to provide color constancy so that the same surface is identifiable across a broad set of illumination conditions, even though a physical light meter would yield very different readings. While the visual system works very well in natural environments, many of its mechanisms work against simple approaches to visually encoding information with color.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5.15 shows two colorful cubes. In Figure 5.15(a) corresponding squares both appear to be red. In Figure 5.15(b), masks show that the tile color in the image apparently illuminated by a yellowish light source is actually orange, and for the bluish light the tiles are actually purple."
   },
   {
     "objectID": "posts/T4-BarriesData/index.html",
@@ -1214,8 +1214,8 @@
     "objectID": "posts/L2-Data-Abstraction/index.html#last-lecture",
     "href": "posts/L2-Data-Abstraction/index.html#last-lecture",
     "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "LAST LECTURE",
-    "text": "LAST LECTURE\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+    "section": "",
+    "text": "Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#what",
@@ -1250,35 +1250,35 @@
     "href": "posts/L2-Data-Abstraction/index.html#data-semantics",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points far from each other in 3D space?\n\n\nVIZ"
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points far from each other in 3D space?\n\n\nVIZ"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-1",
     "href": "posts/L2-Data-Abstraction/index.html#data-semantics-1",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?\n\n\nVIZ"
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?\n\n\nVIZ"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-2",
     "href": "posts/L2-Data-Abstraction/index.html#data-semantics-2",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nFood shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month\n\n\nVIZ"
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nFood shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month\n\n\nVIZ"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-3",
     "href": "posts/L2-Data-Abstraction/index.html#data-semantics-3",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nBasil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service\n\n\nVIZ"
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nBasil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service\n\n\nVIZ"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-4",
     "href": "posts/L2-Data-Abstraction/index.html#data-semantics-4",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nLab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food\n\n\nVIZ"
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:\nLab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food\n\n\nVIZ"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#semantics",
@@ -1292,7 +1292,7 @@
     "href": "posts/L2-Data-Abstraction/index.html#semantics-for-data",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "SEMANTICS FOR DATA",
-    "text": "SEMANTICS FOR DATA\n\n\n\nSemantics\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”\n\n\n\n\nData Table\n\n\n\n\nITEM: Person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
+    "text": "SEMANTICS FOR DATA\n\n\n\n\n\n\nSemantics\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”\n\n\n\n\nData Table\n\n\n\n\nITEM: Person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#other-data-types",
@@ -1313,7 +1313,7 @@
     "href": "posts/L2-Data-Abstraction/index.html#dataset-types-tables",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "DATASET TYPES: TABLES",
-    "text": "DATASET TYPES: TABLES\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA UNIQUE key can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
+    "text": "DATASET TYPES: TABLES\n\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA UNIQUE key can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#flat-table-example",
@@ -1355,7 +1355,7 @@
     "href": "posts/L2-Data-Abstraction/index.html#spatial-fields-2",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "SPATIAL FIELDS 2",
-    "text": "SPATIAL FIELDS 2\n\n\n\n\nAttribute values associated w/ cells.\nCell contains value from continuous domain\n\n(eg temperature, pressure, wind velocity)\n\nMeasured or simulated.\nMajor concerns\n\nsampling:\n\nwhere attributes are measured\n\ninterpolation:\n\nhow to model attributes elsewhere\n\ngrid types"
+    "text": "SPATIAL FIELDS 2\n\n\n\n\n\n\n\nAttribute values associated w/ cells.\nCell contains value from continuous domain\n\n(eg temperature, pressure, wind velocity)\n\nMeasured or simulated.\nMajor concerns\n\nsampling:\n\nwhere attributes are measured\n\ninterpolation:\n\nhow to model attributes elsewhere\n\ngrid types"
   },
   {
     "objectID": "posts/L2-Data-Abstraction/index.html#spatial-fields-3",
@@ -1460,7 +1460,7 @@
     "href": "posts/L2-Data-Abstraction/index.html#summary",
     "title": "LECTURE 2 - DATA ABSTRACTION",
     "section": "SUMMARY",
-    "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\n\n\n\n\nCANVAS…HOME"
+    "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
   },
   {
     "objectID": "posts/E1-GrantExpenditures/Banner.html",
@@ -2035,5 +2035,68 @@
     "title": "BCB 520:: Foundations of Data Visualization",
     "section": "",
     "text": "The Functional Art\nGGSIDE! A companion to ggplot for making side plots! COOL!\nAwesome Quarto: A potentially interesting repository of Quarto documents, talks, tools, examples, etc.\nThe MockUp Blog - TABLES! This blog post explores the R packages gt and gtextras which will help us up our table game!\nRiffomonas Project: Pat Schloss is a Professor at the University of Michigan. The Riffomonas Project is his Youtube channel, which has HUNDREDS of easy to follow and amazingly useful instructional videos on R, ggplot, version control, and literate programming.\nDr. Tamara Munzner’s Website: It isn’t fancy, but Dr. Munzner’s website has tons of resources from her textbook and the many data visualization courses she has offered. This includes recorded lectures that align directly with the chapters of the text, much like what we are using.\nCheat Sheets: So many visual guides for many R packages, including the tidyverse, ggplot, dplyr, etc.\nLearning Vis Tools: Teaching Data Visualization Tutorials An interesting paper for discussion as we forge the structure for this class."
+  },
+  {
+    "objectID": "posts/A9-NetworksinObservable/index.html",
+    "href": "posts/A9-NetworksinObservable/index.html",
+    "title": "NETWORKS IN OBSERVABLE",
+    "section": "",
+    "text": "The QUARTO documentation on Observable can be found here.\nThe preamble of that document summarizes things nicely:\n\nQuarto includes native support for Observable JS, a set of enhancements to vanilla JavaScript created by Mike Bostock (also the author of D3). Observable JS is distinguished by its reactive runtime, which is especially well suited for interactive data exploration and analysis.\nThe creators of Observable JS (Observable, Inc.) run a hosted service at https://observablehq.com/ where you can create and publish notebooks. Additionally, you can use Observable JS (“OJS”) in standalone documents and websites via its core libraries. Quarto uses these libraries along with a compiler that is run at render time to enable the use of OJS within Quarto documents.\nOJS works in any Quarto document (plain markdown as well as Jupyter and Knitr documents). Just include your code in an {ojs} executable code block.\n\n\n\nI’m going to start by trying to replicate this observable notebook:\n\n\nCode\nviewof graph = {\n  const form = html`&lt;form style=\"font: 12px var(--sans-serif); display: flex; height: 33px; align-items: center;\"&gt;\n  &lt;label style=\"margin-right: 1em; display: inline-flex; align-items: center;\"&gt;\n    &lt;input type=\"radio\" name=\"radio\" value=\"1\" style=\"margin-right: 0.5em;\" checked&gt; Graph 1\n  &lt;/label&gt;\n  &lt;label style=\"margin-right: 1em; display: inline-flex; align-items: center;\"&gt;\n    &lt;input type=\"radio\" name=\"radio\" value=\"2\" style=\"margin-right: 0.5em;\"&gt; Graph 2\n  &lt;/label&gt;\n  &lt;label style=\"margin-right: 1em; display: inline-flex; align-items: center;\"&gt;\n    &lt;input type=\"radio\" name=\"radio\" value=\"3\" style=\"margin-right: 0.5em;\"&gt; Graph 3\n  &lt;/label&gt;\n&lt;/form&gt;`;\n  const graphs = {1: graph1, 2: graph2, 3: graph3};\n  const timeout = setInterval(() =&gt; {\n    form.value = graphs[form.radio.value = (+form.radio.value) % 3 + 1];\n    form.dispatchEvent(new CustomEvent(\"input\"));\n  }, 2000);\n  form.onchange = () =&gt; form.dispatchEvent(new CustomEvent(\"input\")); // Safari\n  form.oninput = event =&gt; { \n    if (event.isTrusted) clearInterval(timeout), form.onchange = null;\n    form.value = graphs[form.radio.value];\n  };\n  form.value = graphs[form.radio.value];\n  invalidation.then(() =&gt; clearInterval(timeout));\n  return form;\n}\n\n\n\n\nchart2 = {\n  const svg = d3.create(\"svg\")\n      .attr(\"width\", width)\n      .attr(\"height\", height)\n      .attr(\"viewBox\", [-width / 2, -height / 2, width, height]);\n\n  const simulation = d3.forceSimulation()\n      .force(\"charge\", d3.forceManyBody().strength(-1000))\n      .force(\"link\", d3.forceLink().id(d =&gt; d.id).distance(200))\n      .force(\"x\", d3.forceX())\n      .force(\"y\", d3.forceY())\n      .on(\"tick\", ticked);\n\n  let link = svg.append(\"g\")\n      .attr(\"stroke\", \"#000\")\n      .attr(\"stroke-width\", 1.5)\n    .selectAll(\"line\");\n\n  let node = svg.append(\"g\")\n      .attr(\"stroke\", \"#fff\")\n      .attr(\"stroke-width\", 1.5)\n    .selectAll(\"circle\");\n\n  function ticked() {\n    node.attr(\"cx\", d =&gt; d.x)\n        .attr(\"cy\", d =&gt; d.y)\n\n    link.attr(\"x1\", d =&gt; d.source.x)\n        .attr(\"y1\", d =&gt; d.source.y)\n        .attr(\"x2\", d =&gt; d.target.x)\n        .attr(\"y2\", d =&gt; d.target.y);\n  }\n\n  // Terminate the force layout when this cell re-runs.\n  invalidation.then(() =&gt; simulation.stop());\n\n  return Object.assign(svg.node(), {\n    update({nodes, links}) {\n\n      // Make a shallow copy to protect against mutation, while\n      // recycling old nodes to preserve position and velocity.\n      const old = new Map(node.data().map(d =&gt; [d.id, d]));\n      nodes = nodes.map(d =&gt; Object.assign(old.get(d.id) || {}, d));\n      links = links.map(d =&gt; Object.assign({}, d));\n\n      simulation.nodes(nodes);\n      simulation.force(\"link\").links(links);\n      simulation.alpha(1).restart();\n\n      node = node\n        .data(nodes, d =&gt; d.id)\n        .join(enter =&gt; enter.append(\"circle\")\n          .attr(\"r\", 8)\n          .attr(\"fill\", d =&gt; color(d.id)));\n\n      link = link\n        .data(links, d =&gt; `${d.source.id}\\t${d.target.id}`)\n        .join(\"line\");\n    }\n  });\n}\n\n\nupdate = chart2.update(graph)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe code chunk below shows us how Dr. Bostock creates the basic architecture of an EDGE LIST called links along with NODE LABELS called nodes. Have a close look at the structure. He is setting this up in a heirarchy very similar to a JSON file, which we will examine in EXAMPLE 2.\n\n\nCode\ngraph1 = ({\n  nodes: [\n    {id: \"a\"},\n    {id: \"b\"},\n    {id: \"c\"}\n  ],\n  links: []\n})\n\n\ngraph2 = ({\n  nodes: [\n    {id: \"a\"},\n    {id: \"b\"},\n    {id: \"c\"}\n  ],\n  links: [\n    {source: \"a\", target: \"b\"},\n    {source: \"b\", target: \"c\"},\n    {source: \"c\", target: \"a\"}\n  ]\n})\n\n\ngraph3 = ({\n  nodes: [\n    {id: \"a\"},\n    {id: \"b\"}\n  ],\n  links: [\n    {source: \"a\", target: \"b\"}\n  ]\n})\n\n\ncolor = d3.scaleOrdinal(d3.schemeTableau10)\n\nheight = 400\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChange the graph3 object so that it contains eight nodes called “Life Sciences”, “Physical Sciences”, “Heidi”, “Robyn”, “Konrad”, “Geraline”, “Lucas”, and “Yaotian”. Change the links object to reflect our shared understanding of those links.\n\n\n\nI honestly cannot believe this works! I mean… Hey! Look at this cool interactive network!\n\n\nCode\nchart = ForceGraph(miserables, {\n  nodeId: d =&gt; d.id,\n  nodeGroup: d =&gt; d.group,\n  nodeTitle: d =&gt; `${d.id}\\n${d.group}`,\n  linkStrokeWidth: l =&gt; Math.sqrt(l.value),\n  width,\n  height: 600,\n  invalidation // a promise to stop the simulation when the cell is re-run\n})\n\n\n\n\n\n\n\n\n\nThe first line of code in the chunk below defines the data object from a .json file called miserables.json. Have a look at this file within RStudio. Does the overall structure look familiar?\nCould we possibly replace the stupid data file about a stupid musical with something of our own design???\n\n\nCode\nmiserables = FileAttachment(\"miserables.json\").json()\n\n\n// Copyright 2021 Observable, Inc.\n// Released under the ISC license.\n// https://observablehq.com/@d3/force-directed-graph\nfunction ForceGraph({\n  nodes, // an iterable of node objects (typically [{id}, …])\n  links // an iterable of link objects (typically [{source, target}, …])\n}, {\n  nodeId = d =&gt; d.id, // given d in nodes, returns a unique identifier (string)\n  nodeGroup, // given d in nodes, returns an (ordinal) value for color\n  nodeGroups, // an array of ordinal values representing the node groups\n  nodeTitle, // given d in nodes, a title string\n  nodeFill = \"currentColor\", // node stroke fill (if not using a group color encoding)\n  nodeStroke = \"#fff\", // node stroke color\n  nodeStrokeWidth = 1.5, // node stroke width, in pixels\n  nodeStrokeOpacity = 1, // node stroke opacity\n  nodeRadius = 5, // node radius, in pixels\n  nodeStrength,\n  linkSource = ({source}) =&gt; source, // given d in links, returns a node identifier string\n  linkTarget = ({target}) =&gt; target, // given d in links, returns a node identifier string\n  linkStroke = \"#999\", // link stroke color\n  linkStrokeOpacity = 0.6, // link stroke opacity\n  linkStrokeWidth = 1.5, // given d in links, returns a stroke width in pixels\n  linkStrokeLinecap = \"round\", // link stroke linecap\n  linkStrength,\n  colors = d3.schemeTableau10, // an array of color strings, for the node groups\n  width = 640, // outer width, in pixels\n  height = 400, // outer height, in pixels\n  invalidation // when this promise resolves, stop the simulation\n} = {}) {\n  // Compute values.\n  const N = d3.map(nodes, nodeId).map(intern);\n  const LS = d3.map(links, linkSource).map(intern);\n  const LT = d3.map(links, linkTarget).map(intern);\n  if (nodeTitle === undefined) nodeTitle = (_, i) =&gt; N[i];\n  const T = nodeTitle == null ? null : d3.map(nodes, nodeTitle);\n  const G = nodeGroup == null ? null : d3.map(nodes, nodeGroup).map(intern);\n  const W = typeof linkStrokeWidth !== \"function\" ? null : d3.map(links, linkStrokeWidth);\n  const L = typeof linkStroke !== \"function\" ? null : d3.map(links, linkStroke);\n\n  // Replace the input nodes and links with mutable objects for the simulation.\n  nodes = d3.map(nodes, (_, i) =&gt; ({id: N[i]}));\n  links = d3.map(links, (_, i) =&gt; ({source: LS[i], target: LT[i]}));\n\n  // Compute default domains.\n  if (G && nodeGroups === undefined) nodeGroups = d3.sort(G);\n\n  // Construct the scales.\n  const color = nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, colors);\n\n  // Construct the forces.\n  const forceNode = d3.forceManyBody();\n  const forceLink = d3.forceLink(links).id(({index: i}) =&gt; N[i]);\n  if (nodeStrength !== undefined) forceNode.strength(nodeStrength);\n  if (linkStrength !== undefined) forceLink.strength(linkStrength);\n\n  const simulation = d3.forceSimulation(nodes)\n      .force(\"link\", forceLink)\n      .force(\"charge\", forceNode)\n      .force(\"center\",  d3.forceCenter())\n      .on(\"tick\", ticked);\n\n  const svg = d3.create(\"svg\")\n      .attr(\"width\", width)\n      .attr(\"height\", height)\n      .attr(\"viewBox\", [-width / 2, -height / 2, width, height])\n      .attr(\"style\", \"max-width: 100%; height: auto; height: intrinsic;\");\n\n  const link = svg.append(\"g\")\n      .attr(\"stroke\", typeof linkStroke !== \"function\" ? linkStroke : null)\n      .attr(\"stroke-opacity\", linkStrokeOpacity)\n      .attr(\"stroke-width\", typeof linkStrokeWidth !== \"function\" ? linkStrokeWidth : null)\n      .attr(\"stroke-linecap\", linkStrokeLinecap)\n    .selectAll(\"line\")\n    .data(links)\n    .join(\"line\");\n\n  const node = svg.append(\"g\")\n      .attr(\"fill\", nodeFill)\n      .attr(\"stroke\", nodeStroke)\n      .attr(\"stroke-opacity\", nodeStrokeOpacity)\n      .attr(\"stroke-width\", nodeStrokeWidth)\n    .selectAll(\"circle\")\n    .data(nodes)\n    .join(\"circle\")\n      .attr(\"r\", nodeRadius)\n      .call(drag(simulation));\n\n  if (W) link.attr(\"stroke-width\", ({index: i}) =&gt; W[i]);\n  if (L) link.attr(\"stroke\", ({index: i}) =&gt; L[i]);\n  if (G) node.attr(\"fill\", ({index: i}) =&gt; color(G[i]));\n  if (T) node.append(\"title\").text(({index: i}) =&gt; T[i]);\n  if (invalidation != null) invalidation.then(() =&gt; simulation.stop());\n\n  function intern(value) {\n    return value !== null && typeof value === \"object\" ? value.valueOf() : value;\n  }\n\n  function ticked() {\n    link\n      .attr(\"x1\", d =&gt; d.source.x)\n      .attr(\"y1\", d =&gt; d.source.y)\n      .attr(\"x2\", d =&gt; d.target.x)\n      .attr(\"y2\", d =&gt; d.target.y);\n\n    node\n      .attr(\"cx\", d =&gt; d.x)\n      .attr(\"cy\", d =&gt; d.y);\n  }\n\n  function drag(simulation) {    \n    function dragstarted(event) {\n      if (!event.active) simulation.alphaTarget(0.3).restart();\n      event.subject.fx = event.subject.x;\n      event.subject.fy = event.subject.y;\n    }\n    \n    function dragged(event) {\n      event.subject.fx = event.x;\n      event.subject.fy = event.y;\n    }\n    \n    function dragended(event) {\n      if (!event.active) simulation.alphaTarget(0);\n      event.subject.fx = null;\n      event.subject.fy = null;\n    }\n    \n    return d3.drag()\n      .on(\"start\", dragstarted)\n      .on(\"drag\", dragged)\n      .on(\"end\", dragended);\n  }\n\n  return Object.assign(svg.node(), {scales: {color}});\n}\n\n\nimport {howto} from \"@d3/example-components\"\n\nimport {Swatches} from \"@d3/color-legend\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat if we replaced the datafile by making our own json file??\n\n\nCode\nlibrary(jsonlite)\n\n# create data frames for nodes and links\nnodes &lt;- data.frame(\n  id = c(\"Barrie\", \"Ronald\", \"Cody\", \"Erick\", \"Jiyin\", \"Cthulhu\"),\n  group = c(1, 1, 1 , 2, 2, 3)\n)\n\nlinks &lt;- data.frame(\n  source = c(\"Barrie\", \"Ronald\", \"Cody\", \"Barrie\", \"Erick\", \"Jiyin\", \"Ronald\"),\n  target = c(\"Cthulhu\", \"Erick\", \"Jiyin\", \"Erick\", \"Cthulhu\", \"Ronald\", \"Cody\"),\n  value = c(1, 8, 10, 6, 1, 1, 1)\n)\n\n# convert data frames to JSON objects\nnodes_json &lt;- toJSON(list(nodes = nodes), pretty = TRUE)\nlinks_json &lt;- toJSON(list(links = links), pretty = TRUE)\n\n# merge JSON objects into one\njson &lt;- paste0( nodes_json, links_json)\n\n# write JSON object to file\nwrite(json, file = \"network_graph2.json\")\n\n\nOh god…. now go back and point the stuff to the stuff…\nAnyway…. here is where I want to go:\nAMAZING"
+  },
+  {
+    "objectID": "posts/A9-NetworksinObservable/index.html#example-1-basic-force-directed-graph",
+    "href": "posts/A9-NetworksinObservable/index.html#example-1-basic-force-directed-graph",
+    "title": "NETWORKS IN OBSERVABLE",
+    "section": "",
+    "text": "I’m going to start by trying to replicate this observable notebook:\n\n\nCode\nviewof graph = {\n  const form = html`&lt;form style=\"font: 12px var(--sans-serif); display: flex; height: 33px; align-items: center;\"&gt;\n  &lt;label style=\"margin-right: 1em; display: inline-flex; align-items: center;\"&gt;\n    &lt;input type=\"radio\" name=\"radio\" value=\"1\" style=\"margin-right: 0.5em;\" checked&gt; Graph 1\n  &lt;/label&gt;\n  &lt;label style=\"margin-right: 1em; display: inline-flex; align-items: center;\"&gt;\n    &lt;input type=\"radio\" name=\"radio\" value=\"2\" style=\"margin-right: 0.5em;\"&gt; Graph 2\n  &lt;/label&gt;\n  &lt;label style=\"margin-right: 1em; display: inline-flex; align-items: center;\"&gt;\n    &lt;input type=\"radio\" name=\"radio\" value=\"3\" style=\"margin-right: 0.5em;\"&gt; Graph 3\n  &lt;/label&gt;\n&lt;/form&gt;`;\n  const graphs = {1: graph1, 2: graph2, 3: graph3};\n  const timeout = setInterval(() =&gt; {\n    form.value = graphs[form.radio.value = (+form.radio.value) % 3 + 1];\n    form.dispatchEvent(new CustomEvent(\"input\"));\n  }, 2000);\n  form.onchange = () =&gt; form.dispatchEvent(new CustomEvent(\"input\")); // Safari\n  form.oninput = event =&gt; { \n    if (event.isTrusted) clearInterval(timeout), form.onchange = null;\n    form.value = graphs[form.radio.value];\n  };\n  form.value = graphs[form.radio.value];\n  invalidation.then(() =&gt; clearInterval(timeout));\n  return form;\n}\n\n\n\n\nchart2 = {\n  const svg = d3.create(\"svg\")\n      .attr(\"width\", width)\n      .attr(\"height\", height)\n      .attr(\"viewBox\", [-width / 2, -height / 2, width, height]);\n\n  const simulation = d3.forceSimulation()\n      .force(\"charge\", d3.forceManyBody().strength(-1000))\n      .force(\"link\", d3.forceLink().id(d =&gt; d.id).distance(200))\n      .force(\"x\", d3.forceX())\n      .force(\"y\", d3.forceY())\n      .on(\"tick\", ticked);\n\n  let link = svg.append(\"g\")\n      .attr(\"stroke\", \"#000\")\n      .attr(\"stroke-width\", 1.5)\n    .selectAll(\"line\");\n\n  let node = svg.append(\"g\")\n      .attr(\"stroke\", \"#fff\")\n      .attr(\"stroke-width\", 1.5)\n    .selectAll(\"circle\");\n\n  function ticked() {\n    node.attr(\"cx\", d =&gt; d.x)\n        .attr(\"cy\", d =&gt; d.y)\n\n    link.attr(\"x1\", d =&gt; d.source.x)\n        .attr(\"y1\", d =&gt; d.source.y)\n        .attr(\"x2\", d =&gt; d.target.x)\n        .attr(\"y2\", d =&gt; d.target.y);\n  }\n\n  // Terminate the force layout when this cell re-runs.\n  invalidation.then(() =&gt; simulation.stop());\n\n  return Object.assign(svg.node(), {\n    update({nodes, links}) {\n\n      // Make a shallow copy to protect against mutation, while\n      // recycling old nodes to preserve position and velocity.\n      const old = new Map(node.data().map(d =&gt; [d.id, d]));\n      nodes = nodes.map(d =&gt; Object.assign(old.get(d.id) || {}, d));\n      links = links.map(d =&gt; Object.assign({}, d));\n\n      simulation.nodes(nodes);\n      simulation.force(\"link\").links(links);\n      simulation.alpha(1).restart();\n\n      node = node\n        .data(nodes, d =&gt; d.id)\n        .join(enter =&gt; enter.append(\"circle\")\n          .attr(\"r\", 8)\n          .attr(\"fill\", d =&gt; color(d.id)));\n\n      link = link\n        .data(links, d =&gt; `${d.source.id}\\t${d.target.id}`)\n        .join(\"line\");\n    }\n  });\n}\n\n\nupdate = chart2.update(graph)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe code chunk below shows us how Dr. Bostock creates the basic architecture of an EDGE LIST called links along with NODE LABELS called nodes. Have a close look at the structure. He is setting this up in a heirarchy very similar to a JSON file, which we will examine in EXAMPLE 2.\n\n\nCode\ngraph1 = ({\n  nodes: [\n    {id: \"a\"},\n    {id: \"b\"},\n    {id: \"c\"}\n  ],\n  links: []\n})\n\n\ngraph2 = ({\n  nodes: [\n    {id: \"a\"},\n    {id: \"b\"},\n    {id: \"c\"}\n  ],\n  links: [\n    {source: \"a\", target: \"b\"},\n    {source: \"b\", target: \"c\"},\n    {source: \"c\", target: \"a\"}\n  ]\n})\n\n\ngraph3 = ({\n  nodes: [\n    {id: \"a\"},\n    {id: \"b\"}\n  ],\n  links: [\n    {source: \"a\", target: \"b\"}\n  ]\n})\n\n\ncolor = d3.scaleOrdinal(d3.schemeTableau10)\n\nheight = 400"
+  },
+  {
+    "objectID": "posts/A9-NetworksinObservable/index.html#task-1",
+    "href": "posts/A9-NetworksinObservable/index.html#task-1",
+    "title": "NETWORKS IN OBSERVABLE",
+    "section": "",
+    "text": "Change the graph3 object so that it contains eight nodes called “Life Sciences”, “Physical Sciences”, “Heidi”, “Robyn”, “Konrad”, “Geraline”, “Lucas”, and “Yaotian”. Change the links object to reflect our shared understanding of those links."
+  },
+  {
+    "objectID": "posts/A9-NetworksinObservable/index.html#example-2-interactive-force-directed-graph",
+    "href": "posts/A9-NetworksinObservable/index.html#example-2-interactive-force-directed-graph",
+    "title": "NETWORKS IN OBSERVABLE",
+    "section": "",
+    "text": "I honestly cannot believe this works! I mean… Hey! Look at this cool interactive network!\n\n\nCode\nchart = ForceGraph(miserables, {\n  nodeId: d =&gt; d.id,\n  nodeGroup: d =&gt; d.group,\n  nodeTitle: d =&gt; `${d.id}\\n${d.group}`,\n  linkStrokeWidth: l =&gt; Math.sqrt(l.value),\n  width,\n  height: 600,\n  invalidation // a promise to stop the simulation when the cell is re-run\n})\n\n\n\n\n\n\n\n\n\nThe first line of code in the chunk below defines the data object from a .json file called miserables.json. Have a look at this file within RStudio. Does the overall structure look familiar?\nCould we possibly replace the stupid data file about a stupid musical with something of our own design???\n\n\nCode\nmiserables = FileAttachment(\"miserables.json\").json()\n\n\n// Copyright 2021 Observable, Inc.\n// Released under the ISC license.\n// https://observablehq.com/@d3/force-directed-graph\nfunction ForceGraph({\n  nodes, // an iterable of node objects (typically [{id}, …])\n  links // an iterable of link objects (typically [{source, target}, …])\n}, {\n  nodeId = d =&gt; d.id, // given d in nodes, returns a unique identifier (string)\n  nodeGroup, // given d in nodes, returns an (ordinal) value for color\n  nodeGroups, // an array of ordinal values representing the node groups\n  nodeTitle, // given d in nodes, a title string\n  nodeFill = \"currentColor\", // node stroke fill (if not using a group color encoding)\n  nodeStroke = \"#fff\", // node stroke color\n  nodeStrokeWidth = 1.5, // node stroke width, in pixels\n  nodeStrokeOpacity = 1, // node stroke opacity\n  nodeRadius = 5, // node radius, in pixels\n  nodeStrength,\n  linkSource = ({source}) =&gt; source, // given d in links, returns a node identifier string\n  linkTarget = ({target}) =&gt; target, // given d in links, returns a node identifier string\n  linkStroke = \"#999\", // link stroke color\n  linkStrokeOpacity = 0.6, // link stroke opacity\n  linkStrokeWidth = 1.5, // given d in links, returns a stroke width in pixels\n  linkStrokeLinecap = \"round\", // link stroke linecap\n  linkStrength,\n  colors = d3.schemeTableau10, // an array of color strings, for the node groups\n  width = 640, // outer width, in pixels\n  height = 400, // outer height, in pixels\n  invalidation // when this promise resolves, stop the simulation\n} = {}) {\n  // Compute values.\n  const N = d3.map(nodes, nodeId).map(intern);\n  const LS = d3.map(links, linkSource).map(intern);\n  const LT = d3.map(links, linkTarget).map(intern);\n  if (nodeTitle === undefined) nodeTitle = (_, i) =&gt; N[i];\n  const T = nodeTitle == null ? null : d3.map(nodes, nodeTitle);\n  const G = nodeGroup == null ? null : d3.map(nodes, nodeGroup).map(intern);\n  const W = typeof linkStrokeWidth !== \"function\" ? null : d3.map(links, linkStrokeWidth);\n  const L = typeof linkStroke !== \"function\" ? null : d3.map(links, linkStroke);\n\n  // Replace the input nodes and links with mutable objects for the simulation.\n  nodes = d3.map(nodes, (_, i) =&gt; ({id: N[i]}));\n  links = d3.map(links, (_, i) =&gt; ({source: LS[i], target: LT[i]}));\n\n  // Compute default domains.\n  if (G && nodeGroups === undefined) nodeGroups = d3.sort(G);\n\n  // Construct the scales.\n  const color = nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, colors);\n\n  // Construct the forces.\n  const forceNode = d3.forceManyBody();\n  const forceLink = d3.forceLink(links).id(({index: i}) =&gt; N[i]);\n  if (nodeStrength !== undefined) forceNode.strength(nodeStrength);\n  if (linkStrength !== undefined) forceLink.strength(linkStrength);\n\n  const simulation = d3.forceSimulation(nodes)\n      .force(\"link\", forceLink)\n      .force(\"charge\", forceNode)\n      .force(\"center\",  d3.forceCenter())\n      .on(\"tick\", ticked);\n\n  const svg = d3.create(\"svg\")\n      .attr(\"width\", width)\n      .attr(\"height\", height)\n      .attr(\"viewBox\", [-width / 2, -height / 2, width, height])\n      .attr(\"style\", \"max-width: 100%; height: auto; height: intrinsic;\");\n\n  const link = svg.append(\"g\")\n      .attr(\"stroke\", typeof linkStroke !== \"function\" ? linkStroke : null)\n      .attr(\"stroke-opacity\", linkStrokeOpacity)\n      .attr(\"stroke-width\", typeof linkStrokeWidth !== \"function\" ? linkStrokeWidth : null)\n      .attr(\"stroke-linecap\", linkStrokeLinecap)\n    .selectAll(\"line\")\n    .data(links)\n    .join(\"line\");\n\n  const node = svg.append(\"g\")\n      .attr(\"fill\", nodeFill)\n      .attr(\"stroke\", nodeStroke)\n      .attr(\"stroke-opacity\", nodeStrokeOpacity)\n      .attr(\"stroke-width\", nodeStrokeWidth)\n    .selectAll(\"circle\")\n    .data(nodes)\n    .join(\"circle\")\n      .attr(\"r\", nodeRadius)\n      .call(drag(simulation));\n\n  if (W) link.attr(\"stroke-width\", ({index: i}) =&gt; W[i]);\n  if (L) link.attr(\"stroke\", ({index: i}) =&gt; L[i]);\n  if (G) node.attr(\"fill\", ({index: i}) =&gt; color(G[i]));\n  if (T) node.append(\"title\").text(({index: i}) =&gt; T[i]);\n  if (invalidation != null) invalidation.then(() =&gt; simulation.stop());\n\n  function intern(value) {\n    return value !== null && typeof value === \"object\" ? value.valueOf() : value;\n  }\n\n  function ticked() {\n    link\n      .attr(\"x1\", d =&gt; d.source.x)\n      .attr(\"y1\", d =&gt; d.source.y)\n      .attr(\"x2\", d =&gt; d.target.x)\n      .attr(\"y2\", d =&gt; d.target.y);\n\n    node\n      .attr(\"cx\", d =&gt; d.x)\n      .attr(\"cy\", d =&gt; d.y);\n  }\n\n  function drag(simulation) {    \n    function dragstarted(event) {\n      if (!event.active) simulation.alphaTarget(0.3).restart();\n      event.subject.fx = event.subject.x;\n      event.subject.fy = event.subject.y;\n    }\n    \n    function dragged(event) {\n      event.subject.fx = event.x;\n      event.subject.fy = event.y;\n    }\n    \n    function dragended(event) {\n      if (!event.active) simulation.alphaTarget(0);\n      event.subject.fx = null;\n      event.subject.fy = null;\n    }\n    \n    return d3.drag()\n      .on(\"start\", dragstarted)\n      .on(\"drag\", dragged)\n      .on(\"end\", dragended);\n  }\n\n  return Object.assign(svg.node(), {scales: {color}});\n}\n\n\nimport {howto} from \"@d3/example-components\"\n\nimport {Swatches} from \"@d3/color-legend\""
+  },
+  {
+    "objectID": "posts/A9-NetworksinObservable/index.html#task-2",
+    "href": "posts/A9-NetworksinObservable/index.html#task-2",
+    "title": "NETWORKS IN OBSERVABLE",
+    "section": "",
+    "text": "What if we replaced the datafile by making our own json file??\n\n\nCode\nlibrary(jsonlite)\n\n# create data frames for nodes and links\nnodes &lt;- data.frame(\n  id = c(\"Barrie\", \"Ronald\", \"Cody\", \"Erick\", \"Jiyin\", \"Cthulhu\"),\n  group = c(1, 1, 1 , 2, 2, 3)\n)\n\nlinks &lt;- data.frame(\n  source = c(\"Barrie\", \"Ronald\", \"Cody\", \"Barrie\", \"Erick\", \"Jiyin\", \"Ronald\"),\n  target = c(\"Cthulhu\", \"Erick\", \"Jiyin\", \"Erick\", \"Cthulhu\", \"Ronald\", \"Cody\"),\n  value = c(1, 8, 10, 6, 1, 1, 1)\n)\n\n# convert data frames to JSON objects\nnodes_json &lt;- toJSON(list(nodes = nodes), pretty = TRUE)\nlinks_json &lt;- toJSON(list(links = links), pretty = TRUE)\n\n# merge JSON objects into one\njson &lt;- paste0( nodes_json, links_json)\n\n# write JSON object to file\nwrite(json, file = \"network_graph2.json\")\n\n\nOh god…. now go back and point the stuff to the stuff…\nAnyway…. here is where I want to go:\nAMAZING"
+  },
+  {
+    "objectID": "posts/L5-ThumbRules/index.html",
+    "href": "posts/L5-ThumbRules/index.html",
+    "title": "LECTURE 5 - Rules of Thumb",
+    "section": "",
+    "text": "These are guidelines and considerations, not really absolute rules:\n\nWhen to use 3D? when to use 2D?\nWhen to use eyes instead of memory?\nWhen does immersion help?\nWhen to use overviews?\nHow long is too long?\nWhich comes first, form or function?"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html",
+    "href": "posts/L3-TaskAbstraction/index.html",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "",
+    "text": "Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html",
+    "href": "posts/L1-Intro/index.html",
+    "title": "LECTURE 1 - INTRO",
+    "section": "",
+    "text": "Department of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html",
+    "href": "posts/L2-Data-Abstraction/index.html",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "",
+    "text": "Computer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
   }
 ]
