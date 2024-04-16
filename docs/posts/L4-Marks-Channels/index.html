@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.550">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Barrie Robison">
+<meta name="dcterms.date" content="2024-02-01">
+<meta name="description" content="Just what is an IDIOM, anyway?">
+
+<title>BCB520 - LECTURE 4</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script type="module" src="../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">BCB520</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../syllabus.html"> 
+<span class="menu-text">SYLLABUS 2024</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">LECTURE 4</h1>
+            <p class="subtitle lead">Marks and Channels</p>
+                  <div>
+        <div class="description">
+          Just what is an <strong>IDIOM</strong>, anyway?
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Lecture</div>
+                <div class="quarto-category">DataViz</div>
+                <div class="quarto-category">Idiom</div>
+                <div class="quarto-category">Observable</div>
+                <div class="quarto-category">Tidyverse</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Barrie Robison </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 1, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#vad-model" id="toc-vad-model" class="nav-link active" data-scroll-target="#vad-model">VAD MODEL</a></li>
+  <li><a href="#understand-the-data" id="toc-understand-the-data" class="nav-link" data-scroll-target="#understand-the-data">UNDERSTAND THE DATA</a></li>
+  <li><a href="#understand-the-task" id="toc-understand-the-task" class="nav-link" data-scroll-target="#understand-the-task">UNDERSTAND THE TASK</a></li>
+  <li><a href="#visual-encoding" id="toc-visual-encoding" class="nav-link" data-scroll-target="#visual-encoding">VISUAL ENCODING</a></li>
+  <li><a href="#other-frameworks" id="toc-other-frameworks" class="nav-link" data-scroll-target="#other-frameworks">OTHER FRAMEWORKS</a></li>
+  <li><a href="#tidyverse" id="toc-tidyverse" class="nav-link" data-scroll-target="#tidyverse">TIDYVERSE</a></li>
+  <li><a href="#grammar-of-graphics" id="toc-grammar-of-graphics" class="nav-link" data-scroll-target="#grammar-of-graphics">GRAMMAR OF GRAPHICS</a></li>
+  <li><a href="#tufte" id="toc-tufte" class="nav-link" data-scroll-target="#tufte">TUFTE</a></li>
+  <li><a href="#analysis-framework" id="toc-analysis-framework" class="nav-link" data-scroll-target="#analysis-framework">ANALYSIS FRAMEWORK</a></li>
+  <li><a href="#encoding" id="toc-encoding" class="nav-link" data-scroll-target="#encoding">ENCODING</a></li>
+  <li><a href="#marks-for-items" id="toc-marks-for-items" class="nav-link" data-scroll-target="#marks-for-items">MARKS FOR ITEMS</a></li>
+  <li><a href="#marks-for-links" id="toc-marks-for-links" class="nav-link" data-scroll-target="#marks-for-links">MARKS FOR LINKS</a></li>
+  <li><a href="#observable-in-quarto" id="toc-observable-in-quarto" class="nav-link" data-scroll-target="#observable-in-quarto">OBSERVABLE IN QUARTO!</a></li>
+  <li><a href="#channels" id="toc-channels" class="nav-link" data-scroll-target="#channels">CHANNELS</a></li>
+  <li><a href="#this-is-important" id="toc-this-is-important" class="nav-link" data-scroll-target="#this-is-important">THIS IS IMPORTANT</a></li>
+  <li><a href="#visual-encoding-example" id="toc-visual-encoding-example" class="nav-link" data-scroll-target="#visual-encoding-example">VISUAL ENCODING EXAMPLE</a></li>
+  <li><a href="#analyze-the-marks-and-channels" id="toc-analyze-the-marks-and-channels" class="nav-link" data-scroll-target="#analyze-the-marks-and-channels">ANALYZE THE MARKS AND CHANNELS</a></li>
+  <li><a href="#redundant-encoding" id="toc-redundant-encoding" class="nav-link" data-scroll-target="#redundant-encoding">REDUNDANT ENCODING</a></li>
+  <li><a href="#wheat-growth-by-area" id="toc-wheat-growth-by-area" class="nav-link" data-scroll-target="#wheat-growth-by-area">WHEAT GROWTH BY AREA*</a></li>
+  <li><a href="#choosing-channels" id="toc-choosing-channels" class="nav-link" data-scroll-target="#choosing-channels">CHOOSING CHANNELS</a></li>
+  <li><a href="#expressiveness" id="toc-expressiveness" class="nav-link" data-scroll-target="#expressiveness">EXPRESSIVENESS</a></li>
+  <li><a href="#channel-effectiveness-rankings" id="toc-channel-effectiveness-rankings" class="nav-link" data-scroll-target="#channel-effectiveness-rankings">CHANNEL EFFECTIVENESS RANKINGS</a></li>
+  <li><a href="#grouping" id="toc-grouping" class="nav-link" data-scroll-target="#grouping">GROUPING</a></li>
+  <li><a href="#summary-so-far" id="toc-summary-so-far" class="nav-link" data-scroll-target="#summary-so-far">SUMMARY SO FAR</a></li>
+  <li><a href="#channel-effectiveness" id="toc-channel-effectiveness" class="nav-link" data-scroll-target="#channel-effectiveness">CHANNEL EFFECTIVENESS</a></li>
+  <li><a href="#accuracy-theory" id="toc-accuracy-theory" class="nav-link" data-scroll-target="#accuracy-theory">ACCURACY (THEORY)</a></li>
+  <li><a href="#accuracy-experimental" id="toc-accuracy-experimental" class="nav-link" data-scroll-target="#accuracy-experimental">ACCURACY (EXPERIMENTAL)</a></li>
+  <li><a href="#accuracy" id="toc-accuracy" class="nav-link" data-scroll-target="#accuracy">ACCURACY?</a></li>
+  <li><a href="#discriminability" id="toc-discriminability" class="nav-link" data-scroll-target="#discriminability">DISCRIMINABILITY</a></li>
+  <li><a href="#discriminability-and-colors" id="toc-discriminability-and-colors" class="nav-link" data-scroll-target="#discriminability-and-colors">DISCRIMINABILITY and COLORS</a></li>
+  <li><a href="#separability-vs-integrality" id="toc-separability-vs-integrality" class="nav-link" data-scroll-target="#separability-vs-integrality">SEPARABILITY VS INTEGRALITY</a></li>
+  <li><a href="#separability" id="toc-separability" class="nav-link" data-scroll-target="#separability">SEPARABILITY</a></li>
+  <li><a href="#popout" id="toc-popout" class="nav-link" data-scroll-target="#popout">POPOUT</a></li>
+  <li><a href="#popout-1" id="toc-popout-1" class="nav-link" data-scroll-target="#popout-1">POPOUT</a></li>
+  <li><a href="#popout-goes-the-weevil" id="toc-popout-goes-the-weevil" class="nav-link" data-scroll-target="#popout-goes-the-weevil">POPOUT GOES THE WEEVIL?</a></li>
+  <li><a href="#relative-vs-absolute-judgements" id="toc-relative-vs-absolute-judgements" class="nav-link" data-scroll-target="#relative-vs-absolute-judgements">RELATIVE VS ABSOLUTE JUDGEMENTS</a></li>
+  <li><a href="#relative-judgements" id="toc-relative-judgements" class="nav-link" data-scroll-target="#relative-judgements">RELATIVE JUDGEMENTS</a></li>
+  <li><a href="#relative-luminance-judgements" id="toc-relative-luminance-judgements" class="nav-link" data-scroll-target="#relative-luminance-judgements">RELATIVE LUMINANCE JUDGEMENTS</a></li>
+  <li><a href="#relative-color-judgements" id="toc-relative-color-judgements" class="nav-link" data-scroll-target="#relative-color-judgements">RELATIVE COLOR JUDGEMENTS</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="vad-model" class="level2">
+<h2 class="anchored" data-anchor-id="vad-model">VAD MODEL</h2>
+<p><img src="VADmodel.png" class="img-fluid"></p>
+</section>
+<section id="understand-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="understand-the-data">UNDERSTAND THE DATA</h2>
+<p>Computer-based visualization systems provide visual representations of <span class="red">datasets</span> designed to help people carry out tasks more effectively.</p>
+<p><img src="whatexpanded.png" class="absolute img-fluid" data-bottom="0" data-right="0" width="450"></p>
+<p><img src="what.png" class="absolute" data-bottom="0" height="400"></p>
+</section>
+<section id="understand-the-task" class="level2">
+<h2 class="anchored" data-anchor-id="understand-the-task">UNDERSTAND THE TASK</h2>
+<p>Computer-based visualization systems provide visual representations of datasets designed to <span class="red">help people carry out tasks</span> more effectively.</p>
+<p><img src="Whybig.png" class="absolute img-fluid" data-bottom="0" data-right="0" width="550"></p>
+<p><img src="Why.png" class="absolute" data-bottom="70" height="300"></p>
+</section>
+<section id="visual-encoding" class="level2">
+<h2 class="anchored" data-anchor-id="visual-encoding">VISUAL ENCODING</h2>
+<p>Computer-based visualization systems provide <span class="red">visual representations</span> of datasets designed to help people carry out tasks more effectively.</p>
+<p><img src="Howbig.png" class="absolute img-fluid" data-bottom="0" data-left="100" width="700"></p>
+</section>
+<section id="other-frameworks" class="level2">
+<h2 class="anchored" data-anchor-id="other-frameworks">OTHER FRAMEWORKS</h2>
+<ol type="1">
+<li>The Tidyverse</li>
+<li>The Grammar of Graphics</li>
+<li>Tufte</li>
+</ol>
+</section>
+<section id="tidyverse" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="tidyverse">TIDYVERSE</h2>
+<p><strong>R packages for data science:</strong></p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><a href="https://www.tidyverse.org">The tidyverse</a> is an opinionated collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures. The best way to explore and understand the tidyverse is with <a href="">cheetsheets</a>, like <a href="https://posit.co/wp-content/uploads/2022/10/tidyr.pdf">this one</a> for <code>tidyr</code>!</p>
+</div><div class="column" style="width:55%;">
+<p><img src="tidyverse.png" data-bottom="100" data-left="0" height="400"></p>
+</div>
+</div>
+</section>
+<section id="grammar-of-graphics" class="level2">
+<h2 class="anchored" data-anchor-id="grammar-of-graphics">GRAMMAR OF GRAPHICS</h2>
+<p>The <a href="https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf">ggplot2 cheatsheet</a>!</p>
+<div class="columns">
+<div class="column">
+<p><img src="ggplotbasics.png" class="img-fluid"></p>
+</div><div class="column">
+<p><img src="ggplottemplate.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="tufte" class="level2">
+<h2 class="anchored" data-anchor-id="tufte">TUFTE</h2>
+<p><a href="https://www.edwardtufte.com/tufte/">Tufte’s Website</a></p>
+<p><a href="https://quarto-dev.github.io/quarto-gallery/page-layout/tufte.html">A Quarto Page Layout Example</a></p>
+<p><img src="5-books-stacked.jpg" class="img-fluid"></p>
+</section>
+<section id="analysis-framework" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="analysis-framework">ANALYSIS FRAMEWORK</h2>
+<p>Four levels, three questions</p>
+<div class="columns">
+<div class="column" style="width:65%;">
+<ul>
+<li><strong>Domain</strong> situation defines the target users.</li>
+<li><strong>Abstraction</strong> translate from specifics of domain to vocabulary of vis
+<ul>
+<li><span class="red">WHAT</span> is shown? data abstraction</li>
+<li><span class="yellow">WHY</span> is the user looking at it? task abstraction</li>
+</ul></li>
+<li><strong>Idiom</strong> defines the visualization
+<ul>
+<li><span class="green">HOW</span> is it shown?
+<ul>
+<li>visual encoding idiom: how to draw</li>
+<li>interaction idiom: how to manipulate</li>
+</ul></li>
+</ul></li>
+<li><strong>Algorithm</strong> creates the visualization
+<ul>
+<li>evaluated with computational efficiency</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:35%;">
+<p><img src="VADwithwhatwhyhow.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="encoding" class="level2">
+<h2 class="anchored" data-anchor-id="encoding">ENCODING</h2>
+<p>We are defining the structure of the visualization (the idiom).</p>
+<p>To do this, we use <span class="red">MARKS</span> and <span class="red">CHANNELS</span>:</p>
+<ul>
+<li><p><span class="red">MARKS</span> represent <strong>ITEMS</strong> or <strong>LINKS</strong> (aka <strong>OBSERVATIONS</strong>)</p></li>
+<li><p><span class="red">CHANNELS</span> change the appearance of <strong>MARKS</strong> based on <strong>ATTRIBUTES</strong> (aka <strong>VARIABLES</strong>)</p></li>
+</ul>
+</section>
+<section id="marks-for-items" class="level2">
+<h2 class="anchored" data-anchor-id="marks-for-items">MARKS FOR ITEMS</h2>
+<p><img src="basicgeometric.png" class="img-fluid"></p>
+</section>
+<section id="marks-for-links" class="level2">
+<h2 class="anchored" data-anchor-id="marks-for-links">MARKS FOR LINKS</h2>
+<p><img src="marksforlinks.png" class="absolute" data-top="100" height="175"></p>
+<p><img src="bubblesets.png" class="absolute" data-top="300" data-left="0" height="250"> <span class="absolute" data-left="0" data-bottom="70"><a href="www.vialab.science.uoit.ca/portfolio/bubblesets">Bubblesets</a></span></p>
+<p><img src="forcedirected.png" class="absolute" data-top="300" data-left="330" height="250"> <span class="absolute" data-left="330" data-bottom="70"><a href="https://observablehq.com/@d3/force-directed-graph">Force Directed Graph</a></span></p>
+</section>
+<section id="observable-in-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="observable-in-quarto">OBSERVABLE IN QUARTO!</h2>
+<div class="cell" data-code-tools="true">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1" data-startfrom="143" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 142;"><span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>d3 <span class="op">=</span> <span class="pp">require</span>(<span class="st">"d3@7"</span>)</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>chart <span class="op">=</span> <span class="fu">ForceGraph</span>(miserables<span class="op">,</span> {</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>  <span class="dt">nodeId</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">id</span><span class="op">,</span></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>  <span class="dt">nodeGroup</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">group</span><span class="op">,</span></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>  <span class="dt">nodeTitle</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">id</span><span class="sc">}\n${</span>d<span class="op">.</span><span class="at">group</span><span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>  <span class="dt">linkStrokeWidth</span><span class="op">:</span> l <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sqrt</span>(l<span class="op">.</span><span class="at">value</span>)<span class="op">,</span></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>  width<span class="op">,</span></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>  invalidation <span class="co">// a promise to stop the simulation when the cell is re-run</span></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>miserables <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"miserables.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="co">// Copyright 2021 Observable, Inc.</span></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="co">// Released under the ISC license.</span></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="co">// https://observablehq.com/@d3/force-directed-graph</span></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">ForceGraph</span>({</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>  nodes<span class="op">,</span> <span class="co">// an iterable of node objects (typically [{id}, …])</span></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>  links <span class="co">// an iterable of link objects (typically [{source, target}, …])</span></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span> {</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>  nodeId <span class="op">=</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">id</span><span class="op">,</span> <span class="co">// given d in nodes, returns a unique identifier (string)</span></span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>  nodeGroup<span class="op">,</span> <span class="co">// given d in nodes, returns an (ordinal) value for color</span></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>  nodeGroups<span class="op">,</span> <span class="co">// an array of ordinal values representing the node groups</span></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>  nodeTitle<span class="op">,</span> <span class="co">// given d in nodes, a title string</span></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>  nodeFill <span class="op">=</span> <span class="st">"currentColor"</span><span class="op">,</span> <span class="co">// node stroke fill (if not using a group color encoding)</span></span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>  nodeStroke <span class="op">=</span> <span class="st">"#fff"</span><span class="op">,</span> <span class="co">// node stroke color</span></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>  nodeStrokeWidth <span class="op">=</span> <span class="fl">1.5</span><span class="op">,</span> <span class="co">// node stroke width, in pixels</span></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>  nodeStrokeOpacity <span class="op">=</span> <span class="dv">1</span><span class="op">,</span> <span class="co">// node stroke opacity</span></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>  nodeRadius <span class="op">=</span> <span class="dv">5</span><span class="op">,</span> <span class="co">// node radius, in pixels</span></span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>  nodeStrength<span class="op">,</span></span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>  linkSource <span class="op">=</span> ({source}) <span class="kw">=&gt;</span> source<span class="op">,</span> <span class="co">// given d in links, returns a node identifier string</span></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>  linkTarget <span class="op">=</span> ({target}) <span class="kw">=&gt;</span> target<span class="op">,</span> <span class="co">// given d in links, returns a node identifier string</span></span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>  linkStroke <span class="op">=</span> <span class="st">"#999"</span><span class="op">,</span> <span class="co">// link stroke color</span></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>  linkStrokeOpacity <span class="op">=</span> <span class="fl">0.6</span><span class="op">,</span> <span class="co">// link stroke opacity</span></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>  linkStrokeWidth <span class="op">=</span> <span class="fl">1.5</span><span class="op">,</span> <span class="co">// given d in links, returns a stroke width in pixels</span></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>  linkStrokeLinecap <span class="op">=</span> <span class="st">"round"</span><span class="op">,</span> <span class="co">// link stroke linecap</span></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>  linkStrength<span class="op">,</span></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>  colors <span class="op">=</span> d3<span class="op">.</span><span class="at">schemeTableau10</span><span class="op">,</span> <span class="co">// an array of color strings, for the node groups</span></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>  width <span class="op">=</span> <span class="dv">1000</span><span class="op">,</span> <span class="co">// outer width, in pixels</span></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>  height <span class="op">=</span> <span class="dv">1000</span><span class="op">,</span> <span class="co">// outer height, in pixels</span></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>  invalidation <span class="co">// when this promise resolves, stop the simulation</span></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>} <span class="op">=</span> {}) {</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Compute values.</span></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> N <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(nodes<span class="op">,</span> nodeId)<span class="op">.</span><span class="fu">map</span>(intern)<span class="op">;</span></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> LS <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(links<span class="op">,</span> linkSource)<span class="op">.</span><span class="fu">map</span>(intern)<span class="op">;</span></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> LT <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(links<span class="op">,</span> linkTarget)<span class="op">.</span><span class="fu">map</span>(intern)<span class="op">;</span></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (nodeTitle <span class="op">===</span> <span class="kw">undefined</span>) nodeTitle <span class="op">=</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> N[i]<span class="op">;</span></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> T <span class="op">=</span> nodeTitle <span class="op">==</span> <span class="kw">null</span> <span class="op">?</span> <span class="kw">null</span> <span class="op">:</span> d3<span class="op">.</span><span class="fu">map</span>(nodes<span class="op">,</span> nodeTitle)<span class="op">;</span></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> G <span class="op">=</span> nodeGroup <span class="op">==</span> <span class="kw">null</span> <span class="op">?</span> <span class="kw">null</span> <span class="op">:</span> d3<span class="op">.</span><span class="fu">map</span>(nodes<span class="op">,</span> nodeGroup)<span class="op">.</span><span class="fu">map</span>(intern)<span class="op">;</span></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> W <span class="op">=</span> <span class="kw">typeof</span> linkStrokeWidth <span class="op">!==</span> <span class="st">"function"</span> <span class="op">?</span> <span class="kw">null</span> <span class="op">:</span> d3<span class="op">.</span><span class="fu">map</span>(links<span class="op">,</span> linkStrokeWidth)<span class="op">;</span></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> L <span class="op">=</span> <span class="kw">typeof</span> linkStroke <span class="op">!==</span> <span class="st">"function"</span> <span class="op">?</span> <span class="kw">null</span> <span class="op">:</span> d3<span class="op">.</span><span class="fu">map</span>(links<span class="op">,</span> linkStroke)<span class="op">;</span></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Replace the input nodes and links with mutable objects for the simulation.</span></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>  nodes <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(nodes<span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> ({<span class="dt">id</span><span class="op">:</span> N[i]}))<span class="op">;</span></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>  links <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(links<span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> ({<span class="dt">source</span><span class="op">:</span> LS[i]<span class="op">,</span> <span class="dt">target</span><span class="op">:</span> LT[i]}))<span class="op">;</span></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Compute default domains.</span></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (G <span class="op">&amp;&amp;</span> nodeGroups <span class="op">===</span> <span class="kw">undefined</span>) nodeGroups <span class="op">=</span> d3<span class="op">.</span><span class="fu">sort</span>(G)<span class="op">;</span></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Construct the scales.</span></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> color <span class="op">=</span> nodeGroup <span class="op">==</span> <span class="kw">null</span> <span class="op">?</span> <span class="kw">null</span> <span class="op">:</span> d3<span class="op">.</span><span class="fu">scaleOrdinal</span>(nodeGroups<span class="op">,</span> colors)<span class="op">;</span></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Construct the forces.</span></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> forceNode <span class="op">=</span> d3<span class="op">.</span><span class="fu">forceManyBody</span>()<span class="op">;</span></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> forceLink <span class="op">=</span> d3<span class="op">.</span><span class="fu">forceLink</span>(links)<span class="op">.</span><span class="fu">id</span>(({<span class="dt">index</span><span class="op">:</span> i}) <span class="kw">=&gt;</span> N[i])<span class="op">;</span></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (nodeStrength <span class="op">!==</span> <span class="kw">undefined</span>) forceNode<span class="op">.</span><span class="fu">strength</span>(nodeStrength)<span class="op">;</span></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (linkStrength <span class="op">!==</span> <span class="kw">undefined</span>) forceLink<span class="op">.</span><span class="fu">strength</span>(linkStrength)<span class="op">;</span></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> simulation <span class="op">=</span> d3<span class="op">.</span><span class="fu">forceSimulation</span>(nodes)</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">force</span>(<span class="st">"link"</span><span class="op">,</span> forceLink)</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">force</span>(<span class="st">"charge"</span><span class="op">,</span> forceNode)</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">force</span>(<span class="st">"center"</span><span class="op">,</span>  d3<span class="op">.</span><span class="fu">forceCenter</span>())</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">on</span>(<span class="st">"tick"</span><span class="op">,</span> ticked)<span class="op">;</span></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> svg <span class="op">=</span> d3<span class="op">.</span><span class="fu">create</span>(<span class="st">"svg"</span>)</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"width"</span><span class="op">,</span> width)</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"height"</span><span class="op">,</span> height)</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"viewBox"</span><span class="op">,</span> [<span class="op">-</span>width <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> <span class="op">-</span>height <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> width<span class="op">,</span> height])</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"style"</span><span class="op">,</span> <span class="st">"max-width: 100%; height: auto; height: intrinsic;"</span>)<span class="op">;</span></span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> link <span class="op">=</span> svg<span class="op">.</span><span class="fu">append</span>(<span class="st">"g"</span>)</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke"</span><span class="op">,</span> <span class="kw">typeof</span> linkStroke <span class="op">!==</span> <span class="st">"function"</span> <span class="op">?</span> linkStroke <span class="op">:</span> <span class="kw">null</span>)</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-opacity"</span><span class="op">,</span> linkStrokeOpacity)</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> <span class="kw">typeof</span> linkStrokeWidth <span class="op">!==</span> <span class="st">"function"</span> <span class="op">?</span> linkStrokeWidth <span class="op">:</span> <span class="kw">null</span>)</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-linecap"</span><span class="op">,</span> linkStrokeLinecap)</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">"line"</span>)</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">data</span>(links)</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">join</span>(<span class="st">"line"</span>)<span class="op">;</span></span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> node <span class="op">=</span> svg<span class="op">.</span><span class="fu">append</span>(<span class="st">"g"</span>)</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> nodeFill)</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke"</span><span class="op">,</span> nodeStroke)</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-opacity"</span><span class="op">,</span> nodeStrokeOpacity)</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> nodeStrokeWidth)</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">"circle"</span>)</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">data</span>(nodes)</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">join</span>(<span class="st">"circle"</span>)</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"r"</span><span class="op">,</span> nodeRadius)</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">call</span>(<span class="fu">drag</span>(simulation))<span class="op">;</span></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (W) link<span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> ({<span class="dt">index</span><span class="op">:</span> i}) <span class="kw">=&gt;</span> W[i])<span class="op">;</span></span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (L) link<span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke"</span><span class="op">,</span> ({<span class="dt">index</span><span class="op">:</span> i}) <span class="kw">=&gt;</span> L[i])<span class="op">;</span></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (G) node<span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> ({<span class="dt">index</span><span class="op">:</span> i}) <span class="kw">=&gt;</span> <span class="fu">color</span>(G[i]))<span class="op">;</span></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (T) node<span class="op">.</span><span class="fu">append</span>(<span class="st">"title"</span>)<span class="op">.</span><span class="fu">text</span>(({<span class="dt">index</span><span class="op">:</span> i}) <span class="kw">=&gt;</span> T[i])<span class="op">;</span></span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (invalidation <span class="op">!=</span> <span class="kw">null</span>) invalidation<span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span> simulation<span class="op">.</span><span class="fu">stop</span>())<span class="op">;</span></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">intern</span>(value) {</span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> value <span class="op">!==</span> <span class="kw">null</span> <span class="op">&amp;&amp;</span> <span class="kw">typeof</span> value <span class="op">===</span> <span class="st">"object"</span> <span class="op">?</span> value<span class="op">.</span><span class="fu">valueOf</span>() <span class="op">:</span> value<span class="op">;</span></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">ticked</span>() {</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>    link</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"x1"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">source</span><span class="op">.</span><span class="at">x</span>)</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"y1"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">source</span><span class="op">.</span><span class="at">y</span>)</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"x2"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">x</span>)</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"y2"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">y</span>)<span class="op">;</span></span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>    node</span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"cx"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">x</span>)</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"cy"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">y</span>)<span class="op">;</span></span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">drag</span>(simulation) {    </span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">dragstarted</span>(<span class="bu">event</span>) {</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="op">!</span><span class="bu">event</span><span class="op">.</span><span class="at">active</span>) simulation<span class="op">.</span><span class="fu">alphaTarget</span>(<span class="fl">0.3</span>)<span class="op">.</span><span class="fu">restart</span>()<span class="op">;</span></span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>      <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">fx</span> <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">x</span><span class="op">;</span></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>      <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">fy</span> <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">y</span><span class="op">;</span></span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">dragged</span>(<span class="bu">event</span>) {</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>      <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">fx</span> <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">x</span><span class="op">;</span></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>      <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">fy</span> <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">y</span><span class="op">;</span></span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">dragended</span>(<span class="bu">event</span>) {</span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="op">!</span><span class="bu">event</span><span class="op">.</span><span class="at">active</span>) simulation<span class="op">.</span><span class="fu">alphaTarget</span>(<span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>      <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">fx</span> <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>      <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">fy</span> <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> d3<span class="op">.</span><span class="fu">drag</span>()</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">on</span>(<span class="st">"start"</span><span class="op">,</span> dragstarted)</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">on</span>(<span class="st">"drag"</span><span class="op">,</span> dragged)</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">on</span>(<span class="st">"end"</span><span class="op">,</span> dragended)<span class="op">;</span></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">assign</span>(svg<span class="op">.</span><span class="fu">node</span>()<span class="op">,</span> {<span class="dt">scales</span><span class="op">:</span> {color}})<span class="op">;</span></span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {howto} <span class="im">from</span> <span class="st">"@d3/example-components"</span></span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {Swatches} <span class="im">from</span> <span class="st">"@d3/color-legend"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="channels" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="channels">CHANNELS</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li><strong>CHANNELS</strong> control the appearance of <strong>MARKS</strong>.</li>
+<li>They are proportional to or based on <strong>ATTRIBUTES</strong> (aka <strong>VARIABLES</strong>).</li>
+<li>Their properties differ in the type and amount of information that can be conveyed to the human perceptual system.</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><img src="channels.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="this-is-important" class="level2">
+<h2 class="anchored" data-anchor-id="this-is-important">THIS IS IMPORTANT</h2>
+<p><strong>Channel properties differ in the type and amount of information that can be conveyed to the human perceptual system.</strong></p>
+</section>
+<section id="visual-encoding-example" class="level2">
+<h2 class="anchored" data-anchor-id="visual-encoding-example">VISUAL ENCODING EXAMPLE</h2>
+<p>Let’s analyze the idiom structures below in terms of marks and channels.</p>
+<p><img src="simpleencode.png" class="img-fluid"></p>
+</section>
+<section id="analyze-the-marks-and-channels" class="level2">
+<h2 class="anchored" data-anchor-id="analyze-the-marks-and-channels">ANALYZE THE MARKS AND CHANNELS</h2>
+<p>Marks are defined by the <strong>ITEMS</strong> or <strong>OBSERVATIONS</strong> they represent.</p>
+<p>Channels are defined by the <span class="red">visually detectable properties</span> that are mapped on to <strong>ATTRIBUTES</strong> or <strong>VARIABLES</strong>.</p>
+<div>
+
+</div>
+<div id="markschannels" class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Konrad.png" class="img-fluid figure-img"></p>
+<figcaption>Konrad’s Trees</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Robyn.png" class="img-fluid figure-img"></p>
+<figcaption>Robyn’s Books</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Yaotiandensity.png" class="img-fluid figure-img"></p>
+<figcaption>Yaotian’s Wheat</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="redundant-encoding" class="level2">
+<h2 class="anchored" data-anchor-id="redundant-encoding">REDUNDANT ENCODING</h2>
+<div class="columns">
+<div class="column">
+<p>Uses multiple channels for the same attribute.</p>
+<ul>
+<li>Sends a stronger message</li>
+<li>Uses up channels</li>
+<li>Bonus points if you can identify <strong>BOTH</strong> channels in this figure!</li>
+</ul>
+</div><div class="column">
+<p><img src="lengthluminance.png" class="absolute" data-right="0" data-bottom="50" height="400"></p>
+</div>
+</div>
+</section>
+<section id="wheat-growth-by-area" class="level2">
+<h2 class="anchored" data-anchor-id="wheat-growth-by-area">WHEAT GROWTH BY AREA*</h2>
+<p>Both of Yaotian’s plots contain <strong>Redundant Encoding</strong>. Is this approach equally valuable for both plots?</p>
+<div>
+
+</div>
+<div id="wheatgrowth" class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="Yaotianboxplot.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="Yaotiandensity.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="choosing-channels" class="level2">
+<h2 class="anchored" data-anchor-id="choosing-channels">CHOOSING CHANNELS</h2>
+<ul>
+<li><span class="red">EXPRESSIVENESS</span>
+<ul>
+<li>The visual encoding should express all of, and only, the information in the dataset attributes.</li>
+</ul></li>
+<li><span class="red">EFFECTIVENESS</span>
+<ul>
+<li>Channels differ in accuracy of perception.</li>
+<li>The importance of the attribute should match the salience of the channel (its noticability).</li>
+</ul></li>
+</ul>
+</section>
+<section id="expressiveness" class="level2">
+<h2 class="anchored" data-anchor-id="expressiveness">EXPRESSIVENESS</h2>
+<p>The advantages and disadvantages of jitter plots. How might this relate to the idea of expressiveness?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Heidisingle.png" class="img-fluid figure-img"></p>
+<figcaption>Heidi’s Cytoswine Data</figcaption>
+</figure>
+</div>
+<p><span class="red">EXPRESSIVENESS</span>: The visual encoding should express all of, and only, the information in the dataset attributes.</p>
+</section>
+<section id="channel-effectiveness-rankings" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="channel-effectiveness-rankings">CHANNEL EFFECTIVENESS RANKINGS</h2>
+<p><img src="ChannelRank.png" class="img-fluid"></p>
+<p><span class="absolute" data-bottom="20" data-right="0" width="300">Note that spatial position ranks high for both types of channels.</span></p>
+</section>
+<section id="grouping" class="level2">
+<h2 class="anchored" data-anchor-id="grouping">GROUPING</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Containment</li>
+<li>Connection</li>
+<li>Proximity
+<ul>
+<li>Same spatial region.</li>
+</ul></li>
+<li>Similarity
+<ul>
+<li>Same values as other channels.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img src="marksforlinks.png" class="img-fluid"></p>
+<p><img src="IdentityChannels.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="summary-so-far" class="level2">
+<h2 class="anchored" data-anchor-id="summary-so-far">SUMMARY SO FAR</h2>
+<p><img src="basicgeometric.png" class="absolute" data-left="0" data-top="100" height="100"></p>
+<p><img src="marksforlinks.png" class="absolute" data-right="0" data-top="100" height="100"></p>
+<p><img src="ChannelRank.png" class="absolute img-fluid" data-bottom="0" data-right="100" width="650"></p>
+</section>
+<section id="channel-effectiveness" class="level2">
+<h2 class="anchored" data-anchor-id="channel-effectiveness">CHANNEL EFFECTIVENESS</h2>
+<ul>
+<li><span class="red">Accuracy:</span> how precisely can we tell the difference between encoded items?</li>
+<li><span class="red">Discriminability:</span> how many unique steps can we perceive?</li>
+<li><span class="red">Separability:</span> is our ability to use this channel affected by another one?</li>
+<li><span class="red">Popout:</span> can things jump out using this channel?</li>
+</ul>
+</section>
+<section id="accuracy-theory" class="level2">
+<h2 class="anchored" data-anchor-id="accuracy-theory">ACCURACY (THEORY)</h2>
+<p>Steven’s Psychophisical Power Law: <span class="math inline">\(S=I^N\)</span></p>
+<div class="columns r-fit-text">
+<div class="column" style="width:80%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-revealjs/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:20%;">
+<p><span class="fragment"><strong>LENGTH (N=1)</strong></span></p>
+<p><span class="red">ELECTRIC SHOCK (N=3.5)</span></p>
+<p><span class="blue">SATURATION (N=1.7)</span></p>
+<p><span class="purple">AREA (N=0.7)</span></p>
+<p><span class="yellow">BRIGHTNESS (N=0.5)</span></p>
+</div>
+</div>
+</section>
+<section id="accuracy-experimental" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="accuracy-experimental">ACCURACY (EXPERIMENTAL)</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img src="ClevelandandMcGill.png" class="img-fluid"></p>
+</div><div class="column" style="width:40%;">
+<p>[<a href="https://www.jstor.org/stable/2288400">Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods</a>]</p>
+</div>
+</div>
+</section>
+<section id="accuracy" class="level2">
+<h2 class="anchored" data-anchor-id="accuracy">ACCURACY?</h2>
+<p>Depends on the task. Which genre has the most game titles? Which genres are the top 4 in terms of game titles? Are there more Puzzle games than Strategy games?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Geraline.png" class="img-fluid figure-img"></p>
+<figcaption>Geraline’s Video Games</figcaption>
+</figure>
+</div>
+</section>
+<section id="discriminability" class="level2">
+<h2 class="anchored" data-anchor-id="discriminability">DISCRIMINABILITY</h2>
+<p>How many usable steps are in the channel? Are the differences between items perceptible to the human as intended?</p>
+<p><img src="linewidths.png" class="img-fluid"></p>
+</section>
+<section id="discriminability-and-colors" class="level2">
+<h2 class="anchored" data-anchor-id="discriminability-and-colors">DISCRIMINABILITY and COLORS</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="geralineplatform.png" class="img-fluid figure-img"></p>
+<figcaption>Geraline’s Gaming Platforms</figcaption>
+</figure>
+</div>
+</section>
+<section id="separability-vs-integrality" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="separability-vs-integrality">SEPARABILITY VS INTEGRALITY</h2>
+<p>Separable channels are orthogonal and independent. Integral channels are inextricably combined. Attempts to encode different information with integral channels creates <span class="red">Interference</span>.</p>
+<p><img src="sepandint.png" class="img-fluid"></p>
+<div class="caption">
+<p><strong>Figure 5.10.</strong> Pairs of visual channels fall along a continuum from fully separable to intrinsically integral. Color and location are separable channels well suited to encode different data attributes for two different groupings that can be selectively attended to. However, size interacts with hue, which is harder to perceive for small objects. The horizontal size and and vertical size channels are automatically fused into an integrated perception of area, yielding three groups. Attempts to code separate information along the red and green axes of the RGB color space fail, because we simply perceive four different hues.</p>
+</div>
+</section>
+<section id="separability" class="level2">
+<h2 class="anchored" data-anchor-id="separability">SEPARABILITY</h2>
+<p><img src="Yaotianboxplot.png" class="img-fluid"></p>
+<p>Redundancy may be desirable, but <strong>area</strong> interferes with <strong>hue</strong>, with larger shapes having more visual salience.</p>
+</section>
+<section id="popout" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="popout">POPOUT</h2>
+<p><strong>VISUAL POPOUT is often called preattentive processing or tunable detection.</strong></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><strong>find the <span class="red">red</span> dot! How long does it take?</strong></p>
+<p>Popout results from our low-level visual system performing massively parallel processing on certain visual channels, eliminating the need for the viewer to consciously direct attention to items one by one (serial search).</p>
+<div class="caption">
+<p><strong>Figure 5.11. Visual popout.</strong> (a) The red circle pops out from a small set of blue circles. (b) The red circle pops out from a large set of blue circles just as quickly. (c) The red circle also pops out from a small set of square shapes, although a bit slower than with color. (d) The red circle also pops out of a large set of red squares. (e) The red circle does not take long to find from a small set of mixed shapes and colors. (f) The red circle does not pop out from a large set of red squares and blue circles, and it can only be found by searching one by one through all the objects.</p>
+</div>
+</div><div class="column" style="width:40%;">
+<p><img src="popout.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="popout-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="popout-1">POPOUT</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>Many channels are compatible with preattentive processing and facilitate popout:</p>
+<ul>
+<li>tilt</li>
+<li>size</li>
+<li>shape</li>
+<li>proximity</li>
+<li>shadow direction</li>
+</ul>
+<p>But not all!</p>
+<ul>
+<li>Example: parallel line pairs do not pop out from tilted pairs.</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img src="popout2.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="popout-goes-the-weevil" class="level2">
+<h2 class="anchored" data-anchor-id="popout-goes-the-weevil">POPOUT GOES THE WEEVIL?</h2>
+<div>
+
+</div>
+<div id="deadweevils" class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Lucaspretreat.png" class="img-fluid figure-img"></p>
+<figcaption>Lucas Weevils before chemicals</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lucas35dpa.png" class="img-fluid figure-img"></p>
+<figcaption>Lucas Weevils after chemicals</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="relative-vs-absolute-judgements" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="relative-vs-absolute-judgements">RELATIVE VS ABSOLUTE JUDGEMENTS</h2>
+<p>The human perceptual system is fundamentally based on relative judgements, not absolute ones. This is why accuracy increases with common frame/scale and alignment.</p>
+<p><span class="red">Weber’s Law:</span> The detectable difference in stimulus intensity <span class="math inline">\(I\)</span> as a fixed percentage <span class="math inline">\(K\)</span> of the object magnitude: <span class="math inline">\(dI/I=K\)</span> .</p>
+<p><img src="reljudge.png" class="img-fluid"></p>
+<p>The filled rectangles differ in length by 1:9, and it is therefore difficult to detect the difference without aligment. The white rectangles differ in length by 1:2, it is easier to see this difference even when the objects are unaligned.</p>
+</section>
+<section id="relative-judgements" class="level2">
+<h2 class="anchored" data-anchor-id="relative-judgements">RELATIVE JUDGEMENTS</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Heidistack.png" class="img-fluid figure-img"></p>
+<figcaption>Heidi’s Microbiomes</figcaption>
+</figure>
+</div>
+</section>
+<section id="relative-luminance-judgements" class="level2">
+<h2 class="anchored" data-anchor-id="relative-luminance-judgements">RELATIVE LUMINANCE JUDGEMENTS</h2>
+<p>Human perception of luminance is completely contextual, and is based on contrast with surrounding colors.</p>
+<p><img src="luminance1.jpg" class="absolute img-fluid" data-bottom="100" data-left="0" width="450"></p>
+<p><img src="luminance2.jpg" class="absolute img-fluid" data-bottom="100" data-right="0" width="450"></p>
+</section>
+<section id="relative-color-judgements" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="relative-color-judgements">RELATIVE COLOR JUDGEMENTS</h2>
+<p>Our visual system evolved to provide color constancy so that the same surface is identifiable across a broad set of illumination conditions, even though a physical light meter would yield very different readings. While the visual system works very well in natural environments, many of its mechanisms work against simple approaches to visually encoding information with color.</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="colorjudge.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="colorjudge2.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<div class="caption">
+<p><strong>Figure 5.15 shows two colorful cubes.</strong> In Figure 5.15(a) corresponding squares both appear to be red. In Figure 5.15(b), masks show that the tile color in the image apparently illuminated by a yellowish light source is actually orange, and for the bluish light the tiles are actually purple.</p>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImQzID0gcmVxdWlyZShcImQzQDdcIilcblxuXG5jaGFydCA9IEZvcmNlR3JhcGgobWlzZXJhYmxlcywge1xuICBub2RlSWQ6IGQgPT4gZC5pZCxcbiAgbm9kZUdyb3VwOiBkID0+IGQuZ3JvdXAsXG4gIG5vZGVUaXRsZTogZCA9PiBgJHtkLmlkfVxcbiR7ZC5ncm91cH1gLFxuICBsaW5rU3Ryb2tlV2lkdGg6IGwgPT4gTWF0aC5zcXJ0KGwudmFsdWUpLFxuICB3aWR0aCxcbiAgaGVpZ2h0OiAxMDAwLFxuICBpbnZhbGlkYXRpb24gLy8gYSBwcm9taXNlIHRvIHN0b3AgdGhlIHNpbXVsYXRpb24gd2hlbiB0aGUgY2VsbCBpcyByZS1ydW5cbn0pXG5cblxubWlzZXJhYmxlcyA9IEZpbGVBdHRhY2htZW50KFwibWlzZXJhYmxlcy5qc29uXCIpLmpzb24oKVxuXG5cbi8vIENvcHlyaWdodCAyMDIxIE9ic2VydmFibGUsIEluYy5cbi8vIFJlbGVhc2VkIHVuZGVyIHRoZSBJU0MgbGljZW5zZS5cbi8vIGh0dHBzOi8vb2JzZXJ2YWJsZWhxLmNvbS9AZDMvZm9yY2UtZGlyZWN0ZWQtZ3JhcGhcbmZ1bmN0aW9uIEZvcmNlR3JhcGgoe1xuICBub2RlcywgLy8gYW4gaXRlcmFibGUgb2Ygbm9kZSBvYmplY3RzICh0eXBpY2FsbHkgW3tpZH0sIOKApl0pXG4gIGxpbmtzIC8vIGFuIGl0ZXJhYmxlIG9mIGxpbmsgb2JqZWN0cyAodHlwaWNhbGx5IFt7c291cmNlLCB0YXJnZXR9LCDigKZdKVxufSwge1xuICBub2RlSWQgPSBkID0+IGQuaWQsIC8vIGdpdmVuIGQgaW4gbm9kZXMsIHJldHVybnMgYSB1bmlxdWUgaWRlbnRpZmllciAoc3RyaW5nKVxuICBub2RlR3JvdXAsIC8vIGdpdmVuIGQgaW4gbm9kZXMsIHJldHVybnMgYW4gKG9yZGluYWwpIHZhbHVlIGZvciBjb2xvclxuICBub2RlR3JvdXBzLCAvLyBhbiBhcnJheSBvZiBvcmRpbmFsIHZhbHVlcyByZXByZXNlbnRpbmcgdGhlIG5vZGUgZ3JvdXBzXG4gIG5vZGVUaXRsZSwgLy8gZ2l2ZW4gZCBpbiBub2RlcywgYSB0aXRsZSBzdHJpbmdcbiAgbm9kZUZpbGwgPSBcImN1cnJlbnRDb2xvclwiLCAvLyBub2RlIHN0cm9rZSBmaWxsIChpZiBub3QgdXNpbmcgYSBncm91cCBjb2xvciBlbmNvZGluZylcbiAgbm9kZVN0cm9rZSA9IFwiI2ZmZlwiLCAvLyBub2RlIHN0cm9rZSBjb2xvclxuICBub2RlU3Ryb2tlV2lkdGggPSAxLjUsIC8vIG5vZGUgc3Ryb2tlIHdpZHRoLCBpbiBwaXhlbHNcbiAgbm9kZVN0cm9rZU9wYWNpdHkgPSAxLCAvLyBub2RlIHN0cm9rZSBvcGFjaXR5XG4gIG5vZGVSYWRpdXMgPSA1LCAvLyBub2RlIHJhZGl1cywgaW4gcGl4ZWxzXG4gIG5vZGVTdHJlbmd0aCxcbiAgbGlua1NvdXJjZSA9ICh7c291cmNlfSkgPT4gc291cmNlLCAvLyBnaXZlbiBkIGluIGxpbmtzLCByZXR1cm5zIGEgbm9kZSBpZGVudGlmaWVyIHN0cmluZ1xuICBsaW5rVGFyZ2V0ID0gKHt0YXJnZXR9KSA9PiB0YXJnZXQsIC8vIGdpdmVuIGQgaW4gbGlua3MsIHJldHVybnMgYSBub2RlIGlkZW50aWZpZXIgc3RyaW5nXG4gIGxpbmtTdHJva2UgPSBcIiM5OTlcIiwgLy8gbGluayBzdHJva2UgY29sb3JcbiAgbGlua1N0cm9rZU9wYWNpdHkgPSAwLjYsIC8vIGxpbmsgc3Ryb2tlIG9wYWNpdHlcbiAgbGlua1N0cm9rZVdpZHRoID0gMS41LCAvLyBnaXZlbiBkIGluIGxpbmtzLCByZXR1cm5zIGEgc3Ryb2tlIHdpZHRoIGluIHBpeGVsc1xuICBsaW5rU3Ryb2tlTGluZWNhcCA9IFwicm91bmRcIiwgLy8gbGluayBzdHJva2UgbGluZWNhcFxuICBsaW5rU3RyZW5ndGgsXG4gIGNvbG9ycyA9IGQzLnNjaGVtZVRhYmxlYXUxMCwgLy8gYW4gYXJyYXkgb2YgY29sb3Igc3RyaW5ncywgZm9yIHRoZSBub2RlIGdyb3Vwc1xuICB3aWR0aCA9IDEwMDAsIC8vIG91dGVyIHdpZHRoLCBpbiBwaXhlbHNcbiAgaGVpZ2h0ID0gMTAwMCwgLy8gb3V0ZXIgaGVpZ2h0LCBpbiBwaXhlbHNcbiAgaW52YWxpZGF0aW9uIC8vIHdoZW4gdGhpcyBwcm9taXNlIHJlc29sdmVzLCBzdG9wIHRoZSBzaW11bGF0aW9uXG59ID0ge30pIHtcbiAgLy8gQ29tcHV0ZSB2YWx1ZXMuXG4gIGNvbnN0IE4gPSBkMy5tYXAobm9kZXMsIG5vZGVJZCkubWFwKGludGVybik7XG4gIGNvbnN0IExTID0gZDMubWFwKGxpbmtzLCBsaW5rU291cmNlKS5tYXAoaW50ZXJuKTtcbiAgY29uc3QgTFQgPSBkMy5tYXAobGlua3MsIGxpbmtUYXJnZXQpLm1hcChpbnRlcm4pO1xuICBpZiAobm9kZVRpdGxlID09PSB1bmRlZmluZWQpIG5vZGVUaXRsZSA9IChfLCBpKSA9PiBOW2ldO1xuICBjb25zdCBUID0gbm9kZVRpdGxlID09IG51bGwgPyBudWxsIDogZDMubWFwKG5vZGVzLCBub2RlVGl0bGUpO1xuICBjb25zdCBHID0gbm9kZUdyb3VwID09IG51bGwgPyBudWxsIDogZDMubWFwKG5vZGVzLCBub2RlR3JvdXApLm1hcChpbnRlcm4pO1xuICBjb25zdCBXID0gdHlwZW9mIGxpbmtTdHJva2VXaWR0aCAhPT0gXCJmdW5jdGlvblwiID8gbnVsbCA6IGQzLm1hcChsaW5rcywgbGlua1N0cm9rZVdpZHRoKTtcbiAgY29uc3QgTCA9IHR5cGVvZiBsaW5rU3Ryb2tlICE9PSBcImZ1bmN0aW9uXCIgPyBudWxsIDogZDMubWFwKGxpbmtzLCBsaW5rU3Ryb2tlKTtcblxuICAvLyBSZXBsYWNlIHRoZSBpbnB1dCBub2RlcyBhbmQgbGlua3Mgd2l0aCBtdXRhYmxlIG9iamVjdHMgZm9yIHRoZSBzaW11bGF0aW9uLlxuICBub2RlcyA9IGQzLm1hcChub2RlcywgKF8sIGkpID0+ICh7aWQ6IE5baV19KSk7XG4gIGxpbmtzID0gZDMubWFwKGxpbmtzLCAoXywgaSkgPT4gKHtzb3VyY2U6IExTW2ldLCB0YXJnZXQ6IExUW2ldfSkpO1xuXG4gIC8vIENvbXB1dGUgZGVmYXVsdCBkb21haW5zLlxuICBpZiAoRyAmJiBub2RlR3JvdXBzID09PSB1bmRlZmluZWQpIG5vZGVHcm91cHMgPSBkMy5zb3J0KEcpO1xuXG4gIC8vIENvbnN0cnVjdCB0aGUgc2NhbGVzLlxuICBjb25zdCBjb2xvciA9IG5vZGVHcm91cCA9PSBudWxsID8gbnVsbCA6IGQzLnNjYWxlT3JkaW5hbChub2RlR3JvdXBzLCBjb2xvcnMpO1xuXG4gIC8vIENvbnN0cnVjdCB0aGUgZm9yY2VzLlxuICBjb25zdCBmb3JjZU5vZGUgPSBkMy5mb3JjZU1hbnlCb2R5KCk7XG4gIGNvbnN0IGZvcmNlTGluayA9IGQzLmZvcmNlTGluayhsaW5rcykuaWQoKHtpbmRleDogaX0pID0+IE5baV0pO1xuICBpZiAobm9kZVN0cmVuZ3RoICE9PSB1bmRlZmluZWQpIGZvcmNlTm9kZS5zdHJlbmd0aChub2RlU3RyZW5ndGgpO1xuICBpZiAobGlua1N0cmVuZ3RoICE9PSB1bmRlZmluZWQpIGZvcmNlTGluay5zdHJlbmd0aChsaW5rU3RyZW5ndGgpO1xuXG4gIGNvbnN0IHNpbXVsYXRpb24gPSBkMy5mb3JjZVNpbXVsYXRpb24obm9kZXMpXG4gICAgICAuZm9yY2UoXCJsaW5rXCIsIGZvcmNlTGluaylcbiAgICAgIC5mb3JjZShcImNoYXJnZVwiLCBmb3JjZU5vZGUpXG4gICAgICAuZm9yY2UoXCJjZW50ZXJcIiwgIGQzLmZvcmNlQ2VudGVyKCkpXG4gICAgICAub24oXCJ0aWNrXCIsIHRpY2tlZCk7XG5cbiAgY29uc3Qgc3ZnID0gZDMuY3JlYXRlKFwic3ZnXCIpXG4gICAgICAuYXR0cihcIndpZHRoXCIsIHdpZHRoKVxuICAgICAgLmF0dHIoXCJoZWlnaHRcIiwgaGVpZ2h0KVxuICAgICAgLmF0dHIoXCJ2aWV3Qm94XCIsIFstd2lkdGggLyAyLCAtaGVpZ2h0IC8gMiwgd2lkdGgsIGhlaWdodF0pXG4gICAgICAuYXR0cihcInN0eWxlXCIsIFwibWF4LXdpZHRoOiAxMDAlOyBoZWlnaHQ6IGF1dG87IGhlaWdodDogaW50cmluc2ljO1wiKTtcblxuICBjb25zdCBsaW5rID0gc3ZnLmFwcGVuZChcImdcIilcbiAgICAgIC5hdHRyKFwic3Ryb2tlXCIsIHR5cGVvZiBsaW5rU3Ryb2tlICE9PSBcImZ1bmN0aW9uXCIgPyBsaW5rU3Ryb2tlIDogbnVsbClcbiAgICAgIC5hdHRyKFwic3Ryb2tlLW9wYWNpdHlcIiwgbGlua1N0cm9rZU9wYWNpdHkpXG4gICAgICAuYXR0cihcInN0cm9rZS13aWR0aFwiLCB0eXBlb2YgbGlua1N0cm9rZVdpZHRoICE9PSBcImZ1bmN0aW9uXCIgPyBsaW5rU3Ryb2tlV2lkdGggOiBudWxsKVxuICAgICAgLmF0dHIoXCJzdHJva2UtbGluZWNhcFwiLCBsaW5rU3Ryb2tlTGluZWNhcClcbiAgICAuc2VsZWN0QWxsKFwibGluZVwiKVxuICAgIC5kYXRhKGxpbmtzKVxuICAgIC5qb2luKFwibGluZVwiKTtcblxuICBjb25zdCBub2RlID0gc3ZnLmFwcGVuZChcImdcIilcbiAgICAgIC5hdHRyKFwiZmlsbFwiLCBub2RlRmlsbClcbiAgICAgIC5hdHRyKFwic3Ryb2tlXCIsIG5vZGVTdHJva2UpXG4gICAgICAuYXR0cihcInN0cm9rZS1vcGFjaXR5XCIsIG5vZGVTdHJva2VPcGFjaXR5KVxuICAgICAgLmF0dHIoXCJzdHJva2Utd2lkdGhcIiwgbm9kZVN0cm9rZVdpZHRoKVxuICAgIC5zZWxlY3RBbGwoXCJjaXJjbGVcIilcbiAgICAuZGF0YShub2RlcylcbiAgICAuam9pbihcImNpcmNsZVwiKVxuICAgICAgLmF0dHIoXCJyXCIsIG5vZGVSYWRpdXMpXG4gICAgICAuY2FsbChkcmFnKHNpbXVsYXRpb24pKTtcblxuICBpZiAoVykgbGluay5hdHRyKFwic3Ryb2tlLXdpZHRoXCIsICh7aW5kZXg6IGl9KSA9PiBXW2ldKTtcbiAgaWYgKEwpIGxpbmsuYXR0cihcInN0cm9rZVwiLCAoe2luZGV4OiBpfSkgPT4gTFtpXSk7XG4gIGlmIChHKSBub2RlLmF0dHIoXCJmaWxsXCIsICh7aW5kZXg6IGl9KSA9PiBjb2xvcihHW2ldKSk7XG4gIGlmIChUKSBub2RlLmFwcGVuZChcInRpdGxlXCIpLnRleHQoKHtpbmRleDogaX0pID0+IFRbaV0pO1xuICBpZiAoaW52YWxpZGF0aW9uICE9IG51bGwpIGludmFsaWRhdGlvbi50aGVuKCgpID0+IHNpbXVsYXRpb24uc3RvcCgpKTtcblxuICBmdW5jdGlvbiBpbnRlcm4odmFsdWUpIHtcbiAgICByZXR1cm4gdmFsdWUgIT09IG51bGwgJiYgdHlwZW9mIHZhbHVlID09PSBcIm9iamVjdFwiID8gdmFsdWUudmFsdWVPZigpIDogdmFsdWU7XG4gIH1cblxuICBmdW5jdGlvbiB0aWNrZWQoKSB7XG4gICAgbGlua1xuICAgICAgLmF0dHIoXCJ4MVwiLCBkID0+IGQuc291cmNlLngpXG4gICAgICAuYXR0cihcInkxXCIsIGQgPT4gZC5zb3VyY2UueSlcbiAgICAgIC5hdHRyKFwieDJcIiwgZCA9PiBkLnRhcmdldC54KVxuICAgICAgLmF0dHIoXCJ5MlwiLCBkID0+IGQudGFyZ2V0LnkpO1xuXG4gICAgbm9kZVxuICAgICAgLmF0dHIoXCJjeFwiLCBkID0+IGQueClcbiAgICAgIC5hdHRyKFwiY3lcIiwgZCA9PiBkLnkpO1xuICB9XG5cbiAgZnVuY3Rpb24gZHJhZyhzaW11bGF0aW9uKSB7ICAgIFxuICAgIGZ1bmN0aW9uIGRyYWdzdGFydGVkKGV2ZW50KSB7XG4gICAgICBpZiAoIWV2ZW50LmFjdGl2ZSkgc2ltdWxhdGlvbi5hbHBoYVRhcmdldCgwLjMpLnJlc3RhcnQoKTtcbiAgICAgIGV2ZW50LnN1YmplY3QuZnggPSBldmVudC5zdWJqZWN0Lng7XG4gICAgICBldmVudC5zdWJqZWN0LmZ5ID0gZXZlbnQuc3ViamVjdC55O1xuICAgIH1cbiAgICBcbiAgICBmdW5jdGlvbiBkcmFnZ2VkKGV2ZW50KSB7XG4gICAgICBldmVudC5zdWJqZWN0LmZ4ID0gZXZlbnQueDtcbiAgICAgIGV2ZW50LnN1YmplY3QuZnkgPSBldmVudC55O1xuICAgIH1cbiAgICBcbiAgICBmdW5jdGlvbiBkcmFnZW5kZWQoZXZlbnQpIHtcbiAgICAgIGlmICghZXZlbnQuYWN0aXZlKSBzaW11bGF0aW9uLmFscGhhVGFyZ2V0KDApO1xuICAgICAgZXZlbnQuc3ViamVjdC5meCA9IG51bGw7XG4gICAgICBldmVudC5zdWJqZWN0LmZ5ID0gbnVsbDtcbiAgICB9XG4gICAgXG4gICAgcmV0dXJuIGQzLmRyYWcoKVxuICAgICAgLm9uKFwic3RhcnRcIiwgZHJhZ3N0YXJ0ZWQpXG4gICAgICAub24oXCJkcmFnXCIsIGRyYWdnZWQpXG4gICAgICAub24oXCJlbmRcIiwgZHJhZ2VuZGVkKTtcbiAgfVxuXG4gIHJldHVybiBPYmplY3QuYXNzaWduKHN2Zy5ub2RlKCksIHtzY2FsZXM6IHtjb2xvcn19KTtcbn1cblxuXG5pbXBvcnQge2hvd3RvfSBmcm9tIFwiQGQzL2V4YW1wbGUtY29tcG9uZW50c1wiXG5cbmltcG9ydCB7U3dhdGNoZXN9IGZyb20gXCJAZDMvY29sb3ItbGVnZW5kXCJcblxuIn1dfQ==
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../posts/L4-Marks-Channels";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "../..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+
+<script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
+
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
+
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
