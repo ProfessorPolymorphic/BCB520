@@ -6,13 +6,13 @@ format:
     toc: false
     echo: true
 author: "Barrie Robison"
-date: "2023-05-04"
+date: "2024-04-16"
 categories: [Portfolio, DataViz, Assignment]
 image: "Cthulhufinal.png"
 description: "Do, or do not.  There is no try."
 code-fold: true
 code-tools: true
-draft: true
+
 ---
 
 ## OVERVIEW
