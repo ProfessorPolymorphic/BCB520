@@ -6,15 +6,13 @@ format:
     toc: false
     echo: true
 author: "Barrie Robison"
-date: "2023-04-10"
+date: "2024-04-18"
 categories: [Portfolio, DataViz, Spatial, GGPlot, Assignment]
 image: "Rlyeh.png"
 description: "Maps and Spatial Fields are fun!"
 code-fold: true
 code-tools: true
-execute: 
-  eval: false
-draft: true
+
 ---
 
 ## OVERVIEW
@@ -28,7 +26,7 @@ In class I bet Ronald that he would end up creating some kind of map based visua
 The data I obtained were from the [Malaria Atlas](https://data.malariaatlas.org/trends?year=2020&metricGroup=Malaria&geographicLevel=admin0&metricSubcategory=Pf&metricType=rate&metricName=incidence). I downloaded a csv for 10 years of data for all the countries the had on file.
 
 ```{r}
-#| output: false
+
 
 
 library(tidyverse)
@@ -55,20 +53,21 @@ Now I'm going to use the `rnaturalearth` package to create contry polygons. Then
 world_map <- ne_countries(scale = "medium", returnclass = "sf")
 
 map_data <- world_map %>%
-  left_join(Incidence, by = c("iso_a3" = "ISO3"))
+  left_join(Incidence, by = c("iso_a3" = "ISO3"))%>%
+  filter(!is.na(Prevalence))
 ```
 
 Now I will make a plot!
 
 ```{r}
-#| eval: false
+
 
 
 library(gganimate)
 library(transformr)
 library(magick)
 library(gifski)
-
+# 
 ggplot() +
   geom_sf(data = map_data%>%
             filter(continent=="Africa"),
@@ -78,44 +77,10 @@ ggplot() +
   theme(axis.text = element_blank(), axis.ticks = element_blank(), axis.title = element_blank()) +
   labs(title = "Malaria Prevalence by Country")
 
-p <- ggplot() +
-  geom_sf(data = map_data%>%
-            filter(continent=="Africa"),
-          aes(fill = Prevalence)) +
-  scale_fill_gradient(low = "white", high = "red", na.value = "gray", name = "Malaria Prevalence") +
-  theme_minimal() +
-  theme(axis.text = element_blank(), axis.ticks = element_blank(), axis.title = element_blank()) +
-  labs(title = "Malaria Prevalence by Country") +
-  transition_states(Year, transition_length = 2, state_length = 2)
 
-animate(p, fps = 25, width = 800, height = 500)
 
 ```
 
-```{r}
-#| eval: false
-
-Incidence <- Malaria %>%
-  filter(Metric == "Infection Prevalence" & Year >= 2010 & Year <= 2020) %>%
-  mutate(Year = as.factor(Year),
-         Prevalence = Value)
-
-world_map <- ne_countries(scale = "medium", returnclass = "sf")
-
-map_data <- world_map %>%
-  left_join(Incidence, by = c("iso_a3" = "ISO3"))
-
-p <- ggplot() +
-  geom_sf(data = map_data, aes(fill = Prevalence)) +
-  scale_fill_gradient(low = "white", high = "red", na.value = "gray", name = "Malaria Prevalence") +
-  theme_minimal() +
-  theme(axis.text = element_blank(), axis.ticks = element_blank(), axis.title = element_blank()) +
-  labs(title = "Malaria Prevalence by Country") +
-  transition_states(Year, transition_length = 2, state_length = 2)
-
-animate(p, fps = 25, width = 800, height = 500)
-
-```
 
 Oh SNAP! We made a MAP!
 
@@ -164,6 +129,7 @@ library(devtools)
 
 ```{r}
 library(CalledStrike)
+library(baseballr)
 #ShinyDemo()
 ```
 

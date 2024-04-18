@@ -2,8 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/E2-ExtractAI/AIExtract.html",
-      "/posts/Examplepost/Example.html",
+      "/posts/A7-SpatialData/index.html",
       "/posts/A10-FinalProject/index.html",
       "/posts/A9-NetworksinObservable/index.html",
       "/posts/A8-NetworkData/index.html",
@@ -21,7 +20,6 @@
       "/posts/A2-YourData/index.html",
       "/posts/L2-Data-Abstraction/index.html",
       "/posts/T2-Anscombe/index.html",
-      "/posts/E1-GrantExpenditures/Banner.html",
       "/posts/T1-Lit-Prog/index.html",
       "/posts/L1-Intro/index.html",
       "/posts/A1-Lit-Prog/index.html",
