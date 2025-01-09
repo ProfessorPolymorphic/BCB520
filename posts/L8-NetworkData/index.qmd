@@ -14,7 +14,7 @@ date: "2024-03-26"
 categories: [Lecture, DataViz, Data, Network, Observable]
 image: "Azathothnetwork.png"
 code-fold: true
-
+draft: true
 ---
 
 

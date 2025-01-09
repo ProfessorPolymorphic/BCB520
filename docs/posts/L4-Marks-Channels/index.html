@@ -521,163 +521,163 @@ Barrie Robison
 <div class="cell" data-code-tools="true">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1" data-startfrom="143" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 142;"><span id="cb1-143"><a></a>d3 <span class="op">=</span> <span class="pp">require</span>(<span class="st">"d3@7"</span>)</span>
-<span id="cb1-144"><a></a></span>
+<div class="sourceCode cell-code" id="cb1" data-startfrom="144" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 143;"><span id="cb1-144"><a></a>d3 <span class="op">=</span> <span class="pp">require</span>(<span class="st">"d3@7"</span>)</span>
 <span id="cb1-145"><a></a></span>
-<span id="cb1-146"><a></a>chart <span class="op">=</span> <span class="fu">ForceGraph</span>(miserables<span class="op">,</span> {</span>
-<span id="cb1-147"><a></a>  <span class="dt">nodeId</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">id</span><span class="op">,</span></span>
-<span id="cb1-148"><a></a>  <span class="dt">nodeGroup</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">group</span><span class="op">,</span></span>
-<span id="cb1-149"><a></a>  <span class="dt">nodeTitle</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">id</span><span class="sc">}\n${</span>d<span class="op">.</span><span class="at">group</span><span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
-<span id="cb1-150"><a></a>  <span class="dt">linkStrokeWidth</span><span class="op">:</span> l <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sqrt</span>(l<span class="op">.</span><span class="at">value</span>)<span class="op">,</span></span>
-<span id="cb1-151"><a></a>  width<span class="op">,</span></span>
-<span id="cb1-152"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
-<span id="cb1-153"><a></a>  invalidation <span class="co">// a promise to stop the simulation when the cell is re-run</span></span>
-<span id="cb1-154"><a></a>})</span>
-<span id="cb1-155"><a></a></span>
+<span id="cb1-146"><a></a></span>
+<span id="cb1-147"><a></a>chart <span class="op">=</span> <span class="fu">ForceGraph</span>(miserables<span class="op">,</span> {</span>
+<span id="cb1-148"><a></a>  <span class="dt">nodeId</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">id</span><span class="op">,</span></span>
+<span id="cb1-149"><a></a>  <span class="dt">nodeGroup</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">group</span><span class="op">,</span></span>
+<span id="cb1-150"><a></a>  <span class="dt">nodeTitle</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">id</span><span class="sc">}\n${</span>d<span class="op">.</span><span class="at">group</span><span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
+<span id="cb1-151"><a></a>  <span class="dt">linkStrokeWidth</span><span class="op">:</span> l <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sqrt</span>(l<span class="op">.</span><span class="at">value</span>)<span class="op">,</span></span>
+<span id="cb1-152"><a></a>  width<span class="op">,</span></span>
+<span id="cb1-153"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
+<span id="cb1-154"><a></a>  invalidation <span class="co">// a promise to stop the simulation when the cell is re-run</span></span>
+<span id="cb1-155"><a></a>})</span>
 <span id="cb1-156"><a></a></span>
-<span id="cb1-157"><a></a>miserables <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"miserables.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
-<span id="cb1-158"><a></a></span>
+<span id="cb1-157"><a></a></span>
+<span id="cb1-158"><a></a>miserables <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"miserables.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
 <span id="cb1-159"><a></a></span>
-<span id="cb1-160"><a></a><span class="co">// Copyright 2021 Observable, Inc.</span></span>
-<span id="cb1-161"><a></a><span class="co">// Released under the ISC license.</span></span>
-<span id="cb1-162"><a></a><span class="co">// https://observablehq.com/@d3/force-directed-graph</span></span>
-<span id="cb1-163"><a></a><span class="kw">function</span> <span class="fu">ForceGraph</span>({</span>
-<span id="cb1-164"><a></a>  nodes<span class="op">,</span> <span class="co">// an iterable of node objects (typically [{id}, …])</span></span>
-<span id="cb1-165"><a></a>  links <span class="co">// an iterable of link objects (typically [{source, target}, …])</span></span>
-<span id="cb1-166"><a></a>}<span class="op">,</span> {</span>
-<span id="cb1-167"><a></a>  nodeId <span class="op">=</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">id</span><span class="op">,</span> <span class="co">// given d in nodes, returns a unique identifier (string)</span></span>
-<span id="cb1-168"><a></a>  nodeGroup<span class="op">,</span> <span class="co">// given d in nodes, returns an (ordinal) value for color</span></span>
-<span id="cb1-169"><a></a>  nodeGroups<span class="op">,</span> <span class="co">// an array of ordinal values representing the node groups</span></span>
-<span id="cb1-170"><a></a>  nodeTitle<span class="op">,</span> <span class="co">// given d in nodes, a title string</span></span>
-<span id="cb1-171"><a></a>  nodeFill <span class="op">=</span> <span class="st">"currentColor"</span><span class="op">,</span> <span class="co">// node stroke fill (if not using a group color encoding)</span></span>
-<span id="cb1-172"><a></a>  nodeStroke <span class="op">=</span> <span class="st">"#fff"</span><span class="op">,</span> <span class="co">// node stroke color</span></span>
-<span id="cb1-173"><a></a>  nodeStrokeWidth <span class="op">=</span> <span class="fl">1.5</span><span class="op">,</span> <span class="co">// node stroke width, in pixels</span></span>
-<span id="cb1-174"><a></a>  nodeStrokeOpacity <span class="op">=</span> <span class="dv">1</span><span class="op">,</span> <span class="co">// node stroke opacity</span></span>
-<span id="cb1-175"><a></a>  nodeRadius <span class="op">=</span> <span class="dv">5</span><span class="op">,</span> <span class="co">// node radius, in pixels</span></span>
-<span id="cb1-176"><a></a>  nodeStrength<span class="op">,</span></span>
-<span id="cb1-177"><a></a>  linkSource <span class="op">=</span> ({source}) <span class="kw">=&gt;</span> source<span class="op">,</span> <span class="co">// given d in links, returns a node identifier string</span></span>
-<span id="cb1-178"><a></a>  linkTarget <span class="op">=</span> ({target}) <span class="kw">=&gt;</span> target<span class="op">,</span> <span class="co">// given d in links, returns a node identifier string</span></span>
-<span id="cb1-179"><a></a>  linkStroke <span class="op">=</span> <span class="st">"#999"</span><span class="op">,</span> <span class="co">// link stroke color</span></span>
-<span id="cb1-180"><a></a>  linkStrokeOpacity <span class="op">=</span> <span class="fl">0.6</span><span class="op">,</span> <span class="co">// link stroke opacity</span></span>
-<span id="cb1-181"><a></a>  linkStrokeWidth <span class="op">=</span> <span class="fl">1.5</span><span class="op">,</span> <span class="co">// given d in links, returns a stroke width in pixels</span></span>
-<span id="cb1-182"><a></a>  linkStrokeLinecap <span class="op">=</span> <span class="st">"round"</span><span class="op">,</span> <span class="co">// link stroke linecap</span></span>
-<span id="cb1-183"><a></a>  linkStrength<span class="op">,</span></span>
-<span id="cb1-184"><a></a>  colors <span class="op">=</span> d3<span class="op">.</span><span class="at">schemeTableau10</span><span class="op">,</span> <span class="co">// an array of color strings, for the node groups</span></span>
-<span id="cb1-185"><a></a>  width <span class="op">=</span> <span class="dv">1000</span><span class="op">,</span> <span class="co">// outer width, in pixels</span></span>
-<span id="cb1-186"><a></a>  height <span class="op">=</span> <span class="dv">1000</span><span class="op">,</span> <span class="co">// outer height, in pixels</span></span>
-<span id="cb1-187"><a></a>  invalidation <span class="co">// when this promise resolves, stop the simulation</span></span>
-<span id="cb1-188"><a></a>} <span class="op">=</span> {}) {</span>
-<span id="cb1-189"><a></a>  <span class="co">// Compute values.</span></span>
-<span id="cb1-190"><a></a>  <span class="kw">const</span> N <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(nodes<span class="op">,</span> nodeId)<span class="op">.</span><span class="fu">map</span>(intern)<span class="op">;</span></span>
-<span id="cb1-191"><a></a>  <span class="kw">const</span> LS <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(links<span class="op">,</span> linkSource)<span class="op">.</span><span class="fu">map</span>(intern)<span class="op">;</span></span>
-<span id="cb1-192"><a></a>  <span class="kw">const</span> LT <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(links<span class="op">,</span> linkTarget)<span class="op">.</span><span class="fu">map</span>(intern)<span class="op">;</span></span>
-<span id="cb1-193"><a></a>  <span class="cf">if</span> (nodeTitle <span class="op">===</span> <span class="kw">undefined</span>) nodeTitle <span class="op">=</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> N[i]<span class="op">;</span></span>
-<span id="cb1-194"><a></a>  <span class="kw">const</span> T <span class="op">=</span> nodeTitle <span class="op">==</span> <span class="kw">null</span> <span class="op">?</span> <span class="kw">null</span> <span class="op">:</span> d3<span class="op">.</span><span class="fu">map</span>(nodes<span class="op">,</span> nodeTitle)<span class="op">;</span></span>
-<span id="cb1-195"><a></a>  <span class="kw">const</span> G <span class="op">=</span> nodeGroup <span class="op">==</span> <span class="kw">null</span> <span class="op">?</span> <span class="kw">null</span> <span class="op">:</span> d3<span class="op">.</span><span class="fu">map</span>(nodes<span class="op">,</span> nodeGroup)<span class="op">.</span><span class="fu">map</span>(intern)<span class="op">;</span></span>
-<span id="cb1-196"><a></a>  <span class="kw">const</span> W <span class="op">=</span> <span class="kw">typeof</span> linkStrokeWidth <span class="op">!==</span> <span class="st">"function"</span> <span class="op">?</span> <span class="kw">null</span> <span class="op">:</span> d3<span class="op">.</span><span class="fu">map</span>(links<span class="op">,</span> linkStrokeWidth)<span class="op">;</span></span>
-<span id="cb1-197"><a></a>  <span class="kw">const</span> L <span class="op">=</span> <span class="kw">typeof</span> linkStroke <span class="op">!==</span> <span class="st">"function"</span> <span class="op">?</span> <span class="kw">null</span> <span class="op">:</span> d3<span class="op">.</span><span class="fu">map</span>(links<span class="op">,</span> linkStroke)<span class="op">;</span></span>
-<span id="cb1-198"><a></a></span>
-<span id="cb1-199"><a></a>  <span class="co">// Replace the input nodes and links with mutable objects for the simulation.</span></span>
-<span id="cb1-200"><a></a>  nodes <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(nodes<span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> ({<span class="dt">id</span><span class="op">:</span> N[i]}))<span class="op">;</span></span>
-<span id="cb1-201"><a></a>  links <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(links<span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> ({<span class="dt">source</span><span class="op">:</span> LS[i]<span class="op">,</span> <span class="dt">target</span><span class="op">:</span> LT[i]}))<span class="op">;</span></span>
-<span id="cb1-202"><a></a></span>
-<span id="cb1-203"><a></a>  <span class="co">// Compute default domains.</span></span>
-<span id="cb1-204"><a></a>  <span class="cf">if</span> (G <span class="op">&amp;&amp;</span> nodeGroups <span class="op">===</span> <span class="kw">undefined</span>) nodeGroups <span class="op">=</span> d3<span class="op">.</span><span class="fu">sort</span>(G)<span class="op">;</span></span>
-<span id="cb1-205"><a></a></span>
-<span id="cb1-206"><a></a>  <span class="co">// Construct the scales.</span></span>
-<span id="cb1-207"><a></a>  <span class="kw">const</span> color <span class="op">=</span> nodeGroup <span class="op">==</span> <span class="kw">null</span> <span class="op">?</span> <span class="kw">null</span> <span class="op">:</span> d3<span class="op">.</span><span class="fu">scaleOrdinal</span>(nodeGroups<span class="op">,</span> colors)<span class="op">;</span></span>
-<span id="cb1-208"><a></a></span>
-<span id="cb1-209"><a></a>  <span class="co">// Construct the forces.</span></span>
-<span id="cb1-210"><a></a>  <span class="kw">const</span> forceNode <span class="op">=</span> d3<span class="op">.</span><span class="fu">forceManyBody</span>()<span class="op">;</span></span>
-<span id="cb1-211"><a></a>  <span class="kw">const</span> forceLink <span class="op">=</span> d3<span class="op">.</span><span class="fu">forceLink</span>(links)<span class="op">.</span><span class="fu">id</span>(({<span class="dt">index</span><span class="op">:</span> i}) <span class="kw">=&gt;</span> N[i])<span class="op">;</span></span>
-<span id="cb1-212"><a></a>  <span class="cf">if</span> (nodeStrength <span class="op">!==</span> <span class="kw">undefined</span>) forceNode<span class="op">.</span><span class="fu">strength</span>(nodeStrength)<span class="op">;</span></span>
-<span id="cb1-213"><a></a>  <span class="cf">if</span> (linkStrength <span class="op">!==</span> <span class="kw">undefined</span>) forceLink<span class="op">.</span><span class="fu">strength</span>(linkStrength)<span class="op">;</span></span>
-<span id="cb1-214"><a></a></span>
-<span id="cb1-215"><a></a>  <span class="kw">const</span> simulation <span class="op">=</span> d3<span class="op">.</span><span class="fu">forceSimulation</span>(nodes)</span>
-<span id="cb1-216"><a></a>      <span class="op">.</span><span class="fu">force</span>(<span class="st">"link"</span><span class="op">,</span> forceLink)</span>
-<span id="cb1-217"><a></a>      <span class="op">.</span><span class="fu">force</span>(<span class="st">"charge"</span><span class="op">,</span> forceNode)</span>
-<span id="cb1-218"><a></a>      <span class="op">.</span><span class="fu">force</span>(<span class="st">"center"</span><span class="op">,</span>  d3<span class="op">.</span><span class="fu">forceCenter</span>())</span>
-<span id="cb1-219"><a></a>      <span class="op">.</span><span class="fu">on</span>(<span class="st">"tick"</span><span class="op">,</span> ticked)<span class="op">;</span></span>
-<span id="cb1-220"><a></a></span>
-<span id="cb1-221"><a></a>  <span class="kw">const</span> svg <span class="op">=</span> d3<span class="op">.</span><span class="fu">create</span>(<span class="st">"svg"</span>)</span>
-<span id="cb1-222"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"width"</span><span class="op">,</span> width)</span>
-<span id="cb1-223"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"height"</span><span class="op">,</span> height)</span>
-<span id="cb1-224"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"viewBox"</span><span class="op">,</span> [<span class="op">-</span>width <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> <span class="op">-</span>height <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> width<span class="op">,</span> height])</span>
-<span id="cb1-225"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"style"</span><span class="op">,</span> <span class="st">"max-width: 100%; height: auto; height: intrinsic;"</span>)<span class="op">;</span></span>
-<span id="cb1-226"><a></a></span>
-<span id="cb1-227"><a></a>  <span class="kw">const</span> link <span class="op">=</span> svg<span class="op">.</span><span class="fu">append</span>(<span class="st">"g"</span>)</span>
-<span id="cb1-228"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke"</span><span class="op">,</span> <span class="kw">typeof</span> linkStroke <span class="op">!==</span> <span class="st">"function"</span> <span class="op">?</span> linkStroke <span class="op">:</span> <span class="kw">null</span>)</span>
-<span id="cb1-229"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-opacity"</span><span class="op">,</span> linkStrokeOpacity)</span>
-<span id="cb1-230"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> <span class="kw">typeof</span> linkStrokeWidth <span class="op">!==</span> <span class="st">"function"</span> <span class="op">?</span> linkStrokeWidth <span class="op">:</span> <span class="kw">null</span>)</span>
-<span id="cb1-231"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-linecap"</span><span class="op">,</span> linkStrokeLinecap)</span>
-<span id="cb1-232"><a></a>    <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">"line"</span>)</span>
-<span id="cb1-233"><a></a>    <span class="op">.</span><span class="fu">data</span>(links)</span>
-<span id="cb1-234"><a></a>    <span class="op">.</span><span class="fu">join</span>(<span class="st">"line"</span>)<span class="op">;</span></span>
-<span id="cb1-235"><a></a></span>
-<span id="cb1-236"><a></a>  <span class="kw">const</span> node <span class="op">=</span> svg<span class="op">.</span><span class="fu">append</span>(<span class="st">"g"</span>)</span>
-<span id="cb1-237"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> nodeFill)</span>
-<span id="cb1-238"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke"</span><span class="op">,</span> nodeStroke)</span>
-<span id="cb1-239"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-opacity"</span><span class="op">,</span> nodeStrokeOpacity)</span>
-<span id="cb1-240"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> nodeStrokeWidth)</span>
-<span id="cb1-241"><a></a>    <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">"circle"</span>)</span>
-<span id="cb1-242"><a></a>    <span class="op">.</span><span class="fu">data</span>(nodes)</span>
-<span id="cb1-243"><a></a>    <span class="op">.</span><span class="fu">join</span>(<span class="st">"circle"</span>)</span>
-<span id="cb1-244"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"r"</span><span class="op">,</span> nodeRadius)</span>
-<span id="cb1-245"><a></a>      <span class="op">.</span><span class="fu">call</span>(<span class="fu">drag</span>(simulation))<span class="op">;</span></span>
-<span id="cb1-246"><a></a></span>
-<span id="cb1-247"><a></a>  <span class="cf">if</span> (W) link<span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> ({<span class="dt">index</span><span class="op">:</span> i}) <span class="kw">=&gt;</span> W[i])<span class="op">;</span></span>
-<span id="cb1-248"><a></a>  <span class="cf">if</span> (L) link<span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke"</span><span class="op">,</span> ({<span class="dt">index</span><span class="op">:</span> i}) <span class="kw">=&gt;</span> L[i])<span class="op">;</span></span>
-<span id="cb1-249"><a></a>  <span class="cf">if</span> (G) node<span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> ({<span class="dt">index</span><span class="op">:</span> i}) <span class="kw">=&gt;</span> <span class="fu">color</span>(G[i]))<span class="op">;</span></span>
-<span id="cb1-250"><a></a>  <span class="cf">if</span> (T) node<span class="op">.</span><span class="fu">append</span>(<span class="st">"title"</span>)<span class="op">.</span><span class="fu">text</span>(({<span class="dt">index</span><span class="op">:</span> i}) <span class="kw">=&gt;</span> T[i])<span class="op">;</span></span>
-<span id="cb1-251"><a></a>  <span class="cf">if</span> (invalidation <span class="op">!=</span> <span class="kw">null</span>) invalidation<span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span> simulation<span class="op">.</span><span class="fu">stop</span>())<span class="op">;</span></span>
-<span id="cb1-252"><a></a></span>
-<span id="cb1-253"><a></a>  <span class="kw">function</span> <span class="fu">intern</span>(value) {</span>
-<span id="cb1-254"><a></a>    <span class="cf">return</span> value <span class="op">!==</span> <span class="kw">null</span> <span class="op">&amp;&amp;</span> <span class="kw">typeof</span> value <span class="op">===</span> <span class="st">"object"</span> <span class="op">?</span> value<span class="op">.</span><span class="fu">valueOf</span>() <span class="op">:</span> value<span class="op">;</span></span>
-<span id="cb1-255"><a></a>  }</span>
-<span id="cb1-256"><a></a></span>
-<span id="cb1-257"><a></a>  <span class="kw">function</span> <span class="fu">ticked</span>() {</span>
-<span id="cb1-258"><a></a>    link</span>
-<span id="cb1-259"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"x1"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">source</span><span class="op">.</span><span class="at">x</span>)</span>
-<span id="cb1-260"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"y1"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">source</span><span class="op">.</span><span class="at">y</span>)</span>
-<span id="cb1-261"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"x2"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">x</span>)</span>
-<span id="cb1-262"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"y2"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">y</span>)<span class="op">;</span></span>
-<span id="cb1-263"><a></a></span>
-<span id="cb1-264"><a></a>    node</span>
-<span id="cb1-265"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"cx"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">x</span>)</span>
-<span id="cb1-266"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"cy"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">y</span>)<span class="op">;</span></span>
-<span id="cb1-267"><a></a>  }</span>
-<span id="cb1-268"><a></a></span>
-<span id="cb1-269"><a></a>  <span class="kw">function</span> <span class="fu">drag</span>(simulation) {    </span>
-<span id="cb1-270"><a></a>    <span class="kw">function</span> <span class="fu">dragstarted</span>(<span class="bu">event</span>) {</span>
-<span id="cb1-271"><a></a>      <span class="cf">if</span> (<span class="op">!</span><span class="bu">event</span><span class="op">.</span><span class="at">active</span>) simulation<span class="op">.</span><span class="fu">alphaTarget</span>(<span class="fl">0.3</span>)<span class="op">.</span><span class="fu">restart</span>()<span class="op">;</span></span>
-<span id="cb1-272"><a></a>      <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">fx</span> <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">x</span><span class="op">;</span></span>
-<span id="cb1-273"><a></a>      <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">fy</span> <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">y</span><span class="op">;</span></span>
-<span id="cb1-274"><a></a>    }</span>
-<span id="cb1-275"><a></a>    </span>
-<span id="cb1-276"><a></a>    <span class="kw">function</span> <span class="fu">dragged</span>(<span class="bu">event</span>) {</span>
-<span id="cb1-277"><a></a>      <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">fx</span> <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">x</span><span class="op">;</span></span>
-<span id="cb1-278"><a></a>      <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">fy</span> <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">y</span><span class="op">;</span></span>
-<span id="cb1-279"><a></a>    }</span>
-<span id="cb1-280"><a></a>    </span>
-<span id="cb1-281"><a></a>    <span class="kw">function</span> <span class="fu">dragended</span>(<span class="bu">event</span>) {</span>
-<span id="cb1-282"><a></a>      <span class="cf">if</span> (<span class="op">!</span><span class="bu">event</span><span class="op">.</span><span class="at">active</span>) simulation<span class="op">.</span><span class="fu">alphaTarget</span>(<span class="dv">0</span>)<span class="op">;</span></span>
-<span id="cb1-283"><a></a>      <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">fx</span> <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
-<span id="cb1-284"><a></a>      <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">fy</span> <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
-<span id="cb1-285"><a></a>    }</span>
-<span id="cb1-286"><a></a>    </span>
-<span id="cb1-287"><a></a>    <span class="cf">return</span> d3<span class="op">.</span><span class="fu">drag</span>()</span>
-<span id="cb1-288"><a></a>      <span class="op">.</span><span class="fu">on</span>(<span class="st">"start"</span><span class="op">,</span> dragstarted)</span>
-<span id="cb1-289"><a></a>      <span class="op">.</span><span class="fu">on</span>(<span class="st">"drag"</span><span class="op">,</span> dragged)</span>
-<span id="cb1-290"><a></a>      <span class="op">.</span><span class="fu">on</span>(<span class="st">"end"</span><span class="op">,</span> dragended)<span class="op">;</span></span>
-<span id="cb1-291"><a></a>  }</span>
-<span id="cb1-292"><a></a></span>
-<span id="cb1-293"><a></a>  <span class="cf">return</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">assign</span>(svg<span class="op">.</span><span class="fu">node</span>()<span class="op">,</span> {<span class="dt">scales</span><span class="op">:</span> {color}})<span class="op">;</span></span>
-<span id="cb1-294"><a></a>}</span>
-<span id="cb1-295"><a></a></span>
+<span id="cb1-160"><a></a></span>
+<span id="cb1-161"><a></a><span class="co">// Copyright 2021 Observable, Inc.</span></span>
+<span id="cb1-162"><a></a><span class="co">// Released under the ISC license.</span></span>
+<span id="cb1-163"><a></a><span class="co">// https://observablehq.com/@d3/force-directed-graph</span></span>
+<span id="cb1-164"><a></a><span class="kw">function</span> <span class="fu">ForceGraph</span>({</span>
+<span id="cb1-165"><a></a>  nodes<span class="op">,</span> <span class="co">// an iterable of node objects (typically [{id}, …])</span></span>
+<span id="cb1-166"><a></a>  links <span class="co">// an iterable of link objects (typically [{source, target}, …])</span></span>
+<span id="cb1-167"><a></a>}<span class="op">,</span> {</span>
+<span id="cb1-168"><a></a>  nodeId <span class="op">=</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">id</span><span class="op">,</span> <span class="co">// given d in nodes, returns a unique identifier (string)</span></span>
+<span id="cb1-169"><a></a>  nodeGroup<span class="op">,</span> <span class="co">// given d in nodes, returns an (ordinal) value for color</span></span>
+<span id="cb1-170"><a></a>  nodeGroups<span class="op">,</span> <span class="co">// an array of ordinal values representing the node groups</span></span>
+<span id="cb1-171"><a></a>  nodeTitle<span class="op">,</span> <span class="co">// given d in nodes, a title string</span></span>
+<span id="cb1-172"><a></a>  nodeFill <span class="op">=</span> <span class="st">"currentColor"</span><span class="op">,</span> <span class="co">// node stroke fill (if not using a group color encoding)</span></span>
+<span id="cb1-173"><a></a>  nodeStroke <span class="op">=</span> <span class="st">"#fff"</span><span class="op">,</span> <span class="co">// node stroke color</span></span>
+<span id="cb1-174"><a></a>  nodeStrokeWidth <span class="op">=</span> <span class="fl">1.5</span><span class="op">,</span> <span class="co">// node stroke width, in pixels</span></span>
+<span id="cb1-175"><a></a>  nodeStrokeOpacity <span class="op">=</span> <span class="dv">1</span><span class="op">,</span> <span class="co">// node stroke opacity</span></span>
+<span id="cb1-176"><a></a>  nodeRadius <span class="op">=</span> <span class="dv">5</span><span class="op">,</span> <span class="co">// node radius, in pixels</span></span>
+<span id="cb1-177"><a></a>  nodeStrength<span class="op">,</span></span>
+<span id="cb1-178"><a></a>  linkSource <span class="op">=</span> ({source}) <span class="kw">=&gt;</span> source<span class="op">,</span> <span class="co">// given d in links, returns a node identifier string</span></span>
+<span id="cb1-179"><a></a>  linkTarget <span class="op">=</span> ({target}) <span class="kw">=&gt;</span> target<span class="op">,</span> <span class="co">// given d in links, returns a node identifier string</span></span>
+<span id="cb1-180"><a></a>  linkStroke <span class="op">=</span> <span class="st">"#999"</span><span class="op">,</span> <span class="co">// link stroke color</span></span>
+<span id="cb1-181"><a></a>  linkStrokeOpacity <span class="op">=</span> <span class="fl">0.6</span><span class="op">,</span> <span class="co">// link stroke opacity</span></span>
+<span id="cb1-182"><a></a>  linkStrokeWidth <span class="op">=</span> <span class="fl">1.5</span><span class="op">,</span> <span class="co">// given d in links, returns a stroke width in pixels</span></span>
+<span id="cb1-183"><a></a>  linkStrokeLinecap <span class="op">=</span> <span class="st">"round"</span><span class="op">,</span> <span class="co">// link stroke linecap</span></span>
+<span id="cb1-184"><a></a>  linkStrength<span class="op">,</span></span>
+<span id="cb1-185"><a></a>  colors <span class="op">=</span> d3<span class="op">.</span><span class="at">schemeTableau10</span><span class="op">,</span> <span class="co">// an array of color strings, for the node groups</span></span>
+<span id="cb1-186"><a></a>  width <span class="op">=</span> <span class="dv">1000</span><span class="op">,</span> <span class="co">// outer width, in pixels</span></span>
+<span id="cb1-187"><a></a>  height <span class="op">=</span> <span class="dv">1000</span><span class="op">,</span> <span class="co">// outer height, in pixels</span></span>
+<span id="cb1-188"><a></a>  invalidation <span class="co">// when this promise resolves, stop the simulation</span></span>
+<span id="cb1-189"><a></a>} <span class="op">=</span> {}) {</span>
+<span id="cb1-190"><a></a>  <span class="co">// Compute values.</span></span>
+<span id="cb1-191"><a></a>  <span class="kw">const</span> N <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(nodes<span class="op">,</span> nodeId)<span class="op">.</span><span class="fu">map</span>(intern)<span class="op">;</span></span>
+<span id="cb1-192"><a></a>  <span class="kw">const</span> LS <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(links<span class="op">,</span> linkSource)<span class="op">.</span><span class="fu">map</span>(intern)<span class="op">;</span></span>
+<span id="cb1-193"><a></a>  <span class="kw">const</span> LT <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(links<span class="op">,</span> linkTarget)<span class="op">.</span><span class="fu">map</span>(intern)<span class="op">;</span></span>
+<span id="cb1-194"><a></a>  <span class="cf">if</span> (nodeTitle <span class="op">===</span> <span class="kw">undefined</span>) nodeTitle <span class="op">=</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> N[i]<span class="op">;</span></span>
+<span id="cb1-195"><a></a>  <span class="kw">const</span> T <span class="op">=</span> nodeTitle <span class="op">==</span> <span class="kw">null</span> <span class="op">?</span> <span class="kw">null</span> <span class="op">:</span> d3<span class="op">.</span><span class="fu">map</span>(nodes<span class="op">,</span> nodeTitle)<span class="op">;</span></span>
+<span id="cb1-196"><a></a>  <span class="kw">const</span> G <span class="op">=</span> nodeGroup <span class="op">==</span> <span class="kw">null</span> <span class="op">?</span> <span class="kw">null</span> <span class="op">:</span> d3<span class="op">.</span><span class="fu">map</span>(nodes<span class="op">,</span> nodeGroup)<span class="op">.</span><span class="fu">map</span>(intern)<span class="op">;</span></span>
+<span id="cb1-197"><a></a>  <span class="kw">const</span> W <span class="op">=</span> <span class="kw">typeof</span> linkStrokeWidth <span class="op">!==</span> <span class="st">"function"</span> <span class="op">?</span> <span class="kw">null</span> <span class="op">:</span> d3<span class="op">.</span><span class="fu">map</span>(links<span class="op">,</span> linkStrokeWidth)<span class="op">;</span></span>
+<span id="cb1-198"><a></a>  <span class="kw">const</span> L <span class="op">=</span> <span class="kw">typeof</span> linkStroke <span class="op">!==</span> <span class="st">"function"</span> <span class="op">?</span> <span class="kw">null</span> <span class="op">:</span> d3<span class="op">.</span><span class="fu">map</span>(links<span class="op">,</span> linkStroke)<span class="op">;</span></span>
+<span id="cb1-199"><a></a></span>
+<span id="cb1-200"><a></a>  <span class="co">// Replace the input nodes and links with mutable objects for the simulation.</span></span>
+<span id="cb1-201"><a></a>  nodes <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(nodes<span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> ({<span class="dt">id</span><span class="op">:</span> N[i]}))<span class="op">;</span></span>
+<span id="cb1-202"><a></a>  links <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(links<span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> ({<span class="dt">source</span><span class="op">:</span> LS[i]<span class="op">,</span> <span class="dt">target</span><span class="op">:</span> LT[i]}))<span class="op">;</span></span>
+<span id="cb1-203"><a></a></span>
+<span id="cb1-204"><a></a>  <span class="co">// Compute default domains.</span></span>
+<span id="cb1-205"><a></a>  <span class="cf">if</span> (G <span class="op">&amp;&amp;</span> nodeGroups <span class="op">===</span> <span class="kw">undefined</span>) nodeGroups <span class="op">=</span> d3<span class="op">.</span><span class="fu">sort</span>(G)<span class="op">;</span></span>
+<span id="cb1-206"><a></a></span>
+<span id="cb1-207"><a></a>  <span class="co">// Construct the scales.</span></span>
+<span id="cb1-208"><a></a>  <span class="kw">const</span> color <span class="op">=</span> nodeGroup <span class="op">==</span> <span class="kw">null</span> <span class="op">?</span> <span class="kw">null</span> <span class="op">:</span> d3<span class="op">.</span><span class="fu">scaleOrdinal</span>(nodeGroups<span class="op">,</span> colors)<span class="op">;</span></span>
+<span id="cb1-209"><a></a></span>
+<span id="cb1-210"><a></a>  <span class="co">// Construct the forces.</span></span>
+<span id="cb1-211"><a></a>  <span class="kw">const</span> forceNode <span class="op">=</span> d3<span class="op">.</span><span class="fu">forceManyBody</span>()<span class="op">;</span></span>
+<span id="cb1-212"><a></a>  <span class="kw">const</span> forceLink <span class="op">=</span> d3<span class="op">.</span><span class="fu">forceLink</span>(links)<span class="op">.</span><span class="fu">id</span>(({<span class="dt">index</span><span class="op">:</span> i}) <span class="kw">=&gt;</span> N[i])<span class="op">;</span></span>
+<span id="cb1-213"><a></a>  <span class="cf">if</span> (nodeStrength <span class="op">!==</span> <span class="kw">undefined</span>) forceNode<span class="op">.</span><span class="fu">strength</span>(nodeStrength)<span class="op">;</span></span>
+<span id="cb1-214"><a></a>  <span class="cf">if</span> (linkStrength <span class="op">!==</span> <span class="kw">undefined</span>) forceLink<span class="op">.</span><span class="fu">strength</span>(linkStrength)<span class="op">;</span></span>
+<span id="cb1-215"><a></a></span>
+<span id="cb1-216"><a></a>  <span class="kw">const</span> simulation <span class="op">=</span> d3<span class="op">.</span><span class="fu">forceSimulation</span>(nodes)</span>
+<span id="cb1-217"><a></a>      <span class="op">.</span><span class="fu">force</span>(<span class="st">"link"</span><span class="op">,</span> forceLink)</span>
+<span id="cb1-218"><a></a>      <span class="op">.</span><span class="fu">force</span>(<span class="st">"charge"</span><span class="op">,</span> forceNode)</span>
+<span id="cb1-219"><a></a>      <span class="op">.</span><span class="fu">force</span>(<span class="st">"center"</span><span class="op">,</span>  d3<span class="op">.</span><span class="fu">forceCenter</span>())</span>
+<span id="cb1-220"><a></a>      <span class="op">.</span><span class="fu">on</span>(<span class="st">"tick"</span><span class="op">,</span> ticked)<span class="op">;</span></span>
+<span id="cb1-221"><a></a></span>
+<span id="cb1-222"><a></a>  <span class="kw">const</span> svg <span class="op">=</span> d3<span class="op">.</span><span class="fu">create</span>(<span class="st">"svg"</span>)</span>
+<span id="cb1-223"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"width"</span><span class="op">,</span> width)</span>
+<span id="cb1-224"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"height"</span><span class="op">,</span> height)</span>
+<span id="cb1-225"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"viewBox"</span><span class="op">,</span> [<span class="op">-</span>width <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> <span class="op">-</span>height <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> width<span class="op">,</span> height])</span>
+<span id="cb1-226"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"style"</span><span class="op">,</span> <span class="st">"max-width: 100%; height: auto; height: intrinsic;"</span>)<span class="op">;</span></span>
+<span id="cb1-227"><a></a></span>
+<span id="cb1-228"><a></a>  <span class="kw">const</span> link <span class="op">=</span> svg<span class="op">.</span><span class="fu">append</span>(<span class="st">"g"</span>)</span>
+<span id="cb1-229"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke"</span><span class="op">,</span> <span class="kw">typeof</span> linkStroke <span class="op">!==</span> <span class="st">"function"</span> <span class="op">?</span> linkStroke <span class="op">:</span> <span class="kw">null</span>)</span>
+<span id="cb1-230"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-opacity"</span><span class="op">,</span> linkStrokeOpacity)</span>
+<span id="cb1-231"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> <span class="kw">typeof</span> linkStrokeWidth <span class="op">!==</span> <span class="st">"function"</span> <span class="op">?</span> linkStrokeWidth <span class="op">:</span> <span class="kw">null</span>)</span>
+<span id="cb1-232"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-linecap"</span><span class="op">,</span> linkStrokeLinecap)</span>
+<span id="cb1-233"><a></a>    <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">"line"</span>)</span>
+<span id="cb1-234"><a></a>    <span class="op">.</span><span class="fu">data</span>(links)</span>
+<span id="cb1-235"><a></a>    <span class="op">.</span><span class="fu">join</span>(<span class="st">"line"</span>)<span class="op">;</span></span>
+<span id="cb1-236"><a></a></span>
+<span id="cb1-237"><a></a>  <span class="kw">const</span> node <span class="op">=</span> svg<span class="op">.</span><span class="fu">append</span>(<span class="st">"g"</span>)</span>
+<span id="cb1-238"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> nodeFill)</span>
+<span id="cb1-239"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke"</span><span class="op">,</span> nodeStroke)</span>
+<span id="cb1-240"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-opacity"</span><span class="op">,</span> nodeStrokeOpacity)</span>
+<span id="cb1-241"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> nodeStrokeWidth)</span>
+<span id="cb1-242"><a></a>    <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">"circle"</span>)</span>
+<span id="cb1-243"><a></a>    <span class="op">.</span><span class="fu">data</span>(nodes)</span>
+<span id="cb1-244"><a></a>    <span class="op">.</span><span class="fu">join</span>(<span class="st">"circle"</span>)</span>
+<span id="cb1-245"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"r"</span><span class="op">,</span> nodeRadius)</span>
+<span id="cb1-246"><a></a>      <span class="op">.</span><span class="fu">call</span>(<span class="fu">drag</span>(simulation))<span class="op">;</span></span>
+<span id="cb1-247"><a></a></span>
+<span id="cb1-248"><a></a>  <span class="cf">if</span> (W) link<span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> ({<span class="dt">index</span><span class="op">:</span> i}) <span class="kw">=&gt;</span> W[i])<span class="op">;</span></span>
+<span id="cb1-249"><a></a>  <span class="cf">if</span> (L) link<span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke"</span><span class="op">,</span> ({<span class="dt">index</span><span class="op">:</span> i}) <span class="kw">=&gt;</span> L[i])<span class="op">;</span></span>
+<span id="cb1-250"><a></a>  <span class="cf">if</span> (G) node<span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> ({<span class="dt">index</span><span class="op">:</span> i}) <span class="kw">=&gt;</span> <span class="fu">color</span>(G[i]))<span class="op">;</span></span>
+<span id="cb1-251"><a></a>  <span class="cf">if</span> (T) node<span class="op">.</span><span class="fu">append</span>(<span class="st">"title"</span>)<span class="op">.</span><span class="fu">text</span>(({<span class="dt">index</span><span class="op">:</span> i}) <span class="kw">=&gt;</span> T[i])<span class="op">;</span></span>
+<span id="cb1-252"><a></a>  <span class="cf">if</span> (invalidation <span class="op">!=</span> <span class="kw">null</span>) invalidation<span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span> simulation<span class="op">.</span><span class="fu">stop</span>())<span class="op">;</span></span>
+<span id="cb1-253"><a></a></span>
+<span id="cb1-254"><a></a>  <span class="kw">function</span> <span class="fu">intern</span>(value) {</span>
+<span id="cb1-255"><a></a>    <span class="cf">return</span> value <span class="op">!==</span> <span class="kw">null</span> <span class="op">&amp;&amp;</span> <span class="kw">typeof</span> value <span class="op">===</span> <span class="st">"object"</span> <span class="op">?</span> value<span class="op">.</span><span class="fu">valueOf</span>() <span class="op">:</span> value<span class="op">;</span></span>
+<span id="cb1-256"><a></a>  }</span>
+<span id="cb1-257"><a></a></span>
+<span id="cb1-258"><a></a>  <span class="kw">function</span> <span class="fu">ticked</span>() {</span>
+<span id="cb1-259"><a></a>    link</span>
+<span id="cb1-260"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"x1"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">source</span><span class="op">.</span><span class="at">x</span>)</span>
+<span id="cb1-261"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"y1"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">source</span><span class="op">.</span><span class="at">y</span>)</span>
+<span id="cb1-262"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"x2"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">x</span>)</span>
+<span id="cb1-263"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"y2"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">y</span>)<span class="op">;</span></span>
+<span id="cb1-264"><a></a></span>
+<span id="cb1-265"><a></a>    node</span>
+<span id="cb1-266"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"cx"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">x</span>)</span>
+<span id="cb1-267"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">"cy"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">y</span>)<span class="op">;</span></span>
+<span id="cb1-268"><a></a>  }</span>
+<span id="cb1-269"><a></a></span>
+<span id="cb1-270"><a></a>  <span class="kw">function</span> <span class="fu">drag</span>(simulation) {    </span>
+<span id="cb1-271"><a></a>    <span class="kw">function</span> <span class="fu">dragstarted</span>(<span class="bu">event</span>) {</span>
+<span id="cb1-272"><a></a>      <span class="cf">if</span> (<span class="op">!</span><span class="bu">event</span><span class="op">.</span><span class="at">active</span>) simulation<span class="op">.</span><span class="fu">alphaTarget</span>(<span class="fl">0.3</span>)<span class="op">.</span><span class="fu">restart</span>()<span class="op">;</span></span>
+<span id="cb1-273"><a></a>      <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">fx</span> <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">x</span><span class="op">;</span></span>
+<span id="cb1-274"><a></a>      <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">fy</span> <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">y</span><span class="op">;</span></span>
+<span id="cb1-275"><a></a>    }</span>
+<span id="cb1-276"><a></a>    </span>
+<span id="cb1-277"><a></a>    <span class="kw">function</span> <span class="fu">dragged</span>(<span class="bu">event</span>) {</span>
+<span id="cb1-278"><a></a>      <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">fx</span> <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">x</span><span class="op">;</span></span>
+<span id="cb1-279"><a></a>      <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">fy</span> <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">y</span><span class="op">;</span></span>
+<span id="cb1-280"><a></a>    }</span>
+<span id="cb1-281"><a></a>    </span>
+<span id="cb1-282"><a></a>    <span class="kw">function</span> <span class="fu">dragended</span>(<span class="bu">event</span>) {</span>
+<span id="cb1-283"><a></a>      <span class="cf">if</span> (<span class="op">!</span><span class="bu">event</span><span class="op">.</span><span class="at">active</span>) simulation<span class="op">.</span><span class="fu">alphaTarget</span>(<span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb1-284"><a></a>      <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">fx</span> <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb1-285"><a></a>      <span class="bu">event</span><span class="op">.</span><span class="at">subject</span><span class="op">.</span><span class="at">fy</span> <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb1-286"><a></a>    }</span>
+<span id="cb1-287"><a></a>    </span>
+<span id="cb1-288"><a></a>    <span class="cf">return</span> d3<span class="op">.</span><span class="fu">drag</span>()</span>
+<span id="cb1-289"><a></a>      <span class="op">.</span><span class="fu">on</span>(<span class="st">"start"</span><span class="op">,</span> dragstarted)</span>
+<span id="cb1-290"><a></a>      <span class="op">.</span><span class="fu">on</span>(<span class="st">"drag"</span><span class="op">,</span> dragged)</span>
+<span id="cb1-291"><a></a>      <span class="op">.</span><span class="fu">on</span>(<span class="st">"end"</span><span class="op">,</span> dragended)<span class="op">;</span></span>
+<span id="cb1-292"><a></a>  }</span>
+<span id="cb1-293"><a></a></span>
+<span id="cb1-294"><a></a>  <span class="cf">return</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">assign</span>(svg<span class="op">.</span><span class="fu">node</span>()<span class="op">,</span> {<span class="dt">scales</span><span class="op">:</span> {color}})<span class="op">;</span></span>
+<span id="cb1-295"><a></a>}</span>
 <span id="cb1-296"><a></a></span>
-<span id="cb1-297"><a></a><span class="im">import</span> {howto} <span class="im">from</span> <span class="st">"@d3/example-components"</span></span>
-<span id="cb1-298"><a></a></span>
-<span id="cb1-299"><a></a><span class="im">import</span> {Swatches} <span class="im">from</span> <span class="st">"@d3/color-legend"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-297"><a></a></span>
+<span id="cb1-298"><a></a><span class="im">import</span> {howto} <span class="im">from</span> <span class="st">"@d3/example-components"</span></span>
+<span id="cb1-299"><a></a></span>
+<span id="cb1-300"><a></a><span class="im">import</span> {Swatches} <span class="im">from</span> <span class="st">"@d3/color-legend"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>

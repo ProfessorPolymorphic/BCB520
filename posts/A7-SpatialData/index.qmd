@@ -12,6 +12,7 @@ image: "Rlyeh.png"
 description: "Maps and Spatial Fields are fun!"
 code-fold: true
 code-tools: true
+draft: true
 
 ---
 

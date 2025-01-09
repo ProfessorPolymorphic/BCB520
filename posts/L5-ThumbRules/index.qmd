@@ -16,6 +16,7 @@ categories: [Lecture, DataViz]
 image: "Cthulhuthumb.png"
 code-fold: true
 description: "...Because GUIDLINES OF THUMB is too clumsy to say..."
+draft: true
 ---
 
 ## TLDR VERSION

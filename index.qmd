@@ -17,7 +17,7 @@ This class will help students establish a core understanding of data visualizati
 
 ## Quick Links
 
-I am maintaining the course here and on its [CANVAS PAGE](https://canvas.uidaho.edu/courses/25613){target="_blank"} (for enrolled students).
+I am maintaining the course here and I do not intend to use CANVAS this semester. 
 
 [SYLLABUS](syllabus.qmd)
 
@@ -25,17 +25,7 @@ I am maintaining the course here and on its [CANVAS PAGE](https://canvas.uidaho.
 
 ### Student Repositories
 
-[KB GitHub](https://github.com/konradbailey) and [KB Portfolio](https://konradbailey.github.io/BCB520.Portfolio.V2/){target="_blank"}
-
-[HS GitHub](https://github.com/heidihosellmann) and [HS Porfolio](https://heidihosellmann.github.io/BCB520Portfolio/)
-
-[YG GitHub](https://github.com/yaotian-gao) and [YG Porfolio](https://yaotian-gao.github.io/BCB-Quarto-Blog-/)
-
-[RS GitHub](https://github.com/robynsteveley) and [RS Porfolio](https://robynsteveley.github.io/BCB520PortfolioGithub/)
-
-[GT GitHub](https://github.com/gt0107) and [GT Porfolio](https://gt0107.github.io/BCB-520-Portfolio/)
-
-[LR GitHub](https://github.com/lripa) and [LR Porfolio](https://lripa.github.io/BCB520GitHub/)
+To be populated by end of January.
 
 ## Learning Resources
 

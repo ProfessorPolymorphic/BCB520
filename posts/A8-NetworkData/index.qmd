@@ -12,7 +12,7 @@ image: "wendigonetwork.png"
 description: "iGRAPH!"
 code-fold: true
 code-tools: true
-
+draft: true
 ---
 
 # OVERVIEW

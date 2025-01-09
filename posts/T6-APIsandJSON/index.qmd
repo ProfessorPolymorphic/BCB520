@@ -10,6 +10,7 @@ categories: [Tutorial, JSON, Tables, API]
 code-fold: true
 code-tools: true
 description: "Tabular data...is maybe a bit more nuanced?"
+draft: true
 ---
 
 ```{r}

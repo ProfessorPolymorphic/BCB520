@@ -5,7 +5,7 @@ date: "2024-01-18"
 categories: [Assignment, DataViz, Quarto, Data Sets]
 image: "MythosData1.png"
 code-fold: true
-
+draft: true
 ---
 
 ## SUMMARY
