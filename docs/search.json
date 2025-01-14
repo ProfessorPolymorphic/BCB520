@@ -46,14 +46,14 @@
     "href": "posts/T2-Anscombe/index.html",
     "title": "TUTORIAL 2 - Literate Programming and Anscombe’s Quartet",
     "section": "",
-    "text": "Do the summary statistics reveal the truth? Or are they FILLED WITH LIES? A simple demonstration with Anscombe’s Quartet."
+    "text": "Do the summary statistics reveal the truth? Or are they FILLED WITH LIES? A simple demonstration with Anscombe’s Quartet.\nAgain, the video is a couple years old. Expect a few dated references."
   },
   {
     "objectID": "posts/T2-Anscombe/index.html#more-quarto",
     "href": "posts/T2-Anscombe/index.html#more-quarto",
     "title": "TUTORIAL 2 - Literate Programming and Anscombe’s Quartet",
     "section": "",
-    "text": "Do the summary statistics reveal the truth? Or are they FILLED WITH LIES? A simple demonstration with Anscombe’s Quartet."
+    "text": "Do the summary statistics reveal the truth? Or are they FILLED WITH LIES? A simple demonstration with Anscombe’s Quartet.\nAgain, the video is a couple years old. Expect a few dated references."
   },
   {
     "objectID": "posts/T2-Anscombe/index.html#the-data",
@@ -67,7 +67,7 @@
     "href": "posts/T2-Anscombe/index.html#example-hypotheses",
     "title": "TUTORIAL 2 - Literate Programming and Anscombe’s Quartet",
     "section": "Example Hypotheses",
-    "text": "Example Hypotheses\n\nEric has four replicates in which he is measuring the expression of two proteins (x, y) on 11 samples.\nCody has four replicates in which he is measuring gene expression of two genes (x, y) in 11 cell images.\nRonald has four replicates in which he is measuring a blood protein (x) and a malaria marker (y) in 11 patients.\n\nYour hypothesis is that the four replicates do not differ in the correlation between x and y."
+    "text": "Example Hypotheses\n\nBetsy has four replicates in which she is measuring the abundance of two bacteria (x, y) on 11 milk samples.\nPriya has four replicates in which she is measuring gene expression of two genes (x, y) in 11 different pipefish tissue samples.\nHenry has four replicate years in which he is measuring the abundance of an insect pest (x) and crop productivity (y) in 11 fields.\n\nYour hypothesis is that the four replicates do not differ in the correlation between x and y."
   },
   {
     "objectID": "posts/T2-Anscombe/index.html#summary-statistics",
@@ -158,7 +158,7 @@
     "href": "posts/A1-Lit-Prog/index.html#assignment",
     "title": "ASSIGNMENT 1 - Fun with literate programming.",
     "section": "ASSIGNMENT",
-    "text": "ASSIGNMENT\nAfter that long introduction, I suppose you are wondering what I want you to actually DO today.\nWell, I want you to set up your publishing system and preferred language on your computer. Then I want you to recreate the classic figure from Anscombe’s Quartet.\nNow, you might be asking…\n“How am I supposed to do that? You haven’t taught me how to do anything yet!”\nHere is the dirty little secret of modern education.\nThe Internet Exists.\nWhile I could use up an entire 90 minute lecture telling you how to:\n\nDownload and install R, R-Studio, and Quarto (included by default with R-Studio).\nCreate a Quarto document that will publish in the .html format\nInstall the R packages you will need\nTidy up the Anscombe’s Quartet data\nCalculate the summary statistics for each x y pair\nMake a nice little plot…\n\nI’m not going to do that.\nInstead, I want you to use the resources I point towards, or other resources that make more sense to you, to figure out how to do those things."
+    "text": "ASSIGNMENT\nAfter that long introduction, I suppose you are wondering what I want you to actually DO.\nWell, I want you to set up your publishing system and preferred language on your computer. Then I want you to recreate the classic figure from Anscombe’s Quartet.\nNow, you might be asking…\n“How am I supposed to do that? You haven’t taught me how to do anything yet!”\nHere is the dirty little secret of modern education.\nThe Internet Exists.\nWhile I could use up an entire 90 minute lecture telling you how to:\n\nDownload and install R, R-Studio, and Quarto (included by default with R-Studio).\nCreate a Quarto document that will publish in the .html format\nInstall the R packages you will need\nTidy up the Anscombe’s Quartet data\nCalculate the summary statistics for each x y pair\nMake a nice little plot…\n\nI’m not going to do that.\nInstead, I want you to use the resources I point towards, or other resources that make more sense to you, to figure out how to do those things."
   },
   {
     "objectID": "posts/A1-Lit-Prog/index.html#resources",
@@ -179,7 +179,7 @@
     "href": "posts/L1-Intro/index.html#visualization",
     "title": "LECTURE 1 - INTRO",
     "section": "VISUALIZATION",
-    "text": "VISUALIZATION\nComputers provide visual representations of datasets designed to help people carry out tasks more effectively.\nTamara Munzner\nDepartment of Computer Science\nInfoVis Group\nUniversity of British Columbia"
+    "text": "VISUALIZATION\nComputers provide visual representations of datasets designed to help people carry out tasks more effectively.\nTamara Munzner\nDepartment of Computer Science\nDr. Munzner’s version of this lecture\nUniversity of British Columbia"
   },
   {
     "objectID": "posts/L1-Intro/index.html#the-human",
@@ -189,18 +189,18 @@
     "text": "THE HUMAN\nWhy have a human in the loop?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\nWe don’t need visualization when a trusted fully automatic solution exists.\nVisualization is suitable when there is a need to augment human capabilities rather than replace people with computational decision-making methods."
   },
   {
-    "objectID": "posts/L1-Intro/index.html#when-to-visualize",
-    "href": "posts/L1-Intro/index.html#when-to-visualize",
-    "title": "LECTURE 1 - INTRO",
-    "section": "WHEN TO VISUALIZE",
-    "text": "WHEN TO VISUALIZE\nVisualization is useful when:\n\n\nThe analysis problem is ill-specified and we don’t know exactly what questions to ask in advance.\nWe are interested in long-term use for end users (ex: exploratory analysis of scientific data).\nWe are presenting known results (ex: DATA JOURNALISM - New York Times Upshot).\nWe need a stepping stone to assess requirements before developing models.\nDevelopers of an automatic solution want to refine & determine parameters.\nWe need to help end users of automatic solutions verify and build trust."
-  },
-  {
     "objectID": "posts/L1-Intro/index.html#the-representation",
     "href": "posts/L1-Intro/index.html#the-representation",
     "title": "LECTURE 1 - INTRO",
     "section": "THE REPRESENTATION",
     "text": "THE REPRESENTATION\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\nEXTERNAL REPRESENTATIONS: Replace cognition with perception."
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#in-class-exercise",
+    "href": "posts/L1-Intro/index.html#in-class-exercise",
+    "title": "LECTURE 1 - INTRO",
+    "section": "IN CLASS EXERCISE",
+    "text": "IN CLASS EXERCISE\nYou have 5 minutes.\nFind an example of a data visualization from your daily life. I may not be related to your research or discipline in any way. Be prepared to share it with the class (zoom screen share or email me a link) and discuss its purpose, efficacy, strengths, and weaknesses."
   },
   {
     "objectID": "posts/L1-Intro/index.html#why-depend-on-vision",
