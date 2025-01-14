@@ -42,6 +42,48 @@
     "text": "library(readxl)\nSchedule &lt;- read_excel(\"Schedule.xlsx\")\n\nknitr::kable(Schedule, caption = '')\n\n\n\n\nDATE\nTOPIC\nACTIVITY\nRESOURCES\n\n\n\n\n2025-01-09\nIntroduction and Overview\nNA\nNA\n\n\n2025-01-14\nThe Imporance of Visualization\nLiterate Programming\nTutorial 1, Tutorial 2\n\n\n2025-01-16\nWHAT?  Abstraction of Data\nNA\nNA\n\n\n2025-01-21\nWHY?  Task Abstraction\nNA\nNA\n\n\n2025-01-23\nNA\nNA\nNA\n\n\n2025-01-28\nNA\nNA\nNA\n\n\n2025-01-30\nNA\nNA\nNA\n\n\n2025-02-04\nBarrie in North Carolina\nNA\nNA\n\n\n2025-02-06\nBarrie in North Carolina\nNA\nNA\n\n\n2025-02-11\nMARKS. Geometric elements to depict data\nNA\nNA\n\n\n2025-02-13\nNA\nNA\nNA\n\n\n2025-02-18\nNA\nNA\nNA\n\n\n2025-02-20\nCHANNELS. Controlling the appearance of marks.\nNA\nNA\n\n\n2025-02-25\nRULES OF THUMB.\nMidterm Presentations\nNA\n\n\n2025-02-27\nTABULAR DATA I\nMidterm Presentations\nNA\n\n\n2025-03-04\nTABULAR DATA II\nNA\nNA\n\n\n2025-03-06\nSPATIAL DATA I: Geographic Maps\nNA\nNA\n\n\n2025-03-11\nSpring Recess\nNA\nNA\n\n\n2025-03-13\nSpring Recess\nNA\nNA\n\n\n2025-03-18\nBarrie in Vermont\nNA\nNA\n\n\n2025-03-20\nSPATIAL DATA II:  Spatial Fields\nNA\nNA\n\n\n2025-03-25\nNETWORK DATA I\nNA\nNA\n\n\n2025-03-27\nNETWORK DATA II\nNA\nNA\n\n\n2025-04-01\nCOLOR I\nNA\nNA\n\n\n2025-04-03\nCOLOR II\nNA\nNA\n\n\n2025-04-08\nINTERACTIVITY\nNA\nNA\n\n\n2025-04-10\nMULTIPLE VIEWS\nNA\nNA\n\n\n2025-04-15\nAGGREGATION\nNA\nNA\n\n\n2025-04-17\nBarrie in DC\nNA\nNA\n\n\n2025-04-22\nFILTERING\nNA\nNA\n\n\n2025-04-24\nEMBEDDING: Focus and Context\nNA\nNA\n\n\n2025-04-29\nDEAD WEEK\nFinal Presentations\nNA\n\n\n2025-05-01\nDEAD WEEK\nFinal Presentations\nNA\n\n\n2025-05-06\nFINALS WEEK\nNA\nNA"
   },
   {
+    "objectID": "posts/T2-Anscombe/index.html",
+    "href": "posts/T2-Anscombe/index.html",
+    "title": "TUTORIAL 2 - Literate Programming and Anscombe’s Quartet",
+    "section": "",
+    "text": "Do the summary statistics reveal the truth? Or are they FILLED WITH LIES? A simple demonstration with Anscombe’s Quartet."
+  },
+  {
+    "objectID": "posts/T2-Anscombe/index.html#more-quarto",
+    "href": "posts/T2-Anscombe/index.html#more-quarto",
+    "title": "TUTORIAL 2 - Literate Programming and Anscombe’s Quartet",
+    "section": "",
+    "text": "Do the summary statistics reveal the truth? Or are they FILLED WITH LIES? A simple demonstration with Anscombe’s Quartet."
+  },
+  {
+    "objectID": "posts/T2-Anscombe/index.html#the-data",
+    "href": "posts/T2-Anscombe/index.html#the-data",
+    "title": "TUTORIAL 2 - Literate Programming and Anscombe’s Quartet",
+    "section": "The Data",
+    "text": "The Data\nAnscombe’s Quartet is comprised of four pairs of x,y data:\n\n\nCode\nlibrary(ggplot2)\nlibrary(grid)\nlibrary(gridExtra)\nlibrary(datasets)\nlibrary(tidyverse)\nlibrary(dplyr)\n\n\n\n\nCode\ndatasets::anscombe\n\n\n   x1 x2 x3 x4    y1   y2    y3    y4\n1  10 10 10  8  8.04 9.14  7.46  6.58\n2   8  8  8  8  6.95 8.14  6.77  5.76\n3  13 13 13  8  7.58 8.74 12.74  7.71\n4   9  9  9  8  8.81 8.77  7.11  8.84\n5  11 11 11  8  8.33 9.26  7.81  8.47\n6  14 14 14  8  9.96 8.10  8.84  7.04\n7   6  6  6  8  7.24 6.13  6.08  5.25\n8   4  4  4 19  4.26 3.10  5.39 12.50\n9  12 12 12  8 10.84 9.13  8.15  5.56\n10  7  7  7  8  4.82 7.26  6.42  7.91\n11  5  5  5  8  5.68 4.74  5.73  6.89"
+  },
+  {
+    "objectID": "posts/T2-Anscombe/index.html#example-hypotheses",
+    "href": "posts/T2-Anscombe/index.html#example-hypotheses",
+    "title": "TUTORIAL 2 - Literate Programming and Anscombe’s Quartet",
+    "section": "Example Hypotheses",
+    "text": "Example Hypotheses\n\nEric has four replicates in which he is measuring the expression of two proteins (x, y) on 11 samples.\nCody has four replicates in which he is measuring gene expression of two genes (x, y) in 11 cell images.\nRonald has four replicates in which he is measuring a blood protein (x) and a malaria marker (y) in 11 patients.\n\nYour hypothesis is that the four replicates do not differ in the correlation between x and y."
+  },
+  {
+    "objectID": "posts/T2-Anscombe/index.html#summary-statistics",
+    "href": "posts/T2-Anscombe/index.html#summary-statistics",
+    "title": "TUTORIAL 2 - Literate Programming and Anscombe’s Quartet",
+    "section": "Summary Statistics",
+    "text": "Summary Statistics\n\n\nCode\ntidy_anscombe &lt;- anscombe %&gt;%\n pivot_longer(cols = everything(),\n              names_to = c(\".value\", \"set\"),\n              names_pattern = \"(.)(.)\")\ntidy_anscombe_summary &lt;- tidy_anscombe %&gt;%\n  group_by(set) %&gt;%\n  summarise(across(.cols = everything(),\n                   .fns = lst(min,max,median,mean,sd,var),\n                   .names = \"{col}_{fn}\"))\n#&gt; `summarise()` ungrouping output (override with `.groups` argument)\n\nvars&lt;-c(\"set\", \"x_mean\", \"x_var\",  \"y_mean\", \"y_var\")\nthing&lt;- as.data.frame(tidy_anscombe_summary[vars])\nknitr::kable(thing)\n\n\n\n\n\nset\nx_mean\nx_var\ny_mean\ny_var\n\n\n\n\n1\n9\n11\n7.500909\n4.127269\n\n\n2\n9\n11\n7.500909\n4.127629\n\n\n3\n9\n11\n7.500000\n4.122620\n\n\n4\n9\n11\n7.500909\n4.123249"
+  },
+  {
+    "objectID": "posts/T2-Anscombe/index.html#visualization-reveals-hidden-patterns",
+    "href": "posts/T2-Anscombe/index.html#visualization-reveals-hidden-patterns",
+    "title": "TUTORIAL 2 - Literate Programming and Anscombe’s Quartet",
+    "section": "Visualization reveals hidden patterns!",
+    "text": "Visualization reveals hidden patterns!\n\n\nCode\nggplot(tidy_anscombe,\n       aes(x = x,\n           y = y)) +\n  geom_point() +\n  geom_point(data = tidy_anscombe_summary, aes(x=x_mean, y = y_mean, color = \"red\", size = 5),\n             show.legend = FALSE)+\n  facet_wrap(~set) +\n  geom_smooth(method = \"lm\", se = FALSE)\n\n\n`geom_smooth()` using formula = 'y ~ x'"
+  },
+  {
     "objectID": "posts/A3-PrototypeVizPortfolio/index.html",
     "href": "posts/A3-PrototypeVizPortfolio/index.html",
     "title": "ASSIGNMENT 3",
@@ -84,25 +126,53 @@
     "text": "RESOURCES\nA YouTube Video from Posit on Building your Data Science Portfolio\nTidyTuesday\nA fun Spotify example from TidyTuesday by Kaylin Pavlik.\nQuarto’s BLOG Documentation\nA YouTube Video from Posit on Building a BLOG with Quarto"
   },
   {
+    "objectID": "posts/A1-Lit-Prog/index.html",
+    "href": "posts/A1-Lit-Prog/index.html",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "",
+    "text": "The idea of Literate Programming is that source code that is executed as part of the program’s purpose is interspersed with documentation that describes the program’s logic. The concept of literate programming was first articulated by David Knuth in 1984. You know… back when music was good? Modern Data Science leans pretty heavily on literate programming, and to be honest, there aren’t very many good arguments as to why you WOULDN’T want to implement this approach in your own work. Bearing this in mind, we will adopt this framework for most of the activities, exercises, and assignments in this course. All of us will benefit by practicing these skills."
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#summary",
+    "href": "posts/A1-Lit-Prog/index.html#summary",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "",
+    "text": "The idea of Literate Programming is that source code that is executed as part of the program’s purpose is interspersed with documentation that describes the program’s logic. The concept of literate programming was first articulated by David Knuth in 1984. You know… back when music was good? Modern Data Science leans pretty heavily on literate programming, and to be honest, there aren’t very many good arguments as to why you WOULDN’T want to implement this approach in your own work. Bearing this in mind, we will adopt this framework for most of the activities, exercises, and assignments in this course. All of us will benefit by practicing these skills."
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#literate-programming-publishing-systems",
+    "href": "posts/A1-Lit-Prog/index.html#literate-programming-publishing-systems",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "LITERATE PROGRAMMING PUBLISHING SYSTEMS",
+    "text": "LITERATE PROGRAMMING PUBLISHING SYSTEMS\nI’m trying to keep this course as technology agnostic as I can. The idea is that you should be practicing and building competencies in the languages and algorithms that are most useful to you. Who am I to tell you to use R instead of Python? If you have skills in a particular language I encourage you to keep using that during this course. That being said, I am going to work the examples using R and R Studio, and I will (mostly) use Quarto as the literate programming framework.\nIf all of this is new to you, no problem. Just follow along in R and Quarto and start your skill building journey with those languages.\nIf you are a Python person, great! Quarto can accommodate that language as well. If you have another preference for literate programming, such as sticking with R Markdown until the Quarto bugs are fixed, that is great. Find the framework and tools that work for you, and practice, practice, practice!\n\nQuarto\nAn open source publishing system that allows you to create websites, documents, blogs, books, publications, presentations, and more while using R, Python, Julia, or Observable. Quarto is intended to be the more functional successor of R Markdown. I intend to use Quarto for most of my work in this course.\n\n\nR Markdown\nAnother publishing system for creating all the things … websites, slides, manuscripts, dashboards, etc. While most people (including me!) instinctively think of R and Python within R Markdown, the list of supported language engines is pretty extensive.\n\nnames(knitr::knit_engines$get())\n\n [1] \"awk\"       \"bash\"      \"coffee\"    \"gawk\"      \"groovy\"    \"haskell\"  \n [7] \"lein\"      \"mysql\"     \"node\"      \"octave\"    \"perl\"      \"php\"      \n[13] \"psql\"      \"Rscript\"   \"ruby\"      \"sas\"       \"scala\"     \"sed\"      \n[19] \"sh\"        \"stata\"     \"zsh\"       \"asis\"      \"asy\"       \"block\"    \n[25] \"block2\"    \"bslib\"     \"c\"         \"cat\"       \"cc\"        \"comment\"  \n[31] \"css\"       \"ditaa\"     \"dot\"       \"embed\"     \"eviews\"    \"exec\"     \n[37] \"fortran\"   \"fortran95\" \"go\"        \"highlight\" \"js\"        \"julia\"    \n[43] \"python\"    \"R\"         \"Rcpp\"      \"sass\"      \"scss\"      \"sql\"      \n[49] \"stan\"      \"targets\"   \"tikz\"      \"verbatim\"  \"ojs\"       \"mermaid\""
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#languages-and-toolsets",
+    "href": "posts/A1-Lit-Prog/index.html#languages-and-toolsets",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "LANGUAGES AND TOOLSETS",
+    "text": "LANGUAGES AND TOOLSETS\nThere are quite a few, but the five that seemed to keep coming up as I prepped this course are:\n\nR\nA very powerful open source framework for statistical computing and graphics. R has a lot of base functionality, and its capabilities are increased by 100 fold with packages created by R users. Packages are the core units of R code. I’m going to use R for the vast majority of demonstrations in this course.\n\n\nPython\nPython is an open source general purpose programming language. It wasn’t developed just for statistical computing or data science, and people use this language for tons of different applications. There is no denying it has become a very powerful language for data science and data visualization.\n\n\nTableau\nTableau is proprietary software that is very powerful for creating beautiful and functional data visualizations. It can integrate with all sorts of data sources and is used a lot for analytics, especially in the business world. The downsides (that occur to me at least) are that it costs money, it is not open source, and is more of a one-trick-pony than the programming languages on this list.\n\n\nJavascript\nJavascript has been around for about 25 years, and is (I think) the world’s most popular programming language. Along with HTML and CSS, Javascript drives pretty much the entire internet. I mention Javascript here because it has the D3 library, which can create super cool interactive data visualizaitons. In my experience, the learning curve with Javascript and D3 was pretty steep. I bought a book about it once, but just haven’t been able to allocate the amount of time necessary to really start using it. Check out the gallery of examples. Amazing!\n\n\nObservable / D3\nObservable is a set of extensions to Javascript that features something called reactive runtime. This means that the code blocks are executed and compiled as they are written, and changes are implemented instantaneously. Observable is pretty great for data exploration, and is well supported by Quarto. In addition, you can use the Observable JS libraries in Quarto to access D3. We’ll use some of these tools in this course, especially when we start considering interactivity."
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#assignment",
+    "href": "posts/A1-Lit-Prog/index.html#assignment",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "ASSIGNMENT",
+    "text": "ASSIGNMENT\nAfter that long introduction, I suppose you are wondering what I want you to actually DO today.\nWell, I want you to set up your publishing system and preferred language on your computer. Then I want you to recreate the classic figure from Anscombe’s Quartet.\nNow, you might be asking…\n“How am I supposed to do that? You haven’t taught me how to do anything yet!”\nHere is the dirty little secret of modern education.\nThe Internet Exists.\nWhile I could use up an entire 90 minute lecture telling you how to:\n\nDownload and install R, R-Studio, and Quarto (included by default with R-Studio).\nCreate a Quarto document that will publish in the .html format\nInstall the R packages you will need\nTidy up the Anscombe’s Quartet data\nCalculate the summary statistics for each x y pair\nMake a nice little plot…\n\nI’m not going to do that.\nInstead, I want you to use the resources I point towards, or other resources that make more sense to you, to figure out how to do those things."
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#resources",
+    "href": "posts/A1-Lit-Prog/index.html#resources",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "RESOURCES",
+    "text": "RESOURCES\nTidyverse and Anscombe’s Quartet\nHandy cheat-sheets for many different R packages\nTutorial 1 - Literate Programming\nTutorial 2 - Literate Programming and Anscombe’s Quartet\nTutorial 3 - Python"
+  },
+  {
     "objectID": "posts/L1-Intro/index.html#who-am-i",
     "href": "posts/L1-Intro/index.html#who-am-i",
     "title": "LECTURE 1 - INTRO",
     "section": "WHO AM I?",
     "text": "WHO AM I?\nBarrie Robison\nDepartment of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
-  },
-  {
-    "objectID": "posts/L1-Intro/index.html#who-are-you",
-    "href": "posts/L1-Intro/index.html#who-are-you",
-    "title": "LECTURE 1 - INTRO",
-    "section": "WHO ARE YOU?",
-    "text": "WHO ARE YOU?\n“…The course is designed to be”discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests…”\nBriefly:\n\nYour name\nYour discipline\nYour degree progress\nYour technical proficiency with data visualization"
-  },
-  {
-    "objectID": "posts/L1-Intro/index.html#course-summary",
-    "href": "posts/L1-Intro/index.html#course-summary",
-    "title": "LECTURE 1 - INTRO",
-    "section": "COURSE SUMMARY",
-    "text": "COURSE SUMMARY\nStudents completing this course will be able to:\n\n\nDescribe and manipulate tabular, network, and spatial data; transform these data into a form suitable for visualization.\nMake effective data visualization design choices related to marks and channels, spatial arrangement, and components of color.\nDesign effective data visualizations for tabular, network, and spatial data with quantitative and categorical attributes.\nImplement their data visualization designs using existing tools in R (or other toolkits preferred by the student).\nExplain whether a visual encoding is perceptually appropriate for a specific combination of task and data.\nDemonstrate their skills with at least two novel visualizations suitable suitable for inclusion in an online Data Science Portfolio.\n\nThe course materials are located on Canvas and the course website."
   },
   {
     "objectID": "posts/L1-Intro/index.html#visualization",
@@ -187,6 +257,20 @@
     "title": "LECTURE 1 - INTRO",
     "section": "HUMAN LIMITS",
     "text": "HUMAN LIMITS\n\nTime\nMemory\nAttention\n\n\n\n\n\nHOME"
+  },
+  {
+    "objectID": "posts/T1-Lit-Prog/index.html",
+    "href": "posts/T1-Lit-Prog/index.html",
+    "title": "TUTORIAL 1 - Literate Programming",
+    "section": "",
+    "text": "Learning new tools is hard. Plowing though the tomes of the Data Science Mythos is hard. Perhaps this tutorial will guide you through the mind shattering truths of… LITERATE PROGRAMMING.\nI recorded this video a couple years ago. It should cover the basics, but some elements might be dated."
+  },
+  {
+    "objectID": "posts/T1-Lit-Prog/index.html#intro-to-quarto",
+    "href": "posts/T1-Lit-Prog/index.html#intro-to-quarto",
+    "title": "TUTORIAL 1 - Literate Programming",
+    "section": "",
+    "text": "Learning new tools is hard. Plowing though the tomes of the Data Science Mythos is hard. Perhaps this tutorial will guide you through the mind shattering truths of… LITERATE PROGRAMMING.\nI recorded this video a couple years ago. It should cover the basics, but some elements might be dated."
   },
   {
     "objectID": "index.html",

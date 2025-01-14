@@ -1,16 +1,18 @@
 ---
 title: "TUTORIAL 2 - Literate Programming and Anscombe's Quartet"
 author: "Barrie Robison"
-date: "2024-01-13"
+date: "2025-01-14"
 categories: [Tutorial, DataViz, Quarto, Literate Programming]
 image: "Cthulhunetwork.png"
 code-fold: true
-draft: true
+
 ---
 
 ## MORE QUARTO!
 
 Do the summary statistics reveal the truth?  Or are they **FILLED WITH LIES**?  A simple demonstration with Anscombe's Quartet.
+
+Again, the video is a couple years old.  Expect a few dated references.
 
 {{< video https://youtu.be/rxVmYNkikNY >}}
 
@@ -39,9 +41,9 @@ datasets::anscombe
 
 ## Example Hypotheses
 
-1. Eric has four replicates in which he is measuring the expression of two proteins (x, y) on 11 samples.
-2. Cody has four replicates in which he is measuring gene expression of two genes (x, y) in 11 cell images.
-3. Ronald has four replicates in which he is measuring a blood protein (x) and a malaria marker (y) in 11 patients.
+1. Betsy has four replicates in which she is measuring the abundance of two bacteria (x, y) on 11 milk samples.
+2. Priya has four replicates in which she is measuring gene expression of two genes (x, y) in 11 different pipefish tissue samples.
+3. Henry has four replicate years in which he is measuring the abundance of an insect pest (x) and crop productivity (y) in 11 fields.
 
 **Your hypothesis is that the four replicates do not differ in the correlation between x and y.**
 
