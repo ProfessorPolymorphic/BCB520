@@ -1,11 +1,11 @@
 ---
 title: "ASSIGNMENT 2 - Your Data."
 author: "Barrie Robison"
-date: "2024-01-18"
+date: "2025-01-21"
 categories: [Assignment, DataViz, Quarto, Data Sets]
 image: "MythosData1.png"
 code-fold: true
-draft: true
+
 ---
 
 ## SUMMARY

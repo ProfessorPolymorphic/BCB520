@@ -1,7 +1,7 @@
 ---
 title: "TUTORIAL 4"
 subtitle: "Barrie describes his data..."
-date: "2024-01-22"
+date: "2025-01-21"
 author: "Barrie D. Robison"
 format: html
 code-fold: true
