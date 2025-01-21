@@ -7,14 +7,14 @@ format:
       buttons: false
     preview-links: auto
     css: styles.css
-    footer: <a href="https://canvas.uidaho.edu/courses/25613" target="_blank">CANVAS</a>...<a href="https://professorpolymorphic.github.io/BCB520/" target="_blank">HOME</a>
+    footer: <a href="https://professorpolymorphic.github.io/BCB520/" target="_blank">HOME</a>
     theme: [default, custom.scss]
 author: "Barrie Robison"
-date: "2024-01-17"
+date: "2025-01-21"
 categories: [Lecture, DataViz, Data]
 image: "CthulhuAbstracts.png"
 code-fold: true
-draft: true
+
 
 ---
 
@@ -55,7 +55,33 @@ Computer-based visualization systems provide visual representations of [datasets
 ::: {layout-ncol="2"}
 ### What does this sequence of six numbers mean?
 
-[14, 2.6, 30, 30, 15, 100001]{.blue} Two points far from each other in 3D space?
+[14, 2.6, 30, 30, 15, 100001]{.blue} 
+
+
+
+### VIZ
+
+```{r}
+#| fig-align: right
+
+
+df <- data.frame (x  = c("14", "30"),
+                  y = c("2.6", "15"),
+                  z = c("30","100001")
+                  )
+library(plotly)
+
+#plot_ly(x=df$x, y=df$y, z=df$z, type="scatter3d", mode="markers")
+
+```
+:::
+
+## DATA SEMANTICS
+
+::: {layout-ncol="2"}
+### What does this sequence of six numbers mean?
+
+[14, 2.6, 30, 30, 15, 100001]{.blue}  Two points far from each other in 3D space?
 
 ### VIZ
 
@@ -91,8 +117,19 @@ plot_ly(x=df$x, y=df$y, z=df$z, type="scatter3d", mode="markers")
 ::: {layout-ncol="2"}
 ### What about this data?
 
-[Basil, 7, S, Pear]{.blue}:\
-Food shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month
+[Basil, 7, S, Pear]{.blue}: 
+
+### VIZ
+
+
+:::
+
+## DATA SEMANTICS
+
+::: {layout-ncol="2"}
+### What about this data?
+
+[Basil, 7, S, Pear]{.blue}: Food shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month
 
 ### VIZ
 
@@ -104,8 +141,7 @@ Food shipment of produce (basil & pear) arrived in satisfactory condition on 7th
 ::: {layout-ncol="2"}
 ### What about this data?
 
-[Basil, 7, S, Pear]{.blue}:\
-Basil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service
+[Basil, 7, S, Pear]{.blue}: Basil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service
 
 ### VIZ
 
@@ -117,8 +153,7 @@ Basil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek 
 ::: {layout-ncol="2"}
 ### What about this data?
 
-[Basil, 7, S, Pear]{.blue}:\
-Lab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food
+[Basil, 7, S, Pear]{.blue}: Lab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food
 
 ### VIZ
 
@@ -157,13 +192,13 @@ The meaning of a word, phrase, sentence, or text.
 
 ## OTHER DATA TYPES
 
--   Links
+-   [Links]{.red}
     -   express relationship between two items
     -   e.g/ friendship on facebook, interaction between proteins
--   Positions
+-   [Positions]{.red}
     -   spatial data: location in 2D or 3D
     -   e.g. pixels in photo, voxels in MRI scan, latitude/longitude
--   Grids
+-   [Grids]{.red}
     -   sampling strategy for continuous data
 
 ## WHAT?
@@ -190,7 +225,7 @@ Computer-based visualization systems provide visual representations of [datasets
 
 -   A cell holds the [VALUE]{.red} for an item/attribute pair
 
--   A UNIQUE key can be used (implicitly or explicitly) to identify each item even if they share all measured attributes
+-   A **UNIQUE KEY** can be used (implicitly or explicitly) to identify each item even if they share all measured attributes
 :::
 
 ::: {.column width="60%"}
@@ -228,7 +263,9 @@ Network/graph nodes (vertices) connected by links (edges). A tree is special cas
 
 ## SPATIAL FIELDS 1
 
-Attribute values associated w/ cells cell contains value from continuous domain (eg temperature, pressure, wind velocity measured or simulated).
+Attribute values associated with **cells**.
+
+Each cell contains a value from a continuous domain (eg temperature, pressure, wind velocity measured or simulated).
 
 ::: {layout-ncol="2"}
 ![](spatialfields.png){width="300"}
@@ -239,16 +276,14 @@ Attribute values associated w/ cells cell contains value from continuous domain 
 ## SPATIAL FIELDS 2 {.smaller}
 
 ::: {layout-ncol="2"}
--   Attribute values associated w/ cells.
--   Cell contains value from continuous domain
+-   Attribute values associated with **cells**.
+-   Each cell contains value from continuous domain
     -   (eg temperature, pressure, wind velocity)
 -   Measured or simulated.
--   Major concerns
-    -   sampling:
-        -   where attributes are measured
-    -   interpolation:
-        -   how to model attributes elsewhere
-    -   grid types
+-   Major concerns and potential limitations:
+    -   Sampling: where are the attributes measured and at what density?
+    -   Interpolation: how to model attributes in cells with no measurements?
+    -   Grid types: optimizing size, shape, etc.
 
 ![](MRI.png){width="500"}
 :::
@@ -257,20 +292,11 @@ Attribute values associated w/ cells cell contains value from continuous domain 
 
 ::: columns
 ::: {.r-fit-text .column width="60%"}
--   Attribute values associated w/ cells.
--   Cell contains value from continuous domain
-    -   (eg temperature, pressure, wind velocity)
--   Measured or simulated.
--   Major concerns
-    -   sampling:
-        -   where attributes are measured
-    -   interpolation:
-        -   how to model attributes elsewhere
-    -   grid types
--   Major divisions - attributes per cell:
-    -   scalar (1)
-    -   vector (2)
-    -   tensor (many)
+
+-   Data structures can be complex, scaling with the number of attributes per cell:
+    -   Scalar (1)
+    -   Vector (2)
+    -   Tensor (many)
 :::
 
 ::: {.column width="40%"}
@@ -286,16 +312,16 @@ Attribute values associated w/ cells cell contains value from continuous domain 
 
 ::: columns
 ::: {.r-fit-text .column width="60%"}
--   Shape of items
+-   Shape of items or observations is defined.
 -   Explicit spatial positions / regions
     -   points, lines, curves, surfaces, volumes
--   Boundary between computer graphics and visualization
-    -   graphics: geometry taken as given
-    -   vis: geometry is result of a design decision
+
 :::
 
 ::: {.column width="40%"}
-![](geometrymap.png)
+![](jwmg22679-fig-0001-m.webp)
+[Lopez et.al., 2024](https://wildlife.onlinelibrary.wiley.com/doi/10.1002/jwmg.22679)
+
 :::
 :::
 
@@ -309,13 +335,13 @@ Attribute values associated w/ cells cell contains value from continuous domain 
 ::: {.r-fit-text .column width="60%"}
 Grouping Items:
 
--   sets
+-   **Sets**
     -   unique items
     -   unordered
--   lists
+-   **Lists**
     -   ordered
     -   duplicates possible
--   clusters
+-   **Clusters**
     -   groups of similar items
 :::
 
@@ -392,7 +418,7 @@ Grouping Items:
 ::: r-fit-text
 -   [Data Model]{.red}
     -   mathematical abstraction
-    -   sets with operations, eg floats with \* / - + variable data types in programming languages
+    -   sets with operations, eg floats with * / - +  or variable data types in programming languages
 -   [Conceptual Model]{.red}
     -   mental construction (semantics)
     -   supports reasoning

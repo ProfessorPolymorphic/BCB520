@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.4.550">
 
   <meta name="author" content="Barrie Robison">
-  <meta name="dcterms.date" content="2024-01-17">
+  <meta name="dcterms.date" content="2025-01-21">
   <title>BCB520 - LECTURE 2 - DATA ABSTRACTION</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -324,12 +324,13 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../../site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
-  <script src="../../site_libs/plotly-binding-4.10.2/plotly.js"></script>
+  <link href="../../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+  <script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+  <script src="../../site_libs/plotly-binding-4.10.4/plotly.js"></script>
   <script src="../../site_libs/typedarray-0.1/typedarray.min.js"></script>
   <script src="../../site_libs/jquery-3.5.1/jquery.min.js"></script>
-  <link href="../../site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
-  <script src="../../site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+  <link href="../../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+  <script src="../../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
   <link href="../../site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
   <script src="../../site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 </head>
@@ -348,7 +349,7 @@ Barrie Robison
 </div>
 </div>
 
-  <p class="date">2024-01-17</p>
+  <p class="date">2025-01-21</p>
 </section>
 <section id="last-lecture" class="slide level2">
 <h2>LAST LECTURE</h2>
@@ -383,19 +384,33 @@ Barrie Robison
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>What does this sequence of six numbers mean?</strong></p>
-<p><span class="blue">14, 2.6, 30, 30, 15, 100001</span> Two points far from each other in 3D space?</p>
+<p><span class="blue">14, 2.6, 30, 30, 15, 100001</span></p>
 </div>
 <div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>VIZ</strong></p>
-<div class="cell-output-display">
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-cfc8785ba0b016efc6d4" style="width:960px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-cfc8785ba0b016efc6d4">{"x":{"visdat":{"1ef3d178e0f":["function () ","plotlyVisDat"]},"cur_data":"1ef3d178e0f","attrs":{"1ef3d178e0f":{"x":["14","30"],"y":["2.6","15"],"z":["30","100001"],"mode":"markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":[]},"yaxis":{"title":[]},"zaxis":{"title":[]}},"xaxis":{"type":"category","categoryorder":"array","categoryarray":["14","30"]},"yaxis":{"type":"category","categoryorder":"array","categoryarray":["15","2.6"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["14","30"],"y":["2.6","15"],"z":["30","100001"],"mode":"markers","type":"scatter3d","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
-</div>
 </div>
 </div>
 </div>
 </section>
 <section id="data-semantics-1" class="slide level2">
+<h2>DATA SEMANTICS</h2>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><strong>What does this sequence of six numbers mean?</strong></p>
+<p><span class="blue">14, 2.6, 30, 30, 15, 100001</span> Two points far from each other in 3D space?</p>
+</div>
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><strong>VIZ</strong></p>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-6600c109a44109cdc7ea" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-6600c109a44109cdc7ea">{"x":{"visdat":{"165b7414f6bfb":["function () ","plotlyVisDat"]},"cur_data":"165b7414f6bfb","attrs":{"165b7414f6bfb":{"x":["14","30"],"y":["2.6","15"],"z":["30","100001"],"mode":"markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":[]},"yaxis":{"title":[]},"zaxis":{"title":[]}},"xaxis":{"type":"category","categoryorder":"array","categoryarray":["14","30"]},"yaxis":{"type":"category","categoryorder":"array","categoryarray":["15","2.6"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["14","30"],"y":["2.6","15"],"z":["30","100001"],"mode":"markers","type":"scatter3d","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-semantics-2" class="slide level2">
 <h2>DATA SEMANTICS</h2>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
@@ -410,34 +425,13 @@ Barrie Robison
 </div>
 </div>
 </section>
-<section id="data-semantics-2" class="slide level2">
-<h2>DATA SEMANTICS</h2>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><strong>What about this data?</strong></p>
-<p><span class="blue">Basil, 7, S, Pear</span>:<br>
-Food shipment of produce (basil &amp; pear) arrived in satisfactory condition on 7th day of month</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><strong>VIZ</strong></p>
-<p><img data-src="BasilPearDelivery.png"></p>
-</div>
-</div>
-</div>
-</section>
 <section id="data-semantics-3" class="slide level2">
 <h2>DATA SEMANTICS</h2>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>What about this data?</strong></p>
-<p><span class="blue">Basil, 7, S, Pear</span>:<br>
-Basil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><strong>VIZ</strong></p>
-<p><img data-src="snowremoval.png"></p>
+<p><span class="blue">Basil, 7, S, Pear</span>:</p>
 </div>
 </div>
 </div>
@@ -448,8 +442,37 @@ Basil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek 
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong>What about this data?</strong></p>
-<p><span class="blue">Basil, 7, S, Pear</span>:<br>
-Lab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food</p>
+<p><span class="blue">Basil, 7, S, Pear</span>: Food shipment of produce (basil &amp; pear) arrived in satisfactory condition on 7th day of month</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>VIZ</strong></p>
+<p><img data-src="BasilPearDelivery.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="data-semantics-5" class="slide level2">
+<h2>DATA SEMANTICS</h2>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><strong>What about this data?</strong></p>
+<p><span class="blue">Basil, 7, S, Pear</span>: Basil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>VIZ</strong></p>
+<p><img data-src="snowremoval.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="data-semantics-6" class="slide level2">
+<h2>DATA SEMANTICS</h2>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><strong>What about this data?</strong></p>
+<p><span class="blue">Basil, 7, S, Pear</span>: Lab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><strong>VIZ</strong></p>
@@ -496,17 +519,17 @@ Lab rat Basil made 7 attempts to find way through south section of maze, these t
 <section id="other-data-types" class="slide level2">
 <h2>OTHER DATA TYPES</h2>
 <ul>
-<li>Links
+<li><span class="red">Links</span>
 <ul>
 <li>express relationship between two items</li>
 <li>e.g/ friendship on facebook, interaction between proteins</li>
 </ul></li>
-<li>Positions
+<li><span class="red">Positions</span>
 <ul>
 <li>spatial data: location in 2D or 3D</li>
 <li>e.g.&nbsp;pixels in photo, voxels in MRI scan, latitude/longitude</li>
 </ul></li>
-<li>Grids
+<li><span class="red">Grids</span>
 <ul>
 <li>sampling strategy for continuous data</li>
 </ul></li>
@@ -533,7 +556,7 @@ Lab rat Basil made 7 attempts to find way through south section of maze, these t
 <li>often called a <strong>variable</strong></li>
 </ul></li>
 <li><p>A cell holds the <span class="red">VALUE</span> for an item/attribute pair</p></li>
-<li><p>A UNIQUE key can be used (implicitly or explicitly) to identify each item even if they share all measured attributes</p></li>
+<li><p>A <strong>UNIQUE KEY</strong> can be used (implicitly or explicitly) to identify each item even if they share all measured attributes</p></li>
 </ul>
 </div><div class="column" style="width:60%;">
 <p><img data-src="flattable.png"></p>
@@ -578,7 +601,8 @@ Lab rat Basil made 7 attempts to find way through south section of maze, these t
 <img data-src="treenetfield.png" class="r-stretch"></section>
 <section id="spatial-fields-1" class="slide level2">
 <h2>SPATIAL FIELDS 1</h2>
-<p>Attribute values associated w/ cells cell contains value from continuous domain (eg temperature, pressure, wind velocity measured or simulated).</p>
+<p>Attribute values associated with <strong>cells</strong>.</p>
+<p>Each cell contains a value from a continuous domain (eg temperature, pressure, wind velocity measured or simulated).</p>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -596,23 +620,17 @@ Lab rat Basil made 7 attempts to find way through south section of maze, these t
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
-<li>Attribute values associated w/ cells.</li>
-<li>Cell contains value from continuous domain
+<li>Attribute values associated with <strong>cells</strong>.</li>
+<li>Each cell contains value from continuous domain
 <ul>
 <li>(eg temperature, pressure, wind velocity)</li>
 </ul></li>
 <li>Measured or simulated.</li>
-<li>Major concerns
+<li>Major concerns and potential limitations:
 <ul>
-<li>sampling:
-<ul>
-<li>where attributes are measured</li>
-</ul></li>
-<li>interpolation:
-<ul>
-<li>how to model attributes elsewhere</li>
-</ul></li>
-<li>grid types</li>
+<li>Sampling: where are the attributes measured and at what density?</li>
+<li>Interpolation: how to model attributes in cells with no measurements?</li>
+<li>Grid types: optimizing size, shape, etc.</li>
 </ul></li>
 </ul>
 </div>
@@ -627,29 +645,11 @@ Lab rat Basil made 7 attempts to find way through south section of maze, these t
 <div class="columns">
 <div class="r-fit-text column" style="width:60%;">
 <ul>
-<li>Attribute values associated w/ cells.</li>
-<li>Cell contains value from continuous domain
+<li>Data structures can be complex, scaling with the number of attributes per cell:
 <ul>
-<li>(eg temperature, pressure, wind velocity)</li>
-</ul></li>
-<li>Measured or simulated.</li>
-<li>Major concerns
-<ul>
-<li>sampling:
-<ul>
-<li>where attributes are measured</li>
-</ul></li>
-<li>interpolation:
-<ul>
-<li>how to model attributes elsewhere</li>
-</ul></li>
-<li>grid types</li>
-</ul></li>
-<li>Major divisions - attributes per cell:
-<ul>
-<li>scalar (1)</li>
-<li>vector (2)</li>
-<li>tensor (many)</li>
+<li>Scalar (1)</li>
+<li>Vector (2)</li>
+<li>Tensor (many)</li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:40%;">
@@ -666,19 +666,14 @@ Lab rat Basil made 7 attempts to find way through south section of maze, these t
 <div class="columns">
 <div class="r-fit-text column" style="width:60%;">
 <ul>
-<li>Shape of items</li>
+<li>Shape of items or observations is defined.</li>
 <li>Explicit spatial positions / regions
 <ul>
 <li>points, lines, curves, surfaces, volumes</li>
 </ul></li>
-<li>Boundary between computer graphics and visualization
-<ul>
-<li>graphics: geometry taken as given</li>
-<li>vis: geometry is result of a design decision</li>
-</ul></li>
 </ul>
 </div><div class="column" style="width:40%;">
-<p><img data-src="geometrymap.png"></p>
+<p><img data-src="jwmg22679-fig-0001-m.webp"> <a href="https://wildlife.onlinelibrary.wiley.com/doi/10.1002/jwmg.22679">Lopez et.al., 2024</a></p>
 </div>
 </div>
 </section>
@@ -692,17 +687,17 @@ Lab rat Basil made 7 attempts to find way through south section of maze, these t
 <div class="r-fit-text column" style="width:60%;">
 <p>Grouping Items:</p>
 <ul>
-<li>sets
+<li><strong>Sets</strong>
 <ul>
 <li>unique items</li>
 <li>unordered</li>
 </ul></li>
-<li>lists
+<li><strong>Lists</strong>
 <ul>
 <li>ordered</li>
 <li>duplicates possible</li>
 </ul></li>
-<li>clusters
+<li><strong>Clusters</strong>
 <ul>
 <li>groups of similar items</li>
 </ul></li>
@@ -789,7 +784,7 @@ Lab rat Basil made 7 attempts to find way through south section of maze, these t
 <li><span class="red">Data Model</span>
 <ul>
 <li>mathematical abstraction</li>
-<li>sets with operations, eg floats with * / - + variable data types in programming languages</li>
+<li>sets with operations, eg floats with * / - + or variable data types in programming languages</li>
 </ul></li>
 <li><span class="red">Conceptual Model</span>
 <ul>
@@ -842,7 +837,7 @@ Lab rat Basil made 7 attempts to find way through south section of maze, these t
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-<p><a href="https://canvas.uidaho.edu/courses/25613" target="_blank">CANVAS</a>…<a href="https://professorpolymorphic.github.io/BCB520/" target="_blank">HOME</a></p>
+<p><a href="https://professorpolymorphic.github.io/BCB520/" target="_blank">HOME</a></p>
 </div>
 </div>
 </section>

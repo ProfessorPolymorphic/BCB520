@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/L2-Data-Abstraction/index.html",
       "/posts/A1-Lit-Prog/index.html",
       "/posts/T1-Lit-Prog/index.html",
       "/posts/T2-Anscombe/index.html",
