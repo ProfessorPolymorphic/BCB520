@@ -15,6 +15,8 @@ description: "Lets make a data visualization, and create a place to put it!"
 
 Enough with the theory and conceptual mumbo jumbo! Let's get down to making a visualization and posting it somewhere for all the world to see! The basic idea of this assignment is to set up a repository that will serve as an experimental portfolio, and then create your first novel visualization element inside the portfolio. Its gonna be fun! Or at least educational...
 
+Remember that time that Barrie was dumb?
+
 ## ASSIGNMENT
 
 This assignment has two parts. The first part is technical. We'll set up a Quarto Blog project as a new repository in your GitHub account. Then you'll be a Blogger! Prestigious! The second part should be more fun. We are going to create your first Blog post as a visualization that explores an ACTION - TARGET pair relevant to your data set from Assignment 2.
