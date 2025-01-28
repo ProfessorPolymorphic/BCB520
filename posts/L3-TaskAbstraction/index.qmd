@@ -7,15 +7,14 @@ format:
       buttons: false
     preview-links: auto
     css: styles.css
-    footer: <a href="https://canvas.uidaho.edu/courses/25613" target="_blank">CANVAS</a>...<a href="https://professorpolymorphic.github.io/BCB520/" target="_blank">HOME</a>
+    footer: <a href="https://professorpolymorphic.github.io/BCB520/" target="_blank">HOME</a>
     theme: [default, custom.scss]
 author: "Barrie Robison"
-date: "2024-01-23"
+date: "2025-01-28"
 categories: [Lecture, DataViz, Task]
 image: "Nyarlathotep.png"
 code-fold: true
 description: "Action - Target pairs ... of **eldritch horror**?"
-draft: true
 webr:
   packages: ['ggplot2', 'tidyverse'] # Install R packages on document open
 # autoload-packages: false       # Disable automatic loading of packages
@@ -146,7 +145,7 @@ Computer-based visualization systems provide visual representations of datasets 
 
 ```{webr-r}
 
-Person <- c("Barrie", "Konrad","Yaotian","Lucas","Heidi","Robyn", "Geraline")
+Person <- c("Barrie", "Sharon","Betsy","John","Claire","Henry", "Marwa", "Justice")
 Action <- c("Discover","Present", "Enjoy", "Annotate", "Record", "Derive", "Lookup", "Browse", "Locate", "Explore", "Identify", "Compare", "Summarize")
 Target <- c("Trends", "Outliers", "Features", "Distribution", "Extremes", "Dependency", "Correlation", "Similarity", "Topology", "Paths")
 

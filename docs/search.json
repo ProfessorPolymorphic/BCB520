@@ -525,6 +525,97 @@
     "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\n\n\n\n\nHOME"
   },
   {
+    "objectID": "posts/L3-TaskAbstraction/index.html#last-lecture",
+    "href": "posts/L3-TaskAbstraction/index.html#last-lecture",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "LAST LECTURE",
+    "text": "LAST LECTURE\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#task-abstraction",
+    "href": "posts/L3-TaskAbstraction/index.html#task-abstraction",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "TASK ABSTRACTION",
+    "text": "TASK ABSTRACTION\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#from-domain-to-abstraction",
+    "href": "posts/L3-TaskAbstraction/index.html#from-domain-to-abstraction",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "FROM DOMAIN TO ABSTRACTION",
+    "text": "FROM DOMAIN TO ABSTRACTION"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#key-components-of-task-abstraction",
+    "href": "posts/L3-TaskAbstraction/index.html#key-components-of-task-abstraction",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "KEY COMPONENTS OF TASK ABSTRACTION",
+    "text": "KEY COMPONENTS OF TASK ABSTRACTION\n{action, target} pairs\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#actions-and-targets",
+    "href": "posts/L3-TaskAbstraction/index.html#actions-and-targets",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "ACTIONS AND TARGETS",
+    "text": "ACTIONS AND TARGETS"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#actions---analyze",
+    "href": "posts/L3-TaskAbstraction/index.html#actions---analyze",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "ACTIONS - Analyze",
+    "text": "ACTIONS - Analyze\n\n\n\nConsume: Information has already been generated and stored as data.\n\nDiscover: new knowledge, test hypothesis, generate new hypothesis, verify\nPresent: communicate something specific and already understood\nEnjoy: casual encounters with visualization\n\nProduce: generate new material or information\n\nAnnotate: addition of graphical or text to existing visualization elements\nRecord: saves or captures visualization elements as persistent artifacts (screenshots, lists, parameter sets, annotations)\nDerive: produce new data based on existing data (aka transform)"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#actions---search",
+    "href": "posts/L3-TaskAbstraction/index.html#actions---search",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "ACTIONS - Search",
+    "text": "ACTIONS - Search\n\n\n\nLookup: Location and target both known\n\nExample: Look up humans in the Tree of Life, knowing they are mammals.\n\nLocate: Location unknown and target known\n\nExample: Look up rabbits in the Tree of Life, not knowing they are lagomorphs.\n\nBrowse: Location known and target unknown\n\nExample: Find any clades within Mammalia that have only one species.\n\nExplore: Location unknown and target unknown\n\nExample: Searching for anomalies in time series data."
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#actions---query",
+    "href": "posts/L3-TaskAbstraction/index.html#actions---query",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "ACTIONS - Query",
+    "text": "ACTIONS - Query\n\n\n\nQuery: How much of the data matters to the task?\n\nIdentify: One (specific Item, individual, cell, etc)\nCompare: Some (multiple targets)\nSummarize: All (very common, aka Overview)"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#targets---all-data",
+    "href": "posts/L3-TaskAbstraction/index.html#targets---all-data",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "TARGETS - All Data",
+    "text": "TARGETS - All Data"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#targets---attributes",
+    "href": "posts/L3-TaskAbstraction/index.html#targets---attributes",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "TARGETS - Attributes",
+    "text": "TARGETS - Attributes"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#targets---other-data",
+    "href": "posts/L3-TaskAbstraction/index.html#targets---other-data",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "TARGETS - Other Data",
+    "text": "TARGETS - Other Data"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#summary",
+    "href": "posts/L3-TaskAbstraction/index.html#summary",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "SUMMARY",
+    "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#mandatory-fun",
+    "href": "posts/L3-TaskAbstraction/index.html#mandatory-fun",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "MANDATORY FUN",
+    "text": "MANDATORY FUN\nWe will do these until everyone has done at least one example.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nHOME"
+  },
+  {
     "objectID": "posts/T1-Lit-Prog/index.html",
     "href": "posts/T1-Lit-Prog/index.html",
     "title": "TUTORIAL 1 - Literate Programming",

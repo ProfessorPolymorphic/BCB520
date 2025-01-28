@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/L3-TaskAbstraction/index.html",
       "/posts/L2-Data-Abstraction/index.html",
       "/posts/A2-YourData/index.html",
       "/posts/A1-Lit-Prog/index.html",
