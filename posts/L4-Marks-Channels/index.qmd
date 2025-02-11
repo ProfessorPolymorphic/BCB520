@@ -334,9 +334,9 @@ Channels are defined by the [visually detectable properties]{.red} that are mapp
 
 ::: {#markschannels layout-ncol=3}
 
-![Konrad's Trees](Konrad.png)
+![Sharon's Microbiomes](SharonCorrMatrix.png)
 
-![Robyn's Books](Robyn.png)
+![Marwa's Reddit Network](marwareddit.png)
 
 ![Yaotian's Wheat](Yaotiandensity.png)
 
