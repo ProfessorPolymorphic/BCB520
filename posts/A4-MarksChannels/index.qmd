@@ -2,13 +2,13 @@
 title: "ASSIGNMENT 4"
 subtitle: "Marks and Channels"
 author: "Barrie Robison"
-date: "2024-02-06"
+date: "2025-02-11"
 categories: [Assignment, DataViz, Marks, Channels]
 image: "Cthulhuscattergreen.png"
 code-fold: true
 code-tools: true
 description: "Trying out terrible combinations of marks and channels... for learning!"
-draft: true
+
 ---
 
 ## SUMMARY
