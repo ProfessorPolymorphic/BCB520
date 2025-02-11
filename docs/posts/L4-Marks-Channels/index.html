@@ -8,11 +8,11 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.550">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Barrie Robison">
-  <meta name="dcterms.date" content="2024-02-01">
-  <title>BCB520 - LECTURE 4</title>
+  <meta name="dcterms.date" content="2025-02-11">
+  <title>BCB520 – LECTURE 4</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -43,7 +43,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -71,7 +71,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -85,7 +85,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -408,7 +408,7 @@ Barrie Robison
 </div>
 </div>
 
-  <p class="date">2024-02-01</p>
+  <p class="date">2025-02-11</p>
 </section>
 <section id="vad-model" class="slide level2">
 <h2>VAD MODEL</h2>
@@ -447,8 +447,7 @@ Barrie Robison
 <p><a href="https://www.tidyverse.org">The tidyverse</a> is an opinionated collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures. The best way to explore and understand the tidyverse is with <a href="">cheetsheets</a>, like <a href="https://posit.co/wp-content/uploads/2022/10/tidyr.pdf">this one</a> for <code>tidyr</code>!</p>
 </div><div class="column" style="width:55%;">
 <p><img data-src="tidyverse.png" data-bottom="100" data-left="0" height="400"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="grammar-of-graphics" class="slide level2">
 <h2>GRAMMAR OF GRAPHICS</h2>
@@ -458,8 +457,7 @@ Barrie Robison
 <p><img data-src="ggplotbasics.png"></p>
 </div><div class="column">
 <p><img data-src="ggplottemplate.png"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="tufte" class="slide level2">
 <h2>TUFTE</h2>
@@ -494,8 +492,7 @@ Barrie Robison
 </ul>
 </div><div class="column" style="width:35%;">
 <p><img data-src="VADwithwhatwhyhow.png"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="encoding" class="slide level2">
 <h2>ENCODING</h2>
@@ -734,8 +731,7 @@ Barrie Robison
 </ul>
 </div><div class="column" style="width:60%;">
 <p><img data-src="channels.png"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="this-is-important" class="slide level2">
 <h2>THIS IS IMPORTANT</h2>
@@ -750,6 +746,9 @@ Barrie Robison
 <h2>ANALYZE THE MARKS AND CHANNELS</h2>
 <p>Marks are defined by the <strong>ITEMS</strong> or <strong>OBSERVATIONS</strong> they represent.</p>
 <p>Channels are defined by the <span class="red">visually detectable properties</span> that are mapped on to <strong>ATTRIBUTES</strong> or <strong>VARIABLES</strong>.</p>
+<div>
+
+</div>
 <div id="markschannels" class="quarto-layout-panel" data-layout-ncol="3">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
@@ -791,12 +790,14 @@ Barrie Robison
 </ul>
 </div><div class="column">
 <p><img data-src="lengthluminance.png" class="absolute" style="bottom: 50px; right: 0px; height: 400px; "></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="wheat-growth-by-area" class="slide level2">
 <h2>WHEAT GROWTH BY AREA*</h2>
 <p>Both of Yaotian’s plots contain <strong>Redundant Encoding</strong>. Is this approach equally valuable for both plots?</p>
+<div>
+
+</div>
 <div id="wheatgrowth" class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -852,8 +853,7 @@ Barrie Robison
 </div><div class="column" style="width:50%;">
 <p><img data-src="marksforlinks.png"></p>
 <p><img data-src="IdentityChannels.png"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="summary-so-far" class="slide level2">
 <h2>SUMMARY SO FAR</h2>
@@ -890,8 +890,7 @@ Barrie Robison
 <p><span class="blue">SATURATION (N=1.7)</span></p>
 <p><span class="purple">AREA (N=0.7)</span></p>
 <p><span class="yellow">BRIGHTNESS (N=0.5)</span></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="accuracy-experimental" class="slide level2 smaller">
 <h2>ACCURACY (EXPERIMENTAL)</h2>
@@ -900,8 +899,7 @@ Barrie Robison
 <p><img data-src="ClevelandandMcGill.png"></p>
 </div><div class="column" style="width:40%;">
 <p>[<a href="https://www.jstor.org/stable/2288400">Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods</a>]</p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="accuracy" class="slide level2">
 <h2>ACCURACY?</h2>
@@ -942,8 +940,7 @@ Barrie Robison
 </div>
 </div><div class="column" style="width:40%;">
 <p><img data-src="popout.png"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="popout-1" class="slide level2 smaller">
 <h2>POPOUT</h2>
@@ -963,11 +960,13 @@ Barrie Robison
 </ul>
 </div><div class="column" style="width:40%;">
 <p><img data-src="popout2.png"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="popout-goes-the-weevil" class="slide level2">
 <h2>POPOUT GOES THE WEEVIL?</h2>
+<div>
+
+</div>
 <div id="deadweevils" class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -1009,6 +1008,9 @@ Barrie Robison
 <section id="relative-color-judgements" class="slide level2 smaller">
 <h2>RELATIVE COLOR JUDGEMENTS</h2>
 <p>Our visual system evolved to provide color constancy so that the same surface is identifiable across a broad set of illumination conditions, even though a physical light meter would yield very different readings. While the visual system works very well in natural environments, many of its mechanisms work against simple approaches to visually encoding information with color.</p>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -1025,7 +1027,7 @@ Barrie Robison
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-<p><a href="https://canvas.uidaho.edu/courses/25613" target="_blank">CANVAS</a>…<a href="https://professorpolymorphic.github.io/BCB520/" target="_blank">HOME</a></p>
+<p><a href="https://professorpolymorphic.github.io/BCB520/" target="_blank">HOME</a></p>
 </div>
 </div>
 </section>
@@ -1322,18 +1324,7 @@ Barrie Robison
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1365,7 +1356,47 @@ Barrie Robison
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1402,7 +1433,11 @@ Barrie Robison
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

@@ -8,15 +8,15 @@ format:
       buttons: false
     preview-links: auto
     css: styles.css
-    footer: <a href="https://canvas.uidaho.edu/courses/25613" target="_blank">CANVAS</a>...<a href="https://professorpolymorphic.github.io/BCB520/" target="_blank">HOME</a>
+    footer: <a href="https://professorpolymorphic.github.io/BCB520/" target="_blank">HOME</a>
     theme: [default, custom.scss]
 author: "Barrie Robison"
-date: "2024-02-01"
+date: "2025-02-11"
 categories: [Lecture, DataViz, Idiom, Observable, Tidyverse]
 image: "idiom.png"
 code-fold: true
 description: "Just what is an **IDIOM**, anyway?"
-draft: true
+
 
 ---
 
