@@ -1,13 +1,13 @@
 ---
 title: "TUTORIAL 5 - Marks and Channels"
 author: "Barrie Robison"
-date: "2023-02-13"
+date: "2025-02-13"
 categories: [Assignment, DataViz]
 image: "Cthulhuhockey.png"
 code-fold: true
 code-tools: true
 description: "Trying out terrible combinations of marks and channels... for learning!"
-draft: true
+
 ---
 
 # **THE HISTORIC FUTILITY OF THE 22-23 VANCOUVER CANUCKS**
