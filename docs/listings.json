@@ -2,33 +2,17 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/E3-AlternativeNHLDraft/AltNHLDraft.html",
       "/posts/T5-MarksChannels/index.html",
       "/posts/L4-Marks-Channels/index.html",
       "/posts/A3-PrototypeVizPortfolio/index.html",
       "/posts/A4-MarksChannels/index.html",
       "/posts/L3-TaskAbstraction/index.html",
       "/posts/L2-Data-Abstraction/index.html",
-      "/posts/T4-BarriesData/index.html",
       "/posts/A2-YourData/index.html",
       "/posts/A1-Lit-Prog/index.html",
       "/posts/T1-Lit-Prog/index.html",
       "/posts/T2-Anscombe/index.html",
-      "/posts/L1-Intro/index.html",
-      "/posts/A7-SpatialData/index.html",
-      "/posts/A10-FinalProject/index.html",
-      "/posts/A9-NetworksinObservable/index.html",
-      "/posts/A8-NetworkData/index.html",
-      "/posts/L8-NetworkData/index.html",
-      "/posts/A6-Midterm/index.html",
-      "/posts/T6-APIsandJSON/index.html",
-      "/posts/L6-TabularData1/index.html",
-      "/posts/A5-TabularData/index.html",
-      "/posts/L5-ThumbRules/index.html",
-      "/posts/T8-MidtermExample/index.html",
-      "/posts/T7-NHLDraft/index.html",
-      "/posts/T3-Python/index.html",
-      "/posts/Certificate/index.html"
+      "/posts/L1-Intro/index.html"
     ]
   }
 ]
