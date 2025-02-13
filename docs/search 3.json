@@ -1,0 +1,1024 @@
+[
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "SYLLABUS 2025",
+    "section": "",
+    "text": "Barrie D. Robison\nSpring 2025\n\n\nThis class will help students establish a core understanding of data visualization. We will consider how data type (including tabular, network, and spatial data) interacts with visualization task to guide design choices. Diverse types of visual encodings and how they relate to human perception will be presented, along with practical exercises using the R programming language. Upon completion of the course, students will understand WHY particular visualization approaches are effective for a given data set and HOW to implement those visualizations using R. The course is designed to be “discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests.\n\n\n\nStudents completing this course will be able to:\n\nDescribe and manipulate tabular, network, and spatial data; transform these data into a form suitable for visualization.\nAnalyze data visualization design choices related to marks and channels, spatial arrangement, and components of color.\nDesign new data visualizations with appropriate use of visual channels for tabular, network, and spatial data with quantitative and categorical attributes.\nImplement their data visualization designs using existing tools in R (or other toolkits preferred by the student).\nExplain whether a visual encoding is perceptually appropriate for a specific combination of task and data.\nDemonstrate their skills with at least two novel visualizations suitable for inclusion in an online Data Science Portfolio.\n\n\n\n\nTamara Munzner. Visualization Analysis and Design. A K Peters Visualization Series, CRC Press, 2014. While the book is not required, I do emphasize the structure and approach to visualization that Dr. Munzner has developed.\nHard Copy on Amazon\nkindle/ebook on Amazon\n\n\n\n\n\n50% of your grade will be determined by homework exercises related to each course unit.\n20% of your grade will be determined by a mid term project (which would be a great item to include in your Data Science Portfolio).\n20% of your grade will be determined by a final project (which would be great item to include in your Data Science Portfolio).\n10% of your grade will be determined by participation in class discussions.\nGRADING SCALE: The grading scale is standard: A (90 -100 %), B (89 - 80 %), C (79 - 70 %), D (69-60 %), F( below 60 %).\n\n\n\nMissing a scheduled class session is at your discretion. I will be posting all the course materials online. If a discussion or in-class exercise occurs and you miss it, you will lose those participation points. There is no way to make up those points.\n\n\n\nThe R Markdown template I used for this syllabus was created by Dr. Steven V. Miller at Stockholm University. It contained this section, which I found amusing and have therefore retained. Professor Miller’s current university asks professors to have policies written into their syllabus about what students should do if the professor is more than 15 minutes late to class. Here is my version of that policy:\nI will inform students via e-mail in advance of class if class is cancelled for the day. Events that might create such a scenario include travel obligations that emerged after the semester has begun, a family emergency that encompasses multiple days, or some other thing. I will also contact our department secretary in emergent situations, such as something happening on the way to work. Failing that, assume the worst. Alien abduction, the return of one or more Old Ones to our plane, or some kind of attack by wizards are all viable explanations for my inability to attend class. I ask that the students make sure that my story gets the proper treatment on the “Mr. Ballen” YouTube channel. I also ask that my story be narrated by Morgan Freeman and that the role of me in the made for TV movie be played by Keanu Reeves or Danny DeVito.\n\n\n\nThe bad news is that there are NO make-ups for missed exams. Don’t bother asking. The good news is that there aren’t any exams.\n\n\n\nAll students are expected to uphold the highest standards of academic honesty. This includes but is not limited to: not cheating, not using the ideas of others without giving appropriate credit (including AI tools), and not falsifying data. Any incident of academic dishonesty will be handled according to the guidelines of the University of Idaho.\n\n\n\n\n\nlibrary(readxl)\nSchedule &lt;- read_excel(\"Schedule.xlsx\")\n\nknitr::kable(Schedule, caption = '')\n\n\n\n\nDATE\nTOPIC\nACTIVITY\nRESOURCES\n\n\n\n\n2025-01-09\nIntroduction and Overview\nNA\nNA\n\n\n2025-01-14\nThe Imporance of Visualization\nLiterate Programming\nTutorial 1, Tutorial 2\n\n\n2025-01-16\nWHAT?  Abstraction of Data\nNA\nNA\n\n\n2025-01-21\nWHY?  Task Abstraction\nNA\nNA\n\n\n2025-01-23\nNA\nNA\nNA\n\n\n2025-01-28\nNA\nNA\nNA\n\n\n2025-01-30\nNA\nNA\nNA\n\n\n2025-02-04\nBarrie in North Carolina\nNA\nNA\n\n\n2025-02-06\nBarrie in North Carolina\nNA\nNA\n\n\n2025-02-11\nMARKS. Geometric elements to depict data\nNA\nNA\n\n\n2025-02-13\nNA\nNA\nNA\n\n\n2025-02-18\nNA\nNA\nNA\n\n\n2025-02-20\nCHANNELS. Controlling the appearance of marks.\nNA\nNA\n\n\n2025-02-25\nRULES OF THUMB.\nMidterm Presentations\nNA\n\n\n2025-02-27\nTABULAR DATA I\nMidterm Presentations\nNA\n\n\n2025-03-04\nTABULAR DATA II\nNA\nNA\n\n\n2025-03-06\nSPATIAL DATA I: Geographic Maps\nNA\nNA\n\n\n2025-03-11\nSpring Recess\nNA\nNA\n\n\n2025-03-13\nSpring Recess\nNA\nNA\n\n\n2025-03-18\nBarrie in Vermont\nNA\nNA\n\n\n2025-03-20\nSPATIAL DATA II:  Spatial Fields\nNA\nNA\n\n\n2025-03-25\nNETWORK DATA I\nNA\nNA\n\n\n2025-03-27\nNETWORK DATA II\nNA\nNA\n\n\n2025-04-01\nCOLOR I\nNA\nNA\n\n\n2025-04-03\nCOLOR II\nNA\nNA\n\n\n2025-04-08\nINTERACTIVITY\nNA\nNA\n\n\n2025-04-10\nMULTIPLE VIEWS\nNA\nNA\n\n\n2025-04-15\nAGGREGATION\nNA\nNA\n\n\n2025-04-17\nBarrie in DC\nNA\nNA\n\n\n2025-04-22\nFILTERING\nNA\nNA\n\n\n2025-04-24\nEMBEDDING: Focus and Context\nNA\nNA\n\n\n2025-04-29\nDEAD WEEK\nFinal Presentations\nNA\n\n\n2025-05-01\nDEAD WEEK\nFinal Presentations\nNA\n\n\n2025-05-06\nFINALS WEEK\nNA\nNA"
+  },
+  {
+    "objectID": "syllabus.html#course-description",
+    "href": "syllabus.html#course-description",
+    "title": "SYLLABUS 2025",
+    "section": "",
+    "text": "This class will help students establish a core understanding of data visualization. We will consider how data type (including tabular, network, and spatial data) interacts with visualization task to guide design choices. Diverse types of visual encodings and how they relate to human perception will be presented, along with practical exercises using the R programming language. Upon completion of the course, students will understand WHY particular visualization approaches are effective for a given data set and HOW to implement those visualizations using R. The course is designed to be “discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests."
+  },
+  {
+    "objectID": "syllabus.html#course-objectives",
+    "href": "syllabus.html#course-objectives",
+    "title": "SYLLABUS 2025",
+    "section": "",
+    "text": "Students completing this course will be able to:\n\nDescribe and manipulate tabular, network, and spatial data; transform these data into a form suitable for visualization.\nAnalyze data visualization design choices related to marks and channels, spatial arrangement, and components of color.\nDesign new data visualizations with appropriate use of visual channels for tabular, network, and spatial data with quantitative and categorical attributes.\nImplement their data visualization designs using existing tools in R (or other toolkits preferred by the student).\nExplain whether a visual encoding is perceptually appropriate for a specific combination of task and data.\nDemonstrate their skills with at least two novel visualizations suitable for inclusion in an online Data Science Portfolio."
+  },
+  {
+    "objectID": "syllabus.html#recommended-readings",
+    "href": "syllabus.html#recommended-readings",
+    "title": "SYLLABUS 2025",
+    "section": "",
+    "text": "Tamara Munzner. Visualization Analysis and Design. A K Peters Visualization Series, CRC Press, 2014. While the book is not required, I do emphasize the structure and approach to visualization that Dr. Munzner has developed.\nHard Copy on Amazon\nkindle/ebook on Amazon"
+  },
+  {
+    "objectID": "syllabus.html#course-policies",
+    "href": "syllabus.html#course-policies",
+    "title": "SYLLABUS 2025",
+    "section": "",
+    "text": "50% of your grade will be determined by homework exercises related to each course unit.\n20% of your grade will be determined by a mid term project (which would be a great item to include in your Data Science Portfolio).\n20% of your grade will be determined by a final project (which would be great item to include in your Data Science Portfolio).\n10% of your grade will be determined by participation in class discussions.\nGRADING SCALE: The grading scale is standard: A (90 -100 %), B (89 - 80 %), C (79 - 70 %), D (69-60 %), F( below 60 %).\n\n\n\nMissing a scheduled class session is at your discretion. I will be posting all the course materials online. If a discussion or in-class exercise occurs and you miss it, you will lose those participation points. There is no way to make up those points.\n\n\n\nThe R Markdown template I used for this syllabus was created by Dr. Steven V. Miller at Stockholm University. It contained this section, which I found amusing and have therefore retained. Professor Miller’s current university asks professors to have policies written into their syllabus about what students should do if the professor is more than 15 minutes late to class. Here is my version of that policy:\nI will inform students via e-mail in advance of class if class is cancelled for the day. Events that might create such a scenario include travel obligations that emerged after the semester has begun, a family emergency that encompasses multiple days, or some other thing. I will also contact our department secretary in emergent situations, such as something happening on the way to work. Failing that, assume the worst. Alien abduction, the return of one or more Old Ones to our plane, or some kind of attack by wizards are all viable explanations for my inability to attend class. I ask that the students make sure that my story gets the proper treatment on the “Mr. Ballen” YouTube channel. I also ask that my story be narrated by Morgan Freeman and that the role of me in the made for TV movie be played by Keanu Reeves or Danny DeVito.\n\n\n\nThe bad news is that there are NO make-ups for missed exams. Don’t bother asking. The good news is that there aren’t any exams.\n\n\n\nAll students are expected to uphold the highest standards of academic honesty. This includes but is not limited to: not cheating, not using the ideas of others without giving appropriate credit (including AI tools), and not falsifying data. Any incident of academic dishonesty will be handled according to the guidelines of the University of Idaho."
+  },
+  {
+    "objectID": "syllabus.html#class-schedule",
+    "href": "syllabus.html#class-schedule",
+    "title": "SYLLABUS 2025",
+    "section": "",
+    "text": "library(readxl)\nSchedule &lt;- read_excel(\"Schedule.xlsx\")\n\nknitr::kable(Schedule, caption = '')\n\n\n\n\nDATE\nTOPIC\nACTIVITY\nRESOURCES\n\n\n\n\n2025-01-09\nIntroduction and Overview\nNA\nNA\n\n\n2025-01-14\nThe Imporance of Visualization\nLiterate Programming\nTutorial 1, Tutorial 2\n\n\n2025-01-16\nWHAT?  Abstraction of Data\nNA\nNA\n\n\n2025-01-21\nWHY?  Task Abstraction\nNA\nNA\n\n\n2025-01-23\nNA\nNA\nNA\n\n\n2025-01-28\nNA\nNA\nNA\n\n\n2025-01-30\nNA\nNA\nNA\n\n\n2025-02-04\nBarrie in North Carolina\nNA\nNA\n\n\n2025-02-06\nBarrie in North Carolina\nNA\nNA\n\n\n2025-02-11\nMARKS. Geometric elements to depict data\nNA\nNA\n\n\n2025-02-13\nNA\nNA\nNA\n\n\n2025-02-18\nNA\nNA\nNA\n\n\n2025-02-20\nCHANNELS. Controlling the appearance of marks.\nNA\nNA\n\n\n2025-02-25\nRULES OF THUMB.\nMidterm Presentations\nNA\n\n\n2025-02-27\nTABULAR DATA I\nMidterm Presentations\nNA\n\n\n2025-03-04\nTABULAR DATA II\nNA\nNA\n\n\n2025-03-06\nSPATIAL DATA I: Geographic Maps\nNA\nNA\n\n\n2025-03-11\nSpring Recess\nNA\nNA\n\n\n2025-03-13\nSpring Recess\nNA\nNA\n\n\n2025-03-18\nBarrie in Vermont\nNA\nNA\n\n\n2025-03-20\nSPATIAL DATA II:  Spatial Fields\nNA\nNA\n\n\n2025-03-25\nNETWORK DATA I\nNA\nNA\n\n\n2025-03-27\nNETWORK DATA II\nNA\nNA\n\n\n2025-04-01\nCOLOR I\nNA\nNA\n\n\n2025-04-03\nCOLOR II\nNA\nNA\n\n\n2025-04-08\nINTERACTIVITY\nNA\nNA\n\n\n2025-04-10\nMULTIPLE VIEWS\nNA\nNA\n\n\n2025-04-15\nAGGREGATION\nNA\nNA\n\n\n2025-04-17\nBarrie in DC\nNA\nNA\n\n\n2025-04-22\nFILTERING\nNA\nNA\n\n\n2025-04-24\nEMBEDDING: Focus and Context\nNA\nNA\n\n\n2025-04-29\nDEAD WEEK\nFinal Presentations\nNA\n\n\n2025-05-01\nDEAD WEEK\nFinal Presentations\nNA\n\n\n2025-05-06\nFINALS WEEK\nNA\nNA"
+  },
+  {
+    "objectID": "posts/T5-MarksChannels/index.html",
+    "href": "posts/T5-MarksChannels/index.html",
+    "title": "TUTORIAL 5 - Marks and Channels",
+    "section": "",
+    "text": "This tutorial is my attempt at Assignment 4!\n\n\nI’m interested in testing the hypothesis that this season’s Vancouver Canucks are a historically terrible team. One of the key factors in this hypothesis is that this year’s Canucks really, really suck at killing penalties. For this first assignment component, I’ll show you what I mean with a visualization!\nThe data I am using was downloaded from Moneypuck.com.\n\n\nCode\nlibrary(tidyverse)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(vroom)\n\nfiles &lt;- fs::dir_ls(glob = \"*teams.csv\")\n\nallseasons &lt;- vroom::vroom(files)\n\nallseasons$color&lt;-\"darkblue\"\nallseasons$color[allseasons$name==\"VAN\" & allseasons$season==\"2022\"]  &lt;- \"red\"\n  allseasons$teamseason&lt;- paste(allseasons$name, allseasons$season)\n  \n  allseasons$HDSAR&lt;-allseasons$highDangerShotsAgainst/allseasons$iceTime*120\n  \n  PKDATA&lt;-allseasons[c(\"situation\", \"teamseason\", \"goalsAgainst\", \"penaltiesFor\")]\n  PKpenalties&lt;-subset(PKDATA, situation == \"all\")\n  PKgoals&lt;-subset(PKDATA, situation == \"4on5\")\n  PK&lt;-PKgoals[c(\"teamseason\", \"goalsAgainst\")]\n  PK$penaltiesFor&lt;-PKpenalties$penaltiesFor\n  PK$PKpercent&lt;-100-(PK$goalsAgainst/PK$penaltiesFor*100)\n\n\nNow that I’ve massaged the data, I can tell you that the 2022-2023 Vancouver Canucks penalty kill percentage is 76.9633508. That means that when they get a penalty, there is about a 76.9633508 percent chance that they will prevent the opponent from scoring while they are short handed. However, unless you are a hockey super fan, you don’t have enough context to know if this is good or bad.\nThe figure below shows the distribution of penalty kill percentage for all teams and seasons since the 2010 season.\n\n\nCode\n  d &lt;- density(PK$PKpercent)\n\n# Step 3: Create an ECDF\ne &lt;- ecdf(PK$PKpercent)\n\n# Step 4: Calculate the quantile value\nq &lt;- quantile(PK$PKpercent, 0.01)\n\n# Step 5: Calculate the empirical cumulative probability for the quantile value\np &lt;- e(q)\n\n# Step 6: Estimate the density value for the quantile value\nf &lt;- approxfun(d$x, d$y)\nd_q &lt;- f(q)\n\n# Step 7: Combine the results into a list\npercentile &lt;- list(q = q, p = p, d = d_q)\n\n\nVAN22 &lt;- PK$PKpercent[PK$teamseason == \"VAN 2022\"]\n\nggplot(PK, aes(x=PKpercent))+\n  geom_histogram(aes(y = ..density..), binwidth = 0.5, color = \"black\", fill=\"white\")+\n  geom_density(lwd = 1, colour = 4,\n               fill = 4, alpha = 0.25)+\n  geom_vline(xintercept = VAN22, color = \"blue\", size=1.0)+\n  geom_vline(xintercept = q, color = \"red\", size = 1, linetype=\"dotted\")+\n  xlab(\"Penalty Kill (%)\")\n\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\nWarning: The dot-dot notation (`..density..`) was deprecated in ggplot2 3.4.0.\nℹ Please use `after_stat(density)` instead.\n\n\n\n\n\n\n\n\n\nSo… yeah. The blue line is the 22 Canucks. The red dotted line is the 1st! percentile of the density function. This is fine. We know this to be true. Their PK sucks. It is one of the worst in the history of the NHL. But WHY is it so bad? Bad goaltending? Bad defense? Both?\n\n\n\nMy theory is that their defense hangs their goaltenders out to dry. This might be measured with the number of High Danger Shots Allowed.\nHigh Danger Shots are defined as unblocked shot attempts with greater than a 20% probability of being a goal, as calculated by hockey data nerds. High danger shots account for ~5% of shots and ~33% of goals in the NHL.\nBelow I calculate High Danger Shots Allowed Rate, which is the number of HDS during penalty kill situations standardized it to a rate per 2 minutes spent killing penalties (the normal duration of an NHL minor penalty).\n\n\nCode\nPKsituation&lt;-subset(allseasons, situation == \"4on5\")\n# Step 2: Estimate the density of the data\nd &lt;- density(PKsituation$HDSAR)\n\n# Step 3: Create an ECDF\ne &lt;- ecdf(PKsituation$HDSAR)\n\n# Step 4: Calculate the quantile value\nq &lt;- quantile(PKsituation$HDSAR, 0.95)\n\n# Step 5: Calculate the empirical cumulative probability for the quantile value\np &lt;- e(q)\n\n# Step 6: Estimate the density value for the quantile value\nf &lt;- approxfun(d$x, d$y)\nd_q &lt;- f(q)\n\n# Step 7: Combine the results into a list\npercentile &lt;- list(q = q, p = p, d = d_q)\n\n\nVAN22HD &lt;- PKsituation$HDSAR[PKsituation$teamseason == \"VAN 2022\"]\n\n\n\n\n\nggplot(PKsituation, aes(x=HDSAR))+\n  geom_histogram(aes(y = ..density..), binwidth = 0.005, color = \"black\", fill=\"white\")+\n  geom_density(lwd = 1, colour = 4,\n               fill = 4, alpha = 0.25)+\n  geom_vline(xintercept = VAN22HD, color = \"blue\", size=1.0)+\n  geom_vline(xintercept = q, color = \"red\", size = 1, linetype=\"dotted\")+\n  xlab(\"High Danger Shots Allowed (rate per 2 minutes)\")\n\n\n\n\n\n\n\n\n\nFigure 1. Distribution of High Danger Shot Rate for NHL teams over the past 10 seasons. The 2022-2023 Vancouver Canucks are shown with the dark blue line (HDSAR = 0.3220996) and the 95th percentile is shown in red.\nIn terms of the semantics of Data Visualization, I am trying to DISCOVER the DISTRIBUTION of High Danger Shots Allowed, and then ANNOTATE the DISTRIBUTION with information about the current Vancouver Canucks team and their approximate percentile in the distribution.\nTo visualize this I am encoding a DERIVED attribute - the relative density of HDSAR as VERTICAL LENGTH of a bar (technically the MARK is a LINE) on an aligned axis. This is a pretty powerful encoding, which is why it is very common when visualizing distributions. In addtion, I am encoding HDSAR values themselves with HORIZONTAL POSITION. A nice, ordered channel for a nice, ordered attribute. The DENSITY FUNCTION is less clear to me. I’m obviously using a line, whose vertical and horizontal position encodes the relationship between the two variables. But the blue shaded fill? I kind of think that is using an AREA channel and REDUNDANT ENCODING to send a stronger signal.\nThe annotations of the 95th percentile and the 2022 Canucks’ HDSAR are encoded with COLOR and HORIZONTAL POSITION CHANNELS, and LINES as MARKS.\nThe 2022 Canucks indeed seem to be giving up HDS at a historically high rate.\n\n\n\nBut wait! You exclaim, shouting your objection into the uncaring Abyss. What about the goaltending? Surely that has also contributed to this season’s futility? “Perhaps..”, the Abyss murmurs back…\nLet’s see whether the futility of the penalty kill is also a function of bad goaltending. Now, we can’t just look at raw goals allowed, because if the defense is allowing really High Danger Shots, then even a good goaltender is going to allow some goals. Fortunately, the NHL nerds have developed an Expected Goals metric. Moneypuck provides this handy description in their data dictionary:\nExpected Goals:. The sum of the probabilities of unblocked shot attempts being goals. For example, a rebound shot in the slot may be worth 0.5 expected goals, while a shot from the blueline while short handed may be worth 0.01 expected goals. The expected value of each shot attempt is calculated by the MoneyPuck Expected Goals model. Expected goals is commonly abbreviated as xGoals. Blocked shot attempts are valued at 0 xGoals.\nCool!\n\n\nCode\n  Tending&lt;-allseasons[c(\"situation\", \"teamseason\", \"goalsAgainst\", \"xGoalsAgainst\", \"shotsOnGoalAgainst\", \"games_played\", \"iceTime\", \"highDangerShotsAgainst\")]\nTending$GArate&lt;-Tending$xGoalsAgainst/Tending$iceTime*120\n  PKTending&lt;-subset(Tending, situation == \"4on5\")\n\n  d &lt;- density(PKTending$GArate)\n\n# Step 3: Create an ECDF\ne &lt;- ecdf(PKTending$GArate)\n\n# Step 4: Calculate the quantile value\nq &lt;- quantile(PKTending$GArate, 0.95)\n\n# Step 5: Calculate the empirical cumulative probability for the quantile value\np &lt;- e(q)\n\n# Step 6: Estimate the density value for the quantile value\nf &lt;- approxfun(d$x, d$y)\nd_q &lt;- f(q)\n\n# Step 7: Combine the results into a list\npercentile &lt;- list(q = q, p = p, d = d_q)\n\n\nVAN22GA &lt;- PKTending$GArate[PKTending$teamseason == \"VAN 2022\"]\n    \nggplot(PKTending, aes(x=GArate))+\n  geom_histogram(aes(y = ..density..), binwidth = 0.005, color = \"black\", fill=\"white\")+\n  geom_density(lwd = 1, colour = 4,\n               fill = 4, alpha = 0.25)+\n  geom_vline(xintercept = VAN22GA, color = \"blue\", size=1.0)+\n  geom_vline(xintercept = q, color = \"red\", size = 1, linetype=\"dotted\")+\n  xlab(\"Expected Goals Allowed while killing penalties (rate per 2 minutes)\")  \n\n\n\n\n\n\n\n\n\nThis figure uses Expected Goals. It shows that Vancouver is playing a defense that is generating a historically high amount of expected goals, a result in line with our analysis of High Danger Chances.\nTo truly evaluate the goaltending, tt might be better for us to look at a ratio of Expected Goals to actual Goals. If this number is close to 1, it indicates an expected level of NHL goaltending during the penalty kill. The goalies are making the saves that they should. If the number is higher than 1, it means the goaltenders are making more saves than they should and are playing well. If the number is lower than 1, it means the goaltenders are letting in easy goals.\n\n\nCode\nTending$XGrate&lt;-Tending$xGoalsAgainst/Tending$goalsAgainst\n  PKTending&lt;-subset(Tending, situation == \"4on5\")\n\n  d &lt;- density(PKTending$XGrate)\n\n# Step 3: Create an ECDF\ne &lt;- ecdf(PKTending$XGrate)\n\n# Step 4: Calculate the quantile value\nq &lt;- quantile(PKTending$XGrate, 0.05)\n\n# Step 5: Calculate the empirical cumulative probability for the quantile value\np &lt;- e(q)\n\n# Step 6: Estimate the density value for the quantile value\nf &lt;- approxfun(d$x, d$y)\nd_q &lt;- f(q)\n\n# Step 7: Combine the results into a list\npercentile &lt;- list(q = q, p = p, d = d_q)\n\n\nVAN22XG &lt;- PKTending$XGrate[PKTending$teamseason == \"VAN 2022\"]\n    \nggplot(PKTending, aes(x=XGrate))+\n  geom_histogram(aes(y = ..density..), binwidth = 0.01, color = \"black\", fill=\"white\")+\n  geom_density(lwd = 1, colour = 4,\n               fill = 4, alpha = 0.25)+\n  geom_vline(xintercept = VAN22XG, color = \"blue\", size=1.0)+\n  geom_vline(xintercept = q, color = \"red\", size = 1, linetype=\"dotted\")+\n  xlab(\"Expected Goals / Goals Allowed ratio while killing penalties\")  \n\n\n\n\n\n\n\n\n\nFigure 3. Distribution of Expected Goals to Goals Allowed during 4 on 5 situations for NHL teams over the past 10 seasons. The 2022-2023 Vancouver Canucks are shown with the dark blue line (XGrate = 0.6963636) and the 5th percentile is shown in red.\nUh Oh. Not only is the defense giving up a historically high number of High Danger scoring chances, the goaltenders are performing well below expectation. They are making about 70% of the saves they are supposed to make. So…. yeah. Why is the penalty kill so bad? Bad defense and bad goaltending. I mean, HISTORICALLY BAD.\nIs it because of the system? I don’t think so. I think it is because of the players. They don’t have enough defensive talent on the team to effectively kill penalties. I am sad.\n\n\n\nNow, lets mess this up! First I’m going back to the HDSAR figure, and changing some of my choices for marks and channels.\n\n\nCode\nggplot(PKsituation, aes(x=teamseason, y=HDSAR)) +\n  geom_bar(stat=\"identity\", aes(fill=name, alpha=season)) +\n  xlab(\"NHL Team and Season\") +\n  ylab(\"High Danger Shots Allowed (rate per 2 minutes)\") +\n  ggtitle(\"Are the Vancouver Canucks Historically Bad?\") +\n  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size = 0.1),\n        legend.position = \"right\")\n\n\n\n\n\n\n\n\n\nFigure 2. Distribution of High Danger Shot Rate for NHL teams over the past 10 seasons.\nHoly Crap. What an absolute nightmate. In terms of MARKS, I’ve stayed with LINES. But the CHANNELS… wow. The COLOR CHANNEL is used to indicate the team. The ALPHA CHANNEL (transparency) is used to indicate season (time). These choices create HUGE problems related to discriminability (alpha channel) and separability. In addition, my choice to order these lines according to team and season is not at all compatible with my choice of channels. Not to mention that the important thing - to see where the 2022 Canucks stand in terms of historical futility - is completely wrecked because the horizontal position (a strong channel) is not closely tied to the most salient Attribute (HDSAR). Go ahead and pick out the the 2022 Canucks from this figure…. I’ll wait.\n\n\nFrom Munzner, 5.4.1:\nThe expressiveness principle: Visual encoding should express all of, and only, the information in the dataset attributes. Ordered data should be shown in a way that our perceptual system intrinsically senses as ordered. Well, using color sure violates that idea! Conversely, unordered data should not be shown in a way that perceptually implies an ordering that does not exist.\nThe effectiveness principle: The importance of the attribute should match the salience of the channel (its noticeablity). The most important attributes should be encoded with the most effective channels. Definitely not! Even though the Line Marks are using Length on an aligned axis, their width and ordering on the x axis completely obscures the focal team.\n\n\n\nUsing whatever data set you choose (it need not be the same data used for Figures 1 and 2), create a visualization called Figure 3 that uses a magnitude channel with a number of bins that facilitate discriminiability of an attribute. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 4 that uses this same channel for WAY TOO MANY BINS, violating the guidelines for discriminability. Write a caption that explains why this number of bins is bad compared to Figure 3. Look at the NHL Rainbow! So many colors… so little ability to differentiate between teams. For example, go ahead and try to pick out Edmonton vs Florida\n\n\n\nUsing whatever data set you choose (it need not be the same data used for Figures 1-4), create a visualization called Figure 5 that uses a two or more channels to encode two or more attributes while maintaining separability. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 6 that uses channels that are integral, or at least much less separable. Write a caption that explains why choosing these channels is bad compared to Figure 5.\nFor this one I’d like to try something else. Let’s look at the Expected Goals and Allowed Goals as a scatterplot:\n\n\nCode\nV22&lt;-subset(PKTending, teamseason == \"VAN 2022\")\nVAN22XG &lt;- PKTending$XGrate[PKTending$teamseason == \"VAN 2022\"]\n    \nggplot(PKTending, aes(x=xGoalsAgainst/games_played*82, y =goalsAgainst/games_played*82 ))+\n  geom_point(aes(alpha=highDangerShotsAgainst, size=highDangerShotsAgainst))+\n  geom_abline(intercept = 0, slope = 1)+\n  geom_abline(intercept = 90, slope = -1)+\n \n  xlim(0,100)+\n  ylim(0,100)+\n  geom_vline(xintercept = mean(PKTending$xGoalsAgainst/PKTending$games_played*82), color = \"blue\", size=1.0, linetype=\"dotted\")+\n  geom_hline(yintercept = mean(PKTending$goalsAgainst/PKTending$games_played*82), color = \"blue\", size = 1, linetype=\"dotted\")+\n  geom_point(data = V22, aes(x=xGoalsAgainst/games_played*82, y =goalsAgainst/games_played*82),\n             color = \"red\")\n\n\n\n\n\n\n\n\n\n\n\n\nUsing whatever data set you choose (it need not be the same data used for Figures 1-6… you get the idea), create a visualization called Figure 7 that effectively uses the concept of popout. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 8 that makes the identification task in Figure 7 much more difficult. Write a caption that explains why Figure 8 sucks compared to Figure 7. The popout concept is best shown by my use of a dark blue (color) line mark to indicate the 22 Canucks. Without that, you cannot achieve the task because the 22 Canucks are too hard to find without doing a serial search."
+  },
+  {
+    "objectID": "posts/T5-MarksChannels/index.html#penalty-kill",
+    "href": "posts/T5-MarksChannels/index.html#penalty-kill",
+    "title": "TUTORIAL 5 - Marks and Channels",
+    "section": "",
+    "text": "I’m interested in testing the hypothesis that this season’s Vancouver Canucks are a historically terrible team. One of the key factors in this hypothesis is that this year’s Canucks really, really suck at killing penalties. For this first assignment component, I’ll show you what I mean with a visualization!\nThe data I am using was downloaded from Moneypuck.com.\n\n\nCode\nlibrary(tidyverse)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(vroom)\n\nfiles &lt;- fs::dir_ls(glob = \"*teams.csv\")\n\nallseasons &lt;- vroom::vroom(files)\n\nallseasons$color&lt;-\"darkblue\"\nallseasons$color[allseasons$name==\"VAN\" & allseasons$season==\"2022\"]  &lt;- \"red\"\n  allseasons$teamseason&lt;- paste(allseasons$name, allseasons$season)\n  \n  allseasons$HDSAR&lt;-allseasons$highDangerShotsAgainst/allseasons$iceTime*120\n  \n  PKDATA&lt;-allseasons[c(\"situation\", \"teamseason\", \"goalsAgainst\", \"penaltiesFor\")]\n  PKpenalties&lt;-subset(PKDATA, situation == \"all\")\n  PKgoals&lt;-subset(PKDATA, situation == \"4on5\")\n  PK&lt;-PKgoals[c(\"teamseason\", \"goalsAgainst\")]\n  PK$penaltiesFor&lt;-PKpenalties$penaltiesFor\n  PK$PKpercent&lt;-100-(PK$goalsAgainst/PK$penaltiesFor*100)\n\n\nNow that I’ve massaged the data, I can tell you that the 2022-2023 Vancouver Canucks penalty kill percentage is 76.9633508. That means that when they get a penalty, there is about a 76.9633508 percent chance that they will prevent the opponent from scoring while they are short handed. However, unless you are a hockey super fan, you don’t have enough context to know if this is good or bad.\nThe figure below shows the distribution of penalty kill percentage for all teams and seasons since the 2010 season.\n\n\nCode\n  d &lt;- density(PK$PKpercent)\n\n# Step 3: Create an ECDF\ne &lt;- ecdf(PK$PKpercent)\n\n# Step 4: Calculate the quantile value\nq &lt;- quantile(PK$PKpercent, 0.01)\n\n# Step 5: Calculate the empirical cumulative probability for the quantile value\np &lt;- e(q)\n\n# Step 6: Estimate the density value for the quantile value\nf &lt;- approxfun(d$x, d$y)\nd_q &lt;- f(q)\n\n# Step 7: Combine the results into a list\npercentile &lt;- list(q = q, p = p, d = d_q)\n\n\nVAN22 &lt;- PK$PKpercent[PK$teamseason == \"VAN 2022\"]\n\nggplot(PK, aes(x=PKpercent))+\n  geom_histogram(aes(y = ..density..), binwidth = 0.5, color = \"black\", fill=\"white\")+\n  geom_density(lwd = 1, colour = 4,\n               fill = 4, alpha = 0.25)+\n  geom_vline(xintercept = VAN22, color = \"blue\", size=1.0)+\n  geom_vline(xintercept = q, color = \"red\", size = 1, linetype=\"dotted\")+\n  xlab(\"Penalty Kill (%)\")\n\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\nWarning: The dot-dot notation (`..density..`) was deprecated in ggplot2 3.4.0.\nℹ Please use `after_stat(density)` instead.\n\n\n\n\n\n\n\n\n\nSo… yeah. The blue line is the 22 Canucks. The red dotted line is the 1st! percentile of the density function. This is fine. We know this to be true. Their PK sucks. It is one of the worst in the history of the NHL. But WHY is it so bad? Bad goaltending? Bad defense? Both?"
+  },
+  {
+    "objectID": "posts/T5-MarksChannels/index.html#high-danger-shots-allowed",
+    "href": "posts/T5-MarksChannels/index.html#high-danger-shots-allowed",
+    "title": "TUTORIAL 5 - Marks and Channels",
+    "section": "",
+    "text": "My theory is that their defense hangs their goaltenders out to dry. This might be measured with the number of High Danger Shots Allowed.\nHigh Danger Shots are defined as unblocked shot attempts with greater than a 20% probability of being a goal, as calculated by hockey data nerds. High danger shots account for ~5% of shots and ~33% of goals in the NHL.\nBelow I calculate High Danger Shots Allowed Rate, which is the number of HDS during penalty kill situations standardized it to a rate per 2 minutes spent killing penalties (the normal duration of an NHL minor penalty).\n\n\nCode\nPKsituation&lt;-subset(allseasons, situation == \"4on5\")\n# Step 2: Estimate the density of the data\nd &lt;- density(PKsituation$HDSAR)\n\n# Step 3: Create an ECDF\ne &lt;- ecdf(PKsituation$HDSAR)\n\n# Step 4: Calculate the quantile value\nq &lt;- quantile(PKsituation$HDSAR, 0.95)\n\n# Step 5: Calculate the empirical cumulative probability for the quantile value\np &lt;- e(q)\n\n# Step 6: Estimate the density value for the quantile value\nf &lt;- approxfun(d$x, d$y)\nd_q &lt;- f(q)\n\n# Step 7: Combine the results into a list\npercentile &lt;- list(q = q, p = p, d = d_q)\n\n\nVAN22HD &lt;- PKsituation$HDSAR[PKsituation$teamseason == \"VAN 2022\"]\n\n\n\n\n\nggplot(PKsituation, aes(x=HDSAR))+\n  geom_histogram(aes(y = ..density..), binwidth = 0.005, color = \"black\", fill=\"white\")+\n  geom_density(lwd = 1, colour = 4,\n               fill = 4, alpha = 0.25)+\n  geom_vline(xintercept = VAN22HD, color = \"blue\", size=1.0)+\n  geom_vline(xintercept = q, color = \"red\", size = 1, linetype=\"dotted\")+\n  xlab(\"High Danger Shots Allowed (rate per 2 minutes)\")\n\n\n\n\n\n\n\n\n\nFigure 1. Distribution of High Danger Shot Rate for NHL teams over the past 10 seasons. The 2022-2023 Vancouver Canucks are shown with the dark blue line (HDSAR = 0.3220996) and the 95th percentile is shown in red.\nIn terms of the semantics of Data Visualization, I am trying to DISCOVER the DISTRIBUTION of High Danger Shots Allowed, and then ANNOTATE the DISTRIBUTION with information about the current Vancouver Canucks team and their approximate percentile in the distribution.\nTo visualize this I am encoding a DERIVED attribute - the relative density of HDSAR as VERTICAL LENGTH of a bar (technically the MARK is a LINE) on an aligned axis. This is a pretty powerful encoding, which is why it is very common when visualizing distributions. In addtion, I am encoding HDSAR values themselves with HORIZONTAL POSITION. A nice, ordered channel for a nice, ordered attribute. The DENSITY FUNCTION is less clear to me. I’m obviously using a line, whose vertical and horizontal position encodes the relationship between the two variables. But the blue shaded fill? I kind of think that is using an AREA channel and REDUNDANT ENCODING to send a stronger signal.\nThe annotations of the 95th percentile and the 2022 Canucks’ HDSAR are encoded with COLOR and HORIZONTAL POSITION CHANNELS, and LINES as MARKS.\nThe 2022 Canucks indeed seem to be giving up HDS at a historically high rate."
+  },
+  {
+    "objectID": "posts/T5-MarksChannels/index.html#goaltending",
+    "href": "posts/T5-MarksChannels/index.html#goaltending",
+    "title": "TUTORIAL 5 - Marks and Channels",
+    "section": "",
+    "text": "But wait! You exclaim, shouting your objection into the uncaring Abyss. What about the goaltending? Surely that has also contributed to this season’s futility? “Perhaps..”, the Abyss murmurs back…\nLet’s see whether the futility of the penalty kill is also a function of bad goaltending. Now, we can’t just look at raw goals allowed, because if the defense is allowing really High Danger Shots, then even a good goaltender is going to allow some goals. Fortunately, the NHL nerds have developed an Expected Goals metric. Moneypuck provides this handy description in their data dictionary:\nExpected Goals:. The sum of the probabilities of unblocked shot attempts being goals. For example, a rebound shot in the slot may be worth 0.5 expected goals, while a shot from the blueline while short handed may be worth 0.01 expected goals. The expected value of each shot attempt is calculated by the MoneyPuck Expected Goals model. Expected goals is commonly abbreviated as xGoals. Blocked shot attempts are valued at 0 xGoals.\nCool!\n\n\nCode\n  Tending&lt;-allseasons[c(\"situation\", \"teamseason\", \"goalsAgainst\", \"xGoalsAgainst\", \"shotsOnGoalAgainst\", \"games_played\", \"iceTime\", \"highDangerShotsAgainst\")]\nTending$GArate&lt;-Tending$xGoalsAgainst/Tending$iceTime*120\n  PKTending&lt;-subset(Tending, situation == \"4on5\")\n\n  d &lt;- density(PKTending$GArate)\n\n# Step 3: Create an ECDF\ne &lt;- ecdf(PKTending$GArate)\n\n# Step 4: Calculate the quantile value\nq &lt;- quantile(PKTending$GArate, 0.95)\n\n# Step 5: Calculate the empirical cumulative probability for the quantile value\np &lt;- e(q)\n\n# Step 6: Estimate the density value for the quantile value\nf &lt;- approxfun(d$x, d$y)\nd_q &lt;- f(q)\n\n# Step 7: Combine the results into a list\npercentile &lt;- list(q = q, p = p, d = d_q)\n\n\nVAN22GA &lt;- PKTending$GArate[PKTending$teamseason == \"VAN 2022\"]\n    \nggplot(PKTending, aes(x=GArate))+\n  geom_histogram(aes(y = ..density..), binwidth = 0.005, color = \"black\", fill=\"white\")+\n  geom_density(lwd = 1, colour = 4,\n               fill = 4, alpha = 0.25)+\n  geom_vline(xintercept = VAN22GA, color = \"blue\", size=1.0)+\n  geom_vline(xintercept = q, color = \"red\", size = 1, linetype=\"dotted\")+\n  xlab(\"Expected Goals Allowed while killing penalties (rate per 2 minutes)\")  \n\n\n\n\n\n\n\n\n\nThis figure uses Expected Goals. It shows that Vancouver is playing a defense that is generating a historically high amount of expected goals, a result in line with our analysis of High Danger Chances.\nTo truly evaluate the goaltending, tt might be better for us to look at a ratio of Expected Goals to actual Goals. If this number is close to 1, it indicates an expected level of NHL goaltending during the penalty kill. The goalies are making the saves that they should. If the number is higher than 1, it means the goaltenders are making more saves than they should and are playing well. If the number is lower than 1, it means the goaltenders are letting in easy goals.\n\n\nCode\nTending$XGrate&lt;-Tending$xGoalsAgainst/Tending$goalsAgainst\n  PKTending&lt;-subset(Tending, situation == \"4on5\")\n\n  d &lt;- density(PKTending$XGrate)\n\n# Step 3: Create an ECDF\ne &lt;- ecdf(PKTending$XGrate)\n\n# Step 4: Calculate the quantile value\nq &lt;- quantile(PKTending$XGrate, 0.05)\n\n# Step 5: Calculate the empirical cumulative probability for the quantile value\np &lt;- e(q)\n\n# Step 6: Estimate the density value for the quantile value\nf &lt;- approxfun(d$x, d$y)\nd_q &lt;- f(q)\n\n# Step 7: Combine the results into a list\npercentile &lt;- list(q = q, p = p, d = d_q)\n\n\nVAN22XG &lt;- PKTending$XGrate[PKTending$teamseason == \"VAN 2022\"]\n    \nggplot(PKTending, aes(x=XGrate))+\n  geom_histogram(aes(y = ..density..), binwidth = 0.01, color = \"black\", fill=\"white\")+\n  geom_density(lwd = 1, colour = 4,\n               fill = 4, alpha = 0.25)+\n  geom_vline(xintercept = VAN22XG, color = \"blue\", size=1.0)+\n  geom_vline(xintercept = q, color = \"red\", size = 1, linetype=\"dotted\")+\n  xlab(\"Expected Goals / Goals Allowed ratio while killing penalties\")  \n\n\n\n\n\n\n\n\n\nFigure 3. Distribution of Expected Goals to Goals Allowed during 4 on 5 situations for NHL teams over the past 10 seasons. The 2022-2023 Vancouver Canucks are shown with the dark blue line (XGrate = 0.6963636) and the 5th percentile is shown in red.\nUh Oh. Not only is the defense giving up a historically high number of High Danger scoring chances, the goaltenders are performing well below expectation. They are making about 70% of the saves they are supposed to make. So…. yeah. Why is the penalty kill so bad? Bad defense and bad goaltending. I mean, HISTORICALLY BAD.\nIs it because of the system? I don’t think so. I think it is because of the players. They don’t have enough defensive talent on the team to effectively kill penalties. I am sad."
+  },
+  {
+    "objectID": "posts/T5-MarksChannels/index.html#changing-channels",
+    "href": "posts/T5-MarksChannels/index.html#changing-channels",
+    "title": "TUTORIAL 5 - Marks and Channels",
+    "section": "",
+    "text": "Now, lets mess this up! First I’m going back to the HDSAR figure, and changing some of my choices for marks and channels.\n\n\nCode\nggplot(PKsituation, aes(x=teamseason, y=HDSAR)) +\n  geom_bar(stat=\"identity\", aes(fill=name, alpha=season)) +\n  xlab(\"NHL Team and Season\") +\n  ylab(\"High Danger Shots Allowed (rate per 2 minutes)\") +\n  ggtitle(\"Are the Vancouver Canucks Historically Bad?\") +\n  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size = 0.1),\n        legend.position = \"right\")\n\n\n\n\n\n\n\n\n\nFigure 2. Distribution of High Danger Shot Rate for NHL teams over the past 10 seasons.\nHoly Crap. What an absolute nightmate. In terms of MARKS, I’ve stayed with LINES. But the CHANNELS… wow. The COLOR CHANNEL is used to indicate the team. The ALPHA CHANNEL (transparency) is used to indicate season (time). These choices create HUGE problems related to discriminability (alpha channel) and separability. In addition, my choice to order these lines according to team and season is not at all compatible with my choice of channels. Not to mention that the important thing - to see where the 2022 Canucks stand in terms of historical futility - is completely wrecked because the horizontal position (a strong channel) is not closely tied to the most salient Attribute (HDSAR). Go ahead and pick out the the 2022 Canucks from this figure…. I’ll wait.\n\n\nFrom Munzner, 5.4.1:\nThe expressiveness principle: Visual encoding should express all of, and only, the information in the dataset attributes. Ordered data should be shown in a way that our perceptual system intrinsically senses as ordered. Well, using color sure violates that idea! Conversely, unordered data should not be shown in a way that perceptually implies an ordering that does not exist.\nThe effectiveness principle: The importance of the attribute should match the salience of the channel (its noticeablity). The most important attributes should be encoded with the most effective channels. Definitely not! Even though the Line Marks are using Length on an aligned axis, their width and ordering on the x axis completely obscures the focal team.\n\n\n\nUsing whatever data set you choose (it need not be the same data used for Figures 1 and 2), create a visualization called Figure 3 that uses a magnitude channel with a number of bins that facilitate discriminiability of an attribute. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 4 that uses this same channel for WAY TOO MANY BINS, violating the guidelines for discriminability. Write a caption that explains why this number of bins is bad compared to Figure 3. Look at the NHL Rainbow! So many colors… so little ability to differentiate between teams. For example, go ahead and try to pick out Edmonton vs Florida\n\n\n\nUsing whatever data set you choose (it need not be the same data used for Figures 1-4), create a visualization called Figure 5 that uses a two or more channels to encode two or more attributes while maintaining separability. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 6 that uses channels that are integral, or at least much less separable. Write a caption that explains why choosing these channels is bad compared to Figure 5.\nFor this one I’d like to try something else. Let’s look at the Expected Goals and Allowed Goals as a scatterplot:\n\n\nCode\nV22&lt;-subset(PKTending, teamseason == \"VAN 2022\")\nVAN22XG &lt;- PKTending$XGrate[PKTending$teamseason == \"VAN 2022\"]\n    \nggplot(PKTending, aes(x=xGoalsAgainst/games_played*82, y =goalsAgainst/games_played*82 ))+\n  geom_point(aes(alpha=highDangerShotsAgainst, size=highDangerShotsAgainst))+\n  geom_abline(intercept = 0, slope = 1)+\n  geom_abline(intercept = 90, slope = -1)+\n \n  xlim(0,100)+\n  ylim(0,100)+\n  geom_vline(xintercept = mean(PKTending$xGoalsAgainst/PKTending$games_played*82), color = \"blue\", size=1.0, linetype=\"dotted\")+\n  geom_hline(yintercept = mean(PKTending$goalsAgainst/PKTending$games_played*82), color = \"blue\", size = 1, linetype=\"dotted\")+\n  geom_point(data = V22, aes(x=xGoalsAgainst/games_played*82, y =goalsAgainst/games_played*82),\n             color = \"red\")\n\n\n\n\n\n\n\n\n\n\n\n\nUsing whatever data set you choose (it need not be the same data used for Figures 1-6… you get the idea), create a visualization called Figure 7 that effectively uses the concept of popout. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 8 that makes the identification task in Figure 7 much more difficult. Write a caption that explains why Figure 8 sucks compared to Figure 7. The popout concept is best shown by my use of a dark blue (color) line mark to indicate the 22 Canucks. Without that, you cannot achieve the task because the 22 Canucks are too hard to find without doing a serial search."
+  },
+  {
+    "objectID": "posts/T2-Anscombe/index.html",
+    "href": "posts/T2-Anscombe/index.html",
+    "title": "TUTORIAL 2 - Literate Programming and Anscombe’s Quartet",
+    "section": "",
+    "text": "Do the summary statistics reveal the truth? Or are they FILLED WITH LIES? A simple demonstration with Anscombe’s Quartet.\nAgain, the video is a couple years old. Expect a few dated references."
+  },
+  {
+    "objectID": "posts/T2-Anscombe/index.html#more-quarto",
+    "href": "posts/T2-Anscombe/index.html#more-quarto",
+    "title": "TUTORIAL 2 - Literate Programming and Anscombe’s Quartet",
+    "section": "",
+    "text": "Do the summary statistics reveal the truth? Or are they FILLED WITH LIES? A simple demonstration with Anscombe’s Quartet.\nAgain, the video is a couple years old. Expect a few dated references."
+  },
+  {
+    "objectID": "posts/T2-Anscombe/index.html#the-data",
+    "href": "posts/T2-Anscombe/index.html#the-data",
+    "title": "TUTORIAL 2 - Literate Programming and Anscombe’s Quartet",
+    "section": "The Data",
+    "text": "The Data\nAnscombe’s Quartet is comprised of four pairs of x,y data:\n\n\nCode\nlibrary(ggplot2)\nlibrary(grid)\nlibrary(gridExtra)\nlibrary(datasets)\nlibrary(tidyverse)\nlibrary(dplyr)\n\n\n\n\nCode\ndatasets::anscombe\n\n\n   x1 x2 x3 x4    y1   y2    y3    y4\n1  10 10 10  8  8.04 9.14  7.46  6.58\n2   8  8  8  8  6.95 8.14  6.77  5.76\n3  13 13 13  8  7.58 8.74 12.74  7.71\n4   9  9  9  8  8.81 8.77  7.11  8.84\n5  11 11 11  8  8.33 9.26  7.81  8.47\n6  14 14 14  8  9.96 8.10  8.84  7.04\n7   6  6  6  8  7.24 6.13  6.08  5.25\n8   4  4  4 19  4.26 3.10  5.39 12.50\n9  12 12 12  8 10.84 9.13  8.15  5.56\n10  7  7  7  8  4.82 7.26  6.42  7.91\n11  5  5  5  8  5.68 4.74  5.73  6.89"
+  },
+  {
+    "objectID": "posts/T2-Anscombe/index.html#example-hypotheses",
+    "href": "posts/T2-Anscombe/index.html#example-hypotheses",
+    "title": "TUTORIAL 2 - Literate Programming and Anscombe’s Quartet",
+    "section": "Example Hypotheses",
+    "text": "Example Hypotheses\n\nBetsy has four replicates in which she is measuring the abundance of two bacteria (x, y) on 11 milk samples.\nPriya has four replicates in which she is measuring gene expression of two genes (x, y) in 11 different pipefish tissue samples.\nHenry has four replicate years in which he is measuring the abundance of an insect pest (x) and crop productivity (y) in 11 fields.\n\nYour hypothesis is that the four replicates do not differ in the correlation between x and y."
+  },
+  {
+    "objectID": "posts/T2-Anscombe/index.html#summary-statistics",
+    "href": "posts/T2-Anscombe/index.html#summary-statistics",
+    "title": "TUTORIAL 2 - Literate Programming and Anscombe’s Quartet",
+    "section": "Summary Statistics",
+    "text": "Summary Statistics\n\n\nCode\ntidy_anscombe &lt;- anscombe %&gt;%\n pivot_longer(cols = everything(),\n              names_to = c(\".value\", \"set\"),\n              names_pattern = \"(.)(.)\")\ntidy_anscombe_summary &lt;- tidy_anscombe %&gt;%\n  group_by(set) %&gt;%\n  summarise(across(.cols = everything(),\n                   .fns = lst(min,max,median,mean,sd,var),\n                   .names = \"{col}_{fn}\"))\n#&gt; `summarise()` ungrouping output (override with `.groups` argument)\n\nvars&lt;-c(\"set\", \"x_mean\", \"x_var\",  \"y_mean\", \"y_var\")\nthing&lt;- as.data.frame(tidy_anscombe_summary[vars])\nknitr::kable(thing)\n\n\n\n\n\nset\nx_mean\nx_var\ny_mean\ny_var\n\n\n\n\n1\n9\n11\n7.500909\n4.127269\n\n\n2\n9\n11\n7.500909\n4.127629\n\n\n3\n9\n11\n7.500000\n4.122620\n\n\n4\n9\n11\n7.500909\n4.123249"
+  },
+  {
+    "objectID": "posts/T2-Anscombe/index.html#visualization-reveals-hidden-patterns",
+    "href": "posts/T2-Anscombe/index.html#visualization-reveals-hidden-patterns",
+    "title": "TUTORIAL 2 - Literate Programming and Anscombe’s Quartet",
+    "section": "Visualization reveals hidden patterns!",
+    "text": "Visualization reveals hidden patterns!\n\n\nCode\nggplot(tidy_anscombe,\n       aes(x = x,\n           y = y)) +\n  geom_point() +\n  geom_point(data = tidy_anscombe_summary, aes(x=x_mean, y = y_mean, color = \"red\", size = 5),\n             show.legend = FALSE)+\n  facet_wrap(~set) +\n  geom_smooth(method = \"lm\", se = FALSE)\n\n\n`geom_smooth()` using formula = 'y ~ x'"
+  },
+  {
+    "objectID": "posts/A4-MarksChannels/index.html",
+    "href": "posts/A4-MarksChannels/index.html",
+    "title": "ASSIGNMENT 4",
+    "section": "",
+    "text": "It’s one thing to “learn” about the theory of marks and channels for data visualization. It’s an entirely different thing to LEARN these concepts by IMPLEMENTING them in your own visualizations. In this assignment, you will do exactly that. Create some simple visualizations that highlight some of the key concepts from this section of the class."
+  },
+  {
+    "objectID": "posts/A4-MarksChannels/index.html#summary",
+    "href": "posts/A4-MarksChannels/index.html#summary",
+    "title": "ASSIGNMENT 4",
+    "section": "",
+    "text": "It’s one thing to “learn” about the theory of marks and channels for data visualization. It’s an entirely different thing to LEARN these concepts by IMPLEMENTING them in your own visualizations. In this assignment, you will do exactly that. Create some simple visualizations that highlight some of the key concepts from this section of the class."
+  },
+  {
+    "objectID": "posts/A4-MarksChannels/index.html#a-new-portfolio-post",
+    "href": "posts/A4-MarksChannels/index.html#a-new-portfolio-post",
+    "title": "ASSIGNMENT 4",
+    "section": "A NEW PORTFOLIO POST",
+    "text": "A NEW PORTFOLIO POST\nThis assignment will appear as a new post in your nascent data science portfolio. To create a new post, you need to navigate to your posts directory in your RStudio Project. I do this using the Files tab in the lower right quadrant of RStudio.\n\n\nMake a new directory within posts called MarksChannels .\nClick on that new directory to enter it and then use that create a new blank file button and choose Quarto Document.\nName the new file index.qmd .\nAdd YAML text to the top of the file. In particular, add the following:\n\ntitle: “ASSIGNMENT 4”\nsubtitle: “Marks and Channels”\nauthor: “YOUR NAME”\ndate: “2024-02-08”\ncategories: [Assignment, DataViz]\nimage: “some fun image you put in that new directory.png”\ncode-fold: true\ncode-tools: true\ndescription: “A clever description that describes the stuff”"
+  },
+  {
+    "objectID": "posts/A4-MarksChannels/index.html#make-your-portfolio-less-terrible",
+    "href": "posts/A4-MarksChannels/index.html#make-your-portfolio-less-terrible",
+    "title": "ASSIGNMENT 4",
+    "section": "MAKE YOUR PORTFOLIO LESS TERRIBLE",
+    "text": "MAKE YOUR PORTFOLIO LESS TERRIBLE\nWhile we are at it, let’s improve the overall look and structure of your portfolio. Navigate to the about.qmd file in your portfolio root directory and open it in RStudio. Use the information found here to customize your About page.\nAT MINIMUM , I want an About page that contains your name, a brief description about you, a picture of yourself, a link to your github, and a section on your Education."
+  },
+  {
+    "objectID": "posts/A4-MarksChannels/index.html#marks-and-channels",
+    "href": "posts/A4-MarksChannels/index.html#marks-and-channels",
+    "title": "ASSIGNMENT 4",
+    "section": "MARKS AND CHANNELS",
+    "text": "MARKS AND CHANNELS\nBack to your new post!\nUse that shiny new index.qmd file to perform the tasks below. Every time you create a figure, it needs a caption. The text in that section of your assignment should also briefly describe the data set you are using, especially the attributes used for the visualization. In addition, make sure the visualization task actually requires the particular concept. For example, don’t just make a scatterplot with one red dot for the Popout exercise. You need to describe a task that requires we IDENTIFY that point.\n\nExpressiveness and Effectiveness\nFrom Munzner, 5.4.1:\nThe expressiveness principle: Visual encoding should express all of, and only, the information in the dataset attributes. Ordered data should be shown in a way that our perceptual system intrinsically senses as ordered. Conversely, unordered data should not be shown in a way that perceptually implies an ordering that does not exist.\nThe effectiveness principle: The importance of the attribute should match the salience of the channel (its noticeablity). The most important attributes should be encoded with the most effective channels.\nUsing whatever data set you choose, create a visualization called Figure 1 that adheres to these two principles. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 2 that violates these principles in the most extreme ways you can imagine while still having the visualization be recognizibly the same as the first. Write a caption that explains your choices of marks and channels and why they are bad compared to Figure 1.\n\n\nDiscriminability\nUsing whatever data set you choose (it need not be the same data used for Figures 1 and 2), create a visualization called Figure 3 that uses a magnitude channel and a number of bins that facilitate discriminiability of an attribute. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 4 that uses this same channel for WAY TOO MANY BINS, violating the guidelines for discriminability. Write a caption that explains why this number of bins is bad compared to Figure 3.\n\n\nSeparability\nUsing whatever data set you choose (it need not be the same data used for Figures 1-4), create a visualization called Figure 5 that uses a two or more channels to encode two or more attributes while maintainig separability. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 6 that uses channels that are integral, or at least much less separable. Write a caption that explains why choosing these channels is bad compared to Figure 5.\n\n\nPopout\nUsing whatever data set you choose (it need not be the same data used for Figures 1-6… you get the idea), create a visualization called Figure 7 that effectively uses the concept of popout. Write a caption that explains your choices of marks and channels in these terms. Then, using the exact same data, create a visualization called Figure 8 that makes the identification task in Figure 7 much more difficult. Write a caption that explains why Figure 8 sucks compared to Figure 7."
+  },
+  {
+    "objectID": "posts/A3-PrototypeVizPortfolio/index.html",
+    "href": "posts/A3-PrototypeVizPortfolio/index.html",
+    "title": "ASSIGNMENT 3",
+    "section": "",
+    "text": "Enough with the theory and conceptual mumbo jumbo! Let’s get down to making a visualization and posting it somewhere for all the world to see! The basic idea of this assignment is to set up a repository that will serve as an experimental portfolio, and then create your first novel visualization element inside the portfolio. Its gonna be fun! Or at least educational…\nRemember that time that Barrie was dumb?"
+  },
+  {
+    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#summary",
+    "href": "posts/A3-PrototypeVizPortfolio/index.html#summary",
+    "title": "ASSIGNMENT 3",
+    "section": "",
+    "text": "Enough with the theory and conceptual mumbo jumbo! Let’s get down to making a visualization and posting it somewhere for all the world to see! The basic idea of this assignment is to set up a repository that will serve as an experimental portfolio, and then create your first novel visualization element inside the portfolio. Its gonna be fun! Or at least educational…\nRemember that time that Barrie was dumb?"
+  },
+  {
+    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#assignment",
+    "href": "posts/A3-PrototypeVizPortfolio/index.html#assignment",
+    "title": "ASSIGNMENT 3",
+    "section": "ASSIGNMENT",
+    "text": "ASSIGNMENT\nThis assignment has two parts. The first part is technical. We’ll set up a Quarto Blog project as a new repository in your GitHub account. Then you’ll be a Blogger! Prestigious! The second part should be more fun. We are going to create your first Blog post as a visualization that explores an ACTION - TARGET pair relevant to your data set from Assignment 2."
+  },
+  {
+    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#part-1-technical-sorcery",
+    "href": "posts/A3-PrototypeVizPortfolio/index.html#part-1-technical-sorcery",
+    "title": "ASSIGNMENT 3",
+    "section": "PART 1 TECHNICAL SORCERY",
+    "text": "PART 1 TECHNICAL SORCERY\n\n1A - Create your BLOG project.\nHopefully by now you have created / dusted off / logged in to your GitHub account. Go ahead and log in to your account on the web and leave it open in a tab in your browser. There is a really great video about the next few steps (also linked below in RESORUCES) from Posit, but I’m giving you the condensed version here.\n\nFire up RStudio.\nGo to File-&gt;New Project and then select NEW DIRECTORY.\nNow select QUARTO BLOG.\nYou are going to create a the project in a new working directory. It is best practice to put this in a senstible directory structure on your local hard drive where your other GitHub repositories also live. Here is what mine looks like:\n\n 4. I suggest making the directory name something informative, like BCB504Portfolio, but hey… If you want to call your repository HasturBoxerShorts I won’t stop you. 5. Most of you will select Knitr as your Engine, but Cody “Mr. Hacker McPythonPants” might select Jupyter. 6. Check Create a git repository. The other boxes are optional and we can talk more about them later. 7. Click CREATE PROJECT.\nNow you’ve got a BLOG template all set up! Ha Ha! Onward to Internet Fame!\n\n\n1B - Make the BLOG about you.\nWe won’t spend a ton of time here, because this will be an ongoing process. You’ll go and watch all those cool videos and tutorials this weekend to figure this out. But lets do a couple things.\n\nMaybe you should modify the about.qmd file so that your name is in there somewhere.\nMaybe you should modify the index.qmd file with a better title in the YAML header.\nMaybe you should navigate to the posts folder, open the Welcome to my blog folder, open index.qmd from that directory, and add a sentence or two.\n\n\n\n1C - Customize your first post.\n\nNavigate to the posts folder, open the post with code folder, and open index.qmd.\nReplace ALL of the content of index.qmd with the most recent version of your .qmd file from ASSIGNMENT 2. Keep the file name index.qmd. Save that file!\nMove your data files to the post with code folder.\nRender the index.qmd file from this folder. Hopefully it worked!\n\n\n\n1D - Render the BLOG as a website.\n\nIMPORTANT Open your _quarto.yml file and add output-dir: docs under project:\n\n\nThe indentations matter here.\n\nSave all the files you’ve modified.\nGo to the BUILD tab in the (probably) top right section of RStudio.\nClick RENDER WEBSITE.\nClick through your new Blog and see how it works!\n\n\n\n1E - Push to GitHub.\nThere are quite a few ways to do this part. I’m going to use GitHub Desktop, but those video will show you other ways.\n\nGo to GitHub Desktop.\nType some text in the summary box.\nClick COMMIT TO MASTER.\nClick PUSH ORIGIN.\nGo to your GitHub in your browser. You should see your new repository! Yay!\n\n\n\n1F - Make it a website with GitHub pages.\n\nIn your browser, click on your repository.\nGo to SETTINGS.\nSelect PAGES.\nSet the SOURCE option to Deploy from a branch.\nSet the BRANCH to master and the directory to docs\nDeploy that stuff and wait. Then visit your site!"
+  },
+  {
+    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#part-2-eldritch-visualization-ritual",
+    "href": "posts/A3-PrototypeVizPortfolio/index.html#part-2-eldritch-visualization-ritual",
+    "title": "ASSIGNMENT 3",
+    "section": "PART 2 ELDRITCH VISUALIZATION RITUAL",
+    "text": "PART 2 ELDRITCH VISUALIZATION RITUAL\n\n2A Define your ACTION - TARGET pair(s)\nIn [LECTURE 3] we discussed the concept of Task Abstraction in which you define the viz task that you want to help the user accomplish. This was represented as sets of ACTIONS that the user would perform (e.g. Discover, Present, Browse, Identify) on TARGETS related to the data set (e.g. Trends, Attributes, etc.).\nThink about one or two visualizations you wish to construct with your data, and try to define them in terms of ACTION - TARGET pairs. While you are at it, why don’t you update the index.qmd file of your BLOG POST with a new seciton at the bottom titled TASK ABSTRACTION, and put a sentence describing your visualizations and the ACTION - TARGET pairs they represent?\n\n\n2B Construct your Visualization\nLet’s get to work! Using whatever tools you can, code up your visualization in that new section of your BLOG post. You can check out how I approached this part in TUTORIAL 4."
+  },
+  {
+    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#resources",
+    "href": "posts/A3-PrototypeVizPortfolio/index.html#resources",
+    "title": "ASSIGNMENT 3",
+    "section": "RESOURCES",
+    "text": "RESOURCES\nA YouTube Video from Posit on Building your Data Science Portfolio\nTidyTuesday\nA fun Spotify example from TidyTuesday by Kaylin Pavlik.\nQuarto’s BLOG Documentation\nA YouTube Video from Posit on Building a BLOG with Quarto"
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html",
+    "href": "posts/A1-Lit-Prog/index.html",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "",
+    "text": "The idea of Literate Programming is that source code that is executed as part of the program’s purpose is interspersed with documentation that describes the program’s logic. The concept of literate programming was first articulated by David Knuth in 1984. You know… back when music was good? Modern Data Science leans pretty heavily on literate programming, and to be honest, there aren’t very many good arguments as to why you WOULDN’T want to implement this approach in your own work. Bearing this in mind, we will adopt this framework for most of the activities, exercises, and assignments in this course. All of us will benefit by practicing these skills."
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#summary",
+    "href": "posts/A1-Lit-Prog/index.html#summary",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "",
+    "text": "The idea of Literate Programming is that source code that is executed as part of the program’s purpose is interspersed with documentation that describes the program’s logic. The concept of literate programming was first articulated by David Knuth in 1984. You know… back when music was good? Modern Data Science leans pretty heavily on literate programming, and to be honest, there aren’t very many good arguments as to why you WOULDN’T want to implement this approach in your own work. Bearing this in mind, we will adopt this framework for most of the activities, exercises, and assignments in this course. All of us will benefit by practicing these skills."
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#literate-programming-publishing-systems",
+    "href": "posts/A1-Lit-Prog/index.html#literate-programming-publishing-systems",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "LITERATE PROGRAMMING PUBLISHING SYSTEMS",
+    "text": "LITERATE PROGRAMMING PUBLISHING SYSTEMS\nI’m trying to keep this course as technology agnostic as I can. The idea is that you should be practicing and building competencies in the languages and algorithms that are most useful to you. Who am I to tell you to use R instead of Python? If you have skills in a particular language I encourage you to keep using that during this course. That being said, I am going to work the examples using R and R Studio, and I will (mostly) use Quarto as the literate programming framework.\nIf all of this is new to you, no problem. Just follow along in R and Quarto and start your skill building journey with those languages.\nIf you are a Python person, great! Quarto can accommodate that language as well. If you have another preference for literate programming, such as sticking with R Markdown until the Quarto bugs are fixed, that is great. Find the framework and tools that work for you, and practice, practice, practice!\n\nQuarto\nAn open source publishing system that allows you to create websites, documents, blogs, books, publications, presentations, and more while using R, Python, Julia, or Observable. Quarto is intended to be the more functional successor of R Markdown. I intend to use Quarto for most of my work in this course.\n\n\nR Markdown\nAnother publishing system for creating all the things … websites, slides, manuscripts, dashboards, etc. While most people (including me!) instinctively think of R and Python within R Markdown, the list of supported language engines is pretty extensive.\n\nnames(knitr::knit_engines$get())\n\n [1] \"awk\"       \"bash\"      \"coffee\"    \"gawk\"      \"groovy\"    \"haskell\"  \n [7] \"lein\"      \"mysql\"     \"node\"      \"octave\"    \"perl\"      \"php\"      \n[13] \"psql\"      \"Rscript\"   \"ruby\"      \"sas\"       \"scala\"     \"sed\"      \n[19] \"sh\"        \"stata\"     \"zsh\"       \"asis\"      \"asy\"       \"block\"    \n[25] \"block2\"    \"bslib\"     \"c\"         \"cat\"       \"cc\"        \"comment\"  \n[31] \"css\"       \"ditaa\"     \"dot\"       \"embed\"     \"eviews\"    \"exec\"     \n[37] \"fortran\"   \"fortran95\" \"go\"        \"highlight\" \"js\"        \"julia\"    \n[43] \"python\"    \"R\"         \"Rcpp\"      \"sass\"      \"scss\"      \"sql\"      \n[49] \"stan\"      \"targets\"   \"tikz\"      \"verbatim\"  \"ojs\"       \"mermaid\""
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#languages-and-toolsets",
+    "href": "posts/A1-Lit-Prog/index.html#languages-and-toolsets",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "LANGUAGES AND TOOLSETS",
+    "text": "LANGUAGES AND TOOLSETS\nThere are quite a few, but the five that seemed to keep coming up as I prepped this course are:\n\nR\nA very powerful open source framework for statistical computing and graphics. R has a lot of base functionality, and its capabilities are increased by 100 fold with packages created by R users. Packages are the core units of R code. I’m going to use R for the vast majority of demonstrations in this course.\n\n\nPython\nPython is an open source general purpose programming language. It wasn’t developed just for statistical computing or data science, and people use this language for tons of different applications. There is no denying it has become a very powerful language for data science and data visualization.\n\n\nTableau\nTableau is proprietary software that is very powerful for creating beautiful and functional data visualizations. It can integrate with all sorts of data sources and is used a lot for analytics, especially in the business world. The downsides (that occur to me at least) are that it costs money, it is not open source, and is more of a one-trick-pony than the programming languages on this list.\n\n\nJavascript\nJavascript has been around for about 25 years, and is (I think) the world’s most popular programming language. Along with HTML and CSS, Javascript drives pretty much the entire internet. I mention Javascript here because it has the D3 library, which can create super cool interactive data visualizaitons. In my experience, the learning curve with Javascript and D3 was pretty steep. I bought a book about it once, but just haven’t been able to allocate the amount of time necessary to really start using it. Check out the gallery of examples. Amazing!\n\n\nObservable / D3\nObservable is a set of extensions to Javascript that features something called reactive runtime. This means that the code blocks are executed and compiled as they are written, and changes are implemented instantaneously. Observable is pretty great for data exploration, and is well supported by Quarto. In addition, you can use the Observable JS libraries in Quarto to access D3. We’ll use some of these tools in this course, especially when we start considering interactivity."
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#assignment",
+    "href": "posts/A1-Lit-Prog/index.html#assignment",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "ASSIGNMENT",
+    "text": "ASSIGNMENT\nAfter that long introduction, I suppose you are wondering what I want you to actually DO.\nWell, I want you to set up your publishing system and preferred language on your computer. Then I want you to recreate the classic figure from Anscombe’s Quartet.\nNow, you might be asking…\n“How am I supposed to do that? You haven’t taught me how to do anything yet!”\nHere is the dirty little secret of modern education.\nThe Internet Exists.\nWhile I could use up an entire 90 minute lecture telling you how to:\n\nDownload and install R, R-Studio, and Quarto (included by default with R-Studio).\nCreate a Quarto document that will publish in the .html format\nInstall the R packages you will need\nTidy up the Anscombe’s Quartet data\nCalculate the summary statistics for each x y pair\nMake a nice little plot…\n\nI’m not going to do that.\nInstead, I want you to use the resources I point towards, or other resources that make more sense to you, to figure out how to do those things."
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#resources",
+    "href": "posts/A1-Lit-Prog/index.html#resources",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "RESOURCES",
+    "text": "RESOURCES\nTidyverse and Anscombe’s Quartet\nHandy cheat-sheets for many different R packages\nTutorial 1 - Literate Programming\nTutorial 2 - Literate Programming and Anscombe’s Quartet\nTutorial 3 - Python"
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#who-am-i",
+    "href": "posts/L1-Intro/index.html#who-am-i",
+    "title": "LECTURE 1 - INTRO",
+    "section": "WHO AM I?",
+    "text": "WHO AM I?\nBarrie Robison\nDepartment of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#visualization",
+    "href": "posts/L1-Intro/index.html#visualization",
+    "title": "LECTURE 1 - INTRO",
+    "section": "VISUALIZATION",
+    "text": "VISUALIZATION\nComputers provide visual representations of datasets designed to help people carry out tasks more effectively.\nTamara Munzner\nDepartment of Computer Science\nDr. Munzner’s version of this lecture\nUniversity of British Columbia"
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#the-human",
+    "href": "posts/L1-Intro/index.html#the-human",
+    "title": "LECTURE 1 - INTRO",
+    "section": "THE HUMAN",
+    "text": "THE HUMAN\nWhy have a human in the loop?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\nWe don’t need visualization when a trusted fully automatic solution exists.\nVisualization is suitable when there is a need to augment human capabilities rather than replace people with computational decision-making methods."
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#the-representation",
+    "href": "posts/L1-Intro/index.html#the-representation",
+    "title": "LECTURE 1 - INTRO",
+    "section": "THE REPRESENTATION",
+    "text": "THE REPRESENTATION\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\nEXTERNAL REPRESENTATIONS: Replace cognition with perception."
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#in-class-exercise",
+    "href": "posts/L1-Intro/index.html#in-class-exercise",
+    "title": "LECTURE 1 - INTRO",
+    "section": "IN CLASS EXERCISE",
+    "text": "IN CLASS EXERCISE\nYou have 5 minutes.\nFind an example of a data visualization from your daily life. I may not be related to your research or discipline in any way. Be prepared to share it with the class (zoom screen share or email me a link) and discuss its purpose, efficacy, strengths, and weaknesses."
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#why-depend-on-vision",
+    "href": "posts/L1-Intro/index.html#why-depend-on-vision",
+    "title": "LECTURE 1 - INTRO",
+    "section": "WHY DEPEND ON VISION?",
+    "text": "WHY DEPEND ON VISION?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\n\nThe human visual system is a high-bandwidth channel to the brain.\nOverview is possible due to background processing, providing the subjective experience of seeing everything simultaneously.\nSignificant processing occurs in parallel and pre-attentively.\nWhat about sound? lower bandwidth and different semantics, overview not supported, subjective experience of sequential stream.\nWhat about touch/haptics? impoverished record/replay capacity, only very low-bandwidth communication thus far.\nWhat about taste, smell? no viable record/replay devices."
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#why-represent-all-the-data",
+    "href": "posts/L1-Intro/index.html#why-represent-all-the-data",
+    "title": "LECTURE 1 - INTRO",
+    "section": "WHY REPRESENT (ALL THE) DATA?",
+    "text": "WHY REPRESENT (ALL THE) DATA?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\n\nsummaries lose information\ndetails matter\nconfirm expected and find unexpected patterns\nassess validity of statistical model\nANSCOMBE’S QUARTET is a fun example that we shall use to illustrate these points!"
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#anscombes-quartet",
+    "href": "posts/L1-Intro/index.html#anscombes-quartet",
+    "title": "LECTURE 1 - INTRO",
+    "section": "ANSCOMBE’S QUARTET",
+    "text": "ANSCOMBE’S QUARTET\n\n\n\n\nCode\nlibrary(ggplot2)\nlibrary(grid)\nlibrary(gridExtra)\nlibrary(datasets)\nlibrary(tidyverse)\nlibrary(dplyr)\ndatasets::anscombe\n\n\n   x1 x2 x3 x4    y1   y2    y3    y4\n1  10 10 10  8  8.04 9.14  7.46  6.58\n2   8  8  8  8  6.95 8.14  6.77  5.76\n3  13 13 13  8  7.58 8.74 12.74  7.71\n4   9  9  9  8  8.81 8.77  7.11  8.84\n5  11 11 11  8  8.33 9.26  7.81  8.47\n6  14 14 14  8  9.96 8.10  8.84  7.04\n7   6  6  6  8  7.24 6.13  6.08  5.25\n8   4  4  4 19  4.26 3.10  5.39 12.50\n9  12 12 12  8 10.84 9.13  8.15  5.56\n10  7  7  7  8  4.82 7.26  6.42  7.91\n11  5  5  5  8  5.68 4.74  5.73  6.89\n\n\n\nAnscombe’s Quartet\nThe four x-y pairs have identical summary statistics.\n\n\nCode\ntidy_anscombe &lt;- anscombe %&gt;%\n pivot_longer(cols = everything(),\n              names_to = c(\".value\", \"set\"),\n              names_pattern = \"(.)(.)\")\ntidy_anscombe_summary &lt;- tidy_anscombe %&gt;%\n  group_by(set) %&gt;%\n  summarise(across(.cols = everything(),\n                   .fns = lst(min,max,median,mean,sd,var),\n                   .names = \"{col}_{fn}\"))\n#&gt; `summarise()` ungrouping output (override with `.groups` argument)\n\nvars&lt;-c(\"set\", \"x_mean\", \"x_var\",  \"y_mean\", \"y_var\")\nthing&lt;- as.data.frame(tidy_anscombe_summary[vars])\nknitr::kable(thing)\n\n\n\n\n\nset\nx_mean\nx_var\ny_mean\ny_var\n\n\n\n\n1\n9\n11\n7.500909\n4.127269\n\n\n2\n9\n11\n7.500909\n4.127629\n\n\n3\n9\n11\n7.500000\n4.122620\n\n\n4\n9\n11\n7.500909\n4.123249"
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#viz-matters",
+    "href": "posts/L1-Intro/index.html#viz-matters",
+    "title": "LECTURE 1 - INTRO",
+    "section": "VIZ MATTERS",
+    "text": "VIZ MATTERS\n\n\nCode\nggplot(tidy_anscombe,\n       aes(x = x,\n           y = y)) +\n  geom_point() +\n  geom_point(data = tidy_anscombe_summary, aes(x=x_mean, y = y_mean, color = \"red\", size = 5),\n             show.legend = FALSE)+\n  facet_wrap(~set) +\n  geom_smooth(method = \"lm\", se = FALSE)\n\n\n\n\nLearn more: TIDY ANSCOMBE"
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#resource-limitations",
+    "href": "posts/L1-Intro/index.html#resource-limitations",
+    "title": "LECTURE 1 - INTRO",
+    "section": "RESOURCE LIMITATIONS",
+    "text": "RESOURCE LIMITATIONS\nVisualization designers must take into account three very different kinds of resource limitations:\n\nLimitations of computers.\nLimitations of humans.\nLimitations of displays."
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#computational-limits",
+    "href": "posts/L1-Intro/index.html#computational-limits",
+    "title": "LECTURE 1 - INTRO",
+    "section": "COMPUTATIONAL LIMITS",
+    "text": "COMPUTATIONAL LIMITS\nCPU time\nSystem Memory"
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#display-limits",
+    "href": "posts/L1-Intro/index.html#display-limits",
+    "title": "LECTURE 1 - INTRO",
+    "section": "DISPLAY LIMITS",
+    "text": "DISPLAY LIMITS\nPixels are precious and are the most constrained resource.\n\nInformation Density: ratio of space used to encode information vs unused whitespace.\nThere is a tradeoff between clutter and wasting space.\nDesigner must find the sweet spot between dense and sparse."
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#human-limits",
+    "href": "posts/L1-Intro/index.html#human-limits",
+    "title": "LECTURE 1 - INTRO",
+    "section": "HUMAN LIMITS",
+    "text": "HUMAN LIMITS\n\nTime\nMemory\nAttention\n\n\n\n\n\nHOME"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#vad-model",
+    "href": "posts/L4-Marks-Channels/index.html#vad-model",
+    "title": "LECTURE 4",
+    "section": "VAD MODEL",
+    "text": "VAD MODEL"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#understand-the-data",
+    "href": "posts/L4-Marks-Channels/index.html#understand-the-data",
+    "title": "LECTURE 4",
+    "section": "UNDERSTAND THE DATA",
+    "text": "UNDERSTAND THE DATA\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#understand-the-task",
+    "href": "posts/L4-Marks-Channels/index.html#understand-the-task",
+    "title": "LECTURE 4",
+    "section": "UNDERSTAND THE TASK",
+    "text": "UNDERSTAND THE TASK\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#visual-encoding",
+    "href": "posts/L4-Marks-Channels/index.html#visual-encoding",
+    "title": "LECTURE 4",
+    "section": "VISUAL ENCODING",
+    "text": "VISUAL ENCODING\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#other-frameworks",
+    "href": "posts/L4-Marks-Channels/index.html#other-frameworks",
+    "title": "LECTURE 4",
+    "section": "OTHER FRAMEWORKS",
+    "text": "OTHER FRAMEWORKS\n\nThe Tidyverse\nThe Grammar of Graphics\nTufte"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#tidyverse",
+    "href": "posts/L4-Marks-Channels/index.html#tidyverse",
+    "title": "LECTURE 4",
+    "section": "TIDYVERSE",
+    "text": "TIDYVERSE\nR packages for data science:\n\n\nThe tidyverse is an opinionated collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures. The best way to explore and understand the tidyverse is with cheetsheets, like this one for tidyr!"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#grammar-of-graphics",
+    "href": "posts/L4-Marks-Channels/index.html#grammar-of-graphics",
+    "title": "LECTURE 4",
+    "section": "GRAMMAR OF GRAPHICS",
+    "text": "GRAMMAR OF GRAPHICS\nThe ggplot2 cheatsheet!"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#tufte",
+    "href": "posts/L4-Marks-Channels/index.html#tufte",
+    "title": "LECTURE 4",
+    "section": "TUFTE",
+    "text": "TUFTE\nTufte’s Website\nA Quarto Page Layout Example"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#analysis-framework",
+    "href": "posts/L4-Marks-Channels/index.html#analysis-framework",
+    "title": "LECTURE 4",
+    "section": "ANALYSIS FRAMEWORK",
+    "text": "ANALYSIS FRAMEWORK\nFour levels, three questions\n\n\n\nDomain situation defines the target users.\nAbstraction translate from specifics of domain to vocabulary of vis\n\nWHAT is shown? data abstraction\nWHY is the user looking at it? task abstraction\n\nIdiom defines the visualization\n\nHOW is it shown?\n\nvisual encoding idiom: how to draw\ninteraction idiom: how to manipulate\n\n\nAlgorithm creates the visualization\n\nevaluated with computational efficiency"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#encoding",
+    "href": "posts/L4-Marks-Channels/index.html#encoding",
+    "title": "LECTURE 4",
+    "section": "ENCODING",
+    "text": "ENCODING\nWe are defining the structure of the visualization (the idiom).\nTo do this, we use MARKS and CHANNELS:\n\nMARKS represent ITEMS or LINKS (aka OBSERVATIONS)\nCHANNELS change the appearance of MARKS based on ATTRIBUTES (aka VARIABLES)"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#marks-for-items",
+    "href": "posts/L4-Marks-Channels/index.html#marks-for-items",
+    "title": "LECTURE 4",
+    "section": "MARKS FOR ITEMS",
+    "text": "MARKS FOR ITEMS"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#marks-for-links",
+    "href": "posts/L4-Marks-Channels/index.html#marks-for-links",
+    "title": "LECTURE 4",
+    "section": "MARKS FOR LINKS",
+    "text": "MARKS FOR LINKS\n\n Bubblesets\n Force Directed Graph"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#observable-in-quarto",
+    "href": "posts/L4-Marks-Channels/index.html#observable-in-quarto",
+    "title": "LECTURE 4",
+    "section": "OBSERVABLE IN QUARTO!",
+    "text": "OBSERVABLE IN QUARTO!\n\n\nCode\nd3 = require(\"d3@7\")\n\n\nchart = ForceGraph(miserables, {\n  nodeId: d =&gt; d.id,\n  nodeGroup: d =&gt; d.group,\n  nodeTitle: d =&gt; `${d.id}\\n${d.group}`,\n  linkStrokeWidth: l =&gt; Math.sqrt(l.value),\n  width,\n  height: 1000,\n  invalidation // a promise to stop the simulation when the cell is re-run\n})\n\n\nmiserables = FileAttachment(\"miserables.json\").json()\n\n\n// Copyright 2021 Observable, Inc.\n// Released under the ISC license.\n// https://observablehq.com/@d3/force-directed-graph\nfunction ForceGraph({\n  nodes, // an iterable of node objects (typically [{id}, …])\n  links // an iterable of link objects (typically [{source, target}, …])\n}, {\n  nodeId = d =&gt; d.id, // given d in nodes, returns a unique identifier (string)\n  nodeGroup, // given d in nodes, returns an (ordinal) value for color\n  nodeGroups, // an array of ordinal values representing the node groups\n  nodeTitle, // given d in nodes, a title string\n  nodeFill = \"currentColor\", // node stroke fill (if not using a group color encoding)\n  nodeStroke = \"#fff\", // node stroke color\n  nodeStrokeWidth = 1.5, // node stroke width, in pixels\n  nodeStrokeOpacity = 1, // node stroke opacity\n  nodeRadius = 5, // node radius, in pixels\n  nodeStrength,\n  linkSource = ({source}) =&gt; source, // given d in links, returns a node identifier string\n  linkTarget = ({target}) =&gt; target, // given d in links, returns a node identifier string\n  linkStroke = \"#999\", // link stroke color\n  linkStrokeOpacity = 0.6, // link stroke opacity\n  linkStrokeWidth = 1.5, // given d in links, returns a stroke width in pixels\n  linkStrokeLinecap = \"round\", // link stroke linecap\n  linkStrength,\n  colors = d3.schemeTableau10, // an array of color strings, for the node groups\n  width = 1000, // outer width, in pixels\n  height = 1000, // outer height, in pixels\n  invalidation // when this promise resolves, stop the simulation\n} = {}) {\n  // Compute values.\n  const N = d3.map(nodes, nodeId).map(intern);\n  const LS = d3.map(links, linkSource).map(intern);\n  const LT = d3.map(links, linkTarget).map(intern);\n  if (nodeTitle === undefined) nodeTitle = (_, i) =&gt; N[i];\n  const T = nodeTitle == null ? null : d3.map(nodes, nodeTitle);\n  const G = nodeGroup == null ? null : d3.map(nodes, nodeGroup).map(intern);\n  const W = typeof linkStrokeWidth !== \"function\" ? null : d3.map(links, linkStrokeWidth);\n  const L = typeof linkStroke !== \"function\" ? null : d3.map(links, linkStroke);\n\n  // Replace the input nodes and links with mutable objects for the simulation.\n  nodes = d3.map(nodes, (_, i) =&gt; ({id: N[i]}));\n  links = d3.map(links, (_, i) =&gt; ({source: LS[i], target: LT[i]}));\n\n  // Compute default domains.\n  if (G && nodeGroups === undefined) nodeGroups = d3.sort(G);\n\n  // Construct the scales.\n  const color = nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, colors);\n\n  // Construct the forces.\n  const forceNode = d3.forceManyBody();\n  const forceLink = d3.forceLink(links).id(({index: i}) =&gt; N[i]);\n  if (nodeStrength !== undefined) forceNode.strength(nodeStrength);\n  if (linkStrength !== undefined) forceLink.strength(linkStrength);\n\n  const simulation = d3.forceSimulation(nodes)\n      .force(\"link\", forceLink)\n      .force(\"charge\", forceNode)\n      .force(\"center\",  d3.forceCenter())\n      .on(\"tick\", ticked);\n\n  const svg = d3.create(\"svg\")\n      .attr(\"width\", width)\n      .attr(\"height\", height)\n      .attr(\"viewBox\", [-width / 2, -height / 2, width, height])\n      .attr(\"style\", \"max-width: 100%; height: auto; height: intrinsic;\");\n\n  const link = svg.append(\"g\")\n      .attr(\"stroke\", typeof linkStroke !== \"function\" ? linkStroke : null)\n      .attr(\"stroke-opacity\", linkStrokeOpacity)\n      .attr(\"stroke-width\", typeof linkStrokeWidth !== \"function\" ? linkStrokeWidth : null)\n      .attr(\"stroke-linecap\", linkStrokeLinecap)\n    .selectAll(\"line\")\n    .data(links)\n    .join(\"line\");\n\n  const node = svg.append(\"g\")\n      .attr(\"fill\", nodeFill)\n      .attr(\"stroke\", nodeStroke)\n      .attr(\"stroke-opacity\", nodeStrokeOpacity)\n      .attr(\"stroke-width\", nodeStrokeWidth)\n    .selectAll(\"circle\")\n    .data(nodes)\n    .join(\"circle\")\n      .attr(\"r\", nodeRadius)\n      .call(drag(simulation));\n\n  if (W) link.attr(\"stroke-width\", ({index: i}) =&gt; W[i]);\n  if (L) link.attr(\"stroke\", ({index: i}) =&gt; L[i]);\n  if (G) node.attr(\"fill\", ({index: i}) =&gt; color(G[i]));\n  if (T) node.append(\"title\").text(({index: i}) =&gt; T[i]);\n  if (invalidation != null) invalidation.then(() =&gt; simulation.stop());\n\n  function intern(value) {\n    return value !== null && typeof value === \"object\" ? value.valueOf() : value;\n  }\n\n  function ticked() {\n    link\n      .attr(\"x1\", d =&gt; d.source.x)\n      .attr(\"y1\", d =&gt; d.source.y)\n      .attr(\"x2\", d =&gt; d.target.x)\n      .attr(\"y2\", d =&gt; d.target.y);\n\n    node\n      .attr(\"cx\", d =&gt; d.x)\n      .attr(\"cy\", d =&gt; d.y);\n  }\n\n  function drag(simulation) {    \n    function dragstarted(event) {\n      if (!event.active) simulation.alphaTarget(0.3).restart();\n      event.subject.fx = event.subject.x;\n      event.subject.fy = event.subject.y;\n    }\n    \n    function dragged(event) {\n      event.subject.fx = event.x;\n      event.subject.fy = event.y;\n    }\n    \n    function dragended(event) {\n      if (!event.active) simulation.alphaTarget(0);\n      event.subject.fx = null;\n      event.subject.fy = null;\n    }\n    \n    return d3.drag()\n      .on(\"start\", dragstarted)\n      .on(\"drag\", dragged)\n      .on(\"end\", dragended);\n  }\n\n  return Object.assign(svg.node(), {scales: {color}});\n}\n\n\nimport {howto} from \"@d3/example-components\"\n\nimport {Swatches} from \"@d3/color-legend\""
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#channels",
+    "href": "posts/L4-Marks-Channels/index.html#channels",
+    "title": "LECTURE 4",
+    "section": "CHANNELS",
+    "text": "CHANNELS\n\n\n\nCHANNELS control the appearance of MARKS.\nThey are proportional to or based on ATTRIBUTES (aka VARIABLES).\nTheir properties differ in the type and amount of information that can be conveyed to the human perceptual system."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#this-is-important",
+    "href": "posts/L4-Marks-Channels/index.html#this-is-important",
+    "title": "LECTURE 4",
+    "section": "THIS IS IMPORTANT",
+    "text": "THIS IS IMPORTANT\nChannel properties differ in the type and amount of information that can be conveyed to the human perceptual system."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#visual-encoding-example",
+    "href": "posts/L4-Marks-Channels/index.html#visual-encoding-example",
+    "title": "LECTURE 4",
+    "section": "VISUAL ENCODING EXAMPLE",
+    "text": "VISUAL ENCODING EXAMPLE\nLet’s analyze the idiom structures below in terms of marks and channels."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#analyze-the-marks-and-channels",
+    "href": "posts/L4-Marks-Channels/index.html#analyze-the-marks-and-channels",
+    "title": "LECTURE 4",
+    "section": "ANALYZE THE MARKS AND CHANNELS",
+    "text": "ANALYZE THE MARKS AND CHANNELS\nMarks are defined by the ITEMS or OBSERVATIONS they represent.\nChannels are defined by the visually detectable properties that are mapped on to ATTRIBUTES or VARIABLES.\n\n\n\n\n\n\n\n\n\nSharon’s Microbiomes\n\n\n\n\n\n\n\nMarwa’s Reddit Network\n\n\n\n\n\n\n\nYaotian’s Wheat"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#redundant-encoding",
+    "href": "posts/L4-Marks-Channels/index.html#redundant-encoding",
+    "title": "LECTURE 4",
+    "section": "REDUNDANT ENCODING",
+    "text": "REDUNDANT ENCODING\n\n\nUses multiple channels for the same attribute.\n\nSends a stronger message\nUses up channels\nBonus points if you can identify BOTH channels in this figure!"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#wheat-growth-by-area",
+    "href": "posts/L4-Marks-Channels/index.html#wheat-growth-by-area",
+    "title": "LECTURE 4",
+    "section": "WHEAT GROWTH BY AREA*",
+    "text": "WHEAT GROWTH BY AREA*\nBoth of Yaotian’s plots contain Redundant Encoding. Is this approach equally valuable for both plots?"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#choosing-channels",
+    "href": "posts/L4-Marks-Channels/index.html#choosing-channels",
+    "title": "LECTURE 4",
+    "section": "CHOOSING CHANNELS",
+    "text": "CHOOSING CHANNELS\n\nEXPRESSIVENESS\n\nThe visual encoding should express all of, and only, the information in the dataset attributes.\n\nEFFECTIVENESS\n\nChannels differ in accuracy of perception.\nThe importance of the attribute should match the salience of the channel (its noticability)."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#expressiveness",
+    "href": "posts/L4-Marks-Channels/index.html#expressiveness",
+    "title": "LECTURE 4",
+    "section": "EXPRESSIVENESS",
+    "text": "EXPRESSIVENESS\nThe advantages and disadvantages of jitter plots. How might this relate to the idea of expressiveness?\n\nHeidi’s Cytoswine DataEXPRESSIVENESS: The visual encoding should express all of, and only, the information in the dataset attributes."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#channel-effectiveness-rankings",
+    "href": "posts/L4-Marks-Channels/index.html#channel-effectiveness-rankings",
+    "title": "LECTURE 4",
+    "section": "CHANNEL EFFECTIVENESS RANKINGS",
+    "text": "CHANNEL EFFECTIVENESS RANKINGS\n\nNote that spatial position ranks high for both types of channels."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#grouping",
+    "href": "posts/L4-Marks-Channels/index.html#grouping",
+    "title": "LECTURE 4",
+    "section": "GROUPING",
+    "text": "GROUPING\n\n\n\nContainment\nConnection\nProximity\n\nSame spatial region.\n\nSimilarity\n\nSame values as other channels."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#summary-so-far",
+    "href": "posts/L4-Marks-Channels/index.html#summary-so-far",
+    "title": "LECTURE 4",
+    "section": "SUMMARY SO FAR",
+    "text": "SUMMARY SO FAR"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#channel-effectiveness",
+    "href": "posts/L4-Marks-Channels/index.html#channel-effectiveness",
+    "title": "LECTURE 4",
+    "section": "CHANNEL EFFECTIVENESS",
+    "text": "CHANNEL EFFECTIVENESS\n\nAccuracy: how precisely can we tell the difference between encoded items?\nDiscriminability: how many unique steps can we perceive?\nSeparability: is our ability to use this channel affected by another one?\nPopout: can things jump out using this channel?"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#accuracy-theory",
+    "href": "posts/L4-Marks-Channels/index.html#accuracy-theory",
+    "title": "LECTURE 4",
+    "section": "ACCURACY (THEORY)",
+    "text": "ACCURACY (THEORY)\nSteven’s Psychophisical Power Law: \\(S=I^N\\)\n\n\n\n\n\n\n\n\n\n\n\n\nLENGTH (N=1)\nELECTRIC SHOCK (N=3.5)\nSATURATION (N=1.7)\nAREA (N=0.7)\nBRIGHTNESS (N=0.5)"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#accuracy-experimental",
+    "href": "posts/L4-Marks-Channels/index.html#accuracy-experimental",
+    "title": "LECTURE 4",
+    "section": "ACCURACY (EXPERIMENTAL)",
+    "text": "ACCURACY (EXPERIMENTAL)\n\n\n\n\n[Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods]"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#accuracy",
+    "href": "posts/L4-Marks-Channels/index.html#accuracy",
+    "title": "LECTURE 4",
+    "section": "ACCURACY?",
+    "text": "ACCURACY?\nDepends on the task. Which genre has the most game titles? Which genres are the top 4 in terms of game titles? Are there more Puzzle games than Strategy games?\n\nGeraline’s Video Games"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#discriminability",
+    "href": "posts/L4-Marks-Channels/index.html#discriminability",
+    "title": "LECTURE 4",
+    "section": "DISCRIMINABILITY",
+    "text": "DISCRIMINABILITY\nHow many usable steps are in the channel? Are the differences between items perceptible to the human as intended?"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#discriminability-and-colors",
+    "href": "posts/L4-Marks-Channels/index.html#discriminability-and-colors",
+    "title": "LECTURE 4",
+    "section": "DISCRIMINABILITY and COLORS",
+    "text": "DISCRIMINABILITY and COLORS\n\nGeraline’s Gaming Platforms"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#separability-vs-integrality",
+    "href": "posts/L4-Marks-Channels/index.html#separability-vs-integrality",
+    "title": "LECTURE 4",
+    "section": "SEPARABILITY VS INTEGRALITY",
+    "text": "SEPARABILITY VS INTEGRALITY\nSeparable channels are orthogonal and independent. Integral channels are inextricably combined. Attempts to encode different information with integral channels creates Interference.\n\n\nFigure 5.10. Pairs of visual channels fall along a continuum from fully separable to intrinsically integral. Color and location are separable channels well suited to encode different data attributes for two different groupings that can be selectively attended to. However, size interacts with hue, which is harder to perceive for small objects. The horizontal size and and vertical size channels are automatically fused into an integrated perception of area, yielding three groups. Attempts to code separate information along the red and green axes of the RGB color space fail, because we simply perceive four different hues."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#separability",
+    "href": "posts/L4-Marks-Channels/index.html#separability",
+    "title": "LECTURE 4",
+    "section": "SEPARABILITY",
+    "text": "SEPARABILITY\n\nRedundancy may be desirable, but area interferes with hue, with larger shapes having more visual salience."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#popout",
+    "href": "posts/L4-Marks-Channels/index.html#popout",
+    "title": "LECTURE 4",
+    "section": "POPOUT",
+    "text": "POPOUT\nVISUAL POPOUT is often called preattentive processing or tunable detection.\n\n\nfind the red dot! How long does it take?\nPopout results from our low-level visual system performing massively parallel processing on certain visual channels, eliminating the need for the viewer to consciously direct attention to items one by one (serial search).\n\nFigure 5.11. Visual popout. (a) The red circle pops out from a small set of blue circles. (b) The red circle pops out from a large set of blue circles just as quickly. (c) The red circle also pops out from a small set of square shapes, although a bit slower than with color. (d) The red circle also pops out of a large set of red squares. (e) The red circle does not take long to find from a small set of mixed shapes and colors. (f) The red circle does not pop out from a large set of red squares and blue circles, and it can only be found by searching one by one through all the objects."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#popout-1",
+    "href": "posts/L4-Marks-Channels/index.html#popout-1",
+    "title": "LECTURE 4",
+    "section": "POPOUT",
+    "text": "POPOUT\n\n\nMany channels are compatible with preattentive processing and facilitate popout:\n\ntilt\nsize\nshape\nproximity\nshadow direction\n\nBut not all!\n\nExample: parallel line pairs do not pop out from tilted pairs."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#popout-goes-the-weevil",
+    "href": "posts/L4-Marks-Channels/index.html#popout-goes-the-weevil",
+    "title": "LECTURE 4",
+    "section": "POPOUT GOES THE WEEVIL?",
+    "text": "POPOUT GOES THE WEEVIL?\n\n\n\n\n\n\n\n\n\nLucas Weevils before chemicals\n\n\n\n\n\n\n\nLucas Weevils after chemicals"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#relative-vs-absolute-judgements",
+    "href": "posts/L4-Marks-Channels/index.html#relative-vs-absolute-judgements",
+    "title": "LECTURE 4",
+    "section": "RELATIVE VS ABSOLUTE JUDGEMENTS",
+    "text": "RELATIVE VS ABSOLUTE JUDGEMENTS\nThe human perceptual system is fundamentally based on relative judgements, not absolute ones. This is why accuracy increases with common frame/scale and alignment.\nWeber’s Law: The detectable difference in stimulus intensity \\(I\\) as a fixed percentage \\(K\\) of the object magnitude: \\(dI/I=K\\) .\n\nThe filled rectangles differ in length by 1:9, and it is therefore difficult to detect the difference without aligment. The white rectangles differ in length by 1:2, it is easier to see this difference even when the objects are unaligned."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#relative-judgements",
+    "href": "posts/L4-Marks-Channels/index.html#relative-judgements",
+    "title": "LECTURE 4",
+    "section": "RELATIVE JUDGEMENTS",
+    "text": "RELATIVE JUDGEMENTS\n\nHeidi’s Microbiomes"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#relative-luminance-judgements",
+    "href": "posts/L4-Marks-Channels/index.html#relative-luminance-judgements",
+    "title": "LECTURE 4",
+    "section": "RELATIVE LUMINANCE JUDGEMENTS",
+    "text": "RELATIVE LUMINANCE JUDGEMENTS\nHuman perception of luminance is completely contextual, and is based on contrast with surrounding colors."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#relative-color-judgements",
+    "href": "posts/L4-Marks-Channels/index.html#relative-color-judgements",
+    "title": "LECTURE 4",
+    "section": "RELATIVE COLOR JUDGEMENTS",
+    "text": "RELATIVE COLOR JUDGEMENTS\nOur visual system evolved to provide color constancy so that the same surface is identifiable across a broad set of illumination conditions, even though a physical light meter would yield very different readings. While the visual system works very well in natural environments, many of its mechanisms work against simple approaches to visually encoding information with color.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5.15 shows two colorful cubes. In Figure 5.15(a) corresponding squares both appear to be red. In Figure 5.15(b), masks show that the tile color in the image apparently illuminated by a yellowish light source is actually orange, and for the bluish light the tiles are actually purple.\n\n\n\n\nHOME"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#last-lecture",
+    "href": "posts/L2-Data-Abstraction/index.html#last-lecture",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "LAST LECTURE",
+    "text": "LAST LECTURE\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#what",
+    "href": "posts/L2-Data-Abstraction/index.html#what",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "WHAT?",
+    "text": "WHAT?\n Before you design a visualization, you need to understand the data. Here, we consider the semantics to describe the DATA TYPES and DATA ATTRIBUTES."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#the-three-major-data-types",
+    "href": "posts/L2-Data-Abstraction/index.html#the-three-major-data-types",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "THE THREE MAJOR DATA TYPES",
+    "text": "THE THREE MAJOR DATA TYPES"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-attributes",
+    "href": "posts/L2-Data-Abstraction/index.html#data-attributes",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA ATTRIBUTES",
+    "text": "DATA ATTRIBUTES"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#what-1",
+    "href": "posts/L2-Data-Abstraction/index.html#what-1",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "WHAT?",
+    "text": "WHAT?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics",
+    "href": "posts/L2-Data-Abstraction/index.html#data-semantics",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001\n\n\nVIZ"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-1",
+    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-1",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points far from each other in 3D space?\n\n\nVIZ"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-2",
+    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?\n\n\nVIZ"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-3",
+    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-3",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-4",
+    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-4",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear: Food shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month\n\n\nVIZ"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-5",
+    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-5",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear: Basil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service\n\n\nVIZ"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-6",
+    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-6",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear: Lab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food\n\n\nVIZ"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#semantics",
+    "href": "posts/L2-Data-Abstraction/index.html#semantics",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SEMANTICS",
+    "text": "SEMANTICS\nThe meaning of a word, phrase, sentence, or text.\nBasil, 7, S, Pear"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#semantics-for-data",
+    "href": "posts/L2-Data-Abstraction/index.html#semantics-for-data",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SEMANTICS FOR DATA",
+    "text": "SEMANTICS FOR DATA\n\n\n\n\n\n\nSemantics\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”\n\n\n\n\nData Table\n\n\n\n\nITEM: Person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#other-data-types",
+    "href": "posts/L2-Data-Abstraction/index.html#other-data-types",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "OTHER DATA TYPES",
+    "text": "OTHER DATA TYPES\n\nLinks\n\nexpress relationship between two items\ne.g/ friendship on facebook, interaction between proteins\n\nPositions\n\nspatial data: location in 2D or 3D\ne.g. pixels in photo, voxels in MRI scan, latitude/longitude\n\nGrids\n\nsampling strategy for continuous data"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#what-2",
+    "href": "posts/L2-Data-Abstraction/index.html#what-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "WHAT?",
+    "text": "WHAT?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#dataset-types-tables",
+    "href": "posts/L2-Data-Abstraction/index.html#dataset-types-tables",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATASET TYPES: TABLES",
+    "text": "DATASET TYPES: TABLES\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA UNIQUE KEY can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#flat-table-example",
+    "href": "posts/L2-Data-Abstraction/index.html#flat-table-example",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "FLAT TABLE EXAMPLE",
+    "text": "FLAT TABLE EXAMPLE"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#multidimensional-tables",
+    "href": "posts/L2-Data-Abstraction/index.html#multidimensional-tables",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "MULTIDIMENSIONAL TABLES",
+    "text": "MULTIDIMENSIONAL TABLES\nindexing based on multiple keys (eg genes, patients)"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#networks",
+    "href": "posts/L2-Data-Abstraction/index.html#networks",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "NETWORKS",
+    "text": "NETWORKS\nNetwork/graph nodes (vertices) connected by links (edges). A tree is special case: no cycles, often have roots, and are directed."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#fields",
+    "href": "posts/L2-Data-Abstraction/index.html#fields",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "FIELDS",
+    "text": "FIELDS"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#spatial-fields-1",
+    "href": "posts/L2-Data-Abstraction/index.html#spatial-fields-1",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SPATIAL FIELDS 1",
+    "text": "SPATIAL FIELDS 1\nAttribute values associated with cells.\nEach cell contains a value from a continuous domain (eg temperature, pressure, wind velocity measured or simulated)."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#spatial-fields-2",
+    "href": "posts/L2-Data-Abstraction/index.html#spatial-fields-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SPATIAL FIELDS 2",
+    "text": "SPATIAL FIELDS 2\n\n\n\n\n\n\n\nAttribute values associated with cells.\nEach cell contains value from continuous domain\n\n(eg temperature, pressure, wind velocity)\n\nMeasured or simulated.\nMajor concerns and potential limitations:\n\nSampling: where are the attributes measured and at what density?\nInterpolation: how to model attributes in cells with no measurements?\nGrid types: optimizing size, shape, etc."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#spatial-fields-3",
+    "href": "posts/L2-Data-Abstraction/index.html#spatial-fields-3",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SPATIAL FIELDS 3",
+    "text": "SPATIAL FIELDS 3\n\n\n\nData structures can be complex, scaling with the number of attributes per cell:\n\nScalar (1)\nVector (2)\nTensor (many)"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#geometry",
+    "href": "posts/L2-Data-Abstraction/index.html#geometry",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "GEOMETRY",
+    "text": "GEOMETRY"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#geometry-2",
+    "href": "posts/L2-Data-Abstraction/index.html#geometry-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "GEOMETRY 2",
+    "text": "GEOMETRY 2\n\n\n\nShape of items or observations is defined.\nExplicit spatial positions / regions\n\npoints, lines, curves, surfaces, volumes\n\n\n\n Lopez et.al., 2024"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#collections",
+    "href": "posts/L2-Data-Abstraction/index.html#collections",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "COLLECTIONS",
+    "text": "COLLECTIONS"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#collections-2",
+    "href": "posts/L2-Data-Abstraction/index.html#collections-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "COLLECTIONS 2",
+    "text": "COLLECTIONS 2\n\n\nGrouping Items:\n\nSets\n\nunique items\nunordered\n\nLists\n\nordered\nduplicates possible\n\nClusters\n\ngroups of similar items"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-types",
+    "href": "posts/L2-Data-Abstraction/index.html#data-types",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA TYPES",
+    "text": "DATA TYPES"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#attribute-types",
+    "href": "posts/L2-Data-Abstraction/index.html#attribute-types",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "ATTRIBUTE TYPES",
+    "text": "ATTRIBUTE TYPES\n\n\n\nCategorical (nominal):\n\ncompare equality\nno implicit ordering\n\nOrdered:\n\nordinal\nless/greater than defined\n\nQuantitative:\n\nmeaningful magnitude\narithmetic possible"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#example",
+    "href": "posts/L2-Data-Abstraction/index.html#example",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "EXAMPLE",
+    "text": "EXAMPLE\nCategorical\nOrdinal\nQuantitative"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#example-1",
+    "href": "posts/L2-Data-Abstraction/index.html#example-1",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "EXAMPLE",
+    "text": "EXAMPLE\nCategorical\nOrdinal\nQuantitative"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#additional-semantic-components",
+    "href": "posts/L2-Data-Abstraction/index.html#additional-semantic-components",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "ADDITIONAL SEMANTIC COMPONENTS",
+    "text": "ADDITIONAL SEMANTIC COMPONENTS"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-abstraction",
+    "href": "posts/L2-Data-Abstraction/index.html#data-abstraction",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA ABSTRACTION",
+    "text": "DATA ABSTRACTION\n\nGOAL: Translate from domain-specific language to generic (and consistent) visualization language.\n\nIdentify dataset type(s) and attribute types.\nIdentify cardinality.\n\nhow many items in the dataset?\nwhat is cardinality of each attribute?\n\nnumber of levels for categorical data?\nrange for quantitative data\n\n\nConsider whether to transform the data.\n\nguided by your understanding of the task."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#models-data-vs-conceptual",
+    "href": "posts/L2-Data-Abstraction/index.html#models-data-vs-conceptual",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "MODELS: DATA VS CONCEPTUAL",
+    "text": "MODELS: DATA VS CONCEPTUAL\n\n\nData Model\n\nmathematical abstraction\nsets with operations, eg floats with * / - + or variable data types in programming languages\n\nConceptual Model\n\nmental construction (semantics)\nsupports reasoning\ntypically based on understanding of tasks\n\nThe Data Abstraction process relies on conceptual model for transforming data if needed"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#models-example",
+    "href": "posts/L2-Data-Abstraction/index.html#models-example",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "MODELS: EXAMPLE",
+    "text": "MODELS: EXAMPLE\n\nData Model: floats\n\n32.52, 54.06, -14.35,\n\nConceptual Model:\n\ntemperature\n\nPossible data abstractions:\n\nQUANTITATIVE: continuous to 2 significant figures:\n\nTASK: Forecasting the weather\n\nORDINAL: Hot, Warm, Cold:\n\nTASK: Deciding if my bath water is ready\n\nCATEGORICAL: Above Freezing, Below Freezing:\n\nTASK: Deciding if I should leave the house today"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#derived-attributes",
+    "href": "posts/L2-Data-Abstraction/index.html#derived-attributes",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DERIVED ATTRIBUTES",
+    "text": "DERIVED ATTRIBUTES\nDerived attribute: Data computed from original (collected, observed) attributes."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#summary",
+    "href": "posts/L2-Data-Abstraction/index.html#summary",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SUMMARY",
+    "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\n\n\n\n\nHOME"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#last-lecture",
+    "href": "posts/L3-TaskAbstraction/index.html#last-lecture",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "LAST LECTURE",
+    "text": "LAST LECTURE\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#task-abstraction",
+    "href": "posts/L3-TaskAbstraction/index.html#task-abstraction",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "TASK ABSTRACTION",
+    "text": "TASK ABSTRACTION\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#from-domain-to-abstraction",
+    "href": "posts/L3-TaskAbstraction/index.html#from-domain-to-abstraction",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "FROM DOMAIN TO ABSTRACTION",
+    "text": "FROM DOMAIN TO ABSTRACTION"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#key-components-of-task-abstraction",
+    "href": "posts/L3-TaskAbstraction/index.html#key-components-of-task-abstraction",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "KEY COMPONENTS OF TASK ABSTRACTION",
+    "text": "KEY COMPONENTS OF TASK ABSTRACTION\n{action, target} pairs\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#actions-and-targets",
+    "href": "posts/L3-TaskAbstraction/index.html#actions-and-targets",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "ACTIONS AND TARGETS",
+    "text": "ACTIONS AND TARGETS"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#actions---analyze",
+    "href": "posts/L3-TaskAbstraction/index.html#actions---analyze",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "ACTIONS - Analyze",
+    "text": "ACTIONS - Analyze\n\n\n\nConsume: Information has already been generated and stored as data.\n\nDiscover: new knowledge, test hypothesis, generate new hypothesis, verify\nPresent: communicate something specific and already understood\nEnjoy: casual encounters with visualization\n\nProduce: generate new material or information\n\nAnnotate: addition of graphical or text to existing visualization elements\nRecord: saves or captures visualization elements as persistent artifacts (screenshots, lists, parameter sets, annotations)\nDerive: produce new data based on existing data (aka transform)"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#actions---search",
+    "href": "posts/L3-TaskAbstraction/index.html#actions---search",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "ACTIONS - Search",
+    "text": "ACTIONS - Search\n\n\n\nLookup: Location and target both known\n\nExample: Look up humans in the Tree of Life, knowing they are mammals.\n\nLocate: Location unknown and target known\n\nExample: Look up rabbits in the Tree of Life, not knowing they are lagomorphs.\n\nBrowse: Location known and target unknown\n\nExample: Find any clades within Mammalia that have only one species.\n\nExplore: Location unknown and target unknown\n\nExample: Searching for anomalies in time series data."
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#actions---query",
+    "href": "posts/L3-TaskAbstraction/index.html#actions---query",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "ACTIONS - Query",
+    "text": "ACTIONS - Query\n\n\n\nQuery: How much of the data matters to the task?\n\nIdentify: One (specific Item, individual, cell, etc)\nCompare: Some (multiple targets)\nSummarize: All (very common, aka Overview)"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#targets---all-data",
+    "href": "posts/L3-TaskAbstraction/index.html#targets---all-data",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "TARGETS - All Data",
+    "text": "TARGETS - All Data"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#targets---attributes",
+    "href": "posts/L3-TaskAbstraction/index.html#targets---attributes",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "TARGETS - Attributes",
+    "text": "TARGETS - Attributes"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#targets---other-data",
+    "href": "posts/L3-TaskAbstraction/index.html#targets---other-data",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "TARGETS - Other Data",
+    "text": "TARGETS - Other Data"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#summary",
+    "href": "posts/L3-TaskAbstraction/index.html#summary",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "SUMMARY",
+    "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#mandatory-fun",
+    "href": "posts/L3-TaskAbstraction/index.html#mandatory-fun",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "MANDATORY FUN",
+    "text": "MANDATORY FUN\nWe will do these until everyone has done at least one example.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nHOME"
+  },
+  {
+    "objectID": "posts/T1-Lit-Prog/index.html",
+    "href": "posts/T1-Lit-Prog/index.html",
+    "title": "TUTORIAL 1 - Literate Programming",
+    "section": "",
+    "text": "Learning new tools is hard. Plowing though the tomes of the Data Science Mythos is hard. Perhaps this tutorial will guide you through the mind shattering truths of… LITERATE PROGRAMMING.\nI recorded this video a couple years ago. It should cover the basics, but some elements might be dated."
+  },
+  {
+    "objectID": "posts/T1-Lit-Prog/index.html#intro-to-quarto",
+    "href": "posts/T1-Lit-Prog/index.html#intro-to-quarto",
+    "title": "TUTORIAL 1 - Literate Programming",
+    "section": "",
+    "text": "Learning new tools is hard. Plowing though the tomes of the Data Science Mythos is hard. Perhaps this tutorial will guide you through the mind shattering truths of… LITERATE PROGRAMMING.\nI recorded this video a couple years ago. It should cover the basics, but some elements might be dated."
+  },
+  {
+    "objectID": "posts/A2-YourData/index.html",
+    "href": "posts/A2-YourData/index.html",
+    "title": "ASSIGNMENT 2 - Your Data.",
+    "section": "",
+    "text": "A key feature of this course is that students should be using their own data whenever possible. This is critical to forging a learning experience that is customized to each student’s aspirations and the eccentricities of their chosen research domain. This assignment begins the process of helping you identify the data sets with which you want to work, and aligns with the notion of understanding the concepts of Data Semantics and Data Abstraction."
+  },
+  {
+    "objectID": "posts/A2-YourData/index.html#summary",
+    "href": "posts/A2-YourData/index.html#summary",
+    "title": "ASSIGNMENT 2 - Your Data.",
+    "section": "",
+    "text": "A key feature of this course is that students should be using their own data whenever possible. This is critical to forging a learning experience that is customized to each student’s aspirations and the eccentricities of their chosen research domain. This assignment begins the process of helping you identify the data sets with which you want to work, and aligns with the notion of understanding the concepts of Data Semantics and Data Abstraction."
+  },
+  {
+    "objectID": "posts/A2-YourData/index.html#assignment",
+    "href": "posts/A2-YourData/index.html#assignment",
+    "title": "ASSIGNMENT 2 - Your Data.",
+    "section": "ASSIGNMENT",
+    "text": "ASSIGNMENT\nThe basic structure of this assignment is for you to identify, import, describe, and host a data set. I’ll break down the specifics for each of these actions below.\n\nIdentify a Data Set\nThe main criteria is that the data set has to matter to you in some way. Often, this will mean that it is your data set. It was collected by you and has a central role in your current or past graduate research. Awesome! Another scenario is that the data you want to use comes from your current job. Maybe it isn’t part of a research project, but you are motivated to learn how to better visualize the data or you are very interested in learning more about it. Also Awesome!\nSome of you might not have your own data. Perhaps you have just started your graduate training. Maybe your job doesn’t yet have data that you need to work with. No Problem!\nIt is perfectly fine to find publicly available data sets online. As long as the data set is interesting to you! You just need to make sure that the data:\n\nAre publicly available.\nAre not restricted by some kind of license or copyright.\nDo not contain private information.\nAre not covered by HIPPA, FERPA, CMMC, or other federal regulations related to data.\n\nIf you need help finding a data set, just let me know.\nSome fun potential categories for data sources include:\n\nSports Analytics from your favorite sport or team.\nPublicly available genomics data bases.\nKeggle.\nThe movie data base.\nClassic data sets from your field.\n\n\n\nImport the Data Set\nThis one is probably straightforward if your data set comes from your own research and lives on your local hard drive already.\n\n\nDescribe the Data Set\nThis is the bulk of the assignment. I want you to use the framework described in Dr. Munzner’s textbook to understand your data set and describe it to someone who is unfamiliar with your work. The basis of this approach is descibed in this lecture. In addition, this figure from the textbook summarizes the kinds of data types, data set types, and attribute types you might have in your data:\n\n\n\nBONUS OBJECTIVE: Host your Data Set\nUltimately, we are moving toward each of you hosting your assignments within an online repository that can serve as your data science portfolio. For this course, we are going to assume this is GitHub. At the very least, I want everyone to create (or dust off and log in to) your own GitHub account. We’ll try to use this assignment to set up a project repository, and perhaps even a simple web site using GitHub pages."
+  },
+  {
+    "objectID": "posts/A2-YourData/index.html#resources",
+    "href": "posts/A2-YourData/index.html#resources",
+    "title": "ASSIGNMENT 2 - Your Data.",
+    "section": "RESOURCES",
+    "text": "RESOURCES\nA YouTube Video from Posit on Building your Data Science Portfolio\nTidyTuesday\nA fun Spotify example from TidyTuesday by Kaylin Pavlik.\nBarrie attempts this assignment in Tutorial 4."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BCB 520:: Foundations of Data Visualization",
+    "section": "",
+    "text": "This class will help students establish a core understanding of data visualization. We will consider how data type (including tabular, network, and spatial data) interacts with visualization task to guide design choices. Diverse types of visual encodings and how they relate to human perception will be presented, along with practical exercises using the R and Python programming languages. Upon completion of the course, students will understand WHY particular visualization approaches are effective for a given data set and HOW to implement those visualizations using the language of their choice. The course is designed to be “discipline agnostic” - each student is encouraged to use data sets that they deem important / interesting. The goal is to have students learn how to develop visualizations that are relevant to their own disciplinary interests.\n\n\nI am maintaining the course here and I do not intend to use CANVAS this semester.\nSYLLABUS\nBarrie’s GitHub\n\n\nKM Github\nBC Github\nAM Github\nSD Github\nYG Github\nME Github\nIW Github\nCS Github\n\n\n\n\nThe Functional Art\nGGSIDE! A companion to ggplot for making side plots! COOL!\nAwesome Quarto: A potentially interesting repository of Quarto documents, talks, tools, examples, etc.\nThe MockUp Blog - TABLES! This blog post explores the R packages gt and gtextras which will help us up our table game!\nRiffomonas Project: Pat Schloss is a Professor at the University of Michigan. The Riffomonas Project is his Youtube channel, which has HUNDREDS of easy to follow and amazingly useful instructional videos on R, ggplot, version control, and literate programming.\nDr. Tamara Munzner’s Website: It isn’t fancy, but Dr. Munzner’s website has tons of resources from her textbook and the many data visualization courses she has offered. This includes recorded lectures that align directly with the chapters of the text, much like what we are using.\nCheat Sheets: So many visual guides for many R packages, including the tidyverse, ggplot, dplyr, etc.\nLearning Vis Tools: Teaching Data Visualization Tutorials An interesting paper for discussion as we forge the structure for this class."
+  },
+  {
+    "objectID": "index.html#quick-links",
+    "href": "index.html#quick-links",
+    "title": "BCB 520:: Foundations of Data Visualization",
+    "section": "",
+    "text": "I am maintaining the course here and I do not intend to use CANVAS this semester.\nSYLLABUS\nBarrie’s GitHub\n\n\nKM Github\nBC Github\nAM Github\nSD Github\nYG Github\nME Github\nIW Github\nCS Github"
+  },
+  {
+    "objectID": "index.html#learning-resources",
+    "href": "index.html#learning-resources",
+    "title": "BCB 520:: Foundations of Data Visualization",
+    "section": "",
+    "text": "The Functional Art\nGGSIDE! A companion to ggplot for making side plots! COOL!\nAwesome Quarto: A potentially interesting repository of Quarto documents, talks, tools, examples, etc.\nThe MockUp Blog - TABLES! This blog post explores the R packages gt and gtextras which will help us up our table game!\nRiffomonas Project: Pat Schloss is a Professor at the University of Michigan. The Riffomonas Project is his Youtube channel, which has HUNDREDS of easy to follow and amazingly useful instructional videos on R, ggplot, version control, and literate programming.\nDr. Tamara Munzner’s Website: It isn’t fancy, but Dr. Munzner’s website has tons of resources from her textbook and the many data visualization courses she has offered. This includes recorded lectures that align directly with the chapters of the text, much like what we are using.\nCheat Sheets: So many visual guides for many R packages, including the tidyverse, ggplot, dplyr, etc.\nLearning Vis Tools: Teaching Data Visualization Tutorials An interesting paper for discussion as we forge the structure for this class."
+  }
+]
