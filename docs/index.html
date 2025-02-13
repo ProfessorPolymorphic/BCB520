@@ -79,7 +79,8 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
+      page: 18,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
@@ -199,7 +200,7 @@ window.Quarto = {
   <li><a href="#posts" id="toc-posts" class="nav-link" data-scroll-target="#posts"><strong>// Posts</strong></a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(11)</span></div><div class="category" data-category="Assignment">Assignment <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Channels">Channels <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Data">Data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Data Sets">Data Sets <span class="quarto-category-count">(1)</span></div><div class="category" data-category="DataViz">DataViz <span class="quarto-category-count">(11)</span></div><div class="category" data-category="GitHub">GitHub <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Idiom">Idiom <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Intro">Intro <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Lecture">Lecture <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Literate Programming">Literate Programming <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Marks">Marks <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Observable">Observable <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Portfolio">Portfolio <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Quarto">Quarto <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Task">Task <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tidyverse">Tidyverse <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tutorial">Tutorial <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Version Control">Version Control <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(27)</span></div><div class="category" data-category="API">API <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Animation">Animation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Assignment">Assignment <span class="quarto-category-count">(11)</span></div><div class="category" data-category="Barplot">Barplot <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Channels">Channels <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Data">Data <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Data Sets">Data Sets <span class="quarto-category-count">(2)</span></div><div class="category" data-category="DataViz">DataViz <span class="quarto-category-count">(22)</span></div><div class="category" data-category="Education">Education <span class="quarto-category-count">(1)</span></div><div class="category" data-category="GGPlot">GGPlot <span class="quarto-category-count">(1)</span></div><div class="category" data-category="GitHub">GitHub <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Idiom">Idiom <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Infectious Disease">Infectious Disease <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Intro">Intro <span class="quarto-category-count">(1)</span></div><div class="category" data-category="JSON">JSON <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Lecture">Lecture <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Literate Programming">Literate Programming <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Marks">Marks <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Network">Network <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Observable">Observable <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Piechart">Piechart <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Portfolio">Portfolio <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Project">Project <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Quarto">Quarto <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Resources">Resources <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Scatterplot">Scatterplot <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Spatial">Spatial <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tables">Tables <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Task">Task <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tidyverse">Tidyverse <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tutorial">Tutorial <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Version Control">Version Control <span class="quarto-category-count">(1)</span></div><div class="category" data-category="iGraph">iGraph <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -224,6 +225,7 @@ window.Quarto = {
 <p><a href="https://github.com/ThatMeatGal">YG Github</a></p>
 <p><a href="https://github.com/elsa7364">ME Github</a></p>
 <p><a href="https://github.com/Bayern1090">IW Github</a></p>
+<p><a href="https://github.com/Claire-R-Shaw">CS Github</a></p>
 </section>
 </section>
 <section id="learning-resources" class="level2">
@@ -272,7 +274,27 @@ window.Quarto = {
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Assignment,DataViz" data-listing-date-sort="1739433600000" data-listing-file-modified-sort="1739473046388" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2468">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1739472851698" data-listing-reading-time-sort="3" data-listing-word-count-sort="460">
+<a href="./posts/E3-AlternativeNHLDraft/AltNHLDraft.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Alt NHL Draft
+</h5>
+<div class="card-text listing-description">
+
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Assignment,DataViz" data-listing-date-sort="1739433600000" data-listing-file-modified-sort="1739473046388" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2468">
 <a href="./posts/T5-MarksChannels/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -305,7 +327,7 @@ Feb 13, 2025
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Lecture,DataViz,Idiom,Observable,Tidyverse" data-listing-date-sort="1739260800000" data-listing-file-modified-sort="1739472851793" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2421">
+<div class="g-col-1" data-index="2" data-categories="Lecture,DataViz,Idiom,Observable,Tidyverse" data-listing-date-sort="1739260800000" data-listing-file-modified-sort="1739472851793" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2421">
 <a href="./posts/L4-Marks-Channels/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -347,7 +369,7 @@ Feb 11, 2025
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Assignment,DataViz,Quarto,Portfolio,GitHub,Version Control" data-listing-date-sort="1739260800000" data-listing-file-modified-sort="1739472851650" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="897">
+<div class="g-col-1" data-index="3" data-categories="Assignment,DataViz,Quarto,Portfolio,GitHub,Version Control" data-listing-date-sort="1739260800000" data-listing-file-modified-sort="1739472851650" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="897">
 <a href="./posts/A3-PrototypeVizPortfolio/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -392,7 +414,7 @@ Feb 11, 2025
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="Assignment,DataViz,Marks,Channels" data-listing-date-sort="1739260800000" data-listing-file-modified-sort="1739472851656" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="798">
+<div class="g-col-1" data-index="4" data-categories="Assignment,DataViz,Marks,Channels" data-listing-date-sort="1739260800000" data-listing-file-modified-sort="1739472851656" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="798">
 <a href="./posts/A4-MarksChannels/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -431,7 +453,7 @@ Feb 11, 2025
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="Lecture,DataViz,Task" data-listing-date-sort="1738051200000" data-listing-file-modified-sort="1739472851773" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="452">
+<div class="g-col-1" data-index="5" data-categories="Lecture,DataViz,Task" data-listing-date-sort="1738051200000" data-listing-file-modified-sort="1739472851773" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="452">
 <a href="./posts/L3-TaskAbstraction/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -467,7 +489,7 @@ Jan 28, 2025
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="Lecture,DataViz,Data" data-listing-date-sort="1737446400000" data-listing-file-modified-sort="1739472851753" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1395">
+<div class="g-col-1" data-index="6" data-categories="Lecture,DataViz,Data" data-listing-date-sort="1737446400000" data-listing-file-modified-sort="1739472851753" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1395">
 <a href="./posts/L2-Data-Abstraction/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -503,7 +525,46 @@ Jan 21, 2025
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="Assignment,DataViz,Quarto,Data Sets" data-listing-date-sort="1737446400000" data-listing-file-modified-sort="1739472851637" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="560">
+<div class="g-col-1" data-index="7" data-categories="Tutorial,Resources,Quarto,Data Sets" data-listing-date-sort="1737446400000" data-listing-file-modified-sort="1739472852436" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1090">
+<a href="./posts/T4-BarriesData/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/T4-BarriesData/Hasturcodes.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+TUTORIAL 4
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tutorial'); return false;">
+Tutorial
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Resources'); return false;">
+Resources
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
+Quarto
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Data Sets'); return false;">
+Data Sets
+</div>
+</div>
+<div class="card-text listing-description">
+Barrie attempts ASSIGMENT 2! Will his glimpse of the Data Science Mythos drive him <strong>MAD</strong>?
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Barrie D. Robison
+</div>
+<div class="listing-date">
+Jan 21, 2025
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="8" data-categories="Assignment,DataViz,Quarto,Data Sets" data-listing-date-sort="1737446400000" data-listing-file-modified-sort="1739472851637" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="560">
 <a href="./posts/A2-YourData/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -542,7 +603,7 @@ Jan 21, 2025
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="7" data-categories="Assignment,DataViz,Quarto" data-listing-date-sort="1736841600000" data-listing-file-modified-sort="1739472851625" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="925">
+<div class="g-col-1" data-index="9" data-categories="Assignment,DataViz,Quarto" data-listing-date-sort="1736841600000" data-listing-file-modified-sort="1739472851625" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="925">
 <a href="./posts/A1-Lit-Prog/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -578,7 +639,7 @@ Jan 14, 2025
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="8" data-categories="Tutorial,DataViz,Quarto,Literate Programming" data-listing-date-sort="1736841600000" data-listing-file-modified-sort="1739472851983" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="52">
+<div class="g-col-1" data-index="10" data-categories="Tutorial,DataViz,Quarto,Literate Programming" data-listing-date-sort="1736841600000" data-listing-file-modified-sort="1739472851983" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="52">
 <a href="./posts/T1-Lit-Prog/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -617,7 +678,7 @@ Jan 14, 2025
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="9" data-categories="Tutorial,DataViz,Quarto,Literate Programming" data-listing-date-sort="1736841600000" data-listing-file-modified-sort="1739472851987" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="334">
+<div class="g-col-1" data-index="11" data-categories="Tutorial,DataViz,Quarto,Literate Programming" data-listing-date-sort="1736841600000" data-listing-file-modified-sort="1739472851987" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="334">
 <a href="./posts/T2-Anscombe/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -656,7 +717,7 @@ Jan 14, 2025
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="10" data-categories="Lecture,DataViz,Intro" data-listing-date-sort="1736409600000" data-listing-file-modified-sort="1739472851707" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="684">
+<div class="g-col-1" data-index="12" data-categories="Lecture,DataViz,Intro" data-listing-date-sort="1736409600000" data-listing-file-modified-sort="1739472851707" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="684">
 <a href="./posts/L1-Intro/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -692,10 +753,571 @@ Jan 9, 2025
 </div>
 </a>
 </div>
+<div class="g-col-1" data-index="13" data-categories="Portfolio,DataViz,Spatial,GGPlot,Assignment" data-listing-date-sort="1713423600000" data-listing-file-modified-sort="1739472851680" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="955">
+<a href="./posts/A7-SpatialData/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/A7-SpatialData/Rlyeh.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Practice with Spatial Data
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Portfolio'); return false;">
+Portfolio
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('DataViz'); return false;">
+DataViz
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Spatial'); return false;">
+Spatial
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('GGPlot'); return false;">
+GGPlot
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Assignment'); return false;">
+Assignment
+</div>
+</div>
+<div class="card-text listing-description">
+Maps and Spatial Fields are fun!
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Barrie Robison
+</div>
+<div class="listing-date">
+Apr 18, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="14" data-categories="Portfolio,DataViz,Assignment" data-listing-date-sort="1713250800000" data-listing-file-modified-sort="1739472851631" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="803">
+<a href="./posts/A10-FinalProject/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/A10-FinalProject/Cthulhufinal.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+FINAL PROJECT
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Portfolio'); return false;">
+Portfolio
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('DataViz'); return false;">
+DataViz
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Assignment'); return false;">
+Assignment
+</div>
+</div>
+<div class="card-text listing-description">
+Do, or do not. There is no try.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Barrie Robison
+</div>
+<div class="listing-date">
+Apr 16, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="15" data-categories="Portfolio,DataViz,Network,Observable,Assignment" data-listing-date-sort="1712646000000" data-listing-file-modified-sort="1739472851693" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2875">
+<a href="./posts/A9-NetworksinObservable/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/A9-NetworksinObservable/Wendigojson.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+NETWORKS IN OBSERVABLE
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Portfolio'); return false;">
+Portfolio
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('DataViz'); return false;">
+DataViz
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Network'); return false;">
+Network
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Observable'); return false;">
+Observable
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Assignment'); return false;">
+Assignment
+</div>
+</div>
+<div class="card-text listing-description">
+Cool!
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Barrie Robison
+</div>
+<div class="listing-date">
+Apr 9, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="16" data-categories="Portfolio,DataViz,Network,iGraph,Assignment" data-listing-date-sort="1712214000000" data-listing-file-modified-sort="1739472851682" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="44" data-listing-word-count-sort="8722">
+<a href="./posts/A8-NetworkData/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/A8-NetworkData/wendigonetwork.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Practice with Network Data
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Portfolio'); return false;">
+Portfolio
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('DataViz'); return false;">
+DataViz
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Network'); return false;">
+Network
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('iGraph'); return false;">
+iGraph
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Assignment'); return false;">
+Assignment
+</div>
+</div>
+<div class="card-text listing-description">
+iGRAPH!
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Barrie Robison
+</div>
+<div class="listing-date">
+Apr 4, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="17" data-categories="Lecture,DataViz,Data,Network,Observable" data-listing-date-sort="1711436400000" data-listing-file-modified-sort="1739472851970" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1550">
+<a href="./posts/L8-NetworkData/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/L8-NetworkData/Azathothnetwork.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+LECTURE 8 - Network Data
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Lecture'); return false;">
+Lecture
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('DataViz'); return false;">
+DataViz
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Data'); return false;">
+Data
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Network'); return false;">
+Network
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Observable'); return false;">
+Observable
+</div>
+</div>
+<div class="card-text listing-description">
+
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Barrie Robison
+</div>
+<div class="listing-date">
+Mar 26, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="18" data-categories="Assignment,DataViz,Tables,Project" data-listing-date-sort="1709798400000" data-listing-file-modified-sort="1739472851678" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1246">
+<a href="./posts/A6-Midterm/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./posts/A6-Midterm/Cthulhuhockeycard.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Midterm Assignment
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Assignment'); return false;">
+Assignment
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('DataViz'); return false;">
+DataViz
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Tables'); return false;">
+Tables
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Project'); return false;">
+Project
+</div>
+</div>
+<div class="card-text listing-description">
+Are we good at grants and stuff?
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Barrie Robison
+</div>
+<div class="listing-date">
+Mar 7, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="19" data-categories="Tutorial,JSON,Tables,API" data-listing-date-sort="1708675200000" data-listing-file-modified-sort="1739472852478" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1032">
+<a href="./posts/T6-APIsandJSON/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./posts/T6-APIsandJSON/Cthulhuhockeymask.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+TUTORIAL 6 - APIs and JSON data
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tutorial'); return false;">
+Tutorial
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('JSON'); return false;">
+JSON
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Tables'); return false;">
+Tables
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('API'); return false;">
+API
+</div>
+</div>
+<div class="card-text listing-description">
+Tabular data…is maybe a bit more nuanced?
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Barrie Robison
+</div>
+<div class="listing-date">
+Feb 23, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="20" data-categories="Lecture,DataViz,Data,Tables" data-listing-date-sort="1708416000000" data-listing-file-modified-sort="1739472851894" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1936">
+<a href="./posts/L6-TabularData1/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./posts/L6-TabularData1/Cthulhutabular.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+LECTURE 6 - Tabular Data
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Lecture'); return false;">
+Lecture
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('DataViz'); return false;">
+DataViz
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Data'); return false;">
+Data
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Tables'); return false;">
+Tables
+</div>
+</div>
+<div class="card-text listing-description">
+
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Barrie Robison
+</div>
+<div class="listing-date">
+Feb 20, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="21" data-categories="Assignment,DataViz,Tables,Scatterplot,Barplot,Piechart" data-listing-date-sort="1708416000000" data-listing-file-modified-sort="1739472851673" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2682">
+<a href="./posts/A5-TabularData/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./posts/A5-TabularData/Cthulhuhockeycard.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ASSIGNMENT 5
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Assignment'); return false;">
+Assignment
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('DataViz'); return false;">
+DataViz
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Tables'); return false;">
+Tables
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Scatterplot'); return false;">
+Scatterplot
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Barplot'); return false;">
+Barplot
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Piechart'); return false;">
+Piechart
+</div>
+</div>
+<div class="card-text listing-description">
+Should I trade these draft picks for this bag of magic beans…?
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Barrie Robison
+</div>
+<div class="listing-date">
+Feb 20, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="22" data-categories="Lecture,DataViz" data-listing-date-sort="1707984000000" data-listing-file-modified-sort="1739472851820" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1028">
+<a href="./posts/L5-ThumbRules/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./posts/L5-ThumbRules/Cthulhuthumb.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+LECTURE 5 - Rules of Thumb
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Lecture'); return false;">
+Lecture
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('DataViz'); return false;">
+DataViz
+</div>
+</div>
+<div class="card-text listing-description">
+…Because GUIDLINES OF THUMB is too clumsy to say…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Barrie Robison
+</div>
+<div class="listing-date">
+Feb 15, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="23" data-categories="Portfolio,DataViz,Infectious Disease,Observable,Animation" data-listing-date-sort="1680591600000" data-listing-file-modified-sort="1739472852508" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2567">
+<a href="./posts/T8-MidtermExample/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./posts/T8-MidtermExample/Zomsimmesh.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+BCB 520 - Midterm Portfolio Post
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Portfolio'); return false;">
+Portfolio
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('DataViz'); return false;">
+DataViz
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Infectious Disease'); return false;">
+Infectious Disease
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Observable'); return false;">
+Observable
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Animation'); return false;">
+Animation
+</div>
+</div>
+<div class="card-text listing-description">
+Animating the dynamics of zombie spatial disease ecology.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Barrie Robison
+</div>
+<div class="listing-date">
+Apr 4, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="24" data-categories="Tutorial,DataViz,Tables,Scatterplot,Barplot,Piechart" data-listing-date-sort="1679122800000" data-listing-file-modified-sort="1739472852501" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1778">
+<a href="./posts/T7-NHLDraft/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./posts/T7-NHLDraft/Cthulhuhockeycard.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+TUTORIAL 7
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tutorial'); return false;">
+Tutorial
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('DataViz'); return false;">
+DataViz
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Tables'); return false;">
+Tables
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Scatterplot'); return false;">
+Scatterplot
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Barplot'); return false;">
+Barplot
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Piechart'); return false;">
+Piechart
+</div>
+</div>
+<div class="card-text listing-description">
+Should I trade these draft picks for this bag of magic beans…?
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Barrie Robison
+</div>
+<div class="listing-date">
+Mar 18, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="25" data-categories="Tutorial,Quarto,Literate Programming,Python" data-listing-date-sort="1674115200000" data-listing-file-modified-sort="1739472851994" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="148">
+<a href="./posts/T3-Python/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./posts/T3-Python/Pythonred.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+TUTORIAL 3 - Python
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tutorial'); return false;">
+Tutorial
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
+Quarto
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Literate Programming'); return false;">
+Literate Programming
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
+Python
+</div>
+</div>
+<div class="card-text listing-description">
+
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Jan 19, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="26" data-categories="Resources,Education" data-listing-date-sort="1673510400000" data-listing-file-modified-sort="1739472851697" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1007">
+<a href="./posts/Certificate/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./posts/Certificate/certdata.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+CERTIFICATE
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Resources'); return false;">
+Resources
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Education'); return false;">
+Education
+</div>
+</div>
+<div class="card-text listing-description">
+Learn how to think about, organize, analyze, and visualize data. Communicate data-driven insights to technical and lay audiences.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Barrie Robison, Michael Overton
+</div>
+<div class="listing-date">
+Jan 12, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

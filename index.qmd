@@ -39,6 +39,8 @@ I am maintaining the course here and I do not intend to use CANVAS this semester
 
 [IW Github](https://github.com/Bayern1090)
 
+[CS Github](https://github.com/Claire-R-Shaw)
+
 ## Learning Resources
 
 [The Functional Art](http://www.thefunctionalart.com)
