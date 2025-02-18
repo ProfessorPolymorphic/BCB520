@@ -8,15 +8,15 @@ format:
       buttons: false
     preview-links: auto
     css: styles.css
-    footer: <a href="https://canvas.uidaho.edu/courses/25613" target="_blank">CANVAS</a>...<a href="https://professorpolymorphic.github.io/BCB520/" target="_blank">HOME</a>
+    footer: <a href="https://professorpolymorphic.github.io/BCB520/" target="_blank">HOME</a>
     theme: [default, custom.scss]
 author: "Barrie Robison"
-date: "2024-02-15"
+date: "2025-02-18"
 categories: [Lecture, DataViz]
 image: "Cthulhuthumb.png"
 code-fold: true
 description: "...Because GUIDLINES OF THUMB is too clumsy to say..."
-draft: true
+
 ---
 
 ## TLDR VERSION
