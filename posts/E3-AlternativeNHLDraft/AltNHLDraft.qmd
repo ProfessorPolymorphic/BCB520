@@ -1,0 +1,98 @@
+---
+title: "Alt NHL Draft"
+draft: true
+eval: false
+---
+
+Testing that idea.
+
+```{r}
+library(tidyverse)
+
+
+```
+
+
+```{r}
+
+nhl_data <- read.csv("NHL2023.csv") %>%
+  rename(goals_home = G,
+         goals_visiting = 'G.1',
+         overtime = X)
+
+
+# Assuming your dataframe is named 'nhl_data'
+result <- nhl_data %>%
+  # Create a new column 'points_home' based on the game outcome for the home team
+  mutate(points_home = case_when(
+    goals_home > goals_visiting ~ 2,
+    goals_home < goals_visiting & overtime == TRUE ~ 1,
+    TRUE ~ 0
+  )) %>%
+  # Create a new column 'points_visiting' based on the game outcome for the visiting team
+  mutate(points_visiting = case_when(
+    goals_visiting > goals_home ~ 2,
+    goals_visiting < goals_home & overtime == TRUE ~ 1,
+    TRUE ~ 0
+  )) 
+
+longer <- result %>%
+   pivot_longer(cols = c(Home, Visitor), names_to = "team_type", values_to = "team") %>%
+  # Join the points columns based on the team type
+  left_join(
+    pivot_longer(., cols = c(points_home, points_visiting), names_to = "points_type", values_to = "points"),
+    by = c("team_type" = "points_type")
+  ) %>%
+  # Remove unnecessary columns
+  select(Date, team, points) %>%
+  # Group by team and game date
+  group_by(team, Date) %>%
+  # Sum the points for each team and game date
+  summarize(points = sum(points)) %>%
+  # Calculate the cumulative sum of points for each team over the course of the season
+  arrange(team, Date) %>%
+  group_by(team) %>%
+  mutate(total_points = cumsum(points))
+
+
+```
+
+
+```{r}
+
+
+# Assuming your dataframe is named nhl_data
+# It has columns: game_date, home_team, visiting_team, home_goals, visiting_goals, overtime (logical)
+
+# Step 1: Reshape the data
+nhl_long <- nhl_data %>%
+  mutate(game_id = row_number()) %>%  # Create a unique game identifier
+  pivot_longer(cols = c(Home, Visitor),
+               names_to = "home_or_visitor",
+               values_to = "team") %>%
+  mutate(team_goals = if_else(home_or_visitor == "Home", goals_home, goals_visiting),
+         opponent_goals = if_else(home_or_visitor == "Home", goals_visiting, goals_home)) %>%
+  select(-home_or_visitor, -goals_home, -goals_visiting)
+
+# Step 2: Calculate points per game
+nhl_points <- nhl_long %>%
+  mutate(points = case_when(
+    team_goals > opponent_goals & is.na(overtime) ~ 2,  # Win without overtime
+    team_goals > opponent_goals & !is.na(overtime) ~ 2, # Win with overtime
+    team_goals < opponent_goals & !is.na(overtime) ~ 1, # Loss in overtime
+    TRUE ~ 0  # Regular loss
+  )) %>%
+  select(Date, team, points)
+
+# Step 3: Summarize points by team and date
+nhl_cumulative_points <- nhl_points %>%
+  group_by(team) %>%
+  arrange(team, Date) %>%
+  mutate(cumulative_points = cumsum(points)) %>%
+  select(team, Date, cumulative_points)
+
+# View the result
+nhl_cumulative_points
+
+
+```

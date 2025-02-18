@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "BCB520"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - syllabus.qmd
+
+  
+
+    
+  
+
+format:
+  html:
+    theme: spacelab
+    css: styles.css
+    toc: true
+
+
+

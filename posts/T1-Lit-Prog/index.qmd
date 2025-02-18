@@ -1,0 +1,16 @@
+---
+title: "TUTORIAL 1 - Literate Programming"
+author: "Barrie Robison"
+date: "2025-01-14"
+categories: [Tutorial, DataViz, Quarto, Literate Programming]
+image: "Cthulhudata.png"
+
+---
+
+## INTRO TO QUARTO
+
+Learning new tools is hard. Plowing though the tomes of the Data Science Mythos is hard. Perhaps this tutorial will guide you through the mind shattering truths of... **LITERATE PROGRAMMING**.
+
+I recorded this video a couple years ago.  It should cover the basics, but some elements might be dated.
+
+{{< video https://youtu.be/NnMDV3CuWoo >}}
