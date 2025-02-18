@@ -10,7 +10,7 @@ format:
     footer: <a href="https://professorpolymorphic.github.io/BCB520/" target="_blank">HOME</a>
     theme: [default, custom.scss]
 author: "Barrie Robison"
-date: "2024-02-20"
+date: "2025-02-18"
 categories: [Lecture, DataViz, Data, Tables]
 image: "Cthulhutabular.png"
 code-fold: true
@@ -268,11 +268,12 @@ Clusters/groups, and clusters vs classes
 :::
 :::
 
-## Separated and aligned and ordered
+## Separated but not aligned or ordered
 
-Best case!
+Limitation: hard to make comparisons with size (vs aligned position)
 
-![](orderedbar.png)
+![](circles.png)
+
 
 ## Separated/aligned - not ordered
 
@@ -280,11 +281,15 @@ Limitation: hard to know rank. what's 4th? what's 7th?
 
 ![](unorderedbar.png)
 
-## Separated but not aligned or ordered
+## Separated and aligned and ordered
 
-Limitation: hard to make comparisons with size (vs aligned position)
+Best case!
 
-![](circles.png)
+![](orderedbar.png)
+
+
+
+
 
 ## IDIOM: Bar Chart {.smaller}
 
@@ -316,7 +321,7 @@ Limitation: hard to make comparisons with size (vs aligned position)
 
 ::: columns
 ::: {.column width="60%"}
-**Data:** 2 categorical attribute, 1 quantitative attribute
+**Data:** 2 categorical attributes, 1 quantitative attribute
 
 **Mark:** vertical stack of line marks
 
@@ -332,7 +337,7 @@ Limitation: hard to make comparisons with size (vs aligned position)
 
 **Task:** part-to-whole relationship
 
-**Scalability:** asymmetric for stacked key attrib, 10-12 levels segments for main key attrib, dozens to hundreds of levels bars
+**Scalability:** asymmetric for stacked key attribute, 10-12 levels segments for main key attribute, dozens to hundreds of levels bars
 :::
 
 ::: {.column width="40%"}
@@ -346,7 +351,9 @@ Generalized stacked graph emphasizing horizontal continuity vs vertical items [(
 
 ::: columns
 ::: {.column width="40%"}
-**Data:** 1 categ key attrib (movies) 1 ordered key attrib (time) 1 quant value attrib (counts) derived data geometry: layers, where height encodes counts 1 quant attrib (layer ordering)
+**Data:** 1 categorical key attribute (movies) 1 ordered key attribute (time) 1 quantitative value attribute (counts) 
+
+**Derived data geometry:** layers, where height encodes counts of 1 quantitative attribute (layer ordering)
 
 **Mark:** vertical stack of line marks
 
@@ -370,15 +377,15 @@ Generalized stacked graph emphasizing horizontal continuity vs vertical items [(
 
 ::: columns
 ::: {.column width="60%"}
-**Data:**2 quant attribs
+**Data:** 2 quantitative attributes
 
 **Mark:** points AND line connection marks between them
 
-**Channels:** aligned lengths to express quant value separated and ordered by key attrib into horizontal regions
+**Channels:** aligned lengths to express quantitative value separated and ordered by key attribute into horizontal regions
 
-**Task:** find trend connection marks emphasize ordering of items along key axis by explicitly showing relationship between one item and the next
+**Task:** find trend connection marks, emphasize ordering of items along key axis by explicitly showing relationship between one item and the next
 
-**Scalability:** hhundreds of key levels, hundreds of value levels
+**Scalability:** hundreds of key levels, hundreds of value levels
 :::
 
 ::: {.column width="40%"}
@@ -418,9 +425,9 @@ Truncating the Y-Axis: Threat or Menace? Correll, Bertini, & Franconeri, CHI 202
 
 ::: columns
 ::: {.column width="40%"}
-**Data:** 2 quant attribs 1 key + 1 value
+**Data:** 2 quantitative attributes 1 key + 1 value
 
-**Derived data:** new quant value attrib index plot instead of original value
+**Derived data:** new quantitative value attribute index plot instead of original value
 
 **Task:** show change over time
 
@@ -442,13 +449,13 @@ one key, two (related) values
 
 ::: columns
 ::: {.column width="40%"}
-**Data:** 1 categ attrib, 2 quant attribs
+**Data:** 1 categorical attribute, 2 quantitative attributes
 
 **Mark:** line length: duration
 
-**Channels:** horiz position: start time (+end from duration)
+**Channels:** horizontal position: start time (+end from duration)
 
-**Task:** mphasize temporal overlaps & start/end dependencies between items
+**Task:** emphasize temporal overlaps & start/end dependencies between items
 
 **Scalability:** dozens of key levels bars hundreds of value levels durations
 :::
@@ -464,11 +471,11 @@ two values
 
 ::: columns
 ::: {.column width="40%"}
-**Data:** 2 quant value attribs (1 derived attrib: change magnitude)
+**Data:** 2 quantitative value attributes (1 derived attribute: change magnitude)
 
-**Mark:** point + line line connecting mark between pts
+**Mark:** point + line line connecting mark between points
 
-**Channels:** 2 vertical pos: express attrib value (linewidth/size, color)
+**Channels:** 2 vertical positions: express attribute value (linewidth/size, color)
 
 **Task:** emphasize changes in rank/value
 
@@ -488,11 +495,11 @@ two keys, one value
 
 ::: columns
 ::: {.column width="40%"}
-**Data:** 2 categ attribs (gene, experimental condition) 1 quant attrib (expression levels)
+**Data:** 2 categorical attributes (gene, experimental condition) 1 quantitative attribute (expression levels)
 
-**Mark:** point separate and align in 2D matrix indexed by 2 categorical attributes
+**Mark:** point separate and align in 2D matrix, indexed by 2 categorical attributes
 
-**Channels:** color by quant attrib (ordered diverging colormap)
+**Channels:** color by quantitative attribute (ordered diverging colormap)
 
 **Task:** find clusters, outliers
 

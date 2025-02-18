@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Barrie Robison">
-  <meta name="dcterms.date" content="2024-02-20">
+  <meta name="dcterms.date" content="2025-02-18">
   <title>BCB520 – LECTURE 6 - Tabular Data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -340,7 +340,7 @@ Barrie Robison
 </div>
 </div>
 
-  <p class="date">2024-02-20</p>
+  <p class="date">2025-02-18</p>
 </section>
 <section id="the-three-major-data-types" class="slide level2">
 <h2>THE THREE MAJOR DATA TYPES</h2>
@@ -573,21 +573,21 @@ Figure&nbsp;1: Flat Tables
 <p><img data-src="sepordalign.png"></p>
 </div></div>
 </section>
-<section id="separated-and-aligned-and-ordered" class="slide level2">
-<h2>Separated and aligned and ordered</h2>
-<p>Best case!</p>
-
-<img data-src="orderedbar.png" class="r-stretch"></section>
-<section id="separatedaligned---not-ordered" class="slide level2">
-<h2>Separated/aligned - not ordered</h2>
-<p>Limitation: hard to know rank. what’s 4th? what’s 7th?</p>
-
-<img data-src="unorderedbar.png" class="r-stretch"></section>
 <section id="separated-but-not-aligned-or-ordered" class="slide level2">
 <h2>Separated but not aligned or ordered</h2>
 <p>Limitation: hard to make comparisons with size (vs aligned position)</p>
 
 <img data-src="circles.png" class="r-stretch"></section>
+<section id="separatedaligned---not-ordered" class="slide level2">
+<h2>Separated/aligned - not ordered</h2>
+<p>Limitation: hard to know rank. what’s 4th? what’s 7th?</p>
+
+<img data-src="unorderedbar.png" class="r-stretch"></section>
+<section id="separated-and-aligned-and-ordered" class="slide level2">
+<h2>Separated and aligned and ordered</h2>
+<p>Best case!</p>
+
+<img data-src="orderedbar.png" class="r-stretch"></section>
 <section id="idiom-bar-chart" class="slide level2 smaller">
 <h2>IDIOM: Bar Chart</h2>
 <p><strong>One key, One value</strong></p>
@@ -608,7 +608,7 @@ Figure&nbsp;1: Flat Tables
 <p><strong>Two keys, One value</strong></p>
 <div class="columns">
 <div class="column" style="width:60%;">
-<p><strong>Data:</strong> 2 categorical attribute, 1 quantitative attribute</p>
+<p><strong>Data:</strong> 2 categorical attributes, 1 quantitative attribute</p>
 <p><strong>Mark:</strong> vertical stack of line marks</p>
 <p><strong>Glyph:</strong> composite object, internal structure from multiple marks</p>
 <p><strong>Channels:</strong> length and color hue</p>
@@ -616,7 +616,7 @@ Figure&nbsp;1: Flat Tables
 <p><strong>Aligned:</strong> full glyph, lowest bar component</p>
 <p><strong>Unaligned:</strong> other bar components</p>
 <p><strong>Task:</strong> part-to-whole relationship</p>
-<p><strong>Scalability:</strong> asymmetric for stacked key attrib, 10-12 levels segments for main key attrib, dozens to hundreds of levels bars</p>
+<p><strong>Scalability:</strong> asymmetric for stacked key attribute, 10-12 levels segments for main key attribute, dozens to hundreds of levels bars</p>
 </div><div class="column" style="width:40%;">
 <p><img data-src="stackedbar.png"></p>
 </div></div>
@@ -626,7 +626,8 @@ Figure&nbsp;1: Flat Tables
 <p>Generalized stacked graph emphasizing horizontal continuity vs vertical items <a href="https://observablehq.com/@d3/streamgraph-transitions">(example)</a></p>
 <div class="columns">
 <div class="column" style="width:40%;">
-<p><strong>Data:</strong> 1 categ key attrib (movies) 1 ordered key attrib (time) 1 quant value attrib (counts) derived data geometry: layers, where height encodes counts 1 quant attrib (layer ordering)</p>
+<p><strong>Data:</strong> 1 categorical key attribute (movies) 1 ordered key attribute (time) 1 quantitative value attribute (counts)</p>
+<p><strong>Derived data geometry:</strong> layers, where height encodes counts of 1 quantitative attribute (layer ordering)</p>
 <p><strong>Mark:</strong> vertical stack of line marks</p>
 <p><strong>Channels:</strong> length and color hue</p>
 <p><strong>Task:</strong> part-to-whole relationship</p>
@@ -641,11 +642,11 @@ Figure&nbsp;1: Flat Tables
 <p><strong>One key, One value</strong></p>
 <div class="columns">
 <div class="column" style="width:60%;">
-<p><strong>Data:</strong>2 quant attribs</p>
+<p><strong>Data:</strong> 2 quantitative attributes</p>
 <p><strong>Mark:</strong> points AND line connection marks between them</p>
-<p><strong>Channels:</strong> aligned lengths to express quant value separated and ordered by key attrib into horizontal regions</p>
-<p><strong>Task:</strong> find trend connection marks emphasize ordering of items along key axis by explicitly showing relationship between one item and the next</p>
-<p><strong>Scalability:</strong> hhundreds of key levels, hundreds of value levels</p>
+<p><strong>Channels:</strong> aligned lengths to express quantitative value separated and ordered by key attribute into horizontal regions</p>
+<p><strong>Task:</strong> find trend connection marks, emphasize ordering of items along key axis by explicitly showing relationship between one item and the next</p>
+<p><strong>Scalability:</strong> hundreds of key levels, hundreds of value levels</p>
 </div><div class="column" style="width:40%;">
 <p><img data-src="dotline.png" height="500"></p>
 </div></div>
@@ -673,8 +674,8 @@ Figure&nbsp;1: Flat Tables
 <h2>IDIOM: Indexed Line Charts</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<p><strong>Data:</strong> 2 quant attribs 1 key + 1 value</p>
-<p><strong>Derived data:</strong> new quant value attrib index plot instead of original value</p>
+<p><strong>Data:</strong> 2 quantitative attributes 1 key + 1 value</p>
+<p><strong>Derived data:</strong> new quantitative value attribute index plot instead of original value</p>
 <p><strong>Task:</strong> show change over time</p>
 <p><strong>Principle:</strong> normalized, not absolute</p>
 <p><strong>Scalability:</strong> same as standard line chart</p>
@@ -688,10 +689,10 @@ Figure&nbsp;1: Flat Tables
 <p>one key, two (related) values</p>
 <div class="columns">
 <div class="column" style="width:40%;">
-<p><strong>Data:</strong> 1 categ attrib, 2 quant attribs</p>
+<p><strong>Data:</strong> 1 categorical attribute, 2 quantitative attributes</p>
 <p><strong>Mark:</strong> line length: duration</p>
-<p><strong>Channels:</strong> horiz position: start time (+end from duration)</p>
-<p><strong>Task:</strong> mphasize temporal overlaps &amp; start/end dependencies between items</p>
+<p><strong>Channels:</strong> horizontal position: start time (+end from duration)</p>
+<p><strong>Task:</strong> emphasize temporal overlaps &amp; start/end dependencies between items</p>
 <p><strong>Scalability:</strong> dozens of key levels bars hundreds of value levels durations</p>
 </div><div class="column" style="width:60%;">
 <p><img data-src="gantt.png"></p>
@@ -702,9 +703,9 @@ Figure&nbsp;1: Flat Tables
 <p>two values</p>
 <div class="columns">
 <div class="column" style="width:40%;">
-<p><strong>Data:</strong> 2 quant value attribs (1 derived attrib: change magnitude)</p>
-<p><strong>Mark:</strong> point + line line connecting mark between pts</p>
-<p><strong>Channels:</strong> 2 vertical pos: express attrib value (linewidth/size, color)</p>
+<p><strong>Data:</strong> 2 quantitative value attributes (1 derived attribute: change magnitude)</p>
+<p><strong>Mark:</strong> point + line line connecting mark between points</p>
+<p><strong>Channels:</strong> 2 vertical positions: express attribute value (linewidth/size, color)</p>
 <p><strong>Task:</strong> emphasize changes in rank/value</p>
 <p><strong>Scalability:</strong> hundreds of value levels dozens of item</p>
 </div><div class="column" style="width:60%;">
@@ -719,9 +720,9 @@ Figure&nbsp;1: Flat Tables
 <p>two keys, one value</p>
 <div class="columns">
 <div class="column" style="width:40%;">
-<p><strong>Data:</strong> 2 categ attribs (gene, experimental condition) 1 quant attrib (expression levels)</p>
-<p><strong>Mark:</strong> point separate and align in 2D matrix indexed by 2 categorical attributes</p>
-<p><strong>Channels:</strong> color by quant attrib (ordered diverging colormap)</p>
+<p><strong>Data:</strong> 2 categorical attributes (gene, experimental condition) 1 quantitative attribute (expression levels)</p>
+<p><strong>Mark:</strong> point separate and align in 2D matrix, indexed by 2 categorical attributes</p>
+<p><strong>Channels:</strong> color by quantitative attribute (ordered diverging colormap)</p>
 <p><strong>Task:</strong> find clusters, outliers</p>
 <p><strong>Scalability:</strong> 1M items, 100s of categ levels, ~10 quant attrib levels</p>
 </div><div class="column" style="width:60%;">

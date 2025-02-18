@@ -399,11 +399,11 @@
     "text": "KEYS: Categorical Regions\n\n\n\nRegions: contiguous bounded areas distinct from each other\n\nNO OVERPLOTTING: separate into spatial regions: one mark per region (for now)\n\nuse categorical or ordered attribute to separate into regions\n\nno conflict with expressiveness principle for categorical attributes\n\nuse ordered attribute to order and align regions"
   },
   {
-    "objectID": "posts/L6-TabularData1/index.html#separated-and-aligned-and-ordered",
-    "href": "posts/L6-TabularData1/index.html#separated-and-aligned-and-ordered",
+    "objectID": "posts/L6-TabularData1/index.html#separated-but-not-aligned-or-ordered",
+    "href": "posts/L6-TabularData1/index.html#separated-but-not-aligned-or-ordered",
     "title": "LECTURE 6 - Tabular Data",
-    "section": "Separated and aligned and ordered",
-    "text": "Separated and aligned and ordered\nBest case!"
+    "section": "Separated but not aligned or ordered",
+    "text": "Separated but not aligned or ordered\nLimitation: hard to make comparisons with size (vs aligned position)"
   },
   {
     "objectID": "posts/L6-TabularData1/index.html#separatedaligned---not-ordered",
@@ -413,11 +413,11 @@
     "text": "Separated/aligned - not ordered\nLimitation: hard to know rank. what’s 4th? what’s 7th?"
   },
   {
-    "objectID": "posts/L6-TabularData1/index.html#separated-but-not-aligned-or-ordered",
-    "href": "posts/L6-TabularData1/index.html#separated-but-not-aligned-or-ordered",
+    "objectID": "posts/L6-TabularData1/index.html#separated-and-aligned-and-ordered",
+    "href": "posts/L6-TabularData1/index.html#separated-and-aligned-and-ordered",
     "title": "LECTURE 6 - Tabular Data",
-    "section": "Separated but not aligned or ordered",
-    "text": "Separated but not aligned or ordered\nLimitation: hard to make comparisons with size (vs aligned position)"
+    "section": "Separated and aligned and ordered",
+    "text": "Separated and aligned and ordered\nBest case!"
   },
   {
     "objectID": "posts/L6-TabularData1/index.html#idiom-bar-chart",
@@ -431,21 +431,21 @@
     "href": "posts/L6-TabularData1/index.html#idiom-stacked-bar-chart",
     "title": "LECTURE 6 - Tabular Data",
     "section": "IDIOM: Stacked Bar Chart",
-    "text": "IDIOM: Stacked Bar Chart\nTwo keys, One value\n\n\nData: 2 categorical attribute, 1 quantitative attribute\nMark: vertical stack of line marks\nGlyph: composite object, internal structure from multiple marks\nChannels: length and color hue\nSpatial regions: one per glyph\nAligned: full glyph, lowest bar component\nUnaligned: other bar components\nTask: part-to-whole relationship\nScalability: asymmetric for stacked key attrib, 10-12 levels segments for main key attrib, dozens to hundreds of levels bars"
+    "text": "IDIOM: Stacked Bar Chart\nTwo keys, One value\n\n\nData: 2 categorical attributes, 1 quantitative attribute\nMark: vertical stack of line marks\nGlyph: composite object, internal structure from multiple marks\nChannels: length and color hue\nSpatial regions: one per glyph\nAligned: full glyph, lowest bar component\nUnaligned: other bar components\nTask: part-to-whole relationship\nScalability: asymmetric for stacked key attribute, 10-12 levels segments for main key attribute, dozens to hundreds of levels bars"
   },
   {
     "objectID": "posts/L6-TabularData1/index.html#idiom-streamgraph",
     "href": "posts/L6-TabularData1/index.html#idiom-streamgraph",
     "title": "LECTURE 6 - Tabular Data",
     "section": "IDIOM: Streamgraph",
-    "text": "IDIOM: Streamgraph\nGeneralized stacked graph emphasizing horizontal continuity vs vertical items (example)\n\n\nData: 1 categ key attrib (movies) 1 ordered key attrib (time) 1 quant value attrib (counts) derived data geometry: layers, where height encodes counts 1 quant attrib (layer ordering)\nMark: vertical stack of line marks\nChannels: length and color hue\nTask: part-to-whole relationship\nScalability: hundreds of time keys dozens to hundreds of movies keys more than stacked bars: most layers don’t extend across whole chart"
+    "text": "IDIOM: Streamgraph\nGeneralized stacked graph emphasizing horizontal continuity vs vertical items (example)\n\n\nData: 1 categorical key attribute (movies) 1 ordered key attribute (time) 1 quantitative value attribute (counts)\nDerived data geometry: layers, where height encodes counts of 1 quantitative attribute (layer ordering)\nMark: vertical stack of line marks\nChannels: length and color hue\nTask: part-to-whole relationship\nScalability: hundreds of time keys dozens to hundreds of movies keys more than stacked bars: most layers don’t extend across whole chart"
   },
   {
     "objectID": "posts/L6-TabularData1/index.html#idiom-dotline-chart",
     "href": "posts/L6-TabularData1/index.html#idiom-dotline-chart",
     "title": "LECTURE 6 - Tabular Data",
     "section": "IDIOM: Dot/Line Chart",
-    "text": "IDIOM: Dot/Line Chart\nOne key, One value\n\n\nData:2 quant attribs\nMark: points AND line connection marks between them\nChannels: aligned lengths to express quant value separated and ordered by key attrib into horizontal regions\nTask: find trend connection marks emphasize ordering of items along key axis by explicitly showing relationship between one item and the next\nScalability: hhundreds of key levels, hundreds of value levels"
+    "text": "IDIOM: Dot/Line Chart\nOne key, One value\n\n\nData: 2 quantitative attributes\nMark: points AND line connection marks between them\nChannels: aligned lengths to express quantitative value separated and ordered by key attribute into horizontal regions\nTask: find trend connection marks, emphasize ordering of items along key axis by explicitly showing relationship between one item and the next\nScalability: hundreds of key levels, hundreds of value levels"
   },
   {
     "objectID": "posts/L6-TabularData1/index.html#bar-vs-line-charts",
@@ -466,21 +466,21 @@
     "href": "posts/L6-TabularData1/index.html#idiom-indexed-line-charts",
     "title": "LECTURE 6 - Tabular Data",
     "section": "IDIOM: Indexed Line Charts",
-    "text": "IDIOM: Indexed Line Charts\n\n\nData: 2 quant attribs 1 key + 1 value\nDerived data: new quant value attrib index plot instead of original value\nTask: show change over time\nPrinciple: normalized, not absolute\nScalability: same as standard line chart\n\n\nCool Example"
+    "text": "IDIOM: Indexed Line Charts\n\n\nData: 2 quantitative attributes 1 key + 1 value\nDerived data: new quantitative value attribute index plot instead of original value\nTask: show change over time\nPrinciple: normalized, not absolute\nScalability: same as standard line chart\n\n\nCool Example"
   },
   {
     "objectID": "posts/L6-TabularData1/index.html#idiom-gantt-charts",
     "href": "posts/L6-TabularData1/index.html#idiom-gantt-charts",
     "title": "LECTURE 6 - Tabular Data",
     "section": "IDIOM: Gantt Charts",
-    "text": "IDIOM: Gantt Charts\none key, two (related) values\n\n\nData: 1 categ attrib, 2 quant attribs\nMark: line length: duration\nChannels: horiz position: start time (+end from duration)\nTask: mphasize temporal overlaps & start/end dependencies between items\nScalability: dozens of key levels bars hundreds of value levels durations"
+    "text": "IDIOM: Gantt Charts\none key, two (related) values\n\n\nData: 1 categorical attribute, 2 quantitative attributes\nMark: line length: duration\nChannels: horizontal position: start time (+end from duration)\nTask: emphasize temporal overlaps & start/end dependencies between items\nScalability: dozens of key levels bars hundreds of value levels durations"
   },
   {
     "objectID": "posts/L6-TabularData1/index.html#idiom-slopegraphs",
     "href": "posts/L6-TabularData1/index.html#idiom-slopegraphs",
     "title": "LECTURE 6 - Tabular Data",
     "section": "IDIOM: Slopegraphs",
-    "text": "IDIOM: Slopegraphs\ntwo values\n\n\nData: 2 quant value attribs (1 derived attrib: change magnitude)\nMark: point + line line connecting mark between pts\nChannels: 2 vertical pos: express attrib value (linewidth/size, color)\nTask: emphasize changes in rank/value\nScalability: hundreds of value levels dozens of item"
+    "text": "IDIOM: Slopegraphs\ntwo values\n\n\nData: 2 quantitative value attributes (1 derived attribute: change magnitude)\nMark: point + line line connecting mark between points\nChannels: 2 vertical positions: express attribute value (linewidth/size, color)\nTask: emphasize changes in rank/value\nScalability: hundreds of value levels dozens of item"
   },
   {
     "objectID": "posts/L6-TabularData1/index.html#keys",
@@ -494,7 +494,7 @@
     "href": "posts/L6-TabularData1/index.html#idiom-heatmap",
     "title": "LECTURE 6 - Tabular Data",
     "section": "IDIOM: Heatmap",
-    "text": "IDIOM: Heatmap\ntwo keys, one value\n\n\nData: 2 categ attribs (gene, experimental condition) 1 quant attrib (expression levels)\nMark: point separate and align in 2D matrix indexed by 2 categorical attributes\nChannels: color by quant attrib (ordered diverging colormap)\nTask: find clusters, outliers\nScalability: 1M items, 100s of categ levels, ~10 quant attrib levels"
+    "text": "IDIOM: Heatmap\ntwo keys, one value\n\n\nData: 2 categorical attributes (gene, experimental condition) 1 quantitative attribute (expression levels)\nMark: point separate and align in 2D matrix, indexed by 2 categorical attributes\nChannels: color by quantitative attribute (ordered diverging colormap)\nTask: find clusters, outliers\nScalability: 1M items, 100s of categ levels, ~10 quant attrib levels"
   },
   {
     "objectID": "posts/L6-TabularData1/index.html#heatmap-reordering",
