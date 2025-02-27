@@ -2,13 +2,13 @@
 title: "ASSIGNMENT 5"
 subtitle: "Visualizations for Tabular Data"
 author: "Barrie Robison"
-date: "2024-02-20"
+date: "2025-02-27"
 categories: [Assignment, DataViz, Tables, Scatterplot, Barplot, Piechart]
 image: "Cthulhuhockeycard.png"
 code-fold: true
 code-tools: true
 description: "Should I trade these draft picks for this bag of magic beans...?"
-draft: true
+
 ---
 
 ## OVERVIEW
@@ -217,7 +217,7 @@ ggplot(drafttot, aes(x=overall, y=totgames))+
 Or we could visualize the average number of games played as a function of time since being drafted.
 
 ```{r}
-
+NHLDraftstats <- read.csv("NHLdraftstats.csv")
 EL<-NHLDraftstats %>%
   filter(name=="Elias Lindholm")
 

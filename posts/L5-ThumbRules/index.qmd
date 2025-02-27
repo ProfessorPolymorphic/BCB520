@@ -169,6 +169,14 @@ Resolution in VR is a critical constraint, as pixels are the scarcest resource.
 
 This seems simple enough, until you realize that ["Overview"]{.red} is really a microcosm of the full vis design problem space.
 
+## BREAKING CONVENTIONS
+
+The inverted y axis is evocative of blood dripping down on Poe. Also, this is a cool example of **"Overview first, zoom and filter, details on demand"**
+
+![](poe.png)
+
+[https://public.tableau.com/profile/ben.jones#!/vizhome/EdgarAllanPoeViz/EdgarAllanPoeViz]{.caption}
+
 ## RESPONSIVENESS {.smaller}
 
 [Responsiveness]{.red} (visual feedback to the user) has 3 rough categories:
