@@ -1,0 +1,298 @@
+---
+title: "DataDictionary"
+---
+
+
+# NHL Player Statistics Guide
+
+## Player On-Ice Statistics
+
+All player statistics are presented within the scope of the selected filters.
+
+| Term | Definition |
+|------|------------|
+| **Player** | Player name. |
+| **Team** | Team or teams that the player has played for. Not displayed when filtering for specific teams. |
+| **Position** | Position or positions that the player has been listed as playing by the NHL. |
+| **GP** | Games played. |
+| **TOI** | Total amount of time played. |
+| **TOI/GP** | Amount of time played per game. Not displayed when filtering for Counts. |
+
+### Corsi Statistics
+**Corsi**: Any shot attempt (goals, shots on net, misses and blocks) outside of the shootout. Referred to as SAT by the NHL.
+
+| Term | Definition |
+|------|------------|
+| **CF** | Count of Corsi for that player's team while that player is on the ice. |
+| **CA** | Count of Corsi against that player's team while that player is on the ice. |
+| **CF%** | Percentage of total Corsi while that player is on the ice that are for that player's team. CF*100/(CF+CA) |
+
+### Fenwick Statistics
+**Fenwick**: Any unblocked shot attempt (goals, shots on net and misses) outside of the shootout. Referred to as USAT by the NHL.
+
+| Term | Definition |
+|------|------------|
+| **FF** | Count of Fenwick for that player's team while that player is on the ice. |
+| **FA** | Count of Fenwick against that player's team while that player is on the ice. |
+| **FF%** | Percentage of total Fenwick while that player is on the ice that are for that player's team. FF*100/(FF+FA) |
+
+### Shots Statistics
+**Shots**: Any shot attempt on net (goals and shots on net) outside of the shootout.
+
+| Term | Definition |
+|------|------------|
+| **SF** | Count of Shots for that player's team while that player is on the ice. |
+| **SA** | Count of Shots against that player's team while that player is on the ice. |
+| **SF%** | Percentage of total Shots while that player is on the ice that are for that player's team. SF*100/(SF+SA) |
+
+### Goals Statistics
+**Goals**: Any goal, outside of the shootout.
+
+| Term | Definition |
+|------|------------|
+| **GF** | Count of Goals for that player's team while that player is on the ice. |
+| **GA** | Count of Goals against that player's team while that player is on the ice. |
+| **GF%** | Percentage of total Goals while that player is on the ice that are for that player's team. GF*100/(GF+GA) |
+
+### Scoring Chances
+A scoring chance, as originally defined by War-on-Ice.
+
+Each shot attempt (Corsi) taken in the offensive zone is assigned a value based on the area of the zone in which it was recorded. Attempts made from the attacking team's neutral or defensive zones are excluded.
+
+- Attempts from the **yellow areas** are assigned a value of 1
+- Attempts from the **red areas** are assigned a value of 2
+- Attempts in the **green area** are assigned a value of 3
+
+**Adjustments**:
+- Add 1 to this value if the attempt is considered a rush shot or a rebound
+  - A rebound is any attempt made within 3 seconds of another blocked, missed or saved attempt without a stoppage in play in between
+  - A rush shot is any attempt within 4 seconds of any event in the neutral or defensive zone without a stoppage in play in between
+- Decrease this value by 1 if it was a blocked shot
+- Any attempt with a score of 2 or higher is considered a scoring chance
+
+| Term | Definition |
+|------|------------|
+| **SCF** | Count of Scoring Chances for that player's team while that player is on the ice. |
+| **SCA** | Count of Scoring Chances against that player's team while that player is on the ice. |
+| **SCF%** | Percentage of total Scoring Chances while that player is on the ice that are for that player's team. SCF*100/(SCF+SCA) |
+
+### High Danger Scoring Chances
+A scoring chance with a score of 3 or higher.
+
+| Term | Definition |
+|------|------------|
+| **HDCF** | Count of High Danger Scoring Chances for that player's team while that player is on the ice. |
+| **HDCA** | Count of High Danger Scoring Chances against that player's team while that player is on the ice. |
+| **HDCF%** | Percentage of total High Danger Scoring Chances while that player is on the ice that are for that player's team. HDCF*100/(HDCF+HDCA) |
+
+### High Danger Goals
+Goals generated from High Danger Scoring Chances
+
+| Term | Definition |
+|------|------------|
+| **HDGF** | Count of Goals off of High Danger Scoring Chances for that player's team while that player is on the ice. |
+| **HDGA** | Count of Goals off of High Danger Scoring Chances against that player's team while that player is on the ice. |
+| **HDGF%** | Percentage of High Danger Goals while that player is on the ice that are for that player's team. HDGF*100/(HDGF+HDGA) |
+
+### Medium Danger Scoring Chances
+A scoring chance with a score of exactly 2.
+
+| Term | Definition |
+|------|------------|
+| **MDCF** | Count of Medium Danger Scoring Chances for that player's team while that player is on the ice. |
+| **MDCA** | Count of Medium Danger Scoring Chances against that player's team while that player is on the ice. |
+| **MDCF%** | Percentage of total Medium Danger Scoring Chances while that player is on the ice that are for that player's team. MDCF*100/(MDCF+MDCA) |
+
+### Medium Danger Goals
+Goals generated from Medium Danger Scoring Chances
+
+| Term | Definition |
+|------|------------|
+| **MDGF** | Count of Goals off of Medium Danger Scoring Chances for that player's team while that player is on the ice. |
+| **MDGA** | Count of Goals off of Medium Danger Scoring Chances against that player's team while that player is on the ice. |
+| **MDGF%** | Percentage of Medium Danger Goals while that player is on the ice that are for that player's team. MDGF*100/(MDGF+MDGA) |
+
+### Low Danger Scoring Chances
+A scoring chance with a score of 1 or less. Does not include any attempts from the attacking team's neutral or defensive zone.
+
+| Term | Definition |
+|------|------------|
+| **LDCF** | Count of Low Danger Scoring Chances for that player's team while that player is on the ice. |
+| **LDCA** | Count of Low Danger Scoring Chances against that player's team while that player is on the ice. |
+| **LDCF%** | Percentage of total Low Danger Scoring Chances while that player is on the ice that are for that player's team. LDCF*100/(LDCF+LDCA) |
+
+### Low Danger Goals
+Goals generated from Low Danger Scoring Chances
+
+| Term | Definition |
+|------|------------|
+| **LDGF** | Count of Goals off of Low Danger Scoring Chances for that player's team while that player is on the ice. |
+| **LDGA** | Count of Goals off of Low Danger Scoring Chances against that player's team while that player is on the ice. |
+| **LDGF%** | Percentage of Low Danger Goals while that player is on the ice that are for that player's team. LDGF*100/(LDGF+LDGA) |
+
+### Expected Goals
+Expected goals (xG) is a statistical measure that evaluates shot quality by assigning a goal probability to each shot attempt.
+
+| Term | Definition |
+|------|------------|
+| **xGF** | Expected Goals For. The sum of the probability values of all shot attempts for that player's team while that player is on the ice. Represents the number of goals the team should have scored based on shot quality. |
+| **xGA** | Expected Goals Against. The sum of the probability values of all shot attempts against that player's team while that player is on the ice. Represents the number of goals the team should have conceded based on shot quality. |
+| **xGF%** | Expected Goals Percentage. The percentage of the total expected goals while that player is on the ice that are for that player's team. xGF*100/(xGF+xGA) |
+
+### PDO
+
+| Term | Definition |
+|------|------------|
+| **SH%** | Percentage of Shots for that player's team while that player is on the ice that were Goals. GF*100/SF |
+| **SV%** | Percentage of Shots against that player's team while that player is on the ice that were not Goals. GA*100/SA |
+| **PDO** | Shooting percentage plus save percentage. (GF/SF)+(GA/SA) |
+
+### Starts
+
+| Term | Definition |
+|------|------------|
+| **Off. Zone Starts** | Number of shifts for the player that started with an offensive zone faceoff. |
+| **Neu. Zone Starts** | Number of shifts for the player that started with a neutral zone faceoff. |
+| **Def. Zone Starts** | Number of shifts for the player that started with a defensive zone faceoff. |
+| **On The Fly Starts** | Number of shifts for the player that started during play (without a faceoff). |
+| **Off. Zone Start %** | Percentage of starts for the player that were Offensive Zone Starts, excluding Neutral Zone and On The Fly Starts. Off. Zone Starts*100/(Off. Zone Starts+Def. Zone Starts) |
+
+### Faceoffs
+
+| Term | Definition |
+|------|------------|
+| **Off. Zone Faceoffs** | Number of faceoffs in the offensive zone for which the player was on the ice. |
+| **Neu. Zone Faceoffs** | Number of faceoffs in the neutral zone for which the player was on the ice. |
+| **Def. Zone Faceoffs** | Number of faceoffs in the defensive zone for which the player was on the ice. |
+| **Off. Zone Faceoff %** | Percentage of faceoffs in the offensive zone for which the player was on the ice, excluding neutral zone faceoffs. Off. Zone Faceoffs*100/(Off. Zone Faceoffs+Def. Zone Faceoffs) |
+
+## Player Individual Statistics
+
+All player statistics are presented within the scope of the selected filters.
+
+| Term | Definition |
+|------|------------|
+| **Player** | Player name. |
+| **Team** | Team or teams that the player has played for. Not displayed when filtering for specific teams. |
+| **Position** | Position or positions that the player has been listed as playing by the NHL. |
+| **GP** | Games played. |
+| **TOI** | Total amount of time played. |
+| **TOI/GP** | Amount of time played per game. Not displayed when filtering for Counts. |
+
+### Points
+
+| Term | Definition |
+|------|------------|
+| **Goals** | Goals scored by the player, outside of the shootout. |
+| **Assists** | Any assist by the player. |
+| **First Assists** | Primary assists by the player. |
+| **Second Assists** | Secondary assists by the player. |
+| **Total Points** | Goals scored and assists by the player, outside of the shootout. |
+| **IPP** | Individual Point Percentage, the percentage of goals for that player's team while that player is on the ice that the player earned a point on. Total Points/Goals For |
+
+### Shooting
+
+| Term | Definition |
+|------|------------|
+| **Shots** | Any shot attempt on net (goals and shots on net) by the player, outside of the shootout. |
+| **SH%** | Percentage of Shots by the player that were Goals. Goals*100/Shots |
+| **iCF** | Any shot attempt (goals, shots on net, misses and blocks) by the player, outside of the shootout. |
+| **iFF** | Any unblocked shot attempt (goals, shots on net and misses) by the player, outside of the shootout. |
+| **iSCF** | Any scoring chance by the player, outside of the shootout. |
+| **iHDCF** | Any high danger scoring chance by the player, outside of the shootout. |
+| **Rush Attempts** | Any rush shot attempt (goals, shots on net, misses and blocks) by the player, outside of the shootout. |
+| **Rebounds Created** | Any shot attempt (shots on net, misses and blocks) that results in a rebound shot attempt. |
+
+### Penalties
+
+| Term | Definition |
+|------|------------|
+| **PIM** | Penalty minutes assessed to the player. |
+| **Total Penalties** | Total number of penalties taken by the player |
+| **Minor** | Number of minor penalties taken by the player. |
+| **Major** | Number of major penalties taken by the player. |
+| **Misconduct** | Number of 10 minute or game misconducts taken by the player. |
+| **Penalties Drawn** | Number of penalties committed against the player. |
+
+### Real-time
+
+| Term | Definition |
+|------|------------|
+| **Giveaways** | Number of unforced turnovers made by the player. |
+| **Takeaways** | Number of times the player takes the puck away from the opposition. |
+| **Hits** | Number of hits made by the player. |
+| **Hits Taken** | Number of hits taken by the player. |
+| **Shots Blocked** | Number of opposition shot attempts blocked by the player. |
+
+### Faceoffs
+
+| Term | Definition |
+|------|------------|
+| **Faceoffs Won** | Faceoffs won by the player |
+| **Faceoffs Lost** | Faceoffs lost by the player |
+| **Faceoff %** | Percentage of total faceoffs taken by that player that were won Faceoffs Won*100/(Faceoffs Won+Faceoffs Lost) |
+
+## Goalie Statistics
+
+All player statistics are presented within the scope of the selected filters.
+
+| Term | Definition |
+|------|------------|
+| **Player** | Player name. |
+| **Team** | Team or teams that the player has played for. Not displayed when filtering for specific teams. |
+| **GP** | Games played. |
+| **TOI** | Total amount of time played. |
+| **TOI/GP** | Amount of time played per game. Not displayed when filtering for Counts. |
+
+### Saves
+
+| Term | Definition |
+|------|------------|
+| **Shots Against** | Shots on Goal (Shots and Goals) faced by the goalie. |
+| **Saves** | Saves made by the goalie. |
+| **Goals Against** | Goals allowed by the goalie. |
+| **SV%** | Percentage of Shots Against that were Saves. (Saves/Shots Against) |
+| **GAA** | Goals allowed per 60 minutes of play. Goals Against*60/TOI |
+| **GSAA** | Goals Saved Above Average, the difference between the goalie's Goals Against and a Goals Against with the same Shots Against and the average SV%. Average SV%*Shots Against - Goals Against |
+
+### High Danger Saves
+
+| Term | Definition |
+|------|------------|
+| **HD Shots Against** | Shots on Goal (Shots and Goals) that are High Danger Chances faced by the goalie. |
+| **HD Saves** | Saves on HD Shots Against made by the goalie. |
+| **HD Goals Against** | Goals from HD Shots Against allowed by the goalie. |
+| **HDSV%** | Percentage of HD Shots Against that were Saves. (HD Saves/HD Shots Against) |
+| **HDGAA** | HD Goals allowed per 60 minutes of play. HD Goals Against*60/TOI |
+| **HDGSAA** | HD Goals Saved Above Average, the difference between the goalie's HD Goals Against and a HD Goals Against with the same HD Shots Against and the average HDSV%. Average HDSV%*HD Shots Against - HD Goals Against |
+
+### Medium Danger Saves
+
+| Term | Definition |
+|------|------------|
+| **MD Shots Against** | Shots on Goal (Shots and Goals) that are Medium Danger Chances faced by the goalie. |
+| **MD Saves** | Saves on MD Shots Against made by the goalie. |
+| **MD Goals Against** | Goals from MD Shots Against allowed by the goalie. |
+| **MDSV%** | Percentage of MD Shots Against that were Saves. (MD Saves/MD Shots Against) |
+| **MDGAA** | MD Goals allowed per 60 minutes of play. MD Goals Against*60/TOI |
+| **MDGSAA** | MD Goals Saved Above Average, the difference between the goalie's MD Goals Against and a MD Goals Against with the same MD Shots Against and the average MDSV%. Average MDSV%*MD Shots Against - MD Goals Against |
+
+### Low Danger Saves
+
+| Term | Definition |
+|------|------------|
+| **LD Shots Against** | Shots on Goal (Shots and Goals) that are Low Danger Chances faced by the goalie. |
+| **LD Saves** | Saves on LD Shots Against made by the goalie. |
+| **LD Goals Against** | Goals from LD Shots Against allowed by the goalie. |
+| **LDSV%** | Percentage of LD Shots Against that were Saves. (LD Saves/LD Shots Against) |
+| **LDGAA** | LD Goals allowed per 60 minutes of play. LD Goals Against*60/TOI |
+| **LDGSAA** | LD Goals Saved Above Average, the difference between the goalie's LD Goals Against and a LD Goals Against with the same LD Shots Against and the average LDSV%. Average LDSV%*LD Shots Against - LD Goals Against |
+
+### Shot Info
+
+| Term | Definition |
+|------|------------|
+| **Rush Attempts Against** | Number of Shot Attempts (including missed and block shots) that the goalie faced that are considered Rush Attempts |
+| **Rebound Attempts Against** | Number of Shot Attempts (including missed and block shots) that the goalie faced that are considered Rebound Attempts |
+| **Avg. Shot Distance** | Average distance (in feet) of shots on net faced by the goalie |
+| **Avg. Goal Distance** | Average distance (in feet) of goals allowed by the goalie |

@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>DataDictionary – BCB520</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">BCB520</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../syllabus.html"> 
+<span class="menu-text">SYLLABUS 2025</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">DataDictionary</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#nhl-player-statistics-guide" id="toc-nhl-player-statistics-guide" class="nav-link active" data-scroll-target="#nhl-player-statistics-guide">NHL Player Statistics Guide</a>
+  <ul class="collapse">
+  <li><a href="#player-on-ice-statistics" id="toc-player-on-ice-statistics" class="nav-link" data-scroll-target="#player-on-ice-statistics">Player On-Ice Statistics</a>
+  <ul class="collapse">
+  <li><a href="#corsi-statistics" id="toc-corsi-statistics" class="nav-link" data-scroll-target="#corsi-statistics">Corsi Statistics</a></li>
+  <li><a href="#fenwick-statistics" id="toc-fenwick-statistics" class="nav-link" data-scroll-target="#fenwick-statistics">Fenwick Statistics</a></li>
+  <li><a href="#shots-statistics" id="toc-shots-statistics" class="nav-link" data-scroll-target="#shots-statistics">Shots Statistics</a></li>
+  <li><a href="#goals-statistics" id="toc-goals-statistics" class="nav-link" data-scroll-target="#goals-statistics">Goals Statistics</a></li>
+  <li><a href="#scoring-chances" id="toc-scoring-chances" class="nav-link" data-scroll-target="#scoring-chances">Scoring Chances</a></li>
+  <li><a href="#high-danger-scoring-chances" id="toc-high-danger-scoring-chances" class="nav-link" data-scroll-target="#high-danger-scoring-chances">High Danger Scoring Chances</a></li>
+  <li><a href="#high-danger-goals" id="toc-high-danger-goals" class="nav-link" data-scroll-target="#high-danger-goals">High Danger Goals</a></li>
+  <li><a href="#medium-danger-scoring-chances" id="toc-medium-danger-scoring-chances" class="nav-link" data-scroll-target="#medium-danger-scoring-chances">Medium Danger Scoring Chances</a></li>
+  <li><a href="#medium-danger-goals" id="toc-medium-danger-goals" class="nav-link" data-scroll-target="#medium-danger-goals">Medium Danger Goals</a></li>
+  <li><a href="#low-danger-scoring-chances" id="toc-low-danger-scoring-chances" class="nav-link" data-scroll-target="#low-danger-scoring-chances">Low Danger Scoring Chances</a></li>
+  <li><a href="#low-danger-goals" id="toc-low-danger-goals" class="nav-link" data-scroll-target="#low-danger-goals">Low Danger Goals</a></li>
+  <li><a href="#expected-goals" id="toc-expected-goals" class="nav-link" data-scroll-target="#expected-goals">Expected Goals</a></li>
+  <li><a href="#pdo" id="toc-pdo" class="nav-link" data-scroll-target="#pdo">PDO</a></li>
+  <li><a href="#starts" id="toc-starts" class="nav-link" data-scroll-target="#starts">Starts</a></li>
+  <li><a href="#faceoffs" id="toc-faceoffs" class="nav-link" data-scroll-target="#faceoffs">Faceoffs</a></li>
+  </ul></li>
+  <li><a href="#player-individual-statistics" id="toc-player-individual-statistics" class="nav-link" data-scroll-target="#player-individual-statistics">Player Individual Statistics</a>
+  <ul class="collapse">
+  <li><a href="#points" id="toc-points" class="nav-link" data-scroll-target="#points">Points</a></li>
+  <li><a href="#shooting" id="toc-shooting" class="nav-link" data-scroll-target="#shooting">Shooting</a></li>
+  <li><a href="#penalties" id="toc-penalties" class="nav-link" data-scroll-target="#penalties">Penalties</a></li>
+  <li><a href="#real-time" id="toc-real-time" class="nav-link" data-scroll-target="#real-time">Real-time</a></li>
+  <li><a href="#faceoffs-1" id="toc-faceoffs-1" class="nav-link" data-scroll-target="#faceoffs-1">Faceoffs</a></li>
+  </ul></li>
+  <li><a href="#goalie-statistics" id="toc-goalie-statistics" class="nav-link" data-scroll-target="#goalie-statistics">Goalie Statistics</a>
+  <ul class="collapse">
+  <li><a href="#saves" id="toc-saves" class="nav-link" data-scroll-target="#saves">Saves</a></li>
+  <li><a href="#high-danger-saves" id="toc-high-danger-saves" class="nav-link" data-scroll-target="#high-danger-saves">High Danger Saves</a></li>
+  <li><a href="#medium-danger-saves" id="toc-medium-danger-saves" class="nav-link" data-scroll-target="#medium-danger-saves">Medium Danger Saves</a></li>
+  <li><a href="#low-danger-saves" id="toc-low-danger-saves" class="nav-link" data-scroll-target="#low-danger-saves">Low Danger Saves</a></li>
+  <li><a href="#shot-info" id="toc-shot-info" class="nav-link" data-scroll-target="#shot-info">Shot Info</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="nhl-player-statistics-guide" class="level1">
+<h1>NHL Player Statistics Guide</h1>
+<section id="player-on-ice-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="player-on-ice-statistics">Player On-Ice Statistics</h2>
+<p>All player statistics are presented within the scope of the selected filters.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Player</strong></td>
+<td>Player name.</td>
+</tr>
+<tr class="even">
+<td><strong>Team</strong></td>
+<td>Team or teams that the player has played for. Not displayed when filtering for specific teams.</td>
+</tr>
+<tr class="odd">
+<td><strong>Position</strong></td>
+<td>Position or positions that the player has been listed as playing by the NHL.</td>
+</tr>
+<tr class="even">
+<td><strong>GP</strong></td>
+<td>Games played.</td>
+</tr>
+<tr class="odd">
+<td><strong>TOI</strong></td>
+<td>Total amount of time played.</td>
+</tr>
+<tr class="even">
+<td><strong>TOI/GP</strong></td>
+<td>Amount of time played per game. Not displayed when filtering for Counts.</td>
+</tr>
+</tbody>
+</table>
+<section id="corsi-statistics" class="level3">
+<h3 class="anchored" data-anchor-id="corsi-statistics">Corsi Statistics</h3>
+<p><strong>Corsi</strong>: Any shot attempt (goals, shots on net, misses and blocks) outside of the shootout. Referred to as SAT by the NHL.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>CF</strong></td>
+<td>Count of Corsi for that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="even">
+<td><strong>CA</strong></td>
+<td>Count of Corsi against that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="odd">
+<td><strong>CF%</strong></td>
+<td>Percentage of total Corsi while that player is on the ice that are for that player’s team. CF*100/(CF+CA)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fenwick-statistics" class="level3">
+<h3 class="anchored" data-anchor-id="fenwick-statistics">Fenwick Statistics</h3>
+<p><strong>Fenwick</strong>: Any unblocked shot attempt (goals, shots on net and misses) outside of the shootout. Referred to as USAT by the NHL.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>FF</strong></td>
+<td>Count of Fenwick for that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="even">
+<td><strong>FA</strong></td>
+<td>Count of Fenwick against that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="odd">
+<td><strong>FF%</strong></td>
+<td>Percentage of total Fenwick while that player is on the ice that are for that player’s team. FF*100/(FF+FA)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="shots-statistics" class="level3">
+<h3 class="anchored" data-anchor-id="shots-statistics">Shots Statistics</h3>
+<p><strong>Shots</strong>: Any shot attempt on net (goals and shots on net) outside of the shootout.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>SF</strong></td>
+<td>Count of Shots for that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="even">
+<td><strong>SA</strong></td>
+<td>Count of Shots against that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="odd">
+<td><strong>SF%</strong></td>
+<td>Percentage of total Shots while that player is on the ice that are for that player’s team. SF*100/(SF+SA)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="goals-statistics" class="level3">
+<h3 class="anchored" data-anchor-id="goals-statistics">Goals Statistics</h3>
+<p><strong>Goals</strong>: Any goal, outside of the shootout.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>GF</strong></td>
+<td>Count of Goals for that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="even">
+<td><strong>GA</strong></td>
+<td>Count of Goals against that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="odd">
+<td><strong>GF%</strong></td>
+<td>Percentage of total Goals while that player is on the ice that are for that player’s team. GF*100/(GF+GA)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="scoring-chances" class="level3">
+<h3 class="anchored" data-anchor-id="scoring-chances">Scoring Chances</h3>
+<p>A scoring chance, as originally defined by War-on-Ice.</p>
+<p>Each shot attempt (Corsi) taken in the offensive zone is assigned a value based on the area of the zone in which it was recorded. Attempts made from the attacking team’s neutral or defensive zones are excluded.</p>
+<ul>
+<li>Attempts from the <strong>yellow areas</strong> are assigned a value of 1</li>
+<li>Attempts from the <strong>red areas</strong> are assigned a value of 2</li>
+<li>Attempts in the <strong>green area</strong> are assigned a value of 3</li>
+</ul>
+<p><strong>Adjustments</strong>: - Add 1 to this value if the attempt is considered a rush shot or a rebound - A rebound is any attempt made within 3 seconds of another blocked, missed or saved attempt without a stoppage in play in between - A rush shot is any attempt within 4 seconds of any event in the neutral or defensive zone without a stoppage in play in between - Decrease this value by 1 if it was a blocked shot - Any attempt with a score of 2 or higher is considered a scoring chance</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>SCF</strong></td>
+<td>Count of Scoring Chances for that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="even">
+<td><strong>SCA</strong></td>
+<td>Count of Scoring Chances against that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="odd">
+<td><strong>SCF%</strong></td>
+<td>Percentage of total Scoring Chances while that player is on the ice that are for that player’s team. SCF*100/(SCF+SCA)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="high-danger-scoring-chances" class="level3">
+<h3 class="anchored" data-anchor-id="high-danger-scoring-chances">High Danger Scoring Chances</h3>
+<p>A scoring chance with a score of 3 or higher.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>HDCF</strong></td>
+<td>Count of High Danger Scoring Chances for that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="even">
+<td><strong>HDCA</strong></td>
+<td>Count of High Danger Scoring Chances against that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="odd">
+<td><strong>HDCF%</strong></td>
+<td>Percentage of total High Danger Scoring Chances while that player is on the ice that are for that player’s team. HDCF*100/(HDCF+HDCA)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="high-danger-goals" class="level3">
+<h3 class="anchored" data-anchor-id="high-danger-goals">High Danger Goals</h3>
+<p>Goals generated from High Danger Scoring Chances</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>HDGF</strong></td>
+<td>Count of Goals off of High Danger Scoring Chances for that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="even">
+<td><strong>HDGA</strong></td>
+<td>Count of Goals off of High Danger Scoring Chances against that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="odd">
+<td><strong>HDGF%</strong></td>
+<td>Percentage of High Danger Goals while that player is on the ice that are for that player’s team. HDGF*100/(HDGF+HDGA)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="medium-danger-scoring-chances" class="level3">
+<h3 class="anchored" data-anchor-id="medium-danger-scoring-chances">Medium Danger Scoring Chances</h3>
+<p>A scoring chance with a score of exactly 2.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>MDCF</strong></td>
+<td>Count of Medium Danger Scoring Chances for that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="even">
+<td><strong>MDCA</strong></td>
+<td>Count of Medium Danger Scoring Chances against that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="odd">
+<td><strong>MDCF%</strong></td>
+<td>Percentage of total Medium Danger Scoring Chances while that player is on the ice that are for that player’s team. MDCF*100/(MDCF+MDCA)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="medium-danger-goals" class="level3">
+<h3 class="anchored" data-anchor-id="medium-danger-goals">Medium Danger Goals</h3>
+<p>Goals generated from Medium Danger Scoring Chances</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>MDGF</strong></td>
+<td>Count of Goals off of Medium Danger Scoring Chances for that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="even">
+<td><strong>MDGA</strong></td>
+<td>Count of Goals off of Medium Danger Scoring Chances against that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="odd">
+<td><strong>MDGF%</strong></td>
+<td>Percentage of Medium Danger Goals while that player is on the ice that are for that player’s team. MDGF*100/(MDGF+MDGA)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="low-danger-scoring-chances" class="level3">
+<h3 class="anchored" data-anchor-id="low-danger-scoring-chances">Low Danger Scoring Chances</h3>
+<p>A scoring chance with a score of 1 or less. Does not include any attempts from the attacking team’s neutral or defensive zone.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>LDCF</strong></td>
+<td>Count of Low Danger Scoring Chances for that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="even">
+<td><strong>LDCA</strong></td>
+<td>Count of Low Danger Scoring Chances against that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="odd">
+<td><strong>LDCF%</strong></td>
+<td>Percentage of total Low Danger Scoring Chances while that player is on the ice that are for that player’s team. LDCF*100/(LDCF+LDCA)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="low-danger-goals" class="level3">
+<h3 class="anchored" data-anchor-id="low-danger-goals">Low Danger Goals</h3>
+<p>Goals generated from Low Danger Scoring Chances</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>LDGF</strong></td>
+<td>Count of Goals off of Low Danger Scoring Chances for that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="even">
+<td><strong>LDGA</strong></td>
+<td>Count of Goals off of Low Danger Scoring Chances against that player’s team while that player is on the ice.</td>
+</tr>
+<tr class="odd">
+<td><strong>LDGF%</strong></td>
+<td>Percentage of Low Danger Goals while that player is on the ice that are for that player’s team. LDGF*100/(LDGF+LDGA)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="expected-goals" class="level3">
+<h3 class="anchored" data-anchor-id="expected-goals">Expected Goals</h3>
+<p>Expected goals (xG) is a statistical measure that evaluates shot quality by assigning a goal probability to each shot attempt.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>xGF</strong></td>
+<td>Expected Goals For. The sum of the probability values of all shot attempts for that player’s team while that player is on the ice. Represents the number of goals the team should have scored based on shot quality.</td>
+</tr>
+<tr class="even">
+<td><strong>xGA</strong></td>
+<td>Expected Goals Against. The sum of the probability values of all shot attempts against that player’s team while that player is on the ice. Represents the number of goals the team should have conceded based on shot quality.</td>
+</tr>
+<tr class="odd">
+<td><strong>xGF%</strong></td>
+<td>Expected Goals Percentage. The percentage of the total expected goals while that player is on the ice that are for that player’s team. xGF*100/(xGF+xGA)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="pdo" class="level3">
+<h3 class="anchored" data-anchor-id="pdo">PDO</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>SH%</strong></td>
+<td>Percentage of Shots for that player’s team while that player is on the ice that were Goals. GF*100/SF</td>
+</tr>
+<tr class="even">
+<td><strong>SV%</strong></td>
+<td>Percentage of Shots against that player’s team while that player is on the ice that were not Goals. GA*100/SA</td>
+</tr>
+<tr class="odd">
+<td><strong>PDO</strong></td>
+<td>Shooting percentage plus save percentage. (GF/SF)+(GA/SA)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="starts" class="level3">
+<h3 class="anchored" data-anchor-id="starts">Starts</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Off. Zone Starts</strong></td>
+<td>Number of shifts for the player that started with an offensive zone faceoff.</td>
+</tr>
+<tr class="even">
+<td><strong>Neu. Zone Starts</strong></td>
+<td>Number of shifts for the player that started with a neutral zone faceoff.</td>
+</tr>
+<tr class="odd">
+<td><strong>Def. Zone Starts</strong></td>
+<td>Number of shifts for the player that started with a defensive zone faceoff.</td>
+</tr>
+<tr class="even">
+<td><strong>On The Fly Starts</strong></td>
+<td>Number of shifts for the player that started during play (without a faceoff).</td>
+</tr>
+<tr class="odd">
+<td><strong>Off. Zone Start %</strong></td>
+<td>Percentage of starts for the player that were Offensive Zone Starts, excluding Neutral Zone and On The Fly Starts. Off. Zone Starts*100/(Off. Zone Starts+Def. Zone Starts)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="faceoffs" class="level3">
+<h3 class="anchored" data-anchor-id="faceoffs">Faceoffs</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Off. Zone Faceoffs</strong></td>
+<td>Number of faceoffs in the offensive zone for which the player was on the ice.</td>
+</tr>
+<tr class="even">
+<td><strong>Neu. Zone Faceoffs</strong></td>
+<td>Number of faceoffs in the neutral zone for which the player was on the ice.</td>
+</tr>
+<tr class="odd">
+<td><strong>Def. Zone Faceoffs</strong></td>
+<td>Number of faceoffs in the defensive zone for which the player was on the ice.</td>
+</tr>
+<tr class="even">
+<td><strong>Off. Zone Faceoff %</strong></td>
+<td>Percentage of faceoffs in the offensive zone for which the player was on the ice, excluding neutral zone faceoffs. Off. Zone Faceoffs*100/(Off. Zone Faceoffs+Def. Zone Faceoffs)</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="player-individual-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="player-individual-statistics">Player Individual Statistics</h2>
+<p>All player statistics are presented within the scope of the selected filters.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Player</strong></td>
+<td>Player name.</td>
+</tr>
+<tr class="even">
+<td><strong>Team</strong></td>
+<td>Team or teams that the player has played for. Not displayed when filtering for specific teams.</td>
+</tr>
+<tr class="odd">
+<td><strong>Position</strong></td>
+<td>Position or positions that the player has been listed as playing by the NHL.</td>
+</tr>
+<tr class="even">
+<td><strong>GP</strong></td>
+<td>Games played.</td>
+</tr>
+<tr class="odd">
+<td><strong>TOI</strong></td>
+<td>Total amount of time played.</td>
+</tr>
+<tr class="even">
+<td><strong>TOI/GP</strong></td>
+<td>Amount of time played per game. Not displayed when filtering for Counts.</td>
+</tr>
+</tbody>
+</table>
+<section id="points" class="level3">
+<h3 class="anchored" data-anchor-id="points">Points</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Goals</strong></td>
+<td>Goals scored by the player, outside of the shootout.</td>
+</tr>
+<tr class="even">
+<td><strong>Assists</strong></td>
+<td>Any assist by the player.</td>
+</tr>
+<tr class="odd">
+<td><strong>First Assists</strong></td>
+<td>Primary assists by the player.</td>
+</tr>
+<tr class="even">
+<td><strong>Second Assists</strong></td>
+<td>Secondary assists by the player.</td>
+</tr>
+<tr class="odd">
+<td><strong>Total Points</strong></td>
+<td>Goals scored and assists by the player, outside of the shootout.</td>
+</tr>
+<tr class="even">
+<td><strong>IPP</strong></td>
+<td>Individual Point Percentage, the percentage of goals for that player’s team while that player is on the ice that the player earned a point on. Total Points/Goals For</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="shooting" class="level3">
+<h3 class="anchored" data-anchor-id="shooting">Shooting</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Shots</strong></td>
+<td>Any shot attempt on net (goals and shots on net) by the player, outside of the shootout.</td>
+</tr>
+<tr class="even">
+<td><strong>SH%</strong></td>
+<td>Percentage of Shots by the player that were Goals. Goals*100/Shots</td>
+</tr>
+<tr class="odd">
+<td><strong>iCF</strong></td>
+<td>Any shot attempt (goals, shots on net, misses and blocks) by the player, outside of the shootout.</td>
+</tr>
+<tr class="even">
+<td><strong>iFF</strong></td>
+<td>Any unblocked shot attempt (goals, shots on net and misses) by the player, outside of the shootout.</td>
+</tr>
+<tr class="odd">
+<td><strong>iSCF</strong></td>
+<td>Any scoring chance by the player, outside of the shootout.</td>
+</tr>
+<tr class="even">
+<td><strong>iHDCF</strong></td>
+<td>Any high danger scoring chance by the player, outside of the shootout.</td>
+</tr>
+<tr class="odd">
+<td><strong>Rush Attempts</strong></td>
+<td>Any rush shot attempt (goals, shots on net, misses and blocks) by the player, outside of the shootout.</td>
+</tr>
+<tr class="even">
+<td><strong>Rebounds Created</strong></td>
+<td>Any shot attempt (shots on net, misses and blocks) that results in a rebound shot attempt.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="penalties" class="level3">
+<h3 class="anchored" data-anchor-id="penalties">Penalties</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>PIM</strong></td>
+<td>Penalty minutes assessed to the player.</td>
+</tr>
+<tr class="even">
+<td><strong>Total Penalties</strong></td>
+<td>Total number of penalties taken by the player</td>
+</tr>
+<tr class="odd">
+<td><strong>Minor</strong></td>
+<td>Number of minor penalties taken by the player.</td>
+</tr>
+<tr class="even">
+<td><strong>Major</strong></td>
+<td>Number of major penalties taken by the player.</td>
+</tr>
+<tr class="odd">
+<td><strong>Misconduct</strong></td>
+<td>Number of 10 minute or game misconducts taken by the player.</td>
+</tr>
+<tr class="even">
+<td><strong>Penalties Drawn</strong></td>
+<td>Number of penalties committed against the player.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="real-time" class="level3">
+<h3 class="anchored" data-anchor-id="real-time">Real-time</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Giveaways</strong></td>
+<td>Number of unforced turnovers made by the player.</td>
+</tr>
+<tr class="even">
+<td><strong>Takeaways</strong></td>
+<td>Number of times the player takes the puck away from the opposition.</td>
+</tr>
+<tr class="odd">
+<td><strong>Hits</strong></td>
+<td>Number of hits made by the player.</td>
+</tr>
+<tr class="even">
+<td><strong>Hits Taken</strong></td>
+<td>Number of hits taken by the player.</td>
+</tr>
+<tr class="odd">
+<td><strong>Shots Blocked</strong></td>
+<td>Number of opposition shot attempts blocked by the player.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="faceoffs-1" class="level3">
+<h3 class="anchored" data-anchor-id="faceoffs-1">Faceoffs</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Faceoffs Won</strong></td>
+<td>Faceoffs won by the player</td>
+</tr>
+<tr class="even">
+<td><strong>Faceoffs Lost</strong></td>
+<td>Faceoffs lost by the player</td>
+</tr>
+<tr class="odd">
+<td><strong>Faceoff %</strong></td>
+<td>Percentage of total faceoffs taken by that player that were won Faceoffs Won*100/(Faceoffs Won+Faceoffs Lost)</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="goalie-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="goalie-statistics">Goalie Statistics</h2>
+<p>All player statistics are presented within the scope of the selected filters.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Player</strong></td>
+<td>Player name.</td>
+</tr>
+<tr class="even">
+<td><strong>Team</strong></td>
+<td>Team or teams that the player has played for. Not displayed when filtering for specific teams.</td>
+</tr>
+<tr class="odd">
+<td><strong>GP</strong></td>
+<td>Games played.</td>
+</tr>
+<tr class="even">
+<td><strong>TOI</strong></td>
+<td>Total amount of time played.</td>
+</tr>
+<tr class="odd">
+<td><strong>TOI/GP</strong></td>
+<td>Amount of time played per game. Not displayed when filtering for Counts.</td>
+</tr>
+</tbody>
+</table>
+<section id="saves" class="level3">
+<h3 class="anchored" data-anchor-id="saves">Saves</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Shots Against</strong></td>
+<td>Shots on Goal (Shots and Goals) faced by the goalie.</td>
+</tr>
+<tr class="even">
+<td><strong>Saves</strong></td>
+<td>Saves made by the goalie.</td>
+</tr>
+<tr class="odd">
+<td><strong>Goals Against</strong></td>
+<td>Goals allowed by the goalie.</td>
+</tr>
+<tr class="even">
+<td><strong>SV%</strong></td>
+<td>Percentage of Shots Against that were Saves. (Saves/Shots Against)</td>
+</tr>
+<tr class="odd">
+<td><strong>GAA</strong></td>
+<td>Goals allowed per 60 minutes of play. Goals Against*60/TOI</td>
+</tr>
+<tr class="even">
+<td><strong>GSAA</strong></td>
+<td>Goals Saved Above Average, the difference between the goalie’s Goals Against and a Goals Against with the same Shots Against and the average SV%. Average SV%*Shots Against - Goals Against</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="high-danger-saves" class="level3">
+<h3 class="anchored" data-anchor-id="high-danger-saves">High Danger Saves</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>HD Shots Against</strong></td>
+<td>Shots on Goal (Shots and Goals) that are High Danger Chances faced by the goalie.</td>
+</tr>
+<tr class="even">
+<td><strong>HD Saves</strong></td>
+<td>Saves on HD Shots Against made by the goalie.</td>
+</tr>
+<tr class="odd">
+<td><strong>HD Goals Against</strong></td>
+<td>Goals from HD Shots Against allowed by the goalie.</td>
+</tr>
+<tr class="even">
+<td><strong>HDSV%</strong></td>
+<td>Percentage of HD Shots Against that were Saves. (HD Saves/HD Shots Against)</td>
+</tr>
+<tr class="odd">
+<td><strong>HDGAA</strong></td>
+<td>HD Goals allowed per 60 minutes of play. HD Goals Against*60/TOI</td>
+</tr>
+<tr class="even">
+<td><strong>HDGSAA</strong></td>
+<td>HD Goals Saved Above Average, the difference between the goalie’s HD Goals Against and a HD Goals Against with the same HD Shots Against and the average HDSV%. Average HDSV%*HD Shots Against - HD Goals Against</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="medium-danger-saves" class="level3">
+<h3 class="anchored" data-anchor-id="medium-danger-saves">Medium Danger Saves</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>MD Shots Against</strong></td>
+<td>Shots on Goal (Shots and Goals) that are Medium Danger Chances faced by the goalie.</td>
+</tr>
+<tr class="even">
+<td><strong>MD Saves</strong></td>
+<td>Saves on MD Shots Against made by the goalie.</td>
+</tr>
+<tr class="odd">
+<td><strong>MD Goals Against</strong></td>
+<td>Goals from MD Shots Against allowed by the goalie.</td>
+</tr>
+<tr class="even">
+<td><strong>MDSV%</strong></td>
+<td>Percentage of MD Shots Against that were Saves. (MD Saves/MD Shots Against)</td>
+</tr>
+<tr class="odd">
+<td><strong>MDGAA</strong></td>
+<td>MD Goals allowed per 60 minutes of play. MD Goals Against*60/TOI</td>
+</tr>
+<tr class="even">
+<td><strong>MDGSAA</strong></td>
+<td>MD Goals Saved Above Average, the difference between the goalie’s MD Goals Against and a MD Goals Against with the same MD Shots Against and the average MDSV%. Average MDSV%*MD Shots Against - MD Goals Against</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="low-danger-saves" class="level3">
+<h3 class="anchored" data-anchor-id="low-danger-saves">Low Danger Saves</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>LD Shots Against</strong></td>
+<td>Shots on Goal (Shots and Goals) that are Low Danger Chances faced by the goalie.</td>
+</tr>
+<tr class="even">
+<td><strong>LD Saves</strong></td>
+<td>Saves on LD Shots Against made by the goalie.</td>
+</tr>
+<tr class="odd">
+<td><strong>LD Goals Against</strong></td>
+<td>Goals from LD Shots Against allowed by the goalie.</td>
+</tr>
+<tr class="even">
+<td><strong>LDSV%</strong></td>
+<td>Percentage of LD Shots Against that were Saves. (LD Saves/LD Shots Against)</td>
+</tr>
+<tr class="odd">
+<td><strong>LDGAA</strong></td>
+<td>LD Goals allowed per 60 minutes of play. LD Goals Against*60/TOI</td>
+</tr>
+<tr class="even">
+<td><strong>LDGSAA</strong></td>
+<td>LD Goals Saved Above Average, the difference between the goalie’s LD Goals Against and a LD Goals Against with the same LD Shots Against and the average LDSV%. Average LDSV%*LD Shots Against - LD Goals Against</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="shot-info" class="level3">
+<h3 class="anchored" data-anchor-id="shot-info">Shot Info</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Rush Attempts Against</strong></td>
+<td>Number of Shot Attempts (including missed and block shots) that the goalie faced that are considered Rush Attempts</td>
+</tr>
+<tr class="even">
+<td><strong>Rebound Attempts Against</strong></td>
+<td>Number of Shot Attempts (including missed and block shots) that the goalie faced that are considered Rebound Attempts</td>
+</tr>
+<tr class="odd">
+<td><strong>Avg. Shot Distance</strong></td>
+<td>Average distance (in feet) of shots on net faced by the goalie</td>
+</tr>
+<tr class="even">
+<td><strong>Avg. Goal Distance</strong></td>
+<td>Average distance (in feet) of goals allowed by the goalie</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
