@@ -1,0 +1,17 @@
+{
+  "hash": "c357cf4bedc5cc30b15be4843ee992f3",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"TUTORIAL 7\"\nsubtitle: \"Data Driven NHL Award Voting\"\nauthor: \"Barrie Robison\"\ndate: \"2025-03-04\"\ncategories: [Tutorial, DataViz, Tables, Tidyverse]\nimage: \"Cthulhuhockeycard.png\"\ncode-fold: true\ncode-tools: true\ndescription: \"Rationalizing my intuition with data.\"\n\n\n---\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nIndivdual.Skater <- read.csv(\"SkaterIndividualstats.csv\")\nOnIce.Skater <- read.csv(\"SkaterOnicestats.csv\")\nGoalie <- read.csv(\"Goalies.csv\")\nIndividual.Skater.Rookie <- read.csv(\"RookieSkaterindividual.csv\")\nOnIce.Skater.Rookie <- read.csv(\"RookieSkaterOnIce.csv\")\nRookie.Goalie <- read.csv(\"RookieGoalies.csv\")\n```\n:::\n\n\n\n\n## VEZINA BALLOT\n\nWho is the best goalie?  I'll start by examining the stats from the assignment.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot(Goalie, aes(x=SV.))+\n  geom_histogram(binwidth = .01)+\n  labs(x = \"Save Percentage\",\n       y = \"Number of Players\",\n       caption = \"source: https://www.naturalstattrick.com/\",\n       title = \"Distribution of Save Percentage\",\n       subtitle = \"2024-2025 season stats as of March 4\")\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n\n```{.r .cell-code}\nggplot(Goalie, aes(x=GAA))+\n  geom_histogram(binwidth = .2)+\n  labs(x = \"Goals Against Average\",\n       y = \"Number of Players\",\n       caption = \"source: https://www.naturalstattrick.com/\",\n       title = \"Distribution of Goals Against Average\",\n       subtitle = \"2024-2025 season stats as of March 4\")\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-3-2.png){width=672}\n:::\n\n```{.r .cell-code}\nggplot(Goalie, aes(x=GSAA))+\n  geom_histogram(binwidth = 1)+\n  labs(x = \"Goals Saved Above Average\",\n       y = \"Number of Players\",\n       caption = \"source: https://www.naturalstattrick.com/\",\n       title = \"Distribution of Goals Saved Above Average\",\n       subtitle = \"2024-2025 season stats as of March 4\")\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-3-3.png){width=672}\n:::\n:::\n\n\n\nNot super helpful.  This is because our task is related to comparing values for individual players.  Let's do that for Save Percentage.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot(Goalie, aes(x=SV., y=reorder(Player, SV.))) +\n  geom_col(fill=\"#1F77B4\") +\n  labs(x = \"Save Percentage\",\n       y = \"Player Name\",\n       caption = \"Source: https://www.naturalstattrick.com/\",\n       title = \"Individual Save Percentage\",\n       subtitle = \"2024-2025 season stats as of March 4\") +\n  theme_minimal() +\n  theme(panel.grid.major.y = element_blank(),\n        panel.grid.minor = element_blank())\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-4-1.png){width=960}\n:::\n:::\n\n\n\nYay!  We are done!  My Vezina Ballot will be the top five players on this plot in order.  Right?\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

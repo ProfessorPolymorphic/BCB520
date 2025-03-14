@@ -1,0 +1,464 @@
+---
+title: "BarrieBallots"
+subtitle: "Data Driven NHL Award Voting"
+author: "Barrie Robison"
+date: "2025-03-04"
+categories: [Tutorial, DataViz, Tables, Tidyverse]
+image: "Cthulhuhockeycard.png"
+code-fold: true
+code-tools: true
+description: "Rationalizing my intuition with data."
+---
+
+```{r include=FALSE}
+library(tidyverse)
+
+library(readxl)
+
+```
+
+```{r}
+Individual.Skater <- read.csv("SkaterIndividualstats.csv")
+OnIce.Skater <- read.csv("SkaterOnicestats.csv")
+Goalie <- read.csv("Goalies.csv")
+Individual.Skater.Rookie <- read.csv("RookieSkaterindividual.csv")
+OnIce.Skater.Rookie <- read.csv("RookieSkaterOnIce.csv")
+Rookie.Goalie <- read.csv("RookieGoalies.csv")
+
+```
+
+## VEZINA BALLOT
+
+```{r}
+Scale.Goalies <- Goalie %>%
+  filter(GP>25)%>%
+  mutate(scale.SV. = scale(SV.))%>%
+  mutate(scale.GAA = -scale(GAA))%>%
+  mutate(scale.GSAA = scale(GSAA))%>%
+  mutate(scale.GSAx = scale(xG.Against-Goals.Against))%>%
+  mutate(scale.Vezina = scale.SV. + scale.GAA + scale.GSAA + scale.GSAx)%>%
+  
+  mutate(rank.SV. = rank(scale.SV.))%>%
+  mutate(rank.GAA = rank(scale.GAA))%>%
+  mutate(rank.GSAA = rank(scale.GSAA))%>%
+  mutate(rank.GSAx = rank(scale.GSAx))
+
+Scale.Vez.plot <- Scale.Goalies %>%
+  filter(GP > 25) %>%
+  
+  # Pivot to long format for stacking
+  pivot_longer(
+    cols = c(scale.GAA, scale.GSAA, scale.SV., scale.GSAx,
+             rank.GAA, rank.GSAA, rank.SV., rank.GSAx),
+    names_to = "component",
+    values_to = "value"
+  )
+
+
+ggplot(Scale.Vez.plot%>%
+         filter(str_detect(component, "scale")), aes(x = reorder(Player, scale.Vezina), y = value, fill = component)) +
+  geom_col() +
+  coord_flip() +
+  scale_fill_manual(
+    values = c("scale.GAA" = "#1F77B4", 
+               "scale.GSAA" = "#D62728",
+               "scale.SV." = "#FF7F0E",
+               "scale.GSAx" = "black")
+  ) +
+  labs(x = "Player Name",
+       y = "Vezina Score Components",
+       fill = "Component",
+       caption = "Source: https://www.naturalstattrick.com/",
+       title = "Vezina Score Components (save.resid - goal.resid)",
+       subtitle = "2024-2025 season stats as of March 4") +
+  theme_minimal() +
+  theme(panel.grid.major.y = element_blank(),
+        panel.grid.minor = element_blank())
+
+```
+
+## HART BALLOT
+
+Awarded to the "player judged most valuable to his team." This isn't necessarily the best overall player, but rather the one who contributes most significantly to his team's success.
+
+```{r}
+Scale.OnIce <- OnIce.Skater %>%
+  filter(GP > 30) %>%
+  select(Player, Position, Team, CF., xGF.) %>%
+  mutate(Position = if_else(Position == "D", "D", "F")) %>%
+  # Extract team after comma, or keep original if no comma exists
+  mutate(Team = case_when(
+    str_detect(Team, ",") ~ str_trim(str_extract(Team, ",[^,]*$")), # Extract everything after the last comma
+    TRUE ~ Team
+  )) %>%
+  # Remove the leading comma if it exists
+  mutate(Team = str_replace(Team, "^,\\s*", "")) %>%
+  group_by(Position) %>%
+  mutate(scale.CF. = scale(CF.),
+         scale.xGF. = scale(xGF.)) %>%
+  mutate(scale.Hart = scale.xGF. + scale.CF.)
+
+Scale.Individual <- Individual.Skater %>%
+  filter(GP > 30) %>%
+  select(Player, Position, Team, Goals, Total.Assists) %>%
+  mutate(Position = if_else(Position == "D", "D", "F")) %>%
+  # Extract team after comma, or keep original if no comma exists
+  mutate(Team = case_when(
+    str_detect(Team, ",") ~ str_trim(str_extract(Team, ",[^,]*$")), # Extract everything after the last comma
+    TRUE ~ Team
+  )) %>%
+  # Remove the leading comma if it exists
+  mutate(Team = str_replace(Team, "^,\\s*", "")) %>%
+  group_by(Position) %>%
+  mutate(scale.Goals = scale(Goals),
+         scale.Assists = scale(Total.Assists)) %>%
+  mutate(scale.Hart.Ind = scale.Goals + scale.Assists)
+
+
+Scale.Hart <- Scale.OnIce %>%
+  left_join(Scale.Individual, by = "Player") %>%
+  mutate(resid.Goals = resid(lm(scale.Goals ~ Team.x, data = .)),
+         resid.Assists = resid(lm(scale.Assists ~ Team.x, data = .)),
+         resid.CF. = resid(lm(scale.CF. ~ Team.x, data = .)),
+         resid.xGF. = resid(lm(scale.xGF. ~ Team.x, data = .)))
+
+
+
+# Step 1: Data frame preparation
+Hart.Long <- Scale.Hart %>%
+  # First calculate Hart score for each player if not already done
+  mutate(Hart = resid.Goals + resid.Assists + resid.CF. + resid.xGF.) %>%
+  pivot_longer(cols = c(scale.CF., scale.xGF., scale.Assists, scale.Goals,
+                        resid.Assists, resid.CF., resid.Goals, resid.xGF.), 
+               names_to = "component", 
+               values_to = "value") 
+
+
+
+# Split the data into separate components
+library(purrr)
+
+
+hart_filtered <- Hart.Long %>%
+  filter(str_detect(component, "resid"), Hart > 6)
+
+# Get unique components
+components <- unique(hart_filtered$component)
+
+# Create a list of plots, one for each component
+component_plots <- map(components, function(comp) {
+  # Filter for just this component
+  comp_data <- hart_filtered %>% filter(component == comp)
+  
+  # Create component-specific plot with its own ordering
+  ggplot(comp_data, 
+         aes(x = reorder(Player, value), y = value, fill = Position.x)) +
+    geom_col() +
+    coord_flip() +
+    scale_fill_manual(
+      values = c("D" = "#1F77B4", 
+                "F" = "#D62728"),
+      labels = c("D" = "Defenseman", 
+                "F" = "Forward")
+    ) +
+    labs(x = NULL, # We'll add a common x-axis label later
+         y = NULL, # We'll add a common y-axis label later
+         fill = "Position") +
+    theme_minimal() +
+    theme(
+      panel.grid.major.y = element_blank(),
+      panel.grid.minor = element_blank(),
+      axis.text.y = element_text(size = 8),
+      legend.position = if(comp == components[1]) "bottom" else "none"
+    ) +
+    ggtitle(comp)
+})
+
+# Combine the plots
+library(gridExtra)
+combined_plot <- do.call(grid.arrange, c(component_plots, ncol = 2))
+
+# Add overall title and caption
+title <- grid::textGrob("Top 2 Players Per Team - Hart Score Components", 
+                        gp = grid::gpar(fontsize = 14, fontface = "bold"))
+subtitle <- grid::textGrob("2024-2025 season stats as of March 4", 
+                          gp = grid::gpar(fontsize = 10))
+caption <- grid::textGrob("Source: https://www.naturalstattrick.com/", 
+                          gp = grid::gpar(fontsize = 8), 
+                          hjust = 1)
+
+grid.arrange(title, subtitle, combined_plot, caption,
+             heights = c(0.5, 0.3, 10, 0.3),
+             ncol = 1)
+
+```
+
+```{r}
+
+
+
+
+
+
+# Step 2: Create the plot
+ggplot(Hart.Long%>%
+         filter(Hart>6, str_detect(component, "resid")), 
+                   aes(x = reorder(Player, Hart), y = value, fill = component)) +
+  geom_col() +
+  coord_flip() +
+  scale_fill_manual(
+    values = c("resid.Goals" = "#1F77B4", 
+               "resid.Assists" = "#D62728",
+               "resid.CF." = "#FF7F0E",
+               "resid.xGF." = "black")
+  ) +
+  
+  labs(x = "Player Name",
+       y = "Hart Score Components",
+       fill = "Component",
+       caption = "Source: https://www.naturalstattrick.com/",
+       title = "Top 1 Players Per Team - Hart Score Components",
+       subtitle = "2024-2025 season stats as of March 4") +
+  theme_minimal() +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    # Improve readability of player names
+    axis.text.y = element_text(size = 8)
+  )+
+  facet_wrap(~Position.x)
+
+```
+
+## James Norris Memorial Trophy
+
+Awarded to the defenseman who demonstrates "the greatest all-around ability" at the position.
+
+```{r}
+Norris.OnIce <- OnIce.Skater%>%
+  filter(Position == "D", GP > 30)%>%
+  mutate(scale.CF. = scale(CF.),
+         scale.xGF. = scale(xGF.))%>%
+  select(Player, Team, GP, CF., xGF., scale.CF., scale.xGF. )
+Norris.Indiv <- Individual.Skater%>%
+  filter(Position == "D", GP > 30)%>%
+  mutate(scale.Goals = scale(Goals),
+         scale.Assists = scale(Total.Assists))%>%
+  select(Player, Team, GP, Goals, Total.Assists, scale.Goals, scale.Assists )
+
+Norris<- Norris.OnIce%>%
+  left_join(Norris.Indiv, by = "Player")%>%
+  mutate(scale.Norris = scale.CF. + scale.xGF. + scale.Goals + scale.Assists)
+
+Norris.Plot <- Norris %>%
+  pivot_longer(cols = c(scale.Goals, scale.Assists, scale.CF., scale.xGF.), 
+               names_to = "component", 
+               values_to = "value") %>%
+  filter(str_detect(component, "scale"))
+
+# Step 2: Create the plot
+ggplot(Norris.Plot%>% filter(scale.Norris > 3), 
+                   aes(x = reorder(Player, scale.Norris), y = value, fill = component)) +
+  geom_col() +
+  coord_flip() +
+  scale_fill_manual(
+    values = c("scale.Goals" = "#1F77B4", 
+               "scale.Assists" = "#D62728",
+               "scale.CF." = "#FF7F0E",
+               "scale.xGF." = "black")
+  ) +
+  
+  labs(x = "Player Name",
+       y = "Norris Score Components",
+       fill = "Component",
+       caption = "Source: https://www.naturalstattrick.com/",
+       title = "Top Players - Norris Score Components",
+       subtitle = "2024-2025 season stats as of March 4") +
+  theme_minimal() +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    # Improve readability of player names
+    axis.text.y = element_text(size = 8)
+  )
+
+
+```
+
+## Calder Memorial Trophy
+
+Given to the player "adjudged to be the most proficient in his first year of competition." This is essentially the rookie of the year award.
+
+```{r}
+Calder.OnIce <- OnIce.Skater.Rookie%>%
+  filter(GP > 20)%>%
+  mutate(scale.CF. = scale(CF.),
+         scale.xGF. = scale(xGF.))%>%
+  select(Player, Team, Position, GP, CF., xGF., scale.CF., scale.xGF. )
+Calder.Indiv <- Individual.Skater.Rookie%>%
+  filter(GP > 20)%>%
+  mutate(scale.Goals = scale(Goals),
+         scale.Assists = scale(Total.Assists))%>%
+  select(Player, Team, Position, GP, Goals, Total.Assists, scale.Goals, scale.Assists )
+
+Calder <- Calder.OnIce %>%
+  left_join(Calder.Indiv, by = "Player") %>%
+  mutate(scale.Calder = scale.CF. + scale.xGF. + scale.Goals + scale.Assists) %>%
+  mutate(Position.x = if_else(Position.x == "D", "D", "F"))
+
+Calder.Plot <- Calder %>%
+  pivot_longer(cols = c(scale.Goals, scale.Assists, scale.CF., scale.xGF.), 
+               names_to = "component", 
+               values_to = "value") %>%
+  filter(str_detect(component, "scale"))
+
+# Step 2: Create the plot
+ggplot(Calder.Plot%>% filter(scale.Calder > 3), 
+                   aes(x = reorder(Player, scale.Calder), y = value, fill = component)) +
+  geom_col() +
+  coord_flip() +
+  scale_fill_manual(
+    values = c("scale.Goals" = "#1F77B4", 
+               "scale.Assists" = "#D62728",
+               "scale.CF." = "#FF7F0E",
+               "scale.xGF." = "black")
+  ) +
+  
+  labs(x = "Player Name",
+       y = "Calder Score Components",
+       fill = "Component",
+       caption = "Source: https://www.naturalstattrick.com/",
+       title = "Top Players - Calder Score Components",
+       subtitle = "2024-2025 season stats as of March 4") +
+  theme_minimal() +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    # Improve readability of player names
+    axis.text.y = element_text(size = 8)
+  )+
+  facet_wrap(~Position.x)
+
+
+
+```
+
+## Frank J. Selke Trophy
+
+Awarded to the forward who best excels in the defensive aspects of the game.
+
+```{r}
+Selke.OnIce <- OnIce.Skater%>%
+  filter(Position != "D", TOI > 1000)%>%
+  mutate(scale.CA = scale(CA/TOI),
+         scale.GA = scale(GA/TOI),
+         scale.SA = scale(SA/TOI),
+         scale.xGA = scale(xGA/TOI))%>%
+  select(Player, Team, Position, TOI, GP, CA, xGA, GA, SA, scale.CA, scale.GA, scale.SA, scale.xGA )%>%
+  mutate(Selke = scale.CA + scale.GA + scale.SA + scale.xGA)
+
+
+
+
+Selke.Plot <- Selke.OnIce %>%
+  pivot_longer(cols = c(scale.CA, scale.GA, scale.SA, scale.xGA), 
+               names_to = "component", 
+               values_to = "value") %>%
+  filter(str_detect(component, "scale"))
+
+
+
+# Step 2: Create the plot
+ggplot(Selke.Plot%>% filter(Selke < -2), 
+                   aes(x = reorder(Player, Selke), y = value, fill = component)) +
+  geom_col() +
+  coord_flip() +
+  scale_fill_manual(
+    values = c("scale.CA" = "#1F77B4", 
+               "scale.GA" = "#D62728",
+               "scale.SA" = "#FF7F0E",
+               "scale.xGA" = "black")
+  ) +
+  
+  labs(x = "Player Name",
+       y = "Selke Score Components",
+       fill = "Component",
+       caption = "Source: https://www.naturalstattrick.com/",
+       title = "Top Players - Selke Score Components",
+       subtitle = "2024-2025 season stats as of March 4") +
+  theme_minimal() +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    # Improve readability of player names
+    axis.text.y = element_text(size = 8)
+  )
+
+
+```
+
+## Lady Byng Memorial Trophy
+
+Presented to the player who exhibits "the best type of sportsmanship and gentlemanly conduct combined with a high standard of playing ability."
+
+```{r}
+Byng.OnIce <- OnIce.Skater%>%
+  filter(TOI > 1000)%>%
+  group_by(Position)%>%
+  mutate(scale.CF. = scale(CF.),
+         scale.xGF. = scale(xGF.))%>%
+  select(Player, Team, GP, Position, CF., xGF., scale.CF., scale.xGF. )
+Byng.Indiv <- Individual.Skater%>%
+  filter(TOI > 1000)%>%
+  group_by(Position)%>%
+  mutate(scale.Goals = scale(Goals),
+         scale.Assists = scale(Total.Assists),
+         scale.PIM = -scale(PIM))%>%
+  select(Player, Team, GP, Position, PIM, Goals, Total.Assists, scale.Goals, scale.Assists, scale.PIM )
+
+Byng<- Byng.OnIce%>%
+  left_join(Byng.Indiv, by = "Player")%>%
+  mutate(scale.Byng = (scale.CF. + scale.xGF. + scale.Goals + scale.Assists)/4,
+         Byng = scale.Byng + scale.PIM)
+
+
+
+Byng.Plot <- Byng %>%
+  pivot_longer(cols = c(scale.Byng, scale.PIM), 
+               names_to = "component", 
+               values_to = "value") %>%
+  filter(str_detect(component, "scale"))
+
+
+
+# Step 2: Create the plot
+ggplot(Byng%>% filter(Byng > 0.5, scale.PIM > .7)%>%
+         mutate(Position = if_else(Position.x == "D", "D", "F")), 
+                   aes(x = reorder(Player,scale.PIM), y = scale.PIM, fill = Position)) +
+  geom_col() +
+  coord_flip() +
+  scale_fill_manual(
+    values = c("D" = "#1F77B4", 
+               "F" = "#D62728")
+  ) +
+  
+  labs(x = "Player Name",
+       y = "Byng Score Components",
+       fill = "Component",
+       caption = "Source: https://www.naturalstattrick.com/",
+       title = "Top Players - Byng Score Components",
+       subtitle = "2024-2025 season stats as of March 4") +
+  theme_minimal() +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    # Improve readability of player names
+    axis.text.y = element_text(size = 8)
+  )+
+  facet_wrap(~Position)
+
+
+
+
+
+```

@@ -182,846 +182,6 @@
     "text": "All player statistics are presented within the scope of the selected filters.\n\n\n\n\n\n\n\nTerm\nDefinition\n\n\n\n\nPlayer\nPlayer name.\n\n\nTeam\nTeam or teams that the player has played for. Not displayed when filtering for specific teams.\n\n\nGP\nGames played.\n\n\nTOI\nTotal amount of time played.\n\n\nTOI/GP\nAmount of time played per game. Not displayed when filtering for Counts.\n\n\n\n\n\n\n\n\n\n\n\n\nTerm\nDefinition\n\n\n\n\nShots Against\nShots on Goal (Shots and Goals) faced by the goalie.\n\n\nSaves\nSaves made by the goalie.\n\n\nGoals Against\nGoals allowed by the goalie.\n\n\nSV%\nPercentage of Shots Against that were Saves. (Saves/Shots Against)\n\n\nGAA\nGoals allowed per 60 minutes of play. Goals Against*60/TOI\n\n\nGSAA\nGoals Saved Above Average, the difference between the goalie’s Goals Against and a Goals Against with the same Shots Against and the average SV%. Average SV%*Shots Against - Goals Against\n\n\n\n\n\n\n\n\n\n\n\n\n\nTerm\nDefinition\n\n\n\n\nHD Shots Against\nShots on Goal (Shots and Goals) that are High Danger Chances faced by the goalie.\n\n\nHD Saves\nSaves on HD Shots Against made by the goalie.\n\n\nHD Goals Against\nGoals from HD Shots Against allowed by the goalie.\n\n\nHDSV%\nPercentage of HD Shots Against that were Saves. (HD Saves/HD Shots Against)\n\n\nHDGAA\nHD Goals allowed per 60 minutes of play. HD Goals Against*60/TOI\n\n\nHDGSAA\nHD Goals Saved Above Average, the difference between the goalie’s HD Goals Against and a HD Goals Against with the same HD Shots Against and the average HDSV%. Average HDSV%*HD Shots Against - HD Goals Against\n\n\n\n\n\n\n\n\n\n\n\n\n\nTerm\nDefinition\n\n\n\n\nMD Shots Against\nShots on Goal (Shots and Goals) that are Medium Danger Chances faced by the goalie.\n\n\nMD Saves\nSaves on MD Shots Against made by the goalie.\n\n\nMD Goals Against\nGoals from MD Shots Against allowed by the goalie.\n\n\nMDSV%\nPercentage of MD Shots Against that were Saves. (MD Saves/MD Shots Against)\n\n\nMDGAA\nMD Goals allowed per 60 minutes of play. MD Goals Against*60/TOI\n\n\nMDGSAA\nMD Goals Saved Above Average, the difference between the goalie’s MD Goals Against and a MD Goals Against with the same MD Shots Against and the average MDSV%. Average MDSV%*MD Shots Against - MD Goals Against\n\n\n\n\n\n\n\n\n\n\n\n\n\nTerm\nDefinition\n\n\n\n\nLD Shots Against\nShots on Goal (Shots and Goals) that are Low Danger Chances faced by the goalie.\n\n\nLD Saves\nSaves on LD Shots Against made by the goalie.\n\n\nLD Goals Against\nGoals from LD Shots Against allowed by the goalie.\n\n\nLDSV%\nPercentage of LD Shots Against that were Saves. (LD Saves/LD Shots Against)\n\n\nLDGAA\nLD Goals allowed per 60 minutes of play. LD Goals Against*60/TOI\n\n\nLDGSAA\nLD Goals Saved Above Average, the difference between the goalie’s LD Goals Against and a LD Goals Against with the same LD Shots Against and the average LDSV%. Average LDSV%*LD Shots Against - LD Goals Against\n\n\n\n\n\n\n\n\n\n\n\n\n\nTerm\nDefinition\n\n\n\n\nRush Attempts Against\nNumber of Shot Attempts (including missed and block shots) that the goalie faced that are considered Rush Attempts\n\n\nRebound Attempts Against\nNumber of Shot Attempts (including missed and block shots) that the goalie faced that are considered Rebound Attempts\n\n\nAvg. Shot Distance\nAverage distance (in feet) of shots on net faced by the goalie\n\n\nAvg. Goal Distance\nAverage distance (in feet) of goals allowed by the goalie"
   },
   {
-    "objectID": "posts/A1-Lit-Prog/index.html",
-    "href": "posts/A1-Lit-Prog/index.html",
-    "title": "ASSIGNMENT 1 - Fun with literate programming.",
-    "section": "",
-    "text": "The idea of Literate Programming is that source code that is executed as part of the program’s purpose is interspersed with documentation that describes the program’s logic. The concept of literate programming was first articulated by David Knuth in 1984. You know… back when music was good? Modern Data Science leans pretty heavily on literate programming, and to be honest, there aren’t very many good arguments as to why you WOULDN’T want to implement this approach in your own work. Bearing this in mind, we will adopt this framework for most of the activities, exercises, and assignments in this course. All of us will benefit by practicing these skills."
-  },
-  {
-    "objectID": "posts/A1-Lit-Prog/index.html#summary",
-    "href": "posts/A1-Lit-Prog/index.html#summary",
-    "title": "ASSIGNMENT 1 - Fun with literate programming.",
-    "section": "",
-    "text": "The idea of Literate Programming is that source code that is executed as part of the program’s purpose is interspersed with documentation that describes the program’s logic. The concept of literate programming was first articulated by David Knuth in 1984. You know… back when music was good? Modern Data Science leans pretty heavily on literate programming, and to be honest, there aren’t very many good arguments as to why you WOULDN’T want to implement this approach in your own work. Bearing this in mind, we will adopt this framework for most of the activities, exercises, and assignments in this course. All of us will benefit by practicing these skills."
-  },
-  {
-    "objectID": "posts/A1-Lit-Prog/index.html#literate-programming-publishing-systems",
-    "href": "posts/A1-Lit-Prog/index.html#literate-programming-publishing-systems",
-    "title": "ASSIGNMENT 1 - Fun with literate programming.",
-    "section": "LITERATE PROGRAMMING PUBLISHING SYSTEMS",
-    "text": "LITERATE PROGRAMMING PUBLISHING SYSTEMS\nI’m trying to keep this course as technology agnostic as I can. The idea is that you should be practicing and building competencies in the languages and algorithms that are most useful to you. Who am I to tell you to use R instead of Python? If you have skills in a particular language I encourage you to keep using that during this course. That being said, I am going to work the examples using R and R Studio, and I will (mostly) use Quarto as the literate programming framework.\nIf all of this is new to you, no problem. Just follow along in R and Quarto and start your skill building journey with those languages.\nIf you are a Python person, great! Quarto can accommodate that language as well. If you have another preference for literate programming, such as sticking with R Markdown until the Quarto bugs are fixed, that is great. Find the framework and tools that work for you, and practice, practice, practice!\n\nQuarto\nAn open source publishing system that allows you to create websites, documents, blogs, books, publications, presentations, and more while using R, Python, Julia, or Observable. Quarto is intended to be the more functional successor of R Markdown. I intend to use Quarto for most of my work in this course.\n\n\nR Markdown\nAnother publishing system for creating all the things … websites, slides, manuscripts, dashboards, etc. While most people (including me!) instinctively think of R and Python within R Markdown, the list of supported language engines is pretty extensive.\n\nnames(knitr::knit_engines$get())\n\n [1] \"awk\"       \"bash\"      \"coffee\"    \"gawk\"      \"groovy\"    \"haskell\"  \n [7] \"lein\"      \"mysql\"     \"node\"      \"octave\"    \"perl\"      \"php\"      \n[13] \"psql\"      \"Rscript\"   \"ruby\"      \"sas\"       \"scala\"     \"sed\"      \n[19] \"sh\"        \"stata\"     \"zsh\"       \"asis\"      \"asy\"       \"block\"    \n[25] \"block2\"    \"bslib\"     \"c\"         \"cat\"       \"cc\"        \"comment\"  \n[31] \"css\"       \"ditaa\"     \"dot\"       \"embed\"     \"eviews\"    \"exec\"     \n[37] \"fortran\"   \"fortran95\" \"go\"        \"highlight\" \"js\"        \"julia\"    \n[43] \"python\"    \"R\"         \"Rcpp\"      \"sass\"      \"scss\"      \"sql\"      \n[49] \"stan\"      \"targets\"   \"tikz\"      \"verbatim\"  \"ojs\"       \"mermaid\""
-  },
-  {
-    "objectID": "posts/A1-Lit-Prog/index.html#languages-and-toolsets",
-    "href": "posts/A1-Lit-Prog/index.html#languages-and-toolsets",
-    "title": "ASSIGNMENT 1 - Fun with literate programming.",
-    "section": "LANGUAGES AND TOOLSETS",
-    "text": "LANGUAGES AND TOOLSETS\nThere are quite a few, but the five that seemed to keep coming up as I prepped this course are:\n\nR\nA very powerful open source framework for statistical computing and graphics. R has a lot of base functionality, and its capabilities are increased by 100 fold with packages created by R users. Packages are the core units of R code. I’m going to use R for the vast majority of demonstrations in this course.\n\n\nPython\nPython is an open source general purpose programming language. It wasn’t developed just for statistical computing or data science, and people use this language for tons of different applications. There is no denying it has become a very powerful language for data science and data visualization.\n\n\nTableau\nTableau is proprietary software that is very powerful for creating beautiful and functional data visualizations. It can integrate with all sorts of data sources and is used a lot for analytics, especially in the business world. The downsides (that occur to me at least) are that it costs money, it is not open source, and is more of a one-trick-pony than the programming languages on this list.\n\n\nJavascript\nJavascript has been around for about 25 years, and is (I think) the world’s most popular programming language. Along with HTML and CSS, Javascript drives pretty much the entire internet. I mention Javascript here because it has the D3 library, which can create super cool interactive data visualizaitons. In my experience, the learning curve with Javascript and D3 was pretty steep. I bought a book about it once, but just haven’t been able to allocate the amount of time necessary to really start using it. Check out the gallery of examples. Amazing!\n\n\nObservable / D3\nObservable is a set of extensions to Javascript that features something called reactive runtime. This means that the code blocks are executed and compiled as they are written, and changes are implemented instantaneously. Observable is pretty great for data exploration, and is well supported by Quarto. In addition, you can use the Observable JS libraries in Quarto to access D3. We’ll use some of these tools in this course, especially when we start considering interactivity."
-  },
-  {
-    "objectID": "posts/A1-Lit-Prog/index.html#assignment",
-    "href": "posts/A1-Lit-Prog/index.html#assignment",
-    "title": "ASSIGNMENT 1 - Fun with literate programming.",
-    "section": "ASSIGNMENT",
-    "text": "ASSIGNMENT\nAfter that long introduction, I suppose you are wondering what I want you to actually DO.\nWell, I want you to set up your publishing system and preferred language on your computer. Then I want you to recreate the classic figure from Anscombe’s Quartet.\nNow, you might be asking…\n“How am I supposed to do that? You haven’t taught me how to do anything yet!”\nHere is the dirty little secret of modern education.\nThe Internet Exists.\nWhile I could use up an entire 90 minute lecture telling you how to:\n\nDownload and install R, R-Studio, and Quarto (included by default with R-Studio).\nCreate a Quarto document that will publish in the .html format\nInstall the R packages you will need\nTidy up the Anscombe’s Quartet data\nCalculate the summary statistics for each x y pair\nMake a nice little plot…\n\nI’m not going to do that.\nInstead, I want you to use the resources I point towards, or other resources that make more sense to you, to figure out how to do those things."
-  },
-  {
-    "objectID": "posts/A1-Lit-Prog/index.html#resources",
-    "href": "posts/A1-Lit-Prog/index.html#resources",
-    "title": "ASSIGNMENT 1 - Fun with literate programming.",
-    "section": "RESOURCES",
-    "text": "RESOURCES\nTidyverse and Anscombe’s Quartet\nHandy cheat-sheets for many different R packages\nTutorial 1 - Literate Programming\nTutorial 2 - Literate Programming and Anscombe’s Quartet\nTutorial 3 - Python"
-  },
-  {
-    "objectID": "posts/L1-Intro/index.html#who-am-i",
-    "href": "posts/L1-Intro/index.html#who-am-i",
-    "title": "LECTURE 1 - INTRO",
-    "section": "WHO AM I?",
-    "text": "WHO AM I?\nBarrie Robison\nDepartment of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
-  },
-  {
-    "objectID": "posts/L1-Intro/index.html#visualization",
-    "href": "posts/L1-Intro/index.html#visualization",
-    "title": "LECTURE 1 - INTRO",
-    "section": "VISUALIZATION",
-    "text": "VISUALIZATION\nComputers provide visual representations of datasets designed to help people carry out tasks more effectively.\nTamara Munzner\nDepartment of Computer Science\nDr. Munzner’s version of this lecture\nUniversity of British Columbia"
-  },
-  {
-    "objectID": "posts/L1-Intro/index.html#the-human",
-    "href": "posts/L1-Intro/index.html#the-human",
-    "title": "LECTURE 1 - INTRO",
-    "section": "THE HUMAN",
-    "text": "THE HUMAN\nWhy have a human in the loop?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\nWe don’t need visualization when a trusted fully automatic solution exists.\nVisualization is suitable when there is a need to augment human capabilities rather than replace people with computational decision-making methods."
-  },
-  {
-    "objectID": "posts/L1-Intro/index.html#the-representation",
-    "href": "posts/L1-Intro/index.html#the-representation",
-    "title": "LECTURE 1 - INTRO",
-    "section": "THE REPRESENTATION",
-    "text": "THE REPRESENTATION\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\nEXTERNAL REPRESENTATIONS: Replace cognition with perception."
-  },
-  {
-    "objectID": "posts/L1-Intro/index.html#in-class-exercise",
-    "href": "posts/L1-Intro/index.html#in-class-exercise",
-    "title": "LECTURE 1 - INTRO",
-    "section": "IN CLASS EXERCISE",
-    "text": "IN CLASS EXERCISE\nYou have 5 minutes.\nFind an example of a data visualization from your daily life. I may not be related to your research or discipline in any way. Be prepared to share it with the class (zoom screen share or email me a link) and discuss its purpose, efficacy, strengths, and weaknesses."
-  },
-  {
-    "objectID": "posts/L1-Intro/index.html#why-depend-on-vision",
-    "href": "posts/L1-Intro/index.html#why-depend-on-vision",
-    "title": "LECTURE 1 - INTRO",
-    "section": "WHY DEPEND ON VISION?",
-    "text": "WHY DEPEND ON VISION?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\n\nThe human visual system is a high-bandwidth channel to the brain.\nOverview is possible due to background processing, providing the subjective experience of seeing everything simultaneously.\nSignificant processing occurs in parallel and pre-attentively.\nWhat about sound? lower bandwidth and different semantics, overview not supported, subjective experience of sequential stream.\nWhat about touch/haptics? impoverished record/replay capacity, only very low-bandwidth communication thus far.\nWhat about taste, smell? no viable record/replay devices."
-  },
-  {
-    "objectID": "posts/L1-Intro/index.html#why-represent-all-the-data",
-    "href": "posts/L1-Intro/index.html#why-represent-all-the-data",
-    "title": "LECTURE 1 - INTRO",
-    "section": "WHY REPRESENT (ALL THE) DATA?",
-    "text": "WHY REPRESENT (ALL THE) DATA?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\n\nsummaries lose information\ndetails matter\nconfirm expected and find unexpected patterns\nassess validity of statistical model\nANSCOMBE’S QUARTET is a fun example that we shall use to illustrate these points!"
-  },
-  {
-    "objectID": "posts/L1-Intro/index.html#anscombes-quartet",
-    "href": "posts/L1-Intro/index.html#anscombes-quartet",
-    "title": "LECTURE 1 - INTRO",
-    "section": "ANSCOMBE’S QUARTET",
-    "text": "ANSCOMBE’S QUARTET\n\n\n\n\nCode\nlibrary(ggplot2)\nlibrary(grid)\nlibrary(gridExtra)\nlibrary(datasets)\nlibrary(tidyverse)\nlibrary(dplyr)\ndatasets::anscombe\n\n\n   x1 x2 x3 x4    y1   y2    y3    y4\n1  10 10 10  8  8.04 9.14  7.46  6.58\n2   8  8  8  8  6.95 8.14  6.77  5.76\n3  13 13 13  8  7.58 8.74 12.74  7.71\n4   9  9  9  8  8.81 8.77  7.11  8.84\n5  11 11 11  8  8.33 9.26  7.81  8.47\n6  14 14 14  8  9.96 8.10  8.84  7.04\n7   6  6  6  8  7.24 6.13  6.08  5.25\n8   4  4  4 19  4.26 3.10  5.39 12.50\n9  12 12 12  8 10.84 9.13  8.15  5.56\n10  7  7  7  8  4.82 7.26  6.42  7.91\n11  5  5  5  8  5.68 4.74  5.73  6.89\n\n\n\nAnscombe’s Quartet\nThe four x-y pairs have identical summary statistics.\n\n\nCode\ntidy_anscombe &lt;- anscombe %&gt;%\n pivot_longer(cols = everything(),\n              names_to = c(\".value\", \"set\"),\n              names_pattern = \"(.)(.)\")\ntidy_anscombe_summary &lt;- tidy_anscombe %&gt;%\n  group_by(set) %&gt;%\n  summarise(across(.cols = everything(),\n                   .fns = lst(min,max,median,mean,sd,var),\n                   .names = \"{col}_{fn}\"))\n#&gt; `summarise()` ungrouping output (override with `.groups` argument)\n\nvars&lt;-c(\"set\", \"x_mean\", \"x_var\",  \"y_mean\", \"y_var\")\nthing&lt;- as.data.frame(tidy_anscombe_summary[vars])\nknitr::kable(thing)\n\n\n\n\n\nset\nx_mean\nx_var\ny_mean\ny_var\n\n\n\n\n1\n9\n11\n7.500909\n4.127269\n\n\n2\n9\n11\n7.500909\n4.127629\n\n\n3\n9\n11\n7.500000\n4.122620\n\n\n4\n9\n11\n7.500909\n4.123249"
-  },
-  {
-    "objectID": "posts/L1-Intro/index.html#viz-matters",
-    "href": "posts/L1-Intro/index.html#viz-matters",
-    "title": "LECTURE 1 - INTRO",
-    "section": "VIZ MATTERS",
-    "text": "VIZ MATTERS\n\n\nCode\nggplot(tidy_anscombe,\n       aes(x = x,\n           y = y)) +\n  geom_point() +\n  geom_point(data = tidy_anscombe_summary, aes(x=x_mean, y = y_mean, color = \"red\", size = 5),\n             show.legend = FALSE)+\n  facet_wrap(~set) +\n  geom_smooth(method = \"lm\", se = FALSE)\n\n\n\n\nLearn more: TIDY ANSCOMBE"
-  },
-  {
-    "objectID": "posts/L1-Intro/index.html#resource-limitations",
-    "href": "posts/L1-Intro/index.html#resource-limitations",
-    "title": "LECTURE 1 - INTRO",
-    "section": "RESOURCE LIMITATIONS",
-    "text": "RESOURCE LIMITATIONS\nVisualization designers must take into account three very different kinds of resource limitations:\n\nLimitations of computers.\nLimitations of humans.\nLimitations of displays."
-  },
-  {
-    "objectID": "posts/L1-Intro/index.html#computational-limits",
-    "href": "posts/L1-Intro/index.html#computational-limits",
-    "title": "LECTURE 1 - INTRO",
-    "section": "COMPUTATIONAL LIMITS",
-    "text": "COMPUTATIONAL LIMITS\nCPU time\nSystem Memory"
-  },
-  {
-    "objectID": "posts/L1-Intro/index.html#display-limits",
-    "href": "posts/L1-Intro/index.html#display-limits",
-    "title": "LECTURE 1 - INTRO",
-    "section": "DISPLAY LIMITS",
-    "text": "DISPLAY LIMITS\nPixels are precious and are the most constrained resource.\n\nInformation Density: ratio of space used to encode information vs unused whitespace.\nThere is a tradeoff between clutter and wasting space.\nDesigner must find the sweet spot between dense and sparse."
-  },
-  {
-    "objectID": "posts/L1-Intro/index.html#human-limits",
-    "href": "posts/L1-Intro/index.html#human-limits",
-    "title": "LECTURE 1 - INTRO",
-    "section": "HUMAN LIMITS",
-    "text": "HUMAN LIMITS\n\nTime\nMemory\nAttention\n\n\n\n\n\nHOME"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#vad-model",
-    "href": "posts/L4-Marks-Channels/index.html#vad-model",
-    "title": "LECTURE 4",
-    "section": "VAD MODEL",
-    "text": "VAD MODEL"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#understand-the-data",
-    "href": "posts/L4-Marks-Channels/index.html#understand-the-data",
-    "title": "LECTURE 4",
-    "section": "UNDERSTAND THE DATA",
-    "text": "UNDERSTAND THE DATA\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#understand-the-task",
-    "href": "posts/L4-Marks-Channels/index.html#understand-the-task",
-    "title": "LECTURE 4",
-    "section": "UNDERSTAND THE TASK",
-    "text": "UNDERSTAND THE TASK\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#visual-encoding",
-    "href": "posts/L4-Marks-Channels/index.html#visual-encoding",
-    "title": "LECTURE 4",
-    "section": "VISUAL ENCODING",
-    "text": "VISUAL ENCODING\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#other-frameworks",
-    "href": "posts/L4-Marks-Channels/index.html#other-frameworks",
-    "title": "LECTURE 4",
-    "section": "OTHER FRAMEWORKS",
-    "text": "OTHER FRAMEWORKS\n\nThe Tidyverse\nThe Grammar of Graphics\nTufte"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#tidyverse",
-    "href": "posts/L4-Marks-Channels/index.html#tidyverse",
-    "title": "LECTURE 4",
-    "section": "TIDYVERSE",
-    "text": "TIDYVERSE\nR packages for data science:\n\n\nThe tidyverse is an opinionated collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures. The best way to explore and understand the tidyverse is with cheetsheets, like this one for tidyr!"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#grammar-of-graphics",
-    "href": "posts/L4-Marks-Channels/index.html#grammar-of-graphics",
-    "title": "LECTURE 4",
-    "section": "GRAMMAR OF GRAPHICS",
-    "text": "GRAMMAR OF GRAPHICS\nThe ggplot2 cheatsheet!"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#tufte",
-    "href": "posts/L4-Marks-Channels/index.html#tufte",
-    "title": "LECTURE 4",
-    "section": "TUFTE",
-    "text": "TUFTE\nTufte’s Website\nA Quarto Page Layout Example"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#analysis-framework",
-    "href": "posts/L4-Marks-Channels/index.html#analysis-framework",
-    "title": "LECTURE 4",
-    "section": "ANALYSIS FRAMEWORK",
-    "text": "ANALYSIS FRAMEWORK\nFour levels, three questions\n\n\n\nDomain situation defines the target users.\nAbstraction translate from specifics of domain to vocabulary of vis\n\nWHAT is shown? data abstraction\nWHY is the user looking at it? task abstraction\n\nIdiom defines the visualization\n\nHOW is it shown?\n\nvisual encoding idiom: how to draw\ninteraction idiom: how to manipulate\n\n\nAlgorithm creates the visualization\n\nevaluated with computational efficiency"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#encoding",
-    "href": "posts/L4-Marks-Channels/index.html#encoding",
-    "title": "LECTURE 4",
-    "section": "ENCODING",
-    "text": "ENCODING\nWe are defining the structure of the visualization (the idiom).\nTo do this, we use MARKS and CHANNELS:\n\nMARKS represent ITEMS or LINKS (aka OBSERVATIONS)\nCHANNELS change the appearance of MARKS based on ATTRIBUTES (aka VARIABLES)"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#marks-for-items",
-    "href": "posts/L4-Marks-Channels/index.html#marks-for-items",
-    "title": "LECTURE 4",
-    "section": "MARKS FOR ITEMS",
-    "text": "MARKS FOR ITEMS"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#marks-for-links",
-    "href": "posts/L4-Marks-Channels/index.html#marks-for-links",
-    "title": "LECTURE 4",
-    "section": "MARKS FOR LINKS",
-    "text": "MARKS FOR LINKS\n\n Bubblesets\n Force Directed Graph"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#observable-in-quarto",
-    "href": "posts/L4-Marks-Channels/index.html#observable-in-quarto",
-    "title": "LECTURE 4",
-    "section": "OBSERVABLE IN QUARTO!",
-    "text": "OBSERVABLE IN QUARTO!\n\n\nCode\nd3 = require(\"d3@7\")\n\n\nchart = ForceGraph(miserables, {\n  nodeId: d =&gt; d.id,\n  nodeGroup: d =&gt; d.group,\n  nodeTitle: d =&gt; `${d.id}\\n${d.group}`,\n  linkStrokeWidth: l =&gt; Math.sqrt(l.value),\n  width,\n  height: 1000,\n  invalidation // a promise to stop the simulation when the cell is re-run\n})\n\n\nmiserables = FileAttachment(\"miserables.json\").json()\n\n\n// Copyright 2021 Observable, Inc.\n// Released under the ISC license.\n// https://observablehq.com/@d3/force-directed-graph\nfunction ForceGraph({\n  nodes, // an iterable of node objects (typically [{id}, …])\n  links // an iterable of link objects (typically [{source, target}, …])\n}, {\n  nodeId = d =&gt; d.id, // given d in nodes, returns a unique identifier (string)\n  nodeGroup, // given d in nodes, returns an (ordinal) value for color\n  nodeGroups, // an array of ordinal values representing the node groups\n  nodeTitle, // given d in nodes, a title string\n  nodeFill = \"currentColor\", // node stroke fill (if not using a group color encoding)\n  nodeStroke = \"#fff\", // node stroke color\n  nodeStrokeWidth = 1.5, // node stroke width, in pixels\n  nodeStrokeOpacity = 1, // node stroke opacity\n  nodeRadius = 5, // node radius, in pixels\n  nodeStrength,\n  linkSource = ({source}) =&gt; source, // given d in links, returns a node identifier string\n  linkTarget = ({target}) =&gt; target, // given d in links, returns a node identifier string\n  linkStroke = \"#999\", // link stroke color\n  linkStrokeOpacity = 0.6, // link stroke opacity\n  linkStrokeWidth = 1.5, // given d in links, returns a stroke width in pixels\n  linkStrokeLinecap = \"round\", // link stroke linecap\n  linkStrength,\n  colors = d3.schemeTableau10, // an array of color strings, for the node groups\n  width = 1000, // outer width, in pixels\n  height = 1000, // outer height, in pixels\n  invalidation // when this promise resolves, stop the simulation\n} = {}) {\n  // Compute values.\n  const N = d3.map(nodes, nodeId).map(intern);\n  const LS = d3.map(links, linkSource).map(intern);\n  const LT = d3.map(links, linkTarget).map(intern);\n  if (nodeTitle === undefined) nodeTitle = (_, i) =&gt; N[i];\n  const T = nodeTitle == null ? null : d3.map(nodes, nodeTitle);\n  const G = nodeGroup == null ? null : d3.map(nodes, nodeGroup).map(intern);\n  const W = typeof linkStrokeWidth !== \"function\" ? null : d3.map(links, linkStrokeWidth);\n  const L = typeof linkStroke !== \"function\" ? null : d3.map(links, linkStroke);\n\n  // Replace the input nodes and links with mutable objects for the simulation.\n  nodes = d3.map(nodes, (_, i) =&gt; ({id: N[i]}));\n  links = d3.map(links, (_, i) =&gt; ({source: LS[i], target: LT[i]}));\n\n  // Compute default domains.\n  if (G && nodeGroups === undefined) nodeGroups = d3.sort(G);\n\n  // Construct the scales.\n  const color = nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, colors);\n\n  // Construct the forces.\n  const forceNode = d3.forceManyBody();\n  const forceLink = d3.forceLink(links).id(({index: i}) =&gt; N[i]);\n  if (nodeStrength !== undefined) forceNode.strength(nodeStrength);\n  if (linkStrength !== undefined) forceLink.strength(linkStrength);\n\n  const simulation = d3.forceSimulation(nodes)\n      .force(\"link\", forceLink)\n      .force(\"charge\", forceNode)\n      .force(\"center\",  d3.forceCenter())\n      .on(\"tick\", ticked);\n\n  const svg = d3.create(\"svg\")\n      .attr(\"width\", width)\n      .attr(\"height\", height)\n      .attr(\"viewBox\", [-width / 2, -height / 2, width, height])\n      .attr(\"style\", \"max-width: 100%; height: auto; height: intrinsic;\");\n\n  const link = svg.append(\"g\")\n      .attr(\"stroke\", typeof linkStroke !== \"function\" ? linkStroke : null)\n      .attr(\"stroke-opacity\", linkStrokeOpacity)\n      .attr(\"stroke-width\", typeof linkStrokeWidth !== \"function\" ? linkStrokeWidth : null)\n      .attr(\"stroke-linecap\", linkStrokeLinecap)\n    .selectAll(\"line\")\n    .data(links)\n    .join(\"line\");\n\n  const node = svg.append(\"g\")\n      .attr(\"fill\", nodeFill)\n      .attr(\"stroke\", nodeStroke)\n      .attr(\"stroke-opacity\", nodeStrokeOpacity)\n      .attr(\"stroke-width\", nodeStrokeWidth)\n    .selectAll(\"circle\")\n    .data(nodes)\n    .join(\"circle\")\n      .attr(\"r\", nodeRadius)\n      .call(drag(simulation));\n\n  if (W) link.attr(\"stroke-width\", ({index: i}) =&gt; W[i]);\n  if (L) link.attr(\"stroke\", ({index: i}) =&gt; L[i]);\n  if (G) node.attr(\"fill\", ({index: i}) =&gt; color(G[i]));\n  if (T) node.append(\"title\").text(({index: i}) =&gt; T[i]);\n  if (invalidation != null) invalidation.then(() =&gt; simulation.stop());\n\n  function intern(value) {\n    return value !== null && typeof value === \"object\" ? value.valueOf() : value;\n  }\n\n  function ticked() {\n    link\n      .attr(\"x1\", d =&gt; d.source.x)\n      .attr(\"y1\", d =&gt; d.source.y)\n      .attr(\"x2\", d =&gt; d.target.x)\n      .attr(\"y2\", d =&gt; d.target.y);\n\n    node\n      .attr(\"cx\", d =&gt; d.x)\n      .attr(\"cy\", d =&gt; d.y);\n  }\n\n  function drag(simulation) {    \n    function dragstarted(event) {\n      if (!event.active) simulation.alphaTarget(0.3).restart();\n      event.subject.fx = event.subject.x;\n      event.subject.fy = event.subject.y;\n    }\n    \n    function dragged(event) {\n      event.subject.fx = event.x;\n      event.subject.fy = event.y;\n    }\n    \n    function dragended(event) {\n      if (!event.active) simulation.alphaTarget(0);\n      event.subject.fx = null;\n      event.subject.fy = null;\n    }\n    \n    return d3.drag()\n      .on(\"start\", dragstarted)\n      .on(\"drag\", dragged)\n      .on(\"end\", dragended);\n  }\n\n  return Object.assign(svg.node(), {scales: {color}});\n}\n\n\nimport {howto} from \"@d3/example-components\"\n\nimport {Swatches} from \"@d3/color-legend\""
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#channels",
-    "href": "posts/L4-Marks-Channels/index.html#channels",
-    "title": "LECTURE 4",
-    "section": "CHANNELS",
-    "text": "CHANNELS\n\n\n\nCHANNELS control the appearance of MARKS.\nThey are proportional to or based on ATTRIBUTES (aka VARIABLES).\nTheir properties differ in the type and amount of information that can be conveyed to the human perceptual system."
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#this-is-important",
-    "href": "posts/L4-Marks-Channels/index.html#this-is-important",
-    "title": "LECTURE 4",
-    "section": "THIS IS IMPORTANT",
-    "text": "THIS IS IMPORTANT\nChannel properties differ in the type and amount of information that can be conveyed to the human perceptual system."
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#visual-encoding-example",
-    "href": "posts/L4-Marks-Channels/index.html#visual-encoding-example",
-    "title": "LECTURE 4",
-    "section": "VISUAL ENCODING EXAMPLE",
-    "text": "VISUAL ENCODING EXAMPLE\nLet’s analyze the idiom structures below in terms of marks and channels."
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#analyze-the-marks-and-channels",
-    "href": "posts/L4-Marks-Channels/index.html#analyze-the-marks-and-channels",
-    "title": "LECTURE 4",
-    "section": "ANALYZE THE MARKS AND CHANNELS",
-    "text": "ANALYZE THE MARKS AND CHANNELS\nMarks are defined by the ITEMS or OBSERVATIONS they represent.\nChannels are defined by the visually detectable properties that are mapped on to ATTRIBUTES or VARIABLES.\n\n\n\n\n\n\n\n\n\nSharon’s Microbiomes\n\n\n\n\n\n\n\nMarwa’s Reddit Network\n\n\n\n\n\n\n\nYaotian’s Wheat"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#redundant-encoding",
-    "href": "posts/L4-Marks-Channels/index.html#redundant-encoding",
-    "title": "LECTURE 4",
-    "section": "REDUNDANT ENCODING",
-    "text": "REDUNDANT ENCODING\n\n\nUses multiple channels for the same attribute.\n\nSends a stronger message\nUses up channels\nBonus points if you can identify BOTH channels in this figure!"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#wheat-growth-by-area",
-    "href": "posts/L4-Marks-Channels/index.html#wheat-growth-by-area",
-    "title": "LECTURE 4",
-    "section": "WHEAT GROWTH BY AREA*",
-    "text": "WHEAT GROWTH BY AREA*\nBoth of Yaotian’s plots contain Redundant Encoding. Is this approach equally valuable for both plots?"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#choosing-channels",
-    "href": "posts/L4-Marks-Channels/index.html#choosing-channels",
-    "title": "LECTURE 4",
-    "section": "CHOOSING CHANNELS",
-    "text": "CHOOSING CHANNELS\n\nEXPRESSIVENESS\n\nThe visual encoding should express all of, and only, the information in the dataset attributes.\n\nEFFECTIVENESS\n\nChannels differ in accuracy of perception.\nThe importance of the attribute should match the salience of the channel (its noticability)."
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#expressiveness",
-    "href": "posts/L4-Marks-Channels/index.html#expressiveness",
-    "title": "LECTURE 4",
-    "section": "EXPRESSIVENESS",
-    "text": "EXPRESSIVENESS\nThe advantages and disadvantages of jitter plots. How might this relate to the idea of expressiveness?\n\nHeidi’s Cytoswine DataEXPRESSIVENESS: The visual encoding should express all of, and only, the information in the dataset attributes."
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#channel-effectiveness-rankings",
-    "href": "posts/L4-Marks-Channels/index.html#channel-effectiveness-rankings",
-    "title": "LECTURE 4",
-    "section": "CHANNEL EFFECTIVENESS RANKINGS",
-    "text": "CHANNEL EFFECTIVENESS RANKINGS\n\nNote that spatial position ranks high for both types of channels."
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#grouping",
-    "href": "posts/L4-Marks-Channels/index.html#grouping",
-    "title": "LECTURE 4",
-    "section": "GROUPING",
-    "text": "GROUPING\n\n\n\nContainment\nConnection\nProximity\n\nSame spatial region.\n\nSimilarity\n\nSame values as other channels."
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#summary-so-far",
-    "href": "posts/L4-Marks-Channels/index.html#summary-so-far",
-    "title": "LECTURE 4",
-    "section": "SUMMARY SO FAR",
-    "text": "SUMMARY SO FAR"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#channel-effectiveness",
-    "href": "posts/L4-Marks-Channels/index.html#channel-effectiveness",
-    "title": "LECTURE 4",
-    "section": "CHANNEL EFFECTIVENESS",
-    "text": "CHANNEL EFFECTIVENESS\n\nAccuracy: how precisely can we tell the difference between encoded items?\nDiscriminability: how many unique steps can we perceive?\nSeparability: is our ability to use this channel affected by another one?\nPopout: can things jump out using this channel?"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#accuracy-theory",
-    "href": "posts/L4-Marks-Channels/index.html#accuracy-theory",
-    "title": "LECTURE 4",
-    "section": "ACCURACY (THEORY)",
-    "text": "ACCURACY (THEORY)\nSteven’s Psychophisical Power Law: \\(S=I^N\\)\n\n\n\n\n\n\n\n\n\n\n\n\nLENGTH (N=1)\nELECTRIC SHOCK (N=3.5)\nSATURATION (N=1.7)\nAREA (N=0.7)\nBRIGHTNESS (N=0.5)"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#accuracy-experimental",
-    "href": "posts/L4-Marks-Channels/index.html#accuracy-experimental",
-    "title": "LECTURE 4",
-    "section": "ACCURACY (EXPERIMENTAL)",
-    "text": "ACCURACY (EXPERIMENTAL)\n\n\n\n\n[Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods]"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#accuracy",
-    "href": "posts/L4-Marks-Channels/index.html#accuracy",
-    "title": "LECTURE 4",
-    "section": "ACCURACY?",
-    "text": "ACCURACY?\nDepends on the task. Which genre has the most game titles? Which genres are the top 4 in terms of game titles? Are there more Puzzle games than Strategy games?\n\nGeraline’s Video Games"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#discriminability",
-    "href": "posts/L4-Marks-Channels/index.html#discriminability",
-    "title": "LECTURE 4",
-    "section": "DISCRIMINABILITY",
-    "text": "DISCRIMINABILITY\nHow many usable steps are in the channel? Are the differences between items perceptible to the human as intended?"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#discriminability-and-colors",
-    "href": "posts/L4-Marks-Channels/index.html#discriminability-and-colors",
-    "title": "LECTURE 4",
-    "section": "DISCRIMINABILITY and COLORS",
-    "text": "DISCRIMINABILITY and COLORS\n\nGeraline’s Gaming Platforms"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#separability-vs-integrality",
-    "href": "posts/L4-Marks-Channels/index.html#separability-vs-integrality",
-    "title": "LECTURE 4",
-    "section": "SEPARABILITY VS INTEGRALITY",
-    "text": "SEPARABILITY VS INTEGRALITY\nSeparable channels are orthogonal and independent. Integral channels are inextricably combined. Attempts to encode different information with integral channels creates Interference.\n\n\nFigure 5.10. Pairs of visual channels fall along a continuum from fully separable to intrinsically integral. Color and location are separable channels well suited to encode different data attributes for two different groupings that can be selectively attended to. However, size interacts with hue, which is harder to perceive for small objects. The horizontal size and and vertical size channels are automatically fused into an integrated perception of area, yielding three groups. Attempts to code separate information along the red and green axes of the RGB color space fail, because we simply perceive four different hues."
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#separability",
-    "href": "posts/L4-Marks-Channels/index.html#separability",
-    "title": "LECTURE 4",
-    "section": "SEPARABILITY",
-    "text": "SEPARABILITY\n\nRedundancy may be desirable, but area interferes with hue, with larger shapes having more visual salience."
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#popout",
-    "href": "posts/L4-Marks-Channels/index.html#popout",
-    "title": "LECTURE 4",
-    "section": "POPOUT",
-    "text": "POPOUT\nVISUAL POPOUT is often called preattentive processing or tunable detection.\n\n\nfind the red dot! How long does it take?\nPopout results from our low-level visual system performing massively parallel processing on certain visual channels, eliminating the need for the viewer to consciously direct attention to items one by one (serial search).\n\nFigure 5.11. Visual popout. (a) The red circle pops out from a small set of blue circles. (b) The red circle pops out from a large set of blue circles just as quickly. (c) The red circle also pops out from a small set of square shapes, although a bit slower than with color. (d) The red circle also pops out of a large set of red squares. (e) The red circle does not take long to find from a small set of mixed shapes and colors. (f) The red circle does not pop out from a large set of red squares and blue circles, and it can only be found by searching one by one through all the objects."
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#popout-1",
-    "href": "posts/L4-Marks-Channels/index.html#popout-1",
-    "title": "LECTURE 4",
-    "section": "POPOUT",
-    "text": "POPOUT\n\n\nMany channels are compatible with preattentive processing and facilitate popout:\n\ntilt\nsize\nshape\nproximity\nshadow direction\n\nBut not all!\n\nExample: parallel line pairs do not pop out from tilted pairs."
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#popout-goes-the-weevil",
-    "href": "posts/L4-Marks-Channels/index.html#popout-goes-the-weevil",
-    "title": "LECTURE 4",
-    "section": "POPOUT GOES THE WEEVIL?",
-    "text": "POPOUT GOES THE WEEVIL?\n\n\n\n\n\n\n\n\n\nLucas Weevils before chemicals\n\n\n\n\n\n\n\nLucas Weevils after chemicals"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#relative-vs-absolute-judgements",
-    "href": "posts/L4-Marks-Channels/index.html#relative-vs-absolute-judgements",
-    "title": "LECTURE 4",
-    "section": "RELATIVE VS ABSOLUTE JUDGEMENTS",
-    "text": "RELATIVE VS ABSOLUTE JUDGEMENTS\nThe human perceptual system is fundamentally based on relative judgements, not absolute ones. This is why accuracy increases with common frame/scale and alignment.\nWeber’s Law: The detectable difference in stimulus intensity \\(I\\) as a fixed percentage \\(K\\) of the object magnitude: \\(dI/I=K\\) .\n\nThe filled rectangles differ in length by 1:9, and it is therefore difficult to detect the difference without aligment. The white rectangles differ in length by 1:2, it is easier to see this difference even when the objects are unaligned."
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#relative-judgements",
-    "href": "posts/L4-Marks-Channels/index.html#relative-judgements",
-    "title": "LECTURE 4",
-    "section": "RELATIVE JUDGEMENTS",
-    "text": "RELATIVE JUDGEMENTS\n\nHeidi’s Microbiomes"
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#relative-luminance-judgements",
-    "href": "posts/L4-Marks-Channels/index.html#relative-luminance-judgements",
-    "title": "LECTURE 4",
-    "section": "RELATIVE LUMINANCE JUDGEMENTS",
-    "text": "RELATIVE LUMINANCE JUDGEMENTS\nHuman perception of luminance is completely contextual, and is based on contrast with surrounding colors."
-  },
-  {
-    "objectID": "posts/L4-Marks-Channels/index.html#relative-color-judgements",
-    "href": "posts/L4-Marks-Channels/index.html#relative-color-judgements",
-    "title": "LECTURE 4",
-    "section": "RELATIVE COLOR JUDGEMENTS",
-    "text": "RELATIVE COLOR JUDGEMENTS\nOur visual system evolved to provide color constancy so that the same surface is identifiable across a broad set of illumination conditions, even though a physical light meter would yield very different readings. While the visual system works very well in natural environments, many of its mechanisms work against simple approaches to visually encoding information with color.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5.15 shows two colorful cubes. In Figure 5.15(a) corresponding squares both appear to be red. In Figure 5.15(b), masks show that the tile color in the image apparently illuminated by a yellowish light source is actually orange, and for the bluish light the tiles are actually purple.\n\n\n\n\nHOME"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#last-lecture",
-    "href": "posts/L2-Data-Abstraction/index.html#last-lecture",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "LAST LECTURE",
-    "text": "LAST LECTURE\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#what",
-    "href": "posts/L2-Data-Abstraction/index.html#what",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "WHAT?",
-    "text": "WHAT?\n Before you design a visualization, you need to understand the data. Here, we consider the semantics to describe the DATA TYPES and DATA ATTRIBUTES."
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#the-three-major-data-types",
-    "href": "posts/L2-Data-Abstraction/index.html#the-three-major-data-types",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "THE THREE MAJOR DATA TYPES",
-    "text": "THE THREE MAJOR DATA TYPES"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#data-attributes",
-    "href": "posts/L2-Data-Abstraction/index.html#data-attributes",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "DATA ATTRIBUTES",
-    "text": "DATA ATTRIBUTES"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#what-1",
-    "href": "posts/L2-Data-Abstraction/index.html#what-1",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "WHAT?",
-    "text": "WHAT?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics",
-    "href": "posts/L2-Data-Abstraction/index.html#data-semantics",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001\n\n\nVIZ"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-1",
-    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-1",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points far from each other in 3D space?\n\n\nVIZ"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-2",
-    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-2",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?\n\n\nVIZ"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-3",
-    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-3",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-4",
-    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-4",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear: Food shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month\n\n\nVIZ"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-5",
-    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-5",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear: Basil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service\n\n\nVIZ"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-6",
-    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-6",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "DATA SEMANTICS",
-    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear: Lab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food\n\n\nVIZ"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#semantics",
-    "href": "posts/L2-Data-Abstraction/index.html#semantics",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "SEMANTICS",
-    "text": "SEMANTICS\nThe meaning of a word, phrase, sentence, or text.\nBasil, 7, S, Pear"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#semantics-for-data",
-    "href": "posts/L2-Data-Abstraction/index.html#semantics-for-data",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "SEMANTICS FOR DATA",
-    "text": "SEMANTICS FOR DATA\n\n\n\n\n\n\nSemantics\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”\n\n\n\n\nData Table\n\n\n\n\nITEM: Person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#other-data-types",
-    "href": "posts/L2-Data-Abstraction/index.html#other-data-types",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "OTHER DATA TYPES",
-    "text": "OTHER DATA TYPES\n\nLinks\n\nexpress relationship between two items\ne.g/ friendship on facebook, interaction between proteins\n\nPositions\n\nspatial data: location in 2D or 3D\ne.g. pixels in photo, voxels in MRI scan, latitude/longitude\n\nGrids\n\nsampling strategy for continuous data"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#what-2",
-    "href": "posts/L2-Data-Abstraction/index.html#what-2",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "WHAT?",
-    "text": "WHAT?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#dataset-types-tables",
-    "href": "posts/L2-Data-Abstraction/index.html#dataset-types-tables",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "DATASET TYPES: TABLES",
-    "text": "DATASET TYPES: TABLES\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA UNIQUE KEY can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#flat-table-example",
-    "href": "posts/L2-Data-Abstraction/index.html#flat-table-example",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "FLAT TABLE EXAMPLE",
-    "text": "FLAT TABLE EXAMPLE"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#multidimensional-tables",
-    "href": "posts/L2-Data-Abstraction/index.html#multidimensional-tables",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "MULTIDIMENSIONAL TABLES",
-    "text": "MULTIDIMENSIONAL TABLES\nindexing based on multiple keys (eg genes, patients)"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#networks",
-    "href": "posts/L2-Data-Abstraction/index.html#networks",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "NETWORKS",
-    "text": "NETWORKS\nNetwork/graph nodes (vertices) connected by links (edges). A tree is special case: no cycles, often have roots, and are directed."
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#fields",
-    "href": "posts/L2-Data-Abstraction/index.html#fields",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "FIELDS",
-    "text": "FIELDS"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#spatial-fields-1",
-    "href": "posts/L2-Data-Abstraction/index.html#spatial-fields-1",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "SPATIAL FIELDS 1",
-    "text": "SPATIAL FIELDS 1\nAttribute values associated with cells.\nEach cell contains a value from a continuous domain (eg temperature, pressure, wind velocity measured or simulated)."
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#spatial-fields-2",
-    "href": "posts/L2-Data-Abstraction/index.html#spatial-fields-2",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "SPATIAL FIELDS 2",
-    "text": "SPATIAL FIELDS 2\n\n\n\n\n\n\n\nAttribute values associated with cells.\nEach cell contains value from continuous domain\n\n(eg temperature, pressure, wind velocity)\n\nMeasured or simulated.\nMajor concerns and potential limitations:\n\nSampling: where are the attributes measured and at what density?\nInterpolation: how to model attributes in cells with no measurements?\nGrid types: optimizing size, shape, etc."
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#spatial-fields-3",
-    "href": "posts/L2-Data-Abstraction/index.html#spatial-fields-3",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "SPATIAL FIELDS 3",
-    "text": "SPATIAL FIELDS 3\n\n\n\nData structures can be complex, scaling with the number of attributes per cell:\n\nScalar (1)\nVector (2)\nTensor (many)"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#geometry",
-    "href": "posts/L2-Data-Abstraction/index.html#geometry",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "GEOMETRY",
-    "text": "GEOMETRY"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#geometry-2",
-    "href": "posts/L2-Data-Abstraction/index.html#geometry-2",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "GEOMETRY 2",
-    "text": "GEOMETRY 2\n\n\n\nShape of items or observations is defined.\nExplicit spatial positions / regions\n\npoints, lines, curves, surfaces, volumes\n\n\n\n Lopez et.al., 2024"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#collections",
-    "href": "posts/L2-Data-Abstraction/index.html#collections",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "COLLECTIONS",
-    "text": "COLLECTIONS"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#collections-2",
-    "href": "posts/L2-Data-Abstraction/index.html#collections-2",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "COLLECTIONS 2",
-    "text": "COLLECTIONS 2\n\n\nGrouping Items:\n\nSets\n\nunique items\nunordered\n\nLists\n\nordered\nduplicates possible\n\nClusters\n\ngroups of similar items"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#data-types",
-    "href": "posts/L2-Data-Abstraction/index.html#data-types",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "DATA TYPES",
-    "text": "DATA TYPES"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#attribute-types",
-    "href": "posts/L2-Data-Abstraction/index.html#attribute-types",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "ATTRIBUTE TYPES",
-    "text": "ATTRIBUTE TYPES\n\n\n\nCategorical (nominal):\n\ncompare equality\nno implicit ordering\n\nOrdered:\n\nordinal\nless/greater than defined\n\nQuantitative:\n\nmeaningful magnitude\narithmetic possible"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#example",
-    "href": "posts/L2-Data-Abstraction/index.html#example",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "EXAMPLE",
-    "text": "EXAMPLE\nCategorical\nOrdinal\nQuantitative"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#example-1",
-    "href": "posts/L2-Data-Abstraction/index.html#example-1",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "EXAMPLE",
-    "text": "EXAMPLE\nCategorical\nOrdinal\nQuantitative"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#additional-semantic-components",
-    "href": "posts/L2-Data-Abstraction/index.html#additional-semantic-components",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "ADDITIONAL SEMANTIC COMPONENTS",
-    "text": "ADDITIONAL SEMANTIC COMPONENTS"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#data-abstraction",
-    "href": "posts/L2-Data-Abstraction/index.html#data-abstraction",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "DATA ABSTRACTION",
-    "text": "DATA ABSTRACTION\n\nGOAL: Translate from domain-specific language to generic (and consistent) visualization language.\n\nIdentify dataset type(s) and attribute types.\nIdentify cardinality.\n\nhow many items in the dataset?\nwhat is cardinality of each attribute?\n\nnumber of levels for categorical data?\nrange for quantitative data\n\n\nConsider whether to transform the data.\n\nguided by your understanding of the task."
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#models-data-vs-conceptual",
-    "href": "posts/L2-Data-Abstraction/index.html#models-data-vs-conceptual",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "MODELS: DATA VS CONCEPTUAL",
-    "text": "MODELS: DATA VS CONCEPTUAL\n\n\nData Model\n\nmathematical abstraction\nsets with operations, eg floats with * / - + or variable data types in programming languages\n\nConceptual Model\n\nmental construction (semantics)\nsupports reasoning\ntypically based on understanding of tasks\n\nThe Data Abstraction process relies on conceptual model for transforming data if needed"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#models-example",
-    "href": "posts/L2-Data-Abstraction/index.html#models-example",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "MODELS: EXAMPLE",
-    "text": "MODELS: EXAMPLE\n\nData Model: floats\n\n32.52, 54.06, -14.35,\n\nConceptual Model:\n\ntemperature\n\nPossible data abstractions:\n\nQUANTITATIVE: continuous to 2 significant figures:\n\nTASK: Forecasting the weather\n\nORDINAL: Hot, Warm, Cold:\n\nTASK: Deciding if my bath water is ready\n\nCATEGORICAL: Above Freezing, Below Freezing:\n\nTASK: Deciding if I should leave the house today"
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#derived-attributes",
-    "href": "posts/L2-Data-Abstraction/index.html#derived-attributes",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "DERIVED ATTRIBUTES",
-    "text": "DERIVED ATTRIBUTES\nDerived attribute: Data computed from original (collected, observed) attributes."
-  },
-  {
-    "objectID": "posts/L2-Data-Abstraction/index.html#summary",
-    "href": "posts/L2-Data-Abstraction/index.html#summary",
-    "title": "LECTURE 2 - DATA ABSTRACTION",
-    "section": "SUMMARY",
-    "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\n\n\n\n\nHOME"
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#last-lecture",
-    "href": "posts/L3-TaskAbstraction/index.html#last-lecture",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "LAST LECTURE",
-    "text": "LAST LECTURE\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#task-abstraction",
-    "href": "posts/L3-TaskAbstraction/index.html#task-abstraction",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "TASK ABSTRACTION",
-    "text": "TASK ABSTRACTION\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#from-domain-to-abstraction",
-    "href": "posts/L3-TaskAbstraction/index.html#from-domain-to-abstraction",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "FROM DOMAIN TO ABSTRACTION",
-    "text": "FROM DOMAIN TO ABSTRACTION"
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#key-components-of-task-abstraction",
-    "href": "posts/L3-TaskAbstraction/index.html#key-components-of-task-abstraction",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "KEY COMPONENTS OF TASK ABSTRACTION",
-    "text": "KEY COMPONENTS OF TASK ABSTRACTION\n{action, target} pairs\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#actions-and-targets",
-    "href": "posts/L3-TaskAbstraction/index.html#actions-and-targets",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "ACTIONS AND TARGETS",
-    "text": "ACTIONS AND TARGETS"
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#actions---analyze",
-    "href": "posts/L3-TaskAbstraction/index.html#actions---analyze",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "ACTIONS - Analyze",
-    "text": "ACTIONS - Analyze\n\n\n\nConsume: Information has already been generated and stored as data.\n\nDiscover: new knowledge, test hypothesis, generate new hypothesis, verify\nPresent: communicate something specific and already understood\nEnjoy: casual encounters with visualization\n\nProduce: generate new material or information\n\nAnnotate: addition of graphical or text to existing visualization elements\nRecord: saves or captures visualization elements as persistent artifacts (screenshots, lists, parameter sets, annotations)\nDerive: produce new data based on existing data (aka transform)"
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#actions---search",
-    "href": "posts/L3-TaskAbstraction/index.html#actions---search",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "ACTIONS - Search",
-    "text": "ACTIONS - Search\n\n\n\nLookup: Location and target both known\n\nExample: Look up humans in the Tree of Life, knowing they are mammals.\n\nLocate: Location unknown and target known\n\nExample: Look up rabbits in the Tree of Life, not knowing they are lagomorphs.\n\nBrowse: Location known and target unknown\n\nExample: Find any clades within Mammalia that have only one species.\n\nExplore: Location unknown and target unknown\n\nExample: Searching for anomalies in time series data."
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#actions---query",
-    "href": "posts/L3-TaskAbstraction/index.html#actions---query",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "ACTIONS - Query",
-    "text": "ACTIONS - Query\n\n\n\nQuery: How much of the data matters to the task?\n\nIdentify: One (specific Item, individual, cell, etc)\nCompare: Some (multiple targets)\nSummarize: All (very common, aka Overview)"
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#targets---all-data",
-    "href": "posts/L3-TaskAbstraction/index.html#targets---all-data",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "TARGETS - All Data",
-    "text": "TARGETS - All Data"
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#targets---attributes",
-    "href": "posts/L3-TaskAbstraction/index.html#targets---attributes",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "TARGETS - Attributes",
-    "text": "TARGETS - Attributes"
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#targets---other-data",
-    "href": "posts/L3-TaskAbstraction/index.html#targets---other-data",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "TARGETS - Other Data",
-    "text": "TARGETS - Other Data"
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#summary",
-    "href": "posts/L3-TaskAbstraction/index.html#summary",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "SUMMARY",
-    "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
-  },
-  {
-    "objectID": "posts/L3-TaskAbstraction/index.html#mandatory-fun",
-    "href": "posts/L3-TaskAbstraction/index.html#mandatory-fun",
-    "title": "LECTURE 3 - TASK ABSTRACTION",
-    "section": "MANDATORY FUN",
-    "text": "MANDATORY FUN\nWe will do these until everyone has done at least one example.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nHOME"
-  },
-  {
-    "objectID": "posts/T1-Lit-Prog/index.html",
-    "href": "posts/T1-Lit-Prog/index.html",
-    "title": "TUTORIAL 1 - Literate Programming",
-    "section": "",
-    "text": "Learning new tools is hard. Plowing though the tomes of the Data Science Mythos is hard. Perhaps this tutorial will guide you through the mind shattering truths of… LITERATE PROGRAMMING.\nI recorded this video a couple years ago. It should cover the basics, but some elements might be dated."
-  },
-  {
-    "objectID": "posts/T1-Lit-Prog/index.html#intro-to-quarto",
-    "href": "posts/T1-Lit-Prog/index.html#intro-to-quarto",
-    "title": "TUTORIAL 1 - Literate Programming",
-    "section": "",
-    "text": "Learning new tools is hard. Plowing though the tomes of the Data Science Mythos is hard. Perhaps this tutorial will guide you through the mind shattering truths of… LITERATE PROGRAMMING.\nI recorded this video a couple years ago. It should cover the basics, but some elements might be dated."
-  },
-  {
-    "objectID": "posts/AIisfun/AIisstuff.html",
-    "href": "posts/AIisfun/AIisstuff.html",
-    "title": "AI Code Test",
-    "section": "",
-    "text": "This post is a brief example of how AI tools such as GPT-4o or Claude can accelerate your programming.\n\n\nOur example in class was this prompt:\n\nI want to use the tidyverse to create a parralel axis plot of microbiome data. I have 10 microbial species that will be the axes and a want to plot the abundance for 58 different samples. the samples are equally divided between normal baby poop and baby poop from sick babies.\n\nI put that prompt into AnythingLLM (pointed at the OpenAI API) and after a brief interaction:\n\nAda says you suck because of this error Error in [.data.frame(data, , columns) : undefined columns selected\n\nWe got this response and this code:\nThe error you’re encountering is due to the columns argument in ggparcoord, which specifies the numeric indices of the columns to be plotted. We need to adjust those indices based on the actual column positions in your dataset. Let’s refine the code.\nMake sure the column indices in the columns argument match the positions of your microbial species in the dataset and that groupColumn correctly refers to the column with the grouping variable (Condition).\nHere’s the corrected code:\n\n\nCode\n# Load necessary libraries\nlibrary(tidyverse)\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nCode\nlibrary(GGally)\n\n\nRegistered S3 method overwritten by 'GGally':\n  method from   \n  +.gg   ggplot2\n\n\nCode\n# Example microbiome data, replace this with your actual dataset\nset.seed(123)  # For reproducibility\ndata &lt;- tibble(\n  SampleID = 1:58,\n  Condition = rep(c(\"Normal\", \"Sick\"), each = 29),\n  Species1 = runif(58, 5, 15),\n  Species2 = runif(58, 10, 20),\n  Species3 = runif(58, 0, 5),\n  Species4 = runif(58, 3, 8),\n  Species5 = runif(58, 1, 6),\n  Species6 = runif(58, 2, 7),\n  Species7 = runif(58, 4, 9),\n  Species8 = runif(58, 5, 10),\n  Species9 = runif(58, 6, 12),\n  Species10 = runif(58, 0, 8)\n)\n\n# Create parallel coordinates plot\nggparcoord(data, columns = 3:12, groupColumn = 2, scale = \"globalminmax\") +\n  labs(title = \"Parallel Coordinates Plot of Microbial Abundance\",\n       x = \"Microbial Species\",\n       y = \"Abundance\") +\n  theme_minimal() +\n  scale_color_manual(values = c(\"Normal\" = \"blue\", \"Sick\" = \"red\")) +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1))\n\n\n\n\n\n\n\n\n\nIn this code, the columns argument is set to 3:12 to refer to the species columns, assuming these are from the 3rd to the 12th columns in your dataset. Adjust these indices if your data structure differs. The groupColumn is set to 2, assuming the Condition column is the second column. Please ensure your actual dataset aligns with these assumptions.\n\n\n\nThen we decided to change programming languages entirely!\n\nI’ve changed my mind. I want to use Python instead.\n\nI’ll spare you the brief iterations, but we ended up with this:\n\n\nCode\nimport pandas as pd\nimport numpy as np\nimport plotly.express as px\nimport plotly.graph_objects as go\n\n# Example microbiome data\nnp.random.seed(123)  # For reproducibility\ndata = pd.DataFrame({\n    'SampleID': range(1, 59),\n    'Condition': ['Normal'] * 29 + ['Sick'] * 29,\n    'Species1': np.random.uniform(5, 15, 58),\n    'Species2': np.random.uniform(10, 20, 58),\n    'Species3': np.random.uniform(0, 5, 58),\n    'Species4': np.random.uniform(3, 8, 58),\n    'Species5': np.random.uniform(1, 6, 58),\n    'Species6': np.random.uniform(2, 7, 58),\n    'Species7': np.random.uniform(4, 9, 58),\n    'Species8': np.random.uniform(5, 10, 58),\n    'Species9': np.random.uniform(6, 12, 58),\n    'Species10': np.random.uniform(0, 8, 58)\n})\n\n# Define colors for each condition\ncolor_map = {'Normal': 'rgba(0, 0, 255, 0.3)', 'Sick': 'rgba(255, 0, 0, 0.3)'}\ncolors = [color_map[condition] for condition in data['Condition']]\n\n# Get the column names for species\nspecies_cols = [col for col in data.columns if col.startswith('Species')]\n\n# Create the parallel coordinates plot using graph_objects\ndimensions = [\n    dict(range=[data[col].min(), data[col].max()],\n         label=f'Species {i+1}',\n         values=data[col])\n    for i, col in enumerate(species_cols)\n]\n\nfig = go.Figure(data=\n    go.Parcoords(\n        line=dict(color=data['Condition'].astype('category').cat.codes, \n                 colorscale=[[0, 'blue'], [1, 'red']],\n                 showscale=True,\n                 colorbar=dict(title='Condition'),\n                 ),\n        dimensions=dimensions\n    )\n)\n\nfig.update_layout(\n    title='Parallel Coordinates Plot of Microbial Abundance',\n    font=dict(size=12)\n)\n\n\n                        \n                                            \n\n\nCode\n\n# fig.show()\n\n\nWhat do you think?"
-  },
-  {
-    "objectID": "posts/AIisfun/AIisstuff.html#a-zero-shot-example",
-    "href": "posts/AIisfun/AIisstuff.html#a-zero-shot-example",
-    "title": "AI Code Test",
-    "section": "",
-    "text": "Our example in class was this prompt:\n\nI want to use the tidyverse to create a parralel axis plot of microbiome data. I have 10 microbial species that will be the axes and a want to plot the abundance for 58 different samples. the samples are equally divided between normal baby poop and baby poop from sick babies.\n\nI put that prompt into AnythingLLM (pointed at the OpenAI API) and after a brief interaction:\n\nAda says you suck because of this error Error in [.data.frame(data, , columns) : undefined columns selected\n\nWe got this response and this code:\nThe error you’re encountering is due to the columns argument in ggparcoord, which specifies the numeric indices of the columns to be plotted. We need to adjust those indices based on the actual column positions in your dataset. Let’s refine the code.\nMake sure the column indices in the columns argument match the positions of your microbial species in the dataset and that groupColumn correctly refers to the column with the grouping variable (Condition).\nHere’s the corrected code:\n\n\nCode\n# Load necessary libraries\nlibrary(tidyverse)\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nCode\nlibrary(GGally)\n\n\nRegistered S3 method overwritten by 'GGally':\n  method from   \n  +.gg   ggplot2\n\n\nCode\n# Example microbiome data, replace this with your actual dataset\nset.seed(123)  # For reproducibility\ndata &lt;- tibble(\n  SampleID = 1:58,\n  Condition = rep(c(\"Normal\", \"Sick\"), each = 29),\n  Species1 = runif(58, 5, 15),\n  Species2 = runif(58, 10, 20),\n  Species3 = runif(58, 0, 5),\n  Species4 = runif(58, 3, 8),\n  Species5 = runif(58, 1, 6),\n  Species6 = runif(58, 2, 7),\n  Species7 = runif(58, 4, 9),\n  Species8 = runif(58, 5, 10),\n  Species9 = runif(58, 6, 12),\n  Species10 = runif(58, 0, 8)\n)\n\n# Create parallel coordinates plot\nggparcoord(data, columns = 3:12, groupColumn = 2, scale = \"globalminmax\") +\n  labs(title = \"Parallel Coordinates Plot of Microbial Abundance\",\n       x = \"Microbial Species\",\n       y = \"Abundance\") +\n  theme_minimal() +\n  scale_color_manual(values = c(\"Normal\" = \"blue\", \"Sick\" = \"red\")) +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1))\n\n\n\n\n\n\n\n\n\nIn this code, the columns argument is set to 3:12 to refer to the species columns, assuming these are from the 3rd to the 12th columns in your dataset. Adjust these indices if your data structure differs. The groupColumn is set to 2, assuming the Condition column is the second column. Please ensure your actual dataset aligns with these assumptions."
-  },
-  {
-    "objectID": "posts/AIisfun/AIisstuff.html#what-about-python",
-    "href": "posts/AIisfun/AIisstuff.html#what-about-python",
-    "title": "AI Code Test",
-    "section": "",
-    "text": "Then we decided to change programming languages entirely!\n\nI’ve changed my mind. I want to use Python instead.\n\nI’ll spare you the brief iterations, but we ended up with this:\n\n\nCode\nimport pandas as pd\nimport numpy as np\nimport plotly.express as px\nimport plotly.graph_objects as go\n\n# Example microbiome data\nnp.random.seed(123)  # For reproducibility\ndata = pd.DataFrame({\n    'SampleID': range(1, 59),\n    'Condition': ['Normal'] * 29 + ['Sick'] * 29,\n    'Species1': np.random.uniform(5, 15, 58),\n    'Species2': np.random.uniform(10, 20, 58),\n    'Species3': np.random.uniform(0, 5, 58),\n    'Species4': np.random.uniform(3, 8, 58),\n    'Species5': np.random.uniform(1, 6, 58),\n    'Species6': np.random.uniform(2, 7, 58),\n    'Species7': np.random.uniform(4, 9, 58),\n    'Species8': np.random.uniform(5, 10, 58),\n    'Species9': np.random.uniform(6, 12, 58),\n    'Species10': np.random.uniform(0, 8, 58)\n})\n\n# Define colors for each condition\ncolor_map = {'Normal': 'rgba(0, 0, 255, 0.3)', 'Sick': 'rgba(255, 0, 0, 0.3)'}\ncolors = [color_map[condition] for condition in data['Condition']]\n\n# Get the column names for species\nspecies_cols = [col for col in data.columns if col.startswith('Species')]\n\n# Create the parallel coordinates plot using graph_objects\ndimensions = [\n    dict(range=[data[col].min(), data[col].max()],\n         label=f'Species {i+1}',\n         values=data[col])\n    for i, col in enumerate(species_cols)\n]\n\nfig = go.Figure(data=\n    go.Parcoords(\n        line=dict(color=data['Condition'].astype('category').cat.codes, \n                 colorscale=[[0, 'blue'], [1, 'red']],\n                 showscale=True,\n                 colorbar=dict(title='Condition'),\n                 ),\n        dimensions=dimensions\n    )\n)\n\nfig.update_layout(\n    title='Parallel Coordinates Plot of Microbial Abundance',\n    font=dict(size=12)\n)\n\n\n                        \n                                            \n\n\nCode\n\n# fig.show()\n\n\nWhat do you think?"
-  },
-  {
-    "objectID": "posts/A3-PrototypeVizPortfolio/index.html",
-    "href": "posts/A3-PrototypeVizPortfolio/index.html",
-    "title": "ASSIGNMENT 3",
-    "section": "",
-    "text": "Enough with the theory and conceptual mumbo jumbo! Let’s get down to making a visualization and posting it somewhere for all the world to see! The basic idea of this assignment is to set up a repository that will serve as an experimental portfolio, and then create your first novel visualization element inside the portfolio. Its gonna be fun! Or at least educational…\nRemember that time that Barrie was dumb?"
-  },
-  {
-    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#summary",
-    "href": "posts/A3-PrototypeVizPortfolio/index.html#summary",
-    "title": "ASSIGNMENT 3",
-    "section": "",
-    "text": "Enough with the theory and conceptual mumbo jumbo! Let’s get down to making a visualization and posting it somewhere for all the world to see! The basic idea of this assignment is to set up a repository that will serve as an experimental portfolio, and then create your first novel visualization element inside the portfolio. Its gonna be fun! Or at least educational…\nRemember that time that Barrie was dumb?"
-  },
-  {
-    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#assignment",
-    "href": "posts/A3-PrototypeVizPortfolio/index.html#assignment",
-    "title": "ASSIGNMENT 3",
-    "section": "ASSIGNMENT",
-    "text": "ASSIGNMENT\nThis assignment has two parts. The first part is technical. We’ll set up a Quarto Blog project as a new repository in your GitHub account. Then you’ll be a Blogger! Prestigious! The second part should be more fun. We are going to create your first Blog post as a visualization that explores an ACTION - TARGET pair relevant to your data set from Assignment 2."
-  },
-  {
-    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#part-1-technical-sorcery",
-    "href": "posts/A3-PrototypeVizPortfolio/index.html#part-1-technical-sorcery",
-    "title": "ASSIGNMENT 3",
-    "section": "PART 1 TECHNICAL SORCERY",
-    "text": "PART 1 TECHNICAL SORCERY\n\n1A - Create your BLOG project.\nHopefully by now you have created / dusted off / logged in to your GitHub account. Go ahead and log in to your account on the web and leave it open in a tab in your browser. There is a really great video about the next few steps (also linked below in RESORUCES) from Posit, but I’m giving you the condensed version here.\n\nFire up RStudio.\nGo to File-&gt;New Project and then select NEW DIRECTORY.\nNow select QUARTO BLOG.\nYou are going to create a the project in a new working directory. It is best practice to put this in a senstible directory structure on your local hard drive where your other GitHub repositories also live. Here is what mine looks like:\n\n 4. I suggest making the directory name something informative, like BCB504Portfolio, but hey… If you want to call your repository HasturBoxerShorts I won’t stop you. 5. Most of you will select Knitr as your Engine, but Cody “Mr. Hacker McPythonPants” might select Jupyter. 6. Check Create a git repository. The other boxes are optional and we can talk more about them later. 7. Click CREATE PROJECT.\nNow you’ve got a BLOG template all set up! Ha Ha! Onward to Internet Fame!\n\n\n1B - Make the BLOG about you.\nWe won’t spend a ton of time here, because this will be an ongoing process. You’ll go and watch all those cool videos and tutorials this weekend to figure this out. But lets do a couple things.\n\nMaybe you should modify the about.qmd file so that your name is in there somewhere.\nMaybe you should modify the index.qmd file with a better title in the YAML header.\nMaybe you should navigate to the posts folder, open the Welcome to my blog folder, open index.qmd from that directory, and add a sentence or two.\n\n\n\n1C - Customize your first post.\n\nNavigate to the posts folder, open the post with code folder, and open index.qmd.\nReplace ALL of the content of index.qmd with the most recent version of your .qmd file from ASSIGNMENT 2. Keep the file name index.qmd. Save that file!\nMove your data files to the post with code folder.\nRender the index.qmd file from this folder. Hopefully it worked!\n\n\n\n1D - Render the BLOG as a website.\n\nIMPORTANT Open your _quarto.yml file and add output-dir: docs under project:\n\n\nThe indentations matter here.\n\nSave all the files you’ve modified.\nGo to the BUILD tab in the (probably) top right section of RStudio.\nClick RENDER WEBSITE.\nClick through your new Blog and see how it works!\n\n\n\n1E - Push to GitHub.\nThere are quite a few ways to do this part. I’m going to use GitHub Desktop, but those video will show you other ways.\n\nGo to GitHub Desktop.\nType some text in the summary box.\nClick COMMIT TO MASTER.\nClick PUSH ORIGIN.\nGo to your GitHub in your browser. You should see your new repository! Yay!\n\n\n\n1F - Make it a website with GitHub pages.\n\nIn your browser, click on your repository.\nGo to SETTINGS.\nSelect PAGES.\nSet the SOURCE option to Deploy from a branch.\nSet the BRANCH to master and the directory to docs\nDeploy that stuff and wait. Then visit your site!"
-  },
-  {
-    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#part-2-eldritch-visualization-ritual",
-    "href": "posts/A3-PrototypeVizPortfolio/index.html#part-2-eldritch-visualization-ritual",
-    "title": "ASSIGNMENT 3",
-    "section": "PART 2 ELDRITCH VISUALIZATION RITUAL",
-    "text": "PART 2 ELDRITCH VISUALIZATION RITUAL\n\n2A Define your ACTION - TARGET pair(s)\nIn [LECTURE 3] we discussed the concept of Task Abstraction in which you define the viz task that you want to help the user accomplish. This was represented as sets of ACTIONS that the user would perform (e.g. Discover, Present, Browse, Identify) on TARGETS related to the data set (e.g. Trends, Attributes, etc.).\nThink about one or two visualizations you wish to construct with your data, and try to define them in terms of ACTION - TARGET pairs. While you are at it, why don’t you update the index.qmd file of your BLOG POST with a new seciton at the bottom titled TASK ABSTRACTION, and put a sentence describing your visualizations and the ACTION - TARGET pairs they represent?\n\n\n2B Construct your Visualization\nLet’s get to work! Using whatever tools you can, code up your visualization in that new section of your BLOG post. You can check out how I approached this part in TUTORIAL 4."
-  },
-  {
-    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#resources",
-    "href": "posts/A3-PrototypeVizPortfolio/index.html#resources",
-    "title": "ASSIGNMENT 3",
-    "section": "RESOURCES",
-    "text": "RESOURCES\nA YouTube Video from Posit on Building your Data Science Portfolio\nTidyTuesday\nA fun Spotify example from TidyTuesday by Kaylin Pavlik.\nQuarto’s BLOG Documentation\nA YouTube Video from Posit on Building a BLOG with Quarto"
-  },
-  {
     "objectID": "posts/L6-TabularData1/index.html#the-three-major-data-types",
     "href": "posts/L6-TabularData1/index.html#the-three-major-data-types",
     "title": "LECTURE 6 - Tabular Data",
@@ -1384,6 +544,909 @@
     "title": "LECTURE 6 - Tabular Data",
     "section": "ARRANGING TABULAR DATA",
     "text": "ARRANGING TABULAR DATA\nWhat did we miss?\nggplot cheatsheet\n\n\n\nHOME"
+  },
+  {
+    "objectID": "posts/A3-PrototypeVizPortfolio/index.html",
+    "href": "posts/A3-PrototypeVizPortfolio/index.html",
+    "title": "ASSIGNMENT 3",
+    "section": "",
+    "text": "Enough with the theory and conceptual mumbo jumbo! Let’s get down to making a visualization and posting it somewhere for all the world to see! The basic idea of this assignment is to set up a repository that will serve as an experimental portfolio, and then create your first novel visualization element inside the portfolio. Its gonna be fun! Or at least educational…\nRemember that time that Barrie was dumb?"
+  },
+  {
+    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#summary",
+    "href": "posts/A3-PrototypeVizPortfolio/index.html#summary",
+    "title": "ASSIGNMENT 3",
+    "section": "",
+    "text": "Enough with the theory and conceptual mumbo jumbo! Let’s get down to making a visualization and posting it somewhere for all the world to see! The basic idea of this assignment is to set up a repository that will serve as an experimental portfolio, and then create your first novel visualization element inside the portfolio. Its gonna be fun! Or at least educational…\nRemember that time that Barrie was dumb?"
+  },
+  {
+    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#assignment",
+    "href": "posts/A3-PrototypeVizPortfolio/index.html#assignment",
+    "title": "ASSIGNMENT 3",
+    "section": "ASSIGNMENT",
+    "text": "ASSIGNMENT\nThis assignment has two parts. The first part is technical. We’ll set up a Quarto Blog project as a new repository in your GitHub account. Then you’ll be a Blogger! Prestigious! The second part should be more fun. We are going to create your first Blog post as a visualization that explores an ACTION - TARGET pair relevant to your data set from Assignment 2."
+  },
+  {
+    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#part-1-technical-sorcery",
+    "href": "posts/A3-PrototypeVizPortfolio/index.html#part-1-technical-sorcery",
+    "title": "ASSIGNMENT 3",
+    "section": "PART 1 TECHNICAL SORCERY",
+    "text": "PART 1 TECHNICAL SORCERY\n\n1A - Create your BLOG project.\nHopefully by now you have created / dusted off / logged in to your GitHub account. Go ahead and log in to your account on the web and leave it open in a tab in your browser. There is a really great video about the next few steps (also linked below in RESORUCES) from Posit, but I’m giving you the condensed version here.\n\nFire up RStudio.\nGo to File-&gt;New Project and then select NEW DIRECTORY.\nNow select QUARTO BLOG.\nYou are going to create a the project in a new working directory. It is best practice to put this in a senstible directory structure on your local hard drive where your other GitHub repositories also live. Here is what mine looks like:\n\n 4. I suggest making the directory name something informative, like BCB504Portfolio, but hey… If you want to call your repository HasturBoxerShorts I won’t stop you. 5. Most of you will select Knitr as your Engine, but Cody “Mr. Hacker McPythonPants” might select Jupyter. 6. Check Create a git repository. The other boxes are optional and we can talk more about them later. 7. Click CREATE PROJECT.\nNow you’ve got a BLOG template all set up! Ha Ha! Onward to Internet Fame!\n\n\n1B - Make the BLOG about you.\nWe won’t spend a ton of time here, because this will be an ongoing process. You’ll go and watch all those cool videos and tutorials this weekend to figure this out. But lets do a couple things.\n\nMaybe you should modify the about.qmd file so that your name is in there somewhere.\nMaybe you should modify the index.qmd file with a better title in the YAML header.\nMaybe you should navigate to the posts folder, open the Welcome to my blog folder, open index.qmd from that directory, and add a sentence or two.\n\n\n\n1C - Customize your first post.\n\nNavigate to the posts folder, open the post with code folder, and open index.qmd.\nReplace ALL of the content of index.qmd with the most recent version of your .qmd file from ASSIGNMENT 2. Keep the file name index.qmd. Save that file!\nMove your data files to the post with code folder.\nRender the index.qmd file from this folder. Hopefully it worked!\n\n\n\n1D - Render the BLOG as a website.\n\nIMPORTANT Open your _quarto.yml file and add output-dir: docs under project:\n\n\nThe indentations matter here.\n\nSave all the files you’ve modified.\nGo to the BUILD tab in the (probably) top right section of RStudio.\nClick RENDER WEBSITE.\nClick through your new Blog and see how it works!\n\n\n\n1E - Push to GitHub.\nThere are quite a few ways to do this part. I’m going to use GitHub Desktop, but those video will show you other ways.\n\nGo to GitHub Desktop.\nType some text in the summary box.\nClick COMMIT TO MASTER.\nClick PUSH ORIGIN.\nGo to your GitHub in your browser. You should see your new repository! Yay!\n\n\n\n1F - Make it a website with GitHub pages.\n\nIn your browser, click on your repository.\nGo to SETTINGS.\nSelect PAGES.\nSet the SOURCE option to Deploy from a branch.\nSet the BRANCH to master and the directory to docs\nDeploy that stuff and wait. Then visit your site!"
+  },
+  {
+    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#part-2-eldritch-visualization-ritual",
+    "href": "posts/A3-PrototypeVizPortfolio/index.html#part-2-eldritch-visualization-ritual",
+    "title": "ASSIGNMENT 3",
+    "section": "PART 2 ELDRITCH VISUALIZATION RITUAL",
+    "text": "PART 2 ELDRITCH VISUALIZATION RITUAL\n\n2A Define your ACTION - TARGET pair(s)\nIn [LECTURE 3] we discussed the concept of Task Abstraction in which you define the viz task that you want to help the user accomplish. This was represented as sets of ACTIONS that the user would perform (e.g. Discover, Present, Browse, Identify) on TARGETS related to the data set (e.g. Trends, Attributes, etc.).\nThink about one or two visualizations you wish to construct with your data, and try to define them in terms of ACTION - TARGET pairs. While you are at it, why don’t you update the index.qmd file of your BLOG POST with a new seciton at the bottom titled TASK ABSTRACTION, and put a sentence describing your visualizations and the ACTION - TARGET pairs they represent?\n\n\n2B Construct your Visualization\nLet’s get to work! Using whatever tools you can, code up your visualization in that new section of your BLOG post. You can check out how I approached this part in TUTORIAL 4."
+  },
+  {
+    "objectID": "posts/A3-PrototypeVizPortfolio/index.html#resources",
+    "href": "posts/A3-PrototypeVizPortfolio/index.html#resources",
+    "title": "ASSIGNMENT 3",
+    "section": "RESOURCES",
+    "text": "RESOURCES\nA YouTube Video from Posit on Building your Data Science Portfolio\nTidyTuesday\nA fun Spotify example from TidyTuesday by Kaylin Pavlik.\nQuarto’s BLOG Documentation\nA YouTube Video from Posit on Building a BLOG with Quarto"
+  },
+  {
+    "objectID": "posts/AIisfun/AIisstuff.html",
+    "href": "posts/AIisfun/AIisstuff.html",
+    "title": "AI Code Test",
+    "section": "",
+    "text": "This post is a brief example of how AI tools such as GPT-4o or Claude can accelerate your programming.\n\n\nOur example in class was this prompt:\n\nI want to use the tidyverse to create a parralel axis plot of microbiome data. I have 10 microbial species that will be the axes and a want to plot the abundance for 58 different samples. the samples are equally divided between normal baby poop and baby poop from sick babies.\n\nI put that prompt into AnythingLLM (pointed at the OpenAI API) and after a brief interaction:\n\nAda says you suck because of this error Error in [.data.frame(data, , columns) : undefined columns selected\n\nWe got this response and this code:\nThe error you’re encountering is due to the columns argument in ggparcoord, which specifies the numeric indices of the columns to be plotted. We need to adjust those indices based on the actual column positions in your dataset. Let’s refine the code.\nMake sure the column indices in the columns argument match the positions of your microbial species in the dataset and that groupColumn correctly refers to the column with the grouping variable (Condition).\nHere’s the corrected code:\n\n\nCode\n# Load necessary libraries\nlibrary(tidyverse)\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nCode\nlibrary(GGally)\n\n\nRegistered S3 method overwritten by 'GGally':\n  method from   \n  +.gg   ggplot2\n\n\nCode\n# Example microbiome data, replace this with your actual dataset\nset.seed(123)  # For reproducibility\ndata &lt;- tibble(\n  SampleID = 1:58,\n  Condition = rep(c(\"Normal\", \"Sick\"), each = 29),\n  Species1 = runif(58, 5, 15),\n  Species2 = runif(58, 10, 20),\n  Species3 = runif(58, 0, 5),\n  Species4 = runif(58, 3, 8),\n  Species5 = runif(58, 1, 6),\n  Species6 = runif(58, 2, 7),\n  Species7 = runif(58, 4, 9),\n  Species8 = runif(58, 5, 10),\n  Species9 = runif(58, 6, 12),\n  Species10 = runif(58, 0, 8)\n)\n\n# Create parallel coordinates plot\nggparcoord(data, columns = 3:12, groupColumn = 2, scale = \"globalminmax\") +\n  labs(title = \"Parallel Coordinates Plot of Microbial Abundance\",\n       x = \"Microbial Species\",\n       y = \"Abundance\") +\n  theme_minimal() +\n  scale_color_manual(values = c(\"Normal\" = \"blue\", \"Sick\" = \"red\")) +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1))\n\n\n\n\n\n\n\n\n\nIn this code, the columns argument is set to 3:12 to refer to the species columns, assuming these are from the 3rd to the 12th columns in your dataset. Adjust these indices if your data structure differs. The groupColumn is set to 2, assuming the Condition column is the second column. Please ensure your actual dataset aligns with these assumptions.\n\n\n\nThen we decided to change programming languages entirely!\n\nI’ve changed my mind. I want to use Python instead.\n\nI’ll spare you the brief iterations, but we ended up with this:\n\n\nCode\nimport pandas as pd\nimport numpy as np\nimport plotly.express as px\nimport plotly.graph_objects as go\n\n# Example microbiome data\nnp.random.seed(123)  # For reproducibility\ndata = pd.DataFrame({\n    'SampleID': range(1, 59),\n    'Condition': ['Normal'] * 29 + ['Sick'] * 29,\n    'Species1': np.random.uniform(5, 15, 58),\n    'Species2': np.random.uniform(10, 20, 58),\n    'Species3': np.random.uniform(0, 5, 58),\n    'Species4': np.random.uniform(3, 8, 58),\n    'Species5': np.random.uniform(1, 6, 58),\n    'Species6': np.random.uniform(2, 7, 58),\n    'Species7': np.random.uniform(4, 9, 58),\n    'Species8': np.random.uniform(5, 10, 58),\n    'Species9': np.random.uniform(6, 12, 58),\n    'Species10': np.random.uniform(0, 8, 58)\n})\n\n# Define colors for each condition\ncolor_map = {'Normal': 'rgba(0, 0, 255, 0.3)', 'Sick': 'rgba(255, 0, 0, 0.3)'}\ncolors = [color_map[condition] for condition in data['Condition']]\n\n# Get the column names for species\nspecies_cols = [col for col in data.columns if col.startswith('Species')]\n\n# Create the parallel coordinates plot using graph_objects\ndimensions = [\n    dict(range=[data[col].min(), data[col].max()],\n         label=f'Species {i+1}',\n         values=data[col])\n    for i, col in enumerate(species_cols)\n]\n\nfig = go.Figure(data=\n    go.Parcoords(\n        line=dict(color=data['Condition'].astype('category').cat.codes, \n                 colorscale=[[0, 'blue'], [1, 'red']],\n                 showscale=True,\n                 colorbar=dict(title='Condition'),\n                 ),\n        dimensions=dimensions\n    )\n)\n\nfig.update_layout(\n    title='Parallel Coordinates Plot of Microbial Abundance',\n    font=dict(size=12)\n)\n\n\n                        \n                                            \n\n\nCode\n\n# fig.show()\n\n\nWhat do you think?"
+  },
+  {
+    "objectID": "posts/AIisfun/AIisstuff.html#a-zero-shot-example",
+    "href": "posts/AIisfun/AIisstuff.html#a-zero-shot-example",
+    "title": "AI Code Test",
+    "section": "",
+    "text": "Our example in class was this prompt:\n\nI want to use the tidyverse to create a parralel axis plot of microbiome data. I have 10 microbial species that will be the axes and a want to plot the abundance for 58 different samples. the samples are equally divided between normal baby poop and baby poop from sick babies.\n\nI put that prompt into AnythingLLM (pointed at the OpenAI API) and after a brief interaction:\n\nAda says you suck because of this error Error in [.data.frame(data, , columns) : undefined columns selected\n\nWe got this response and this code:\nThe error you’re encountering is due to the columns argument in ggparcoord, which specifies the numeric indices of the columns to be plotted. We need to adjust those indices based on the actual column positions in your dataset. Let’s refine the code.\nMake sure the column indices in the columns argument match the positions of your microbial species in the dataset and that groupColumn correctly refers to the column with the grouping variable (Condition).\nHere’s the corrected code:\n\n\nCode\n# Load necessary libraries\nlibrary(tidyverse)\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nCode\nlibrary(GGally)\n\n\nRegistered S3 method overwritten by 'GGally':\n  method from   \n  +.gg   ggplot2\n\n\nCode\n# Example microbiome data, replace this with your actual dataset\nset.seed(123)  # For reproducibility\ndata &lt;- tibble(\n  SampleID = 1:58,\n  Condition = rep(c(\"Normal\", \"Sick\"), each = 29),\n  Species1 = runif(58, 5, 15),\n  Species2 = runif(58, 10, 20),\n  Species3 = runif(58, 0, 5),\n  Species4 = runif(58, 3, 8),\n  Species5 = runif(58, 1, 6),\n  Species6 = runif(58, 2, 7),\n  Species7 = runif(58, 4, 9),\n  Species8 = runif(58, 5, 10),\n  Species9 = runif(58, 6, 12),\n  Species10 = runif(58, 0, 8)\n)\n\n# Create parallel coordinates plot\nggparcoord(data, columns = 3:12, groupColumn = 2, scale = \"globalminmax\") +\n  labs(title = \"Parallel Coordinates Plot of Microbial Abundance\",\n       x = \"Microbial Species\",\n       y = \"Abundance\") +\n  theme_minimal() +\n  scale_color_manual(values = c(\"Normal\" = \"blue\", \"Sick\" = \"red\")) +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1))\n\n\n\n\n\n\n\n\n\nIn this code, the columns argument is set to 3:12 to refer to the species columns, assuming these are from the 3rd to the 12th columns in your dataset. Adjust these indices if your data structure differs. The groupColumn is set to 2, assuming the Condition column is the second column. Please ensure your actual dataset aligns with these assumptions."
+  },
+  {
+    "objectID": "posts/AIisfun/AIisstuff.html#what-about-python",
+    "href": "posts/AIisfun/AIisstuff.html#what-about-python",
+    "title": "AI Code Test",
+    "section": "",
+    "text": "Then we decided to change programming languages entirely!\n\nI’ve changed my mind. I want to use Python instead.\n\nI’ll spare you the brief iterations, but we ended up with this:\n\n\nCode\nimport pandas as pd\nimport numpy as np\nimport plotly.express as px\nimport plotly.graph_objects as go\n\n# Example microbiome data\nnp.random.seed(123)  # For reproducibility\ndata = pd.DataFrame({\n    'SampleID': range(1, 59),\n    'Condition': ['Normal'] * 29 + ['Sick'] * 29,\n    'Species1': np.random.uniform(5, 15, 58),\n    'Species2': np.random.uniform(10, 20, 58),\n    'Species3': np.random.uniform(0, 5, 58),\n    'Species4': np.random.uniform(3, 8, 58),\n    'Species5': np.random.uniform(1, 6, 58),\n    'Species6': np.random.uniform(2, 7, 58),\n    'Species7': np.random.uniform(4, 9, 58),\n    'Species8': np.random.uniform(5, 10, 58),\n    'Species9': np.random.uniform(6, 12, 58),\n    'Species10': np.random.uniform(0, 8, 58)\n})\n\n# Define colors for each condition\ncolor_map = {'Normal': 'rgba(0, 0, 255, 0.3)', 'Sick': 'rgba(255, 0, 0, 0.3)'}\ncolors = [color_map[condition] for condition in data['Condition']]\n\n# Get the column names for species\nspecies_cols = [col for col in data.columns if col.startswith('Species')]\n\n# Create the parallel coordinates plot using graph_objects\ndimensions = [\n    dict(range=[data[col].min(), data[col].max()],\n         label=f'Species {i+1}',\n         values=data[col])\n    for i, col in enumerate(species_cols)\n]\n\nfig = go.Figure(data=\n    go.Parcoords(\n        line=dict(color=data['Condition'].astype('category').cat.codes, \n                 colorscale=[[0, 'blue'], [1, 'red']],\n                 showscale=True,\n                 colorbar=dict(title='Condition'),\n                 ),\n        dimensions=dimensions\n    )\n)\n\nfig.update_layout(\n    title='Parallel Coordinates Plot of Microbial Abundance',\n    font=dict(size=12)\n)\n\n\n                        \n                                            \n\n\nCode\n\n# fig.show()\n\n\nWhat do you think?"
+  },
+  {
+    "objectID": "posts/T1-Lit-Prog/index.html",
+    "href": "posts/T1-Lit-Prog/index.html",
+    "title": "TUTORIAL 1 - Literate Programming",
+    "section": "",
+    "text": "Learning new tools is hard. Plowing though the tomes of the Data Science Mythos is hard. Perhaps this tutorial will guide you through the mind shattering truths of… LITERATE PROGRAMMING.\nI recorded this video a couple years ago. It should cover the basics, but some elements might be dated."
+  },
+  {
+    "objectID": "posts/T1-Lit-Prog/index.html#intro-to-quarto",
+    "href": "posts/T1-Lit-Prog/index.html#intro-to-quarto",
+    "title": "TUTORIAL 1 - Literate Programming",
+    "section": "",
+    "text": "Learning new tools is hard. Plowing though the tomes of the Data Science Mythos is hard. Perhaps this tutorial will guide you through the mind shattering truths of… LITERATE PROGRAMMING.\nI recorded this video a couple years ago. It should cover the basics, but some elements might be dated."
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#last-lecture",
+    "href": "posts/L3-TaskAbstraction/index.html#last-lecture",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "LAST LECTURE",
+    "text": "LAST LECTURE\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#task-abstraction",
+    "href": "posts/L3-TaskAbstraction/index.html#task-abstraction",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "TASK ABSTRACTION",
+    "text": "TASK ABSTRACTION\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#from-domain-to-abstraction",
+    "href": "posts/L3-TaskAbstraction/index.html#from-domain-to-abstraction",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "FROM DOMAIN TO ABSTRACTION",
+    "text": "FROM DOMAIN TO ABSTRACTION"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#key-components-of-task-abstraction",
+    "href": "posts/L3-TaskAbstraction/index.html#key-components-of-task-abstraction",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "KEY COMPONENTS OF TASK ABSTRACTION",
+    "text": "KEY COMPONENTS OF TASK ABSTRACTION\n{action, target} pairs\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#actions-and-targets",
+    "href": "posts/L3-TaskAbstraction/index.html#actions-and-targets",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "ACTIONS AND TARGETS",
+    "text": "ACTIONS AND TARGETS"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#actions---analyze",
+    "href": "posts/L3-TaskAbstraction/index.html#actions---analyze",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "ACTIONS - Analyze",
+    "text": "ACTIONS - Analyze\n\n\n\nConsume: Information has already been generated and stored as data.\n\nDiscover: new knowledge, test hypothesis, generate new hypothesis, verify\nPresent: communicate something specific and already understood\nEnjoy: casual encounters with visualization\n\nProduce: generate new material or information\n\nAnnotate: addition of graphical or text to existing visualization elements\nRecord: saves or captures visualization elements as persistent artifacts (screenshots, lists, parameter sets, annotations)\nDerive: produce new data based on existing data (aka transform)"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#actions---search",
+    "href": "posts/L3-TaskAbstraction/index.html#actions---search",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "ACTIONS - Search",
+    "text": "ACTIONS - Search\n\n\n\nLookup: Location and target both known\n\nExample: Look up humans in the Tree of Life, knowing they are mammals.\n\nLocate: Location unknown and target known\n\nExample: Look up rabbits in the Tree of Life, not knowing they are lagomorphs.\n\nBrowse: Location known and target unknown\n\nExample: Find any clades within Mammalia that have only one species.\n\nExplore: Location unknown and target unknown\n\nExample: Searching for anomalies in time series data."
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#actions---query",
+    "href": "posts/L3-TaskAbstraction/index.html#actions---query",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "ACTIONS - Query",
+    "text": "ACTIONS - Query\n\n\n\nQuery: How much of the data matters to the task?\n\nIdentify: One (specific Item, individual, cell, etc)\nCompare: Some (multiple targets)\nSummarize: All (very common, aka Overview)"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#targets---all-data",
+    "href": "posts/L3-TaskAbstraction/index.html#targets---all-data",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "TARGETS - All Data",
+    "text": "TARGETS - All Data"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#targets---attributes",
+    "href": "posts/L3-TaskAbstraction/index.html#targets---attributes",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "TARGETS - Attributes",
+    "text": "TARGETS - Attributes"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#targets---other-data",
+    "href": "posts/L3-TaskAbstraction/index.html#targets---other-data",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "TARGETS - Other Data",
+    "text": "TARGETS - Other Data"
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#summary",
+    "href": "posts/L3-TaskAbstraction/index.html#summary",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "SUMMARY",
+    "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L3-TaskAbstraction/index.html#mandatory-fun",
+    "href": "posts/L3-TaskAbstraction/index.html#mandatory-fun",
+    "title": "LECTURE 3 - TASK ABSTRACTION",
+    "section": "MANDATORY FUN",
+    "text": "MANDATORY FUN\nWe will do these until everyone has done at least one example.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nHOME"
+  },
+  {
+    "objectID": "posts/T7-NHLAwards/index.html",
+    "href": "posts/T7-NHLAwards/index.html",
+    "title": "TUTORIAL 7",
+    "section": "",
+    "text": "Code\nIndivdual.Skater &lt;- read.csv(\"SkaterIndividualstats.csv\")\nOnIce.Skater &lt;- read.csv(\"SkaterOnicestats.csv\")\nGoalie &lt;- read.csv(\"Goalies.csv\")\nIndividual.Skater.Rookie &lt;- read.csv(\"RookieSkaterindividual.csv\")\nOnIce.Skater.Rookie &lt;- read.csv(\"RookieSkaterOnIce.csv\")\nRookie.Goalie &lt;- read.csv(\"RookieGoalies.csv\")"
+  },
+  {
+    "objectID": "posts/T7-NHLAwards/index.html#vezina-ballot",
+    "href": "posts/T7-NHLAwards/index.html#vezina-ballot",
+    "title": "TUTORIAL 7",
+    "section": "VEZINA BALLOT",
+    "text": "VEZINA BALLOT\nWho is the best goalie? I’ll start by examining the stats from the assignment.\n\n\nCode\nggplot(Goalie, aes(x=SV.))+\n  geom_histogram(binwidth = .01)+\n  labs(x = \"Save Percentage\",\n       y = \"Number of Players\",\n       caption = \"source: https://www.naturalstattrick.com/\",\n       title = \"Distribution of Save Percentage\",\n       subtitle = \"2024-2025 season stats as of March 4\")\n\n\n\n\n\n\n\n\n\nCode\nggplot(Goalie, aes(x=GAA))+\n  geom_histogram(binwidth = .2)+\n  labs(x = \"Goals Against Average\",\n       y = \"Number of Players\",\n       caption = \"source: https://www.naturalstattrick.com/\",\n       title = \"Distribution of Goals Against Average\",\n       subtitle = \"2024-2025 season stats as of March 4\")\n\n\n\n\n\n\n\n\n\nCode\nggplot(Goalie, aes(x=GSAA))+\n  geom_histogram(binwidth = 1)+\n  labs(x = \"Goals Saved Above Average\",\n       y = \"Number of Players\",\n       caption = \"source: https://www.naturalstattrick.com/\",\n       title = \"Distribution of Goals Saved Above Average\",\n       subtitle = \"2024-2025 season stats as of March 4\")\n\n\n\n\n\n\n\n\n\nNot super helpful. This is because our task is related to comparing values for individual players. Let’s do that for Save Percentage.\n\n\nCode\nggplot(Goalie, aes(x=SV., y=reorder(Player, SV.))) +\n  geom_col(fill=\"#1F77B4\") +\n  labs(x = \"Save Percentage\",\n       y = \"Player Name\",\n       caption = \"Source: https://www.naturalstattrick.com/\",\n       title = \"Individual Save Percentage\",\n       subtitle = \"2024-2025 season stats as of March 4\") +\n  theme_minimal() +\n  theme(panel.grid.major.y = element_blank(),\n        panel.grid.minor = element_blank())\n\n\n\n\n\n\n\n\n\nYay! We are done! My Vezina Ballot will be the top five players on this plot in order. Right?"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#last-lecture",
+    "href": "posts/L2-Data-Abstraction/index.html#last-lecture",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "LAST LECTURE",
+    "text": "LAST LECTURE\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#what",
+    "href": "posts/L2-Data-Abstraction/index.html#what",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "WHAT?",
+    "text": "WHAT?\n Before you design a visualization, you need to understand the data. Here, we consider the semantics to describe the DATA TYPES and DATA ATTRIBUTES."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#the-three-major-data-types",
+    "href": "posts/L2-Data-Abstraction/index.html#the-three-major-data-types",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "THE THREE MAJOR DATA TYPES",
+    "text": "THE THREE MAJOR DATA TYPES"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-attributes",
+    "href": "posts/L2-Data-Abstraction/index.html#data-attributes",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA ATTRIBUTES",
+    "text": "DATA ATTRIBUTES"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#what-1",
+    "href": "posts/L2-Data-Abstraction/index.html#what-1",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "WHAT?",
+    "text": "WHAT?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics",
+    "href": "posts/L2-Data-Abstraction/index.html#data-semantics",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001\n\n\nVIZ"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-1",
+    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-1",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points far from each other in 3D space?\n\n\nVIZ"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-2",
+    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat does this sequence of six numbers mean?\n14, 2.6, 30, 30, 15, 100001 Two points close to each other in 2D space, with 15 links between them, and a weight of 100001 for the link?\n\n\nVIZ"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-3",
+    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-3",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear:"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-4",
+    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-4",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear: Food shipment of produce (basil & pear) arrived in satisfactory condition on 7th day of month\n\n\nVIZ"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-5",
+    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-5",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear: Basil Point neighborhood of city had 7 inches of snow cleared by the Pear Creek Limited snow removal service\n\n\nVIZ"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-semantics-6",
+    "href": "posts/L2-Data-Abstraction/index.html#data-semantics-6",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA SEMANTICS",
+    "text": "DATA SEMANTICS\n\n\n\n\n\n\nWhat about this data?\nBasil, 7, S, Pear: Lab rat Basil made 7 attempts to find way through south section of maze, these trials used pear as reward food\n\n\nVIZ"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#semantics",
+    "href": "posts/L2-Data-Abstraction/index.html#semantics",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SEMANTICS",
+    "text": "SEMANTICS\nThe meaning of a word, phrase, sentence, or text.\nBasil, 7, S, Pear"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#semantics-for-data",
+    "href": "posts/L2-Data-Abstraction/index.html#semantics-for-data",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SEMANTICS FOR DATA",
+    "text": "SEMANTICS FOR DATA\n\n\n\n\n\n\nSemantics\n\nitem: individual entity, discrete\n\neg patient, car, stock, city\n“independent variable”\n\nattribute: property that is measured, observed, logged…\n\neg height, blood pressure for patient\neg horsepower, make for car\n“dependent variable”\n\n\n\n\nData Table\n\n\n\n\nITEM: Person\nATTRIBUTES: Name, Age, Shirt Size, Favorite Fruit"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#other-data-types",
+    "href": "posts/L2-Data-Abstraction/index.html#other-data-types",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "OTHER DATA TYPES",
+    "text": "OTHER DATA TYPES\n\nLinks\n\nexpress relationship between two items\ne.g/ friendship on facebook, interaction between proteins\n\nPositions\n\nspatial data: location in 2D or 3D\ne.g. pixels in photo, voxels in MRI scan, latitude/longitude\n\nGrids\n\nsampling strategy for continuous data"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#what-2",
+    "href": "posts/L2-Data-Abstraction/index.html#what-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "WHAT?",
+    "text": "WHAT?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#dataset-types-tables",
+    "href": "posts/L2-Data-Abstraction/index.html#dataset-types-tables",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATASET TYPES: TABLES",
+    "text": "DATASET TYPES: TABLES\nFlat Table\n\n\n\nOne ITEM per row\n\noften called an observation\n\nEach column is an ATTRIBUTE\n\noften called a variable\n\nA cell holds the VALUE for an item/attribute pair\nA UNIQUE KEY can be used (implicitly or explicitly) to identify each item even if they share all measured attributes"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#flat-table-example",
+    "href": "posts/L2-Data-Abstraction/index.html#flat-table-example",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "FLAT TABLE EXAMPLE",
+    "text": "FLAT TABLE EXAMPLE"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#multidimensional-tables",
+    "href": "posts/L2-Data-Abstraction/index.html#multidimensional-tables",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "MULTIDIMENSIONAL TABLES",
+    "text": "MULTIDIMENSIONAL TABLES\nindexing based on multiple keys (eg genes, patients)"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#networks",
+    "href": "posts/L2-Data-Abstraction/index.html#networks",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "NETWORKS",
+    "text": "NETWORKS\nNetwork/graph nodes (vertices) connected by links (edges). A tree is special case: no cycles, often have roots, and are directed."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#fields",
+    "href": "posts/L2-Data-Abstraction/index.html#fields",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "FIELDS",
+    "text": "FIELDS"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#spatial-fields-1",
+    "href": "posts/L2-Data-Abstraction/index.html#spatial-fields-1",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SPATIAL FIELDS 1",
+    "text": "SPATIAL FIELDS 1\nAttribute values associated with cells.\nEach cell contains a value from a continuous domain (eg temperature, pressure, wind velocity measured or simulated)."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#spatial-fields-2",
+    "href": "posts/L2-Data-Abstraction/index.html#spatial-fields-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SPATIAL FIELDS 2",
+    "text": "SPATIAL FIELDS 2\n\n\n\n\n\n\n\nAttribute values associated with cells.\nEach cell contains value from continuous domain\n\n(eg temperature, pressure, wind velocity)\n\nMeasured or simulated.\nMajor concerns and potential limitations:\n\nSampling: where are the attributes measured and at what density?\nInterpolation: how to model attributes in cells with no measurements?\nGrid types: optimizing size, shape, etc."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#spatial-fields-3",
+    "href": "posts/L2-Data-Abstraction/index.html#spatial-fields-3",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SPATIAL FIELDS 3",
+    "text": "SPATIAL FIELDS 3\n\n\n\nData structures can be complex, scaling with the number of attributes per cell:\n\nScalar (1)\nVector (2)\nTensor (many)"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#geometry",
+    "href": "posts/L2-Data-Abstraction/index.html#geometry",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "GEOMETRY",
+    "text": "GEOMETRY"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#geometry-2",
+    "href": "posts/L2-Data-Abstraction/index.html#geometry-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "GEOMETRY 2",
+    "text": "GEOMETRY 2\n\n\n\nShape of items or observations is defined.\nExplicit spatial positions / regions\n\npoints, lines, curves, surfaces, volumes\n\n\n\n Lopez et.al., 2024"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#collections",
+    "href": "posts/L2-Data-Abstraction/index.html#collections",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "COLLECTIONS",
+    "text": "COLLECTIONS"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#collections-2",
+    "href": "posts/L2-Data-Abstraction/index.html#collections-2",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "COLLECTIONS 2",
+    "text": "COLLECTIONS 2\n\n\nGrouping Items:\n\nSets\n\nunique items\nunordered\n\nLists\n\nordered\nduplicates possible\n\nClusters\n\ngroups of similar items"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-types",
+    "href": "posts/L2-Data-Abstraction/index.html#data-types",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA TYPES",
+    "text": "DATA TYPES"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#attribute-types",
+    "href": "posts/L2-Data-Abstraction/index.html#attribute-types",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "ATTRIBUTE TYPES",
+    "text": "ATTRIBUTE TYPES\n\n\n\nCategorical (nominal):\n\ncompare equality\nno implicit ordering\n\nOrdered:\n\nordinal\nless/greater than defined\n\nQuantitative:\n\nmeaningful magnitude\narithmetic possible"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#example",
+    "href": "posts/L2-Data-Abstraction/index.html#example",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "EXAMPLE",
+    "text": "EXAMPLE\nCategorical\nOrdinal\nQuantitative"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#example-1",
+    "href": "posts/L2-Data-Abstraction/index.html#example-1",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "EXAMPLE",
+    "text": "EXAMPLE\nCategorical\nOrdinal\nQuantitative"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#additional-semantic-components",
+    "href": "posts/L2-Data-Abstraction/index.html#additional-semantic-components",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "ADDITIONAL SEMANTIC COMPONENTS",
+    "text": "ADDITIONAL SEMANTIC COMPONENTS"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#data-abstraction",
+    "href": "posts/L2-Data-Abstraction/index.html#data-abstraction",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DATA ABSTRACTION",
+    "text": "DATA ABSTRACTION\n\nGOAL: Translate from domain-specific language to generic (and consistent) visualization language.\n\nIdentify dataset type(s) and attribute types.\nIdentify cardinality.\n\nhow many items in the dataset?\nwhat is cardinality of each attribute?\n\nnumber of levels for categorical data?\nrange for quantitative data\n\n\nConsider whether to transform the data.\n\nguided by your understanding of the task."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#models-data-vs-conceptual",
+    "href": "posts/L2-Data-Abstraction/index.html#models-data-vs-conceptual",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "MODELS: DATA VS CONCEPTUAL",
+    "text": "MODELS: DATA VS CONCEPTUAL\n\n\nData Model\n\nmathematical abstraction\nsets with operations, eg floats with * / - + or variable data types in programming languages\n\nConceptual Model\n\nmental construction (semantics)\nsupports reasoning\ntypically based on understanding of tasks\n\nThe Data Abstraction process relies on conceptual model for transforming data if needed"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#models-example",
+    "href": "posts/L2-Data-Abstraction/index.html#models-example",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "MODELS: EXAMPLE",
+    "text": "MODELS: EXAMPLE\n\nData Model: floats\n\n32.52, 54.06, -14.35,\n\nConceptual Model:\n\ntemperature\n\nPossible data abstractions:\n\nQUANTITATIVE: continuous to 2 significant figures:\n\nTASK: Forecasting the weather\n\nORDINAL: Hot, Warm, Cold:\n\nTASK: Deciding if my bath water is ready\n\nCATEGORICAL: Above Freezing, Below Freezing:\n\nTASK: Deciding if I should leave the house today"
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#derived-attributes",
+    "href": "posts/L2-Data-Abstraction/index.html#derived-attributes",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "DERIVED ATTRIBUTES",
+    "text": "DERIVED ATTRIBUTES\nDerived attribute: Data computed from original (collected, observed) attributes."
+  },
+  {
+    "objectID": "posts/L2-Data-Abstraction/index.html#summary",
+    "href": "posts/L2-Data-Abstraction/index.html#summary",
+    "title": "LECTURE 2 - DATA ABSTRACTION",
+    "section": "SUMMARY",
+    "text": "SUMMARY\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\n\n\n\n\nHOME"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#vad-model",
+    "href": "posts/L4-Marks-Channels/index.html#vad-model",
+    "title": "LECTURE 4",
+    "section": "VAD MODEL",
+    "text": "VAD MODEL"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#understand-the-data",
+    "href": "posts/L4-Marks-Channels/index.html#understand-the-data",
+    "title": "LECTURE 4",
+    "section": "UNDERSTAND THE DATA",
+    "text": "UNDERSTAND THE DATA\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#understand-the-task",
+    "href": "posts/L4-Marks-Channels/index.html#understand-the-task",
+    "title": "LECTURE 4",
+    "section": "UNDERSTAND THE TASK",
+    "text": "UNDERSTAND THE TASK\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#visual-encoding",
+    "href": "posts/L4-Marks-Channels/index.html#visual-encoding",
+    "title": "LECTURE 4",
+    "section": "VISUAL ENCODING",
+    "text": "VISUAL ENCODING\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#other-frameworks",
+    "href": "posts/L4-Marks-Channels/index.html#other-frameworks",
+    "title": "LECTURE 4",
+    "section": "OTHER FRAMEWORKS",
+    "text": "OTHER FRAMEWORKS\n\nThe Tidyverse\nThe Grammar of Graphics\nTufte"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#tidyverse",
+    "href": "posts/L4-Marks-Channels/index.html#tidyverse",
+    "title": "LECTURE 4",
+    "section": "TIDYVERSE",
+    "text": "TIDYVERSE\nR packages for data science:\n\n\nThe tidyverse is an opinionated collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures. The best way to explore and understand the tidyverse is with cheetsheets, like this one for tidyr!"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#grammar-of-graphics",
+    "href": "posts/L4-Marks-Channels/index.html#grammar-of-graphics",
+    "title": "LECTURE 4",
+    "section": "GRAMMAR OF GRAPHICS",
+    "text": "GRAMMAR OF GRAPHICS\nThe ggplot2 cheatsheet!"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#tufte",
+    "href": "posts/L4-Marks-Channels/index.html#tufte",
+    "title": "LECTURE 4",
+    "section": "TUFTE",
+    "text": "TUFTE\nTufte’s Website\nA Quarto Page Layout Example"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#analysis-framework",
+    "href": "posts/L4-Marks-Channels/index.html#analysis-framework",
+    "title": "LECTURE 4",
+    "section": "ANALYSIS FRAMEWORK",
+    "text": "ANALYSIS FRAMEWORK\nFour levels, three questions\n\n\n\nDomain situation defines the target users.\nAbstraction translate from specifics of domain to vocabulary of vis\n\nWHAT is shown? data abstraction\nWHY is the user looking at it? task abstraction\n\nIdiom defines the visualization\n\nHOW is it shown?\n\nvisual encoding idiom: how to draw\ninteraction idiom: how to manipulate\n\n\nAlgorithm creates the visualization\n\nevaluated with computational efficiency"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#encoding",
+    "href": "posts/L4-Marks-Channels/index.html#encoding",
+    "title": "LECTURE 4",
+    "section": "ENCODING",
+    "text": "ENCODING\nWe are defining the structure of the visualization (the idiom).\nTo do this, we use MARKS and CHANNELS:\n\nMARKS represent ITEMS or LINKS (aka OBSERVATIONS)\nCHANNELS change the appearance of MARKS based on ATTRIBUTES (aka VARIABLES)"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#marks-for-items",
+    "href": "posts/L4-Marks-Channels/index.html#marks-for-items",
+    "title": "LECTURE 4",
+    "section": "MARKS FOR ITEMS",
+    "text": "MARKS FOR ITEMS"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#marks-for-links",
+    "href": "posts/L4-Marks-Channels/index.html#marks-for-links",
+    "title": "LECTURE 4",
+    "section": "MARKS FOR LINKS",
+    "text": "MARKS FOR LINKS\n\n Bubblesets\n Force Directed Graph"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#observable-in-quarto",
+    "href": "posts/L4-Marks-Channels/index.html#observable-in-quarto",
+    "title": "LECTURE 4",
+    "section": "OBSERVABLE IN QUARTO!",
+    "text": "OBSERVABLE IN QUARTO!\n\n\nCode\nd3 = require(\"d3@7\")\n\n\nchart = ForceGraph(miserables, {\n  nodeId: d =&gt; d.id,\n  nodeGroup: d =&gt; d.group,\n  nodeTitle: d =&gt; `${d.id}\\n${d.group}`,\n  linkStrokeWidth: l =&gt; Math.sqrt(l.value),\n  width,\n  height: 1000,\n  invalidation // a promise to stop the simulation when the cell is re-run\n})\n\n\nmiserables = FileAttachment(\"miserables.json\").json()\n\n\n// Copyright 2021 Observable, Inc.\n// Released under the ISC license.\n// https://observablehq.com/@d3/force-directed-graph\nfunction ForceGraph({\n  nodes, // an iterable of node objects (typically [{id}, …])\n  links // an iterable of link objects (typically [{source, target}, …])\n}, {\n  nodeId = d =&gt; d.id, // given d in nodes, returns a unique identifier (string)\n  nodeGroup, // given d in nodes, returns an (ordinal) value for color\n  nodeGroups, // an array of ordinal values representing the node groups\n  nodeTitle, // given d in nodes, a title string\n  nodeFill = \"currentColor\", // node stroke fill (if not using a group color encoding)\n  nodeStroke = \"#fff\", // node stroke color\n  nodeStrokeWidth = 1.5, // node stroke width, in pixels\n  nodeStrokeOpacity = 1, // node stroke opacity\n  nodeRadius = 5, // node radius, in pixels\n  nodeStrength,\n  linkSource = ({source}) =&gt; source, // given d in links, returns a node identifier string\n  linkTarget = ({target}) =&gt; target, // given d in links, returns a node identifier string\n  linkStroke = \"#999\", // link stroke color\n  linkStrokeOpacity = 0.6, // link stroke opacity\n  linkStrokeWidth = 1.5, // given d in links, returns a stroke width in pixels\n  linkStrokeLinecap = \"round\", // link stroke linecap\n  linkStrength,\n  colors = d3.schemeTableau10, // an array of color strings, for the node groups\n  width = 1000, // outer width, in pixels\n  height = 1000, // outer height, in pixels\n  invalidation // when this promise resolves, stop the simulation\n} = {}) {\n  // Compute values.\n  const N = d3.map(nodes, nodeId).map(intern);\n  const LS = d3.map(links, linkSource).map(intern);\n  const LT = d3.map(links, linkTarget).map(intern);\n  if (nodeTitle === undefined) nodeTitle = (_, i) =&gt; N[i];\n  const T = nodeTitle == null ? null : d3.map(nodes, nodeTitle);\n  const G = nodeGroup == null ? null : d3.map(nodes, nodeGroup).map(intern);\n  const W = typeof linkStrokeWidth !== \"function\" ? null : d3.map(links, linkStrokeWidth);\n  const L = typeof linkStroke !== \"function\" ? null : d3.map(links, linkStroke);\n\n  // Replace the input nodes and links with mutable objects for the simulation.\n  nodes = d3.map(nodes, (_, i) =&gt; ({id: N[i]}));\n  links = d3.map(links, (_, i) =&gt; ({source: LS[i], target: LT[i]}));\n\n  // Compute default domains.\n  if (G && nodeGroups === undefined) nodeGroups = d3.sort(G);\n\n  // Construct the scales.\n  const color = nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, colors);\n\n  // Construct the forces.\n  const forceNode = d3.forceManyBody();\n  const forceLink = d3.forceLink(links).id(({index: i}) =&gt; N[i]);\n  if (nodeStrength !== undefined) forceNode.strength(nodeStrength);\n  if (linkStrength !== undefined) forceLink.strength(linkStrength);\n\n  const simulation = d3.forceSimulation(nodes)\n      .force(\"link\", forceLink)\n      .force(\"charge\", forceNode)\n      .force(\"center\",  d3.forceCenter())\n      .on(\"tick\", ticked);\n\n  const svg = d3.create(\"svg\")\n      .attr(\"width\", width)\n      .attr(\"height\", height)\n      .attr(\"viewBox\", [-width / 2, -height / 2, width, height])\n      .attr(\"style\", \"max-width: 100%; height: auto; height: intrinsic;\");\n\n  const link = svg.append(\"g\")\n      .attr(\"stroke\", typeof linkStroke !== \"function\" ? linkStroke : null)\n      .attr(\"stroke-opacity\", linkStrokeOpacity)\n      .attr(\"stroke-width\", typeof linkStrokeWidth !== \"function\" ? linkStrokeWidth : null)\n      .attr(\"stroke-linecap\", linkStrokeLinecap)\n    .selectAll(\"line\")\n    .data(links)\n    .join(\"line\");\n\n  const node = svg.append(\"g\")\n      .attr(\"fill\", nodeFill)\n      .attr(\"stroke\", nodeStroke)\n      .attr(\"stroke-opacity\", nodeStrokeOpacity)\n      .attr(\"stroke-width\", nodeStrokeWidth)\n    .selectAll(\"circle\")\n    .data(nodes)\n    .join(\"circle\")\n      .attr(\"r\", nodeRadius)\n      .call(drag(simulation));\n\n  if (W) link.attr(\"stroke-width\", ({index: i}) =&gt; W[i]);\n  if (L) link.attr(\"stroke\", ({index: i}) =&gt; L[i]);\n  if (G) node.attr(\"fill\", ({index: i}) =&gt; color(G[i]));\n  if (T) node.append(\"title\").text(({index: i}) =&gt; T[i]);\n  if (invalidation != null) invalidation.then(() =&gt; simulation.stop());\n\n  function intern(value) {\n    return value !== null && typeof value === \"object\" ? value.valueOf() : value;\n  }\n\n  function ticked() {\n    link\n      .attr(\"x1\", d =&gt; d.source.x)\n      .attr(\"y1\", d =&gt; d.source.y)\n      .attr(\"x2\", d =&gt; d.target.x)\n      .attr(\"y2\", d =&gt; d.target.y);\n\n    node\n      .attr(\"cx\", d =&gt; d.x)\n      .attr(\"cy\", d =&gt; d.y);\n  }\n\n  function drag(simulation) {    \n    function dragstarted(event) {\n      if (!event.active) simulation.alphaTarget(0.3).restart();\n      event.subject.fx = event.subject.x;\n      event.subject.fy = event.subject.y;\n    }\n    \n    function dragged(event) {\n      event.subject.fx = event.x;\n      event.subject.fy = event.y;\n    }\n    \n    function dragended(event) {\n      if (!event.active) simulation.alphaTarget(0);\n      event.subject.fx = null;\n      event.subject.fy = null;\n    }\n    \n    return d3.drag()\n      .on(\"start\", dragstarted)\n      .on(\"drag\", dragged)\n      .on(\"end\", dragended);\n  }\n\n  return Object.assign(svg.node(), {scales: {color}});\n}\n\n\nimport {howto} from \"@d3/example-components\"\n\nimport {Swatches} from \"@d3/color-legend\""
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#channels",
+    "href": "posts/L4-Marks-Channels/index.html#channels",
+    "title": "LECTURE 4",
+    "section": "CHANNELS",
+    "text": "CHANNELS\n\n\n\nCHANNELS control the appearance of MARKS.\nThey are proportional to or based on ATTRIBUTES (aka VARIABLES).\nTheir properties differ in the type and amount of information that can be conveyed to the human perceptual system."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#this-is-important",
+    "href": "posts/L4-Marks-Channels/index.html#this-is-important",
+    "title": "LECTURE 4",
+    "section": "THIS IS IMPORTANT",
+    "text": "THIS IS IMPORTANT\nChannel properties differ in the type and amount of information that can be conveyed to the human perceptual system."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#visual-encoding-example",
+    "href": "posts/L4-Marks-Channels/index.html#visual-encoding-example",
+    "title": "LECTURE 4",
+    "section": "VISUAL ENCODING EXAMPLE",
+    "text": "VISUAL ENCODING EXAMPLE\nLet’s analyze the idiom structures below in terms of marks and channels."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#analyze-the-marks-and-channels",
+    "href": "posts/L4-Marks-Channels/index.html#analyze-the-marks-and-channels",
+    "title": "LECTURE 4",
+    "section": "ANALYZE THE MARKS AND CHANNELS",
+    "text": "ANALYZE THE MARKS AND CHANNELS\nMarks are defined by the ITEMS or OBSERVATIONS they represent.\nChannels are defined by the visually detectable properties that are mapped on to ATTRIBUTES or VARIABLES.\n\n\n\n\n\n\n\n\n\nSharon’s Microbiomes\n\n\n\n\n\n\n\nMarwa’s Reddit Network\n\n\n\n\n\n\n\nYaotian’s Wheat"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#redundant-encoding",
+    "href": "posts/L4-Marks-Channels/index.html#redundant-encoding",
+    "title": "LECTURE 4",
+    "section": "REDUNDANT ENCODING",
+    "text": "REDUNDANT ENCODING\n\n\nUses multiple channels for the same attribute.\n\nSends a stronger message\nUses up channels\nBonus points if you can identify BOTH channels in this figure!"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#wheat-growth-by-area",
+    "href": "posts/L4-Marks-Channels/index.html#wheat-growth-by-area",
+    "title": "LECTURE 4",
+    "section": "WHEAT GROWTH BY AREA*",
+    "text": "WHEAT GROWTH BY AREA*\nBoth of Yaotian’s plots contain Redundant Encoding. Is this approach equally valuable for both plots?"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#choosing-channels",
+    "href": "posts/L4-Marks-Channels/index.html#choosing-channels",
+    "title": "LECTURE 4",
+    "section": "CHOOSING CHANNELS",
+    "text": "CHOOSING CHANNELS\n\nEXPRESSIVENESS\n\nThe visual encoding should express all of, and only, the information in the dataset attributes.\n\nEFFECTIVENESS\n\nChannels differ in accuracy of perception.\nThe importance of the attribute should match the salience of the channel (its noticability)."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#expressiveness",
+    "href": "posts/L4-Marks-Channels/index.html#expressiveness",
+    "title": "LECTURE 4",
+    "section": "EXPRESSIVENESS",
+    "text": "EXPRESSIVENESS\nThe advantages and disadvantages of jitter plots. How might this relate to the idea of expressiveness?\n\nHeidi’s Cytoswine DataEXPRESSIVENESS: The visual encoding should express all of, and only, the information in the dataset attributes."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#channel-effectiveness-rankings",
+    "href": "posts/L4-Marks-Channels/index.html#channel-effectiveness-rankings",
+    "title": "LECTURE 4",
+    "section": "CHANNEL EFFECTIVENESS RANKINGS",
+    "text": "CHANNEL EFFECTIVENESS RANKINGS\n\nNote that spatial position ranks high for both types of channels."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#grouping",
+    "href": "posts/L4-Marks-Channels/index.html#grouping",
+    "title": "LECTURE 4",
+    "section": "GROUPING",
+    "text": "GROUPING\n\n\n\nContainment\nConnection\nProximity\n\nSame spatial region.\n\nSimilarity\n\nSame values as other channels."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#summary-so-far",
+    "href": "posts/L4-Marks-Channels/index.html#summary-so-far",
+    "title": "LECTURE 4",
+    "section": "SUMMARY SO FAR",
+    "text": "SUMMARY SO FAR"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#channel-effectiveness",
+    "href": "posts/L4-Marks-Channels/index.html#channel-effectiveness",
+    "title": "LECTURE 4",
+    "section": "CHANNEL EFFECTIVENESS",
+    "text": "CHANNEL EFFECTIVENESS\n\nAccuracy: how precisely can we tell the difference between encoded items?\nDiscriminability: how many unique steps can we perceive?\nSeparability: is our ability to use this channel affected by another one?\nPopout: can things jump out using this channel?"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#accuracy-theory",
+    "href": "posts/L4-Marks-Channels/index.html#accuracy-theory",
+    "title": "LECTURE 4",
+    "section": "ACCURACY (THEORY)",
+    "text": "ACCURACY (THEORY)\nSteven’s Psychophisical Power Law: \\(S=I^N\\)\n\n\n\n\n\n\n\n\n\n\n\n\nLENGTH (N=1)\nELECTRIC SHOCK (N=3.5)\nSATURATION (N=1.7)\nAREA (N=0.7)\nBRIGHTNESS (N=0.5)"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#accuracy-experimental",
+    "href": "posts/L4-Marks-Channels/index.html#accuracy-experimental",
+    "title": "LECTURE 4",
+    "section": "ACCURACY (EXPERIMENTAL)",
+    "text": "ACCURACY (EXPERIMENTAL)\n\n\n\n\n[Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods]"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#accuracy",
+    "href": "posts/L4-Marks-Channels/index.html#accuracy",
+    "title": "LECTURE 4",
+    "section": "ACCURACY?",
+    "text": "ACCURACY?\nDepends on the task. Which genre has the most game titles? Which genres are the top 4 in terms of game titles? Are there more Puzzle games than Strategy games?\n\nGeraline’s Video Games"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#discriminability",
+    "href": "posts/L4-Marks-Channels/index.html#discriminability",
+    "title": "LECTURE 4",
+    "section": "DISCRIMINABILITY",
+    "text": "DISCRIMINABILITY\nHow many usable steps are in the channel? Are the differences between items perceptible to the human as intended?"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#discriminability-and-colors",
+    "href": "posts/L4-Marks-Channels/index.html#discriminability-and-colors",
+    "title": "LECTURE 4",
+    "section": "DISCRIMINABILITY and COLORS",
+    "text": "DISCRIMINABILITY and COLORS\n\nGeraline’s Gaming Platforms"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#separability-vs-integrality",
+    "href": "posts/L4-Marks-Channels/index.html#separability-vs-integrality",
+    "title": "LECTURE 4",
+    "section": "SEPARABILITY VS INTEGRALITY",
+    "text": "SEPARABILITY VS INTEGRALITY\nSeparable channels are orthogonal and independent. Integral channels are inextricably combined. Attempts to encode different information with integral channels creates Interference.\n\n\nFigure 5.10. Pairs of visual channels fall along a continuum from fully separable to intrinsically integral. Color and location are separable channels well suited to encode different data attributes for two different groupings that can be selectively attended to. However, size interacts with hue, which is harder to perceive for small objects. The horizontal size and and vertical size channels are automatically fused into an integrated perception of area, yielding three groups. Attempts to code separate information along the red and green axes of the RGB color space fail, because we simply perceive four different hues."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#separability",
+    "href": "posts/L4-Marks-Channels/index.html#separability",
+    "title": "LECTURE 4",
+    "section": "SEPARABILITY",
+    "text": "SEPARABILITY\n\nRedundancy may be desirable, but area interferes with hue, with larger shapes having more visual salience."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#popout",
+    "href": "posts/L4-Marks-Channels/index.html#popout",
+    "title": "LECTURE 4",
+    "section": "POPOUT",
+    "text": "POPOUT\nVISUAL POPOUT is often called preattentive processing or tunable detection.\n\n\nfind the red dot! How long does it take?\nPopout results from our low-level visual system performing massively parallel processing on certain visual channels, eliminating the need for the viewer to consciously direct attention to items one by one (serial search).\n\nFigure 5.11. Visual popout. (a) The red circle pops out from a small set of blue circles. (b) The red circle pops out from a large set of blue circles just as quickly. (c) The red circle also pops out from a small set of square shapes, although a bit slower than with color. (d) The red circle also pops out of a large set of red squares. (e) The red circle does not take long to find from a small set of mixed shapes and colors. (f) The red circle does not pop out from a large set of red squares and blue circles, and it can only be found by searching one by one through all the objects."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#popout-1",
+    "href": "posts/L4-Marks-Channels/index.html#popout-1",
+    "title": "LECTURE 4",
+    "section": "POPOUT",
+    "text": "POPOUT\n\n\nMany channels are compatible with preattentive processing and facilitate popout:\n\ntilt\nsize\nshape\nproximity\nshadow direction\n\nBut not all!\n\nExample: parallel line pairs do not pop out from tilted pairs."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#popout-goes-the-weevil",
+    "href": "posts/L4-Marks-Channels/index.html#popout-goes-the-weevil",
+    "title": "LECTURE 4",
+    "section": "POPOUT GOES THE WEEVIL?",
+    "text": "POPOUT GOES THE WEEVIL?\n\n\n\n\n\n\n\n\n\nLucas Weevils before chemicals\n\n\n\n\n\n\n\nLucas Weevils after chemicals"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#relative-vs-absolute-judgements",
+    "href": "posts/L4-Marks-Channels/index.html#relative-vs-absolute-judgements",
+    "title": "LECTURE 4",
+    "section": "RELATIVE VS ABSOLUTE JUDGEMENTS",
+    "text": "RELATIVE VS ABSOLUTE JUDGEMENTS\nThe human perceptual system is fundamentally based on relative judgements, not absolute ones. This is why accuracy increases with common frame/scale and alignment.\nWeber’s Law: The detectable difference in stimulus intensity \\(I\\) as a fixed percentage \\(K\\) of the object magnitude: \\(dI/I=K\\) .\n\nThe filled rectangles differ in length by 1:9, and it is therefore difficult to detect the difference without aligment. The white rectangles differ in length by 1:2, it is easier to see this difference even when the objects are unaligned."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#relative-judgements",
+    "href": "posts/L4-Marks-Channels/index.html#relative-judgements",
+    "title": "LECTURE 4",
+    "section": "RELATIVE JUDGEMENTS",
+    "text": "RELATIVE JUDGEMENTS\n\nHeidi’s Microbiomes"
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#relative-luminance-judgements",
+    "href": "posts/L4-Marks-Channels/index.html#relative-luminance-judgements",
+    "title": "LECTURE 4",
+    "section": "RELATIVE LUMINANCE JUDGEMENTS",
+    "text": "RELATIVE LUMINANCE JUDGEMENTS\nHuman perception of luminance is completely contextual, and is based on contrast with surrounding colors."
+  },
+  {
+    "objectID": "posts/L4-Marks-Channels/index.html#relative-color-judgements",
+    "href": "posts/L4-Marks-Channels/index.html#relative-color-judgements",
+    "title": "LECTURE 4",
+    "section": "RELATIVE COLOR JUDGEMENTS",
+    "text": "RELATIVE COLOR JUDGEMENTS\nOur visual system evolved to provide color constancy so that the same surface is identifiable across a broad set of illumination conditions, even though a physical light meter would yield very different readings. While the visual system works very well in natural environments, many of its mechanisms work against simple approaches to visually encoding information with color.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5.15 shows two colorful cubes. In Figure 5.15(a) corresponding squares both appear to be red. In Figure 5.15(b), masks show that the tile color in the image apparently illuminated by a yellowish light source is actually orange, and for the bluish light the tiles are actually purple.\n\n\n\n\nHOME"
+  },
+  {
+    "objectID": "posts/T7-NHLAwards/Ballot.html",
+    "href": "posts/T7-NHLAwards/Ballot.html",
+    "title": "BarrieBallots",
+    "section": "",
+    "text": "Code\nIndividual.Skater &lt;- read.csv(\"SkaterIndividualstats.csv\")\nOnIce.Skater &lt;- read.csv(\"SkaterOnicestats.csv\")\nGoalie &lt;- read.csv(\"Goalies.csv\")\nIndividual.Skater.Rookie &lt;- read.csv(\"RookieSkaterindividual.csv\")\nOnIce.Skater.Rookie &lt;- read.csv(\"RookieSkaterOnIce.csv\")\nRookie.Goalie &lt;- read.csv(\"RookieGoalies.csv\")"
+  },
+  {
+    "objectID": "posts/T7-NHLAwards/Ballot.html#vezina-ballot",
+    "href": "posts/T7-NHLAwards/Ballot.html#vezina-ballot",
+    "title": "BarrieBallots",
+    "section": "VEZINA BALLOT",
+    "text": "VEZINA BALLOT\n\n\nCode\nScale.Goalies &lt;- Goalie %&gt;%\n  filter(GP&gt;25)%&gt;%\n  mutate(scale.SV. = scale(SV.))%&gt;%\n  mutate(scale.GAA = -scale(GAA))%&gt;%\n  mutate(scale.GSAA = scale(GSAA))%&gt;%\n  mutate(scale.GSAx = scale(xG.Against-Goals.Against))%&gt;%\n  mutate(scale.Vezina = scale.SV. + scale.GAA + scale.GSAA + scale.GSAx)%&gt;%\n  \n  mutate(rank.SV. = rank(scale.SV.))%&gt;%\n  mutate(rank.GAA = rank(scale.GAA))%&gt;%\n  mutate(rank.GSAA = rank(scale.GSAA))%&gt;%\n  mutate(rank.GSAx = rank(scale.GSAx))\n\nScale.Vez.plot &lt;- Scale.Goalies %&gt;%\n  filter(GP &gt; 25) %&gt;%\n  \n  # Pivot to long format for stacking\n  pivot_longer(\n    cols = c(scale.GAA, scale.GSAA, scale.SV., scale.GSAx,\n             rank.GAA, rank.GSAA, rank.SV., rank.GSAx),\n    names_to = \"component\",\n    values_to = \"value\"\n  )\n\n\nggplot(Scale.Vez.plot%&gt;%\n         filter(str_detect(component, \"scale\")), aes(x = reorder(Player, scale.Vezina), y = value, fill = component)) +\n  geom_col() +\n  coord_flip() +\n  scale_fill_manual(\n    values = c(\"scale.GAA\" = \"#1F77B4\", \n               \"scale.GSAA\" = \"#D62728\",\n               \"scale.SV.\" = \"#FF7F0E\",\n               \"scale.GSAx\" = \"black\")\n  ) +\n  labs(x = \"Player Name\",\n       y = \"Vezina Score Components\",\n       fill = \"Component\",\n       caption = \"Source: https://www.naturalstattrick.com/\",\n       title = \"Vezina Score Components (save.resid - goal.resid)\",\n       subtitle = \"2024-2025 season stats as of March 4\") +\n  theme_minimal() +\n  theme(panel.grid.major.y = element_blank(),\n        panel.grid.minor = element_blank())"
+  },
+  {
+    "objectID": "posts/T7-NHLAwards/Ballot.html#hart-ballot",
+    "href": "posts/T7-NHLAwards/Ballot.html#hart-ballot",
+    "title": "BarrieBallots",
+    "section": "HART BALLOT",
+    "text": "HART BALLOT\nAwarded to the “player judged most valuable to his team.” This isn’t necessarily the best overall player, but rather the one who contributes most significantly to his team’s success.\n\n\nCode\nScale.OnIce &lt;- OnIce.Skater %&gt;%\n  filter(GP &gt; 30) %&gt;%\n  select(Player, Position, Team, CF., xGF.) %&gt;%\n  mutate(Position = if_else(Position == \"D\", \"D\", \"F\")) %&gt;%\n  # Extract team after comma, or keep original if no comma exists\n  mutate(Team = case_when(\n    str_detect(Team, \",\") ~ str_trim(str_extract(Team, \",[^,]*$\")), # Extract everything after the last comma\n    TRUE ~ Team\n  )) %&gt;%\n  # Remove the leading comma if it exists\n  mutate(Team = str_replace(Team, \"^,\\\\s*\", \"\")) %&gt;%\n  group_by(Position) %&gt;%\n  mutate(scale.CF. = scale(CF.),\n         scale.xGF. = scale(xGF.)) %&gt;%\n  mutate(scale.Hart = scale.xGF. + scale.CF.)\n\nScale.Individual &lt;- Individual.Skater %&gt;%\n  filter(GP &gt; 30) %&gt;%\n  select(Player, Position, Team, Goals, Total.Assists) %&gt;%\n  mutate(Position = if_else(Position == \"D\", \"D\", \"F\")) %&gt;%\n  # Extract team after comma, or keep original if no comma exists\n  mutate(Team = case_when(\n    str_detect(Team, \",\") ~ str_trim(str_extract(Team, \",[^,]*$\")), # Extract everything after the last comma\n    TRUE ~ Team\n  )) %&gt;%\n  # Remove the leading comma if it exists\n  mutate(Team = str_replace(Team, \"^,\\\\s*\", \"\")) %&gt;%\n  group_by(Position) %&gt;%\n  mutate(scale.Goals = scale(Goals),\n         scale.Assists = scale(Total.Assists)) %&gt;%\n  mutate(scale.Hart.Ind = scale.Goals + scale.Assists)\n\n\nScale.Hart &lt;- Scale.OnIce %&gt;%\n  left_join(Scale.Individual, by = \"Player\") %&gt;%\n  mutate(resid.Goals = resid(lm(scale.Goals ~ Team.x, data = .)),\n         resid.Assists = resid(lm(scale.Assists ~ Team.x, data = .)),\n         resid.CF. = resid(lm(scale.CF. ~ Team.x, data = .)),\n         resid.xGF. = resid(lm(scale.xGF. ~ Team.x, data = .)))\n\n\n\n# Step 1: Data frame preparation\nHart.Long &lt;- Scale.Hart %&gt;%\n  # First calculate Hart score for each player if not already done\n  mutate(Hart = resid.Goals + resid.Assists + resid.CF. + resid.xGF.) %&gt;%\n  pivot_longer(cols = c(scale.CF., scale.xGF., scale.Assists, scale.Goals,\n                        resid.Assists, resid.CF., resid.Goals, resid.xGF.), \n               names_to = \"component\", \n               values_to = \"value\") \n\n\n\n# Split the data into separate components\nlibrary(purrr)\n\n\nhart_filtered &lt;- Hart.Long %&gt;%\n  filter(str_detect(component, \"resid\"), Hart &gt; 6)\n\n# Get unique components\ncomponents &lt;- unique(hart_filtered$component)\n\n# Create a list of plots, one for each component\ncomponent_plots &lt;- map(components, function(comp) {\n  # Filter for just this component\n  comp_data &lt;- hart_filtered %&gt;% filter(component == comp)\n  \n  # Create component-specific plot with its own ordering\n  ggplot(comp_data, \n         aes(x = reorder(Player, value), y = value, fill = Position.x)) +\n    geom_col() +\n    coord_flip() +\n    scale_fill_manual(\n      values = c(\"D\" = \"#1F77B4\", \n                \"F\" = \"#D62728\"),\n      labels = c(\"D\" = \"Defenseman\", \n                \"F\" = \"Forward\")\n    ) +\n    labs(x = NULL, # We'll add a common x-axis label later\n         y = NULL, # We'll add a common y-axis label later\n         fill = \"Position\") +\n    theme_minimal() +\n    theme(\n      panel.grid.major.y = element_blank(),\n      panel.grid.minor = element_blank(),\n      axis.text.y = element_text(size = 8),\n      legend.position = if(comp == components[1]) \"bottom\" else \"none\"\n    ) +\n    ggtitle(comp)\n})\n\n# Combine the plots\nlibrary(gridExtra)\n\n\n\nAttaching package: 'gridExtra'\n\n\nThe following object is masked from 'package:dplyr':\n\n    combine\n\n\nCode\ncombined_plot &lt;- do.call(grid.arrange, c(component_plots, ncol = 2))\n\n\n\n\n\n\n\n\n\nCode\n# Add overall title and caption\ntitle &lt;- grid::textGrob(\"Top 2 Players Per Team - Hart Score Components\", \n                        gp = grid::gpar(fontsize = 14, fontface = \"bold\"))\nsubtitle &lt;- grid::textGrob(\"2024-2025 season stats as of March 4\", \n                          gp = grid::gpar(fontsize = 10))\ncaption &lt;- grid::textGrob(\"Source: https://www.naturalstattrick.com/\", \n                          gp = grid::gpar(fontsize = 8), \n                          hjust = 1)\n\ngrid.arrange(title, subtitle, combined_plot, caption,\n             heights = c(0.5, 0.3, 10, 0.3),\n             ncol = 1)\n\n\n\n\n\n\n\n\n\n\n\nCode\n# Step 2: Create the plot\nggplot(Hart.Long%&gt;%\n         filter(Hart&gt;6, str_detect(component, \"resid\")), \n                   aes(x = reorder(Player, Hart), y = value, fill = component)) +\n  geom_col() +\n  coord_flip() +\n  scale_fill_manual(\n    values = c(\"resid.Goals\" = \"#1F77B4\", \n               \"resid.Assists\" = \"#D62728\",\n               \"resid.CF.\" = \"#FF7F0E\",\n               \"resid.xGF.\" = \"black\")\n  ) +\n  \n  labs(x = \"Player Name\",\n       y = \"Hart Score Components\",\n       fill = \"Component\",\n       caption = \"Source: https://www.naturalstattrick.com/\",\n       title = \"Top 1 Players Per Team - Hart Score Components\",\n       subtitle = \"2024-2025 season stats as of March 4\") +\n  theme_minimal() +\n  theme(\n    panel.grid.major.y = element_blank(),\n    panel.grid.minor = element_blank(),\n    # Improve readability of player names\n    axis.text.y = element_text(size = 8)\n  )+\n  facet_wrap(~Position.x)"
+  },
+  {
+    "objectID": "posts/T7-NHLAwards/Ballot.html#james-norris-memorial-trophy",
+    "href": "posts/T7-NHLAwards/Ballot.html#james-norris-memorial-trophy",
+    "title": "BarrieBallots",
+    "section": "James Norris Memorial Trophy",
+    "text": "James Norris Memorial Trophy\nAwarded to the defenseman who demonstrates “the greatest all-around ability” at the position.\n\n\nCode\nNorris.OnIce &lt;- OnIce.Skater%&gt;%\n  filter(Position == \"D\", GP &gt; 30)%&gt;%\n  mutate(scale.CF. = scale(CF.),\n         scale.xGF. = scale(xGF.))%&gt;%\n  select(Player, Team, GP, CF., xGF., scale.CF., scale.xGF. )\nNorris.Indiv &lt;- Individual.Skater%&gt;%\n  filter(Position == \"D\", GP &gt; 30)%&gt;%\n  mutate(scale.Goals = scale(Goals),\n         scale.Assists = scale(Total.Assists))%&gt;%\n  select(Player, Team, GP, Goals, Total.Assists, scale.Goals, scale.Assists )\n\nNorris&lt;- Norris.OnIce%&gt;%\n  left_join(Norris.Indiv, by = \"Player\")%&gt;%\n  mutate(scale.Norris = scale.CF. + scale.xGF. + scale.Goals + scale.Assists)\n\nNorris.Plot &lt;- Norris %&gt;%\n  pivot_longer(cols = c(scale.Goals, scale.Assists, scale.CF., scale.xGF.), \n               names_to = \"component\", \n               values_to = \"value\") %&gt;%\n  filter(str_detect(component, \"scale\"))\n\n# Step 2: Create the plot\nggplot(Norris.Plot%&gt;% filter(scale.Norris &gt; 3), \n                   aes(x = reorder(Player, scale.Norris), y = value, fill = component)) +\n  geom_col() +\n  coord_flip() +\n  scale_fill_manual(\n    values = c(\"scale.Goals\" = \"#1F77B4\", \n               \"scale.Assists\" = \"#D62728\",\n               \"scale.CF.\" = \"#FF7F0E\",\n               \"scale.xGF.\" = \"black\")\n  ) +\n  \n  labs(x = \"Player Name\",\n       y = \"Norris Score Components\",\n       fill = \"Component\",\n       caption = \"Source: https://www.naturalstattrick.com/\",\n       title = \"Top Players - Norris Score Components\",\n       subtitle = \"2024-2025 season stats as of March 4\") +\n  theme_minimal() +\n  theme(\n    panel.grid.major.y = element_blank(),\n    panel.grid.minor = element_blank(),\n    # Improve readability of player names\n    axis.text.y = element_text(size = 8)\n  )\n\n\nWarning: Using one column matrices in `filter()` was deprecated in dplyr 1.1.0.\nℹ Please use one dimensional logical vectors instead."
+  },
+  {
+    "objectID": "posts/T7-NHLAwards/Ballot.html#calder-memorial-trophy",
+    "href": "posts/T7-NHLAwards/Ballot.html#calder-memorial-trophy",
+    "title": "BarrieBallots",
+    "section": "Calder Memorial Trophy",
+    "text": "Calder Memorial Trophy\nGiven to the player “adjudged to be the most proficient in his first year of competition.” This is essentially the rookie of the year award.\n\n\nCode\nCalder.OnIce &lt;- OnIce.Skater.Rookie%&gt;%\n  filter(GP &gt; 20)%&gt;%\n  mutate(scale.CF. = scale(CF.),\n         scale.xGF. = scale(xGF.))%&gt;%\n  select(Player, Team, Position, GP, CF., xGF., scale.CF., scale.xGF. )\nCalder.Indiv &lt;- Individual.Skater.Rookie%&gt;%\n  filter(GP &gt; 20)%&gt;%\n  mutate(scale.Goals = scale(Goals),\n         scale.Assists = scale(Total.Assists))%&gt;%\n  select(Player, Team, Position, GP, Goals, Total.Assists, scale.Goals, scale.Assists )\n\nCalder &lt;- Calder.OnIce %&gt;%\n  left_join(Calder.Indiv, by = \"Player\") %&gt;%\n  mutate(scale.Calder = scale.CF. + scale.xGF. + scale.Goals + scale.Assists) %&gt;%\n  mutate(Position.x = if_else(Position.x == \"D\", \"D\", \"F\"))\n\nCalder.Plot &lt;- Calder %&gt;%\n  pivot_longer(cols = c(scale.Goals, scale.Assists, scale.CF., scale.xGF.), \n               names_to = \"component\", \n               values_to = \"value\") %&gt;%\n  filter(str_detect(component, \"scale\"))\n\n# Step 2: Create the plot\nggplot(Calder.Plot%&gt;% filter(scale.Calder &gt; 3), \n                   aes(x = reorder(Player, scale.Calder), y = value, fill = component)) +\n  geom_col() +\n  coord_flip() +\n  scale_fill_manual(\n    values = c(\"scale.Goals\" = \"#1F77B4\", \n               \"scale.Assists\" = \"#D62728\",\n               \"scale.CF.\" = \"#FF7F0E\",\n               \"scale.xGF.\" = \"black\")\n  ) +\n  \n  labs(x = \"Player Name\",\n       y = \"Calder Score Components\",\n       fill = \"Component\",\n       caption = \"Source: https://www.naturalstattrick.com/\",\n       title = \"Top Players - Calder Score Components\",\n       subtitle = \"2024-2025 season stats as of March 4\") +\n  theme_minimal() +\n  theme(\n    panel.grid.major.y = element_blank(),\n    panel.grid.minor = element_blank(),\n    # Improve readability of player names\n    axis.text.y = element_text(size = 8)\n  )+\n  facet_wrap(~Position.x)"
+  },
+  {
+    "objectID": "posts/T7-NHLAwards/Ballot.html#frank-j.-selke-trophy",
+    "href": "posts/T7-NHLAwards/Ballot.html#frank-j.-selke-trophy",
+    "title": "BarrieBallots",
+    "section": "Frank J. Selke Trophy",
+    "text": "Frank J. Selke Trophy\nAwarded to the forward who best excels in the defensive aspects of the game.\n\n\nCode\nSelke.OnIce &lt;- OnIce.Skater%&gt;%\n  filter(Position != \"D\", TOI &gt; 1000)%&gt;%\n  mutate(scale.CA = scale(CA/TOI),\n         scale.GA = scale(GA/TOI),\n         scale.SA = scale(SA/TOI),\n         scale.xGA = scale(xGA/TOI))%&gt;%\n  select(Player, Team, Position, TOI, GP, CA, xGA, GA, SA, scale.CA, scale.GA, scale.SA, scale.xGA )%&gt;%\n  mutate(Selke = scale.CA + scale.GA + scale.SA + scale.xGA)\n\n\n\n\nSelke.Plot &lt;- Selke.OnIce %&gt;%\n  pivot_longer(cols = c(scale.CA, scale.GA, scale.SA, scale.xGA), \n               names_to = \"component\", \n               values_to = \"value\") %&gt;%\n  filter(str_detect(component, \"scale\"))\n\n\n\n# Step 2: Create the plot\nggplot(Selke.Plot%&gt;% filter(Selke &lt; -2), \n                   aes(x = reorder(Player, Selke), y = value, fill = component)) +\n  geom_col() +\n  coord_flip() +\n  scale_fill_manual(\n    values = c(\"scale.CA\" = \"#1F77B4\", \n               \"scale.GA\" = \"#D62728\",\n               \"scale.SA\" = \"#FF7F0E\",\n               \"scale.xGA\" = \"black\")\n  ) +\n  \n  labs(x = \"Player Name\",\n       y = \"Selke Score Components\",\n       fill = \"Component\",\n       caption = \"Source: https://www.naturalstattrick.com/\",\n       title = \"Top Players - Selke Score Components\",\n       subtitle = \"2024-2025 season stats as of March 4\") +\n  theme_minimal() +\n  theme(\n    panel.grid.major.y = element_blank(),\n    panel.grid.minor = element_blank(),\n    # Improve readability of player names\n    axis.text.y = element_text(size = 8)\n  )"
+  },
+  {
+    "objectID": "posts/T7-NHLAwards/Ballot.html#lady-byng-memorial-trophy",
+    "href": "posts/T7-NHLAwards/Ballot.html#lady-byng-memorial-trophy",
+    "title": "BarrieBallots",
+    "section": "Lady Byng Memorial Trophy",
+    "text": "Lady Byng Memorial Trophy\nPresented to the player who exhibits “the best type of sportsmanship and gentlemanly conduct combined with a high standard of playing ability.”\n\n\nCode\nByng.OnIce &lt;- OnIce.Skater%&gt;%\n  filter(TOI &gt; 1000)%&gt;%\n  group_by(Position)%&gt;%\n  mutate(scale.CF. = scale(CF.),\n         scale.xGF. = scale(xGF.))%&gt;%\n  select(Player, Team, GP, Position, CF., xGF., scale.CF., scale.xGF. )\nByng.Indiv &lt;- Individual.Skater%&gt;%\n  filter(TOI &gt; 1000)%&gt;%\n  group_by(Position)%&gt;%\n  mutate(scale.Goals = scale(Goals),\n         scale.Assists = scale(Total.Assists),\n         scale.PIM = -scale(PIM))%&gt;%\n  select(Player, Team, GP, Position, PIM, Goals, Total.Assists, scale.Goals, scale.Assists, scale.PIM )\n\nByng&lt;- Byng.OnIce%&gt;%\n  left_join(Byng.Indiv, by = \"Player\")%&gt;%\n  mutate(scale.Byng = (scale.CF. + scale.xGF. + scale.Goals + scale.Assists)/4,\n         Byng = scale.Byng + scale.PIM)\n\n\n\nByng.Plot &lt;- Byng %&gt;%\n  pivot_longer(cols = c(scale.Byng, scale.PIM), \n               names_to = \"component\", \n               values_to = \"value\") %&gt;%\n  filter(str_detect(component, \"scale\"))\n\n\n\n# Step 2: Create the plot\nggplot(Byng%&gt;% filter(Byng &gt; 0.5, scale.PIM &gt; .7)%&gt;%\n         mutate(Position = if_else(Position.x == \"D\", \"D\", \"F\")), \n                   aes(x = reorder(Player,scale.PIM), y = scale.PIM, fill = Position)) +\n  geom_col() +\n  coord_flip() +\n  scale_fill_manual(\n    values = c(\"D\" = \"#1F77B4\", \n               \"F\" = \"#D62728\")\n  ) +\n  \n  labs(x = \"Player Name\",\n       y = \"Byng Score Components\",\n       fill = \"Component\",\n       caption = \"Source: https://www.naturalstattrick.com/\",\n       title = \"Top Players - Byng Score Components\",\n       subtitle = \"2024-2025 season stats as of March 4\") +\n  theme_minimal() +\n  theme(\n    panel.grid.major.y = element_blank(),\n    panel.grid.minor = element_blank(),\n    # Improve readability of player names\n    axis.text.y = element_text(size = 8)\n  )+\n  facet_wrap(~Position)"
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#who-am-i",
+    "href": "posts/L1-Intro/index.html#who-am-i",
+    "title": "LECTURE 1 - INTRO",
+    "section": "WHO AM I?",
+    "text": "WHO AM I?\nBarrie Robison\nDepartment of Biological Sciences\nInstitute for Interdisicplinary Data Sciences\nPolymorphic Games\nUniversity of Idaho"
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#visualization",
+    "href": "posts/L1-Intro/index.html#visualization",
+    "title": "LECTURE 1 - INTRO",
+    "section": "VISUALIZATION",
+    "text": "VISUALIZATION\nComputers provide visual representations of datasets designed to help people carry out tasks more effectively.\nTamara Munzner\nDepartment of Computer Science\nDr. Munzner’s version of this lecture\nUniversity of British Columbia"
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#the-human",
+    "href": "posts/L1-Intro/index.html#the-human",
+    "title": "LECTURE 1 - INTRO",
+    "section": "THE HUMAN",
+    "text": "THE HUMAN\nWhy have a human in the loop?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\nWe don’t need visualization when a trusted fully automatic solution exists.\nVisualization is suitable when there is a need to augment human capabilities rather than replace people with computational decision-making methods."
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#the-representation",
+    "href": "posts/L1-Intro/index.html#the-representation",
+    "title": "LECTURE 1 - INTRO",
+    "section": "THE REPRESENTATION",
+    "text": "THE REPRESENTATION\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\nEXTERNAL REPRESENTATIONS: Replace cognition with perception."
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#in-class-exercise",
+    "href": "posts/L1-Intro/index.html#in-class-exercise",
+    "title": "LECTURE 1 - INTRO",
+    "section": "IN CLASS EXERCISE",
+    "text": "IN CLASS EXERCISE\nYou have 5 minutes.\nFind an example of a data visualization from your daily life. I may not be related to your research or discipline in any way. Be prepared to share it with the class (zoom screen share or email me a link) and discuss its purpose, efficacy, strengths, and weaknesses."
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#why-depend-on-vision",
+    "href": "posts/L1-Intro/index.html#why-depend-on-vision",
+    "title": "LECTURE 1 - INTRO",
+    "section": "WHY DEPEND ON VISION?",
+    "text": "WHY DEPEND ON VISION?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\n\nThe human visual system is a high-bandwidth channel to the brain.\nOverview is possible due to background processing, providing the subjective experience of seeing everything simultaneously.\nSignificant processing occurs in parallel and pre-attentively.\nWhat about sound? lower bandwidth and different semantics, overview not supported, subjective experience of sequential stream.\nWhat about touch/haptics? impoverished record/replay capacity, only very low-bandwidth communication thus far.\nWhat about taste, smell? no viable record/replay devices."
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#why-represent-all-the-data",
+    "href": "posts/L1-Intro/index.html#why-represent-all-the-data",
+    "title": "LECTURE 1 - INTRO",
+    "section": "WHY REPRESENT (ALL THE) DATA?",
+    "text": "WHY REPRESENT (ALL THE) DATA?\nComputer-based visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.\n\n\nsummaries lose information\ndetails matter\nconfirm expected and find unexpected patterns\nassess validity of statistical model\nANSCOMBE’S QUARTET is a fun example that we shall use to illustrate these points!"
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#anscombes-quartet",
+    "href": "posts/L1-Intro/index.html#anscombes-quartet",
+    "title": "LECTURE 1 - INTRO",
+    "section": "ANSCOMBE’S QUARTET",
+    "text": "ANSCOMBE’S QUARTET\n\n\n\n\nCode\nlibrary(ggplot2)\nlibrary(grid)\nlibrary(gridExtra)\nlibrary(datasets)\nlibrary(tidyverse)\nlibrary(dplyr)\ndatasets::anscombe\n\n\n   x1 x2 x3 x4    y1   y2    y3    y4\n1  10 10 10  8  8.04 9.14  7.46  6.58\n2   8  8  8  8  6.95 8.14  6.77  5.76\n3  13 13 13  8  7.58 8.74 12.74  7.71\n4   9  9  9  8  8.81 8.77  7.11  8.84\n5  11 11 11  8  8.33 9.26  7.81  8.47\n6  14 14 14  8  9.96 8.10  8.84  7.04\n7   6  6  6  8  7.24 6.13  6.08  5.25\n8   4  4  4 19  4.26 3.10  5.39 12.50\n9  12 12 12  8 10.84 9.13  8.15  5.56\n10  7  7  7  8  4.82 7.26  6.42  7.91\n11  5  5  5  8  5.68 4.74  5.73  6.89\n\n\n\nAnscombe’s Quartet\nThe four x-y pairs have identical summary statistics.\n\n\nCode\ntidy_anscombe &lt;- anscombe %&gt;%\n pivot_longer(cols = everything(),\n              names_to = c(\".value\", \"set\"),\n              names_pattern = \"(.)(.)\")\ntidy_anscombe_summary &lt;- tidy_anscombe %&gt;%\n  group_by(set) %&gt;%\n  summarise(across(.cols = everything(),\n                   .fns = lst(min,max,median,mean,sd,var),\n                   .names = \"{col}_{fn}\"))\n#&gt; `summarise()` ungrouping output (override with `.groups` argument)\n\nvars&lt;-c(\"set\", \"x_mean\", \"x_var\",  \"y_mean\", \"y_var\")\nthing&lt;- as.data.frame(tidy_anscombe_summary[vars])\nknitr::kable(thing)\n\n\n\n\n\nset\nx_mean\nx_var\ny_mean\ny_var\n\n\n\n\n1\n9\n11\n7.500909\n4.127269\n\n\n2\n9\n11\n7.500909\n4.127629\n\n\n3\n9\n11\n7.500000\n4.122620\n\n\n4\n9\n11\n7.500909\n4.123249"
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#viz-matters",
+    "href": "posts/L1-Intro/index.html#viz-matters",
+    "title": "LECTURE 1 - INTRO",
+    "section": "VIZ MATTERS",
+    "text": "VIZ MATTERS\n\n\nCode\nggplot(tidy_anscombe,\n       aes(x = x,\n           y = y)) +\n  geom_point() +\n  geom_point(data = tidy_anscombe_summary, aes(x=x_mean, y = y_mean, color = \"red\", size = 5),\n             show.legend = FALSE)+\n  facet_wrap(~set) +\n  geom_smooth(method = \"lm\", se = FALSE)\n\n\n\n\nLearn more: TIDY ANSCOMBE"
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#resource-limitations",
+    "href": "posts/L1-Intro/index.html#resource-limitations",
+    "title": "LECTURE 1 - INTRO",
+    "section": "RESOURCE LIMITATIONS",
+    "text": "RESOURCE LIMITATIONS\nVisualization designers must take into account three very different kinds of resource limitations:\n\nLimitations of computers.\nLimitations of humans.\nLimitations of displays."
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#computational-limits",
+    "href": "posts/L1-Intro/index.html#computational-limits",
+    "title": "LECTURE 1 - INTRO",
+    "section": "COMPUTATIONAL LIMITS",
+    "text": "COMPUTATIONAL LIMITS\nCPU time\nSystem Memory"
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#display-limits",
+    "href": "posts/L1-Intro/index.html#display-limits",
+    "title": "LECTURE 1 - INTRO",
+    "section": "DISPLAY LIMITS",
+    "text": "DISPLAY LIMITS\nPixels are precious and are the most constrained resource.\n\nInformation Density: ratio of space used to encode information vs unused whitespace.\nThere is a tradeoff between clutter and wasting space.\nDesigner must find the sweet spot between dense and sparse."
+  },
+  {
+    "objectID": "posts/L1-Intro/index.html#human-limits",
+    "href": "posts/L1-Intro/index.html#human-limits",
+    "title": "LECTURE 1 - INTRO",
+    "section": "HUMAN LIMITS",
+    "text": "HUMAN LIMITS\n\nTime\nMemory\nAttention\n\n\n\n\n\nHOME"
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html",
+    "href": "posts/A1-Lit-Prog/index.html",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "",
+    "text": "The idea of Literate Programming is that source code that is executed as part of the program’s purpose is interspersed with documentation that describes the program’s logic. The concept of literate programming was first articulated by David Knuth in 1984. You know… back when music was good? Modern Data Science leans pretty heavily on literate programming, and to be honest, there aren’t very many good arguments as to why you WOULDN’T want to implement this approach in your own work. Bearing this in mind, we will adopt this framework for most of the activities, exercises, and assignments in this course. All of us will benefit by practicing these skills."
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#summary",
+    "href": "posts/A1-Lit-Prog/index.html#summary",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "",
+    "text": "The idea of Literate Programming is that source code that is executed as part of the program’s purpose is interspersed with documentation that describes the program’s logic. The concept of literate programming was first articulated by David Knuth in 1984. You know… back when music was good? Modern Data Science leans pretty heavily on literate programming, and to be honest, there aren’t very many good arguments as to why you WOULDN’T want to implement this approach in your own work. Bearing this in mind, we will adopt this framework for most of the activities, exercises, and assignments in this course. All of us will benefit by practicing these skills."
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#literate-programming-publishing-systems",
+    "href": "posts/A1-Lit-Prog/index.html#literate-programming-publishing-systems",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "LITERATE PROGRAMMING PUBLISHING SYSTEMS",
+    "text": "LITERATE PROGRAMMING PUBLISHING SYSTEMS\nI’m trying to keep this course as technology agnostic as I can. The idea is that you should be practicing and building competencies in the languages and algorithms that are most useful to you. Who am I to tell you to use R instead of Python? If you have skills in a particular language I encourage you to keep using that during this course. That being said, I am going to work the examples using R and R Studio, and I will (mostly) use Quarto as the literate programming framework.\nIf all of this is new to you, no problem. Just follow along in R and Quarto and start your skill building journey with those languages.\nIf you are a Python person, great! Quarto can accommodate that language as well. If you have another preference for literate programming, such as sticking with R Markdown until the Quarto bugs are fixed, that is great. Find the framework and tools that work for you, and practice, practice, practice!\n\nQuarto\nAn open source publishing system that allows you to create websites, documents, blogs, books, publications, presentations, and more while using R, Python, Julia, or Observable. Quarto is intended to be the more functional successor of R Markdown. I intend to use Quarto for most of my work in this course.\n\n\nR Markdown\nAnother publishing system for creating all the things … websites, slides, manuscripts, dashboards, etc. While most people (including me!) instinctively think of R and Python within R Markdown, the list of supported language engines is pretty extensive.\n\nnames(knitr::knit_engines$get())\n\n [1] \"awk\"       \"bash\"      \"coffee\"    \"gawk\"      \"groovy\"    \"haskell\"  \n [7] \"lein\"      \"mysql\"     \"node\"      \"octave\"    \"perl\"      \"php\"      \n[13] \"psql\"      \"Rscript\"   \"ruby\"      \"sas\"       \"scala\"     \"sed\"      \n[19] \"sh\"        \"stata\"     \"zsh\"       \"asis\"      \"asy\"       \"block\"    \n[25] \"block2\"    \"bslib\"     \"c\"         \"cat\"       \"cc\"        \"comment\"  \n[31] \"css\"       \"ditaa\"     \"dot\"       \"embed\"     \"eviews\"    \"exec\"     \n[37] \"fortran\"   \"fortran95\" \"go\"        \"highlight\" \"js\"        \"julia\"    \n[43] \"python\"    \"R\"         \"Rcpp\"      \"sass\"      \"scss\"      \"sql\"      \n[49] \"stan\"      \"targets\"   \"tikz\"      \"verbatim\"  \"ojs\"       \"mermaid\""
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#languages-and-toolsets",
+    "href": "posts/A1-Lit-Prog/index.html#languages-and-toolsets",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "LANGUAGES AND TOOLSETS",
+    "text": "LANGUAGES AND TOOLSETS\nThere are quite a few, but the five that seemed to keep coming up as I prepped this course are:\n\nR\nA very powerful open source framework for statistical computing and graphics. R has a lot of base functionality, and its capabilities are increased by 100 fold with packages created by R users. Packages are the core units of R code. I’m going to use R for the vast majority of demonstrations in this course.\n\n\nPython\nPython is an open source general purpose programming language. It wasn’t developed just for statistical computing or data science, and people use this language for tons of different applications. There is no denying it has become a very powerful language for data science and data visualization.\n\n\nTableau\nTableau is proprietary software that is very powerful for creating beautiful and functional data visualizations. It can integrate with all sorts of data sources and is used a lot for analytics, especially in the business world. The downsides (that occur to me at least) are that it costs money, it is not open source, and is more of a one-trick-pony than the programming languages on this list.\n\n\nJavascript\nJavascript has been around for about 25 years, and is (I think) the world’s most popular programming language. Along with HTML and CSS, Javascript drives pretty much the entire internet. I mention Javascript here because it has the D3 library, which can create super cool interactive data visualizaitons. In my experience, the learning curve with Javascript and D3 was pretty steep. I bought a book about it once, but just haven’t been able to allocate the amount of time necessary to really start using it. Check out the gallery of examples. Amazing!\n\n\nObservable / D3\nObservable is a set of extensions to Javascript that features something called reactive runtime. This means that the code blocks are executed and compiled as they are written, and changes are implemented instantaneously. Observable is pretty great for data exploration, and is well supported by Quarto. In addition, you can use the Observable JS libraries in Quarto to access D3. We’ll use some of these tools in this course, especially when we start considering interactivity."
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#assignment",
+    "href": "posts/A1-Lit-Prog/index.html#assignment",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "ASSIGNMENT",
+    "text": "ASSIGNMENT\nAfter that long introduction, I suppose you are wondering what I want you to actually DO.\nWell, I want you to set up your publishing system and preferred language on your computer. Then I want you to recreate the classic figure from Anscombe’s Quartet.\nNow, you might be asking…\n“How am I supposed to do that? You haven’t taught me how to do anything yet!”\nHere is the dirty little secret of modern education.\nThe Internet Exists.\nWhile I could use up an entire 90 minute lecture telling you how to:\n\nDownload and install R, R-Studio, and Quarto (included by default with R-Studio).\nCreate a Quarto document that will publish in the .html format\nInstall the R packages you will need\nTidy up the Anscombe’s Quartet data\nCalculate the summary statistics for each x y pair\nMake a nice little plot…\n\nI’m not going to do that.\nInstead, I want you to use the resources I point towards, or other resources that make more sense to you, to figure out how to do those things."
+  },
+  {
+    "objectID": "posts/A1-Lit-Prog/index.html#resources",
+    "href": "posts/A1-Lit-Prog/index.html#resources",
+    "title": "ASSIGNMENT 1 - Fun with literate programming.",
+    "section": "RESOURCES",
+    "text": "RESOURCES\nTidyverse and Anscombe’s Quartet\nHandy cheat-sheets for many different R packages\nTutorial 1 - Literate Programming\nTutorial 2 - Literate Programming and Anscombe’s Quartet\nTutorial 3 - Python"
   },
   {
     "objectID": "posts/L5-ThumbRules/index.html#tldr-version",
