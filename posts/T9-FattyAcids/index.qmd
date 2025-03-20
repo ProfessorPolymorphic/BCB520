@@ -1,0 +1,1128 @@
+---
+title: "BCB 520 - Fatty Acids"
+subtitle: "Synthetic Data!"
+format:
+  html:
+    toc: false
+    echo: true
+author: "Barrie Robison"
+date: "2025-03-14"
+categories: [Portfolio, DataViz, Observable, Animation]
+image: "Zomsimmesh.png"
+description: "Sharon's data"
+code-fold: true
+code-tools: true
+
+---
+
+## PREAMBLE
+
+```{r}
+#| output: false
+
+
+library(tidyverse)
+library(lubridate)
+library(readxl)
+```
+
+
+
+## Data
+
+Create a synthetic data set.
+
+
+# Maternal Diet and Breast Milk Fatty Acid Analysis
+
+## Dataset Description
+
+This synthetic dataset mimics data collection from a study of 21 women who provided diet and breast milk samples at 6 timepoints postpartum. The data includes:
+
+- 21 women (mother IDs 1-21)
+- 6 timepoints per woman (approximately weekly sampling starting in the first week postpartum)
+- 40 fatty acids measured in diet (percentage of total fatty acids)
+- 37 fatty acids measured in breast milk (percentage of total fatty acids)
+
+The dataset includes common fatty acid types:
+- Saturated fatty acids (e.g., C16:0 palmitic acid, C18:0 stearic acid)
+- Monounsaturated fatty acids (e.g., C18:1n9 oleic acid)
+- Polyunsaturated fatty acids (PUFAs)
+  - Omega-6 (e.g., C18:2n6 linoleic acid, C20:4n6 arachidonic acid)
+  - Omega-3 (e.g., C18:3n3 alpha-linolenic acid, C22:6n3 docosahexaenoic acid/DHA)
+- Trans fatty acids (e.g., C18:1t)
+
+The dataset incorporates biologically plausible relationships:
+- Diet influences milk fatty acid composition (especially for essential fatty acids)
+- Individual women have their own baseline patterns
+- Some fatty acids show time-dependent changes in milk (e.g., medium-chain FAs often increase)
+
+```{r}
+#| eval: false
+# Generate synthetic data for fatty acid profiles in diet and breast milk
+
+library(tidyverse)
+
+# Define constants
+NUM_WOMEN <- 21
+NUM_TIME_POINTS <- 6
+NUM_DIET_FAS <- 40
+NUM_MILK_FAS <- 37
+
+# Generate fatty acid names
+generate_fatty_acid_names <- function(count) {
+  # Common fatty acid naming patterns
+  fatty_acids <- c(
+    # Saturated FAs
+    "C4:0", "C6:0", "C8:0", "C10:0", "C12:0", "C14:0", "C16:0", "C18:0", "C20:0", "C22:0", "C24:0",
+    # Monounsaturated FAs
+    "C14:1", "C16:1", "C18:1n9", "C18:1n7", "C20:1n9", "C22:1n9", "C24:1n9",
+    # Polyunsaturated FAs - Omega-6
+    "C18:2n6", "C18:3n6", "C20:2n6", "C20:3n6", "C20:4n6", "C22:2n6", "C22:4n6", "C22:5n6",
+    # Polyunsaturated FAs - Omega-3
+    "C18:3n3", "C18:4n3", "C20:3n3", "C20:4n3", "C20:5n3", "C22:5n3", "C22:6n3",
+    # Trans FAs
+    "C16:1t", "C18:1t", "C18:2t"
+  )
+  
+  # For any additional fatty acids needed beyond the common ones
+  if (count > length(fatty_acids)) {
+    additional_names <- character(count - length(fatty_acids))
+    for (i in 1:length(additional_names)) {
+      # Generate additional names in realistic pattern
+      carbon_chain <- sample(4:24, 1)  # C4 to C24
+      double_bonds <- sample(0:5, 1) 
+      name <- paste0("C", carbon_chain, ":", double_bonds)
+      if (double_bonds > 0) {
+        position <- sample(1:10, 1)
+        name <- paste0(name, "n", position)
+      }
+      additional_names[i] <- name
+    }
+    fatty_acids <- c(fatty_acids, additional_names)
+  }
+  
+  return(fatty_acids[1:count])
+}
+
+# Generate the synthetic dataset
+generate_synthetic_data <- function() {
+  # Generate names for diet and milk fatty acids
+  diet_fa_names <- generate_fatty_acid_names(NUM_DIET_FAS)
+  milk_fa_names <- diet_fa_names[1:NUM_MILK_FAS]  # Most milk FAs will be the same as diet FAs
+  
+  # Create empty dataframes with appropriate columns
+  diet_columns <- c("woman_id", "timepoint", "days_postpartum", diet_fa_names)
+  milk_columns <- c("woman_id", "timepoint", "days_postpartum", milk_fa_names)
+  
+  diet_data <- data.frame(matrix(NA, nrow = 0, ncol = length(diet_columns)))
+  names(diet_data) <- diet_columns
+  
+  milk_data <- data.frame(matrix(NA, nrow = 0, ncol = length(milk_columns)))
+  names(milk_data) <- milk_columns
+  
+  # Generate data for each woman
+  for (woman in 1:NUM_WOMEN) {
+    # Individual baseline characteristics that will influence their FA profiles
+    diet_pattern <- runif(1)    # 0 = low fat, 1 = high fat
+    omega3_intake <- runif(1)   # 0 = low, 1 = high
+    omega6_intake <- runif(1)   # 0 = low, 1 = high
+    
+    # For each time point
+    for (timepoint in 1:NUM_TIME_POINTS) {
+      # Days postpartum (approximately weekly)
+      days_postpartum <- (timepoint - 1) * 7 + sample(0:2, 1)
+      
+      # Create new rows for diet and milk
+      diet_row <- data.frame(woman_id = woman, 
+                            timepoint = timepoint,
+                            days_postpartum = days_postpartum)
+      
+      milk_row <- data.frame(woman_id = woman, 
+                            timepoint = timepoint,
+                            days_postpartum = days_postpartum)
+      
+      # Major fatty acids (higher abundance)
+      major_fas <- c("C16:0", "C18:0", "C18:1n9", "C18:2n6")
+      # Medium abundance fatty acids
+      medium_fas <- c("C12:0", "C14:0", "C18:3n3", "C20:4n6", "C22:6n3")
+      
+      # Generate diet fatty acid values
+      for (fa in diet_fa_names) {
+        if (fa %in% major_fas) {
+          # Major FAs (10-30%)
+          diet_row[[fa]] <- runif(1, 10, 30)
+        } else if (fa %in% medium_fas) {
+          # Medium FAs (1-10%)
+          diet_row[[fa]] <- runif(1, 1, 10)
+        } else {
+          # Minor FAs (<1%)
+          diet_row[[fa]] <- runif(1, 0.1, 1)
+        }
+        
+        # Apply individual characteristics
+        if (grepl("n3$", fa)) {
+          diet_row[[fa]] <- diet_row[[fa]] * (0.5 + omega3_intake)
+        } else if (grepl("n6$", fa)) {
+          diet_row[[fa]] <- diet_row[[fa]] * (0.5 + omega6_intake)
+        }
+        
+        # Round to 2 decimal places
+        diet_row[[fa]] <- round(diet_row[[fa]], 2)
+      }
+      
+      # Generate milk fatty acid values based on diet
+      for (fa in milk_fa_names) {
+        if (fa %in% major_fas) {
+          # Major FAs (10-30%)
+          base_value <- runif(1, 10, 30)
+        } else if (fa %in% medium_fas) {
+          # Medium FAs (1-10%)
+          base_value <- runif(1, 1, 10)
+        } else {
+          # Minor FAs (<1%)
+          base_value <- runif(1, 0.1, 1)
+        }
+        
+        # Milk FA reflects diet FA but with biological processing
+        if (fa %in% diet_fa_names) {
+          # For essential FAs that transfer more directly
+          if (grepl("C18:2n6|C18:3n3|C20:5n3|C22:6n3", fa)) {
+            # 60-80% correlation with diet for essential FAs
+            milk_row[[fa]] <- diet_row[[fa]] * (0.6 + runif(1, 0, 0.2)) + 
+                             base_value * (0.2 + runif(1, 0, 0.2))
+          } else {
+            # 30-50% correlation for other FAs
+            milk_row[[fa]] <- diet_row[[fa]] * (0.3 + runif(1, 0, 0.2)) + 
+                             base_value * (0.5 + runif(1, 0, 0.2))
+          }
+        } else {
+          milk_row[[fa]] <- base_value
+        }
+        
+        # Time-dependent changes
+        if (grepl("C12:0|C14:0", fa)) {
+          # Medium chain FAs often increase slightly in milk over time
+          milk_row[[fa]] <- milk_row[[fa]] * (1 + (timepoint - 1) * 0.05)
+        } else if (fa == "C22:6n3") { # DHA
+          # DHA often decreases slightly if not supplemented
+          milk_row[[fa]] <- milk_row[[fa]] * (1 - (timepoint - 1) * 0.03)
+        }
+        
+        # Round to 2 decimal places
+        milk_row[[fa]] <- round(milk_row[[fa]], 2)
+      }
+      
+      # Add rows to dataframes
+      diet_data <- rbind(diet_data, diet_row)
+      milk_data <- rbind(milk_data, milk_row)
+    }
+  }
+  
+  return(list(diet_data = diet_data, milk_data = milk_data))
+}
+
+# Generate the data
+set.seed(123)  # For reproducibility
+synthetic_data <- generate_synthetic_data()
+
+# Write to CSV files
+write.csv(synthetic_data$diet_data, "diet_fatty_acids.csv", row.names = FALSE)
+write.csv(synthetic_data$milk_data, "milk_fatty_acids.csv", row.names = FALSE)
+
+# Preview the data
+head(synthetic_data$diet_data[, 1:10])  # Show first 10 columns
+head(synthetic_data$milk_data[, 1:10])  # Show first 10 columns
+
+# Verify data integrity
+cat("Diet data dimensions:", dim(synthetic_data$diet_data), "\n")
+cat("Milk data dimensions:", dim(synthetic_data$milk_data), "\n")
+
+# Check if values are plausible
+cat("Diet data range:", range(as.matrix(synthetic_data$diet_data[, -(1:3)])), "\n")
+cat("Milk data range:", range(as.matrix(synthetic_data$milk_data[, -(1:3)])), "\n")
+
+# Verify that key fatty acids are present
+cat("Key FAs in diet:", 
+    c("C16:0", "C18:0", "C18:1n9", "C18:2n6", "C18:3n3", "C20:4n6", "C22:6n3") %in% colnames(synthetic_data$diet_data), 
+    "\n")
+cat("Key FAs in milk:", 
+    c("C16:0", "C18:0", "C18:1n9", "C18:2n6", "C18:3n3", "C20:4n6", "C22:6n3") %in% colnames(synthetic_data$milk_data), 
+    "\n")
+
+# Calculate some basic descriptive statistics
+diet_means <- colMeans(synthetic_data$diet_data[, -(1:3)])
+milk_means <- colMeans(synthetic_data$milk_data[, -(1:3)])
+
+cat("Top 5 most abundant fatty acids in diet:\n")
+print(sort(diet_means, decreasing = TRUE)[1:5])
+
+cat("Top 5 most abundant fatty acids in milk:\n")
+print(sort(milk_means, decreasing = TRUE)[1:5])
+
+# Check correlation between diet and milk for key fatty acids
+key_fas <- c("C16:0", "C18:0", "C18:1n9", "C18:2n6", "C18:3n3", "C20:4n6", "C22:6n3")
+
+cat("Diet-milk correlations for key fatty acids:\n")
+correlations <- sapply(key_fas, function(fa) {
+  cor(synthetic_data$diet_data[[fa]], synthetic_data$milk_data[[fa]])
+})
+names(correlations) <- key_fas
+print(correlations)
+
+```
+
+## Data Files
+
+Two CSV files are provided:
+- `diet_fatty_acids.csv`: Diet fatty acid profiles
+- `milk_fatty_acids.csv`: Breast milk fatty acid profiles
+
+Each file contains columns for:
+- `woman_id`: Unique ID for each woman (1-21)
+- `timepoint`: Sampling timepoint (1-6)
+- `days_postpartum`: Days since birth (varies slightly around weekly intervals)
+- Individual columns for each fatty acid (values in percentage of total fatty acids)
+
+## Analysis Approaches in R
+
+Below are several R code examples demonstrating different analysis and visualization approaches for this dataset.
+
+### Setup and Data Import
+
+```{r}
+# Import libraries
+library(tidyverse)
+library(ggplot2)
+library(reshape2)
+library(vegan)    # For multivariate analyses
+library(pheatmap) # For heatmaps
+library(corrplot) # For correlation plots
+
+# Import the data
+diet_data <- read.csv("diet_fatty_acids.csv")
+milk_data <- read.csv("milk_fatty_acids.csv")
+
+# Convert to long format for some analyses
+diet_long <- diet_data %>%
+  pivot_longer(cols = -c(woman_id, timepoint, days_postpartum),
+               names_to = "fatty_acid", 
+               values_to = "abundance")
+
+milk_long <- milk_data %>%
+  pivot_longer(cols = -c(woman_id, timepoint, days_postpartum),
+               names_to = "fatty_acid", 
+               values_to = "abundance")
+```
+
+### Analysis 1: Time Series Analysis
+
+Track changes in specific fatty acids (e.g., DHA) over time:
+
+```{r}
+
+plot_fa_trajectory <- function(data_long, target_fa) {
+  require(ggplot2)
+  
+  fa_data <- data_long %>% 
+    filter(fatty_acid == target_fa)
+  
+  p <- ggplot(fa_data, aes(x = days_postpartum, y = abundance, 
+                       group = woman_id, color = factor(woman_id))) +
+    geom_line() +
+    geom_point() +
+    labs(title = paste0(target_fa, " Abundance Over Time"),
+         x = "Days Postpartum",
+         y = "Abundance (% of total FAs)",
+         color = "Woman ID") +
+    theme_minimal()
+  
+  return(p)
+}
+
+# DHA in milk over time 
+milk_dha <- milk_long %>% 
+  filter(fatty_acid == "C18.2n6")
+
+ggplot(milk_dha, aes(x = days_postpartum, y = abundance, 
+                     group = woman_id, color = factor(woman_id))) +
+  geom_line() +
+  geom_point() +
+  labs(title = "Fatty Acid Classes in Breast Milk Over Time",
+       x = "Timepoint",
+       y = "Total Abundance (%)",
+       fill = "Fatty Acid Class") +
+  theme_minimal()
+
+
+
+
+# Calculate omega-6/omega-3 ratio
+omega_ratio <- milk_class_totals %>%
+  filter(fa_class %in% c("Omega-3", "Omega-6")) %>%
+  pivot_wider(id_cols = c(woman_id, timepoint, days_postpartum),
+              names_from = fa_class,
+              values_from = total_abundance) %>%
+  mutate(omega6_omega3_ratio = `Omega-6` / `Omega-3`)
+
+ggplot(omega_ratio, aes(x = days_postpartum, y = omega6_omega3_ratio, 
+                       group = woman_id, color = factor(woman_id))) +
+  geom_line() +
+  geom_point() +
+  labs(title = "Omega-6/Omega-3 Ratio in Breast Milk Over Time",
+       x = "Days Postpartum",
+       y = "Omega-6/Omega-3 Ratio",
+       color = "Woman ID") +
+  theme_minimal()
+```
+# Multivariate visualization with PCA
+
+```{r}
+pca_analysis <- function(data, id_cols = c("woman_id", "timepoint")) {
+  require(ggplot2)
+  
+  # Extract just the FA columns for PCA
+  fa_cols <- data %>% select(-all_of(id_cols))
+  
+  # Run PCA
+  pca_result <- prcomp(fa_cols, scale. = TRUE)
+  
+  # Extract scores
+  pca_scores <- as.data.frame(pca_result$x)
+  
+  # Add back identifiers
+  for(col in id_cols) {
+    pca_scores[[col]] <- data[[col]]
+  }
+  
+  # Create plot
+  p <- ggplot(pca_scores, aes(x = PC1, y = PC2, 
+                         color = factor(woman_id), 
+                         shape = factor(timepoint))) +
+    geom_point(size = 3) +
+    labs(title = "PCA of Fatty Acid Profiles",
+         color = "Woman ID",
+         shape = "Timepoint") +
+    theme_minimal()
+  
+  # Return both plot and PCA results
+  return(list(plot = p, pca = pca_result, scores = pca_scores))
+}
+
+pca_analysis(diet_data)
+pca_analysis(milk_data)
+
+```
+
+```{r}
+
+pcoa_comparison <- function(diet_data, milk_data, id_cols = c("woman_id", "timepoint"), 
+                           distance_method = "bray") {
+  require(ggplot2)
+  require(dplyr)
+  require(vegan)  # for distance and pcoa calculations
+  
+  # Function to run PCoA and return results
+  run_pcoa <- function(data, id_cols, distance_method) {
+    # Extract just the feature columns for PCoA
+    feature_cols <- data %>% select(-all_of(id_cols))
+    
+    # Calculate distance matrix
+    dist_matrix <- vegdist(feature_cols, method = distance_method)
+    
+    # Run PCoA
+    pcoa_result <- cmdscale(dist_matrix, eig = TRUE, k = min(nrow(feature_cols) - 1, 10))
+    
+    # Calculate proportion of variance explained
+    eigenvalues <- pcoa_result$eig
+    prop_variance <- eigenvalues / sum(eigenvalues)
+    
+    # Extract scores
+    pcoa_scores <- as.data.frame(pcoa_result$points)
+    colnames(pcoa_scores) <- paste0("Axis", 1:ncol(pcoa_scores))
+    
+    # Add back identifiers
+    for(col in id_cols) {
+      pcoa_scores[[col]] <- data[[col]]
+    }
+    
+    return(list(pcoa = pcoa_result, scores = pcoa_scores, variance = prop_variance))
+  }
+  
+  # Run PCoA on both datasets
+  diet_pcoa <- run_pcoa(diet_data, id_cols, distance_method)
+  milk_pcoa <- run_pcoa(milk_data, id_cols, distance_method)
+  
+  # Create individual plots
+  diet_plot <- ggplot(diet_pcoa$scores, aes(x = Axis1, y = Axis2, 
+                           color = factor(woman_id), 
+                           shape = factor(timepoint))) +
+    geom_point(size = 3) +
+    labs(title = "PCoA of Diet Profiles",
+         x = paste0("Axis 1 (", round(diet_pcoa$variance[1] * 100, 1), "%)"),
+         y = paste0("Axis 2 (", round(diet_pcoa$variance[2] * 100, 1), "%)"),
+         color = "Woman ID",
+         shape = "Timepoint") +
+    theme_minimal()
+  
+  milk_plot <- ggplot(milk_pcoa$scores, aes(x = Axis1, y = Axis2, 
+                           color = factor(woman_id), 
+                           shape = factor(timepoint))) +
+    geom_point(size = 3) +
+    labs(title = "PCoA of Milk Fatty Acid Profiles",
+         x = paste0("Axis 1 (", round(milk_pcoa$variance[1] * 100, 1), "%)"),
+         y = paste0("Axis 2 (", round(milk_pcoa$variance[2] * 100, 1), "%)"),
+         color = "Woman ID",
+         shape = "Timepoint") +
+    theme_minimal()
+  
+  # Join the PCoA scores for correlation analysis
+  # Match by both woman_id and timepoint
+  join_cols <- c("woman_id", "timepoint")
+  comparison_data <- diet_pcoa$scores %>%
+    select(all_of(join_cols), starts_with("Axis")) %>%
+    rename_with(~paste0("diet_", .), starts_with("Axis")) %>%
+    inner_join(
+      milk_pcoa$scores %>%
+        select(all_of(join_cols), starts_with("Axis")) %>%
+        rename_with(~paste0("milk_", .), starts_with("Axis")),
+      by = join_cols
+    )
+  
+  # Calculate correlations between diet PCs and milk PCs
+  diet_axes <- grep("^diet_Axis", names(comparison_data), value = TRUE)
+  milk_axes <- grep("^milk_Axis", names(comparison_data), value = TRUE)
+  
+  correlation_matrix <- matrix(NA, length(diet_axes), length(milk_axes))
+  rownames(correlation_matrix) <- diet_axes
+  colnames(correlation_matrix) <- milk_axes
+  
+  for(i in 1:length(diet_axes)) {
+    for(j in 1:length(milk_axes)) {
+      correlation_matrix[i, j] <- cor(comparison_data[[diet_axes[i]]], 
+                                   comparison_data[[milk_axes[j]]], 
+                                   use = "complete.obs")
+    }
+  }
+  
+  # Create correlation heatmap
+  correlation_df <- as.data.frame(as.table(correlation_matrix))
+  names(correlation_df) <- c("Diet_Axis", "Milk_Axis", "Correlation")
+  
+  correlation_plot <- ggplot(correlation_df, aes(x = Diet_Axis, y = Milk_Axis, fill = Correlation)) +
+    geom_tile() +
+    scale_fill_gradient2(low = "blue", mid = "white", high = "red", midpoint = 0) +
+    geom_text(aes(label = round(Correlation, 2)), color = "black", size = 3) +
+    labs(title = "Correlation Between Diet and Milk PCoA Components",
+         subtitle = paste("Distance method:", distance_method)) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  
+  # Scatter plot of top correlated components
+  # Find highest absolute correlation
+  top_correlation <- correlation_df %>%
+    mutate(abs_cor = abs(Correlation)) %>%
+    arrange(desc(abs_cor)) %>%
+    slice(1)
+  
+  scatter_plot <- ggplot(comparison_data, 
+                        aes_string(x = top_correlation$Diet_Axis, 
+                                  y = top_correlation$Milk_Axis,
+                                  color = "factor(woman_id)",
+                                  shape = "factor(timepoint)")) +
+    geom_point(size = 3) +
+    geom_smooth(method = "lm", se = TRUE, color = "black", aes(group = 1)) +
+    labs(title = paste("Relationship Between", top_correlation$Diet_Axis, "and", 
+                      top_correlation$Milk_Axis),
+         subtitle = paste("Correlation:", round(top_correlation$Correlation, 3)),
+         color = "Woman ID",
+         shape = "Timepoint") +
+    theme_minimal()
+  
+  # Return all results
+  return(list(
+    diet_pcoa = diet_pcoa,
+    milk_pcoa = milk_pcoa,
+    diet_plot = diet_plot,
+    milk_plot = milk_plot,
+    correlation_matrix = correlation_matrix,
+    correlation_plot = correlation_plot,
+    comparison_data = comparison_data,
+    scatter_plot = scatter_plot
+  ))
+}
+
+# Use the function
+results <- pcoa_comparison(diet_data, milk_data, distance_method = "bray")
+
+# View individual plots
+results$diet_plot
+results$milk_plot
+results$correlation_plot
+results$scatter_plot
+
+# Optional: Examine specific correlations
+round(results$correlation_matrix, 2)
+```
+
+
+
+# Correlation analysis between diet and milk
+
+```{r}
+correlation_analysis <- function(diet_long, milk_long) {
+  require(ggplot2)
+  
+  # Join diet and milk data for correlation analysis
+  joined_data <- diet_long %>%
+    inner_join(milk_long, 
+               by = c("woman_id", "timepoint", "days_postpartum", "fatty_acid"),
+               suffix = c("_diet", "_milk"))
+  
+  # Calculate correlations for each fatty acid
+  correlations <- joined_data %>%
+    group_by(fatty_acid) %>%
+    summarize(correlation = cor(abundance_diet, abundance_milk, method = "spearman"),
+              p_value = cor.test(abundance_diet, abundance_milk, method = "spearman")$p.value)
+  
+  # Plot the correlations
+  p <- ggplot(correlations, aes(x = reorder(fatty_acid, correlation), y = correlation)) +
+    geom_bar(stat = "identity", aes(fill = p_value < 0.05)) +
+    coord_flip() +
+    labs(title = "Correlation Between Diet and Milk Fatty Acid Abundance",
+         x = "Fatty Acid",
+         y = "Spearman Correlation",
+         fill = "P < 0.05") +
+    theme_minimal()
+  
+  return(list(plot = p, correlations = correlations))
+}
+
+
+correlation_analysis(diet_long, milk_long)
+```
+
+```{r}
+# Heatmap visualization by timepoint
+heatmap_by_timepoint <- function(data, timepoint_val, scale = "column") {
+  require(pheatmap)
+  
+  # Prepare data for heatmap
+  heatmap_data <- data %>%
+    filter(timepoint == timepoint_val) %>%
+    select(-timepoint, -days_postpartum) %>%
+    column_to_rownames("woman_id")
+  
+  # Create heatmap
+  pheatmap(heatmap_data,
+           scale = scale,
+           clustering_distance_rows = "euclidean",
+           clustering_distance_cols = "euclidean",
+           main = paste0("Fatty Acid Profiles at Timepoint ", timepoint_val))
+  
+  # Option 1: Correlation-based clustering
+pheatmap(heatmap_data,
+         scale = "column",  # Scaling by row often works well for metabolite data
+         clustering_distance_rows = "correlation",
+         clustering_distance_cols = "correlation",
+         clustering_method = "average",
+         main = paste0("Fatty Acid Profiles at Timepoint ", timepoint_val))
+
+# Option 2: Ward's hierarchical clustering
+pheatmap(heatmap_data,
+         scale = "column", 
+         clustering_distance_rows = "euclidean",
+         clustering_distance_cols = "euclidean",
+         clustering_method = "ward.D2",
+         main = paste0("Fatty Acid Profiles at Timepoint ", timepoint_val))
+  
+}
+
+heatmap_by_timepoint(milk_data, 1)
+```
+
+
+
+### Analysis 8: Clustering to Identify Diet Patterns
+
+Use clustering to identify diet patterns and their relationship to milk composition:
+
+```{r}
+# Focus on dietary patterns using key fatty acids
+key_fas <- c("C16.0", "C18.0", "C18.1n9", "C18.2n6", "C18.3n3", "C20.4n6", "C20.5n3", "C22.6n3")
+
+# Extract diet data for clustering
+diet_for_cluster <- diet_data %>%
+  select(woman_id, timepoint, all_of(key_fas)) %>%
+  group_by(woman_id) %>%
+  summarize(across(all_of(key_fas), mean)) %>%
+  column_to_rownames("woman_id")
+
+# Perform hierarchical clustering
+diet_dist <- dist(diet_for_cluster)
+diet_hclust <- hclust(diet_dist)
+
+# Cut the tree to get 3 clusters
+diet_clusters <- cutree(diet_hclust, k = 3)
+diet_clusters_df <- data.frame(
+  woman_id = as.integer(names(diet_clusters)),
+  diet_cluster = diet_clusters
+)
+
+diet_for_plot <- diet_for_cluster %>%
+  rownames_to_column("woman_id") %>%
+  mutate(woman_id = as.integer(woman_id)) %>%
+  left_join(diet_clusters_df, by = "woman_id")
+
+# PCA for visualization
+diet_pca <- prcomp(diet_for_cluster, scale. = TRUE)
+diet_pca_df <- data.frame(
+  woman_id = as.integer(rownames(diet_for_cluster)),
+  PC1 = diet_pca$x[,1],
+  PC2 = diet_pca$x[,2]
+) %>%
+  left_join(diet_clusters_df, by = "woman_id")
+
+ggplot(diet_pca_df, aes(x = PC1, y = PC2, color = factor(diet_cluster))) +
+  geom_point(size = 3) +
+  labs(title = "Dietary Pattern Clusters",
+       color = "Cluster") +
+  theme_minimal()
+
+# Examine how diet clusters relate to milk composition
+milk_by_cluster <- milk_long %>%
+  inner_join(diet_clusters_df, by = "woman_id") %>%
+  filter(fatty_acid %in% key_fas) %>%
+  group_by(diet_cluster, fatty_acid) %>%
+  summarize(mean_abundance = mean(abundance))
+
+ggplot(milk_by_cluster, aes(x = fatty_acid, y = mean_abundance, fill = factor(diet_cluster))) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "Milk Fatty Acid Composition by Diet Cluster",
+       x = "Fatty Acid",
+       y = "Mean Abundance (%)",
+       fill = "Diet Cluster") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+### Analysis 9: Network Analysis of Fatty Acid Correlations
+
+Examine relationships between fatty acids using network visualization:
+
+```{r}
+library(igraph)
+library(ggraph)
+
+# Calculate correlations
+milk_wide_for_cor <- milk_data %>%
+  select(-woman_id, -timepoint, -days_postpartum)
+milk_cor <- cor(milk_wide_for_cor, use = "pairwise.complete.obs")  # Handle any NAs
+
+# Convert to data frame for analysis
+milk_cor_df_all <- as.data.frame(as.table(milk_cor)) %>%
+  rename(FA1 = Var1, FA2 = Var2, Correlation = Freq) %>%
+  filter(FA1 != FA2)  # Remove self-correlations
+
+# Check the distribution of correlation values
+summary(milk_cor_df_all$Correlation)
+
+# Try a lower threshold to see if any correlations exist
+milk_cor_df <- milk_cor_df_all %>%
+  filter(abs(Correlation) > 0.25)  # Lower threshold
+
+# See how many correlations we get with the lower threshold
+nrow(milk_cor_df)
+
+# Create a graph
+milk_graph <- graph_from_data_frame(milk_cor_df, directed = FALSE)
+E(milk_graph)$weight <- milk_cor_df$Correlation
+E(milk_graph)$color <- ifelse(E(milk_graph)$weight > 0, "blue", "red")
+E(milk_graph)$width <- abs(E(milk_graph)$weight) * 2
+
+# Plot the network
+set.seed(123)  # For reproducibility
+plot(milk_graph, 
+     edge.width = E(milk_graph)$width,
+     edge.color = E(milk_graph)$color,
+     main = "Network of Fatty Acid Correlations in Breast Milk")
+
+# Use absolute weights for the layout, but keep the original sign for visualization
+ggraph(milk_graph, layout = 'fr', weights = abs(E(milk_graph)$weight)) + 
+  geom_edge_link(aes(edge_alpha = abs(weight), edge_width = abs(weight), color = weight > 0)) +
+  geom_node_point(size = 5) +
+  geom_node_text(aes(label = name), repel = TRUE) +
+  scale_edge_color_manual(values = c("red", "blue"), labels = c("Negative", "Positive")) +
+  labs(title = "Network of Fatty Acid Correlations in Breast Milk",
+       edge_color = "Correlation Type") +
+  theme_void()
+```
+
+## Additional Visualization Ideas
+
+### Interactive Visualizations (using plotly)
+
+```{r}
+library(plotly)
+
+# Interactive time series
+dha_plot <- ggplot(milk_dha, aes(x = days_postpartum, y = abundance, 
+                              group = woman_id, color = factor(woman_id))) +
+  geom_line() +
+  geom_point() +
+  labs(title = "DHA in Breast Milk Over Time",
+       x = "Days Postpartum",
+       y = "Abundance (% of total FAs)",
+       color = "Woman ID") +
+  theme_minimal()
+
+ggplotly(dha_plot)
+
+# Interactive PCA plot
+pca_plot <- ggplot(pca_scores, aes(x = PC1, y = PC2, 
+                                 color = factor(woman_id), 
+                                 shape = factor(timepoint),
+                                 text = paste("Woman:", woman_id, 
+                                              "\nTimepoint:", timepoint))) +
+  geom_point(size = 3) +
+  labs(title = "PCA of Breast Milk Fatty Acid Profiles",
+       color = "Woman ID",
+       shape = "Timepoint") +
+  theme_minimal()
+
+ggplotly(pca_plot)
+```
+
+### Radar/Spider Plots (for comparing profiles)
+
+```r
+library(fmsb)
+
+# Prepare data for radar plot (example for comparing diet clusters)
+radar_data <- milk_by_cluster %>%
+  pivot_wider(id_cols = diet_cluster, names_from = fatty_acid, values_from = mean_abundance) %>%
+  as.data.frame()
+
+rownames(radar_data) <- paste("Cluster", radar_data$diet_cluster)
+radar_data <- radar_data[,-1]  # Remove cluster column
+
+# Add max and min rows required by fmsb
+radar_data <- rbind(
+  rep(max(radar_data), ncol(radar_data)),  # Max values
+  rep(min(radar_data), ncol(radar_data)),  # Min values
+  radar_data
+)
+
+# Plot
+par(mar = c(1, 1, 2, 1))
+radarchart(
+  radar_data,
+  pcol = rainbow(nrow(radar_data) - 2),
+  pfcol = scales::alpha(rainbow(nrow(radar_data) - 2), 0.3),
+  plwd = 2,
+  cglcol = "grey",
+  title = "Comparison of Milk FA Profiles by Diet Cluster"
+)
+legend(
+  "topright",
+  legend = paste("Cluster", 1:(nrow(radar_data) - 2)),
+  col = rainbow(nrow(radar_data) - 2),
+  lwd = 2,
+  pch = 16,
+  bty = "n"
+)
+```
+
+## Key Research Questions to Explore
+
+1. **Diet-Milk Relationship**
+   - Which fatty acids show the strongest correlation between diet and milk?
+   - Do some women transfer specific fatty acids more efficiently than others?
+   - Is there a time lag between changes in diet and changes in milk composition?
+
+2. **Temporal Changes**
+   - How do milk fatty acid profiles change over the first weeks postpartum?
+   - Are changes consistent across women or individual-specific?
+   - Do specific fatty acid classes show different temporal patterns?
+
+3. **Pattern Identification**
+   - Can women be grouped based on their milk fatty acid profiles?
+   - Do dietary patterns predict milk composition patterns?
+   - Is the Omega-6/Omega-3 ratio stable or variable over time?
+
+4. **Individual Variability**
+   - What is the extent of between-woman vs. within-woman variability?
+   - Are there fatty acids that show particularly high or low variability?
+   - Can maternal characteristics explain individual differences?
+
+## Conclusion
+
+This synthetic dataset allows exploration of multiple analytical approaches for studying the relationship between maternal diet and breast milk fatty acid composition. The analyses range from simple visualization techniques to more complex multivariate and mixed-effect modeling approaches, providing a comprehensive toolkit for the student to apply to their real research data. = "DHA (C22:6n3) in Breast Milk Over Time",
+       x = "Days Postpartum",
+       y = "Abundance (% of total FAs)",
+       color = "Woman ID") +
+  theme_minimal() +
+  theme(legend.position = "none")  # Omit legend if too many women
+```
+
+### Analysis 2: Diet-Milk Correlations
+
+Examine correlations between dietary and milk fatty acid abundances:
+
+```r
+# Join diet and milk data for correlation analysis
+joined_data <- diet_long %>%
+  inner_join(milk_long, 
+             by = c("woman_id", "timepoint", "days_postpartum", "fatty_acid"),
+             suffix = c("_diet", "_milk"))
+
+# Calculate correlations for each fatty acid
+correlations <- joined_data %>%
+  group_by(fatty_acid) %>%
+  summarize(correlation = cor(abundance_diet, abundance_milk, method = "spearman"),
+            p_value = cor.test(abundance_diet, abundance_milk, method = "spearman")$p.value)
+
+# Plot the correlations
+ggplot(correlations, aes(x = reorder(fatty_acid, correlation), y = correlation)) +
+  geom_bar(stat = "identity", aes(fill = p_value < 0.05)) +
+  coord_flip() +
+  labs(title = "Correlation Between Diet and Milk Fatty Acid Abundance",
+       x = "Fatty Acid",
+       y = "Spearman Correlation",
+       fill = "P < 0.05") +
+  theme_minimal()
+
+# Correlation matrix of selected important FAs between diet and milk
+important_fas <- c("C18:2n6", "C18:3n3", "C20:4n6", "C20:5n3", "C22:6n3")
+important_diet <- diet_data %>% 
+  select(woman_id, timepoint, all_of(important_fas)) %>%
+  pivot_longer(cols = all_of(important_fas), 
+               names_to = "fatty_acid", 
+               values_to = "diet_abundance") %>%
+  mutate(diet_milk = paste0("diet_", fatty_acid))
+
+important_milk <- milk_data %>%
+  select(woman_id, timepoint, all_of(important_fas)) %>%
+  pivot_longer(cols = all_of(important_fas), 
+               names_to = "fatty_acid", 
+               values_to = "milk_abundance") %>%
+  mutate(diet_milk = paste0("milk_", fatty_acid))
+
+combined <- important_diet %>%
+  select(woman_id, timepoint, diet_milk, diet_abundance) %>%
+  bind_rows(important_milk %>% 
+              select(woman_id, timepoint, diet_milk, milk_abundance = milk_abundance)) %>%
+  pivot_wider(id_cols = c(woman_id, timepoint), 
+              names_from = diet_milk, 
+              values_from = c(diet_abundance, milk_abundance))
+
+cor_matrix <- cor(combined %>% select(-woman_id, -timepoint), use = "pairwise.complete.obs")
+corrplot(cor_matrix, method = "circle", type = "upper", order = "hclust",
+         tl.col = "black", tl.srt = 45)
+```
+
+### Analysis 3: Multivariate Analysis (PCA)
+
+Principal Component Analysis to identify patterns in milk fatty acid composition:
+
+```r
+# Prepare data for PCA (wide format, just the fatty acid abundances)
+milk_wide <- milk_data %>%
+  select(-days_postpartum)
+
+# Extract just the FA columns for PCA
+milk_fa_cols <- milk_wide %>% select(-woman_id, -timepoint)
+
+# Run PCA
+pca_result <- prcomp(milk_fa_cols, scale. = TRUE)
+
+# Extract scores
+pca_scores <- as.data.frame(pca_result$x)
+pca_scores$woman_id <- milk_wide$woman_id
+pca_scores$timepoint <- milk_wide$timepoint
+
+# Plot PCA
+ggplot(pca_scores, aes(x = PC1, y = PC2, 
+                       color = factor(woman_id), 
+                       shape = factor(timepoint))) +
+  geom_point(size = 3) +
+  labs(title = "PCA of Breast Milk Fatty Acid Profiles",
+       color = "Woman ID",
+       shape = "Timepoint") +
+  theme_minimal()
+
+# Loadings plot to see which fatty acids drive the variation
+loadings <- as.data.frame(pca_result$rotation)
+loadings$fatty_acid <- rownames(loadings)
+
+ggplot(loadings, aes(x = PC1, y = PC2, label = fatty_acid)) +
+  geom_point() +
+  geom_text(vjust = -0.5) +
+  labs(title = "PCA Loadings: Fatty Acids") +
+  theme_minimal()
+```
+
+### Analysis 4: Heatmap Visualization
+
+Create heatmaps to visualize patterns across women and fatty acids:
+
+```r
+# Prepare data for heatmap (woman at one timepoint, e.g., timepoint 3)
+milk_wide_t3 <- milk_data %>%
+  filter(timepoint == 3) %>%
+  select(-timepoint, -days_postpartum) %>%
+  column_to_rownames("woman_id")
+
+# Create heatmap
+pheatmap(milk_wide_t3,
+         scale = "column",  # Scale by fatty acid
+         clustering_distance_rows = "euclidean",
+         clustering_distance_cols = "euclidean",
+         main = "Breast Milk Fatty Acid Profiles at Timepoint 3")
+
+# Compare across timepoints for a subset of important fatty acids
+important_fas <- c("C16:0", "C18:0", "C18:1n9", "C18:2n6", "C18:3n3", 
+                   "C20:4n6", "C20:5n3", "C22:6n3")
+
+# Time series heatmap
+milk_long_subset <- milk_long %>%
+  filter(fatty_acid %in% important_fas) %>%
+  unite("woman_time", c(woman_id, timepoint), sep = "_T")
+
+milk_heatmap_data <- milk_long_subset %>%
+  pivot_wider(names_from = fatty_acid, values_from = abundance) %>%
+  column_to_rownames("woman_time")
+
+pheatmap(as.matrix(milk_heatmap_data),
+         scale = "column",
+         cluster_rows = TRUE,
+         cluster_cols = TRUE,
+         main = "Breast Milk Fatty Acid Profiles Across Women and Time")
+```
+
+### Analysis 5: Diet-Milk Transfer Efficiency
+
+Calculate and visualize the transfer efficiency from diet to milk:
+
+```r
+# Calculate ratio of milk to diet for each fatty acid
+joined_data <- diet_long %>%
+  inner_join(milk_long, 
+             by = c("woman_id", "timepoint", "days_postpartum", "fatty_acid"),
+             suffix = c("_diet", "_milk"))
+
+# Calculate transfer ratio
+joined_data$transfer_ratio <- joined_data$abundance_milk / joined_data$abundance_diet
+
+# Calculate mean transfer ratio for each fatty acid
+transfer_summary <- joined_data %>%
+  group_by(fatty_acid) %>%
+  summarize(mean_ratio = mean(transfer_ratio, na.rm = TRUE),
+            sd_ratio = sd(transfer_ratio, na.rm = TRUE))
+
+# Plot mean transfer ratios
+ggplot(transfer_summary, aes(x = reorder(fatty_acid, mean_ratio), y = mean_ratio)) +
+  geom_bar(stat = "identity") +
+  geom_errorbar(aes(ymin = mean_ratio - sd_ratio, ymax = mean_ratio + sd_ratio), width = 0.2) +
+  coord_flip() +
+  labs(title = "Fatty Acid Transfer Efficiency (Milk/Diet Ratio)",
+       x = "Fatty Acid",
+       y = "Mean Transfer Ratio (Milk/Diet)") +
+  theme_minimal()
+
+# Does transfer efficiency change over time?
+transfer_time <- joined_data %>%
+  filter(fatty_acid %in% important_fas) %>%
+  group_by(fatty_acid, timepoint) %>%
+  summarize(mean_ratio = mean(transfer_ratio, na.rm = TRUE),
+            sd_ratio = sd(transfer_ratio, na.rm = TRUE))
+
+ggplot(transfer_time, aes(x = timepoint, y = mean_ratio, color = fatty_acid, group = fatty_acid)) +
+  geom_line() +
+  geom_point() +
+  geom_errorbar(aes(ymin = mean_ratio - sd_ratio, ymax = mean_ratio + sd_ratio), width = 0.2) +
+  labs(title = "Fatty Acid Transfer Efficiency Over Time",
+       x = "Timepoint",
+       y = "Mean Transfer Ratio (Milk/Diet)",
+       color = "Fatty Acid") +
+  theme_minimal()
+```
+
+### Analysis 6: Mixed-Effects Models
+
+Examine fatty acid changes over time while accounting for individual differences:
+
+```r
+library(lme4)
+library(lmerTest)
+
+# Example for DHA
+dha_data <- milk_long %>% 
+  filter(fatty_acid == "C22:6n3")
+
+# Linear mixed model with random intercept by woman
+dha_model <- lmer(abundance ~ days_postpartum + (1|woman_id), data = dha_data)
+summary(dha_model)
+
+# Visualize individual trajectories with overall trend
+ggplot(dha_data, aes(x = days_postpartum, y = abundance, group = woman_id)) +
+  geom_line(alpha = 0.3) +
+  geom_smooth(aes(group = 1), method = "lm", color = "red") +
+  labs(title = "DHA in Breast Milk Over Time with Overall Trend",
+       x = "Days Postpartum",
+       y = "DHA Abundance (%)") +
+  theme_minimal()
+```
+
+### Analysis 7: Fatty Acid Group Analysis
+
+Analyze by fatty acid groups (saturated, monounsaturated, omega-3, omega-6):
+
+```r
+# Create a function to classify fatty acids
+classify_fa <- function(fa_name) {
+  if (grepl("C[0-9]+:0$", fa_name)) {
+    return("Saturated")
+  } else if (grepl("C[0-9]+:1", fa_name)) {
+    if (grepl("t$", fa_name)) {
+      return("Trans")
+    } else {
+      return("Monounsaturated")
+    }
+  } else if (grepl("n3$", fa_name)) {
+    return("Omega-3")
+  } else if (grepl("n6$", fa_name)) {
+    return("Omega-6")
+  } else if (grepl("t$", fa_name)) {
+    return("Trans")
+  } else {
+    return("Other")
+  }
+}
+
+# Add classifications to the data
+milk_long$fa_class <- sapply(milk_long$fatty_acid, classify_fa)
+diet_long$fa_class <- sapply(diet_long$fatty_acid, classify_fa)
+
+# Calculate totals by class
+milk_class_totals <- milk_long %>%
+  group_by(woman_id, timepoint, days_postpartum, fa_class) %>%
+  summarize(total_abundance = sum(abundance))
+
+diet_class_totals <- diet_long %>%
+  group_by(woman_id, timepoint, days_postpartum, fa_class) %>%
+  summarize(total_abundance = sum(abundance))
+
+# Plot class distributions
+ggplot(milk_class_totals, aes(x = factor(timepoint), y = total_abundance, fill = fa_class)) +
+  geom_boxplot() +
+  facet_wrap(~fa_class, scales = "free_y") +
+  labs(title
+
+```{r}
+
+
+
+```
+
+

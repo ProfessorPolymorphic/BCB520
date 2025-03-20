@@ -75,6 +75,13 @@ ggplot(Scale.Vez.plot%>%
   theme(panel.grid.major.y = element_blank(),
         panel.grid.minor = element_blank())
 
+Barrie<-Scale.Goalies %>%
+  slice_max(order_by = scale.Vezina, n = 5)%>%
+  rename(Vezina = Player)%>%
+  mutate(Rank = row_number())%>%
+  mutate(Voter = "Barrie")%>%
+  select(Voter, Vezina, Rank)
+
 ```
 
 ## HART BALLOT
@@ -228,6 +235,18 @@ ggplot(Hart.Long%>%
   )+
   facet_wrap(~Position.x)
 
+BarrieHart<-Scale.Hart %>%
+ mutate(Hartscore = resid.Goals + resid.Assists + resid.CF. + resid.xGF.) %>%
+  slice_max(order_by = Hartscore, n = 5)%>%
+  rename(Hart = Player)%>%
+  mutate(Rank = row_number())%>%
+  mutate(Voter = "Barrie")%>%
+  select(Voter, Hart, Rank)
+
+Barrie<- Barrie%>%
+  select(Vezina, Rank)%>%
+  left_join(BarrieHart, by = "Rank")
+
 ```
 
 ## James Norris Memorial Trophy
@@ -282,7 +301,8 @@ ggplot(Norris.Plot%>% filter(scale.Norris > 3),
     axis.text.y = element_text(size = 8)
   )
 
-
+Barrie<-Norris %>%
+  slice_max(order_by = scale.Norris, n = 5)
 ```
 
 ## Calder Memorial Trophy
@@ -339,7 +359,9 @@ ggplot(Calder.Plot%>% filter(scale.Calder > 3),
   )+
   facet_wrap(~Position.x)
 
-
+Barrie<-Calder %>%
+  slice_max(order_by = scale.Calder, n = 5)%>%
+  select(Player)
 
 ```
 
@@ -393,7 +415,9 @@ ggplot(Selke.Plot%>% filter(Selke < -2),
     # Improve readability of player names
     axis.text.y = element_text(size = 8)
   )
-
+Barrie<-Selke.OnIce %>%
+  slice_max(order_by = Selke, n = 5)%>%
+  select(Player)
 
 ```
 
@@ -458,7 +482,10 @@ ggplot(Byng%>% filter(Byng > 0.5, scale.PIM > .7)%>%
   facet_wrap(~Position)
 
 
-
+Barrie<-Byng %>%
+  filter(Byng > 0.5, scale.PIM > .7)%>%
+  slice_max(order_by = Byng, n = 15)%>%
+  select(Player, Byng)
 
 
 ```
