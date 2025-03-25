@@ -1,0 +1,290 @@
+---
+title: "Math"
+format: html
+---
+
+```{r}
+
+library(tidyverse)
+library(readxl)
+library(pheatmap)
+library(RColorBrewer)
+
+```
+Martin Necas
+Martin Necas
+
+```{r}
+
+justice<- read_excel("justice.xlsx")%>%
+  mutate(Voter = "Justice")
+Barrie<- read_excel("Barrie.xlsx")
+Betsy <- read_excel("BetsyChurchHockeyBallot.xlsx")%>%
+  rename(
+         Player = `Player Name` )%>%
+  rename(Rank = `Nomination position`)%>%
+  rename(Voter = Name)
+Claire <- read.csv("Hockey_Ranking_CS.csv")
+Ian<- read_excel("IAN HOCKEY NOMINATIONS.xlsx")%>%
+  rename(Award = Trophy)
+John <- read.csv("JohnCambareriHockeyAwards.csv")%>%
+  rename(Rank = Place)%>%
+  mutate(Voter = "John")
+Marwa <- read_excel("Marwa.xlsx")
+Henry <- read_excel("NHL award ballot HT.xlsx")
+Priya <- read_excel("NHL_Award_Ballet.xlsx")%>%
+  mutate(Voter = "Priya")%>%
+  pivot_longer(
+    cols = c(VEZINA, HART, `JAMES NORRIS`, CALDER, `FRANK J SELKE`, `LADY BING`),
+    names_to = "Award",
+    values_to = "Player"
+  )%>%
+  select(-Voters)
+Sharon <- readRDS("sharon_ballot.rds")
+
+All_Votes <- bind_rows(Barrie, Sharon, Betsy, Claire, Henry, Ian, John, justice, Marwa, Priya)%>%
+  mutate(
+    Award.Standard = case_when(
+      str_detect(Award, "(?i)Norris") ~ "Norris",
+      str_detect(Award, "(?i)Byng") ~ "Byng",
+      str_detect(Award, "(?i)Selk") ~ "Selke",
+      str_detect(Award, "(?i)Calder") ~ "Calder",
+      str_detect(Award, "(?i)Vezina") ~ "Vezina",
+      str_detect(Award, "(?i)Hart") ~ "Hart",
+       str_detect(Award, "(?i)Lady") ~ "Byng",
+      str_detect(Award, "(?i)Heart") ~ "Hart",
+      TRUE ~ "Other"
+    ))
+
+```
+
+
+```{r}
+# Add this improved cleaning function before creating the Scores data frame
+standardize_player_names <- function(name) {
+  # Convert to character if not already
+  name <- as.character(name)
+  # Remove leading/trailing whitespace
+  name <- str_trim(name)
+  # Replace multiple spaces with a single space
+  name <- str_replace_all(name, "\\s+", " ")
+  # Standardize capitalization
+  name <- str_to_title(name)
+  # Remove accents (requires stringi package)
+  if (!requireNamespace("stringi", quietly = TRUE)) {
+    install.packages("stringi")
+  }
+  name <- stringi::stri_trans_general(name, "Latin-ASCII")
+  # Handle specific cases like missing spaces
+  name <- str_replace(name, "Martinnecas", "Martin Necas")
+  return(name)
+}
+
+# Apply the improved cleaning in your data processing
+All_Votes <- All_Votes %>%
+  mutate(
+    Player = standardize_player_names(Player)
+  ) %>%
+  mutate(
+    Score = case_when(
+      Rank == 1 ~ 10,
+      Rank == 2 ~ 7,
+      Rank == 3 ~ 5,
+      Rank == 4 ~ 3,
+      Rank == 5 ~ 1,
+      TRUE ~ 0
+    )
+  )
+
+# Then continue with your grouping and summarizing
+Scores <- All_Votes %>%
+  group_by(Award.Standard, Player) %>%
+  summarize(Total = sum(Score), .groups = "drop")
+
+# Debug duplicates (optional)
+duplicates <- Scores %>%
+  filter(Award.Standard == "Byng") %>%
+  group_by(Player) %>%
+  filter(n() > 1)
+
+if(nrow(duplicates) > 0) {
+  print("Found duplicates:")
+  print(duplicates)
+}
+
+ggplot(Scores, aes(x = reorder(Player, Total), y = Total)) +
+  geom_col(fill = "#3182bd") +  # Use a pleasing blue color
+  coord_flip() +
+  facet_wrap(~Award.Standard, scales = "free_y") +  # Note: 'scales' not 'scale'
+  labs(
+    title = "NHL Award Voting Results",
+    subtitle = "Players ranked by total vote score in each award category",
+    x = "Player",
+    y = "Total Vote Score"
+  ) +
+  theme_minimal() +
+  theme(
+    strip.background = element_rect(fill = "#f0f0f0"),
+    strip.text = element_text(face = "bold", size = 12),
+    axis.text.y = element_text(size = 9),
+    panel.spacing = unit(1, "lines")
+  )
+
+# If you want to focus on top players only in each category
+# to prevent plots from becoming too cluttered
+top_n_players <- 10
+
+Scores_top <- Scores %>%
+  group_by(Award.Standard) %>%
+  slice_max(order_by = Total, n = top_n_players) %>%
+  ungroup()
+
+ggplot(Scores_top, aes(x = reorder(Player, Total), y = Total)) +
+  geom_col(fill = "#3182bd") +
+  coord_flip() +
+  facet_wrap(~Award.Standard, scales = "free_y") +
+  labs(
+    title = "NHL Award Voting Results",
+    subtitle = paste0("Top ", top_n_players, " players by vote score in each award category"),
+    x = "Player",
+    y = "Total Vote Score"
+  ) +
+  theme_minimal() +
+  theme(
+    strip.background = element_rect(fill = "#f0f0f0"),
+    strip.text = element_text(face = "bold", size = 12),
+    axis.text.y = element_text(size = 9),
+    panel.spacing = unit(1, "lines")
+  )
+
+
+```
+
+```{r}
+
+# Apply the standardization function to ensure consistent player names
+All_Votes <- All_Votes %>%
+  mutate(
+    Player = standardize_player_names(Player)
+  ) %>%
+  mutate(
+    Score = case_when(
+      Rank == 1 ~ 10,
+      Rank == 2 ~ 7,
+      Rank == 3 ~ 5,
+      Rank == 4 ~ 3,
+      Rank == 5 ~ 1,
+      TRUE ~ 0
+    )
+  )
+
+# Calculate scores with consistent player names
+Scores <- All_Votes %>%
+  group_by(Award.Standard, Player) %>%
+  summarize(Total = sum(Score), .groups = "drop")
+
+# Get list of all awards
+awards <- unique(Scores$Award.Standard)
+
+# Function to create a plot for a single award
+create_award_plot <- function(award_name) {
+  award_data <- Scores %>% 
+    filter(Award.Standard == award_name)
+  
+  # If there's no data for this award, return NULL
+  if(nrow(award_data) == 0) return(NULL)
+  
+  # Create the plot
+  p <- ggplot(award_data, aes(x = reorder(Player, Total), y = Total)) +
+    geom_col(fill = "#3182bd") +
+    coord_flip() +
+    labs(
+      title = paste(award_name, "Trophy Voting Results"),
+      x = "Player",
+      y = "Total Vote Score"
+    ) +
+    theme_minimal() +
+    theme(
+      plot.title = element_text(face = "bold"),
+      axis.text.y = element_text(size = 10)
+    )
+  
+  return(p)
+}
+
+# Create a list to store all the plots
+award_plots <- list()
+
+# Generate a plot for each award
+for(award in awards) {
+  award_plots[[award]] <- create_award_plot(award)
+}
+
+# Display each plot (in a non-loop environment like RStudio, 
+# you would typically view these one at a time)
+# In R Markdown, you can include each plot separately
+
+# Example of how to display a specific award plot:
+award_plots[["Hart"]] 
+award_plots[["Norris"]] 
+award_plots[["Vezina"]] 
+award_plots[["Byng"]] 
+award_plots[["Calder"]] 
+award_plots[["Selke"]] # Display the Hart Trophy plot
+
+# To save all plots to files
+for(award in awards) {
+  if(!is.null(award_plots[[award]])) {
+    filename <- paste0("NHL_", award, "_Award_Votes.png")
+    ggsave(
+      filename = filename,
+      plot = award_plots[[award]],
+      width = 6,
+      height = 8,
+      dpi = 300
+    )
+  }
+}
+
+
+
+
+```
+
+
+```{r}
+# Create a single matrix combining all awards
+all_votes_wide <- All_Votes %>%
+  # Create player-award combinations
+  mutate(PlayerAward = paste(Player, Award, sep = " - ")) %>%
+  select(Voter, PlayerAward, Score) %>%
+  pivot_wider(
+    names_from = Voter,
+    values_from = Score,
+    values_fill = list(Score = 0)
+  ) %>%
+  column_to_rownames("PlayerAward")
+
+# Plot the combined heatmap with clustering
+heat<-pheatmap(
+  all_votes_wide,
+  main = "Clustered NHL Award Voting Patterns",
+  color = colorRampPalette(brewer.pal(9, "Blues"))(50),
+  cluster_rows = FALSE,
+  cluster_cols = TRUE,
+  display_numbers = FALSE,
+  number_color = "black",
+  fontsize_number = 7,
+  fontsize = 4,
+  angle_col = 45,
+  height = 20,
+  width = 10
+)
+
+png(filename = "heatmap.png", width = 1000, height = 1500, res = 200)
+heat
+dev.off()
+
+```
+
+![](heatmap.png)

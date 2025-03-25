@@ -2,7 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/E4-NHLBallots/Math.html",
       "/posts/A5-TabularData/DataDictionary.html",
+      "/posts/L7-SpatialData/Spatial.html",
+      "/posts/A7-SpatialData/index.html",
+      "/posts/T9-FattyAcids/index.html",
       "/posts/T7-NHLAwards/Ballot.html",
       "/posts/T7-NHLAwards/index.html",
       "/posts/AIisfun/AIisstuff.html",

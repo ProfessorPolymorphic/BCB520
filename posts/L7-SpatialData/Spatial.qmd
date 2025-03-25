@@ -1,0 +1,28 @@
+---
+title: "Spatial Visualization"
+format: html
+author: "Barrie Robison"
+date: "2025-03-25"
+categories: [Portfolio, DataViz, Observable, Spatial Data]
+image: "map.png"
+description: "An exploration of amazing spatial visualizations."
+code-fold: true
+code-tools: true
+
+---
+
+[Interview with Fil Riviere](https://observablehq.com/blog/maps-and-data-visualization-with-fil-riviere?utm_campaign=March+2025+Newsletter+%7C+Warming+Send+2&utm_content=March+2025+Newsletter_Email&utm_medium=email_action&utm_source=customer.io)
+
+[World Cities Urquhart](https://observablehq.com/@fil/world-cities-urquhart)
+
+[Loir-et-Cher isodémographique](https://observablehq.com/@visionscarto/loir-et-cher-isodemographique?collection=@visionscarto/30daymapchallenge)
+
+[Random walk dithering](https://observablehq.com/@observablehq/random-walk-dithering)
+
+[Latent Interfaces](https://latentui.com)
+
+[US Presidential Election](https://observablehq.com/d/3e39dc77f8af714a)
+
+[Observable Map Tutorial](https://observablehq.com/@observablehq/build-your-first-map-with-observable-plot?utm_campaign=March+2025+Newsletter+%7C+Warming+Send+2&utm_content=March+2025+Newsletter_Email&utm_medium=email_action&utm_source=customer.io)
+
+[Observable Maps Collection](https://observablehq.com/collection/@observablehq/maps?utm_campaign=March+2025+Newsletter+%7C+Warming+Send+2&utm_content=March+2025+Newsletter_Email&utm_medium=email_action&utm_source=customer.io)
