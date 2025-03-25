@@ -1,7 +1,17 @@
 ---
 title: "Math"
 format: html
+author: "Barrie Robison"
+date: "2025-03-25"
+categories: [Portfolio, DataViz, Hockey, Tabular Data]
+description: "And the winners are.... not the right players."
+code-fold: true
+code-tools: true
 ---
+
+## INTEROPERABILITY
+
+### ... a hard lesson
 
 ```{r}
 
