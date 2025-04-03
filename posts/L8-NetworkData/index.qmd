@@ -10,11 +10,11 @@ format:
     footer: <a href="https://professorpolymorphic.github.io/BCB520/" target="_blank">HOME</a>
     theme: [default, custom.scss]
 author: "Barrie Robison"
-date: "2024-03-26"
+date: "2025-04-03"
 categories: [Lecture, DataViz, Data, Network, Observable]
 image: "Azathothnetwork.png"
 code-fold: true
-draft: true
+
 ---
 
 

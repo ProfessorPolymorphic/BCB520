@@ -475,14 +475,14 @@ data <- data.frame(
 
 us_counties_data <- left_join(us_counties, data, by = "GEOID")
 
-ggplot() +
-  geom_sf(data = us_counties_data, aes(fill = value), color = "white", size = 0.1) +
-  scale_fill_viridis_c() +  # You can choose other color palettes
-  theme_minimal() +
-  theme(axis.text = element_blank(),
-        axis.title = element_blank(),
-        axis.ticks = element_blank(),
-        panel.grid = element_blank())
+# ggplot() +
+#   geom_sf(data = us_counties_data, aes(fill = value), color = "white", size = 0.1) +
+#   scale_fill_viridis_c() +  # You can choose other color palettes
+#   theme_minimal() +
+#   theme(axis.text = element_blank(),
+#         axis.title = element_blank(),
+#         axis.ticks = element_blank(),
+#         panel.grid = element_blank())
 
 us_counties_contiguous <- us_counties %>% 
   filter(
@@ -503,4 +503,287 @@ ggplot() +
 
 ```
 
+```{r}
+# Load state boundaries instead of counties
+us_states <- tigris::states(cb = TRUE, resolution = "20m", year = 2020, class = "sf")
 
+# Generate random data for states
+set.seed(123)
+data <- data.frame(
+  GEOID = us_states$GEOID,
+  value = runif(length(us_states$GEOID), 0, 100)
+)
+
+# Join the data with state geometries
+us_states_data <- left_join(us_states, data, by = "GEOID")
+
+# Filter for contiguous states (excluding Alaska, Hawaii, and territories)
+us_states_contiguous <- us_states %>% 
+  filter(
+    !(STUSPS %in% c("AK", "HI", "AS", "GU", "MP", "PR", "VI"))
+  )
+
+us_states_data_contiguous <- left_join(us_states_contiguous, data, by = "GEOID")
+
+# Create the plot
+ggplot() +
+  geom_sf(data = us_states_data_contiguous, aes(fill = value), color = "white", size = 0.2) +
+  scale_fill_viridis_c(name = "Zombie Density") +  # Add a title for the legend
+  labs(title = "Zombie Apocalypse Intensity by State") +  # Add a title to the plot
+  theme_minimal() +
+  theme(axis.text = element_blank(),
+        axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid = element_blank())
+
+
+```
+
+
+```{r}
+library(tidyverse)
+library(tigris)
+library(sf)
+library(viridis)
+
+# Load the zombie data
+zombie_data <- read.csv("Zomstates.csv")
+
+# Find the midpoint date
+unique_dates <- unique(zombie_data$date) %>% sort()
+midpoint_date <- unique_dates[floor(length(unique_dates)/2)]  # "1970-07-15"
+
+# Filter for midpoint data
+midpoint_data <- zombie_data %>%
+  filter(date == midpoint_date)
+
+# Rename states to match tigris format (replacing dots with spaces)
+midpoint_data$name <- gsub("\\.", " ", midpoint_data$name)
+
+# Load state boundaries
+us_states <- tigris::states(cb = TRUE, resolution = "20m", year = 2020, class = "sf")
+
+# Prepare data for joining
+state_infection_data <- midpoint_data %>%
+  select(name, value) %>%
+  rename(NAME = name, infection_level = value)
+
+# Join the data with state geometries
+us_states_data <- left_join(us_states, state_infection_data, by = "NAME")
+
+# Filter for contiguous states (excluding Alaska, Hawaii, and territories)
+us_states_contiguous <- us_states_data %>% 
+  filter(
+    !(STUSPS %in% c("AK", "HI", "AS", "GU", "MP", "PR", "VI"))
+  )
+
+# Create a log scale transformation for better visualization of wide range of values
+# Create the plot
+ggplot() +
+  geom_sf(data = us_states_contiguous, aes(fill = infection_level), color = "darkred", size = 0.3) +
+  scale_fill_viridis_c(
+    name = "Infection Level", 
+    trans = "log10",
+    labels = scales::comma,
+    option = "inferno"  # Use a color scheme fitting for a zombie outbreak
+  ) +
+  labs(
+    title = "Zombie Apocalypse: Infection Levels by State",
+    subtitle = paste("Midpoint of Outbreak:", midpoint_date),
+    caption = "Data shows varying infection levels across states. Stay cautiously optimistic like Kyle!"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text = element_blank(),
+    axis.title = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank(),
+    legend.position = "right",
+    plot.title = element_text(face = "bold", size = 14),
+    plot.subtitle = element_text(size = 12, color = "darkred"),
+    plot.caption = element_text(face = "italic", size = 8)
+  )
+
+
+```
+
+```{r}
+library(tidyverse)
+library(tigris)
+library(sf)
+library(viridis)
+library(scales)
+
+# Load the zombie data
+zombie_data <- read.csv("ZombieData.csv")
+
+# Find the midpoint of the time series
+min_time <- min(zombie_data$Time)
+max_time <- max(zombie_data$Time)
+mid_time <- floor((min_time + max_time) / 2)
+
+# Extract data at midpoint
+midpoint_data <- zombie_data %>%
+  filter(Time == mid_time)
+
+# Check if midpoint exists, if not use closest time point
+if (nrow(midpoint_data) == 0) {
+  closest_time <- zombie_data$Time[which.min(abs(zombie_data$Time - mid_time))]
+  midpoint_data <- zombie_data %>%
+    filter(Time == closest_time)
+  mid_time <- closest_time
+}
+
+# Get state names and infection counts
+state_names <- names(midpoint_data) %>%
+  grep("_I$", ., value = TRUE) %>%
+  gsub("_I$", "", .)
+
+# Create a dataframe for state infection levels
+states_infected <- data.frame(
+  NAME = gsub("\\.", " ", state_names),
+  infection_level = as.numeric(midpoint_data[, paste0(state_names, "_I")])
+)
+
+# Remove "Totals" row if it exists
+states_infected <- states_infected %>%
+  filter(NAME != "Totals")
+
+# Load state boundaries
+us_states <- tigris::states(cb = TRUE, resolution = "20m", year = 2020, class = "sf")
+
+# Join the infection data with state geometries
+us_states_data <- left_join(us_states, states_infected, by = "NAME")
+
+# Filter for contiguous states
+us_states_contiguous <- us_states_data %>% 
+  filter(
+    !(STUSPS %in% c("AK", "HI", "AS", "GU", "MP", "PR", "VI"))
+  )
+
+# Calculate percentage of population infected for titles
+total_infected <- midpoint_data$Totals_I
+total_population <- midpoint_data$Totals_S + midpoint_data$Totals_E + 
+                   midpoint_data$Totals_I + midpoint_data$Totals_R + 
+                   midpoint_data$Totals_D + midpoint_data$Totals_V
+percent_infected <- round((total_infected / total_population) * 100, 1)
+
+# Create a map of infected population by state
+ggplot() +
+  geom_sf(data = us_states_contiguous, aes(fill = infection_level), 
+          color = "darkred", size = 0.3) +
+  scale_fill_viridis_c(
+    name = "Infected Population", 
+    trans = "log10",
+    labels = scales::comma,
+    option = "inferno"  # Dark to bright color scheme for zombie theme
+  ) +
+  labs(
+    title = "Zombie Apocalypse: Infection Levels by State",
+    subtitle = paste0("Day ", mid_time, " of Outbreak (", 
+                      percent_infected, "% of US population infected)"),
+    caption = paste("Data from SEIRD+V epidemiological model.",
+                    "S=Susceptible, E=Exposed, I=Infected, R=Recovered, D=Dead, V=Vaccinated")
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text = element_blank(),
+    axis.title = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank(),
+    legend.position = "right",
+    plot.title = element_text(face = "bold", size = 14),
+    plot.subtitle = element_text(size = 12, color = "darkred"),
+    plot.caption = element_text(face = "italic", size = 8)
+  )
+
+# Create a second plot showing multiple variables for a more complete picture
+# First, prepare data in long format for all states
+model_variables <- c("S", "E", "I", "R", "D", "V")
+totals_data <- data.frame(
+  Time = mid_time,
+  Variable = model_variables,
+  Value = c(
+    midpoint_data$Totals_S,
+    midpoint_data$Totals_E,
+    midpoint_data$Totals_I,
+    midpoint_data$Totals_R,
+    midpoint_data$Totals_D,
+    midpoint_data$Totals_V
+  )
+)
+
+# Add descriptive labels
+variable_labels <- c(
+  "S" = "Susceptible",
+  "E" = "Exposed", 
+  "I" = "Infected",
+  "R" = "Recovered",
+  "D" = "Dead",
+  "V" = "Vaccinated"
+)
+
+# Create a summary bar chart of the outbreak status
+ggplot(totals_data, aes(x = reorder(Variable, -Value), y = Value, fill = Variable)) +
+  geom_bar(stat = "identity", width = 0.7) +
+  scale_y_continuous(labels = scales::comma) +
+  scale_x_discrete(labels = variable_labels) +
+  scale_fill_manual(values = c(
+    "S" = "darkgreen",
+    "E" = "orange", 
+    "I" = "red",
+    "R" = "blue",
+    "D" = "black",
+    "V" = "purple"
+  )) +
+  labs(
+    title = "Zombie Outbreak Status Summary",
+    subtitle = paste0("Day ", mid_time, " of Outbreak"),
+    x = "Population Status",
+    y = "Number of People",
+    fill = "Status"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    plot.subtitle = element_text(size = 12),
+    axis.title = element_text(size = 10),
+    legend.position = "none"
+  )
+
+# Create a detailed breakdown of the most and least affected states
+top5_states <- states_infected %>%
+  arrange(desc(infection_level)) %>%
+  head(5)
+
+bottom5_states <- states_infected %>%
+  filter(infection_level > 0) %>%
+  arrange(infection_level) %>%
+  head(5)
+
+# Combine for a single plot
+extreme_states <- bind_rows(
+  top5_states %>% mutate(group = "Most Infected"),
+  bottom5_states %>% mutate(group = "Least Infected")
+)
+
+ggplot(extreme_states, aes(x = reorder(NAME, infection_level), y = infection_level, fill = group)) +
+  geom_bar(stat = "identity") +
+  scale_y_continuous(labels = scales::comma) +
+  scale_fill_manual(values = c("Most Infected" = "darkred", "Least Infected" = "darkblue")) +
+  coord_flip() +
+  labs(
+    title = "States with Extreme Infection Levels",
+    subtitle = paste0("Day ", mid_time, " of Outbreak"),
+    x = NULL,
+    y = "Infected Population",
+    fill = NULL
+  ) +
+  facet_wrap(~group, scales = "free_y") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold"),
+    legend.position = "none"
+  )
+
+```

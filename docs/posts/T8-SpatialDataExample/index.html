@@ -2068,14 +2068,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb19-483"><a href="#cb19-483" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-484"><a href="#cb19-484" aria-hidden="true" tabindex="-1"></a>us_counties_data <span class="ot">&lt;-</span> <span class="fu">left_join</span>(us_counties, data, <span class="at">by =</span> <span class="st">"GEOID"</span>)</span>
 <span id="cb19-485"><a href="#cb19-485" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-486"><a href="#cb19-486" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb19-487"><a href="#cb19-487" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> us_counties_data, <span class="fu">aes</span>(<span class="at">fill =</span> value), <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">size =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
-<span id="cb19-488"><a href="#cb19-488" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>() <span class="sc">+</span>  <span class="co"># You can choose other color palettes</span></span>
-<span id="cb19-489"><a href="#cb19-489" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb19-490"><a href="#cb19-490" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb19-491"><a href="#cb19-491" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb19-492"><a href="#cb19-492" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb19-493"><a href="#cb19-493" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid =</span> <span class="fu">element_blank</span>())</span>
+<span id="cb19-486"><a href="#cb19-486" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot() +</span></span>
+<span id="cb19-487"><a href="#cb19-487" aria-hidden="true" tabindex="-1"></a><span class="co">#   geom_sf(data = us_counties_data, aes(fill = value), color = "white", size = 0.1) +</span></span>
+<span id="cb19-488"><a href="#cb19-488" aria-hidden="true" tabindex="-1"></a><span class="co">#   scale_fill_viridis_c() +  # You can choose other color palettes</span></span>
+<span id="cb19-489"><a href="#cb19-489" aria-hidden="true" tabindex="-1"></a><span class="co">#   theme_minimal() +</span></span>
+<span id="cb19-490"><a href="#cb19-490" aria-hidden="true" tabindex="-1"></a><span class="co">#   theme(axis.text = element_blank(),</span></span>
+<span id="cb19-491"><a href="#cb19-491" aria-hidden="true" tabindex="-1"></a><span class="co">#         axis.title = element_blank(),</span></span>
+<span id="cb19-492"><a href="#cb19-492" aria-hidden="true" tabindex="-1"></a><span class="co">#         axis.ticks = element_blank(),</span></span>
+<span id="cb19-493"><a href="#cb19-493" aria-hidden="true" tabindex="-1"></a><span class="co">#         panel.grid = element_blank())</span></span>
 <span id="cb19-494"><a href="#cb19-494" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-495"><a href="#cb19-495" aria-hidden="true" tabindex="-1"></a>us_counties_contiguous <span class="ot">&lt;-</span> us_counties <span class="sc">%&gt;%</span> </span>
 <span id="cb19-496"><a href="#cb19-496" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
@@ -2096,6 +2096,290 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb19-511"><a href="#cb19-511" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-512"><a href="#cb19-512" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb19-513"><a href="#cb19-513" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-516"><a href="#cb19-516" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb19-517"><a href="#cb19-517" aria-hidden="true" tabindex="-1"></a><span class="co"># Load state boundaries instead of counties</span></span>
+<span id="cb19-518"><a href="#cb19-518" aria-hidden="true" tabindex="-1"></a>us_states <span class="ot">&lt;-</span> tigris<span class="sc">::</span><span class="fu">states</span>(<span class="at">cb =</span> <span class="cn">TRUE</span>, <span class="at">resolution =</span> <span class="st">"20m"</span>, <span class="at">year =</span> <span class="dv">2020</span>, <span class="at">class =</span> <span class="st">"sf"</span>)</span>
+<span id="cb19-519"><a href="#cb19-519" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-520"><a href="#cb19-520" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate random data for states</span></span>
+<span id="cb19-521"><a href="#cb19-521" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb19-522"><a href="#cb19-522" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb19-523"><a href="#cb19-523" aria-hidden="true" tabindex="-1"></a>  <span class="at">GEOID =</span> us_states<span class="sc">$</span>GEOID,</span>
+<span id="cb19-524"><a href="#cb19-524" aria-hidden="true" tabindex="-1"></a>  <span class="at">value =</span> <span class="fu">runif</span>(<span class="fu">length</span>(us_states<span class="sc">$</span>GEOID), <span class="dv">0</span>, <span class="dv">100</span>)</span>
+<span id="cb19-525"><a href="#cb19-525" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb19-526"><a href="#cb19-526" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-527"><a href="#cb19-527" aria-hidden="true" tabindex="-1"></a><span class="co"># Join the data with state geometries</span></span>
+<span id="cb19-528"><a href="#cb19-528" aria-hidden="true" tabindex="-1"></a>us_states_data <span class="ot">&lt;-</span> <span class="fu">left_join</span>(us_states, data, <span class="at">by =</span> <span class="st">"GEOID"</span>)</span>
+<span id="cb19-529"><a href="#cb19-529" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-530"><a href="#cb19-530" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter for contiguous states (excluding Alaska, Hawaii, and territories)</span></span>
+<span id="cb19-531"><a href="#cb19-531" aria-hidden="true" tabindex="-1"></a>us_states_contiguous <span class="ot">&lt;-</span> us_states <span class="sc">%&gt;%</span> </span>
+<span id="cb19-532"><a href="#cb19-532" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
+<span id="cb19-533"><a href="#cb19-533" aria-hidden="true" tabindex="-1"></a>    <span class="sc">!</span>(STUSPS <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"AK"</span>, <span class="st">"HI"</span>, <span class="st">"AS"</span>, <span class="st">"GU"</span>, <span class="st">"MP"</span>, <span class="st">"PR"</span>, <span class="st">"VI"</span>))</span>
+<span id="cb19-534"><a href="#cb19-534" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb19-535"><a href="#cb19-535" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-536"><a href="#cb19-536" aria-hidden="true" tabindex="-1"></a>us_states_data_contiguous <span class="ot">&lt;-</span> <span class="fu">left_join</span>(us_states_contiguous, data, <span class="at">by =</span> <span class="st">"GEOID"</span>)</span>
+<span id="cb19-537"><a href="#cb19-537" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-538"><a href="#cb19-538" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the plot</span></span>
+<span id="cb19-539"><a href="#cb19-539" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb19-540"><a href="#cb19-540" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> us_states_data_contiguous, <span class="fu">aes</span>(<span class="at">fill =</span> value), <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">size =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb19-541"><a href="#cb19-541" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">name =</span> <span class="st">"Zombie Density"</span>) <span class="sc">+</span>  <span class="co"># Add a title for the legend</span></span>
+<span id="cb19-542"><a href="#cb19-542" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Zombie Apocalypse Intensity by State"</span>) <span class="sc">+</span>  <span class="co"># Add a title to the plot</span></span>
+<span id="cb19-543"><a href="#cb19-543" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb19-544"><a href="#cb19-544" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb19-545"><a href="#cb19-545" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb19-546"><a href="#cb19-546" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb19-547"><a href="#cb19-547" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid =</span> <span class="fu">element_blank</span>())</span>
+<span id="cb19-548"><a href="#cb19-548" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-549"><a href="#cb19-549" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-550"><a href="#cb19-550" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-551"><a href="#cb19-551" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-552"><a href="#cb19-552" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-555"><a href="#cb19-555" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb19-556"><a href="#cb19-556" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb19-557"><a href="#cb19-557" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tigris)</span>
+<span id="cb19-558"><a href="#cb19-558" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb19-559"><a href="#cb19-559" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridis)</span>
+<span id="cb19-560"><a href="#cb19-560" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-561"><a href="#cb19-561" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the zombie data</span></span>
+<span id="cb19-562"><a href="#cb19-562" aria-hidden="true" tabindex="-1"></a>zombie_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Zomstates.csv"</span>)</span>
+<span id="cb19-563"><a href="#cb19-563" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-564"><a href="#cb19-564" aria-hidden="true" tabindex="-1"></a><span class="co"># Find the midpoint date</span></span>
+<span id="cb19-565"><a href="#cb19-565" aria-hidden="true" tabindex="-1"></a>unique_dates <span class="ot">&lt;-</span> <span class="fu">unique</span>(zombie_data<span class="sc">$</span>date) <span class="sc">%&gt;%</span> <span class="fu">sort</span>()</span>
+<span id="cb19-566"><a href="#cb19-566" aria-hidden="true" tabindex="-1"></a>midpoint_date <span class="ot">&lt;-</span> unique_dates[<span class="fu">floor</span>(<span class="fu">length</span>(unique_dates)<span class="sc">/</span><span class="dv">2</span>)]  <span class="co"># "1970-07-15"</span></span>
+<span id="cb19-567"><a href="#cb19-567" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-568"><a href="#cb19-568" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter for midpoint data</span></span>
+<span id="cb19-569"><a href="#cb19-569" aria-hidden="true" tabindex="-1"></a>midpoint_data <span class="ot">&lt;-</span> zombie_data <span class="sc">%&gt;%</span></span>
+<span id="cb19-570"><a href="#cb19-570" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">==</span> midpoint_date)</span>
+<span id="cb19-571"><a href="#cb19-571" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-572"><a href="#cb19-572" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename states to match tigris format (replacing dots with spaces)</span></span>
+<span id="cb19-573"><a href="#cb19-573" aria-hidden="true" tabindex="-1"></a>midpoint_data<span class="sc">$</span>name <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">."</span>, <span class="st">" "</span>, midpoint_data<span class="sc">$</span>name)</span>
+<span id="cb19-574"><a href="#cb19-574" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-575"><a href="#cb19-575" aria-hidden="true" tabindex="-1"></a><span class="co"># Load state boundaries</span></span>
+<span id="cb19-576"><a href="#cb19-576" aria-hidden="true" tabindex="-1"></a>us_states <span class="ot">&lt;-</span> tigris<span class="sc">::</span><span class="fu">states</span>(<span class="at">cb =</span> <span class="cn">TRUE</span>, <span class="at">resolution =</span> <span class="st">"20m"</span>, <span class="at">year =</span> <span class="dv">2020</span>, <span class="at">class =</span> <span class="st">"sf"</span>)</span>
+<span id="cb19-577"><a href="#cb19-577" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-578"><a href="#cb19-578" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare data for joining</span></span>
+<span id="cb19-579"><a href="#cb19-579" aria-hidden="true" tabindex="-1"></a>state_infection_data <span class="ot">&lt;-</span> midpoint_data <span class="sc">%&gt;%</span></span>
+<span id="cb19-580"><a href="#cb19-580" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, value) <span class="sc">%&gt;%</span></span>
+<span id="cb19-581"><a href="#cb19-581" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">NAME =</span> name, <span class="at">infection_level =</span> value)</span>
+<span id="cb19-582"><a href="#cb19-582" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-583"><a href="#cb19-583" aria-hidden="true" tabindex="-1"></a><span class="co"># Join the data with state geometries</span></span>
+<span id="cb19-584"><a href="#cb19-584" aria-hidden="true" tabindex="-1"></a>us_states_data <span class="ot">&lt;-</span> <span class="fu">left_join</span>(us_states, state_infection_data, <span class="at">by =</span> <span class="st">"NAME"</span>)</span>
+<span id="cb19-585"><a href="#cb19-585" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-586"><a href="#cb19-586" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter for contiguous states (excluding Alaska, Hawaii, and territories)</span></span>
+<span id="cb19-587"><a href="#cb19-587" aria-hidden="true" tabindex="-1"></a>us_states_contiguous <span class="ot">&lt;-</span> us_states_data <span class="sc">%&gt;%</span> </span>
+<span id="cb19-588"><a href="#cb19-588" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
+<span id="cb19-589"><a href="#cb19-589" aria-hidden="true" tabindex="-1"></a>    <span class="sc">!</span>(STUSPS <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"AK"</span>, <span class="st">"HI"</span>, <span class="st">"AS"</span>, <span class="st">"GU"</span>, <span class="st">"MP"</span>, <span class="st">"PR"</span>, <span class="st">"VI"</span>))</span>
+<span id="cb19-590"><a href="#cb19-590" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb19-591"><a href="#cb19-591" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-592"><a href="#cb19-592" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a log scale transformation for better visualization of wide range of values</span></span>
+<span id="cb19-593"><a href="#cb19-593" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the plot</span></span>
+<span id="cb19-594"><a href="#cb19-594" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb19-595"><a href="#cb19-595" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> us_states_contiguous, <span class="fu">aes</span>(<span class="at">fill =</span> infection_level), <span class="at">color =</span> <span class="st">"darkred"</span>, <span class="at">size =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb19-596"><a href="#cb19-596" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>(</span>
+<span id="cb19-597"><a href="#cb19-597" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">"Infection Level"</span>, </span>
+<span id="cb19-598"><a href="#cb19-598" aria-hidden="true" tabindex="-1"></a>    <span class="at">trans =</span> <span class="st">"log10"</span>,</span>
+<span id="cb19-599"><a href="#cb19-599" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> scales<span class="sc">::</span>comma,</span>
+<span id="cb19-600"><a href="#cb19-600" aria-hidden="true" tabindex="-1"></a>    <span class="at">option =</span> <span class="st">"inferno"</span>  <span class="co"># Use a color scheme fitting for a zombie outbreak</span></span>
+<span id="cb19-601"><a href="#cb19-601" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb19-602"><a href="#cb19-602" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb19-603"><a href="#cb19-603" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Zombie Apocalypse: Infection Levels by State"</span>,</span>
+<span id="cb19-604"><a href="#cb19-604" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="fu">paste</span>(<span class="st">"Midpoint of Outbreak:"</span>, midpoint_date),</span>
+<span id="cb19-605"><a href="#cb19-605" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Data shows varying infection levels across states. Stay cautiously optimistic like Kyle!"</span></span>
+<span id="cb19-606"><a href="#cb19-606" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb19-607"><a href="#cb19-607" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb19-608"><a href="#cb19-608" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb19-609"><a href="#cb19-609" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb19-610"><a href="#cb19-610" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb19-611"><a href="#cb19-611" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb19-612"><a href="#cb19-612" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb19-613"><a href="#cb19-613" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"right"</span>,</span>
+<span id="cb19-614"><a href="#cb19-614" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb19-615"><a href="#cb19-615" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>, <span class="at">color =</span> <span class="st">"darkred"</span>),</span>
+<span id="cb19-616"><a href="#cb19-616" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"italic"</span>, <span class="at">size =</span> <span class="dv">8</span>)</span>
+<span id="cb19-617"><a href="#cb19-617" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb19-618"><a href="#cb19-618" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-619"><a href="#cb19-619" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-620"><a href="#cb19-620" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-621"><a href="#cb19-621" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-624"><a href="#cb19-624" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb19-625"><a href="#cb19-625" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb19-626"><a href="#cb19-626" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tigris)</span>
+<span id="cb19-627"><a href="#cb19-627" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb19-628"><a href="#cb19-628" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridis)</span>
+<span id="cb19-629"><a href="#cb19-629" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb19-630"><a href="#cb19-630" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-631"><a href="#cb19-631" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the zombie data</span></span>
+<span id="cb19-632"><a href="#cb19-632" aria-hidden="true" tabindex="-1"></a>zombie_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"ZombieData.csv"</span>)</span>
+<span id="cb19-633"><a href="#cb19-633" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-634"><a href="#cb19-634" aria-hidden="true" tabindex="-1"></a><span class="co"># Find the midpoint of the time series</span></span>
+<span id="cb19-635"><a href="#cb19-635" aria-hidden="true" tabindex="-1"></a>min_time <span class="ot">&lt;-</span> <span class="fu">min</span>(zombie_data<span class="sc">$</span>Time)</span>
+<span id="cb19-636"><a href="#cb19-636" aria-hidden="true" tabindex="-1"></a>max_time <span class="ot">&lt;-</span> <span class="fu">max</span>(zombie_data<span class="sc">$</span>Time)</span>
+<span id="cb19-637"><a href="#cb19-637" aria-hidden="true" tabindex="-1"></a>mid_time <span class="ot">&lt;-</span> <span class="fu">floor</span>((min_time <span class="sc">+</span> max_time) <span class="sc">/</span> <span class="dv">2</span>)</span>
+<span id="cb19-638"><a href="#cb19-638" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-639"><a href="#cb19-639" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract data at midpoint</span></span>
+<span id="cb19-640"><a href="#cb19-640" aria-hidden="true" tabindex="-1"></a>midpoint_data <span class="ot">&lt;-</span> zombie_data <span class="sc">%&gt;%</span></span>
+<span id="cb19-641"><a href="#cb19-641" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Time <span class="sc">==</span> mid_time)</span>
+<span id="cb19-642"><a href="#cb19-642" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-643"><a href="#cb19-643" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if midpoint exists, if not use closest time point</span></span>
+<span id="cb19-644"><a href="#cb19-644" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">nrow</span>(midpoint_data) <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb19-645"><a href="#cb19-645" aria-hidden="true" tabindex="-1"></a>  closest_time <span class="ot">&lt;-</span> zombie_data<span class="sc">$</span>Time[<span class="fu">which.min</span>(<span class="fu">abs</span>(zombie_data<span class="sc">$</span>Time <span class="sc">-</span> mid_time))]</span>
+<span id="cb19-646"><a href="#cb19-646" aria-hidden="true" tabindex="-1"></a>  midpoint_data <span class="ot">&lt;-</span> zombie_data <span class="sc">%&gt;%</span></span>
+<span id="cb19-647"><a href="#cb19-647" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(Time <span class="sc">==</span> closest_time)</span>
+<span id="cb19-648"><a href="#cb19-648" aria-hidden="true" tabindex="-1"></a>  mid_time <span class="ot">&lt;-</span> closest_time</span>
+<span id="cb19-649"><a href="#cb19-649" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb19-650"><a href="#cb19-650" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-651"><a href="#cb19-651" aria-hidden="true" tabindex="-1"></a><span class="co"># Get state names and infection counts</span></span>
+<span id="cb19-652"><a href="#cb19-652" aria-hidden="true" tabindex="-1"></a>state_names <span class="ot">&lt;-</span> <span class="fu">names</span>(midpoint_data) <span class="sc">%&gt;%</span></span>
+<span id="cb19-653"><a href="#cb19-653" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grep</span>(<span class="st">"_I$"</span>, ., <span class="at">value =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb19-654"><a href="#cb19-654" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gsub</span>(<span class="st">"_I$"</span>, <span class="st">""</span>, .)</span>
+<span id="cb19-655"><a href="#cb19-655" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-656"><a href="#cb19-656" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dataframe for state infection levels</span></span>
+<span id="cb19-657"><a href="#cb19-657" aria-hidden="true" tabindex="-1"></a>states_infected <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb19-658"><a href="#cb19-658" aria-hidden="true" tabindex="-1"></a>  <span class="at">NAME =</span> <span class="fu">gsub</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">."</span>, <span class="st">" "</span>, state_names),</span>
+<span id="cb19-659"><a href="#cb19-659" aria-hidden="true" tabindex="-1"></a>  <span class="at">infection_level =</span> <span class="fu">as.numeric</span>(midpoint_data[, <span class="fu">paste0</span>(state_names, <span class="st">"_I"</span>)])</span>
+<span id="cb19-660"><a href="#cb19-660" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb19-661"><a href="#cb19-661" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-662"><a href="#cb19-662" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove "Totals" row if it exists</span></span>
+<span id="cb19-663"><a href="#cb19-663" aria-hidden="true" tabindex="-1"></a>states_infected <span class="ot">&lt;-</span> states_infected <span class="sc">%&gt;%</span></span>
+<span id="cb19-664"><a href="#cb19-664" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(NAME <span class="sc">!=</span> <span class="st">"Totals"</span>)</span>
+<span id="cb19-665"><a href="#cb19-665" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-666"><a href="#cb19-666" aria-hidden="true" tabindex="-1"></a><span class="co"># Load state boundaries</span></span>
+<span id="cb19-667"><a href="#cb19-667" aria-hidden="true" tabindex="-1"></a>us_states <span class="ot">&lt;-</span> tigris<span class="sc">::</span><span class="fu">states</span>(<span class="at">cb =</span> <span class="cn">TRUE</span>, <span class="at">resolution =</span> <span class="st">"20m"</span>, <span class="at">year =</span> <span class="dv">2020</span>, <span class="at">class =</span> <span class="st">"sf"</span>)</span>
+<span id="cb19-668"><a href="#cb19-668" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-669"><a href="#cb19-669" aria-hidden="true" tabindex="-1"></a><span class="co"># Join the infection data with state geometries</span></span>
+<span id="cb19-670"><a href="#cb19-670" aria-hidden="true" tabindex="-1"></a>us_states_data <span class="ot">&lt;-</span> <span class="fu">left_join</span>(us_states, states_infected, <span class="at">by =</span> <span class="st">"NAME"</span>)</span>
+<span id="cb19-671"><a href="#cb19-671" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-672"><a href="#cb19-672" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter for contiguous states</span></span>
+<span id="cb19-673"><a href="#cb19-673" aria-hidden="true" tabindex="-1"></a>us_states_contiguous <span class="ot">&lt;-</span> us_states_data <span class="sc">%&gt;%</span> </span>
+<span id="cb19-674"><a href="#cb19-674" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
+<span id="cb19-675"><a href="#cb19-675" aria-hidden="true" tabindex="-1"></a>    <span class="sc">!</span>(STUSPS <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"AK"</span>, <span class="st">"HI"</span>, <span class="st">"AS"</span>, <span class="st">"GU"</span>, <span class="st">"MP"</span>, <span class="st">"PR"</span>, <span class="st">"VI"</span>))</span>
+<span id="cb19-676"><a href="#cb19-676" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb19-677"><a href="#cb19-677" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-678"><a href="#cb19-678" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate percentage of population infected for titles</span></span>
+<span id="cb19-679"><a href="#cb19-679" aria-hidden="true" tabindex="-1"></a>total_infected <span class="ot">&lt;-</span> midpoint_data<span class="sc">$</span>Totals_I</span>
+<span id="cb19-680"><a href="#cb19-680" aria-hidden="true" tabindex="-1"></a>total_population <span class="ot">&lt;-</span> midpoint_data<span class="sc">$</span>Totals_S <span class="sc">+</span> midpoint_data<span class="sc">$</span>Totals_E <span class="sc">+</span> </span>
+<span id="cb19-681"><a href="#cb19-681" aria-hidden="true" tabindex="-1"></a>                   midpoint_data<span class="sc">$</span>Totals_I <span class="sc">+</span> midpoint_data<span class="sc">$</span>Totals_R <span class="sc">+</span> </span>
+<span id="cb19-682"><a href="#cb19-682" aria-hidden="true" tabindex="-1"></a>                   midpoint_data<span class="sc">$</span>Totals_D <span class="sc">+</span> midpoint_data<span class="sc">$</span>Totals_V</span>
+<span id="cb19-683"><a href="#cb19-683" aria-hidden="true" tabindex="-1"></a>percent_infected <span class="ot">&lt;-</span> <span class="fu">round</span>((total_infected <span class="sc">/</span> total_population) <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">1</span>)</span>
+<span id="cb19-684"><a href="#cb19-684" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-685"><a href="#cb19-685" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a map of infected population by state</span></span>
+<span id="cb19-686"><a href="#cb19-686" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb19-687"><a href="#cb19-687" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> us_states_contiguous, <span class="fu">aes</span>(<span class="at">fill =</span> infection_level), </span>
+<span id="cb19-688"><a href="#cb19-688" aria-hidden="true" tabindex="-1"></a>          <span class="at">color =</span> <span class="st">"darkred"</span>, <span class="at">size =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb19-689"><a href="#cb19-689" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>(</span>
+<span id="cb19-690"><a href="#cb19-690" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">"Infected Population"</span>, </span>
+<span id="cb19-691"><a href="#cb19-691" aria-hidden="true" tabindex="-1"></a>    <span class="at">trans =</span> <span class="st">"log10"</span>,</span>
+<span id="cb19-692"><a href="#cb19-692" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> scales<span class="sc">::</span>comma,</span>
+<span id="cb19-693"><a href="#cb19-693" aria-hidden="true" tabindex="-1"></a>    <span class="at">option =</span> <span class="st">"inferno"</span>  <span class="co"># Dark to bright color scheme for zombie theme</span></span>
+<span id="cb19-694"><a href="#cb19-694" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb19-695"><a href="#cb19-695" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb19-696"><a href="#cb19-696" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Zombie Apocalypse: Infection Levels by State"</span>,</span>
+<span id="cb19-697"><a href="#cb19-697" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="fu">paste0</span>(<span class="st">"Day "</span>, mid_time, <span class="st">" of Outbreak ("</span>, </span>
+<span id="cb19-698"><a href="#cb19-698" aria-hidden="true" tabindex="-1"></a>                      percent_infected, <span class="st">"% of US population infected)"</span>),</span>
+<span id="cb19-699"><a href="#cb19-699" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="fu">paste</span>(<span class="st">"Data from SEIRD+V epidemiological model."</span>,</span>
+<span id="cb19-700"><a href="#cb19-700" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"S=Susceptible, E=Exposed, I=Infected, R=Recovered, D=Dead, V=Vaccinated"</span>)</span>
+<span id="cb19-701"><a href="#cb19-701" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb19-702"><a href="#cb19-702" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb19-703"><a href="#cb19-703" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb19-704"><a href="#cb19-704" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb19-705"><a href="#cb19-705" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb19-706"><a href="#cb19-706" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb19-707"><a href="#cb19-707" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb19-708"><a href="#cb19-708" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"right"</span>,</span>
+<span id="cb19-709"><a href="#cb19-709" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb19-710"><a href="#cb19-710" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>, <span class="at">color =</span> <span class="st">"darkred"</span>),</span>
+<span id="cb19-711"><a href="#cb19-711" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"italic"</span>, <span class="at">size =</span> <span class="dv">8</span>)</span>
+<span id="cb19-712"><a href="#cb19-712" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb19-713"><a href="#cb19-713" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-714"><a href="#cb19-714" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a second plot showing multiple variables for a more complete picture</span></span>
+<span id="cb19-715"><a href="#cb19-715" aria-hidden="true" tabindex="-1"></a><span class="co"># First, prepare data in long format for all states</span></span>
+<span id="cb19-716"><a href="#cb19-716" aria-hidden="true" tabindex="-1"></a>model_variables <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"S"</span>, <span class="st">"E"</span>, <span class="st">"I"</span>, <span class="st">"R"</span>, <span class="st">"D"</span>, <span class="st">"V"</span>)</span>
+<span id="cb19-717"><a href="#cb19-717" aria-hidden="true" tabindex="-1"></a>totals_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb19-718"><a href="#cb19-718" aria-hidden="true" tabindex="-1"></a>  <span class="at">Time =</span> mid_time,</span>
+<span id="cb19-719"><a href="#cb19-719" aria-hidden="true" tabindex="-1"></a>  <span class="at">Variable =</span> model_variables,</span>
+<span id="cb19-720"><a href="#cb19-720" aria-hidden="true" tabindex="-1"></a>  <span class="at">Value =</span> <span class="fu">c</span>(</span>
+<span id="cb19-721"><a href="#cb19-721" aria-hidden="true" tabindex="-1"></a>    midpoint_data<span class="sc">$</span>Totals_S,</span>
+<span id="cb19-722"><a href="#cb19-722" aria-hidden="true" tabindex="-1"></a>    midpoint_data<span class="sc">$</span>Totals_E,</span>
+<span id="cb19-723"><a href="#cb19-723" aria-hidden="true" tabindex="-1"></a>    midpoint_data<span class="sc">$</span>Totals_I,</span>
+<span id="cb19-724"><a href="#cb19-724" aria-hidden="true" tabindex="-1"></a>    midpoint_data<span class="sc">$</span>Totals_R,</span>
+<span id="cb19-725"><a href="#cb19-725" aria-hidden="true" tabindex="-1"></a>    midpoint_data<span class="sc">$</span>Totals_D,</span>
+<span id="cb19-726"><a href="#cb19-726" aria-hidden="true" tabindex="-1"></a>    midpoint_data<span class="sc">$</span>Totals_V</span>
+<span id="cb19-727"><a href="#cb19-727" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb19-728"><a href="#cb19-728" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb19-729"><a href="#cb19-729" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-730"><a href="#cb19-730" aria-hidden="true" tabindex="-1"></a><span class="co"># Add descriptive labels</span></span>
+<span id="cb19-731"><a href="#cb19-731" aria-hidden="true" tabindex="-1"></a>variable_labels <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb19-732"><a href="#cb19-732" aria-hidden="true" tabindex="-1"></a>  <span class="st">"S"</span> <span class="ot">=</span> <span class="st">"Susceptible"</span>,</span>
+<span id="cb19-733"><a href="#cb19-733" aria-hidden="true" tabindex="-1"></a>  <span class="st">"E"</span> <span class="ot">=</span> <span class="st">"Exposed"</span>, </span>
+<span id="cb19-734"><a href="#cb19-734" aria-hidden="true" tabindex="-1"></a>  <span class="st">"I"</span> <span class="ot">=</span> <span class="st">"Infected"</span>,</span>
+<span id="cb19-735"><a href="#cb19-735" aria-hidden="true" tabindex="-1"></a>  <span class="st">"R"</span> <span class="ot">=</span> <span class="st">"Recovered"</span>,</span>
+<span id="cb19-736"><a href="#cb19-736" aria-hidden="true" tabindex="-1"></a>  <span class="st">"D"</span> <span class="ot">=</span> <span class="st">"Dead"</span>,</span>
+<span id="cb19-737"><a href="#cb19-737" aria-hidden="true" tabindex="-1"></a>  <span class="st">"V"</span> <span class="ot">=</span> <span class="st">"Vaccinated"</span></span>
+<span id="cb19-738"><a href="#cb19-738" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb19-739"><a href="#cb19-739" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-740"><a href="#cb19-740" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a summary bar chart of the outbreak status</span></span>
+<span id="cb19-741"><a href="#cb19-741" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(totals_data, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(Variable, <span class="sc">-</span>Value), <span class="at">y =</span> Value, <span class="at">fill =</span> Variable)) <span class="sc">+</span></span>
+<span id="cb19-742"><a href="#cb19-742" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">width =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb19-743"><a href="#cb19-743" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>comma) <span class="sc">+</span></span>
+<span id="cb19-744"><a href="#cb19-744" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">labels =</span> variable_labels) <span class="sc">+</span></span>
+<span id="cb19-745"><a href="#cb19-745" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb19-746"><a href="#cb19-746" aria-hidden="true" tabindex="-1"></a>    <span class="st">"S"</span> <span class="ot">=</span> <span class="st">"darkgreen"</span>,</span>
+<span id="cb19-747"><a href="#cb19-747" aria-hidden="true" tabindex="-1"></a>    <span class="st">"E"</span> <span class="ot">=</span> <span class="st">"orange"</span>, </span>
+<span id="cb19-748"><a href="#cb19-748" aria-hidden="true" tabindex="-1"></a>    <span class="st">"I"</span> <span class="ot">=</span> <span class="st">"red"</span>,</span>
+<span id="cb19-749"><a href="#cb19-749" aria-hidden="true" tabindex="-1"></a>    <span class="st">"R"</span> <span class="ot">=</span> <span class="st">"blue"</span>,</span>
+<span id="cb19-750"><a href="#cb19-750" aria-hidden="true" tabindex="-1"></a>    <span class="st">"D"</span> <span class="ot">=</span> <span class="st">"black"</span>,</span>
+<span id="cb19-751"><a href="#cb19-751" aria-hidden="true" tabindex="-1"></a>    <span class="st">"V"</span> <span class="ot">=</span> <span class="st">"purple"</span></span>
+<span id="cb19-752"><a href="#cb19-752" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">+</span></span>
+<span id="cb19-753"><a href="#cb19-753" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb19-754"><a href="#cb19-754" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Zombie Outbreak Status Summary"</span>,</span>
+<span id="cb19-755"><a href="#cb19-755" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="fu">paste0</span>(<span class="st">"Day "</span>, mid_time, <span class="st">" of Outbreak"</span>),</span>
+<span id="cb19-756"><a href="#cb19-756" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Population Status"</span>,</span>
+<span id="cb19-757"><a href="#cb19-757" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Number of People"</span>,</span>
+<span id="cb19-758"><a href="#cb19-758" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Status"</span></span>
+<span id="cb19-759"><a href="#cb19-759" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb19-760"><a href="#cb19-760" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb19-761"><a href="#cb19-761" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb19-762"><a href="#cb19-762" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb19-763"><a href="#cb19-763" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>),</span>
+<span id="cb19-764"><a href="#cb19-764" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>),</span>
+<span id="cb19-765"><a href="#cb19-765" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"none"</span></span>
+<span id="cb19-766"><a href="#cb19-766" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb19-767"><a href="#cb19-767" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-768"><a href="#cb19-768" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a detailed breakdown of the most and least affected states</span></span>
+<span id="cb19-769"><a href="#cb19-769" aria-hidden="true" tabindex="-1"></a>top5_states <span class="ot">&lt;-</span> states_infected <span class="sc">%&gt;%</span></span>
+<span id="cb19-770"><a href="#cb19-770" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(infection_level)) <span class="sc">%&gt;%</span></span>
+<span id="cb19-771"><a href="#cb19-771" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">5</span>)</span>
+<span id="cb19-772"><a href="#cb19-772" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-773"><a href="#cb19-773" aria-hidden="true" tabindex="-1"></a>bottom5_states <span class="ot">&lt;-</span> states_infected <span class="sc">%&gt;%</span></span>
+<span id="cb19-774"><a href="#cb19-774" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(infection_level <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb19-775"><a href="#cb19-775" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(infection_level) <span class="sc">%&gt;%</span></span>
+<span id="cb19-776"><a href="#cb19-776" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">5</span>)</span>
+<span id="cb19-777"><a href="#cb19-777" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-778"><a href="#cb19-778" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine for a single plot</span></span>
+<span id="cb19-779"><a href="#cb19-779" aria-hidden="true" tabindex="-1"></a>extreme_states <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(</span>
+<span id="cb19-780"><a href="#cb19-780" aria-hidden="true" tabindex="-1"></a>  top5_states <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">group =</span> <span class="st">"Most Infected"</span>),</span>
+<span id="cb19-781"><a href="#cb19-781" aria-hidden="true" tabindex="-1"></a>  bottom5_states <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">group =</span> <span class="st">"Least Infected"</span>)</span>
+<span id="cb19-782"><a href="#cb19-782" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb19-783"><a href="#cb19-783" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-784"><a href="#cb19-784" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(extreme_states, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(NAME, infection_level), <span class="at">y =</span> infection_level, <span class="at">fill =</span> group)) <span class="sc">+</span></span>
+<span id="cb19-785"><a href="#cb19-785" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb19-786"><a href="#cb19-786" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>comma) <span class="sc">+</span></span>
+<span id="cb19-787"><a href="#cb19-787" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Most Infected"</span> <span class="ot">=</span> <span class="st">"darkred"</span>, <span class="st">"Least Infected"</span> <span class="ot">=</span> <span class="st">"darkblue"</span>)) <span class="sc">+</span></span>
+<span id="cb19-788"><a href="#cb19-788" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb19-789"><a href="#cb19-789" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb19-790"><a href="#cb19-790" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"States with Extreme Infection Levels"</span>,</span>
+<span id="cb19-791"><a href="#cb19-791" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="fu">paste0</span>(<span class="st">"Day "</span>, mid_time, <span class="st">" of Outbreak"</span>),</span>
+<span id="cb19-792"><a href="#cb19-792" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
+<span id="cb19-793"><a href="#cb19-793" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Infected Population"</span>,</span>
+<span id="cb19-794"><a href="#cb19-794" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="cn">NULL</span></span>
+<span id="cb19-795"><a href="#cb19-795" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb19-796"><a href="#cb19-796" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>group, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb19-797"><a href="#cb19-797" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb19-798"><a href="#cb19-798" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb19-799"><a href="#cb19-799" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb19-800"><a href="#cb19-800" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"none"</span></span>
+<span id="cb19-801"><a href="#cb19-801" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb19-802"><a href="#cb19-802" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-803"><a href="#cb19-803" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
