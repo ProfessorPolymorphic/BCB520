@@ -6,13 +6,13 @@ format:
     toc: false
     echo: true
 author: "Barrie Robison"
-date: "2024-04-04"
+date: "2025-04-10"
 categories: [Portfolio, DataViz, Network, iGraph, Assignment]
 image: "wendigonetwork.png"
 description: "iGRAPH!"
 code-fold: true
 code-tools: true
-draft: true
+
 ---
 
 # OVERVIEW

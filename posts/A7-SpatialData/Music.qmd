@@ -1,0 +1,425 @@
+---
+title: "Music"
+format: html
+eval: false
+draft: true
+---
+
+```{r}
+# Load required libraries
+library(tidyverse)
+library(jsonlite)
+library(lubridate)
+library(ggplot2)
+library(maps)
+library(mapdata)
+library(viridis)
+
+performances <- fromJSON("miranda.json")
+# But for this example, let's create a tibble with the data
+
+# Define a function to clean location data
+clean_location <- function(location) {
+  # Handle NA or empty values
+  if (is.na(location) || location == "") {
+    return(list(city = NA_character_, region = NA_character_, country = NA_character_))
+  }
+  
+  # Extract city and state/country
+  if (grepl("Moscow, Idaho", location)) {
+    return(list(city = "Moscow", region = "Idaho", country = "USA"))
+  } else if (grepl("University of Idaho", location)) {
+    return(list(city = "Moscow", region = "Idaho", country = "USA"))
+  } else if (grepl("Costa Rica", location)) {
+    city <- sub(",.+$", "", location)
+    city <- sub(".+, ", "", city)
+    return(list(city = city, region = NA_character_, country = "Costa Rica"))
+  } else if (grepl("New Zealand", location)) {
+    city <- "Wellington"
+    return(list(city = city, region = NA_character_, country = "New Zealand"))
+  } else if (grepl("Spain", location)) {
+    city <- sub(", Spain", "", location)
+    return(list(city = city, region = NA_character_, country = "Spain"))
+  } else if (grepl("France", location)) {
+    city <- sub(", France", "", location)
+    return(list(city = city, region = NA_character_, country = "France"))
+  } else if (grepl(", UT", location) || grepl("Utah", location)) {
+    city <- sub(", UT.*", "", location)
+    city <- sub(".+, ", "", city)
+    return(list(city = city, region = "Utah", country = "USA"))
+  } else if (grepl(", WA", location) || grepl("Washington", location)) {
+    city <- sub(", WA.*", "", location)
+    city <- sub(".+, ", "", city)
+    return(list(city = city, region = "Washington", country = "USA"))
+  } else if (grepl("Montana", location)) {
+    city <- "Red Lodge"
+    return(list(city = "Red Lodge", region = "Montana", country = "USA"))
+  } else if (grepl("Wisconsin", location)) {
+    city <- sub("University of Wisconsin-", "", location)
+    return(list(city = city, region = "Wisconsin", country = "USA"))
+  } else {
+    return(list(city = NA_character_, region = NA_character_, country = NA_character_))
+  }
+}
+
+
+ performances <- fromJSON("miranda.json")
+
+# Process the location data
+performances_processed <- performances %>%
+  rowwise() %>%
+  mutate(
+    year = if(!is.na(Date)) year(mdy(Date)) else NA_integer_,
+    location_cleaned = list(clean_location(Location)),
+    city = location_cleaned$city,
+    region = location_cleaned$region,
+    country = location_cleaned$country
+  ) %>%
+  ungroup()
+
+# 1. Basic count of performances by location
+location_counts <- performances_processed %>%
+  count(Location, sort = TRUE)
+
+# Print top locations
+print("Top performance locations:")
+print(head(location_counts, 10))
+
+# 2. Count of performances by country
+country_counts <- performances_processed %>%
+  count(country, sort = TRUE)
+
+# Create a bar chart of performances by country
+ggplot(country_counts, aes(x = reorder(country, n), y = n, fill = country)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(
+    title = "Number of Performances by Country",
+    x = "Country",
+    y = "Number of Performances"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "none")
+
+# 3. For a full dataset, visualize performance frequency over time by country
+performances_by_year_country <- performances_processed %>%
+  count(year, country) %>%
+  filter(!is.na(country))
+
+ggplot(performances_by_year_country, aes(x = year, y = n, fill = country)) +
+  geom_bar(stat = "identity", position = "stack") +
+  labs(
+    title = "Performances by Year and Country",
+    x = "Year",
+    y = "Number of Performances"
+  ) +
+  theme_minimal() +
+  scale_fill_viridis_d()
+
+# 4. Map visualization (for a more complete dataset)
+# Note: This would work better with the full dataset and with proper geocoding
+
+# For US performances, you could create a state-level map
+us_performances <- performances_processed %>%
+  filter(country == "USA") %>%
+  count(region, sort = TRUE)
+
+# Get US state map data
+states_map <- map_data("state")
+
+# Lowercase state names for joining
+us_performances <- us_performances %>%
+  mutate(region_lower = tolower(region))
+
+# Create the map
+ggplot() +
+  geom_map(
+    data = states_map, map = states_map,
+    aes(map_id = region, x = long, y = lat),
+    fill = "white", color = "#7f7f7f", size = 0.2
+  ) +
+  geom_map(
+    data = us_performances, map = states_map,
+    aes(map_id = region_lower, fill = n),
+    color = "#7f7f7f", size = 0.2
+  ) +
+  scale_fill_viridis_c(option = "magma", direction = -1) +
+  labs(
+    title = "Performances Across US States",
+    fill = "Number of\nPerformances"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank()
+  )
+
+# 5. Analysis of performance types by location
+# Example: Duo vs. Chamber recitals by country
+
+# Function to categorize performance types
+categorize_performance <- function(title) {
+  if (grepl("Duo recital|Duo Recital", title)) {
+    return("Duo")
+  } else if (grepl("Chamber recital|Chamber Recital", title)) {
+    return("Chamber")
+  } else if (grepl("solo recital|Solo recital", title)) {
+    return("Solo")
+  } else if (grepl("Bach Festival", title)) {
+    return("Bach Festival")
+  } else if (grepl("symphony|Symphony|Concerto", title)) {
+    return("Orchestral")
+  } else {
+    return("Other")
+  }
+}
+
+# Add performance type
+performances_processed <- performances_processed %>%
+  mutate(performance_type = map_chr(Title, categorize_performance))
+
+# Performance types by country
+performance_types_by_country <- performances_processed %>%
+  count(country, performance_type) %>%
+  filter(!is.na(country), !is.na(performance_type))
+
+# Plot
+ggplot(performance_types_by_country, aes(x = country, y = n, fill = performance_type)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(
+    title = "Performance Types by Country",
+    x = "Country",
+    y = "Number of Performances",
+    fill = "Performance Type"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_fill_brewer(palette = "Set2")
+
+# 6. Network analysis of collaborators
+# This would require extracting collaborator names from the Title field
+# Example:
+collaborator_pattern <- "with\\s+([A-Za-z\\s]+)\\s+\\(([a-z]+)\\)"
+
+extract_collaborators <- function(title) {
+  matches <- str_match_all(title, collaborator_pattern)
+  if (length(matches[[1]]) > 0) {
+    return(matches[[1]][, 2])  # Return collaborator names
+  } else {
+    return(NA_character_)
+  }
+}
+
+# This is a simplified example - would need more sophisticated regex for full analysis
+performances_processed <- performances_processed %>%
+  mutate(collaborators = map(Title, extract_collaborators))
+
+# Filter for performances with identified collaborators
+collaboration_data <- performances_processed %>%
+  filter(!is.na(collaborators)) %>%
+  unnest(collaborators) %>%
+  count(collaborators, sort = TRUE)
+
+# Print top collaborators
+print("Top collaborators:")
+print(head(collaboration_data, 5))
+
+
+```
+
+```{r}
+# Load required libraries
+library(tidyverse)
+library(jsonlite)
+library(lubridate)
+library(ggplot2)
+library(maps)
+library(mapdata)
+library(sf)
+library(rnaturalearthdata)
+library(rnaturalearth)
+
+# Add coordinates for known performance locations
+# In a real implementation, you would use geocoding, but we'll use a manual approach here
+performance_locations <- tribble(
+  ~city, ~region, ~country, ~lat, ~lon,
+  "Moscow", "Idaho", "USA", 46.7324, -117.0002,
+  "Provo", "Utah", "USA", 40.2338, -111.6585,
+  "Wenatchee", "Washington", "USA", 47.4235, -120.3103,
+  "Spokane", "Washington", "USA", 47.6588, -117.4260,
+  "Sandpoint", "Idaho", "USA", 48.2766, -116.5534,
+  "Red Lodge", "Montana", "USA", 45.1858, -109.2471,
+  "Whitewater", "Wisconsin", "USA", 42.8336, -88.7323,
+  "Cottonwood", "Idaho", "USA", 46.0513, -116.3510,
+  "Oshkosh", "Wisconsin", "USA", 44.0247, -88.5426,
+  "Ellensburg", "Washington", "USA", 46.9965, -120.5478,
+  "Wellington", NA, "New Zealand", -41.2924, 174.7787,
+  "Limón", NA, "Costa Rica", 9.9909, -83.0416,
+  "Heredia", NA, "Costa Rica", 10.0028, -84.1171,
+  "Moravia", NA, "Costa Rica", 9.9607, -84.0577,
+  "Santo Domingo", NA, "Costa Rica", 9.9833, -84.0833,
+  "Manresa", NA, "Spain", 41.7286, 1.8399,
+  "Sant Feliu", NA, "Spain", 41.3860, 2.0437,
+  "Saint-Raphaël", NA, "France", 43.4259, 6.7684
+)
+
+
+
+
+
+# Extract location information based on the location field
+extract_location_info <- function(location) {
+  if (grepl("Moscow, Idaho", location)) {
+    return(list(city = "Moscow", region = "Idaho", country = "USA"))
+  } else if (grepl("Provo, UT", location)) {
+    return(list(city = "Provo", region = "Utah", country = "USA"))
+  } else if (grepl("Wenatchee, WA", location)) {
+    return(list(city = "Wenatchee", region = "Washington", country = "USA"))
+  } else if (grepl("Spokane", location)) {
+    return(list(city = "Spokane", region = "Washington", country = "USA"))
+  } else if (grepl("Sandpoint", location)) {
+    return(list(city = "Sandpoint", region = "Idaho", country = "USA"))
+  } else if (grepl("Red Lodge", location)) {
+    return(list(city = "Red Lodge", region = "Montana", country = "USA"))
+  } else if (grepl("Wisconsin-Whitewater", location)) {
+    return(list(city = "Whitewater", region = "Wisconsin", country = "USA"))
+  } else if (grepl("Wisconsin-Oshkosh", location)) {
+    return(list(city = "Oshkosh", region = "Wisconsin", country = "USA"))
+  } else if (grepl("Cottonwood", location)) {
+    return(list(city = "Cottonwood", region = "Idaho", country = "USA"))
+  } else if (grepl("Ellensburg", location)) {
+    return(list(city = "Ellensburg", region = "Washington", country = "USA"))
+  } else if (grepl("Costa Rica", location)) {
+    if (grepl("Limón", location)) {
+      return(list(city = "Limón", region = NA, country = "Costa Rica"))
+    } else if (grepl("Heredia", location)) {
+      return(list(city = "Heredia", region = NA, country = "Costa Rica"))
+    } else if (grepl("Moravia", location)) {
+      return(list(city = "Moravia", region = NA, country = "Costa Rica"))
+    } else if (grepl("Santo Domingo", location)) {
+      return(list(city = "Santo Domingo", region = NA, country = "Costa Rica"))
+    } else {
+      return(list(city = NA, region = NA, country = "Costa Rica"))
+    }
+  } else if (grepl("Wellington", location)) {
+    return(list(city = "Wellington", region = NA, country = "New Zealand"))
+  } else if (grepl("Manresa", location)) {
+    return(list(city = "Manresa", region = NA, country = "Spain"))
+  } else if (grepl("Sant Feliu", location)) {
+    return(list(city = "Sant Feliu", region = NA, country = "Spain"))
+  } else if (grepl("Saint-Raphaël", location)) {
+    return(list(city = "Saint-Raphaël", region = NA, country = "France"))
+  } else {
+    return(list(city = NA, region = NA, country = NA))
+  }
+}
+
+# Process performances to extract location details
+performances_processed <- performances %>%
+  rowwise() %>%
+  mutate(
+    location_info = list(extract_location_info(Location)),
+    city = location_info$city,
+    region = location_info$region,
+    country = location_info$country
+  ) %>%
+  ungroup()
+
+# Join with location coordinates
+performances_with_coords <- performances_processed %>%
+  left_join(performance_locations, by = c("city", "region", "country"))
+
+# Get world map data
+world <- ne_countries(scale = "medium", returnclass = "sf")%>%
+  filter(name != "Antarctica")
+
+# Get US states data for more detailed US map
+states <- st_as_sf(map("state", plot = FALSE, fill = TRUE))
+states <- states %>%
+  rename(region = ID) %>%
+  mutate(region = str_to_title(region))
+
+# 1. Create a world map with performance locations
+world_performances <- ggplot() +
+  geom_sf(data = world, fill = "#f5f5f5", color = "#e0e0e0") +
+  geom_point(data = performances_with_coords, 
+             aes(x = lon, y = lat, color = country, size = 3),
+             alpha = 0.8) +
+  scale_color_viridis_d() +
+  scale_size_identity() +
+  labs(
+    title = "Professor Wilson's International Performances",
+   
+    color = "Country"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.grid.major = element_line(color = "#f0f0f0"),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    axis.title = element_blank()
+  )
+
+# 2. Create a US map with performance locations
+us_performances <- performances_with_coords %>%
+  filter(country == "USA")
+
+us_map <- ggplot() +
+  geom_sf(data = states, fill = "#f5f5f5", color = "#d0d0d0") +
+  geom_point(data = us_performances, 
+             aes(x = lon, y = lat, color = region, size = 3),
+             alpha = 0.8) +
+  scale_color_viridis_d() +
+  scale_size_identity() +
+  coord_sf(xlim = c(-125, -65), ylim = c(25, 50)) +
+  labs(
+    title = "Professor Wilson's Performances in the United States",
+  
+    color = "State"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.grid.major = element_line(color = "#f0f0f0"),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    axis.title = element_blank()
+  )
+
+# Print both maps
+print(world_performances)
+print(us_map)
+
+# For a more interactive approach, you could use leaflet:
+# Uncomment and run this code if you want an interactive map
+# library(leaflet)
+# 
+# # Create a color palette for countries
+# country_palette <- colorFactor(palette = "viridis", domain = performances_with_coords$country)
+# 
+# # Create interactive map
+# interactive_map <- leaflet(performances_with_coords) %>%
+#   addTiles() %>%  # Add default OpenStreetMap tiles
+#   addCircleMarkers(
+#     ~lon, ~lat,
+#     color = ~country_palette(country),
+#     radius = 8,
+#     fillOpacity = 0.8,
+#     popup = ~paste0(
+#       "<b>", Title, "</b><br/>",
+#       "Location: ", Location, "<br/>",
+#       "Date: ", Date
+#     )
+#   ) %>%
+#   addLegend(
+#     position = "bottomright",
+#     pal = country_palette,
+#     values = ~country,
+#     title = "Country"
+#   )
+# 
+# interactive_map
+
+
+```
