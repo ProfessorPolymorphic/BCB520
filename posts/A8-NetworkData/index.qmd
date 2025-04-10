@@ -561,8 +561,8 @@ These settings can be specified as arguments to the `plot` function to control t
 ```{r}
 library(readxl)
 
-people<-read_xlsx("Networks.xlsx", sheet = "People")
-relations<-read_xlsx("Networks.xlsx", sheet ="Relations")
+people<-read_xlsx("Networksfixed.xlsx", sheet = "People")
+relations<-read_xlsx("Networksfixed.xlsx", sheet ="Relations")
 
 g <- graph_from_data_frame(relations, directed=FALSE, vertices=people)
 
@@ -609,7 +609,7 @@ plot(g,  layout = layout_with_fr)
 
 Improve the network above by:
 
-1.  Updating the data in this [file](https://vandalsuidaho-my.sharepoint.com/:x:/g/personal/brobison_uidaho_edu/EST0iQkU2mBMlbdN7718fzMBEdwop8eUDfDr16ZpyQNULw?e=ZOBa1g).
+1.  Updating the data in this [file](https://vandalsuidaho-my.sharepoint.com/:f:/g/personal/brobison_uidaho_edu/Eldprmrl8ZhOgAOHGKoRTHYBfa64MS3MH4UWs4tforEZWw?e=wcoLWN).
 2.  Coloring the edges according to Advisor / BCB520 attribute.
 3.  Coloring the nodes according to Department.
 4.  Adujsting the labels to improve readability.
