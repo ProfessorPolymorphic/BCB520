@@ -253,8 +253,8 @@ Attaching package: 'igraph'</code></pre>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>g</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>IGRAPH 325d670 U--- 10 2 -- 
-+ edges from 325d670:
+<pre><code>IGRAPH 7abdab3 U--- 10 2 -- 
++ edges from 7abdab3:
 [1] 1--2 1--5</code></pre>
 </div>
 </div>
@@ -278,7 +278,7 @@ Note
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(g)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>IGRAPH 325d670 U--- 10 2 -- </code></pre>
+<pre><code>IGRAPH 7abdab3 U--- 10 2 -- </code></pre>
 </div>
 </div>
 <p>The same function <code>make_graph</code> can create some notable graphs by just specifying their name. For example you can create the graph that represents the social network of Zachary’s karate club, that shows the friendship between 34 members of a karate club at a US university in the 1970s:</p>
@@ -343,9 +343,9 @@ Note
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>g</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>IGRAPH f6c500d U--- 40 86 -- Zachary
+<pre><code>IGRAPH 6984188 U--- 40 86 -- Zachary
 + attr: name (g/c)
-+ edges from f6c500d:
++ edges from 6984188:
  [1]  1-- 2  1-- 3  1-- 4  1-- 5  1-- 6  1-- 7  1-- 8  1-- 9  1--11  1--12
 [11]  1--13  1--14  1--18  1--20  1--22  1--32  2-- 3  2-- 4  2-- 8  2--14
 [21]  2--18  2--20  2--22  2--31  3-- 4  3-- 8  3--28  3--29  3--33  3--10
@@ -430,7 +430,7 @@ Note
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(graph1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>IGRAPH 3f0c05e U--- 127 126 -- Tree
+<pre><code>IGRAPH e6afde7 U--- 127 126 -- Tree
 + attr: name (g/c), children (g/n), mode (g/c)</code></pre>
 </div>
 <details class="code-fold">
@@ -469,7 +469,7 @@ Note
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(graph1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>IGRAPH 6413ceb U--- 100 524 -- Geometric random graph
+<pre><code>IGRAPH 599b363 U--- 100 553 -- Geometric random graph
 + attr: name (g/c), radius (g/n), torus (g/l)</code></pre>
 </div>
 <details class="code-fold">
@@ -539,7 +539,7 @@ Note
 <span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(g)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>IGRAPH b0b84c5 UN-- 7 9 -- 
+<pre><code>IGRAPH 36746b1 UN-- 7 9 -- 
 + attr: name (v/c), age (v/n), gender (v/c), is_formal (e/l)</code></pre>
 </div>
 </div>
@@ -602,7 +602,7 @@ Note
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="fu">V</span>(g)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>+ 7/7 vertices, named, from b0b84c5:
+<pre><code>+ 7/7 vertices, named, from 36746b1:
 [1] Alejandra Bruno     Carmina   Frank     Dennis    Esther    George   </code></pre>
 </div>
 </div>
@@ -746,7 +746,7 @@ Note
 <span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>seq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>+ 3/10 vertices, from eed785c:
+<pre><code>+ 3/10 vertices, from 33cddb3:
 [1] 2 3 7</code></pre>
 </div>
 </div>
@@ -757,7 +757,7 @@ Note
 <span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>seq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>+ 2/10 vertices, from eed785c:
+<pre><code>+ 2/10 vertices, from 33cddb3:
 [1] 2 7</code></pre>
 </div>
 </div>
@@ -860,7 +860,7 @@ Note
 <div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">E</span>(g)[<span class="fu">.from</span>(<span class="dv">3</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>+ 4/9 edges from b0b84c5 (vertex names):
+<pre><code>+ 4/9 edges from 36746b1 (vertex names):
 [1] Alejandra--Carmina Carmina  --Frank   Carmina  --Dennis  Carmina  --Esther </code></pre>
 </div>
 </div>
@@ -871,7 +871,7 @@ Note
 <div class="sourceCode cell-code" id="cb89"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="fu">E</span>(g)[<span class="fu">.from</span>(<span class="st">"Carmina"</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>+ 4/9 edges from b0b84c5 (vertex names):
+<pre><code>+ 4/9 edges from 36746b1 (vertex names):
 [1] Alejandra--Carmina Carmina  --Frank   Carmina  --Dennis  Carmina  --Esther </code></pre>
 </div>
 </div>
@@ -883,7 +883,7 @@ Note
 <div class="sourceCode cell-code" id="cb91"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="fu">E</span>(g) [ <span class="dv">3</span><span class="sc">:</span><span class="dv">5</span> <span class="sc">%--%</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">6</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>+ 3/9 edges from b0b84c5 (vertex names):
+<pre><code>+ 3/9 edges from 36746b1 (vertex names):
 [1] Carmina--Dennis Carmina--Esther Dennis --Esther</code></pre>
 </div>
 </div>
@@ -920,7 +920,7 @@ Note
 <div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">E</span>(g)[men <span class="sc">%--%</span> women]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>+ 5/9 edges from b0b84c5 (vertex names):
+<pre><code>+ 5/9 edges from 36746b1 (vertex names):
 [1] Alejandra--Bruno  Alejandra--Frank  Carmina  --Frank  Carmina  --Dennis
 [5] Dennis   --Esther</code></pre>
 </div>
@@ -1361,6 +1361,7 @@ Attaching package: 'dplyr'</code></pre>
 <h2 class="anchored" data-anchor-id="assignment">ASSIGNMENT</h2>
 <p>Improve the network above by:</p>
 <ol type="1">
+<li>Updating the data in this <a href="https://vandalsuidaho-my.sharepoint.com/:x:/g/personal/brobison_uidaho_edu/EST0iQkU2mBMlbdN7718fzMBEdwop8eUDfDr16ZpyQNULw?e=ZOBa1g">file</a>.</li>
 <li>Coloring the edges according to Advisor / BCB520 attribute.</li>
 <li>Coloring the nodes according to Department.</li>
 <li>Adujsting the labels to improve readability.</li>
@@ -2455,10 +2456,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb118-648"><a href="#cb118-648" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb118-649"><a href="#cb118-649" aria-hidden="true" tabindex="-1"></a>Improve the network above by:</span>
 <span id="cb118-650"><a href="#cb118-650" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb118-651"><a href="#cb118-651" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Coloring the edges according to Advisor / BCB520 attribute.</span>
-<span id="cb118-652"><a href="#cb118-652" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Coloring the nodes according to Department.</span>
-<span id="cb118-653"><a href="#cb118-653" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Adujsting the labels to improve readability.</span>
-<span id="cb118-654"><a href="#cb118-654" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Find the best layout you can for this garbage.  What a nightmare.</span>
+<span id="cb118-651"><a href="#cb118-651" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Updating the data in this <span class="co">[</span><span class="ot">file</span><span class="co">](https://vandalsuidaho-my.sharepoint.com/:x:/g/personal/brobison_uidaho_edu/EST0iQkU2mBMlbdN7718fzMBEdwop8eUDfDr16ZpyQNULw?e=ZOBa1g)</span>.</span>
+<span id="cb118-652"><a href="#cb118-652" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Coloring the edges according to Advisor / BCB520 attribute.</span>
+<span id="cb118-653"><a href="#cb118-653" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Coloring the nodes according to Department.</span>
+<span id="cb118-654"><a href="#cb118-654" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>Adujsting the labels to improve readability.</span>
+<span id="cb118-655"><a href="#cb118-655" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>Find the best layout you can for this garbage.  What a nightmare.</span>
+<span id="cb118-656"><a href="#cb118-656" aria-hidden="true" tabindex="-1"></a><span class="ss">6.  </span>Create a network from the edge list data.</span>
+<span id="cb118-657"><a href="#cb118-657" aria-hidden="true" tabindex="-1"></a><span class="ss">7.  </span>Try making a hierarchical network from the org chart data.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
