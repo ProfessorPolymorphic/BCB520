@@ -6,13 +6,13 @@ format:
     toc: false
     echo: true
 author: "Barrie Robison"
-date: "2024-04-09"
+date: "2025-04-22"
 categories: [Portfolio, DataViz, Network, Observable, Assignment]
 image: "Wendigojson.png"
 description: "Cool!"
 code-fold: true
 code-tools: true
-draft: true
+
 ---
 
 # OBSERVABLE IN QUARTO
